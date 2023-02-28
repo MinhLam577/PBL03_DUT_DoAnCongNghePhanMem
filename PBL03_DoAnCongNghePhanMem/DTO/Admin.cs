@@ -10,6 +10,18 @@ namespace DTO
 {
     public class Admin:Person
     {
+        private static Admin instance;
+        public static Admin Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new Admin();
+                return instance;
+            }
+            private set { }
+        }
+
         public Admin():base(){}
         public Admin(string adTenTK, string adName, int adAge, bool adSex, string adSdt, string adAddress, string adCMND) : 
             base(adTenTK, adName, adSdt, adAge, adSex, adCMND, adAddress){}

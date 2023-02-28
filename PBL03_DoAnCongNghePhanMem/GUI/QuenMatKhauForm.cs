@@ -14,7 +14,6 @@ namespace GUI
 {
     public partial class QuenMatKhauForm : Form
     {
-        AccountBUS accbus = new AccountBUS();
         public QuenMatKhauForm()
         {
             InitializeComponent();
@@ -22,7 +21,7 @@ namespace GUI
         private void btn_laylaimk_Click(object sender, EventArgs e)
         {
             if(txb_Email.Text == "") { MessageBox.Show("Mời nhập vào thông tin còn trống"); return; }
-            txb_res.Text = accbus.GetPassword(txb_Email.Text);
+            txb_res.Text = AccountBUS.Instance.GetPassword(txb_Email.Text);
         }
         bool btnexit = false;
         private void btn_exit_Click(object sender, EventArgs e)

@@ -12,37 +12,46 @@ namespace BUS
 {
     public class AccountBUS
     {
-        Account accdto = new Account();
-        AccountDB db = new AccountDB();
+        private static AccountBUS instance;
+        public static AccountBUS Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new AccountBUS();
+                return instance;
+            }
+            private set { }
+        }
         public List<Account> Getaccount()
         {
-            return db.LoadAllAccount();
+            return AccountDB.Instance.LoadAllAccount();
         }
         public bool AddAccount(Account account)
         {
-            return db.AddAcount(account) > 0;
+            return AccountDB.Instance.AddAcount(account) > 0;
         }
         public string GetUser(int MaQuyen)
         {
-            return db.GetUserByMaQuyen(MaQuyen);
+            return AccountDB.Instance.GetUserByMaQuyen(MaQuyen);
         }
         public bool CheckEmailExist(string email)
         {
-            return db.CheckEmailExist(email);
+            return AccountDB.Instance.CheckEmailExist(email);
         }
         public bool CheckAccountExist(string tentk)
         {
-            return db.CheckAccountExist(tentk);
+            return AccountDB.Instance.CheckAccountExist(tentk);
         }
         public string GetPassword(string email)
         {
-            string res = db.GetPassword(email);
+            string res = AccountDB.Instance.GetPassword(email);
             if (res == "") return "Email không đúng hoặc không tồn tại";
             return res;
         }
         public string CheckAccountLogin(string tk, string mk)
         {
-            List<Account> acclist = db.LoadAllAccount();
+            List<Account> acclist = AccountDB.Instance.LoadAllAccount();
             Account Acc = acclist.Where(a => a.TenTK.Equals(tk) && a.MatKhauTK.Equals(mk)).FirstOrDefault();
             if (Acc != default) return GetUser(Acc.MaQuyen);
             return "";

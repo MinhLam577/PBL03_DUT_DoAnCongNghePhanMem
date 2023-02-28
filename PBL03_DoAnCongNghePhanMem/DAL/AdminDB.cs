@@ -8,44 +8,27 @@ using System.Threading.Tasks;
 using DTO;
 namespace DAL
 {
-    public class AdminDB
+    public class AdminDB : AccessDB
     {
-        DataTable dt;
-        string strcon = "Data Source=SKY;Initial Catalog=QLPhongGym;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         SqlConnection sqlcon = null;
         SqlDataAdapter sqladt = null;
         SqlCommand sqlcmd = null;
-        public SqlConnection GetConnect()
+        private static AdminDB instance;
+        public static AdminDB Instance
         {
-            if (sqlcon == null)
-                sqlcon = new SqlConnection(strcon);
-            return sqlcon;
+            get
+            {
+                if(instance == null)
+                    instance = new AdminDB();
+                return instance;
+            }
+            private set { }
         }
-        public void OpenConnect()
-        {
-            if (sqlcon.State == ConnectionState.Closed)
-                sqlcon.Open();
-        }
-        public void CloseConnect()
-        {
-            if (sqlcon.State == ConnectionState.Open)
-                sqlcon.Close();
-        }
-        public SqlDataAdapter Getadt(string query)
-        {
-            sqlcon = GetConnect();
-            sqladt = new SqlDataAdapter(query, sqlcon);
-            return sqladt;
-        }
-
         public List<Admin> LoadAllAdmin()
         {
             List<Admin> adlist = new List<Admin>();
-            dt = new DataTable();
-            sqladt = Getadt("GetAllAdmin");
-            sqladt.Fill(dt);
-            foreach(DataRow dr in dt.Rows)
-            {
+            DataTable dt = GetAllValue("GetAllAdmin");
+            foreach(DataRow dr in dt.Rows){
                 Admin ad = GetAdminByDatarow(dr);
                 adlist.Add(ad);
             }

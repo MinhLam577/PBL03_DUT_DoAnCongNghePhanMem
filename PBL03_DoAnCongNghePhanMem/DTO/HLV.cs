@@ -11,6 +11,17 @@ namespace DTO
     {
         public string BangCap { get; set; }
         public int NamKinhNghiem { get; set; }
+        private static HLV instance;
+        public static HLV Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new HLV();
+                return instance;
+            }
+            private set { }
+        }
         public HLV():base() { }
         public HLV(string tenTK, string ten, string sdt, int age, bool sex, string cmnd, string address, string bangCap, int namKinhNghiem):
             base(tenTK, ten, sdt, age, sex, cmnd, address){

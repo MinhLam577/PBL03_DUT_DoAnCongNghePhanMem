@@ -153,7 +153,6 @@
             this.AddKh_btn.TabIndex = 9;
             this.AddKh_btn.Text = "Thêm";
             this.AddKh_btn.UseVisualStyleBackColor = true;
-            this.AddKh_btn.Click += new System.EventHandler(this.AddKh_btn_Click);
             // 
             // DelKh_btn
             // 
@@ -163,8 +162,7 @@
             this.DelKh_btn.Size = new System.Drawing.Size(110, 59);
             this.DelKh_btn.TabIndex = 10;
             this.DelKh_btn.Text = "Xóa";
-            this.DelKh_btn.UseVisualStyleBackColor = true;
-            this.DelKh_btn.Click += new System.EventHandler(this.DelKh_btn_Click);
+            this.DelKh_btn.UseVisualStyleBackColor = true; 
             // 
             // EditKh_btn
             // 
@@ -175,7 +173,6 @@
             this.EditKh_btn.TabIndex = 11;
             this.EditKh_btn.Text = "Sửa";
             this.EditKh_btn.UseVisualStyleBackColor = true;
-            this.EditKh_btn.Click += new System.EventHandler(this.EditKh_btn_Click);
             // 
             // groupBox1
             // 
