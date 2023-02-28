@@ -35,7 +35,7 @@
             // btn_chao
             // 
             this.btn_chao.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_chao.Location = new System.Drawing.Point(112, 75);
+            this.btn_chao.Location = new System.Drawing.Point(199, 46);
             this.btn_chao.Name = "btn_chao";
             this.btn_chao.Size = new System.Drawing.Size(143, 88);
             this.btn_chao.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             this.lb_name.AutoSize = true;
             this.lb_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_name.Location = new System.Drawing.Point(325, 102);
+            this.lb_name.Location = new System.Drawing.Point(497, 73);
             this.lb_name.Name = "lb_name";
             this.lb_name.Size = new System.Drawing.Size(205, 32);
             this.lb_name.TabIndex = 1;
