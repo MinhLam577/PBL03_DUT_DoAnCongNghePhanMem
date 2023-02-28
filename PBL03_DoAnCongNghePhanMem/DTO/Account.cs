@@ -12,6 +12,18 @@ namespace DTO
         public string TenTK { get; set; }
         public string MatKhauTK { get; set; }
         public int MaQuyen { get; set; }
+        private static Account instance;
+        public static Account Instance
+        {
+            get
+            {
+                if(instance == null)
+                    instance = new Account();
+                return instance;
+            }
+            private set { }
+        }
+
         public Account() { }
         public Account(string EmailTk, string tenTK, string matKhauTK, int MaQuyen)
         {

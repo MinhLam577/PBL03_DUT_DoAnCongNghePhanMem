@@ -16,8 +16,6 @@ namespace GUI
 {
     public partial class LoginForm : Form
     {
-        Account accdto = new Account();
-        AccountBUS accbus = new AccountBUS();
         public LoginForm()
         {
             InitializeComponent();
@@ -40,7 +38,7 @@ namespace GUI
                 MessageBox.Show("Vui lòng nhập tài khoản hoặc mật khẩu");
                 return;
             }
-            string user = accbus.CheckAccountLogin(tk, mk);
+            string user = AccountBUS.Instance.CheckAccountLogin(tk, mk);
             if (user == ""){
                 MessageBox.Show("Tài khoản hoặc mật khẩu không đúng", "Login Fail", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txb_TenTk.SelectAll();

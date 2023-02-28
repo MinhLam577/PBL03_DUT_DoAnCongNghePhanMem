@@ -17,8 +17,6 @@ namespace GUI
     
     public partial class DangKiForm : Form
     {
-        AccountBUS accbus = new AccountBUS();
-        AdminBUS adbus = new AdminBUS();
         public DangKiForm()
         {
             InitializeComponent();
@@ -27,7 +25,6 @@ namespace GUI
         {
             return Regex.IsMatch(ac, "^[a-zA-Z0-9]{6,20}$");
         }
-
         public bool checkEmail(string email)
         {
             if (email == "") return true;
@@ -83,10 +80,10 @@ namespace GUI
             if (checkcmnd(cmnd) == false) { MessageBox.Show("Chứng minh nhân dân không đúng"); return; }
             if (checkHoten(hoten) == false) { MessageBox.Show("Họ tên không đúng"); return; }
             if (checkdiachi(diachi) == false) { MessageBox.Show("Địa chỉ không đúng"); return; }
-            if (accbus.CheckAccountExist(tentk)) { MessageBox.Show("Tên tài khoản đã tồn tại"); return; }
-            else { if (accbus.CheckEmailExist(email)) { MessageBox.Show("Email đã tồn tại"); return; } }
-            if (accbus.AddAccount(new Account(email, tentk, mk, ltk))){
-                if (adbus.AddAdmin(new Admin(tentk, hoten, Convert.ToInt32(tuoi), gen, sdt, diachi, cmnd))){
+            if (AccountBUS.Instance.CheckAccountExist(tentk)) { MessageBox.Show("Tên tài khoản đã tồn tại"); return; }
+            else { if (AccountBUS.Instance.CheckEmailExist(email)) { MessageBox.Show("Email đã tồn tại"); return; } }
+            if (AccountBUS.Instance.AddAccount(new Account(email, tentk, mk, ltk))){
+                if (AdminBUS.Instance.AddAdmin(new Admin(tentk, hoten, Convert.ToInt32(tuoi), gen, sdt, diachi, cmnd))){
                     if (MessageBox.Show("Đăng kí thành công! Bạn có muốn đăng nhập luôn không?", "Xin chúc mừng", MessageBoxButtons.OKCancel) == DialogResult.OK) this.Close();
                     else Application.Exit();
                 }

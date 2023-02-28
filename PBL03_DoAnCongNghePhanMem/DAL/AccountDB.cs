@@ -9,46 +9,30 @@ using DTO;
 
 namespace DAL
 {
-    public class AccountDB
+    public class AccountDB : AccessDB
     {
-        DataTable dt;
-        string strcon = "Data Source=SKY;Initial Catalog=QLPhongGym;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         SqlConnection sqlcon = null;
         SqlDataAdapter sqladt = null;
         SqlCommand sqlcmd = null;
-        public SqlConnection GetConnect()
+        private static AccountDB instance;
+        public static AccountDB Instance
         {
-            if (sqlcon == null)
-                sqlcon = new SqlConnection(strcon);
-            return sqlcon;
-        }
-        public void OpenConnect()
-        {
-            if (sqlcon.State == ConnectionState.Closed)
-                sqlcon.Open();
-        }
-        public void CloseConnect()
-        {
-            if (sqlcon.State == ConnectionState.Open)
-                sqlcon.Close();
-        }
-        public SqlDataAdapter Getadt(string query)
-        {
-            sqlcon = GetConnect();
-            sqladt = new SqlDataAdapter(query, sqlcon);
-            return sqladt;
+            get
+            {
+                if( instance == null )
+                    instance = new AccountDB();
+                return instance;
+            }
+            private set { }
         }
         public List<Account> LoadAllAccount()
         {
             List<Account> acclist = new List<Account>();
-            dt = new DataTable();
-            sqladt = Getadt("GetAllAccount");
-            sqladt.Fill(dt);
+            DataTable dt = GetAllValue("GetAllAccount");
             foreach (DataRow item in dt.Rows)
                 acclist.Add(GetAccountByDataRow(item));
             return acclist;
         }
-
         public Account GetAccountByDataRow(DataRow d)
         {
             string email = d["EmailTK"].ToString();
@@ -94,8 +78,6 @@ namespace DAL
                 sqlcmd.Parameters.AddWithValue("@MatKhauTK", acc.MatKhauTK);
                 OpenConnect();
                 kq = sqlcmd.ExecuteNonQuery();
-                if(kq > 0)
-                    dt.Rows.Add(acc.TenTK, acc.MatKhauTK, acc.EmailTK, acc.MaQuyen);  
                 CloseConnect();
             }
             return kq;
