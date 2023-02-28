@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyForm));
             this.dgv_showKh = new System.Windows.Forms.DataGridView();
             this.IdKh_lb = new System.Windows.Forms.Label();
             this.NameKh_lb = new System.Windows.Forms.Label();
@@ -44,12 +43,10 @@
             this.DelKh_btn = new System.Windows.Forms.Button();
             this.EditKh_btn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ptb_imdynamic = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lb_address = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_showKh)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_imdynamic)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv_showKh
@@ -162,7 +159,7 @@
             this.DelKh_btn.Size = new System.Drawing.Size(110, 59);
             this.DelKh_btn.TabIndex = 10;
             this.DelKh_btn.Text = "Xóa";
-            this.DelKh_btn.UseVisualStyleBackColor = true; 
+            this.DelKh_btn.UseVisualStyleBackColor = true;
             // 
             // EditKh_btn
             // 
@@ -177,29 +174,12 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lb_address);
-            this.groupBox1.Controls.Add(this.ptb_imdynamic);
             this.groupBox1.Location = new System.Drawing.Point(1, -6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1554, 344);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
-            // 
-            // ptb_imdynamic
-            // 
-            this.ptb_imdynamic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ptb_imdynamic.InitialImage = ((System.Drawing.Image)(resources.GetObject("ptb_imdynamic.InitialImage")));
-            this.ptb_imdynamic.Location = new System.Drawing.Point(0, 0);
-            this.ptb_imdynamic.Name = "ptb_imdynamic";
-            this.ptb_imdynamic.Size = new System.Drawing.Size(319, 175);
-            this.ptb_imdynamic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptb_imdynamic.TabIndex = 13;
-            this.ptb_imdynamic.TabStop = false;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 4000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // lb_address
             // 
@@ -210,6 +190,10 @@
             this.lb_address.Size = new System.Drawing.Size(267, 32);
             this.lb_address.TabIndex = 14;
             this.lb_address.Text = "67 Phan Châu Trinh";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 4000;
             // 
             // QuanLyForm
             // 
@@ -231,11 +215,9 @@
             this.Controls.Add(this.dgv_showKh);
             this.Name = "QuanLyForm";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.QuanLyForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_showKh)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptb_imdynamic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,7 +239,6 @@
         private System.Windows.Forms.Button EditKh_btn;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.PictureBox ptb_imdynamic;
         private System.Windows.Forms.Label lb_address;
     }
 }
