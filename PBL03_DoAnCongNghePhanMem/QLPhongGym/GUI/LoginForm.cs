@@ -32,36 +32,10 @@ namespace QLPhongGym.GUI
                     break;
             }
         }
-        private void btn_DangNhap_Click(object sender, EventArgs e)
-        {
-            string tentk = txb_TenTk.Text, mk = txb_mk.Text, username;
-            if(!TKBLL.Instance.CheckTenTKExist(tentk) || !TKBLL.Instance.CheckMKTKExist(mk)){
-                MessageBox.Show("Tên tài khoản hoặc mật khẩu không đúng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            username = TKBLL.Instance.GetUserName(TKBLL.Instance.GetIDQuyen(tentk));
-            OpenUserForm(username);
-        }
-        private void lb_Dangki_Click(object sender, EventArgs e)
-        {
-            DangKiForm dkf = new DangKiForm();
-            dkf.Back += Dkf_Back;
-            this.Hide();
-            dkf.Show();
-        }
-
         private void Dkf_Back(object sender, EventArgs e)
         {
             (sender as DangKiForm).Close();
             this.Show();
-        }
-
-        private void lb_QuenMk_Click(object sender, EventArgs e)
-        {
-            QuenMatKhauForm qmkf = new QuenMatKhauForm();
-            qmkf.Exit += Qmkf_Exit;
-            this.Hide();
-            qmkf.Show();
         }
 
         private void Qmkf_Exit(object sender, EventArgs e)
@@ -80,6 +54,37 @@ namespace QLPhongGym.GUI
         {
             txb_mk.PasswordChar = '*';
             pb_eye.BackgroundImage = Image.FromFile(Application.StartupPath + @"\Resources\7.png");
-        } 
+        }
+
+
+
+
+        private void lb_Dangki_Click(object sender, EventArgs e)
+        {
+            DangKiForm dkf = new DangKiForm();
+            dkf.Back += Dkf_Back;
+            this.Hide();
+            dkf.Show();
+        }
+
+        private void btn_DangNhap_Click(object sender, EventArgs e)
+        {
+            string tentk = txb_TenTk.Text, mk = txb_mk.Text, username;
+            if (!TKBLL.Instance.CheckTenTKExist(tentk) || !TKBLL.Instance.CheckMKTKExist(mk))
+            {
+                MessageBox.Show("Tên tài khoản hoặc mật khẩu không đúng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            username = TKBLL.Instance.GetUserName(TKBLL.Instance.GetIDQuyen(tentk));
+            OpenUserForm(username);
+        }
+
+        private void lb_QuenMk_Click_1(object sender, EventArgs e)
+        {
+            QuenMatKhauForm qmkf = new QuenMatKhauForm();
+            qmkf.Exit += Qmkf_Exit;
+            this.Hide();
+            qmkf.Show();
+        }
     }
 }
