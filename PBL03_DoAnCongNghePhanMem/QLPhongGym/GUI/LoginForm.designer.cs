@@ -167,6 +167,7 @@
             // 
             // pb_eye
             // 
+            this.pb_eye.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pb_eye.BackColor = System.Drawing.Color.White;
             this.pb_eye.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_eye.BackgroundImage")));
             this.pb_eye.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

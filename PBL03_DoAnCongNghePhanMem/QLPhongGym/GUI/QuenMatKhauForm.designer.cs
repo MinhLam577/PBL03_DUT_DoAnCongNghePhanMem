@@ -144,7 +144,6 @@
             this.txb_Email.Name = "txb_Email";
             this.txb_Email.Size = new System.Drawing.Size(349, 34);
             this.txb_Email.TabIndex = 1;
-            this.txb_Email.TextChanged += new System.EventHandler(this.txb_Email_TextChanged);
             // 
             // pictureBox2
             // 
@@ -180,7 +179,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "QuenMatKhauForm";
             this.Text = "Quên mật khẩu";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QuenMatKhauForm_FormClosing);
             this.gb_resetpass.ResumeLayout(false);
             this.gb_resetpass.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

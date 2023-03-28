@@ -43,11 +43,6 @@ namespace DAL
         {
             return mk.Equals(xnmk);
         }
-        public bool checkAge(string age)
-        {
-            int t; try { t = Convert.ToInt32(Regex.Match(age, "^[0-9]{1,3}$").ToString()); } catch { return false; }
-            return t > 0;
-        }
         public bool checksdt(string sdt)
         {
             return Regex.IsMatch(sdt, "^[0-9]{10,11}$");
@@ -55,18 +50,6 @@ namespace DAL
         public bool checkcmnd(string cmnd)
         {
             return Regex.IsMatch(cmnd, "^[0-9]{12}$");
-        }
-        public bool checkHoten(string hoten)
-        {
-            string t = hoten.RemoveUnicode();
-            while (t.IndexOf("  ") != -1) t = t.Replace("  ", " ");
-            return Regex.IsMatch(t, "^[a-zA-Z ]+$");
-        }
-        public bool checkdiachi(string diachi)
-        {
-            string t = diachi.RemoveUnicode();
-            while (t.IndexOf("  ") != -1) t = t.Replace("  ", " ");
-            return Regex.IsMatch(t, "^[a-zA-Z0-9 ]+$");
         }
         public bool CheckMKTKExist(string mk)
         {
