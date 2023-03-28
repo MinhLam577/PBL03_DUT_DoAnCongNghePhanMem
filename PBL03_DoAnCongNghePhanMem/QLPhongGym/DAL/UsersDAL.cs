@@ -44,7 +44,7 @@ namespace QLPhongGym.DAL
             int t;
             try { t = Convert.ToInt32(Regex.Match(age, "^[0-9]{1,3}$").ToString()); }
             catch { return false; }
-            return t > 0;
+            return t >= 10 && t <= 120;
         }
         public bool checkcmnd(string cmnd)
         {
@@ -65,19 +65,19 @@ namespace QLPhongGym.DAL
         public bool CheckNamKinhNghiem(string NamKinhNghiem)
         {
             bool check = Regex.IsMatch(NamKinhNghiem, "^[0-9]{1,3}$");
-            int age = -1;
+            int nkn = -1;
             if (check == true)
             {
                 try
                 {
-                    age = int.Parse(NamKinhNghiem);
+                    nkn = int.Parse(NamKinhNghiem);
                 }
                 catch
                 {
                     check = false;
                 }
             }
-            if (age > 0) check = true;
+            if (nkn > 0 && nkn <= 120) check = true;
             return check;
         }
     }

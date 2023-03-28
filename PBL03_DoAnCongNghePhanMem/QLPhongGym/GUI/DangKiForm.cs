@@ -15,6 +15,7 @@ namespace QLPhongGym.GUI
 {
     public partial class DangKiForm : Form
     {
+        public event EventHandler Back;
         public DangKiForm()
         {
             InitializeComponent();
@@ -35,15 +36,45 @@ namespace QLPhongGym.GUI
                 case 1:
                 case 3:
                     
-                    DangKiAdminOrKHForm usf = new DangKiAdminOrKHForm(tK);
-                    usf.ShowDialog();
+                    DangKiAdminOrKHForm usf = new DangKiAdminOrKHForm(tK, maquyen);
+                    usf.DangKiThanhCong += Usf_DangKiThanhCong;
+                    usf.Back += Usf_Back;
+                    this.Hide();
+                    usf.Show();
                     break;
                 case 2:
-                    DangKiHLVForm hlvf = new DangKiHLVForm();
-                    hlvf.ShowDialog();
+                    DangKiHLVForm hlvf = new DangKiHLVForm(tK);
+                    hlvf.DangKiThanhCong += Hlvf_DangKiThanhCong;
+                    hlvf.Back += Hlvf_Back;
+                    this.Hide();
+                    hlvf.Show();
                     break;
             }
         }
+
+        private void Hlvf_Back(object sender, EventArgs e)
+        {
+            (sender as DangKiHLVForm).Close();
+            this.Show();
+        }
+
+        private void Usf_Back(object sender, EventArgs e)
+        {
+            (sender as DangKiAdminOrKHForm).Close();
+            this.Show();
+        }
+        private void Hlvf_DangKiThanhCong(object sender, EventArgs e)
+        {
+            (sender as DangKiHLVForm).Close();
+            Back(this, new EventArgs());
+        }
+
+        private void Usf_DangKiThanhCong(object sender, EventArgs e)
+        {
+            (sender as DangKiAdminOrKHForm).Close();
+            Back(this, new EventArgs());
+        }
+
         private void btn_ctn_Click(object sender, EventArgs e)
         {
             string tentk = txb_tentk.Text.Trim();
@@ -69,5 +100,12 @@ namespace QLPhongGym.GUI
             else { if (TKBLL.Instance.CheckEmailExist(email)) { MessageBox.Show("Email đã tồn tại"); return; } }
             OpenForm(tentk, mk, email, sdt, maquyen);
         }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            Back(this, new EventArgs());
+        }
+
+       
     }
 }

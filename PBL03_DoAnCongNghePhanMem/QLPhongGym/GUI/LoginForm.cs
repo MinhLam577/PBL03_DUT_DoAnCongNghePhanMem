@@ -28,7 +28,7 @@ namespace QLPhongGym.GUI
                 case "HLV":
                 case "Admin":
                     DangKiHLVForm hlvf = new DangKiHLVForm();
-                    hlvf.ShowDialog();
+                    hlvf.Show();
                     break;
             }
         }
@@ -45,14 +45,29 @@ namespace QLPhongGym.GUI
         private void lb_Dangki_Click(object sender, EventArgs e)
         {
             DangKiForm dkf = new DangKiForm();
+            dkf.Back += Dkf_Back;
             this.Hide();
-            dkf.ShowDialog();
+            dkf.Show();
         }
-       
+
+        private void Dkf_Back(object sender, EventArgs e)
+        {
+            (sender as DangKiForm).Close();
+            this.Show();
+        }
+
         private void lb_QuenMk_Click(object sender, EventArgs e)
         {
             QuenMatKhauForm qmkf = new QuenMatKhauForm();
-            qmkf.ShowDialog();
+            qmkf.Exit += Qmkf_Exit;
+            this.Hide();
+            qmkf.Show();
+        }
+
+        private void Qmkf_Exit(object sender, EventArgs e)
+        {
+            (sender as QuenMatKhauForm).Close();
+            this.Show();
         }
 
         private void pb_eye_MouseHover(object sender, EventArgs e)
@@ -65,8 +80,6 @@ namespace QLPhongGym.GUI
         {
             txb_mk.PasswordChar = '*';
             pb_eye.BackgroundImage = Image.FromFile(Application.StartupPath + @"\Resources\7.png");
-        }
-
-        
+        } 
     }
 }

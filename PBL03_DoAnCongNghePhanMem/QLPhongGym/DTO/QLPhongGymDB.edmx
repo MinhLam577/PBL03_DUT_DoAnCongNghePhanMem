@@ -32,7 +32,6 @@
             <PropertyRef Name="IDKH" />
           </Key>
           <Property Name="IDHLV" Type="int" Nullable="false" />
-          <Property Name="tesst" Type="nchar" MaxLength="10" />
           <Property Name="IDKH" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="HoaDon">

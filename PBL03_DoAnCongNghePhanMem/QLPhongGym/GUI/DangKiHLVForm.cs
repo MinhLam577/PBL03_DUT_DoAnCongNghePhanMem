@@ -14,10 +14,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLPhongGym.BLL;
 using QLPhongGym.DTO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
+
 namespace QLPhongGym.GUI
 {
     public partial class DangKiHLVForm : Form
     {
+        public event EventHandler DangKiThanhCong;
+        public event EventHandler Back;
         public TK tk { get;set; }
         public DangKiHLVForm()
         {
@@ -36,7 +40,7 @@ namespace QLPhongGym.GUI
             string diachi = txb_address.Text;
             string nkn = txb_namkinhnghiem.Text;
             string BangCap = cb_bangcap.Text;
-            bool gen = false;
+            bool gen = false, check = true;
             if (hoten == "" || tuoi == "" || cccd == "" || diachi == "" || nkn == "" || BangCap == "" || cb_sex.Text == "")
             {
                 MessageBox.Show("Mời nhập vào thông tin còn thiếu");
@@ -68,23 +72,39 @@ namespace QLPhongGym.GUI
                 return;
             }
             if(cb_sex.Text == "Nam") gen = true;
-            
             HLV hlv = new HLV { 
-                Name = hoten, Age = Convert.ToInt32(tuoi), CCCD = cccd, Address = diachi, BangCap = BangCap,
+                Name = hoten, Age = Convert.ToInt32(tuoi), CCCD = cccd, Address = diachi,
                 NamKinhNghiem = Convert.ToInt32(nkn), Sex = gen
             };
+            if(!BangCap.Equals("None")) hlv.BangCap = BangCap;
+            
             if (UsersBLL.Instance.AddUser(hlv))
             {
                 tk.IDUser = UsersBLL.Instance.GetUserID(cccd);
                 if (TKBLL.Instance.AddTK(this.tk))
                 {
-                    MessageBox.Show("Đăng kí thành công");
+                    switch (MessageBox.Show("Đăng kí thành công. Bạn có muốn đăng nhập luôn không?", "Thông báo", MessageBoxButtons.OKCancel))
+                    {
+                        case DialogResult.OK:
+                            DangKiThanhCong(this, new EventArgs());
+                            break;
+                        case DialogResult.Cancel:
+                            break;
+                    }
+                }
+                else
+                {
+                    UsersBLL.Instance.DeleteUser(hlv);
+                    check = false;
                 }
             }
+            if (check == false) MessageBox.Show("Đăng kí không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         private void btn_back_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Back(this, new EventArgs());
         }
+
+        
     }
 }

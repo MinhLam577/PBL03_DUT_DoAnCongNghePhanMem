@@ -44,6 +44,7 @@
             this.cb_ltk = new System.Windows.Forms.ComboBox();
             this.txb_tentk = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_back = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +53,7 @@
             this.txb_sdt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txb_sdt.BackColor = System.Drawing.Color.White;
             this.txb_sdt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_sdt.Location = new System.Drawing.Point(920, 519);
+            this.txb_sdt.Location = new System.Drawing.Point(920, 501);
             this.txb_sdt.Name = "txb_sdt";
             this.txb_sdt.Size = new System.Drawing.Size(377, 41);
             this.txb_sdt.TabIndex = 21;
@@ -63,7 +64,7 @@
             this.btn_ctn.BackColor = System.Drawing.Color.Silver;
             this.btn_ctn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ctn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ctn.Location = new System.Drawing.Point(714, 616);
+            this.btn_ctn.Location = new System.Drawing.Point(538, 588);
             this.btn_ctn.Name = "btn_ctn";
             this.btn_ctn.Size = new System.Drawing.Size(224, 83);
             this.btn_ctn.TabIndex = 23;
@@ -76,7 +77,7 @@
             this.txb_gm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txb_gm.BackColor = System.Drawing.Color.White;
             this.txb_gm.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_gm.Location = new System.Drawing.Point(920, 458);
+            this.txb_gm.Location = new System.Drawing.Point(920, 440);
             this.txb_gm.Name = "txb_gm";
             this.txb_gm.Size = new System.Drawing.Size(377, 41);
             this.txb_gm.TabIndex = 17;
@@ -89,7 +90,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label2.Location = new System.Drawing.Point(408, 183);
+            this.label2.Location = new System.Drawing.Point(408, 165);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(201, 36);
             this.label2.TabIndex = 11;
@@ -100,8 +101,9 @@
             this.txb_xnmk.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txb_xnmk.BackColor = System.Drawing.Color.White;
             this.txb_xnmk.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_xnmk.Location = new System.Drawing.Point(920, 386);
+            this.txb_xnmk.Location = new System.Drawing.Point(920, 368);
             this.txb_xnmk.Name = "txb_xnmk";
+            this.txb_xnmk.PasswordChar = '*';
             this.txb_xnmk.Size = new System.Drawing.Size(377, 41);
             this.txb_xnmk.TabIndex = 15;
             // 
@@ -110,8 +112,9 @@
             this.txb_mk.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txb_mk.BackColor = System.Drawing.Color.White;
             this.txb_mk.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_mk.Location = new System.Drawing.Point(920, 310);
+            this.txb_mk.Location = new System.Drawing.Point(920, 292);
             this.txb_mk.Name = "txb_mk";
+            this.txb_mk.PasswordChar = '*';
             this.txb_mk.Size = new System.Drawing.Size(377, 41);
             this.txb_mk.TabIndex = 14;
             // 
@@ -122,7 +125,7 @@
             this.label7.BackColor = System.Drawing.Color.Silver;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(408, 524);
+            this.label7.Location = new System.Drawing.Point(408, 506);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(190, 36);
             this.label7.TabIndex = 22;
@@ -135,7 +138,7 @@
             this.label4.BackColor = System.Drawing.Color.Silver;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(408, 310);
+            this.label4.Location = new System.Drawing.Point(408, 292);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(137, 36);
             this.label4.TabIndex = 18;
@@ -148,7 +151,7 @@
             this.label5.BackColor = System.Drawing.Color.Silver;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(408, 386);
+            this.label5.Location = new System.Drawing.Point(408, 368);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(270, 36);
             this.label5.TabIndex = 19;
@@ -161,7 +164,7 @@
             this.label6.BackColor = System.Drawing.Color.Silver;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(408, 461);
+            this.label6.Location = new System.Drawing.Point(408, 443);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 36);
             this.label6.TabIndex = 20;
@@ -174,7 +177,7 @@
             this.label3.BackColor = System.Drawing.Color.Silver;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(408, 243);
+            this.label3.Location = new System.Drawing.Point(408, 225);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(195, 36);
             this.label3.TabIndex = 16;
@@ -204,7 +207,7 @@
             "Admin",
             "Huấn Luyện Viên",
             "Khách Hàng"});
-            this.cb_ltk.Location = new System.Drawing.Point(920, 175);
+            this.cb_ltk.Location = new System.Drawing.Point(920, 157);
             this.cb_ltk.Name = "cb_ltk";
             this.cb_ltk.Size = new System.Drawing.Size(377, 44);
             this.cb_ltk.TabIndex = 12;
@@ -214,7 +217,7 @@
             this.txb_tentk.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txb_tentk.BackColor = System.Drawing.Color.White;
             this.txb_tentk.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_tentk.Location = new System.Drawing.Point(920, 240);
+            this.txb_tentk.Location = new System.Drawing.Point(920, 222);
             this.txb_tentk.Name = "txb_tentk";
             this.txb_tentk.Size = new System.Drawing.Size(377, 41);
             this.txb_tentk.TabIndex = 13;
@@ -226,6 +229,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.Silver;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.groupBox1.Controls.Add(this.btn_back);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btn_ctn);
@@ -241,11 +245,25 @@
             this.groupBox1.Controls.Add(this.cb_ltk);
             this.groupBox1.Controls.Add(this.txb_tentk);
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(0, -4);
+            this.groupBox1.Location = new System.Drawing.Point(0, 32);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1731, 755);
+            this.groupBox1.Size = new System.Drawing.Size(1731, 719);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
+            // 
+            // btn_back
+            // 
+            this.btn_back.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_back.BackColor = System.Drawing.Color.Silver;
+            this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_back.Location = new System.Drawing.Point(958, 588);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(224, 83);
+            this.btn_back.TabIndex = 24;
+            this.btn_back.Text = "Back";
+            this.btn_back.UseVisualStyleBackColor = false;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // DangKiForm
             // 
@@ -280,5 +298,6 @@
         private System.Windows.Forms.ComboBox cb_ltk;
         private System.Windows.Forms.TextBox txb_tentk;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btn_back;
     }
 }

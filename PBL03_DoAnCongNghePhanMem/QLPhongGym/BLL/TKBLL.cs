@@ -59,5 +59,9 @@ namespace QLPhongGym.BLL
         public string GetUserName(int IDQuyen) {
             return TKDAL.Instance.GetUserByMaQuyen(IDQuyen);
         }
+        public string GetPassword(string Email)
+        {
+            return TKDAL.Instance.GetPassword(Email);
+        }
     }
 }

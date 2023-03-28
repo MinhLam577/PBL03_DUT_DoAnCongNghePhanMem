@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLPhongGym.DTO;
 using QLPhongGym.BLL;
+using System.Data.Entity.Infrastructure;
 
 namespace QLPhongGym.GUI
 {
@@ -17,14 +18,17 @@ namespace QLPhongGym.GUI
     public partial class DangKiAdminOrKHForm : Form
     {
         public TK tk {get; set;}
-        
+        public int IDQuyen { get; set; }
+        public event EventHandler DangKiThanhCong;
+        public event EventHandler Back;
         public DangKiAdminOrKHForm()
         {
             InitializeComponent();
         }
-        public DangKiAdminOrKHForm(TK tk)
+        public DangKiAdminOrKHForm(TK tk, int IDQuyen)
         {
             this.tk = tk;
+            this.IDQuyen = IDQuyen;
             InitializeComponent();
         }
         private void btn_dangki_Click(object sender, EventArgs e)
@@ -49,25 +53,67 @@ namespace QLPhongGym.GUI
                 Age = Convert.ToInt32(tuoi),
                 CCCD = cmnd
             };
-            if (UsersBLL.Instance.AddUser(ad)){
-                tk.IDUser = UsersBLL.Instance.GetUserID(cmnd);
-                if (TKBLL.Instance.AddTK(this.tk))
-                    MessageBox.Show("Đăng kí thành công");
-                else
+            KH kh = new KH
+            {
+                Name = hoten,
+                Sex = gen,
+                Address = diachi,
+                Age = Convert.ToInt32(tuoi),
+                CCCD = cmnd
+            };
+            if (this.IDQuyen == 1)
+            {
+                if (UsersBLL.Instance.AddUser(ad))
                 {
-                    UsersBLL.Instance.DeleteUser(ad);
-                    check = false;
+                    tk.IDUser = UsersBLL.Instance.GetUserID(cmnd);
+                    if (TKBLL.Instance.AddTK(this.tk))
+                    {
+                        switch (MessageBox.Show("Đăng kí thành công. Bạn có muốn đăng nhập luôn không?", "Thông báo", MessageBoxButtons.OKCancel))
+                        {
+                            case DialogResult.OK:
+                                DangKiThanhCong(this, new EventArgs());
+                                break;
+                            case DialogResult.Cancel:
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        UsersBLL.Instance.DeleteUser(kh);
+                        check = false;
+                    }
                 }
+                else check = false;
             }
-            else check = false;
-            if (check == false) MessageBox.Show("Đăng kí không thành công");
+            else
+            {
+                if (UsersBLL.Instance.AddUser(kh))
+                {
+                    tk.IDUser = UsersBLL.Instance.GetUserID(cmnd);
+                    if (TKBLL.Instance.AddTK(this.tk))
+                    {
+                        switch(MessageBox.Show("Đăng kí thành công. Bạn có muốn đăng nhập luôn không?", "Thông báo", MessageBoxButtons.OKCancel))
+                        {
+                            case DialogResult.OK:
+                                DangKiThanhCong(this, new EventArgs());
+                                break;
+                            case DialogResult.Cancel:
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        UsersBLL.Instance.DeleteUser(kh);
+                        check = false;
+                    }
+                }
+                else check = false;
+            }
+            if (check == false) MessageBox.Show("Đăng kí không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         private void btn_back_Click(object sender, EventArgs e){
-            this.Close();
+            Back(this, new EventArgs() );
         }
-        private void DangKiForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            
-        }
+        
     }
 }
