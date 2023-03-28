@@ -40,10 +40,9 @@ namespace DAL
             string adNam = dr["adName"].ToString();
             int adage = Convert.ToInt32(dr["adAge"].ToString());
             bool sex = Convert.ToBoolean(dr["adSex"].ToString());
-            string sdt = dr["adSdt"].ToString();
             string address = dr["adAddress"].ToString();
             string cmnd = dr["adCMND"].ToString();
-            return new Admin(tentk, adNam, adage, sex, sdt, address, cmnd);
+            return new Admin(tentk, adNam, adage, sex, address, cmnd);
         }
         public int AddAdmin(Admin ad)
         {
@@ -56,7 +55,6 @@ namespace DAL
                 sqlcmd.Parameters.AddWithValue("@Name", ad.Ten);
                 sqlcmd.Parameters.AddWithValue("@Age", ad.Age);
                 sqlcmd.Parameters.AddWithValue("@Sex", ad.Sex);
-                sqlcmd.Parameters.AddWithValue("@Sdt", ad.Sdt);
                 sqlcmd.Parameters.AddWithValue("@Address", ad.Address);
                 sqlcmd.Parameters.AddWithValue("@cmnd", ad.Cmnd);
                 OpenConnect();
