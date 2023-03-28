@@ -32,17 +32,6 @@ namespace QLPhongGym.GUI
                     break;
             }
         }
-        private void Dkf_Back(object sender, EventArgs e)
-        {
-            (sender as DangKiForm).Close();
-            this.Show();
-        }
-
-        private void Qmkf_Exit(object sender, EventArgs e)
-        {
-            (sender as QuenMatKhauForm).Close();
-            this.Show();
-        }
 
         private void pb_eye_MouseHover(object sender, EventArgs e)
         {
@@ -59,11 +48,10 @@ namespace QLPhongGym.GUI
         private void lb_Dangki_Click(object sender, EventArgs e)
         {
             DangKiForm dkf = new DangKiForm();
-            dkf.Back += Dkf_Back;
+            dkf.Back += (a, b) => { (a as DangKiForm).Close(); this.Show(); };
             this.Hide();
             dkf.Show();
         }
-
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
             string tentk = txb_TenTk.Text, mk = txb_mk.Text, username;
@@ -79,7 +67,8 @@ namespace QLPhongGym.GUI
         private void lb_QuenMk_Click_1(object sender, EventArgs e)
         {
             QuenMatKhauForm qmkf = new QuenMatKhauForm();
-            qmkf.Exit += Qmkf_Exit;
+            qmkf.Exit += (a, b) => { (a as QuenMatKhauForm).Close(); this.Show(); };
+
             this.Hide();
             qmkf.Show();
         }

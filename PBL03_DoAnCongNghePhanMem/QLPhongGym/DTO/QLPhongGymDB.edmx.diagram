@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="3c466ac4f98849c4b37bd5c6a6e4c7c9" Name="Diagram1" ZoomLevel="71">
+      <Diagram DiagramId="3c466ac4f98849c4b37bd5c6a6e4c7c9" Name="Diagram1" ZoomLevel="93">
         <EntityTypeShape EntityType="QLPhongGymModel.BaiTap" Width="1.5" PointX="5.25" PointY="13.125" IsExpanded="true" />
         <EntityTypeShape EntityType="QLPhongGymModel.GoiTap" Width="1.5" PointX="5.375" PointY="9" IsExpanded="true" />
         <EntityTypeShape EntityType="QLPhongGymModel.HoaDon" Width="1.5" PointX="2" PointY="7.875" IsExpanded="true" />
