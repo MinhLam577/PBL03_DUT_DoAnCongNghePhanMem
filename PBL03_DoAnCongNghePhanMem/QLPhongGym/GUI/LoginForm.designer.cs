@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lb_SystemName = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pb_eye = new System.Windows.Forms.PictureBox();
             this.lb_Dangki = new System.Windows.Forms.Label();
@@ -41,49 +38,19 @@
             this.lb_Matkhau = new System.Windows.Forms.Label();
             this.lb_QuenMk = new System.Windows.Forms.Label();
             this.lb_Tk = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.lb_SystemName = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_eye)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 100);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(834, 536);
-            this.panel2.TabIndex = 1;
-            // 
-            // lb_SystemName
-            // 
-            this.lb_SystemName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lb_SystemName.AutoSize = true;
-            this.lb_SystemName.BackColor = System.Drawing.Color.Transparent;
-            this.lb_SystemName.Font = new System.Drawing.Font("Calisto MT", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_SystemName.ForeColor = System.Drawing.Color.MediumSpringGreen;
-            this.lb_SystemName.Location = new System.Drawing.Point(465, 26);
-            this.lb_SystemName.Name = "lb_SystemName";
-            this.lb_SystemName.Size = new System.Drawing.Size(562, 51);
-            this.lb_SystemName.TabIndex = 24;
-            this.lb_SystemName.Text = "Phần mềm quản lý phòng gym";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel1.Controls.Add(this.lb_SystemName);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.ForeColor = System.Drawing.Color.SpringGreen;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1464, 100);
-            this.panel1.TabIndex = 0;
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
             this.panel3.Controls.Add(this.pb_eye);
             this.panel3.Controls.Add(this.lb_Dangki);
@@ -93,9 +60,9 @@
             this.panel3.Controls.Add(this.lb_Matkhau);
             this.panel3.Controls.Add(this.lb_QuenMk);
             this.panel3.Controls.Add(this.lb_Tk);
-            this.panel3.Location = new System.Drawing.Point(831, 100);
+            this.panel3.Location = new System.Drawing.Point(716, 136);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(633, 536);
+            this.panel3.Size = new System.Drawing.Size(604, 515);
             this.panel3.TabIndex = 2;
             // 
             // pb_eye
@@ -104,11 +71,13 @@
             this.pb_eye.BackColor = System.Drawing.Color.White;
             this.pb_eye.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_eye.BackgroundImage")));
             this.pb_eye.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pb_eye.Location = new System.Drawing.Point(538, 188);
+            this.pb_eye.Location = new System.Drawing.Point(509, 188);
             this.pb_eye.Name = "pb_eye";
             this.pb_eye.Size = new System.Drawing.Size(29, 31);
             this.pb_eye.TabIndex = 30;
             this.pb_eye.TabStop = false;
+            this.pb_eye.MouseLeave += new System.EventHandler(this.pb_eye_MouseLeave);
+            this.pb_eye.MouseHover += new System.EventHandler(this.pb_eye_MouseHover);
             // 
             // lb_Dangki
             // 
@@ -117,7 +86,7 @@
             this.lb_Dangki.BackColor = System.Drawing.Color.Transparent;
             this.lb_Dangki.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Dangki.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lb_Dangki.Location = new System.Drawing.Point(102, 373);
+            this.lb_Dangki.Location = new System.Drawing.Point(73, 373);
             this.lb_Dangki.Name = "lb_Dangki";
             this.lb_Dangki.Size = new System.Drawing.Size(126, 32);
             this.lb_Dangki.TabIndex = 26;
@@ -131,7 +100,7 @@
             this.btn_DangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DangNhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_DangNhap.Location = new System.Drawing.Point(244, 265);
+            this.btn_DangNhap.Location = new System.Drawing.Point(215, 265);
             this.btn_DangNhap.Name = "btn_DangNhap";
             this.btn_DangNhap.Size = new System.Drawing.Size(202, 72);
             this.btn_DangNhap.TabIndex = 25;
@@ -146,7 +115,7 @@
             this.txb_mk.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txb_mk.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_mk.ForeColor = System.Drawing.Color.Black;
-            this.txb_mk.Location = new System.Drawing.Point(244, 188);
+            this.txb_mk.Location = new System.Drawing.Point(215, 188);
             this.txb_mk.Name = "txb_mk";
             this.txb_mk.PasswordChar = '*';
             this.txb_mk.Size = new System.Drawing.Size(323, 31);
@@ -159,7 +128,7 @@
             this.txb_TenTk.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txb_TenTk.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txb_TenTk.ForeColor = System.Drawing.Color.Black;
-            this.txb_TenTk.Location = new System.Drawing.Point(244, 112);
+            this.txb_TenTk.Location = new System.Drawing.Point(215, 112);
             this.txb_TenTk.Name = "txb_TenTk";
             this.txb_TenTk.Size = new System.Drawing.Size(323, 31);
             this.txb_TenTk.TabIndex = 22;
@@ -171,7 +140,7 @@
             this.lb_Matkhau.BackColor = System.Drawing.Color.Transparent;
             this.lb_Matkhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Matkhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lb_Matkhau.Location = new System.Drawing.Point(42, 188);
+            this.lb_Matkhau.Location = new System.Drawing.Point(13, 188);
             this.lb_Matkhau.Name = "lb_Matkhau";
             this.lb_Matkhau.Size = new System.Drawing.Size(130, 32);
             this.lb_Matkhau.TabIndex = 29;
@@ -184,7 +153,7 @@
             this.lb_QuenMk.BackColor = System.Drawing.Color.Transparent;
             this.lb_QuenMk.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_QuenMk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lb_QuenMk.Location = new System.Drawing.Point(360, 373);
+            this.lb_QuenMk.Location = new System.Drawing.Point(331, 373);
             this.lb_QuenMk.Name = "lb_QuenMk";
             this.lb_QuenMk.Size = new System.Drawing.Size(223, 32);
             this.lb_QuenMk.TabIndex = 27;
@@ -199,11 +168,52 @@
             this.lb_Tk.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Tk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lb_Tk.ImageKey = "(none)";
-            this.lb_Tk.Location = new System.Drawing.Point(42, 111);
+            this.lb_Tk.Location = new System.Drawing.Point(13, 111);
             this.lb_Tk.Name = "lb_Tk";
             this.lb_Tk.Size = new System.Drawing.Size(186, 32);
             this.lb_Tk.TabIndex = 28;
             this.lb_Tk.Text = "Tên tài khoản";
+            // 
+            // lb_SystemName
+            // 
+            this.lb_SystemName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lb_SystemName.AutoSize = true;
+            this.lb_SystemName.BackColor = System.Drawing.Color.Transparent;
+            this.lb_SystemName.Font = new System.Drawing.Font("Calisto MT", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_SystemName.ForeColor = System.Drawing.Color.SpringGreen;
+            this.lb_SystemName.Location = new System.Drawing.Point(366, 57);
+            this.lb_SystemName.Name = "lb_SystemName";
+            this.lb_SystemName.Size = new System.Drawing.Size(630, 51);
+            this.lb_SystemName.TabIndex = 24;
+            this.lb_SystemName.Text = "Phần mềm quản lý phòng gym";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
+            this.groupBox1.Controls.Add(this.lb_SystemName);
+            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.panel3);
+            this.groupBox1.Location = new System.Drawing.Point(0, -13);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1320, 651);
+            this.groupBox1.TabIndex = 25;
+            this.groupBox1.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 136);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(720, 515);
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
             // 
             // LoginForm
             // 
@@ -211,26 +221,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1464, 636);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1317, 636);
+            this.Controls.Add(this.groupBox1);
             this.Name = "LoginForm";
             this.Text = "Đăng nhập";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_eye)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lb_SystemName;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pb_eye;
         private System.Windows.Forms.Label lb_Dangki;
@@ -240,5 +245,8 @@
         private System.Windows.Forms.Label lb_Matkhau;
         private System.Windows.Forms.Label lb_QuenMk;
         private System.Windows.Forms.Label lb_Tk;
+        private System.Windows.Forms.Label lb_SystemName;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -56,9 +56,6 @@ namespace QLPhongGym.GUI
             pb_eye.BackgroundImage = Image.FromFile(Application.StartupPath + @"\Resources\7.png");
         }
 
-
-
-
         private void lb_Dangki_Click(object sender, EventArgs e)
         {
             DangKiForm dkf = new DangKiForm();
