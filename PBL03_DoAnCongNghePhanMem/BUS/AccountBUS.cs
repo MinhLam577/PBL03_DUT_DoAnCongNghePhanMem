@@ -56,5 +56,9 @@ namespace BUS
             if (Acc != default) return GetUser(Acc.MaQuyen);
             return "";
         }
+        public bool CheckSdtExist(string sdt)
+        {
+            return AccountDB.Instance.CheckSdtExist(sdt);
+        }
     }
 }

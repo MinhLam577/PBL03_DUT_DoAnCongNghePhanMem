@@ -39,7 +39,8 @@ namespace DAL
             string tenTK = d["TenTK"].ToString();
             string mk = d["MatKhauTK"].ToString();
             int maquyen = Convert.ToInt32(d["MaQuyen"].ToString());
-            return new Account(email, tenTK, mk, maquyen);
+            string sdt = d["Sdt"].ToString();
+            return new Account(email, sdt, tenTK, mk, maquyen);
         }
         public string GetUserByMaQuyen(int ma)
         {
@@ -55,10 +56,15 @@ namespace DAL
             CloseConnect();
             return tenquyen;
         }
+        public bool CheckSdtExist(string sdt)
+        {
+            List<Account> acclist = LoadAllAccount();
+            return acclist.Any(a => a.Sdt == sdt);
+        }
         public bool CheckAccountExist(string tentk)
         {
             List<Account> acclist = LoadAllAccount();
-            return acclist.Any(a=>a.TenTK == tentk);
+            return acclist.Any(a => a.TenTK == tentk);
         }
         public bool CheckEmailExist(string email)
         {
@@ -76,6 +82,7 @@ namespace DAL
                 sqlcmd.Parameters.AddWithValue("@EmailTK", acc.EmailTK);
                 sqlcmd.Parameters.AddWithValue("@MaQuyen", acc.MaQuyen);
                 sqlcmd.Parameters.AddWithValue("@MatKhauTK", acc.MatKhauTK);
+                sqlcmd.Parameters.AddWithValue("@Sdt", acc.Sdt);
                 OpenConnect();
                 kq = sqlcmd.ExecuteNonQuery();
                 CloseConnect();

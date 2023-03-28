@@ -31,8 +31,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,13 +50,92 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account.cs" />
-    <Compile Include="Admin.cs" />
-    <Compile Include="HLV.cs" />
-    <Compile Include="KH.cs" />
-    <Compile Include="Person.cs" />
-    <Compile Include="PhanQuyen.cs" />
+    <Compile Include="Admin.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaiTap.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GoiTap.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HLV.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HLV_KH.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDon.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KH.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LichTrinhTap.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PayMent.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhanQuyen.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLPhongGymDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLPhongGymDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLPhongGymDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLPhongGymDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLPhongGymDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ThietBi.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TinhTrangHLV.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TK.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="QLPhongGymDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLPhongGymDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <None Include="QLPhongGymDB.edmx.diagram">
+      <DependentUpon>QLPhongGymDB.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="QLPhongGymDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>QLPhongGymDB.Context.cs</LastGenOutput>
+      <DependentUpon>QLPhongGymDB.edmx</DependentUpon>
+    </Content>
+    <Content Include="QLPhongGymDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLPhongGymDB.edmx</DependentUpon>
+      <LastGenOutput>QLPhongGymDB.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

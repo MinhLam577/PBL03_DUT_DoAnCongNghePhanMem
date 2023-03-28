@@ -46,38 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DangKiForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DangKiForm.designer.cs">
-      <DependentUpon>DangKiForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LoginForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginForm.designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuanLyForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLyForm.designer.cs">
-      <DependentUpon>QuanLyForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuenMatKhauForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuenMatKhauForm.designer.cs">
-      <DependentUpon>QuenMatKhauForm.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="DangKiForm.resx">
-      <DependentUpon>DangKiForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -87,12 +56,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="QuanLyForm.resx">
-      <DependentUpon>QuanLyForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuenMatKhauForm.resx">
-      <DependentUpon>QuenMatKhauForm.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

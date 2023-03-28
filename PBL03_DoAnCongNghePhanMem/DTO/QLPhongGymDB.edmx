@@ -1,0 +1,830 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="QLPhongGymModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BaiTap">
+          <Key>
+            <PropertyRef Name="IDBT" />
+          </Key>
+          <Property Name="IDBT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDLT" Type="int" />
+          <Property Name="ThoiGianTap" Type="nchar" MaxLength="10" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="GoiTap">
+          <Key>
+            <PropertyRef Name="IDGT" />
+          </Key>
+          <Property Name="IDKH" Type="int" />
+          <Property Name="IDHD" Type="int" />
+          <Property Name="IDGT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NgayBatDau" Type="date" />
+          <Property Name="HanSuDung" Type="date" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Price" Type="float" />
+        </EntityType>
+        <EntityType Name="HLV_KH">
+          <Key>
+            <PropertyRef Name="IDHLV" />
+            <PropertyRef Name="IDKH" />
+          </Key>
+          <Property Name="IDHLV" Type="int" Nullable="false" />
+          <Property Name="Test" Type="nvarchar(max)" />
+          <Property Name="IDKH" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HoaDon">
+          <Key>
+            <PropertyRef Name="IDHD" />
+          </Key>
+          <Property Name="IDHD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDPM" Type="int" />
+          <Property Name="NgayThanhToan" Type="datetime" />
+          <Property Name="Price" Type="float" />
+        </EntityType>
+        <EntityType Name="LichTrinhTap">
+          <Key>
+            <PropertyRef Name="IDLT" />
+          </Key>
+          <Property Name="IDLT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDGT" Type="int" />
+          <Property Name="HuongDanTap" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="PayMent">
+          <Key>
+            <PropertyRef Name="IDPM" />
+          </Key>
+          <Property Name="IDPM" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDKH" Type="int" />
+          <Property Name="Price" Type="nchar" MaxLength="10" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="PhanQuyen">
+          <Key>
+            <PropertyRef Name="IDQuyen" />
+          </Key>
+          <Property Name="IDQuyen" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenQuyen" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ThietBi">
+          <Key>
+            <PropertyRef Name="IDTB" />
+          </Key>
+          <Property Name="IDTB" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDBT" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="TrangThai" Type="nvarchar" MaxLength="100" />
+          <Property Name="Image" Type="varbinary(max)" />
+          <Property Name="SoLuong" Type="int" />
+        </EntityType>
+        <EntityType Name="TinhTrangHLV">
+          <Key>
+            <PropertyRef Name="IDHLV" />
+          </Key>
+          <Property Name="IDHLV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SoNgayNghi" Type="int" />
+          <Property Name="SoNgayLam" Type="int" />
+          <Property Name="DanhGia" Type="float" />
+        </EntityType>
+        <EntityType Name="TK">
+          <Key>
+            <PropertyRef Name="TenTK" />
+          </Key>
+          <Property Name="TenTK" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="IDUser" Type="int" />
+          <Property Name="MatkhauTK" Type="varchar" MaxLength="50" />
+          <Property Name="EmailTK" Type="varchar" MaxLength="100" />
+          <Property Name="IDQuyen" Type="int" Nullable="false" />
+          <Property Name="Sdt" Type="varchar" MaxLength="13" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="IDUsers" />
+          </Key>
+          <Property Name="IDUsers" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Age" Type="int" />
+          <Property Name="Sex" Type="bit" />
+          <Property Name="CCCD" Type="varchar" MaxLength="12" />
+          <Property Name="Image" Type="varbinary(max)" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="BangCap" Type="nvarchar(max)" />
+          <Property Name="NamKinhNghiem" Type="int" />
+          <Property Name="Type" Type="nvarchar(max)" />
+        </EntityType>
+        <Association Name="FK_BaiTap_LichTrinhTap">
+          <End Role="LichTrinhTap" Type="Self.LichTrinhTap" Multiplicity="0..1" />
+          <End Role="BaiTap" Type="Self.BaiTap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LichTrinhTap">
+              <PropertyRef Name="IDLT" />
+            </Principal>
+            <Dependent Role="BaiTap">
+              <PropertyRef Name="IDLT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GoiTap_HoaDon">
+          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="0..1" />
+          <End Role="GoiTap" Type="Self.GoiTap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HoaDon">
+              <PropertyRef Name="IDHD" />
+            </Principal>
+            <Dependent Role="GoiTap">
+              <PropertyRef Name="IDHD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GoiTap_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="GoiTap" Type="Self.GoiTap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="IDUsers" />
+            </Principal>
+            <Dependent Role="GoiTap">
+              <PropertyRef Name="IDKH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HLV_KH_Users_IDUsers_IDHLV">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="HLV_KH" Type="Self.HLV_KH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="IDUsers" />
+            </Principal>
+            <Dependent Role="HLV_KH">
+              <PropertyRef Name="IDHLV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HLV_KH_Users_IDUsers_IDKH">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="HLV_KH" Type="Self.HLV_KH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="IDUsers" />
+            </Principal>
+            <Dependent Role="HLV_KH">
+              <PropertyRef Name="IDKH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoaDon_PayMent1">
+          <End Role="PayMent" Type="Self.PayMent" Multiplicity="0..1" />
+          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PayMent">
+              <PropertyRef Name="IDPM" />
+            </Principal>
+            <Dependent Role="HoaDon">
+              <PropertyRef Name="IDPM" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LichTrinhTap_GoiTap">
+          <End Role="GoiTap" Type="Self.GoiTap" Multiplicity="0..1" />
+          <End Role="LichTrinhTap" Type="Self.LichTrinhTap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GoiTap">
+              <PropertyRef Name="IDGT" />
+            </Principal>
+            <Dependent Role="LichTrinhTap">
+              <PropertyRef Name="IDGT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PayMent_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="PayMent" Type="Self.PayMent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="IDUsers" />
+            </Principal>
+            <Dependent Role="PayMent">
+              <PropertyRef Name="IDKH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ThietBi_BaiTap">
+          <End Role="BaiTap" Type="Self.BaiTap" Multiplicity="0..1" />
+          <End Role="ThietBi" Type="Self.ThietBi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BaiTap">
+              <PropertyRef Name="IDBT" />
+            </Principal>
+            <Dependent Role="ThietBi">
+              <PropertyRef Name="IDBT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TinhTrangHLV_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="TinhTrangHLV" Type="Self.TinhTrangHLV" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="IDUsers" />
+            </Principal>
+            <Dependent Role="TinhTrangHLV">
+              <PropertyRef Name="IDHLV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TK_PhanQuyen">
+          <End Role="PhanQuyen" Type="Self.PhanQuyen" Multiplicity="1" />
+          <End Role="TK" Type="Self.TK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhanQuyen">
+              <PropertyRef Name="IDQuyen" />
+            </Principal>
+            <Dependent Role="TK">
+              <PropertyRef Name="IDQuyen" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TK_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="TK" Type="Self.TK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="IDUsers" />
+            </Principal>
+            <Dependent Role="TK">
+              <PropertyRef Name="IDUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QLPhongGymModelStoreContainer">
+          <EntitySet Name="BaiTap" EntityType="Self.BaiTap" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GoiTap" EntityType="Self.GoiTap" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HLV_KH" EntityType="Self.HLV_KH" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LichTrinhTap" EntityType="Self.LichTrinhTap" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PayMent" EntityType="Self.PayMent" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PhanQuyen" EntityType="Self.PhanQuyen" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ThietBi" EntityType="Self.ThietBi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TinhTrangHLV" EntityType="Self.TinhTrangHLV" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TK" EntityType="Self.TK" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_BaiTap_LichTrinhTap" Association="Self.FK_BaiTap_LichTrinhTap">
+            <End Role="LichTrinhTap" EntitySet="LichTrinhTap" />
+            <End Role="BaiTap" EntitySet="BaiTap" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GoiTap_HoaDon" Association="Self.FK_GoiTap_HoaDon">
+            <End Role="HoaDon" EntitySet="HoaDon" />
+            <End Role="GoiTap" EntitySet="GoiTap" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GoiTap_Users" Association="Self.FK_GoiTap_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="GoiTap" EntitySet="GoiTap" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HLV_KH_Users_IDUsers_IDHLV" Association="Self.FK_HLV_KH_Users_IDUsers_IDHLV">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="HLV_KH" EntitySet="HLV_KH" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HLV_KH_Users_IDUsers_IDKH" Association="Self.FK_HLV_KH_Users_IDUsers_IDKH">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="HLV_KH" EntitySet="HLV_KH" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoaDon_PayMent1" Association="Self.FK_HoaDon_PayMent1">
+            <End Role="PayMent" EntitySet="PayMent" />
+            <End Role="HoaDon" EntitySet="HoaDon" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LichTrinhTap_GoiTap" Association="Self.FK_LichTrinhTap_GoiTap">
+            <End Role="GoiTap" EntitySet="GoiTap" />
+            <End Role="LichTrinhTap" EntitySet="LichTrinhTap" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PayMent_Users" Association="Self.FK_PayMent_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="PayMent" EntitySet="PayMent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ThietBi_BaiTap" Association="Self.FK_ThietBi_BaiTap">
+            <End Role="BaiTap" EntitySet="BaiTap" />
+            <End Role="ThietBi" EntitySet="ThietBi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TinhTrangHLV_Users" Association="Self.FK_TinhTrangHLV_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="TinhTrangHLV" EntitySet="TinhTrangHLV" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TK_PhanQuyen" Association="Self.FK_TK_PhanQuyen">
+            <End Role="PhanQuyen" EntitySet="PhanQuyen" />
+            <End Role="TK" EntitySet="TK" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TK_Users" Association="Self.FK_TK_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="TK" EntitySet="TK" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="QLPhongGymModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BaiTap">
+          <Key>
+            <PropertyRef Name="IDBT" />
+          </Key>
+          <Property Name="IDBT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDLT" Type="Int32" />
+          <Property Name="ThoiGianTap" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="LichTrinhTap" Relationship="Self.FK_BaiTap_LichTrinhTap" FromRole="BaiTap" ToRole="LichTrinhTap" />
+          <NavigationProperty Name="ThietBis" Relationship="Self.FK_ThietBi_BaiTap" FromRole="BaiTap" ToRole="ThietBi" />
+        </EntityType>
+        <EntityType Name="GoiTap">
+          <Key>
+            <PropertyRef Name="IDGT" />
+          </Key>
+          <Property Name="IDKH" Type="Int32" />
+          <Property Name="IDHD" Type="Int32" />
+          <Property Name="IDGT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NgayBatDau" Type="DateTime" Precision="0" />
+          <Property Name="HanSuDung" Type="DateTime" Precision="0" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Double" />
+          <NavigationProperty Name="HoaDon" Relationship="Self.FK_GoiTap_HoaDon" FromRole="GoiTap" ToRole="HoaDon" />
+          <NavigationProperty Name="User" Relationship="Self.FK_GoiTap_Users" FromRole="GoiTap" ToRole="Users" />
+          <NavigationProperty Name="LichTrinhTaps" Relationship="Self.FK_LichTrinhTap_GoiTap" FromRole="GoiTap" ToRole="LichTrinhTap" />
+        </EntityType>
+        <EntityType Name="HLV_KH">
+          <Key>
+            <PropertyRef Name="IDHLV" />
+            <PropertyRef Name="IDKH" />
+          </Key>
+          <Property Name="IDHLV" Type="Int32" Nullable="false" />
+          <Property Name="IDKH" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="Self.FK_HLV_KH_Users_IDUsers_IDHLV" FromRole="HLV_KH" ToRole="Users" />
+          <NavigationProperty Name="User1" Relationship="Self.FK_HLV_KH_Users_IDUsers_IDKH" FromRole="HLV_KH" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="HoaDon">
+          <Key>
+            <PropertyRef Name="IDHD" />
+          </Key>
+          <Property Name="IDHD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDPM" Type="Int32" />
+          <Property Name="NgayThanhToan" Type="DateTime" Precision="3" />
+          <Property Name="Price" Type="Double" />
+          <NavigationProperty Name="GoiTaps" Relationship="Self.FK_GoiTap_HoaDon" FromRole="HoaDon" ToRole="GoiTap" />
+          <NavigationProperty Name="PayMent" Relationship="Self.FK_HoaDon_PayMent1" FromRole="HoaDon" ToRole="PayMent" />
+        </EntityType>
+        <EntityType Name="LichTrinhTap">
+          <Key>
+            <PropertyRef Name="IDLT" />
+          </Key>
+          <Property Name="IDLT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDGT" Type="Int32" />
+          <Property Name="HuongDanTap" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="BaiTaps" Relationship="Self.FK_BaiTap_LichTrinhTap" FromRole="LichTrinhTap" ToRole="BaiTap" />
+          <NavigationProperty Name="GoiTap" Relationship="Self.FK_LichTrinhTap_GoiTap" FromRole="LichTrinhTap" ToRole="GoiTap" />
+        </EntityType>
+        <EntityType Name="PayMent">
+          <Key>
+            <PropertyRef Name="IDPM" />
+          </Key>
+          <Property Name="IDPM" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDKH" Type="Int32" />
+          <Property Name="Price" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="HoaDons" Relationship="Self.FK_HoaDon_PayMent1" FromRole="PayMent" ToRole="HoaDon" />
+          <NavigationProperty Name="User" Relationship="Self.FK_PayMent_Users" FromRole="PayMent" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="PhanQuyen">
+          <Key>
+            <PropertyRef Name="IDQuyen" />
+          </Key>
+          <Property Name="IDQuyen" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenQuyen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TKs" Relationship="Self.FK_TK_PhanQuyen" FromRole="PhanQuyen" ToRole="TK" />
+        </EntityType>
+        <EntityType Name="ThietBi">
+          <Key>
+            <PropertyRef Name="IDTB" />
+          </Key>
+          <Property Name="IDTB" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDBT" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TrangThai" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="SoLuong" Type="Int32" />
+          <NavigationProperty Name="BaiTap" Relationship="Self.FK_ThietBi_BaiTap" FromRole="ThietBi" ToRole="BaiTap" />
+        </EntityType>
+        <EntityType Name="TinhTrangHLV">
+          <Key>
+            <PropertyRef Name="IDHLV" />
+          </Key>
+          <Property Name="IDHLV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SoNgayNghi" Type="Int32" />
+          <Property Name="SoNgayLam" Type="Int32" />
+          <Property Name="DanhGia" Type="Double" />
+          <NavigationProperty Name="User" Relationship="Self.FK_TinhTrangHLV_Users" FromRole="TinhTrangHLV" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="TK">
+          <Key>
+            <PropertyRef Name="TenTK" />
+          </Key>
+          <Property Name="TenTK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDUser" Type="Int32" />
+          <Property Name="MatkhauTK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EmailTK" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="IDQuyen" Type="Int32" Nullable="false" />
+          <Property Name="Sdt" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PhanQuyen" Relationship="Self.FK_TK_PhanQuyen" FromRole="TK" ToRole="PhanQuyen" />
+          <NavigationProperty Name="User" Relationship="Self.FK_TK_Users" FromRole="TK" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="User" Abstract="true">
+          <Key>
+            <PropertyRef Name="IDUsers" />
+          </Key>
+          <Property Name="IDUsers" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Age" Type="Int32" />
+          <Property Name="Sex" Type="Boolean" />
+          <Property Name="CCCD" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="GoiTaps" Relationship="Self.FK_GoiTap_Users" FromRole="Users" ToRole="GoiTap" />
+          <NavigationProperty Name="HLVs" Relationship="Self.FK_HLV_KH_Users_IDUsers_IDHLV" FromRole="Users" ToRole="HLV_KH" />
+          <NavigationProperty Name="KHs" Relationship="Self.FK_HLV_KH_Users_IDUsers_IDKH" FromRole="Users" ToRole="HLV_KH" />
+          <NavigationProperty Name="PayMents" Relationship="Self.FK_PayMent_Users" FromRole="Users" ToRole="PayMent" />
+          <NavigationProperty Name="TinhTrangHLV" Relationship="Self.FK_TinhTrangHLV_Users" FromRole="Users" ToRole="TinhTrangHLV" />
+          <NavigationProperty Name="TKs" Relationship="Self.FK_TK_Users" FromRole="Users" ToRole="TK" />
+        </EntityType>
+        <Association Name="FK_BaiTap_LichTrinhTap">
+          <End Role="LichTrinhTap" Type="Self.LichTrinhTap" Multiplicity="0..1" />
+          <End Role="BaiTap" Type="Self.BaiTap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LichTrinhTap">
+              <PropertyRef Name="IDLT" />
+            </Principal>
+            <Dependent Role="BaiTap">
+              <PropertyRef Name="IDLT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ThietBi_BaiTap">
+          <End Role="BaiTap" Type="Self.BaiTap" Multiplicity="0..1" />
+          <End Role="ThietBi" Type="Self.ThietBi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BaiTap">
+              <PropertyRef Name="IDBT" />
+            </Principal>
+            <Dependent Role="ThietBi">
+              <PropertyRef Name="IDBT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GoiTap_HoaDon">
+          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="0..1" />
+          <End Role="GoiTap" Type="Self.GoiTap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HoaDon">
+              <PropertyRef Name="IDHD" />
+            </Principal>
+            <Dependent Role="GoiTap">
+              <PropertyRef Name="IDHD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GoiTap_Users">
+          <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+          <End Role="GoiTap" Type="Self.GoiTap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="IDUsers" />
+            </Principal>
+            <Dependent Role="GoiTap">
+              <PropertyRef Name="IDKH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LichTrinhTap_GoiTap">
+          <End Role="GoiTap" Type="Self.GoiTap" Multiplicity="0..1" />
+          <End Role="LichTrinhTap" Type="Self.LichTrinhTap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GoiTap">
+              <PropertyRef Name="IDGT" />
+            </Principal>
+            <Dependent Role="LichTrinhTap">
+              <PropertyRef Name="IDGT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HLV_KH_Users_IDUsers_IDHLV">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="HLV_KH" Type="Self.HLV_KH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="IDUsers" />
+            </Principal>
+            <Dependent Role="HLV_KH">
+              <PropertyRef Name="IDHLV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HLV_KH_Users_IDUsers_IDKH">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="HLV_KH" Type="Self.HLV_KH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="IDUsers" />
+            </Principal>
+            <Dependent Role="HLV_KH">
+              <PropertyRef Name="IDKH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoaDon_PayMent1">
+          <End Role="PayMent" Type="Self.PayMent" Multiplicity="0..1" />
+          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PayMent">
+              <PropertyRef Name="IDPM" />
+            </Principal>
+            <Dependent Role="HoaDon">
+              <PropertyRef Name="IDPM" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PayMent_Users">
+          <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+          <End Role="PayMent" Type="Self.PayMent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="IDUsers" />
+            </Principal>
+            <Dependent Role="PayMent">
+              <PropertyRef Name="IDKH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TK_PhanQuyen">
+          <End Role="PhanQuyen" Type="Self.PhanQuyen" Multiplicity="1" />
+          <End Role="TK" Type="Self.TK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhanQuyen">
+              <PropertyRef Name="IDQuyen" />
+            </Principal>
+            <Dependent Role="TK">
+              <PropertyRef Name="IDQuyen" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TinhTrangHLV_Users">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="TinhTrangHLV" Type="Self.TinhTrangHLV" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="IDUsers" />
+            </Principal>
+            <Dependent Role="TinhTrangHLV">
+              <PropertyRef Name="IDHLV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TK_Users">
+          <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+          <End Role="TK" Type="Self.TK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="IDUsers" />
+            </Principal>
+            <Dependent Role="TK">
+              <PropertyRef Name="IDUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="QLPhongGymDB" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BaiTaps" EntityType="Self.BaiTap" />
+          <EntitySet Name="GoiTaps" EntityType="Self.GoiTap" />
+          <EntitySet Name="HLV_KH" EntityType="Self.HLV_KH" />
+          <EntitySet Name="HoaDons" EntityType="Self.HoaDon" />
+          <EntitySet Name="LichTrinhTaps" EntityType="Self.LichTrinhTap" />
+          <EntitySet Name="PayMents" EntityType="Self.PayMent" />
+          <EntitySet Name="PhanQuyens" EntityType="Self.PhanQuyen" />
+          <EntitySet Name="ThietBis" EntityType="Self.ThietBi" />
+          <EntitySet Name="TinhTrangHLVs" EntityType="Self.TinhTrangHLV" />
+          <EntitySet Name="TKs" EntityType="Self.TK" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <AssociationSet Name="FK_BaiTap_LichTrinhTap" Association="Self.FK_BaiTap_LichTrinhTap">
+            <End Role="LichTrinhTap" EntitySet="LichTrinhTaps" />
+            <End Role="BaiTap" EntitySet="BaiTaps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ThietBi_BaiTap" Association="Self.FK_ThietBi_BaiTap">
+            <End Role="BaiTap" EntitySet="BaiTaps" />
+            <End Role="ThietBi" EntitySet="ThietBis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GoiTap_HoaDon" Association="Self.FK_GoiTap_HoaDon">
+            <End Role="HoaDon" EntitySet="HoaDons" />
+            <End Role="GoiTap" EntitySet="GoiTaps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GoiTap_Users" Association="Self.FK_GoiTap_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="GoiTap" EntitySet="GoiTaps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LichTrinhTap_GoiTap" Association="Self.FK_LichTrinhTap_GoiTap">
+            <End Role="GoiTap" EntitySet="GoiTaps" />
+            <End Role="LichTrinhTap" EntitySet="LichTrinhTaps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HLV_KH_Users_IDUsers_IDHLV" Association="Self.FK_HLV_KH_Users_IDUsers_IDHLV">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="HLV_KH" EntitySet="HLV_KH" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HLV_KH_Users_IDUsers_IDKH" Association="Self.FK_HLV_KH_Users_IDUsers_IDKH">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="HLV_KH" EntitySet="HLV_KH" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoaDon_PayMent1" Association="Self.FK_HoaDon_PayMent1">
+            <End Role="PayMent" EntitySet="PayMents" />
+            <End Role="HoaDon" EntitySet="HoaDons" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PayMent_Users" Association="Self.FK_PayMent_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="PayMent" EntitySet="PayMents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TK_PhanQuyen" Association="Self.FK_TK_PhanQuyen">
+            <End Role="PhanQuyen" EntitySet="PhanQuyens" />
+            <End Role="TK" EntitySet="TKs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TinhTrangHLV_Users" Association="Self.FK_TinhTrangHLV_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="TinhTrangHLV" EntitySet="TinhTrangHLVs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TK_Users" Association="Self.FK_TK_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="TK" EntitySet="TKs" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="HLV" BaseType="QLPhongGymModel.User" >
+          <Property Name="BangCap" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NamKinhNghiem" Type="Int32" />
+        </EntityType>
+        <EntityType Name="KH" BaseType="QLPhongGymModel.User" />
+        <EntityType Name="Admin" BaseType="QLPhongGymModel.User" />
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="QLPhongGymModelStoreContainer" CdmEntityContainer="QLPhongGymDB">
+          <EntitySetMapping Name="BaiTaps">
+            <EntityTypeMapping TypeName="QLPhongGymModel.BaiTap">
+              <MappingFragment StoreEntitySet="BaiTap">
+                <ScalarProperty Name="IDBT" ColumnName="IDBT" />
+                <ScalarProperty Name="IDLT" ColumnName="IDLT" />
+                <ScalarProperty Name="ThoiGianTap" ColumnName="ThoiGianTap" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GoiTaps">
+            <EntityTypeMapping TypeName="QLPhongGymModel.GoiTap">
+              <MappingFragment StoreEntitySet="GoiTap">
+                <ScalarProperty Name="IDKH" ColumnName="IDKH" />
+                <ScalarProperty Name="IDHD" ColumnName="IDHD" />
+                <ScalarProperty Name="IDGT" ColumnName="IDGT" />
+                <ScalarProperty Name="NgayBatDau" ColumnName="NgayBatDau" />
+                <ScalarProperty Name="HanSuDung" ColumnName="HanSuDung" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HLV_KH">
+            <EntityTypeMapping TypeName="QLPhongGymModel.HLV_KH">
+              <MappingFragment StoreEntitySet="HLV_KH">
+                <ScalarProperty Name="IDHLV" ColumnName="IDHLV" />
+                <ScalarProperty Name="IDKH" ColumnName="IDKH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HoaDons">
+            <EntityTypeMapping TypeName="QLPhongGymModel.HoaDon">
+              <MappingFragment StoreEntitySet="HoaDon">
+                <ScalarProperty Name="IDHD" ColumnName="IDHD" />
+                <ScalarProperty Name="IDPM" ColumnName="IDPM" />
+                <ScalarProperty Name="NgayThanhToan" ColumnName="NgayThanhToan" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LichTrinhTaps">
+            <EntityTypeMapping TypeName="QLPhongGymModel.LichTrinhTap">
+              <MappingFragment StoreEntitySet="LichTrinhTap">
+                <ScalarProperty Name="IDLT" ColumnName="IDLT" />
+                <ScalarProperty Name="IDGT" ColumnName="IDGT" />
+                <ScalarProperty Name="HuongDanTap" ColumnName="HuongDanTap" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PayMents">
+            <EntityTypeMapping TypeName="QLPhongGymModel.PayMent">
+              <MappingFragment StoreEntitySet="PayMent">
+                <ScalarProperty Name="IDPM" ColumnName="IDPM" />
+                <ScalarProperty Name="IDKH" ColumnName="IDKH" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PhanQuyens">
+            <EntityTypeMapping TypeName="QLPhongGymModel.PhanQuyen">
+              <MappingFragment StoreEntitySet="PhanQuyen">
+                <ScalarProperty Name="IDQuyen" ColumnName="IDQuyen" />
+                <ScalarProperty Name="TenQuyen" ColumnName="TenQuyen" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ThietBis">
+            <EntityTypeMapping TypeName="QLPhongGymModel.ThietBi">
+              <MappingFragment StoreEntitySet="ThietBi">
+                <ScalarProperty Name="IDTB" ColumnName="IDTB" />
+                <ScalarProperty Name="IDBT" ColumnName="IDBT" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TinhTrangHLVs">
+            <EntityTypeMapping TypeName="QLPhongGymModel.TinhTrangHLV">
+              <MappingFragment StoreEntitySet="TinhTrangHLV">
+                <ScalarProperty Name="IDHLV" ColumnName="IDHLV" />
+                <ScalarProperty Name="SoNgayNghi" ColumnName="SoNgayNghi" />
+                <ScalarProperty Name="SoNgayLam" ColumnName="SoNgayLam" />
+                <ScalarProperty Name="DanhGia" ColumnName="DanhGia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TKs">
+            <EntityTypeMapping TypeName="QLPhongGymModel.TK">
+              <MappingFragment StoreEntitySet="TK">
+                <ScalarProperty Name="TenTK" ColumnName="TenTK" />
+                <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+                <ScalarProperty Name="MatkhauTK" ColumnName="MatkhauTK" />
+                <ScalarProperty Name="EmailTK" ColumnName="EmailTK" />
+                <ScalarProperty Name="IDQuyen" ColumnName="IDQuyen" />
+                <ScalarProperty Name="Sdt" ColumnName="Sdt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="IsTypeOf(QLPhongGymModel.User)">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="IDUsers" ColumnName="IDUsers" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="CCCD" ColumnName="CCCD" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(QLPhongGymModel.HLV)">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="IDUsers" ColumnName="IDUsers" />
+                <ScalarProperty Name="NamKinhNghiem" ColumnName="NamKinhNghiem" />
+                <ScalarProperty Name="BangCap" ColumnName="BangCap" />
+                <Condition ColumnName="Type" Value="HLV" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(QLPhongGymModel.KH)">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="IDUsers" ColumnName="IDUsers" />
+                <Condition ColumnName="Type" Value="KH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(QLPhongGymModel.Admin)">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="IDUsers" ColumnName="IDUsers" />
+                <Condition ColumnName="Type" Value="Admin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
