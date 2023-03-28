@@ -70,7 +70,11 @@ namespace DAL
 
         public string GetUserByMaQuyen(int IDUsers)
         {
-            return LoadAllTK().Where(t => t.IDUser.Equals(IDUsers)).FirstOrDefault().PhanQuyen.TenQuyen;
+            string user = (from a in db.TKs
+                           join b in db.PhanQuyens
+                           on a.IDQuyen equals b.IDQuyen
+                           select b.TenQuyen).ToList().FirstOrDefault();
+            return user;
         }
 
         public int GetIDQuyen(string tentk) {
