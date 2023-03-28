@@ -75,7 +75,8 @@ namespace QLPhongGym.GUI
             Back(this, new EventArgs());
         }
 
-        private void btn_ctn_Click(object sender, EventArgs e)
+
+        private void btn_ctn_Click_1(object sender, EventArgs e)
         {
             string tentk = txb_tentk.Text.Trim();
             string mk = txb_mk.Text.Trim();
@@ -101,11 +102,9 @@ namespace QLPhongGym.GUI
             OpenForm(tentk, mk, email, sdt, maquyen);
         }
 
-        private void btn_back_Click(object sender, EventArgs e)
+        private void btn_back_Click_1(object sender, EventArgs e)
         {
             Back(this, new EventArgs());
         }
-
-       
     }
 }

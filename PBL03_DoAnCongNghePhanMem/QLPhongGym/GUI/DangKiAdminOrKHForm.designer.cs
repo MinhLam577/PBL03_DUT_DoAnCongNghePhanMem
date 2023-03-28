@@ -51,33 +51,34 @@
             this.lb_tenhethong.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_tenhethong.AutoSize = true;
-            this.lb_tenhethong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lb_tenhethong.BackColor = System.Drawing.Color.Transparent;
             this.lb_tenhethong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lb_tenhethong.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_tenhethong.ForeColor = System.Drawing.Color.Red;
-            this.lb_tenhethong.Location = new System.Drawing.Point(806, 40);
+            this.lb_tenhethong.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_tenhethong.ForeColor = System.Drawing.Color.DarkRed;
+            this.lb_tenhethong.Location = new System.Drawing.Point(865, 34);
             this.lb_tenhethong.Name = "lb_tenhethong";
-            this.lb_tenhethong.Size = new System.Drawing.Size(458, 38);
+            this.lb_tenhethong.Size = new System.Drawing.Size(335, 42);
             this.lb_tenhethong.TabIndex = 0;
-            this.lb_tenhethong.Text = "Phần mềm quản lý phòng gym";
+            this.lb_tenhethong.Text = "Thông tin cá nhân";
             // 
             // lb_sex
             // 
             this.lb_sex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_sex.AutoSize = true;
-            this.lb_sex.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lb_sex.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_sex.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lb_sex.BackColor = System.Drawing.Color.Transparent;
+            this.lb_sex.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_sex.ForeColor = System.Drawing.Color.Black;
             this.lb_sex.Location = new System.Drawing.Point(752, 247);
             this.lb_sex.Name = "lb_sex";
-            this.lb_sex.Size = new System.Drawing.Size(107, 29);
+            this.lb_sex.Size = new System.Drawing.Size(117, 29);
             this.lb_sex.TabIndex = 19;
             this.lb_sex.Text = "Giới tính:";
             // 
             // btn_dangki
             // 
             this.btn_dangki.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_dangki.BackColor = System.Drawing.Color.Black;
             this.btn_dangki.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_dangki.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_dangki.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -87,7 +88,7 @@
             this.btn_dangki.Size = new System.Drawing.Size(125, 48);
             this.btn_dangki.TabIndex = 12;
             this.btn_dangki.Text = "Đăng kí";
-            this.btn_dangki.UseVisualStyleBackColor = true;
+            this.btn_dangki.UseVisualStyleBackColor = false;
             this.btn_dangki.Click += new System.EventHandler(this.btn_dangki_Click);
             // 
             // lb_hvt
@@ -95,12 +96,12 @@
             this.lb_hvt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_hvt.AutoSize = true;
-            this.lb_hvt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lb_hvt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_hvt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lb_hvt.BackColor = System.Drawing.Color.Transparent;
+            this.lb_hvt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_hvt.ForeColor = System.Drawing.Color.Black;
             this.lb_hvt.Location = new System.Drawing.Point(752, 117);
             this.lb_hvt.Name = "lb_hvt";
-            this.lb_hvt.Size = new System.Drawing.Size(119, 29);
+            this.lb_hvt.Size = new System.Drawing.Size(129, 29);
             this.lb_hvt.TabIndex = 17;
             this.lb_hvt.Text = "Họ và tên:";
             // 
@@ -109,12 +110,12 @@
             this.lb_age.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_age.AutoSize = true;
-            this.lb_age.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lb_age.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_age.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lb_age.BackColor = System.Drawing.Color.Transparent;
+            this.lb_age.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_age.ForeColor = System.Drawing.Color.Black;
             this.lb_age.Location = new System.Drawing.Point(752, 178);
             this.lb_age.Name = "lb_age";
-            this.lb_age.Size = new System.Drawing.Size(68, 29);
+            this.lb_age.Size = new System.Drawing.Size(73, 29);
             this.lb_age.TabIndex = 18;
             this.lb_age.Text = "Tuổi:";
             // 
@@ -123,12 +124,12 @@
             this.lb_address.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_address.AutoSize = true;
-            this.lb_address.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lb_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_address.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lb_address.BackColor = System.Drawing.Color.Transparent;
+            this.lb_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_address.ForeColor = System.Drawing.Color.Black;
             this.lb_address.Location = new System.Drawing.Point(752, 382);
             this.lb_address.Name = "lb_address";
-            this.lb_address.Size = new System.Drawing.Size(86, 29);
+            this.lb_address.Size = new System.Drawing.Size(93, 29);
             this.lb_address.TabIndex = 21;
             this.lb_address.Text = "Địa chỉ";
             // 
@@ -137,12 +138,12 @@
             this.lb_cmnd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_cmnd.AutoSize = true;
-            this.lb_cmnd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lb_cmnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_cmnd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lb_cmnd.BackColor = System.Drawing.Color.Transparent;
+            this.lb_cmnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_cmnd.ForeColor = System.Drawing.Color.Black;
             this.lb_cmnd.Location = new System.Drawing.Point(752, 316);
             this.lb_cmnd.Name = "lb_cmnd";
-            this.lb_cmnd.Size = new System.Drawing.Size(166, 29);
+            this.lb_cmnd.Size = new System.Drawing.Size(176, 29);
             this.lb_cmnd.TabIndex = 20;
             this.lb_cmnd.Text = "CMND/CCCD:";
             // 
@@ -217,6 +218,7 @@
             // btn_back
             // 
             this.btn_back.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_back.BackColor = System.Drawing.Color.Black;
             this.btn_back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -226,14 +228,14 @@
             this.btn_back.Size = new System.Drawing.Size(125, 48);
             this.btn_back.TabIndex = 13;
             this.btn_back.Text = "Back";
-            this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.UseVisualStyleBackColor = false;
             this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // DangKiAdminOrKHForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(1346, 574);
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.cb_sex);

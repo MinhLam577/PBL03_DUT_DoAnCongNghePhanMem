@@ -105,6 +105,5 @@ namespace QLPhongGym.GUI
             Back(this, new EventArgs());
         }
 
-        
     }
 }
