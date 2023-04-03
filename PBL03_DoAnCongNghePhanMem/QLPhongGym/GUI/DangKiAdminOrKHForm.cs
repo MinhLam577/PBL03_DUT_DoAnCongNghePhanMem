@@ -36,11 +36,9 @@ namespace QLPhongGym.GUI
             string hoten = txb_hvt.Text.Trim();
             string gioitinh = cb_sex.Text.ToString(); 
             bool gen = false, check = true; 
-            string tuoi = txb_age.Text.Trim();
             string cmnd = txb_cmnd.Text.Trim();
             string diachi = txb_address.Text.Trim();
-            if (gioitinh == "" || hoten == "" || tuoi == "" || cmnd == "" || diachi == "") { MessageBox.Show("Xin nhập vào thông tin còn trống"); return; }
-            if (UsersBLL.Instance.CheckAge(tuoi) == false) { MessageBox.Show("Tuổi không đúng"); return; }
+            if (gioitinh == "" || hoten == "" || cmnd == "" || diachi == "") { MessageBox.Show("Xin nhập vào thông tin còn trống"); return; }
             if (UsersBLL.Instance.CheckCmnd(cmnd) == false) { MessageBox.Show("Chứng minh nhân dân không đúng"); return; }
             if (UsersBLL.Instance.CheckHoTen(hoten) == false) { MessageBox.Show("Họ tên không đúng"); return; }
             if (UsersBLL.Instance.CheckDiaChi(diachi) == false) { MessageBox.Show("Địa chỉ không đúng"); return; }
@@ -50,7 +48,7 @@ namespace QLPhongGym.GUI
                 Name = hoten,
                 Sex = gen,
                 Address = diachi,
-                Age = Convert.ToInt32(tuoi),
+                DateBorn = dtp_ns.Value,
                 CCCD = cmnd
             };
             KH kh = new KH
@@ -58,7 +56,7 @@ namespace QLPhongGym.GUI
                 Name = hoten,
                 Sex = gen,
                 Address = diachi,
-                Age = Convert.ToInt32(tuoi),
+                DateBorn = dtp_ns.Value,
                 CCCD = cmnd
             };
             if (this.IDQuyen == 1)
@@ -68,12 +66,10 @@ namespace QLPhongGym.GUI
                     tk.IDUser = UsersBLL.Instance.GetUserID(cmnd);
                     if (TKBLL.Instance.AddTK(this.tk))
                     {
-                        switch (MessageBox.Show("Đăng kí thành công. Bạn có muốn đăng nhập luôn không?", "Thông báo", MessageBoxButtons.OKCancel))
+                        switch (MessageBox.Show("Đăng kí thành công", "Thông báo", MessageBoxButtons.OK))
                         {
                             case DialogResult.OK:
-                                DangKiThanhCong(this, new EventArgs());
-                                break;
-                            case DialogResult.Cancel:
+                                this.Close();
                                 break;
                         }
                     }
@@ -92,12 +88,10 @@ namespace QLPhongGym.GUI
                     tk.IDUser = UsersBLL.Instance.GetUserID(cmnd);
                     if (TKBLL.Instance.AddTK(this.tk))
                     {
-                        switch(MessageBox.Show("Đăng kí thành công. Bạn có muốn đăng nhập luôn không?", "Thông báo", MessageBoxButtons.OKCancel))
+                        switch(MessageBox.Show("Đăng kí thành công", "Thông báo", MessageBoxButtons.OK))
                         {
                             case DialogResult.OK:
-                                DangKiThanhCong(this, new EventArgs());
-                                break;
-                            case DialogResult.Cancel:
+                                this.Close();
                                 break;
                         }
                     }

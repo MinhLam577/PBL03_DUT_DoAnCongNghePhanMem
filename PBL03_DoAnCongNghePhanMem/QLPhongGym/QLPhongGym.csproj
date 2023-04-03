@@ -62,7 +62,13 @@
     <Compile Include="DTO\Admin.cs">
       <DependentUpon>QLPhongGymDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="DTO\BaiTap.cs">
+    <Compile Include="DTO\CaLamViec.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\DangKiGoiTap.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\DanhGiaHLV.cs">
       <DependentUpon>QLPhongGymDB.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\GoiTap.cs">
@@ -71,19 +77,16 @@
     <Compile Include="DTO\HLV.cs">
       <DependentUpon>QLPhongGymDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="DTO\HLV_KH.cs">
-      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="DTO\HoaDon.cs">
       <DependentUpon>QLPhongGymDB.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\KH.cs">
       <DependentUpon>QLPhongGymDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="DTO\LichTrinhTap.cs">
+    <Compile Include="DTO\LichLamViecTrongTuan.cs">
       <DependentUpon>QLPhongGymDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="DTO\PayMent.cs">
+    <Compile Include="DTO\LichThueHLV.cs">
       <DependentUpon>QLPhongGymDB.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\PhanQuyen.cs">
@@ -107,7 +110,7 @@
     <Compile Include="DTO\ThietBi.cs">
       <DependentUpon>QLPhongGymDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="DTO\TinhTrangHLV.cs">
+    <Compile Include="DTO\TinhTrangLamViecHLV.cs">
       <DependentUpon>QLPhongGymDB.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\TK.cs">
@@ -122,11 +125,11 @@
     <Compile Include="GUI\DangKiAdminOrKHForm.designer.cs">
       <DependentUpon>DangKiAdminOrKHForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\DangKiForm.cs">
+    <Compile Include="GUI\DangKiTKForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\DangKiForm.Designer.cs">
-      <DependentUpon>DangKiForm.cs</DependentUpon>
+    <Compile Include="GUI\DangKiTKForm.Designer.cs">
+      <DependentUpon>DangKiTKForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\DangKiHLVForm.cs">
       <SubType>Form</SubType>
@@ -151,8 +154,8 @@
     <EmbeddedResource Include="GUI\DangKiAdminOrKHForm.resx">
       <DependentUpon>DangKiAdminOrKHForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\DangKiForm.resx">
-      <DependentUpon>DangKiForm.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\DangKiTKForm.resx">
+      <DependentUpon>DangKiTKForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DangKiHLVForm.resx">
       <DependentUpon>DangKiHLVForm.cs</DependentUpon>
@@ -171,12 +174,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="App.config" />
     <EntityDeploy Include="DTO\QLPhongGymDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>QLPhongGymDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="App.config" />
     <None Include="DTO\QLPhongGymDB.edmx.diagram">
       <DependentUpon>QLPhongGymDB.edmx</DependentUpon>
     </None>
@@ -195,8 +199,8 @@
   <ItemGroup>
     <Content Include="DTO\QLPhongGymDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>QLPhongGymDB.Context.cs</LastGenOutput>
       <DependentUpon>QLPhongGymDB.edmx</DependentUpon>
+      <LastGenOutput>QLPhongGymDB.Context.cs</LastGenOutput>
     </Content>
     <Content Include="DTO\QLPhongGymDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -213,6 +217,7 @@
     <Content Include="Resources\9.jpg" />
     <Content Include="Resources\10.png" />
     <Content Include="Resources\11.png" />
+    <None Include="Resources\91.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

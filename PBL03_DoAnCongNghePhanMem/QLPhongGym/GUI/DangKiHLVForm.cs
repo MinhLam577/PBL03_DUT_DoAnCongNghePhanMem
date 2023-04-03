@@ -25,6 +25,7 @@ namespace QLPhongGym.GUI
         public TK tk { get;set; }
         public DangKiHLVForm()
         {
+            
             InitializeComponent();
         }
         public DangKiHLVForm(TK tk)
@@ -35,20 +36,14 @@ namespace QLPhongGym.GUI
         private void btn_dangki_Click(object sender, EventArgs e)
         {
             string hoten = txb_hvt.Text;
-            string tuoi = txb_age.Text;
             string cccd = txb_cmnd.Text;
             string diachi = txb_address.Text;
             string nkn = txb_namkinhnghiem.Text;
             string BangCap = cb_bangcap.Text;
             bool gen = false, check = true;
-            if (hoten == "" || tuoi == "" || cccd == "" || diachi == "" || nkn == "" || BangCap == "" || cb_sex.Text == "")
+            if (hoten == "" || cccd == "" || diachi == "" || nkn == "" || BangCap == "" || cb_sex.Text == "")
             {
                 MessageBox.Show("Mời nhập vào thông tin còn thiếu");
-                return;
-            }
-            if (!UsersBLL.Instance.CheckAge(tuoi))
-            {
-                MessageBox.Show("Tuổi không hợp lệ");
                 return;
             }
             if (!UsersBLL.Instance.CheckCmnd(cccd))
@@ -73,7 +68,7 @@ namespace QLPhongGym.GUI
             }
             if(cb_sex.Text == "Nam") gen = true;
             HLV hlv = new HLV { 
-                Name = hoten, Age = Convert.ToInt32(tuoi), CCCD = cccd, Address = diachi,
+                Name = hoten, DateBorn = dtp_ns.Value ,CCCD = cccd, Address = diachi,
                 NamKinhNghiem = Convert.ToInt32(nkn), Sex = gen
             };
             if(!BangCap.Equals("None")) hlv.BangCap = BangCap;

@@ -29,10 +29,6 @@ namespace QLPhongGym.BLL
         {
             UsersDAL.Instance.DeleteUsers(user);
         }
-        public bool CheckAge(string Age)
-        {
-            return UsersDAL.Instance.checkAge(Age);
-        }
         public bool CheckCmnd(string Cmnd)
         {
             return UsersDAL.Instance.checkcmnd(Cmnd);

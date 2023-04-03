@@ -39,13 +39,6 @@ namespace QLPhongGym.DAL
             int UserID = db.Users.Where(s => s.CCCD.Equals(CCCD)).FirstOrDefault().IDUsers;
             return UserID;
         }
-        public bool checkAge(string age)
-        {
-            int t;
-            try { t = Convert.ToInt32(Regex.Match(age, "^[0-9]{1,3}$").ToString()); }
-            catch { return false; }
-            return t >= 10 && t <= 120;
-        }
         public bool checkcmnd(string cmnd)
         {
             return Regex.IsMatch(cmnd, "^[0-9]{12}$");
