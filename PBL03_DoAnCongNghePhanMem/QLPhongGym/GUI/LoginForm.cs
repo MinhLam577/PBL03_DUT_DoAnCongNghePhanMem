@@ -27,8 +27,6 @@ namespace QLPhongGym.GUI
                 case "KH":
                 case "HLV":
                 case "Admin":
-                    DangKiHLVForm hlvf = new DangKiHLVForm();
-                    hlvf.Show();
                     break;
             }
         }
@@ -47,8 +45,8 @@ namespace QLPhongGym.GUI
 
         private void lb_Dangki_Click(object sender, EventArgs e)
         {
-            DangKiForm dkf = new DangKiForm();
-            dkf.Back += (a, b) => { (a as DangKiForm).Close(); this.Show(); };
+            DangKiTKForm dkf = new DangKiTKForm();
+            dkf.Back += (a, b) => { (a as DangKiTKForm).Close(); this.Show(); };
             this.Hide();
             dkf.Show();
         }

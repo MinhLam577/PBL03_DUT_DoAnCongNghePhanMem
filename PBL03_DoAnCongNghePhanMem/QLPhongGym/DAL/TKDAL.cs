@@ -65,16 +65,13 @@ namespace DAL
         }
         public bool CheckSdtExist(string sdt)
         {
-            return LoadAllTK().Any(t => t.Sdt.Equals(sdt));
+            if(LoadAllTK().Select(t => t.Sdt).FirstOrDefault() != null)
+                return LoadAllTK().Any(t => t.Sdt.Equals(sdt));
+            return false;
         }
-
-        public string GetUserByMaQuyen(int IDUsers)
+        public string GetUserByMaQuyen(int IDQuyen)
         {
-            string user = (from a in db.TKs
-                           join b in db.PhanQuyens
-                           on a.IDQuyen equals b.IDQuyen
-                           select b.TenQuyen).ToList().FirstOrDefault();
-            return user;
+            return LoadAllTK().Where(t => t.IDQuyen.Equals(IDQuyen)).Select(t => t.PhanQuyen.TenQuyen).FirstOrDefault();
         }
 
         public int GetIDQuyen(string tentk) {
