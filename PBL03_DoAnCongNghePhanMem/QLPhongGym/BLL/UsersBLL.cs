@@ -21,6 +21,10 @@ namespace QLPhongGym.BLL
             }
             private set { }
         }
+        public User GetUserByID(int id)
+        {
+            return UsersDAL.Instance.GetUserByID(id);
+        }
         public bool AddUser(User user)
         {
             return UsersDAL.Instance.AddUsers(user) > 0;
@@ -29,9 +33,33 @@ namespace QLPhongGym.BLL
         {
             UsersDAL.Instance.DeleteUsers(user);
         }
-        public bool CheckCmnd(string Cmnd)
+        public void UpdateUser(User user)
         {
-            return UsersDAL.Instance.checkcmnd(Cmnd);
+            UsersDAL.Instance.UpdateUsers(user);
+        }
+        public bool CheckGmailExist(string gmail)
+        {
+            return UsersDAL.Instance.CheckEmailExist(gmail);
+        }
+        public bool CheckSDTExist(string sdt)
+        {
+            return UsersDAL.Instance.CheckSdtExist(sdt);
+        }
+        public bool CheckGmail(string gmail)
+        {
+            return UsersDAL.Instance.checkEmail(gmail);
+        }
+        public bool CheckSDT(string sdt)
+        {
+            return UsersDAL.Instance.checksdt(sdt);
+        }
+        public bool CheckCccd(string Cmnd)
+        {
+            return UsersDAL.Instance.checkcccd(Cmnd);
+        }
+        public bool checkCCCDexist(string Cmnd)
+        {
+            return UsersDAL.Instance.checkCCCDexist(Cmnd);
         }
         public bool CheckHoTen(string Hoten)
         {
@@ -48,6 +76,10 @@ namespace QLPhongGym.BLL
         public int GetUserID(string CCCD)
         {
             return UsersDAL.Instance.GetUsersID(CCCD);
+        }
+        public string GetPassword(string Gmail)
+        {
+            return UsersDAL.Instance.GetPassword(Gmail);
         }
     }
 }

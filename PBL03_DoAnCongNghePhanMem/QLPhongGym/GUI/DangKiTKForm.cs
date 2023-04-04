@@ -20,22 +20,20 @@ namespace QLPhongGym.GUI
         {
             InitializeComponent();
         }
-        
-        public void OpenForm(string tentk, string mk, string email, string sdt, int maquyen)
+        public void OpenForm(string tentk, string mk, int maquyen)
         {
+            bool trangthai = true;
             TK tK = new TK
             {
                 TenTK = tentk,
                 MatkhauTK = mk,
-                EmailTK = email,
                 IDQuyen = maquyen,
-                Sdt = sdt
+                TrangThai = trangthai
             };
             switch (maquyen)
             {
                 case 1:                   
                     DangKiAdminOrKHForm usf = new DangKiAdminOrKHForm(tK, maquyen);
-                    usf.DangKiThanhCong += Usf_DangKiThanhCong;
                     usf.Back += Usf_Back;
                     this.Hide();
                     usf.Show();
@@ -43,57 +41,31 @@ namespace QLPhongGym.GUI
             }
         }
 
-        private void Hlvf_Back(object sender, EventArgs e)
-        {
-            (sender as DangKiHLVForm).Close();
-            this.Show();
-        }
-
         private void Usf_Back(object sender, EventArgs e)
         {
             (sender as DangKiAdminOrKHForm).Close();
             this.Show();
         }
-        private void Hlvf_DangKiThanhCong(object sender, EventArgs e)
-        {
-            (sender as DangKiHLVForm).Close();
-            Back(this, new EventArgs());
-        }
-
-        private void Usf_DangKiThanhCong(object sender, EventArgs e)
-        {
-            (sender as DangKiAdminOrKHForm).Close();
-            Back(this, new EventArgs());
-        }
-
 
         private void btn_ctn_Click_1(object sender, EventArgs e)
         {
             string tentk = txb_tentk.Text.Trim();
             string mk = txb_mk.Text.Trim();
             string xnmk = txb_xnmk.Text.Trim();
-            string email = txb_gm.Text.Trim();
-            string sdt = txb_sdt.Text.Trim();
             string ltk = cb_ltk.Text.Trim();
             int maquyen = -1;
             if (ltk == "Admin") maquyen = 1;
-            if (ltk == "" || tentk == "" || mk == "" || xnmk == "" || email == "" || sdt == "") { MessageBox.Show("Mời nhập vào thông tin còn trông"); return; }
+            if (ltk == "" || tentk == "" || mk == "" || xnmk == "") { MessageBox.Show("Mời nhập vào thông tin còn trông"); return; }
             if (TKDAL.Instance.checkTkMk(tentk) == false || TKDAL.Instance.checkTkMk(tentk) == false) { MessageBox.Show("Tài khoản và mật khẩu chỉ chứa kí tự số hoặc chữ hoa thường và bao gồm 6 đến 20 kí tự"); return; }
             if (TKDAL.Instance.checkxnmk(mk, xnmk) == false) { MessageBox.Show("Xác nhận mật khẩu không đồng dạng"); return; }
-            if (TKDAL.Instance.checkEmail(email) == false) { MessageBox.Show("Email không đúng"); return; }
-            if (TKDAL.Instance.checksdt(sdt) == false) { MessageBox.Show("Số điện thoại không đúng"); return; }
-            else
-            {
-                if (TKBLL.Instance.CheckSdtExist(sdt)) { MessageBox.Show("Số điện thoại đã tồn tại"); return; }
-            }
-            if (TKBLL.Instance.CheckTenTKExist(tentk)) { MessageBox.Show("Tên tài khoản đã tồn tại"); return; }
-            else { if (TKBLL.Instance.CheckEmailExist(email)) { MessageBox.Show("Email đã tồn tại"); return; } }
-            OpenForm(tentk, mk, email, sdt, maquyen);
+            OpenForm(tentk, Eramake.eCryptography.Encrypt(mk), maquyen);
         }
 
         private void btn_back_Click_1(object sender, EventArgs e)
         {
             Back(this, new EventArgs());
         }
+
+        
     }
 }

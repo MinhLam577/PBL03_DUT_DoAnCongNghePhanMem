@@ -17,9 +17,7 @@ namespace QLPhongGym.DTO
         public string TenTK { get; set; }
         public Nullable<int> IDUser { get; set; }
         public string MatkhauTK { get; set; }
-        public string EmailTK { get; set; }
         public int IDQuyen { get; set; }
-        public string Sdt { get; set; }
         public Nullable<bool> TrangThai { get; set; }
     
         public virtual PhanQuyen PhanQuyen { get; set; }

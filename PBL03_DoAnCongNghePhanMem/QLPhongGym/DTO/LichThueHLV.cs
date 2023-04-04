@@ -20,7 +20,7 @@ namespace QLPhongGym.DTO
         public Nullable<System.DateTime> NgayThue { get; set; }
         public int IDKH { get; set; }
     
-        public virtual User HLVs { get; set; }
-        public virtual User KHs { get; set; }
+        public virtual User User_HLV { get; set; }
+        public virtual User User_KH { get; set; }
     }
 }
