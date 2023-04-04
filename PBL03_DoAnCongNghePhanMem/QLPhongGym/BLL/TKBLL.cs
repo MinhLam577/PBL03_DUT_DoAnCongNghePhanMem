@@ -7,7 +7,6 @@ using System.Runtime.InteropServices.ComTypes;
 using System.Data;
 using QLPhongGym.DTO;
 using QLPhongGym.DAL;
-using DAL;
 
 namespace QLPhongGym.BLL
 {

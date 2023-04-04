@@ -11,7 +11,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLPhongGym.BLL;
-using QLPhongGym.DAL;
 using QLPhongGym.DTO;
 namespace QLPhongGym.GUI
 {
