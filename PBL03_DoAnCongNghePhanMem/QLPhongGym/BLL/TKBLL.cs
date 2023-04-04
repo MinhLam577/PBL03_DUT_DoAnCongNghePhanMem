@@ -28,10 +28,7 @@ namespace QLPhongGym.BLL
         {
             return TKDAL.Instance.LoadAllTK();
         }
-        public bool CheckEmailExist(string email)
-        {
-            return TKDAL.Instance.CheckEmailExist(email);
-        }
+        
         public bool CheckTenTKExist(string tentk)
         {
             return TKDAL.Instance.CheckTenTKExist(tentk);
@@ -39,10 +36,6 @@ namespace QLPhongGym.BLL
         public bool CheckMKTKExist(string mk)
         {
             return TKDAL.Instance.CheckMKTKExist(mk);
-        }
-        public bool CheckSdtExist(string sdt)
-        {
-            return TKDAL.Instance.CheckSdtExist(sdt);
         }
         public bool AddTK(TK tk)
         {
@@ -58,10 +51,6 @@ namespace QLPhongGym.BLL
         }
         public string GetUserName(int IDQuyen) {
             return TKDAL.Instance.GetUserByMaQuyen(IDQuyen);
-        }
-        public string GetPassword(string Email)
-        {
-            return TKDAL.Instance.GetPassword(Email);
         }
     }
 }

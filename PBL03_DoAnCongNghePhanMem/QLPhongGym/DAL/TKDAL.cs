@@ -34,54 +34,30 @@ namespace DAL
         {
             return Regex.IsMatch(ac, "^[a-zA-Z0-9]{6,20}$");
         }
-        public bool checkEmail(string email)
-        {
-            if (email == "") return true;
-            return Regex.IsMatch(email, "^[a-zA-Z][a-zA-Z0-9_.]{5,20}(@gmail.com)$");
-        }
+        
         public bool checkxnmk(string mk, string xnmk)
         {
             return mk.Equals(xnmk);
         }
-        public bool checksdt(string sdt)
-        {
-            return Regex.IsMatch(sdt, "^[0-9]{10,11}$");
-        }
+        
         public bool checkcmnd(string cmnd)
         {
             return Regex.IsMatch(cmnd, "^[0-9]{12}$");
         }
         public bool CheckMKTKExist(string mk)
         {
-            return LoadAllTK().Any(t => t.MatkhauTK.Equals(mk));
+            return LoadAllTK().Any(t => t.MatkhauTK.Equals(Eramake.eCryptography.Encrypt(mk)));
         }
         public bool CheckTenTKExist(string tentk)
         {
             return LoadAllTK().Any(t => t.TenTK.Equals(tentk));
         }
-        public bool CheckEmailExist(string email)
-        {
-            return LoadAllTK().Any(t => t.EmailTK.Equals(email));
-        }
-        public bool CheckSdtExist(string sdt)
-        {
-            if(LoadAllTK().Select(t => t.Sdt).FirstOrDefault() != null)
-                return LoadAllTK().Any(t => t.Sdt.Equals(sdt));
-            return false;
-        }
         public string GetUserByMaQuyen(int IDQuyen)
         {
             return LoadAllTK().Where(t => t.IDQuyen.Equals(IDQuyen)).Select(t => t.PhanQuyen.TenQuyen).FirstOrDefault();
         }
-
         public int GetIDQuyen(string tentk) {
             return LoadAllTK().Where(t => t.TenTK.Equals(tentk)).Select(t => t.IDQuyen).FirstOrDefault();
-        }
-        public string GetPassword(string email)
-        {
-            string e = LoadAllTK().Where(a => a.EmailTK.Equals(email)).FirstOrDefault().MatkhauTK;
-            if (e != null) return e;
-            return "";
         }
         public int AddTK(TK acc)
         {
@@ -92,6 +68,11 @@ namespace DAL
         {
             db.TKs.Remove(acc);
             db.SaveChanges();
+        }
+        public int UpdateTK(TK acc)
+        {
+            db.Entry(acc).State = System.Data.Entity.EntityState.Modified;
+            return db.SaveChanges();
         }
     }
 }

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="QLPhongGymModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="QLPhongGymModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CaLamViec">
           <Key>
             <PropertyRef Name="IDCa" />
@@ -48,10 +48,11 @@
           <Key>
             <PropertyRef Name="IDHD" />
           </Key>
-          <Property Name="IDHD" Type="int" Nullable="false" />
+          <Property Name="IDHD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IDKH" Type="int" Nullable="false" />
           <Property Name="IDGT" Type="int" />
-          <Property Name="NgayThanhToan" Type="smalldatetime" />
+          <Property Name="IDHLV" Type="int" />
+          <Property Name="NgayThanhToan" Type="date" />
           <Property Name="Price" Type="float" />
         </EntityType>
         <EntityType Name="LichLamViecTrongTuan">
@@ -110,10 +111,8 @@
           </Key>
           <Property Name="TenTK" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="IDUser" Type="int" />
-          <Property Name="MatkhauTK" Type="varchar" MaxLength="50" />
-          <Property Name="EmailTK" Type="varchar" MaxLength="100" />
+          <Property Name="MatkhauTK" Type="varchar(max)" />
           <Property Name="IDQuyen" Type="int" Nullable="false" />
-          <Property Name="Sdt" Type="varchar" MaxLength="13" />
           <Property Name="TrangThai" Type="bit" />
         </EntityType>
         <EntityType Name="Users">
@@ -126,12 +125,14 @@
           <Property Name="Sex" Type="bit" />
           <Property Name="CCCD" Type="varchar" MaxLength="12" />
           <Property Name="Image" Type="varchar(max)" />
+          <Property Name="Gmail" Type="varchar(max)" />
+          <Property Name="Sdt" Type="varchar" MaxLength="10" />
           <Property Name="Address" Type="nvarchar(max)" />
           <Property Name="BangCap" Type="nvarchar(max)" />
           <Property Name="NamKinhNghiem" Type="int" />
           <Property Name="Type" Type="nvarchar(max)" />
         </EntityType>
-        <Association Name="FK_DangKi_GoiTap">
+        <Association Name="FK_DangKiGoiTap_GoiTap">
           <End Role="GoiTap" Type="Self.GoiTap" Multiplicity="0..1" />
           <End Role="DangKiGoiTap" Type="Self.DangKiGoiTap" Multiplicity="*" />
           <ReferentialConstraint>
@@ -143,7 +144,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_DangKi_Users">
+        <Association Name="FK_DangKiGoiTap_Users">
           <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
           <End Role="DangKiGoiTap" Type="Self.DangKiGoiTap" Multiplicity="*" />
           <ReferentialConstraint>
@@ -191,7 +192,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_LichLamViecHLV_CaLamViec">
+        <Association Name="FK_LichLamViecTrongTuan_CaLamViec">
           <End Role="CaLamViec" Type="Self.CaLamViec" Multiplicity="0..1" />
           <End Role="LichLamViecTrongTuan" Type="Self.LichLamViecTrongTuan" Multiplicity="*" />
           <ReferentialConstraint>
@@ -203,7 +204,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_LichLamViecHLV_Users1">
+        <Association Name="FK_LichLamViecTrongTuan_Users">
           <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
           <End Role="LichLamViecTrongTuan" Type="Self.LichLamViecTrongTuan" Multiplicity="*" />
           <ReferentialConstraint>
@@ -239,7 +240,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_TinhTrangLamViecHLV_LichLamViecHLV">
+        <Association Name="FK_TinhTrangLamViecHLV_LichLamViecTrongTuan">
           <End Role="LichLamViecTrongTuan" Type="Self.LichLamViecTrongTuan" Multiplicity="1" />
           <End Role="TinhTrangLamViecHLV" Type="Self.TinhTrangLamViecHLV" Multiplicity="*" />
           <ReferentialConstraint>
@@ -288,11 +289,11 @@
           <EntitySet Name="TinhTrangLamViecHLV" EntityType="Self.TinhTrangLamViecHLV" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TK" EntityType="Self.TK" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_DangKi_GoiTap" Association="Self.FK_DangKi_GoiTap">
+          <AssociationSet Name="FK_DangKiGoiTap_GoiTap" Association="Self.FK_DangKiGoiTap_GoiTap">
             <End Role="GoiTap" EntitySet="GoiTap" />
             <End Role="DangKiGoiTap" EntitySet="DangKiGoiTap" />
           </AssociationSet>
-          <AssociationSet Name="FK_DangKi_Users" Association="Self.FK_DangKi_Users">
+          <AssociationSet Name="FK_DangKiGoiTap_Users" Association="Self.FK_DangKiGoiTap_Users">
             <End Role="Users" EntitySet="Users" />
             <End Role="DangKiGoiTap" EntitySet="DangKiGoiTap" />
           </AssociationSet>
@@ -308,11 +309,11 @@
             <End Role="Users" EntitySet="Users" />
             <End Role="HoaDon" EntitySet="HoaDon" />
           </AssociationSet>
-          <AssociationSet Name="FK_LichLamViecHLV_CaLamViec" Association="Self.FK_LichLamViecHLV_CaLamViec">
+          <AssociationSet Name="FK_LichLamViecTrongTuan_CaLamViec" Association="Self.FK_LichLamViecTrongTuan_CaLamViec">
             <End Role="CaLamViec" EntitySet="CaLamViec" />
             <End Role="LichLamViecTrongTuan" EntitySet="LichLamViecTrongTuan" />
           </AssociationSet>
-          <AssociationSet Name="FK_LichLamViecHLV_Users1" Association="Self.FK_LichLamViecHLV_Users1">
+          <AssociationSet Name="FK_LichLamViecTrongTuan_Users" Association="Self.FK_LichLamViecTrongTuan_Users">
             <End Role="Users" EntitySet="Users" />
             <End Role="LichLamViecTrongTuan" EntitySet="LichLamViecTrongTuan" />
           </AssociationSet>
@@ -324,7 +325,7 @@
             <End Role="Users" EntitySet="Users" />
             <End Role="LichThueHLV" EntitySet="LichThueHLV" />
           </AssociationSet>
-          <AssociationSet Name="FK_TinhTrangLamViecHLV_LichLamViecHLV" Association="Self.FK_TinhTrangLamViecHLV_LichLamViecHLV">
+          <AssociationSet Name="FK_TinhTrangLamViecHLV_LichLamViecTrongTuan" Association="Self.FK_TinhTrangLamViecHLV_LichLamViecTrongTuan">
             <End Role="LichLamViecTrongTuan" EntitySet="LichLamViecTrongTuan" />
             <End Role="TinhTrangLamViecHLV" EntitySet="TinhTrangLamViecHLV" />
           </AssociationSet>
@@ -337,8 +338,7 @@
             <End Role="TK" EntitySet="TK" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QLPhongGymModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -350,7 +350,7 @@
           <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="GioBatDau" Type="Time" Precision="7" />
           <Property Name="GioKetThuc" Type="Time" Precision="7" />
-          <NavigationProperty Name="LichLamViecTrongTuans" Relationship="Self.FK_LichLamViecHLV_CaLamViec" FromRole="CaLamViec" ToRole="LichLamViecTrongTuan" />
+          <NavigationProperty Name="LichLamViecTrongTuans" Relationship="Self.FK_LichLamViecTrongTuan_CaLamViec" FromRole="CaLamViec" ToRole="LichLamViecTrongTuan" />
         </EntityType>
         <EntityType Name="DangKiGoiTap">
           <Key>
@@ -361,8 +361,8 @@
           <Property Name="IDGT" Type="Int32" />
           <Property Name="NgayDangKiGT" Type="DateTime" Precision="0" />
           <Property Name="NgayKetThucGT" Type="DateTime" Precision="0" />
-          <NavigationProperty Name="GoiTap" Relationship="Self.FK_DangKi_GoiTap" FromRole="DangKiGoiTap" ToRole="GoiTap" />
-          <NavigationProperty Name="User" Relationship="Self.FK_DangKi_Users" FromRole="DangKiGoiTap" ToRole="Users" />
+          <NavigationProperty Name="GoiTap" Relationship="Self.FK_DangKiGoiTap_GoiTap" FromRole="DangKiGoiTap" ToRole="GoiTap" />
+          <NavigationProperty Name="User" Relationship="Self.FK_DangKiGoiTap_Users" FromRole="DangKiGoiTap" ToRole="Users" />
         </EntityType>
         <EntityType Name="DanhGiaHLV">
           <Key>
@@ -384,16 +384,17 @@
           <Property Name="IDGT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Price" Type="Double" />
-          <NavigationProperty Name="DangKiGoiTaps" Relationship="Self.FK_DangKi_GoiTap" FromRole="GoiTap" ToRole="DangKiGoiTap" />
+          <NavigationProperty Name="DangKiGoiTaps" Relationship="Self.FK_DangKiGoiTap_GoiTap" FromRole="GoiTap" ToRole="DangKiGoiTap" />
           <NavigationProperty Name="HoaDons" Relationship="Self.FK_HoaDon_GoiTap" FromRole="GoiTap" ToRole="HoaDon" />
         </EntityType>
         <EntityType Name="HoaDon">
           <Key>
             <PropertyRef Name="IDHD" />
           </Key>
-          <Property Name="IDHD" Type="Int32" Nullable="false" />
+          <Property Name="IDHD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IDKH" Type="Int32" Nullable="false" />
           <Property Name="IDGT" Type="Int32" />
+          <Property Name="IDHLV" Type="Int32" />
           <Property Name="NgayThanhToan" Type="DateTime" Precision="0" />
           <Property Name="Price" Type="Double" />
           <NavigationProperty Name="GoiTap" Relationship="Self.FK_HoaDon_GoiTap" FromRole="HoaDon" ToRole="GoiTap" />
@@ -409,9 +410,9 @@
           <Property Name="NgayBatDau" Type="DateTime" Precision="0" />
           <Property Name="NgayKetThuc" Type="DateTime" Precision="0" />
           <Property Name="NgayLam" Type="DateTime" Precision="0" />
-          <NavigationProperty Name="CaLamViec" Relationship="Self.FK_LichLamViecHLV_CaLamViec" FromRole="LichLamViecTrongTuan" ToRole="CaLamViec" />
-          <NavigationProperty Name="User" Relationship="Self.FK_LichLamViecHLV_Users1" FromRole="LichLamViecTrongTuan" ToRole="Users" />
-          <NavigationProperty Name="TinhTrangLamViecHLVs" Relationship="Self.FK_TinhTrangLamViecHLV_LichLamViecHLV" FromRole="LichLamViecTrongTuan" ToRole="TinhTrangLamViecHLV" />
+          <NavigationProperty Name="CaLamViec" Relationship="Self.FK_LichLamViecTrongTuan_CaLamViec" FromRole="LichLamViecTrongTuan" ToRole="CaLamViec" />
+          <NavigationProperty Name="User" Relationship="Self.FK_LichLamViecTrongTuan_Users" FromRole="LichLamViecTrongTuan" ToRole="Users" />
+          <NavigationProperty Name="TinhTrangLamViecHLVs" Relationship="Self.FK_TinhTrangLamViecHLV_LichLamViecTrongTuan" FromRole="LichLamViecTrongTuan" ToRole="TinhTrangLamViecHLV" />
         </EntityType>
         <EntityType Name="LichThueHLV">
           <Key>
@@ -422,8 +423,8 @@
           <Property Name="IDCa" Type="Int32" />
           <Property Name="NgayThue" Type="DateTime" Precision="0" />
           <Property Name="IDKH" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="HLVs" Relationship="Self.FK_LichThueHLV_Users" FromRole="LichThueHLV" ToRole="Users" />
-          <NavigationProperty Name="KHs" Relationship="Self.FK_LichThueHLV_Users1" FromRole="LichThueHLV" ToRole="Users" />
+          <NavigationProperty Name="User_HLV" Relationship="Self.FK_LichThueHLV_Users" FromRole="LichThueHLV" ToRole="Users" />
+          <NavigationProperty Name="User_KH" Relationship="Self.FK_LichThueHLV_Users1" FromRole="LichThueHLV" ToRole="Users" />
         </EntityType>
         <EntityType Name="PhanQuyen">
           <Key>
@@ -455,7 +456,7 @@
           <Property Name="VangKhongPhep" Type="Boolean" />
           <Property Name="VangCoPhep" Type="Boolean" />
           <NavigationProperty Name="DanhGiaHLVs" Relationship="Self.FK_DanhGiaHLV_TinhTrangLamViecHLV" FromRole="TinhTrangLamViecHLV" ToRole="DanhGiaHLV" />
-          <NavigationProperty Name="LichLamViecTrongTuan" Relationship="Self.FK_TinhTrangLamViecHLV_LichLamViecHLV" FromRole="TinhTrangLamViecHLV" ToRole="LichLamViecTrongTuan" />
+          <NavigationProperty Name="LichLamViecTrongTuan" Relationship="Self.FK_TinhTrangLamViecHLV_LichLamViecTrongTuan" FromRole="TinhTrangLamViecHLV" ToRole="LichLamViecTrongTuan" />
         </EntityType>
         <EntityType Name="TK">
           <Key>
@@ -463,10 +464,8 @@
           </Key>
           <Property Name="TenTK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="IDUser" Type="Int32" />
-          <Property Name="MatkhauTK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="EmailTK" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MatkhauTK" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="IDQuyen" Type="Int32" Nullable="false" />
-          <Property Name="Sdt" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
           <Property Name="TrangThai" Type="Boolean" />
           <NavigationProperty Name="PhanQuyen" Relationship="Self.FK_TK_PhanQuyen" FromRole="TK" ToRole="PhanQuyen" />
           <NavigationProperty Name="User" Relationship="Self.FK_TK_Users" FromRole="TK" ToRole="Users" />
@@ -481,15 +480,17 @@
           <Property Name="Sex" Type="Boolean" />
           <Property Name="CCCD" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
           <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Gmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Sdt" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="DangKiGoiTaps" Relationship="Self.FK_DangKi_Users" FromRole="Users" ToRole="DangKiGoiTap" />
+          <NavigationProperty Name="DangKiGoiTaps" Relationship="Self.FK_DangKiGoiTap_Users" FromRole="Users" ToRole="DangKiGoiTap" />
           <NavigationProperty Name="HoaDons" Relationship="Self.FK_HoaDon_Users" FromRole="Users" ToRole="HoaDon" />
-          <NavigationProperty Name="LichLamViecTrongTuans" Relationship="Self.FK_LichLamViecHLV_Users1" FromRole="Users" ToRole="LichLamViecTrongTuan" />
-          <NavigationProperty Name="LT_HLV" Relationship="Self.FK_LichThueHLV_Users" FromRole="Users" ToRole="LichThueHLV" />
-          <NavigationProperty Name="LT_KH" Relationship="Self.FK_LichThueHLV_Users1" FromRole="Users" ToRole="LichThueHLV" />
+          <NavigationProperty Name="LichLamViecTrongTuans" Relationship="Self.FK_LichLamViecTrongTuan_Users" FromRole="Users" ToRole="LichLamViecTrongTuan" />
+          <NavigationProperty Name="HLVs" Relationship="Self.FK_LichThueHLV_Users" FromRole="Users" ToRole="LichThueHLV" />
+          <NavigationProperty Name="KHs" Relationship="Self.FK_LichThueHLV_Users1" FromRole="Users" ToRole="LichThueHLV" />
           <NavigationProperty Name="TKs" Relationship="Self.FK_TK_Users" FromRole="Users" ToRole="TK" />
         </EntityType>
-        <Association Name="FK_LichLamViecHLV_CaLamViec">
+        <Association Name="FK_LichLamViecTrongTuan_CaLamViec">
           <End Role="CaLamViec" Type="Self.CaLamViec" Multiplicity="0..1" />
           <End Role="LichLamViecTrongTuan" Type="Self.LichLamViecTrongTuan" Multiplicity="*" />
           <ReferentialConstraint>
@@ -501,7 +502,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_DangKi_GoiTap">
+        <Association Name="FK_DangKiGoiTap_GoiTap">
           <End Role="GoiTap" Type="Self.GoiTap" Multiplicity="0..1" />
           <End Role="DangKiGoiTap" Type="Self.DangKiGoiTap" Multiplicity="*" />
           <ReferentialConstraint>
@@ -513,7 +514,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_DangKi_Users">
+        <Association Name="FK_DangKiGoiTap_Users">
           <End Role="Users" Type="Self.User" Multiplicity="0..1" />
           <End Role="DangKiGoiTap" Type="Self.DangKiGoiTap" Multiplicity="*" />
           <ReferentialConstraint>
@@ -561,7 +562,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_LichLamViecHLV_Users1">
+        <Association Name="FK_LichLamViecTrongTuan_Users">
           <End Role="Users" Type="Self.User" Multiplicity="0..1" />
           <End Role="LichLamViecTrongTuan" Type="Self.LichLamViecTrongTuan" Multiplicity="*" />
           <ReferentialConstraint>
@@ -573,7 +574,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_TinhTrangLamViecHLV_LichLamViecHLV">
+        <Association Name="FK_TinhTrangLamViecHLV_LichLamViecTrongTuan">
           <End Role="LichLamViecTrongTuan" Type="Self.LichLamViecTrongTuan" Multiplicity="1" />
           <End Role="TinhTrangLamViecHLV" Type="Self.TinhTrangLamViecHLV" Multiplicity="*" />
           <ReferentialConstraint>
@@ -646,15 +647,15 @@
           <EntitySet Name="TinhTrangLamViecHLVs" EntityType="Self.TinhTrangLamViecHLV" />
           <EntitySet Name="TKs" EntityType="Self.TK" />
           <EntitySet Name="Users" EntityType="Self.User" />
-          <AssociationSet Name="FK_LichLamViecHLV_CaLamViec" Association="Self.FK_LichLamViecHLV_CaLamViec">
+          <AssociationSet Name="FK_LichLamViecTrongTuan_CaLamViec" Association="Self.FK_LichLamViecTrongTuan_CaLamViec">
             <End Role="CaLamViec" EntitySet="CaLamViecs" />
             <End Role="LichLamViecTrongTuan" EntitySet="LichLamViecTrongTuans" />
           </AssociationSet>
-          <AssociationSet Name="FK_DangKi_GoiTap" Association="Self.FK_DangKi_GoiTap">
+          <AssociationSet Name="FK_DangKiGoiTap_GoiTap" Association="Self.FK_DangKiGoiTap_GoiTap">
             <End Role="GoiTap" EntitySet="GoiTaps" />
             <End Role="DangKiGoiTap" EntitySet="DangKiGoiTaps" />
           </AssociationSet>
-          <AssociationSet Name="FK_DangKi_Users" Association="Self.FK_DangKi_Users">
+          <AssociationSet Name="FK_DangKiGoiTap_Users" Association="Self.FK_DangKiGoiTap_Users">
             <End Role="Users" EntitySet="Users" />
             <End Role="DangKiGoiTap" EntitySet="DangKiGoiTaps" />
           </AssociationSet>
@@ -670,11 +671,11 @@
             <End Role="Users" EntitySet="Users" />
             <End Role="HoaDon" EntitySet="HoaDons" />
           </AssociationSet>
-          <AssociationSet Name="FK_LichLamViecHLV_Users1" Association="Self.FK_LichLamViecHLV_Users1">
+          <AssociationSet Name="FK_LichLamViecTrongTuan_Users" Association="Self.FK_LichLamViecTrongTuan_Users">
             <End Role="Users" EntitySet="Users" />
             <End Role="LichLamViecTrongTuan" EntitySet="LichLamViecTrongTuans" />
           </AssociationSet>
-          <AssociationSet Name="FK_TinhTrangLamViecHLV_LichLamViecHLV" Association="Self.FK_TinhTrangLamViecHLV_LichLamViecHLV">
+          <AssociationSet Name="FK_TinhTrangLamViecHLV_LichLamViecTrongTuan" Association="Self.FK_TinhTrangLamViecHLV_LichLamViecTrongTuan">
             <End Role="LichLamViecTrongTuan" EntitySet="LichLamViecTrongTuans" />
             <End Role="TinhTrangLamViecHLV" EntitySet="TinhTrangLamViecHLVs" />
           </AssociationSet>
@@ -756,6 +757,7 @@
                 <ScalarProperty Name="IDHD" ColumnName="IDHD" />
                 <ScalarProperty Name="IDKH" ColumnName="IDKH" />
                 <ScalarProperty Name="IDGT" ColumnName="IDGT" />
+                <ScalarProperty Name="IDHLV" ColumnName="IDHLV" />
                 <ScalarProperty Name="NgayThanhToan" ColumnName="NgayThanhToan" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
               </MappingFragment>
@@ -822,9 +824,7 @@
                 <ScalarProperty Name="TenTK" ColumnName="TenTK" />
                 <ScalarProperty Name="IDUser" ColumnName="IDUser" />
                 <ScalarProperty Name="MatkhauTK" ColumnName="MatkhauTK" />
-                <ScalarProperty Name="EmailTK" ColumnName="EmailTK" />
                 <ScalarProperty Name="IDQuyen" ColumnName="IDQuyen" />
-                <ScalarProperty Name="Sdt" ColumnName="Sdt" />
                 <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -834,6 +834,8 @@
               <MappingFragment StoreEntitySet="Users">
                 <ScalarProperty Name="IDUsers" ColumnName="IDUsers" />
                 <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Sdt" ColumnName="Sdt" />
+                <ScalarProperty Name="Gmail" ColumnName="Gmail" />
                 <ScalarProperty Name="Image" ColumnName="Image" />
                 <ScalarProperty Name="CCCD" ColumnName="CCCD" />
                 <ScalarProperty Name="Sex" ColumnName="Sex" />

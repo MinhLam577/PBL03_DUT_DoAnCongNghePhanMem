@@ -30,7 +30,6 @@ namespace QLPhongGym.GUI
                     break;
             }
         }
-
         private void pb_eye_MouseHover(object sender, EventArgs e)
         {
             txb_mk.PasswordChar = '\0';

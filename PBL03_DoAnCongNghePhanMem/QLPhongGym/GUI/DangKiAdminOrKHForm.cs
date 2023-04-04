@@ -19,7 +19,6 @@ namespace QLPhongGym.GUI
     {
         public TK tk {get; set;}
         public int IDQuyen { get; set; }
-        public event EventHandler DangKiThanhCong;
         public event EventHandler Back;
         public DangKiAdminOrKHForm()
         {
@@ -34,22 +33,51 @@ namespace QLPhongGym.GUI
         private void btn_dangki_Click(object sender, EventArgs e)
         {
             string hoten = txb_hvt.Text.Trim();
-            string gioitinh = cb_sex.Text.ToString(); 
-            bool gen = false, check = true; 
-            string cmnd = txb_cmnd.Text.Trim();
+            string gioitinh = cb_sex.Text.ToString();
+            bool gen = false;
+            string gmail = txb_gm.Text.Trim();
+            string cccd = txb_cmnd.Text.Trim();
+            string sdt = txb_sdt.Text.Trim();
             string diachi = txb_address.Text.Trim();
-            if (gioitinh == "" || hoten == "" || cmnd == "" || diachi == "") { MessageBox.Show("Xin nhập vào thông tin còn trống"); return; }
-            if (UsersBLL.Instance.CheckCmnd(cmnd) == false) { MessageBox.Show("Chứng minh nhân dân không đúng"); return; }
-            if (UsersBLL.Instance.CheckHoTen(hoten) == false) { MessageBox.Show("Họ tên không đúng"); return; }
-            if (UsersBLL.Instance.CheckDiaChi(diachi) == false) { MessageBox.Show("Địa chỉ không đúng"); return; }
+            if (gioitinh == "" || hoten == "" || cccd == "" || diachi == "" || sdt == "" || gmail == "") { MessageBox.Show("Xin nhập vào thông tin còn trống"); return; }
+            if(!UsersBLL.Instance.CheckGmail(gmail)) { MessageBox.Show("Gmail không đúng định dạng"); return; }
+            else
+            {
+                if (UsersBLL.Instance.CheckGmailExist(gmail))
+                {
+                    MessageBox.Show("Gmail đã tồn tại");
+                    return;
+                }
+            }
+            if (!UsersBLL.Instance.CheckCccd(cccd)) { MessageBox.Show("Căn cước công dân không đúng định dạng"); return; }
+            else
+            {
+                if (UsersBLL.Instance.checkCCCDexist(cccd)){
+                    MessageBox.Show("Căn cước công dân đã tồn tại");
+                    return;
+                }
+            }
+            
+            if (!UsersBLL.Instance.CheckSDT(sdt))
+            {
+                MessageBox.Show("Số điện thoại không đúng định dạng");
+                return;
+            }
+            else
+            {
+                if (UsersBLL.Instance.CheckSDTExist(sdt))
+                {
+                    MessageBox.Show("Số điện thoại đã tồn tại");
+                    return;
+                }
+            }
+            if (UsersBLL.Instance.CheckHoTen(hoten) == false) { MessageBox.Show("Họ tên không đúng định dạng"); return; }
+            if (UsersBLL.Instance.CheckDiaChi(diachi) == false) { MessageBox.Show("Địa chỉ không đúng định dạng"); return; }
             if (gioitinh == "Nam") gen = true;
             Admin ad = new Admin
             {
-                Name = hoten,
-                Sex = gen,
-                Address = diachi,
-                DateBorn = dtp_ns.Value,
-                CCCD = cmnd
+                Name = hoten, Sex = gen, Address = diachi, DateBorn = dtp_ns.Value,
+                CCCD = cccd, Gmail = gmail, Sdt = sdt
             };
             KH kh = new KH
             {
@@ -57,57 +85,72 @@ namespace QLPhongGym.GUI
                 Sex = gen,
                 Address = diachi,
                 DateBorn = dtp_ns.Value,
-                CCCD = cmnd
+                CCCD = cccd,
+                Gmail = gmail,
+                Sdt = sdt
             };
-            if (this.IDQuyen == 1)
+            try
             {
-                if (UsersBLL.Instance.AddUser(ad))
+                if (this.IDQuyen == 1)
                 {
-                    tk.IDUser = UsersBLL.Instance.GetUserID(cmnd);
-                    if (TKBLL.Instance.AddTK(this.tk))
+                    if (UsersBLL.Instance.AddUser(ad))
                     {
-                        switch (MessageBox.Show("Đăng kí thành công", "Thông báo", MessageBoxButtons.OK))
+                        try
                         {
-                            case DialogResult.OK:
-                                this.Close();
-                                break;
+                            tk.IDUser = UsersBLL.Instance.GetUserID(cccd);
+                            if (TKBLL.Instance.AddTK(this.tk))
+                            {
+                                switch (MessageBox.Show("Đăng kí thành công", "Thông báo", MessageBoxButtons.OK))
+                                {
+                                    case DialogResult.OK:
+                                        this.Close();
+                                        break;
+                                }
+                            }
                         }
-                    }
-                    else
-                    {
-                        UsersBLL.Instance.DeleteUser(kh);
-                        check = false;
+                        catch(Exception ex)
+                        {
+                            UsersBLL.Instance.DeleteUser(ad);
+                            MessageBox.Show(ex.Message);
+                        }
+                        
                     }
                 }
-                else check = false;
-            }
-            else
-            {
-                if (UsersBLL.Instance.AddUser(kh))
+                else
                 {
-                    tk.IDUser = UsersBLL.Instance.GetUserID(cmnd);
-                    if (TKBLL.Instance.AddTK(this.tk))
+                    if (UsersBLL.Instance.AddUser(kh))
                     {
-                        switch(MessageBox.Show("Đăng kí thành công", "Thông báo", MessageBoxButtons.OK))
+                        try
                         {
-                            case DialogResult.OK:
-                                this.Close();
-                                break;
+                            tk.IDUser = UsersBLL.Instance.GetUserID(cccd);
+                            if (TKBLL.Instance.AddTK(this.tk))
+                            {
+                                switch (MessageBox.Show("Đăng kí thành công", "Thông báo", MessageBoxButtons.OK))
+                                {
+                                    case DialogResult.OK:
+                                        this.Close();
+                                        break;
+                                }
+                            }
                         }
-                    }
-                    else
-                    {
-                        UsersBLL.Instance.DeleteUser(kh);
-                        check = false;
+                        catch (Exception ex)
+                        {
+                            UsersBLL.Instance.DeleteUser(kh);
+                            MessageBox.Show(ex.Message);
+                        }
+                        
                     }
                 }
-                else check = false;
             }
-            if (check == false) MessageBox.Show("Đăng kí không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            catch
+            {
+                MessageBox.Show("Đăng kí không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void btn_back_Click(object sender, EventArgs e){
             Back(this, new EventArgs() );
         }
+
         
     }
 }

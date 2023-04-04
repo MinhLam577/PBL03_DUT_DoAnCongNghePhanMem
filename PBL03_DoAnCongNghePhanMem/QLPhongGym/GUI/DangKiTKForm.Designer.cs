@@ -33,13 +33,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.btn_ctn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.txb_sdt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txb_gm = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txb_xnmk = new System.Windows.Forms.TextBox();
             this.cb_ltk = new System.Windows.Forms.ComboBox();
@@ -75,13 +71,9 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btn_back);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.btn_ctn);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.txb_sdt);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.txb_gm);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txb_xnmk);
             this.panel1.Controls.Add(this.cb_ltk);
@@ -89,7 +81,7 @@
             this.panel1.Controls.Add(this.txb_tentk);
             this.panel1.Location = new System.Drawing.Point(491, 113);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(766, 587);
+            this.panel1.Size = new System.Drawing.Size(766, 573);
             this.panel1.TabIndex = 40;
             // 
             // label2
@@ -100,7 +92,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label2.Location = new System.Drawing.Point(18, 41);
+            this.label2.Location = new System.Drawing.Point(18, 34);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(206, 32);
             this.label2.TabIndex = 26;
@@ -113,39 +105,13 @@
             this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_back.ForeColor = System.Drawing.Color.Cyan;
-            this.btn_back.Location = new System.Drawing.Point(456, 472);
+            this.btn_back.Location = new System.Drawing.Point(459, 452);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(224, 83);
             this.btn_back.TabIndex = 39;
             this.btn_back.Text = "Back";
             this.btn_back.UseVisualStyleBackColor = false;
             this.btn_back.Click += new System.EventHandler(this.btn_back_Click_1);
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(18, 382);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(194, 32);
-            this.label7.TabIndex = 37;
-            this.label7.Text = "Số điện thoại";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(18, 319);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 32);
-            this.label6.TabIndex = 35;
-            this.label6.Text = "Gmail";
             // 
             // btn_ctn
             // 
@@ -154,7 +120,7 @@
             this.btn_ctn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ctn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ctn.ForeColor = System.Drawing.Color.Cyan;
-            this.btn_ctn.Location = new System.Drawing.Point(90, 472);
+            this.btn_ctn.Location = new System.Drawing.Point(92, 452);
             this.btn_ctn.Name = "btn_ctn";
             this.btn_ctn.Size = new System.Drawing.Size(224, 83);
             this.btn_ctn.TabIndex = 38;
@@ -169,21 +135,11 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(18, 244);
+            this.label5.Location = new System.Drawing.Point(18, 339);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(274, 32);
             this.label5.TabIndex = 34;
             this.label5.Text = "Xác nhận mật khẩu";
-            // 
-            // txb_sdt
-            // 
-            this.txb_sdt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txb_sdt.BackColor = System.Drawing.Color.White;
-            this.txb_sdt.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_sdt.Location = new System.Drawing.Point(352, 385);
-            this.txb_sdt.Name = "txb_sdt";
-            this.txb_sdt.Size = new System.Drawing.Size(377, 41);
-            this.txb_sdt.TabIndex = 36;
             // 
             // label4
             // 
@@ -192,21 +148,11 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(18, 168);
+            this.label4.Location = new System.Drawing.Point(18, 244);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(138, 32);
             this.label4.TabIndex = 33;
             this.label4.Text = "Mật khẩu";
-            // 
-            // txb_gm
-            // 
-            this.txb_gm.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txb_gm.BackColor = System.Drawing.Color.White;
-            this.txb_gm.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_gm.Location = new System.Drawing.Point(352, 324);
-            this.txb_gm.Name = "txb_gm";
-            this.txb_gm.Size = new System.Drawing.Size(377, 41);
-            this.txb_gm.TabIndex = 32;
             // 
             // label3
             // 
@@ -215,7 +161,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(18, 101);
+            this.label3.Location = new System.Drawing.Point(18, 140);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(199, 32);
             this.label3.TabIndex = 31;
@@ -226,7 +172,7 @@
             this.txb_xnmk.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txb_xnmk.BackColor = System.Drawing.Color.White;
             this.txb_xnmk.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_xnmk.Location = new System.Drawing.Point(352, 252);
+            this.txb_xnmk.Location = new System.Drawing.Point(352, 330);
             this.txb_xnmk.Name = "txb_xnmk";
             this.txb_xnmk.PasswordChar = '*';
             this.txb_xnmk.Size = new System.Drawing.Size(377, 41);
@@ -241,7 +187,7 @@
             this.cb_ltk.FormattingEnabled = true;
             this.cb_ltk.Items.AddRange(new object[] {
             "Admin"});
-            this.cb_ltk.Location = new System.Drawing.Point(352, 41);
+            this.cb_ltk.Location = new System.Drawing.Point(352, 34);
             this.cb_ltk.Name = "cb_ltk";
             this.cb_ltk.Size = new System.Drawing.Size(377, 44);
             this.cb_ltk.TabIndex = 27;
@@ -251,7 +197,7 @@
             this.txb_mk.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txb_mk.BackColor = System.Drawing.Color.White;
             this.txb_mk.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_mk.Location = new System.Drawing.Point(352, 176);
+            this.txb_mk.Location = new System.Drawing.Point(352, 235);
             this.txb_mk.Name = "txb_mk";
             this.txb_mk.PasswordChar = '*';
             this.txb_mk.Size = new System.Drawing.Size(377, 41);
@@ -262,7 +208,7 @@
             this.txb_tentk.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txb_tentk.BackColor = System.Drawing.Color.White;
             this.txb_tentk.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_tentk.Location = new System.Drawing.Point(352, 106);
+            this.txb_tentk.Location = new System.Drawing.Point(352, 131);
             this.txb_tentk.Name = "txb_tentk";
             this.txb_tentk.Size = new System.Drawing.Size(377, 41);
             this.txb_tentk.TabIndex = 28;
@@ -302,13 +248,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_back;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btn_ctn;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txb_sdt;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txb_gm;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txb_xnmk;
         private System.Windows.Forms.ComboBox cb_ltk;
