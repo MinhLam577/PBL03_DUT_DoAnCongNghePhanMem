@@ -124,6 +124,60 @@
     <Compile Include="DTO\User.cs">
       <DependentUpon>QLPhongGymDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Admin_FormDanhSachGoiTap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_FormDanhSachGoiTap.Designer.cs">
+      <DependentUpon>Admin_FormDanhSachGoiTap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_FormDanhSachHLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_FormDanhSachHLV.Designer.cs">
+      <DependentUpon>Admin_FormDanhSachHLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_FormDanhSachKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_FormDanhSachKH.Designer.cs">
+      <DependentUpon>Admin_FormDanhSachKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_FormDanhSachThietBi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_FormDanhSachThietBi.Designer.cs">
+      <DependentUpon>Admin_FormDanhSachThietBi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_FormDKiGoiTapKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_FormDKiGoiTapKH.Designer.cs">
+      <DependentUpon>Admin_FormDKiGoiTapKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_FormDKiTapCungHLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_FormDKiTapCungHLV.Designer.cs">
+      <DependentUpon>Admin_FormDKiTapCungHLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_FormDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_FormDoanhThu.Designer.cs">
+      <DependentUpon>Admin_FormDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_FormHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_FormHoaDon.Designer.cs">
+      <DependentUpon>Admin_FormHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_FormMain.Designer.cs">
+      <DependentUpon>Admin_FormMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\DangKiAdminOrKHForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +189,12 @@
     </Compile>
     <Compile Include="GUI\DangKiTKForm.Designer.cs">
       <DependentUpon>DangKiTKForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormTrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormTrangChu.Designer.cs">
+      <DependentUpon>FormTrangChu.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\LoginForm.cs">
       <SubType>Form</SubType>
@@ -150,11 +210,41 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Admin_FormDanhSachGoiTap.resx">
+      <DependentUpon>Admin_FormDanhSachGoiTap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin_FormDanhSachHLV.resx">
+      <DependentUpon>Admin_FormDanhSachHLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin_FormDanhSachKH.resx">
+      <DependentUpon>Admin_FormDanhSachKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin_FormDanhSachThietBi.resx">
+      <DependentUpon>Admin_FormDanhSachThietBi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin_FormDKiGoiTapKH.resx">
+      <DependentUpon>Admin_FormDKiGoiTapKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin_FormDKiTapCungHLV.resx">
+      <DependentUpon>Admin_FormDKiTapCungHLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin_FormDoanhThu.resx">
+      <DependentUpon>Admin_FormDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin_FormHoaDon.resx">
+      <DependentUpon>Admin_FormHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin_FormMain.resx">
+      <DependentUpon>Admin_FormMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\DangKiAdminOrKHForm.resx">
       <DependentUpon>DangKiAdminOrKHForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DangKiTKForm.resx">
       <DependentUpon>DangKiTKForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormTrangChu.resx">
+      <DependentUpon>FormTrangChu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
