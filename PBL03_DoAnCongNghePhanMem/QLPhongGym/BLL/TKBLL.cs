@@ -7,6 +7,8 @@ using System.Runtime.InteropServices.ComTypes;
 using System.Data;
 using QLPhongGym.DTO;
 using QLPhongGym.DAL;
+using System.Text.RegularExpressions;
+using DAL;
 
 namespace QLPhongGym.BLL
 {
@@ -50,6 +52,14 @@ namespace QLPhongGym.BLL
         }
         public string GetUserName(int IDQuyen) {
             return TKDAL.Instance.GetUserByMaQuyen(IDQuyen);
+        }
+        public bool checkTkMk(string ac)
+        {
+            return TKDAL.Instance.checkTkMk(ac);
+        }
+        public bool checkxnmk(string mk, string xnmk)
+        {
+            return TKDAL.Instance.checkxnmk(mk, xnmk);
         }
     }
 }
