@@ -162,5 +162,6 @@ namespace QLPhongGym.GUI
         {
             dataGridView1.DataSource = ThietBi_BLL.Instance.Sort_BLL(comboBox1.SelectedItem.ToString(), txt_search.Text);
         }
+
     }
 }
