@@ -74,5 +74,10 @@ namespace QLPhongGym.GUI
         {
             OpenChildForm(new Admin_FormDKiTapCungHLV());
         }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

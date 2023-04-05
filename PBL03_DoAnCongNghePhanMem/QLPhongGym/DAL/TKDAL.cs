@@ -6,7 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using QLPhongGym.DTO;
-using QLPhongGym.DAL;
 using QLPhongGym.GUI;
 using System.Text.RegularExpressions;
 

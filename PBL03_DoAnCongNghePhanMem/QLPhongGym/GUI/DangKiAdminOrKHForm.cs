@@ -39,7 +39,7 @@ namespace QLPhongGym.GUI
             string cccd = txb_cmnd.Text.Trim();
             string sdt = txb_sdt.Text.Trim();
             string diachi = txb_address.Text.Trim();
-            if (gioitinh == "" || hoten == "" || cccd == "" || diachi == "" || sdt == "" || gmail == "") { MessageBox.Show("Xin nhập vào thông tin còn trống"); return; }
+            if (gioitinh == "" || hoten == "" || cccd == "" || diachi == "" || sdt == "") { MessageBox.Show("Xin nhập vào thông tin còn trống"); return; }
             if(!UsersBLL.Instance.CheckGmail(gmail)) { MessageBox.Show("Gmail không đúng định dạng"); return; }
             else
             {

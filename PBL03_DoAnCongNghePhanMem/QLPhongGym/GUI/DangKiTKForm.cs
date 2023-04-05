@@ -8,7 +8,6 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DAL;
 using QLPhongGym.BLL;
 using QLPhongGym.DTO;
 namespace QLPhongGym.GUI
@@ -56,8 +55,8 @@ namespace QLPhongGym.GUI
             int maquyen = -1;
             if (ltk == "Admin") maquyen = 1;
             if (ltk == "" || tentk == "" || mk == "" || xnmk == "") { MessageBox.Show("Mời nhập vào thông tin còn trông"); return; }
-            if (TKDAL.Instance.checkTkMk(tentk) == false || TKDAL.Instance.checkTkMk(tentk) == false) { MessageBox.Show("Tài khoản và mật khẩu chỉ chứa kí tự số hoặc chữ hoa thường và bao gồm 6 đến 20 kí tự"); return; }
-            if (TKDAL.Instance.checkxnmk(mk, xnmk) == false) { MessageBox.Show("Xác nhận mật khẩu không đồng dạng"); return; }
+            if (TKBLL.Instance.checkTkMk(tentk) == false || TKBLL.Instance.checkTkMk(tentk) == false) { MessageBox.Show("Tài khoản và mật khẩu chỉ chứa kí tự số hoặc chữ hoa thường và bao gồm 6 đến 20 kí tự"); return; }
+            if (TKBLL.Instance.checkxnmk(mk, xnmk) == false) { MessageBox.Show("Xác nhận mật khẩu không đồng dạng"); return; }
             OpenForm(tentk, Eramake.eCryptography.Encrypt(mk), maquyen);
         }
 

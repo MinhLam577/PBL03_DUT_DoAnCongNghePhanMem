@@ -11,7 +11,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLPhongGym.BLL;
-using QLPhongGym.DAL;
 using QLPhongGym.DTO;
 namespace QLPhongGym.GUI
 {
@@ -39,12 +38,12 @@ namespace QLPhongGym.GUI
             if(txb_Email.Text == "") { MessageBox.Show("Mời nhập vào thông tin còn trống"); return; }
             else
             {
-                if (UsersDAL.Instance.CheckEmailExist(txb_Email.Text))
+                if (UsersBLL.Instance.CheckGmailExist(txb_Email.Text))
                 {
                     to = new MailAddress(txb_Email.Text);
                     mail = new MailMessage(from, to);
                     mail.Subject = "Lấy lại mật khẩu tài khoản phần mềm quản lý phòng gym";
-                    mail.Body = "Mật khẩu tài khoản của bạn: " + UsersDAL.Instance.GetPassword(txb_Email.Text);
+                    mail.Body = "Mật khẩu tài khoản của bạn: " + UsersBLL.Instance.GetPassword(txb_Email.Text);
                     mail.IsBodyHtml = true;
                     try
                     {

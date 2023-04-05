@@ -113,9 +113,9 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(159, 480);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 29);
+            this.label6.Size = new System.Drawing.Size(189, 29);
             this.label6.TabIndex = 56;
-            this.label6.Text = "Gmail";
+            this.label6.Text = "Gmail(Nếu có):";
             // 
             // txb_sdt
             // 
@@ -125,7 +125,7 @@
             this.txb_sdt.Location = new System.Drawing.Point(420, 539);
             this.txb_sdt.Name = "txb_sdt";
             this.txb_sdt.Size = new System.Drawing.Size(306, 41);
-            this.txb_sdt.TabIndex = 57;
+            this.txb_sdt.TabIndex = 6;
             // 
             // txb_gm
             // 
@@ -135,7 +135,7 @@
             this.txb_gm.Location = new System.Drawing.Point(420, 471);
             this.txb_gm.Name = "txb_gm";
             this.txb_gm.Size = new System.Drawing.Size(306, 41);
-            this.txb_gm.TabIndex = 55;
+            this.txb_gm.TabIndex = 5;
             // 
             // dtp_ns
             // 
@@ -146,7 +146,7 @@
             this.dtp_ns.Location = new System.Drawing.Point(420, 252);
             this.dtp_ns.Name = "dtp_ns";
             this.dtp_ns.Size = new System.Drawing.Size(306, 34);
-            this.dtp_ns.TabIndex = 44;
+            this.dtp_ns.TabIndex = 2;
             // 
             // btn_back
             // 
@@ -159,9 +159,10 @@
             this.btn_back.Location = new System.Drawing.Point(480, 719);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(177, 45);
-            this.btn_back.TabIndex = 49;
+            this.btn_back.TabIndex = 9;
             this.btn_back.Text = "Back";
             this.btn_back.UseVisualStyleBackColor = false;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // cb_sex
             // 
@@ -175,7 +176,7 @@
             this.cb_sex.Location = new System.Drawing.Point(420, 332);
             this.cb_sex.Name = "cb_sex";
             this.cb_sex.Size = new System.Drawing.Size(306, 37);
-            this.cb_sex.TabIndex = 45;
+            this.cb_sex.TabIndex = 3;
             // 
             // txb_address
             // 
@@ -184,7 +185,7 @@
             this.txb_address.Location = new System.Drawing.Point(420, 627);
             this.txb_address.Name = "txb_address";
             this.txb_address.Size = new System.Drawing.Size(306, 34);
-            this.txb_address.TabIndex = 47;
+            this.txb_address.TabIndex = 7;
             // 
             // txb_cmnd
             // 
@@ -193,7 +194,7 @@
             this.txb_cmnd.Location = new System.Drawing.Point(420, 404);
             this.txb_cmnd.Name = "txb_cmnd";
             this.txb_cmnd.Size = new System.Drawing.Size(306, 34);
-            this.txb_cmnd.TabIndex = 46;
+            this.txb_cmnd.TabIndex = 4;
             // 
             // txb_hvt
             // 
@@ -202,7 +203,7 @@
             this.txb_hvt.Location = new System.Drawing.Point(420, 177);
             this.txb_hvt.Name = "txb_hvt";
             this.txb_hvt.Size = new System.Drawing.Size(306, 34);
-            this.txb_hvt.TabIndex = 43;
+            this.txb_hvt.TabIndex = 1;
             // 
             // lb_cmnd
             // 
@@ -267,7 +268,7 @@
             this.btn_dangki.Location = new System.Drawing.Point(226, 720);
             this.btn_dangki.Name = "btn_dangki";
             this.btn_dangki.Size = new System.Drawing.Size(177, 44);
-            this.btn_dangki.TabIndex = 48;
+            this.btn_dangki.TabIndex = 8;
             this.btn_dangki.Text = "Đăng kí";
             this.btn_dangki.UseVisualStyleBackColor = false;
             this.btn_dangki.Click += new System.EventHandler(this.btn_dangki_Click);

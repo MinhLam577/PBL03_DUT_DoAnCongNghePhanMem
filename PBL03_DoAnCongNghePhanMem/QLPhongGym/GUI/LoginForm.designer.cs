@@ -59,7 +59,7 @@
             this.panel3.Controls.Add(this.lb_Matkhau);
             this.panel3.Controls.Add(this.lb_QuenMk);
             this.panel3.Controls.Add(this.lb_Tk);
-            this.panel3.Location = new System.Drawing.Point(591, 12);
+            this.panel3.Location = new System.Drawing.Point(477, 26);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1216, 771);
             this.panel3.TabIndex = 2;
@@ -191,6 +191,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox1.Controls.Add(this.panel3);
             this.groupBox1.Location = new System.Drawing.Point(0, -11);

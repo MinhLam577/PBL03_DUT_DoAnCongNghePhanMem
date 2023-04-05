@@ -24,9 +24,11 @@ namespace QLPhongGym.GUI
         {
             switch (user)
             {
-                case "KH":
                 case "HLV":
+                    break;
                 case "Admin":
+                    Admin_FormMain adfm = new Admin_FormMain();
+                    adfm.ShowDialog();
                     break;
             }
         }
@@ -65,9 +67,10 @@ namespace QLPhongGym.GUI
         {
             QuenMatKhauForm qmkf = new QuenMatKhauForm();
             qmkf.Exit += (a, b) => { (a as QuenMatKhauForm).Close(); this.Show(); };
-
             this.Hide();
             qmkf.Show();
         }
+
+        
     }
 }

@@ -33,9 +33,9 @@ namespace QLPhongGym.BLL
         {
             UsersDAL.Instance.DeleteUsers(user);
         }
-        public void UpdateUser(User user)
+        public bool UpdateUser(User user)
         {
-            UsersDAL.Instance.UpdateUsers(user);
+            return UsersDAL.Instance.UpdateUsers(user) > 0;
         }
         public bool CheckGmailExist(string gmail)
         {
@@ -65,6 +65,10 @@ namespace QLPhongGym.BLL
         {
             return UsersDAL.Instance.checkHoten(Hoten);
         }
+        public bool CheckNS(DateTime NS)
+        {
+            return UsersDAL.Instance.CheckNS(NS);
+        }
         public bool CheckDiaChi(string DiaChi)
         {
             return UsersDAL.Instance.checkdiachi(DiaChi);
@@ -81,5 +85,6 @@ namespace QLPhongGym.BLL
         {
             return UsersDAL.Instance.GetPassword(Gmail);
         }
+        
     }
 }
