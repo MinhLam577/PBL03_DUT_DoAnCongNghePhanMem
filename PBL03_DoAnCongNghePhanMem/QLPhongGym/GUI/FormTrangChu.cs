@@ -16,5 +16,7 @@ namespace QLPhongGym.GUI
         {
             InitializeComponent();
         }
+
+        
     }
 }

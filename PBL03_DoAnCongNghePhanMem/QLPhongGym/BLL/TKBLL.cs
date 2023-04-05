@@ -61,5 +61,6 @@ namespace QLPhongGym.BLL
         {
             return TKDAL.Instance.checkxnmk(mk, xnmk);
         }
+
     }
 }

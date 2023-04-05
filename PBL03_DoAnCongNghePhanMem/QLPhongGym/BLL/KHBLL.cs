@@ -21,9 +21,14 @@ namespace QLPhongGym.BLL
             }
             private set { }
         }
-        public DataTable GetAllKHDataTable()
+        public DataTable SortListKHBy(string Require, DataTable data)
         {
-            return KHDAL.Instance.GetAllKHDataTable();
+            return KHDAL.Instance.SortKHBy(Require, data);
         }
+        public DataTable FindListKHByIDOrName(string txt)
+        {
+            return KHDAL.Instance.FindListKHByIDOrName(txt);
+        }
+        
     }
 }
