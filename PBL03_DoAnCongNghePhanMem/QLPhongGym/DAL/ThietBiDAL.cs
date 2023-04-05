@@ -112,7 +112,6 @@ namespace QLPhongGym.DAL
         {
             DataTable dt = new DataTable();
             int id;
-            /*.Where(p => p.NhaCungCap.Contains(str)).Where(p => p.MoTa.Contains(str))*/
             if (Int32.TryParse(str, out id))
             {
                 var s = db.ThietBis.Where(p=> p.IDTB == id).ToList();
@@ -133,13 +132,6 @@ namespace QLPhongGym.DAL
                 }
                 return dt;
             }
-            //var query = db.ThietBis.Where(p => p.Name.Contains(str) || p.NhaCungCap.Contains(str) || p.MoTa.Contains(str)).ToList();
-            /*dt = createDataTable();
-            foreach (var item in query)
-            {
-                dt.Rows.Add(item.IDTB, item.Name, item.SoLuong, item.SoLuongHong, item.NhaCungCap, item.MoTa, item.Price);
-            }
-            return dt;*/
 
         }
         public DataTable Sort_DLL(string sort, string search)
