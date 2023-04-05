@@ -59,7 +59,7 @@
             this.panel3.Controls.Add(this.lb_Matkhau);
             this.panel3.Controls.Add(this.lb_QuenMk);
             this.panel3.Controls.Add(this.lb_Tk);
-            this.panel3.Location = new System.Drawing.Point(327, 82);
+            this.panel3.Location = new System.Drawing.Point(477, 26);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1216, 771);
             this.panel3.TabIndex = 2;
