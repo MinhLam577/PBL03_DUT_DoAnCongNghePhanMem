@@ -54,32 +54,26 @@ namespace QLPhongGym.DAL
         public void UpdateThietBi_DAL(ThietBi tb)
         {
             QLPhongGymDB ds = new QLPhongGymDB();
-/*            var s = ds.ThietBis.Where(p => p.IDTB == tb.IDTB).ToList();*/
-          var s =  db.ThietBis.FirstOrDefault(p => p.IDTB == tb.IDTB);
+            var s = db.ThietBis.FirstOrDefault(p => p.IDTB == tb.IDTB);
             if (s != null)
             {
-                MessageBox.Show("đc");
+                try
+                {
+                    s.IDTB = tb.IDTB;
+                    s.Name = tb.Name;
+                    s.Price = tb.Price;
+                    s.MoTa = tb.MoTa;
+                    s.NhaCungCap = tb.NhaCungCap;
+                    s.SoLuong = tb.SoLuong;
+                    s.SoLuongHong = tb.SoLuongHong;
+                    db.SaveChanges();
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Lỗi" + e.Message);
+                    throw;
+                }
             }
-            else
-            {
-                MessageBox.Show("Không ");
-            }
-            /*try
-            {
-                s.IDTB = tb.IDTB;
-                s.Name = tb.Name;
-                s.Price = tb.Price;
-                s.MoTa = tb.MoTa;
-                s.NhaCungCap = tb.NhaCungCap;
-                s.SoLuong = tb.SoLuong;
-                s.SoLuongHong = tb.SoLuongHong;
-                db.SaveChanges();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Lỗi" + e.Message);
-                throw;
-            }*/
         }
         public void AddThietBi_DAL(ThietBi tb)
         {
@@ -114,7 +108,7 @@ namespace QLPhongGym.DAL
             int id;
             if (Int32.TryParse(str, out id))
             {
-                var s = db.ThietBis.Where(p=> p.IDTB == id).ToList();
+                var s = db.ThietBis.Where(p => p.IDTB == id).ToList();
                 dt = createDataTable();
                 foreach (var item in s)
                 {
@@ -142,7 +136,7 @@ namespace QLPhongGym.DAL
                 switch (sort)
                 {
                     case "Giá":
-                         var query = db.ThietBis.OrderBy(s=>s.Price).ToList();
+                        var query = db.ThietBis.OrderBy(s => s.Price).ToList();
                         dt = createDataTable();
                         foreach (var item in query)
                         {

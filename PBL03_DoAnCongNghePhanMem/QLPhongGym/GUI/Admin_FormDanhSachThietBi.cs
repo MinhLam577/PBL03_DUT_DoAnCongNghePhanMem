@@ -46,21 +46,6 @@ namespace QLPhongGym.GUI
                 txt_Price.Text = dataGridView1.SelectedRows[0].Cells["Giá tiền"].Value.ToString();
             }
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-                txt_MTB.Text = row.Cells["ID"].Value.ToString();
-                txt_Mota.Text = row.Cells["Mô tả"].Value.ToString();
-                txt_TenThietbi.Text = row.Cells["Tên thiết bị"].Value.ToString();
-                txt_SoLuong.Text = row.Cells["Số lượng"].Value.ToString();
-                txt_NhaCungCap.Text = row.Cells["Nhà cung cấp"].Value.ToString();
-                txt_Price.Text = row.Cells["Giá tiền"].Value.ToString();
-                txt_SLHong.Text = row.Cells["Số lượng hỏng"].Value.ToString();
-            }
-        }
         private void Btn_Sửa_Click(object sender, EventArgs e)
         {
             if (txt_MTB.Text != "")
@@ -71,7 +56,7 @@ namespace QLPhongGym.GUI
                     MessageBox.Show("Bạn phải nhập tên thiết bị", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                if (txt_SoLuong.Text == "")
+                if (txt_SoLuong.Text == "" || Convert.ToInt32(txt_SoLuong.Text) <= 0)
                 {
                     MessageBox.Show("Bạn phải nhập số lượng thiết bị", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -81,7 +66,7 @@ namespace QLPhongGym.GUI
                     MessageBox.Show("Bạn phải nhập mô tả thiết bị", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                if (txt_Price.Text == "")
+                if (txt_Price.Text == "" || Convert.ToInt32(txt_Price.Text) <= 0)
                 {
                     MessageBox.Show("Bạn phải nhập giá thiết bị", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -91,17 +76,24 @@ namespace QLPhongGym.GUI
                     MessageBox.Show("Bạn phải nhập nhà cung cấp thiết bị", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                tb.IDTB = Convert.ToInt32(txt_MTB.Text);
                 tb.Name = txt_TenThietbi.Text;
                 tb.MoTa = txt_Mota.Text;
                 tb.SoLuong = Convert.ToInt32(txt_SoLuong.Text);
                 if (txt_SLHong.Text != "")
                 {
+                    if (Convert.ToInt32(txt_SLHong.Text) <= 0 || Convert.ToInt32(txt_SoLuong.Text) < Convert.ToInt32(txt_SLHong.Text))
+                    {
+                        MessageBox.Show("Nhập số lượng hỏng lớn hơn 0 và không được lớn hơn số lượng hiện có", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
                     tb.SoLuongHong = Convert.ToInt32(txt_SLHong.Text);
                 }
                 tb.Price = Convert.ToDouble(txt_Price.Text);
                 tb.NhaCungCap = txt_NhaCungCap.Text;
                 ThietBi_BLL.Instance.UpdateThietBi_BLL(tb);
             }
+            ShowData();
         }
 
         private void Btn_thêm_Click(object sender, EventArgs e)
@@ -111,10 +103,10 @@ namespace QLPhongGym.GUI
                 ThietBi tb = new ThietBi();
                 if (txt_TenThietbi.Text == "")
                 {
-                    MessageBox.Show("Bạn phải nhập tên thiết bị","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("Bạn phải nhập tên thiết bị", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                if (txt_SoLuong.Text == "")
+                if (txt_SoLuong.Text == "" || Convert.ToInt32(txt_SoLuong.Text) <= 0)
                 {
                     MessageBox.Show("Bạn phải nhập số lượng thiết bị", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -124,7 +116,7 @@ namespace QLPhongGym.GUI
                     MessageBox.Show("Bạn phải nhập mô tả thiết bị", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                if (txt_Price.Text == "")
+                if (txt_Price.Text == "" || Convert.ToInt32(txt_Price.Text) <= 0)
                 {
                     MessageBox.Show("Bạn phải nhập giá thiết bị", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -136,6 +128,11 @@ namespace QLPhongGym.GUI
                 }
                 if (txt_SLHong.Text != "")
                 {
+                    if (Convert.ToInt32(txt_SLHong.Text) <= 0 || Convert.ToInt32(txt_SoLuong.Text) < Convert.ToInt32(txt_SLHong.Text))
+                    {
+                        MessageBox.Show("Nhập số lượng hỏng lớn hơn 0 và không được lớn hơn số lượng hiện có", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
                     tb.SoLuongHong = Convert.ToInt32(txt_SLHong.Text);
                 }
                 tb.Name = txt_TenThietbi.Text;
@@ -150,7 +147,7 @@ namespace QLPhongGym.GUI
 
         private void button4_Click(object sender, EventArgs e)
         {
-           dataGridView1.DataSource = ThietBi_BLL.Instance.Search_BLL(txt_search.Text);
+            dataGridView1.DataSource = ThietBi_BLL.Instance.Search_BLL(txt_search.Text);
         }
 
         private void txt_search_TextChanged(object sender, EventArgs e)
@@ -163,5 +160,19 @@ namespace QLPhongGym.GUI
             dataGridView1.DataSource = ThietBi_BLL.Instance.Sort_BLL(comboBox1.SelectedItem.ToString(), txt_search.Text);
         }
 
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                txt_MTB.Text = row.Cells["ID"].Value.ToString();
+                txt_Mota.Text = row.Cells["Mô tả"].Value.ToString();
+                txt_TenThietbi.Text = row.Cells["Tên thiết bị"].Value.ToString();
+                txt_SoLuong.Text = row.Cells["Số lượng"].Value.ToString();
+                txt_NhaCungCap.Text = row.Cells["Nhà cung cấp"].Value.ToString();
+                txt_Price.Text = row.Cells["Giá tiền"].Value.ToString();
+                txt_SLHong.Text = row.Cells["Số lượng hỏng"].Value.ToString();
+            }
+        }
     }
 }
