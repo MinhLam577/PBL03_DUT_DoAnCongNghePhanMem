@@ -26,13 +26,24 @@ namespace QLPhongGym.GUI
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count == 0) return;
-            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+            int selectedCount = dataGridView1.SelectedRows.Count;
+            if (selectedCount > 0)
             {
-                int id = Convert.ToInt32(row.Cells["ID"].Value.ToString());
-                ThietBi_BLL.Instance.DeleteTB_BLL(id);
+                DialogResult result = MessageBox.Show(string.Format("Bạn có chắc chắn muốn xóa {0} hàng đã chọn?", selectedCount),
+                                                       "Xóa dữ liệu",
+                                                       MessageBoxButtons.YesNo,
+                                                       MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    // Xóa các hàng được chọn
+                    foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+                    {
+                        int id = Convert.ToInt32(row.Cells["ID"].Value.ToString());
+                        ThietBi_BLL.Instance.DeleteTB_BLL(id);
+                    }
+                }
+                ShowData();
             }
-            ShowData();
         }
         public void GUI()
         {
@@ -92,6 +103,7 @@ namespace QLPhongGym.GUI
                 tb.Price = Convert.ToDouble(txt_Price.Text);
                 tb.NhaCungCap = txt_NhaCungCap.Text;
                 ThietBi_BLL.Instance.UpdateThietBi_BLL(tb);
+                MessageBox.Show("Đã sửa thành công!!!");
             }
             ShowData();
         }
@@ -141,6 +153,7 @@ namespace QLPhongGym.GUI
                 tb.Price = Convert.ToDouble(txt_Price.Text);
                 tb.NhaCungCap = txt_NhaCungCap.Text;
                 ThietBi_BLL.Instance.AddThietBi_BLL(tb);
+                MessageBox.Show("Đã thêm thành công!!!");
             }
             ShowData();
         }
