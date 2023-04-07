@@ -4,7 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -67,9 +69,9 @@ namespace QLPhongGym.GUI
                     MessageBox.Show("Bạn phải nhập tên thiết bị", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                if (txt_SoLuong.Text == "" || Convert.ToInt32(txt_SoLuong.Text) <= 0)
+                if (!int.TryParse(txt_SoLuong.Text, out int sl) || sl <= 0)
                 {
-                    MessageBox.Show("Bạn phải nhập số lượng thiết bị", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Số lượng thiết bị không hợp lệ, vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 if (txt_Mota.Text == "")
@@ -77,9 +79,9 @@ namespace QLPhongGym.GUI
                     MessageBox.Show("Bạn phải nhập mô tả thiết bị", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                if (txt_Price.Text == "" || Convert.ToInt32(txt_Price.Text) <= 0)
+                if (!int.TryParse(txt_Price.Text, out int price) || price <= 0)
                 {
-                    MessageBox.Show("Bạn phải nhập giá thiết bị", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Giá thiết bị không hợp lệ, vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 if (txt_NhaCungCap.Text == "")
@@ -93,9 +95,9 @@ namespace QLPhongGym.GUI
                 tb.SoLuong = Convert.ToInt32(txt_SoLuong.Text);
                 if (txt_SLHong.Text != "")
                 {
-                    if (Convert.ToInt32(txt_SLHong.Text) <= 0 || Convert.ToInt32(txt_SoLuong.Text) < Convert.ToInt32(txt_SLHong.Text))
+                    if (!int.TryParse(txt_SLHong.Text, out int slhong) || slhong <= 0 || slhong > Convert.ToInt32(txt_SoLuong.Text))
                     {
-                        MessageBox.Show("Nhập số lượng hỏng lớn hơn 0 và không được lớn hơn số lượng hiện có", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Số lượng hỏng không hợp lệ, vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                     tb.SoLuongHong = Convert.ToInt32(txt_SLHong.Text);
@@ -118,9 +120,9 @@ namespace QLPhongGym.GUI
                     MessageBox.Show("Bạn phải nhập tên thiết bị", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                if (txt_SoLuong.Text == "" || Convert.ToInt32(txt_SoLuong.Text) <= 0)
+                if (!int.TryParse(txt_SoLuong.Text, out int sl) || sl <= 0)
                 {
-                    MessageBox.Show("Bạn phải nhập số lượng thiết bị", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Số lượng thiết bị không hợp lệ, vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 if (txt_Mota.Text == "")
@@ -128,9 +130,9 @@ namespace QLPhongGym.GUI
                     MessageBox.Show("Bạn phải nhập mô tả thiết bị", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                if (txt_Price.Text == "" || Convert.ToInt32(txt_Price.Text) <= 0)
+                if (!int.TryParse(txt_Price.Text, out int price) || price <= 0)
                 {
-                    MessageBox.Show("Bạn phải nhập giá thiết bị", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Giá thiết bị không hợp lệ, vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 if (txt_NhaCungCap.Text == "")
@@ -140,9 +142,9 @@ namespace QLPhongGym.GUI
                 }
                 if (txt_SLHong.Text != "")
                 {
-                    if (Convert.ToInt32(txt_SLHong.Text) <= 0 || Convert.ToInt32(txt_SoLuong.Text) < Convert.ToInt32(txt_SLHong.Text))
+                    if (!int.TryParse(txt_SLHong.Text, out int slhong) || slhong <= 0 || slhong > Convert.ToInt32(txt_SoLuong.Text))
                     {
-                        MessageBox.Show("Nhập số lượng hỏng lớn hơn 0 và không được lớn hơn số lượng hiện có", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Số lượng hỏng không hợp lệ, vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                     tb.SoLuongHong = Convert.ToInt32(txt_SLHong.Text);
@@ -157,20 +159,17 @@ namespace QLPhongGym.GUI
             }
             ShowData();
         }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            dataGridView1.DataSource = ThietBi_BLL.Instance.Search_BLL(txt_search.Text);
-        }
-
-        private void txt_search_TextChanged(object sender, EventArgs e)
-        {
-            dataGridView1.DataSource = ThietBi_BLL.Instance.Search_BLL(txt_search.Text);
-        }
-
         private void Btn_sort_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = ThietBi_BLL.Instance.Sort_BLL(comboBox1.SelectedItem.ToString(), txt_search.Text);
+            if (comboBox1.SelectedItem != null) // chọn một giá trị trong combobox
+            {
+                dataGridView1.DataSource = ThietBi_BLL.Instance.Sort_BLL(comboBox1.SelectedItem.ToString(), txt_search.Text);
+            }
+            else
+            {
+                MessageBox.Show("Chọn thứ bạn muốn sắp xếp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -186,6 +185,27 @@ namespace QLPhongGym.GUI
                 txt_Price.Text = row.Cells["Giá tiền"].Value.ToString();
                 txt_SLHong.Text = row.Cells["Số lượng hỏng"].Value.ToString();
             }
+        }
+
+        private void btn_reset_Click(object sender, EventArgs e)
+        {
+            txt_MTB.Text = "";
+            txt_Mota.Text = "";
+            txt_TenThietbi.Text = "";
+            txt_SoLuong.Text = "";
+            txt_NhaCungCap.Text = "";
+            txt_Price.Text = "";
+            txt_SLHong.Text = "";
+        }
+
+        private void txt_search_TextChanged(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = ThietBi_BLL.Instance.Search_BLL(txt_search.Text);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+     
         }
     }
 }

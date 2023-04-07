@@ -32,10 +32,6 @@ namespace QLPhongGym.BLL
         {
             ThietBiDAL.Instance.DeleteTB_DAL(mtb);
         }
-        public DataTable GetThietBiByID_BLL(int id)
-        {
-            return ThietBiDAL.Instance.GetThietBiByID_DAL(id);
-        }
         public void UpdateThietBi_BLL(ThietBi tb)
         {
             ThietBiDAL.Instance.UpdateThietBi_DAL(tb);
