@@ -35,7 +35,7 @@ namespace QLPhongGym.DAL
             dt.Columns.Add("Số lượng hỏng", typeof(int));
             dt.Columns.Add("Nhà cung cấp", typeof(string));
             dt.Columns.Add("Mô tả", typeof(string));
-            dt.Columns.Add("Giá tiền", typeof(double));
+            dt.Columns.Add("Giá tiền(vnd)", typeof(double));
             return dt;
         }
 
@@ -67,6 +67,7 @@ namespace QLPhongGym.DAL
                     s.NhaCungCap = tb.NhaCungCap;
                     s.SoLuong = tb.SoLuong;
                     s.SoLuongHong = tb.SoLuongHong;
+                    s.Image = tb.Image;
                     db.SaveChanges();
                 }
                 catch (Exception e)
@@ -213,6 +214,19 @@ namespace QLPhongGym.DAL
                 }
             }
             return dt;
+        }
+        public ThietBi GetThietBiByID(int ID)
+        {
+            try
+            {
+                 return db.ThietBis.Where(s => s.IDTB.Equals(ID)).FirstOrDefault();
+                
+            }
+            catch
+            {
+                return null;
+            }
+
         }
     }
 }

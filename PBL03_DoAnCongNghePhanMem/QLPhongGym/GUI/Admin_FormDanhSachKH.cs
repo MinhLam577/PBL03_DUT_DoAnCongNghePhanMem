@@ -206,9 +206,7 @@ namespace QLPhongGym.GUI
                 catch(Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Cật nhật khách hàng thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                
-                
+                }             
             }
         }
         private void btn_xoa_Click(object sender, EventArgs e)

@@ -29,17 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_FormDanhSachThietBi));
-            this.button6 = new System.Windows.Forms.Button();
+            this.btn_DoiAnh = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.Btn_sort = new System.Windows.Forms.Button();
             this.txt_Price = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_TenThietbi = new System.Windows.Forms.TextBox();
             this.txt_SoLuong = new System.Windows.Forms.TextBox();
             this.txt_NhaCungCap = new System.Windows.Forms.TextBox();
             this.txt_SLHong = new System.Windows.Forms.TextBox();
-            this.txt_Mota = new System.Windows.Forms.TextBox();
             this.txt_MTB = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -51,32 +49,34 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.btn_reset = new System.Windows.Forms.Button();
             this.txt_search = new System.Windows.Forms.TextBox();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.Btn_Sửa = new System.Windows.Forms.Button();
             this.Btn_thêm = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txt_Mota = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button6
+            // btn_DoiAnh
             // 
-            this.button6.BackColor = System.Drawing.Color.Black;
-            this.button6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.Cyan;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button6.Location = new System.Drawing.Point(86, 373);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(163, 46);
-            this.button6.TabIndex = 39;
-            this.button6.Text = "Đổi";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btn_DoiAnh.BackColor = System.Drawing.Color.Black;
+            this.btn_DoiAnh.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DoiAnh.ForeColor = System.Drawing.Color.Cyan;
+            this.btn_DoiAnh.Image = ((System.Drawing.Image)(resources.GetObject("btn_DoiAnh.Image")));
+            this.btn_DoiAnh.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btn_DoiAnh.Location = new System.Drawing.Point(86, 373);
+            this.btn_DoiAnh.Name = "btn_DoiAnh";
+            this.btn_DoiAnh.Size = new System.Drawing.Size(163, 46);
+            this.btn_DoiAnh.TabIndex = 39;
+            this.btn_DoiAnh.Text = "Đổi";
+            this.btn_DoiAnh.UseVisualStyleBackColor = false;
+            this.btn_DoiAnh.Click += new System.EventHandler(this.btn_DoiAnh_Click);
             // 
             // comboBox1
             // 
@@ -129,16 +129,6 @@
             this.label10.TabIndex = 34;
             this.label10.Text = "Giá:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(23, 84);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(295, 266);
-            this.pictureBox1.TabIndex = 33;
-            this.pictureBox1.TabStop = false;
-            // 
             // txt_TenThietbi
             // 
             this.txt_TenThietbi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -178,16 +168,6 @@
             this.txt_SLHong.Name = "txt_SLHong";
             this.txt_SLHong.Size = new System.Drawing.Size(183, 34);
             this.txt_SLHong.TabIndex = 27;
-            // 
-            // txt_Mota
-            // 
-            this.txt_Mota.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txt_Mota.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Mota.Location = new System.Drawing.Point(927, 190);
-            this.txt_Mota.Name = "txt_Mota";
-            this.txt_Mota.Size = new System.Drawing.Size(358, 34);
-            this.txt_Mota.TabIndex = 26;
             // 
             // txt_MTB
             // 
@@ -312,19 +292,19 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.btn_reset);
             this.panel2.Controls.Add(this.txt_search);
             this.panel2.Controls.Add(this.btn_Xoa);
             this.panel2.Controls.Add(this.Btn_Sửa);
             this.panel2.Controls.Add(this.Btn_thêm);
-            this.panel2.Controls.Add(this.button6);
+            this.panel2.Controls.Add(this.btn_DoiAnh);
             this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.Btn_sort);
             this.panel2.Controls.Add(this.txt_Price);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.txt_TenThietbi);
             this.panel2.Controls.Add(this.txt_SoLuong);
             this.panel2.Controls.Add(this.txt_NhaCungCap);
@@ -341,6 +321,18 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1834, 927);
             this.panel2.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(1455, 84);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(103, 25);
+            this.label5.TabIndex = 46;
+            this.label5.Text = "Tìm kiếm:";
             // 
             // btn_reset
             // 
@@ -411,17 +403,25 @@
             this.Btn_thêm.UseVisualStyleBackColor = false;
             this.Btn_thêm.Click += new System.EventHandler(this.Btn_thêm_Click);
             // 
-            // label5
+            // pictureBox1
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(32, 100);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(286, 255);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 47;
+            this.pictureBox1.TabStop = false;
+            // 
+            // txt_Mota
+            // 
+            this.txt_Mota.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1455, 84);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 25);
-            this.label5.TabIndex = 46;
-            this.label5.Text = "Tìm kiếm:";
+            this.txt_Mota.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Mota.Location = new System.Drawing.Point(927, 193);
+            this.txt_Mota.Name = "txt_Mota";
+            this.txt_Mota.Size = new System.Drawing.Size(358, 34);
+            this.txt_Mota.TabIndex = 26;
             // 
             // Admin_FormDanhSachThietBi
             // 
@@ -434,29 +434,27 @@
             this.Name = "Admin_FormDanhSachThietBi";
             this.Text = "Admin_FormDanhSachThietBi";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btn_DoiAnh;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button Btn_sort;
         private System.Windows.Forms.TextBox txt_Price;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txt_TenThietbi;
         private System.Windows.Forms.TextBox txt_SoLuong;
         private System.Windows.Forms.TextBox txt_NhaCungCap;
         private System.Windows.Forms.TextBox txt_SLHong;
-        private System.Windows.Forms.TextBox txt_Mota;
         private System.Windows.Forms.TextBox txt_MTB;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -474,5 +472,7 @@
         private System.Windows.Forms.Button Btn_thêm;
         private System.Windows.Forms.Button btn_reset;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txt_Mota;
     }
 }

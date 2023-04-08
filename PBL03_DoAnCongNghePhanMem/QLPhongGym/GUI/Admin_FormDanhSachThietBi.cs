@@ -16,6 +16,7 @@ namespace QLPhongGym.GUI
 {
     public partial class Admin_FormDanhSachThietBi : Form
     {
+        static string ImagePath = Application.StartupPath + @"\Resources\No_Image_Available.jpg";
         public Admin_FormDanhSachThietBi()
         {
             InitializeComponent();
@@ -45,18 +46,6 @@ namespace QLPhongGym.GUI
                     }
                 }
                 ShowData();
-            }
-        }
-        public void GUI()
-        {
-            if (dataGridView1.SelectedRows.Count == 1)
-            {
-                txt_MTB.Text = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
-                txt_Mota.Text = dataGridView1.SelectedRows[0].Cells["Mô tả"].Value.ToString();
-                txt_TenThietbi.Text = dataGridView1.SelectedRows[0].Cells["Tên thiết bị"].Value.ToString();
-                txt_SoLuong.Text = dataGridView1.SelectedRows[0].Cells["Số lượng"].Value.ToString();
-                txt_NhaCungCap.Text = dataGridView1.SelectedRows[0].Cells["Nhà cung cấp"].Value.ToString();
-                txt_Price.Text = dataGridView1.SelectedRows[0].Cells["Giá tiền"].Value.ToString();
             }
         }
         private void Btn_Sửa_Click(object sender, EventArgs e)
@@ -104,6 +93,13 @@ namespace QLPhongGym.GUI
                 }
                 tb.Price = Convert.ToDouble(txt_Price.Text);
                 tb.NhaCungCap = txt_NhaCungCap.Text;
+                string Anh = null;
+                if (pictureBox1.Tag != null)
+                {
+                    if (!string.IsNullOrEmpty(pictureBox1.Tag.ToString()))
+                        Anh = pictureBox1.Tag.ToString();
+                }
+                tb.Image = Anh;
                 ThietBi_BLL.Instance.UpdateThietBi_BLL(tb);
                 MessageBox.Show("Đã sửa thành công!!!");
             }
@@ -115,6 +111,17 @@ namespace QLPhongGym.GUI
             if (txt_MTB.Text == "")
             {
                 ThietBi tb = new ThietBi();
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    if (row.Cells["Tên thiết bị"].Value != null)
+                    {
+                        if (txt_TenThietbi.Text == row.Cells["Tên thiết bị"].Value.ToString())
+                        {
+                            MessageBox.Show("Tên thiết bị đã tồn tại trong danh sách, vui lòng nhập tên khác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+                }
                 if (txt_TenThietbi.Text == "")
                 {
                     MessageBox.Show("Bạn phải nhập tên thiết bị", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -149,6 +156,13 @@ namespace QLPhongGym.GUI
                     }
                     tb.SoLuongHong = Convert.ToInt32(txt_SLHong.Text);
                 }
+                string Anh = null;
+                if (pictureBox1.Tag != null)
+                {
+                    if (!string.IsNullOrEmpty(pictureBox1.Tag.ToString()))
+                        Anh = pictureBox1.Tag.ToString();
+                }
+                tb.Image = Anh;
                 tb.Name = txt_TenThietbi.Text;
                 tb.MoTa = txt_Mota.Text;
                 tb.SoLuong = Convert.ToInt32(txt_SoLuong.Text);
@@ -156,6 +170,15 @@ namespace QLPhongGym.GUI
                 tb.NhaCungCap = txt_NhaCungCap.Text;
                 ThietBi_BLL.Instance.AddThietBi_BLL(tb);
                 MessageBox.Show("Đã thêm thành công!!!");
+                txt_MTB.Text = "";
+                txt_Mota.Text = "";
+                txt_TenThietbi.Text = "";
+                txt_SoLuong.Text = "";
+                txt_NhaCungCap.Text = "";
+                txt_Price.Text = "";
+                txt_SLHong.Text = "";
+                pictureBox1.Image = Image.FromFile(ImagePath);
+                pictureBox1.Tag = null;
             }
             ShowData();
         }
@@ -174,16 +197,38 @@ namespace QLPhongGym.GUI
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            try
             {
-                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-                txt_MTB.Text = row.Cells["ID"].Value.ToString();
-                txt_Mota.Text = row.Cells["Mô tả"].Value.ToString();
-                txt_TenThietbi.Text = row.Cells["Tên thiết bị"].Value.ToString();
-                txt_SoLuong.Text = row.Cells["Số lượng"].Value.ToString();
-                txt_NhaCungCap.Text = row.Cells["Nhà cung cấp"].Value.ToString();
-                txt_Price.Text = row.Cells["Giá tiền"].Value.ToString();
-                txt_SLHong.Text = row.Cells["Số lượng hỏng"].Value.ToString();
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                    txt_MTB.Text = row.Cells["ID"].Value.ToString();
+                    txt_Mota.Text = row.Cells["Mô tả"].Value.ToString();
+                    txt_TenThietbi.Text = row.Cells["Tên thiết bị"].Value.ToString();
+                    txt_SoLuong.Text = row.Cells["Số lượng"].Value.ToString();
+                    txt_NhaCungCap.Text = row.Cells["Nhà cung cấp"].Value.ToString();
+                    txt_Price.Text = row.Cells["Giá tiền(vnd)"].Value.ToString();
+                    txt_SLHong.Text = row.Cells["Số lượng hỏng"].Value.ToString();
+                    ThietBi tb = new ThietBi();
+                    tb = ThietBi_BLL.Instance.GetThietBiByID_BLL(Convert.ToInt32(txt_MTB.Text));
+                    pictureBox1.Tag = tb.Image;
+                    if (pictureBox1.Image != null)
+                    {
+                        if (tb.Image == null)
+                        {
+                            pictureBox1.Image = Image.FromFile(ImagePath);
+                        }
+                        else
+                        {
+                            pictureBox1.Image = Image.FromFile(Application.StartupPath + @"\ThietBi_Image\" + tb.Image);
+                        }
+                    }
+                }
+            }
+            catch (Exception e1)
+            {
+
+                MessageBox.Show(e1.Message);
             }
         }
 
@@ -196,6 +241,8 @@ namespace QLPhongGym.GUI
             txt_NhaCungCap.Text = "";
             txt_Price.Text = "";
             txt_SLHong.Text = "";
+            pictureBox1.Image = Image.FromFile(ImagePath);
+            pictureBox1.Tag = null;
         }
 
         private void txt_search_TextChanged(object sender, EventArgs e)
@@ -203,9 +250,31 @@ namespace QLPhongGym.GUI
             dataGridView1.DataSource = ThietBi_BLL.Instance.Search_BLL(txt_search.Text);
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void btn_DoiAnh_Click(object sender, EventArgs e)
         {
-     
+            string PathAnh = Application.StartupPath + @"\ThietBi_Image\";
+            var codecs = ImageCodecInfo.GetImageEncoders();
+            var codecFilter = "Image Files|";
+            foreach (var codec in codecs)
+            {
+                codecFilter += codec.FilenameExtension + ";";
+            }
+
+            using (OpenFileDialog ofd = new OpenFileDialog()
+            {
+                Filter = codecFilter,
+                Multiselect = false,
+                InitialDirectory = Application.StartupPath + @"\ThietBi_Image\"
+            })
+            {
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    string filename = ofd.FileName;
+                    pictureBox1.Image = Image.FromFile(filename);
+                    pictureBox1.Tag = filename.Replace(PathAnh, "");
+                }
+            }
         }
+
     }
 }

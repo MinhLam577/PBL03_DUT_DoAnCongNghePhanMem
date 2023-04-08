@@ -48,5 +48,9 @@ namespace QLPhongGym.BLL
         {
             return ThietBiDAL.Instance.Sort_DLL(sort, search);
         }
+        public ThietBi GetThietBiByID_BLL(int id)
+        {
+            return ThietBiDAL.Instance.GetThietBiByID(id);
+        }
     }
 }
