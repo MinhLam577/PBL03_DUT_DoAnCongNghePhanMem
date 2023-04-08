@@ -59,10 +59,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\KHBLL.cs" />
+    <Compile Include="BLL\QLHLVBLL.cs" />
     <Compile Include="BLL\ThietBi_BLL.cs" />
     <Compile Include="BLL\TKBLL.cs" />
     <Compile Include="BLL\UsersBLL.cs" />
     <Compile Include="DAL\KHDAL.cs" />
+    <Compile Include="DAL\QLHLVDAL.cs" />
     <Compile Include="DAL\ThietBiDAL.cs" />
     <Compile Include="DAL\TKDAL.cs" />
     <Compile Include="DAL\UsersDAL.cs" />
