@@ -137,7 +137,7 @@ namespace QLPhongGym.GUI
                 if (KHBLL.Instance.AddUser(kh))
                 {
                     MessageBox.Show("Thêm khách hàng thành công");
-                    LoadKHDGV();
+                    ResetDuLieu();
                 }
             }
             catch (Exception ex)
@@ -207,7 +207,7 @@ namespace QLPhongGym.GUI
                             }
                             break;
                         case DialogResult.Cancel:
-                            LoadDuLieuKH(IDKH);
+                            ResetDuLieu();
                             break;
                     }
                 }
@@ -228,7 +228,7 @@ namespace QLPhongGym.GUI
                         case DialogResult.Yes:
                             foreach (DataGridViewRow i in dataGridView1.SelectedRows)
                                 UsersBLL.Instance.DeleteUser(UsersBLL.Instance.GetUserByID(Convert.ToInt32(i.Cells["ID"].Value.ToString())));
-                            LoadKHDGV();
+                            ResetDuLieu();
                             break;
                         case DialogResult.No:
                             return;
