@@ -40,6 +40,7 @@ namespace QLPhongGym.GUI
             txb_gmail.Text = "";
             pb_kh.Image = Image.FromFile(ImagePath);
             groupBox1.Controls.OfType<RadioButton>().ToList().ForEach(p => p.Checked = false);
+            LoadKHDGV();
         }
         public void LoadDuLieuKH(int IDKH)
         {
