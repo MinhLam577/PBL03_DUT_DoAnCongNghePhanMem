@@ -49,13 +49,13 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btn_reset = new System.Windows.Forms.Button();
             this.txt_search = new System.Windows.Forms.TextBox();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.Btn_Sửa = new System.Windows.Forms.Button();
             this.Btn_thêm = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_Mota = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -115,7 +115,7 @@
             this.txt_Price.Location = new System.Drawing.Point(927, 262);
             this.txt_Price.Name = "txt_Price";
             this.txt_Price.Size = new System.Drawing.Size(183, 34);
-            this.txt_Price.TabIndex = 35;
+            this.txt_Price.TabIndex = 6;
             // 
             // label10
             // 
@@ -137,7 +137,7 @@
             this.txt_TenThietbi.Location = new System.Drawing.Point(505, 193);
             this.txt_TenThietbi.Name = "txt_TenThietbi";
             this.txt_TenThietbi.Size = new System.Drawing.Size(183, 34);
-            this.txt_TenThietbi.TabIndex = 32;
+            this.txt_TenThietbi.TabIndex = 1;
             // 
             // txt_SoLuong
             // 
@@ -147,7 +147,7 @@
             this.txt_SoLuong.Location = new System.Drawing.Point(505, 281);
             this.txt_SoLuong.Name = "txt_SoLuong";
             this.txt_SoLuong.Size = new System.Drawing.Size(183, 34);
-            this.txt_SoLuong.TabIndex = 30;
+            this.txt_SoLuong.TabIndex = 2;
             // 
             // txt_NhaCungCap
             // 
@@ -157,7 +157,7 @@
             this.txt_NhaCungCap.Location = new System.Drawing.Point(927, 118);
             this.txt_NhaCungCap.Name = "txt_NhaCungCap";
             this.txt_NhaCungCap.Size = new System.Drawing.Size(358, 34);
-            this.txt_NhaCungCap.TabIndex = 28;
+            this.txt_NhaCungCap.TabIndex = 4;
             // 
             // txt_SLHong
             // 
@@ -167,7 +167,7 @@
             this.txt_SLHong.Location = new System.Drawing.Point(503, 357);
             this.txt_SLHong.Name = "txt_SLHong";
             this.txt_SLHong.Size = new System.Drawing.Size(183, 34);
-            this.txt_SLHong.TabIndex = 27;
+            this.txt_SLHong.TabIndex = 3;
             // 
             // txt_MTB
             // 
@@ -178,7 +178,7 @@
             this.txt_MTB.Location = new System.Drawing.Point(505, 118);
             this.txt_MTB.Name = "txt_MTB";
             this.txt_MTB.Size = new System.Drawing.Size(183, 34);
-            this.txt_MTB.TabIndex = 25;
+            this.txt_MTB.TabIndex = 0;
             // 
             // label9
             // 
@@ -322,6 +322,16 @@
             this.panel2.Size = new System.Drawing.Size(1834, 927);
             this.panel2.TabIndex = 9;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(32, 100);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(286, 255);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 47;
+            this.pictureBox1.TabStop = false;
+            // 
             // label5
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -403,16 +413,6 @@
             this.Btn_thêm.UseVisualStyleBackColor = false;
             this.Btn_thêm.Click += new System.EventHandler(this.Btn_thêm_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(32, 100);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(286, 255);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 47;
-            this.pictureBox1.TabStop = false;
-            // 
             // txt_Mota
             // 
             this.txt_Mota.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -421,7 +421,7 @@
             this.txt_Mota.Location = new System.Drawing.Point(927, 193);
             this.txt_Mota.Name = "txt_Mota";
             this.txt_Mota.Size = new System.Drawing.Size(358, 34);
-            this.txt_Mota.TabIndex = 26;
+            this.txt_Mota.TabIndex = 5;
             // 
             // Admin_FormDanhSachThietBi
             // 
