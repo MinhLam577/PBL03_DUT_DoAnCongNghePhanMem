@@ -34,14 +34,30 @@ namespace QLPhongGym.GUI
         }
         private void pb_eye_MouseHover(object sender, EventArgs e)
         {
-            txb_mk.PasswordChar = '\0';
-            pb_eye.BackgroundImage = Image.FromFile(Application.StartupPath + @"\Resources\8.ico");
+            try
+            {
+                txb_mk.PasswordChar = '\0';
+                pb_eye.BackgroundImage = Image.FromFile(Application.StartupPath + @"\Resources\8.ico");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+            
         }
 
         private void pb_eye_MouseLeave(object sender, EventArgs e)
         {
-            txb_mk.PasswordChar = '*';
-            pb_eye.BackgroundImage = Image.FromFile(Application.StartupPath + @"\Resources\7.png");
+            try
+            {
+                txb_mk.PasswordChar = '*';
+                pb_eye.BackgroundImage = Image.FromFile(Application.StartupPath + @"\Resources\7.png");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+            
         }
 
         private void lb_Dangki_Click(object sender, EventArgs e)
@@ -59,8 +75,16 @@ namespace QLPhongGym.GUI
                 MessageBox.Show("Tên tài khoản hoặc mật khẩu không đúng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            username = TKBLL.Instance.GetUserName(TKBLL.Instance.GetIDQuyen(tentk));
-            OpenUserForm(username);
+            try
+            {
+                username = TKBLL.Instance.GetUserName(TKBLL.Instance.GetIDQuyen(tentk));
+                OpenUserForm(username);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Đăng nhập thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void lb_QuenMk_Click_1(object sender, EventArgs e)

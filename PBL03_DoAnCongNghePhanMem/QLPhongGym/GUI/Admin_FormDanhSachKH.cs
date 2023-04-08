@@ -43,21 +43,29 @@ namespace QLPhongGym.GUI
         }
         public void LoadDuLieuKH(int IDKH)
         {
-            KH kh = (KH)UsersBLL.Instance.GetUserByID(IDKH);
-            txb_makh.Text = kh.IDUsers.ToString();
-            txb_tenkh.Text = kh.Name.ToString();
-            dtp_ns.Value = Convert.ToDateTime(kh.DateBorn);
-            if ((bool)kh.Sex)
-                rb_nam.Checked = true;
-            else rb_nu.Checked = true;
-            txb_CCCD.Text = kh.CCCD;
-            txb_gmail.Text = kh.Gmail;
-            txb_sdt.Text = kh.Sdt;
-            txb_diachi.Text = kh.Address;
-            pb_kh.Tag = kh.Image;
-            if (kh.Image != null)
-                pb_kh.Image = Image.FromFile(Application.StartupPath + @"\CustomerImage\" + kh.Image);
-            else pb_kh.Image = Image.FromFile(ImagePath);
+            try
+            {
+                KH kh = (KH)UsersBLL.Instance.GetUserByID(IDKH);
+                txb_makh.Text = kh.IDUsers.ToString();
+                txb_tenkh.Text = kh.Name.ToString();
+                dtp_ns.Value = Convert.ToDateTime(kh.DateBorn);
+                if ((bool)kh.Sex)
+                    rb_nam.Checked = true;
+                else rb_nu.Checked = true;
+                txb_CCCD.Text = kh.CCCD;
+                txb_gmail.Text = kh.Gmail;
+                txb_sdt.Text = kh.Sdt;
+                txb_diachi.Text = kh.Address;
+                pb_kh.Tag = kh.Image;
+                if (kh.Image != null)
+                    pb_kh.Image = Image.FromFile(Application.StartupPath + @"\CustomerImage\" + kh.Image);
+                else pb_kh.Image = Image.FromFile(ImagePath);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Load dữ liệu khách hàng 1thất bại");
+            }
+            
         }
         private void btn_them_Click(object sender, EventArgs e)
         {
@@ -236,26 +244,36 @@ namespace QLPhongGym.GUI
         }
         private void btn_upload_Click(object sender, EventArgs e)
         {
-            string PathAnh = Application.StartupPath + @"\CustomerImage\";
-            var codecs = ImageCodecInfo.GetImageEncoders();
-            var codecFilter = "Image Files|";
-            foreach (var codec in codecs)
+            try
             {
-                codecFilter += codec.FilenameExtension + ";";
-            }
-            
-            using (OpenFileDialog ofd = new OpenFileDialog()
-            {
-                Filter = codecFilter, Multiselect = false, InitialDirectory = Application.StartupPath + @"\CustomerImage\"
-            })
-            {
-                if (ofd.ShowDialog() == DialogResult.OK)
+                string PathAnh = Application.StartupPath + @"\CustomerImage\";
+                var codecs = ImageCodecInfo.GetImageEncoders();
+                var codecFilter = "Image Files|";
+                foreach (var codec in codecs)
                 {
-                    string filename = ofd.FileName;
-                    pb_kh.Image = Image.FromFile(filename);
-                    pb_kh.Tag = filename.Replace(PathAnh, "");
+                    codecFilter += codec.FilenameExtension + ";";
+                }
+
+                using (OpenFileDialog ofd = new OpenFileDialog()
+                {
+                    Filter = codecFilter,
+                    Multiselect = false,
+                    InitialDirectory = Application.StartupPath + @"\CustomerImage\"
+                })
+                {
+                    if (ofd.ShowDialog() == DialogResult.OK)
+                    {
+                        string filename = ofd.FileName;
+                        pb_kh.Image = Image.FromFile(filename);
+                        pb_kh.Tag = filename.Replace(PathAnh, "");
+                    }
                 }
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Upload ảnh thất bại");
+            }
+            
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -280,7 +298,15 @@ namespace QLPhongGym.GUI
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = KHBLL.Instance.FindListKHByIDOrName(txb_search.Text);
+            try
+            {
+                dataGridView1.DataSource = KHBLL.Instance.FindListKHByIDOrName(txb_search.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Tìm kiếm khách hàng thất bại");
+            }
+           
         }
 
         private void btn_resetdata_Click(object sender, EventArgs e)
@@ -290,7 +316,15 @@ namespace QLPhongGym.GUI
 
         private void btn_sapxep_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = KHBLL.Instance.SortListKHBy(cb_sapxep.Text, KHBLL.Instance.FindListKHByIDOrName(txb_search.Text));
+            try
+            {
+                dataGridView1.DataSource = KHBLL.Instance.SortListKHBy(cb_sapxep.Text, KHBLL.Instance.FindListKHByIDOrName(txb_search.Text));
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Sắp xếp khách hàng thất bại");
+            }
+            
         } 
     }
 }
