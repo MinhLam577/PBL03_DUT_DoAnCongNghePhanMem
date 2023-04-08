@@ -15,7 +15,6 @@ namespace QLPhongGym.GUI
         public Admin_FormMain()
         {
             InitializeComponent();
-            OpenChildForm(new FormTrangChu());
         }
 
         private Form currentFormChild;
@@ -37,7 +36,10 @@ namespace QLPhongGym.GUI
 
         private void trangChủToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormTrangChu());
+            if (currentFormChild != null)
+            {
+                currentFormChild.Close();
+            }
         }
 
         private void danhSáchKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
@@ -79,5 +81,6 @@ namespace QLPhongGym.GUI
         {
             this.Close();
         }
+
     }
 }
