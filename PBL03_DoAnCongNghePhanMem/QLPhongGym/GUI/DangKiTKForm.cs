@@ -57,7 +57,12 @@ namespace QLPhongGym.GUI
             if (ltk == "" || tentk == "" || mk == "" || xnmk == "") { MessageBox.Show("Mời nhập vào thông tin còn trông"); return; }
             if (TKBLL.Instance.checkTkMk(tentk) == false || TKBLL.Instance.checkTkMk(tentk) == false) { MessageBox.Show("Tài khoản và mật khẩu chỉ chứa kí tự số hoặc chữ hoa thường và bao gồm 6 đến 20 kí tự"); return; }
             if (TKBLL.Instance.checkxnmk(mk, xnmk) == false) { MessageBox.Show("Xác nhận mật khẩu không đồng dạng"); return; }
-            OpenForm(tentk, Eramake.eCryptography.Encrypt(mk), maquyen);
+            try
+            {
+                OpenForm(tentk, Eramake.eCryptography.Encrypt(mk), maquyen);
+            }
+            catch(Exception ex) { MessageBox.Show(ex.Message, "Chuyển form tiếp theo thất bại"); return; }
+           
         }
 
         private void btn_back_Click_1(object sender, EventArgs e)
