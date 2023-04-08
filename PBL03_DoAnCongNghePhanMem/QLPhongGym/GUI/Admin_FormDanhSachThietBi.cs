@@ -44,6 +44,7 @@ namespace QLPhongGym.GUI
                         int id = Convert.ToInt32(row.Cells["ID"].Value.ToString());
                         ThietBi_BLL.Instance.DeleteTB_BLL(id);
                     }
+                    Reset();
                 }
                 ShowData();
             }
@@ -102,6 +103,7 @@ namespace QLPhongGym.GUI
                 tb.Image = Anh;
                 ThietBi_BLL.Instance.UpdateThietBi_BLL(tb);
                 MessageBox.Show("Đã sửa thành công!!!");
+                Reset();
             }
             ShowData();
         }
@@ -170,15 +172,7 @@ namespace QLPhongGym.GUI
                 tb.NhaCungCap = txt_NhaCungCap.Text;
                 ThietBi_BLL.Instance.AddThietBi_BLL(tb);
                 MessageBox.Show("Đã thêm thành công!!!");
-                txt_MTB.Text = "";
-                txt_Mota.Text = "";
-                txt_TenThietbi.Text = "";
-                txt_SoLuong.Text = "";
-                txt_NhaCungCap.Text = "";
-                txt_Price.Text = "";
-                txt_SLHong.Text = "";
-                pictureBox1.Image = Image.FromFile(ImagePath);
-                pictureBox1.Tag = null;
+                Reset();
             }
             ShowData();
         }
@@ -234,6 +228,10 @@ namespace QLPhongGym.GUI
 
         private void btn_reset_Click(object sender, EventArgs e)
         {
+            Reset();
+        }
+        public void Reset()
+        {
             txt_MTB.Text = "";
             txt_Mota.Text = "";
             txt_TenThietbi.Text = "";
@@ -244,7 +242,6 @@ namespace QLPhongGym.GUI
             pictureBox1.Image = Image.FromFile(ImagePath);
             pictureBox1.Tag = null;
         }
-
         private void txt_search_TextChanged(object sender, EventArgs e)
         {
             dataGridView1.DataSource = ThietBi_BLL.Instance.Search_BLL(txt_search.Text);
