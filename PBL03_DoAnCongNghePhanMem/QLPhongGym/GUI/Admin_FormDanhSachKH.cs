@@ -203,11 +203,10 @@ namespace QLPhongGym.GUI
                             if (KHBLL.Instance.UpdateUser(kh))
                             {
                                 MessageBox.Show("Cật nhật khách hàng thành công");
-                                LoadKHDGV();
+                                ResetDuLieu();
                             }
                             break;
                         case DialogResult.Cancel:
-                            ResetDuLieu();
                             break;
                     }
                 }
