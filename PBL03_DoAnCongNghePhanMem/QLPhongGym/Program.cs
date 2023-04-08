@@ -39,7 +39,11 @@ namespace QLPhongGym.GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new Admin_FormDanhSachThietBi());
+=======
+            Application.Run(new Admin_FormDanhSachKH());
+>>>>>>> main
         }
     }
 }
