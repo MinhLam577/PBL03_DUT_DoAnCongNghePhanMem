@@ -27,7 +27,6 @@ namespace QLPhongGym.GUI
         public void LoadKHDGV()
         {
             dataGridView1.DataSource = KHBLL.Instance.FindListKHByIDOrName("");
-               
         }
         public void ResetDuLieu()
         {
