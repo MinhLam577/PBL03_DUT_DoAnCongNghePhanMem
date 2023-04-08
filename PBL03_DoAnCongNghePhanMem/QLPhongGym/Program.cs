@@ -39,11 +39,9 @@ namespace QLPhongGym.GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
-            Application.Run(new Admin_FormDanhSachHLV());
-=======
+
+
             Application.Run(new LoginForm());
->>>>>>> main
         }
     }
 }
