@@ -70,7 +70,7 @@
             this.btn_DoiAnh.ForeColor = System.Drawing.Color.Cyan;
             this.btn_DoiAnh.Image = ((System.Drawing.Image)(resources.GetObject("btn_DoiAnh.Image")));
             this.btn_DoiAnh.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btn_DoiAnh.Location = new System.Drawing.Point(86, 373);
+            this.btn_DoiAnh.Location = new System.Drawing.Point(93, 373);
             this.btn_DoiAnh.Name = "btn_DoiAnh";
             this.btn_DoiAnh.Size = new System.Drawing.Size(163, 46);
             this.btn_DoiAnh.TabIndex = 39;
