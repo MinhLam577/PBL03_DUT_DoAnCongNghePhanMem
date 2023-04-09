@@ -58,12 +58,12 @@ namespace QLPhongGym.GUI
                 txb_diachi.Text = kh.Address;
                 pb_kh.Tag = kh.Image;
                 if (kh.Image != null)
-                    pb_kh.Image = Image.FromFile(Application.StartupPath + @"\CustomerImage\" + kh.Image);
+                    pb_kh.Image = Image.FromFile(Application.StartupPath + @"\PersonImage\" + kh.Image);
                 else pb_kh.Image = Image.FromFile(ImagePath);
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message, "Load dữ liệu khách hàng 1thất bại");
+                MessageBox.Show(ex.Message, "Load dữ liệu khách hàng thất bại");
             }
             
         }
@@ -243,7 +243,7 @@ namespace QLPhongGym.GUI
         {
             try
             {
-                string PathAnh = Application.StartupPath + @"\CustomerImage\";
+                string PathAnh = Application.StartupPath + @"\PersonImage\";
                 var codecs = ImageCodecInfo.GetImageEncoders();
                 var codecFilter = "Image Files|";
                 foreach (var codec in codecs)
@@ -255,7 +255,7 @@ namespace QLPhongGym.GUI
                 {
                     Filter = codecFilter,
                     Multiselect = false,
-                    InitialDirectory = Application.StartupPath + @"\CustomerImage\"
+                    InitialDirectory = Application.StartupPath + @"\PersonImage\"
                 })
                 {
                     if (ofd.ShowDialog() == DialogResult.OK)

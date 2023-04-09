@@ -141,7 +141,7 @@
             this.btnResetPic.Location = new System.Drawing.Point(1335, 341);
             this.btnResetPic.Name = "btnResetPic";
             this.btnResetPic.Size = new System.Drawing.Size(139, 44);
-            this.btnResetPic.TabIndex = 82;
+            this.btnResetPic.TabIndex = 11;
             this.btnResetPic.Text = "Xóa Ảnh";
             this.btnResetPic.UseVisualStyleBackColor = false;
             this.btnResetPic.Click += new System.EventHandler(this.btnResetPic_Click);
@@ -155,7 +155,7 @@
             this.btnReset.Location = new System.Drawing.Point(1598, 338);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(139, 44);
-            this.btnReset.TabIndex = 81;
+            this.btnReset.TabIndex = 15;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
@@ -176,7 +176,7 @@
             this.textDiachi.Location = new System.Drawing.Point(281, 338);
             this.textDiachi.Name = "textDiachi";
             this.textDiachi.Size = new System.Drawing.Size(284, 34);
-            this.textDiachi.TabIndex = 79;
+            this.textDiachi.TabIndex = 5;
             // 
             // label9
             // 
@@ -195,7 +195,7 @@
             this.textGmai.Multiline = true;
             this.textGmai.Name = "textGmai";
             this.textGmai.Size = new System.Drawing.Size(290, 51);
-            this.textGmai.TabIndex = 77;
+            this.textGmai.TabIndex = 8;
             // 
             // textCCCD
             // 
@@ -204,7 +204,7 @@
             this.textCCCD.Location = new System.Drawing.Point(745, 144);
             this.textCCCD.Name = "textCCCD";
             this.textCCCD.Size = new System.Drawing.Size(290, 34);
-            this.textCCCD.TabIndex = 76;
+            this.textCCCD.TabIndex = 7;
             // 
             // label6
             // 
@@ -225,7 +225,7 @@
             this.textSDT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textSDT.Name = "textSDT";
             this.textSDT.Size = new System.Drawing.Size(290, 34);
-            this.textSDT.TabIndex = 73;
+            this.textSDT.TabIndex = 6;
             // 
             // label3
             // 
@@ -247,7 +247,7 @@
             this.button4.Location = new System.Drawing.Point(1125, 338);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(139, 44);
-            this.button4.TabIndex = 41;
+            this.button4.TabIndex = 10;
             this.button4.Text = "Đổi ảnh";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -272,7 +272,7 @@
             this.dateTimeHLV.Location = new System.Drawing.Point(281, 262);
             this.dateTimeHLV.Name = "dateTimeHLV";
             this.dateTimeHLV.Size = new System.Drawing.Size(284, 34);
-            this.dateTimeHLV.TabIndex = 39;
+            this.dateTimeHLV.TabIndex = 4;
             // 
             // radioBtnFemale
             // 
@@ -282,7 +282,7 @@
             this.radioBtnFemale.Location = new System.Drawing.Point(394, 207);
             this.radioBtnFemale.Name = "radioBtnFemale";
             this.radioBtnFemale.Size = new System.Drawing.Size(101, 29);
-            this.radioBtnFemale.TabIndex = 38;
+            this.radioBtnFemale.TabIndex = 3;
             this.radioBtnFemale.TabStop = true;
             this.radioBtnFemale.Text = "Female";
             this.radioBtnFemale.UseVisualStyleBackColor = true;
@@ -295,7 +295,7 @@
             this.radioBtnMale.Location = new System.Drawing.Point(287, 207);
             this.radioBtnMale.Name = "radioBtnMale";
             this.radioBtnMale.Size = new System.Drawing.Size(79, 29);
-            this.radioBtnMale.TabIndex = 37;
+            this.radioBtnMale.TabIndex = 2;
             this.radioBtnMale.TabStop = true;
             this.radioBtnMale.Text = "Male";
             this.radioBtnMale.UseVisualStyleBackColor = true;
@@ -307,7 +307,7 @@
             this.textBangcap.Location = new System.Drawing.Point(745, 338);
             this.textBangcap.Name = "textBangcap";
             this.textBangcap.Size = new System.Drawing.Size(290, 38);
-            this.textBangcap.TabIndex = 36;
+            this.textBangcap.TabIndex = 9;
             // 
             // textNameHLV
             // 
@@ -316,7 +316,7 @@
             this.textNameHLV.Location = new System.Drawing.Point(281, 144);
             this.textNameHLV.Name = "textNameHLV";
             this.textNameHLV.Size = new System.Drawing.Size(286, 34);
-            this.textNameHLV.TabIndex = 35;
+            this.textNameHLV.TabIndex = 1;
             // 
             // textMaHLv
             // 
@@ -326,7 +326,7 @@
             this.textMaHLv.Name = "textMaHLv";
             this.textMaHLv.ReadOnly = true;
             this.textMaHLv.Size = new System.Drawing.Size(286, 34);
-            this.textMaHLv.TabIndex = 34;
+            this.textMaHLv.TabIndex = 0;
             // 
             // label8
             // 
@@ -392,7 +392,7 @@
             this.btnXoa.Location = new System.Drawing.Point(1598, 64);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(139, 44);
-            this.btnXoa.TabIndex = 28;
+            this.btnXoa.TabIndex = 12;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -406,7 +406,7 @@
             this.btnSua.Location = new System.Drawing.Point(1598, 158);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(139, 44);
-            this.btnSua.TabIndex = 27;
+            this.btnSua.TabIndex = 13;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -420,7 +420,7 @@
             this.btnThem.Location = new System.Drawing.Point(1598, 258);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(139, 44);
-            this.btnThem.TabIndex = 26;
+            this.btnThem.TabIndex = 14;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
