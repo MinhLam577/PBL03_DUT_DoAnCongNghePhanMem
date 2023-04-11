@@ -15,6 +15,7 @@ namespace QLPhongGym.GUI
         public Admin_FormMain()
         {
             InitializeComponent();
+            customizedesing();
         }
 
         private Form currentFormChild;
@@ -28,59 +29,97 @@ namespace QLPhongGym.GUI
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            panel1.Controls.Add(childForm);
-            panel1.Tag = childForm;
+            panel3.Controls.Add(childForm);
+            panel3.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
-
-        private void trangChủToolStripMenuItem_Click(object sender, EventArgs e)
+        private void customizedesing()
         {
-            if (currentFormChild != null)
+            Menu_Panel.Visible = false;
+            panel_hlv.Visible = false;
+            panel_tk.Visible = false;
+        }
+        private void hideMenu()
+        {
+            if (Menu_Panel.Visible == true)
             {
-                currentFormChild.Close();
+                Menu_Panel.Visible = false;
+            }
+            if (panel_hlv.Visible == true)
+            {
+                panel_hlv.Visible = false;
+            }
+            if (panel_tk.Visible == true)
+            {
+                panel_tk.Visible = false;
             }
         }
-
-        private void danhSáchKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        private void showMenu(Panel subMenu)
         {
-            OpenChildForm(new Admin_FormDanhSachKH());
+            if (subMenu.Visible == false)
+            {
+                hideMenu();
+                subMenu.Visible = true;
+            }
+            else
+                subMenu.Visible = false;
         }
 
-        private void danhSáchHuấnLuyệnViênToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Admin_FormDanhSachHLV());
+            showMenu(Menu_Panel);
+        }
+        private void button10_Click(object sender, EventArgs e)
+        {
+            showMenu(panel_hlv);
         }
 
-        private void tàiKhoảnHuấnLuyệnViênToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button13_Click(object sender, EventArgs e)
         {
-
+            showMenu(panel_tk);
         }
 
-        private void góiTậpToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Admin_FormDanhSachGoiTap());
-        }
-
-        private void danhSáchThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button_ThietBi_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Admin_FormDanhSachThietBi());
         }
 
-        private void góiTậpKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button14_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn muốn thoát ứng dụng?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Admin_FormDanhSachGoiTap());
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Admin_FormDanhSachHLV());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Admin_FormDanhSachKH());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Admin_FormDKiGoiTapKH());
         }
 
-        private void tậpCùngHuấnLuyệnViênToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button8_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Admin_FormDKiTapCungHLV());
         }
 
-        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
 
+        }
     }
 }
