@@ -99,6 +99,7 @@
             this.btn_xem.TabIndex = 9;
             this.btn_xem.Text = "Xem";
             this.btn_xem.UseVisualStyleBackColor = true;
+            this.btn_xem.Click += new System.EventHandler(this.btn_xem_Click);
             // 
             // comboBox1
             // 
@@ -144,6 +145,7 @@
             this.btn_them.TabIndex = 5;
             this.btn_them.Text = "Thêm";
             this.btn_them.UseVisualStyleBackColor = true;
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
             // btn_sort
             // 
