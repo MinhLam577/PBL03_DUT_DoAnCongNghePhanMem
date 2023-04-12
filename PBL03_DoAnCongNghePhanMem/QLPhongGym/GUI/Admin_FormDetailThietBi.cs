@@ -155,7 +155,8 @@ namespace QLPhongGym.GUI
                 this.Close();
             }
             else
-            {   if(ThietBi_BLL.Instance.KiemTraTen_BLL(txt_TenTB.Text))
+            {
+                if (ThietBi_BLL.Instance.KiemTraTen_BLL(txt_TenTB.Text))
                 {
                     MessageBox.Show("Tên thiết bị đã tồn tại, vui lòng thử lại với tên khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
