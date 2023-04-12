@@ -18,13 +18,11 @@ namespace QLPhongGym.GUI
             customizedesing();
         }
 
-        private Form currentFormChild;
+        private Form currentFormChild = null;
         private void OpenChildForm(Form childForm)
         {
             if (currentFormChild != null)
-            {
-                currentFormChild.Close();
-            }
+                currentFormChild.Close();        
             currentFormChild = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;

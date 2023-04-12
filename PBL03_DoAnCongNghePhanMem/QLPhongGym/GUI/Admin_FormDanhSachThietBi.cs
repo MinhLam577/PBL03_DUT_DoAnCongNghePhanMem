@@ -27,7 +27,51 @@ namespace QLPhongGym.GUI
             dataGridView1.DataSource = ThietBi_BLL.Instance.GetAllThietBi_BLL();
         }
 
-        private void btn_Xoa_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = ThietBi_BLL.Instance.Search_BLL(txt_Search.Text);
+        }
+        private void btn_xoa_Click(object sender, EventArgs e)
+        {
+            int selectedCount = dataGridView1.SelectedRows.Count;
+            if (selectedCount > 0)
+            {
+                DialogResult result = MessageBox.Show(string.Format("Bạn có chắc chắn muốn xóa {0} hàng đã chọn?", selectedCount),
+                                                       "Xóa dữ liệu",
+                                                       MessageBoxButtons.YesNo,
+                                                       MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    // Xóa các hàng được chọn
+                    foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+                    {
+                        if (row.Cells["ID"] != null && row.Cells["ID"].Value != null)
+                        {
+                            int id = Convert.ToInt32(row.Cells["ID"].Value);
+                            ThietBi_BLL.Instance.DeleteTB_BLL(id);
+                        }
+
+                    }
+                }
+                ShowData();
+
+            }
+        }
+
+        private void btn_sort_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedItem != null) // chọn một giá trị trong combobox
+            {
+                dataGridView1.DataSource = ThietBi_BLL.Instance.Sort_BLL(comboBox1.SelectedItem.ToString(), txt_Search.Text);
+            }
+            else
+            {
+                MessageBox.Show("Chọn thứ bạn muốn sắp xếp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+        /*private void btn_Xoa_Click(object sender, EventArgs e)
         {
             int selectedCount = dataGridView1.SelectedRows.Count;
             if (selectedCount > 0)
@@ -44,12 +88,14 @@ namespace QLPhongGym.GUI
                         int id = Convert.ToInt32(row.Cells["ID"].Value.ToString());
                         ThietBi_BLL.Instance.DeleteTB_BLL(id);
                     }
-                    Reset();
+                    //Reset();
                 }
                 ShowData();
             }
-        }
-        private void Btn_Sửa_Click(object sender, EventArgs e)
+        }*/
+    }
+    }
+/*        private void Btn_Sửa_Click(object sender, EventArgs e)
         {
             if (txt_MTB.Text != "")
             {
@@ -275,3 +321,4 @@ namespace QLPhongGym.GUI
 
     }
 }
+*/
