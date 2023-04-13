@@ -27,7 +27,7 @@ namespace QLPhongGym.GUI
         private void btnXoa_Click(object sender, EventArgs e)
         {
             var result = MessageBox.Show("Bạn chắc chắn muốn xóa ? ", "Xóa ", MessageBoxButtons.OKCancel);
-            
+
             if (result == DialogResult.OK)
             {
                 try
@@ -39,14 +39,21 @@ namespace QLPhongGym.GUI
                         CapNhatListHLV();
                     }
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Xóa huấn luyện viên thất bại");
                 }
-                
+
             }
         }
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+    }
+}
+/*
         private void btnSua_Click(object sender, EventArgs e)
         {
             int Ma = Convert.ToInt32(textMaHLv.Text.Trim());
@@ -332,4 +339,4 @@ namespace QLPhongGym.GUI
             CapNhatListHLV();
         }
     }
-}
+}*/

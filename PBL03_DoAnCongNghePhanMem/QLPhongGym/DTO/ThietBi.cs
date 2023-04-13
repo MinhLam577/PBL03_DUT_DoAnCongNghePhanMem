@@ -22,5 +22,6 @@ namespace QLPhongGym.DTO
         public string NhaCungCap { get; set; }
         public string MoTa { get; set; }
         public Nullable<double> Price { get; set; }
+        public Nullable<System.DateTime> NamSX { get; set; }
     }
 }

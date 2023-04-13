@@ -18,13 +18,11 @@ namespace QLPhongGym.GUI
             customizedesing();
         }
 
-        private Form currentFormChild;
+        private Form currentFormChild = null;
         private void OpenChildForm(Form childForm)
         {
             if (currentFormChild != null)
-            {
-                currentFormChild.Close();
-            }
+                currentFormChild.Close();        
             currentFormChild = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -83,6 +81,7 @@ namespace QLPhongGym.GUI
         private void button_ThietBi_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Admin_FormDanhSachThietBi());
+            hideMenu();
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -96,21 +95,25 @@ namespace QLPhongGym.GUI
         private void button16_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Admin_FormDanhSachGoiTap());
+            hideMenu();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Admin_FormDanhSachHLV());
+            hideMenu();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Admin_FormDanhSachKH());
+            hideMenu();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Admin_FormDKiGoiTapKH());
+            hideMenu();
         }
 
         private void button8_Click(object sender, EventArgs e)

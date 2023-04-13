@@ -152,6 +152,12 @@
     <Compile Include="GUI\Admin_FormDanhSachThietBi.Designer.cs">
       <DependentUpon>Admin_FormDanhSachThietBi.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Admin_FormDetailThietBi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_FormDetailThietBi.Designer.cs">
+      <DependentUpon>Admin_FormDetailThietBi.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Admin_FormDKiGoiTapKH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin_FormDanhSachThietBi.resx">
       <DependentUpon>Admin_FormDanhSachThietBi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin_FormDetailThietBi.resx">
+      <DependentUpon>Admin_FormDetailThietBi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin_FormDKiGoiTapKH.resx">
       <DependentUpon>Admin_FormDKiGoiTapKH.cs</DependentUpon>
