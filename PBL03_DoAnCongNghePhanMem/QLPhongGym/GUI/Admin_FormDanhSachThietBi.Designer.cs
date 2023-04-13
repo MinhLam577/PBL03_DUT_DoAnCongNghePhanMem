@@ -35,7 +35,6 @@
             this.btn_xem = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btn_xoa = new System.Windows.Forms.Button();
-            this.btn_sua = new System.Windows.Forms.Button();
             this.btn_them = new System.Windows.Forms.Button();
             this.btn_sort = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -93,12 +92,16 @@
             // btn_xem
             // 
             this.btn_xem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_xem.Location = new System.Drawing.Point(75, 580);
+            this.btn_xem.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_xem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_xem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xem.ForeColor = System.Drawing.Color.Cyan;
+            this.btn_xem.Location = new System.Drawing.Point(92, 580);
             this.btn_xem.Name = "btn_xem";
             this.btn_xem.Size = new System.Drawing.Size(114, 41);
             this.btn_xem.TabIndex = 9;
             this.btn_xem.Text = "Xem";
-            this.btn_xem.UseVisualStyleBackColor = true;
+            this.btn_xem.UseVisualStyleBackColor = false;
             this.btn_xem.Click += new System.EventHandler(this.btn_xem_Click);
             // 
             // comboBox1
@@ -118,33 +121,31 @@
             // btn_xoa
             // 
             this.btn_xoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_xoa.BackColor = System.Drawing.Color.Black;
+            this.btn_xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xoa.ForeColor = System.Drawing.Color.Cyan;
             this.btn_xoa.Location = new System.Drawing.Point(943, 580);
             this.btn_xoa.Name = "btn_xoa";
             this.btn_xoa.Size = new System.Drawing.Size(114, 41);
             this.btn_xoa.TabIndex = 8;
             this.btn_xoa.Text = "Xóa";
-            this.btn_xoa.UseVisualStyleBackColor = true;
+            this.btn_xoa.UseVisualStyleBackColor = false;
             this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
-            // 
-            // btn_sua
-            // 
-            this.btn_sua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_sua.Location = new System.Drawing.Point(807, 580);
-            this.btn_sua.Name = "btn_sua";
-            this.btn_sua.Size = new System.Drawing.Size(114, 41);
-            this.btn_sua.TabIndex = 7;
-            this.btn_sua.Text = "Sửa";
-            this.btn_sua.UseVisualStyleBackColor = true;
             // 
             // btn_them
             // 
             this.btn_them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_them.Location = new System.Drawing.Point(654, 580);
+            this.btn_them.BackColor = System.Drawing.Color.Black;
+            this.btn_them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_them.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_them.ForeColor = System.Drawing.Color.Cyan;
+            this.btn_them.Location = new System.Drawing.Point(807, 580);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(114, 41);
             this.btn_them.TabIndex = 5;
             this.btn_them.Text = "Thêm";
-            this.btn_them.UseVisualStyleBackColor = true;
+            this.btn_them.UseVisualStyleBackColor = false;
             this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
             // btn_sort
@@ -163,12 +164,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(1100, 633);
             this.Controls.Add(this.btn_sort);
             this.Controls.Add(this.btn_xem);
             this.Controls.Add(this.btn_them);
             this.Controls.Add(this.btn_xoa);
-            this.Controls.Add(this.btn_sua);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_Search);
@@ -192,7 +193,6 @@
         private System.Windows.Forms.Button btn_xem;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btn_xoa;
-        private System.Windows.Forms.Button btn_sua;
         private System.Windows.Forms.Button btn_them;
         private System.Windows.Forms.Button btn_sort;
     }

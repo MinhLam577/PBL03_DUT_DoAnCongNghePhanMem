@@ -75,13 +75,16 @@
             // 
             // btn_Sua
             // 
+            this.btn_Sua.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_Sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Sua.ForeColor = System.Drawing.Color.Cyan;
             this.btn_Sua.Location = new System.Drawing.Point(275, 377);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Size = new System.Drawing.Size(176, 51);
             this.btn_Sua.TabIndex = 7;
-            this.btn_Sua.Text = "Thay đổi";
-            this.btn_Sua.UseVisualStyleBackColor = true;
+            this.btn_Sua.Text = "OK";
+            this.btn_Sua.UseVisualStyleBackColor = false;
             this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
             // label1
@@ -233,19 +236,23 @@
             // 
             // btn_Huy
             // 
+            this.btn_Huy.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_Huy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Huy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Huy.ForeColor = System.Drawing.Color.Cyan;
             this.btn_Huy.Location = new System.Drawing.Point(501, 377);
             this.btn_Huy.Name = "btn_Huy";
             this.btn_Huy.Size = new System.Drawing.Size(172, 51);
             this.btn_Huy.TabIndex = 8;
             this.btn_Huy.Text = "Thoát";
-            this.btn_Huy.UseVisualStyleBackColor = true;
+            this.btn_Huy.UseVisualStyleBackColor = false;
             this.btn_Huy.Click += new System.EventHandler(this.btn_Huy_Click);
             // 
             // Admin_FormDetailThietBi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(903, 440);
             this.Controls.Add(this.btn_Huy);
             this.Controls.Add(this.dateTimePicker1);
