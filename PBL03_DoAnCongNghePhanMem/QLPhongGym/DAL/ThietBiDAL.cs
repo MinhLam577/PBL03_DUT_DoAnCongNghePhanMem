@@ -34,7 +34,7 @@ namespace QLPhongGym.DAL
             dt.Columns.Add("Số lượng", typeof(int));
             dt.Columns.Add("Số lượng hỏng", typeof(int));
             dt.Columns.Add("Nhà cung cấp", typeof(string));
-            dt.Columns.Add("Năm sản xuất", typeof(DateTime));
+            dt.Columns.Add("Năm sản xuất", typeof(string));
             dt.Columns.Add("Mô tả", typeof(string));
             dt.Columns.Add("Giá tiền(vnd)", typeof(double));
             return dt;
@@ -69,7 +69,6 @@ namespace QLPhongGym.DAL
                     s.SoLuong = tb.SoLuong;
                     s.SoLuongHong = tb.SoLuongHong;
                     s.Image = tb.Image;
-                    s.NamSX = tb.NamSX;
                     db.SaveChanges();
                 }
                 catch (Exception e)
@@ -229,27 +228,6 @@ namespace QLPhongGym.DAL
                 return null;
             }
 
-        }
-        public bool KiemTraTen_DAL(string name)
-        {
-            bool TB = false;
-            try
-            {
-                int count = db.ThietBis.Count(p => p.Name == name);
-                if (count > 0)
-                {
-                    TB = true;
-                }
-                else
-                {
-                    TB = false;
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            return TB;
         }
     }
 }

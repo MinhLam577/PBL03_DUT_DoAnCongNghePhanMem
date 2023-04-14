@@ -101,8 +101,12 @@
             this.btn_xem.Size = new System.Drawing.Size(114, 41);
             this.btn_xem.TabIndex = 9;
             this.btn_xem.Text = "Xem";
+<<<<<<< HEAD
             this.btn_xem.UseVisualStyleBackColor = false;
             this.btn_xem.Click += new System.EventHandler(this.btn_xem_Click);
+=======
+            this.btn_xem.UseVisualStyleBackColor = true;
+>>>>>>> parent of e502366 (Tách form thiết bị)
             // 
             // comboBox1
             // 
@@ -145,8 +149,12 @@
             this.btn_them.Size = new System.Drawing.Size(114, 41);
             this.btn_them.TabIndex = 5;
             this.btn_them.Text = "Thêm";
+<<<<<<< HEAD
             this.btn_them.UseVisualStyleBackColor = false;
             this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
+=======
+            this.btn_them.UseVisualStyleBackColor = true;
+>>>>>>> parent of e502366 (Tách form thiết bị)
             // 
             // btn_sort
             // 
