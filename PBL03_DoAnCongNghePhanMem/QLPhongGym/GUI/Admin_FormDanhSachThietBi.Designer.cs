@@ -177,7 +177,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Admin_FormDanhSachThietBi";
             this.Text = "Admin_FormDanhSachThietBi";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

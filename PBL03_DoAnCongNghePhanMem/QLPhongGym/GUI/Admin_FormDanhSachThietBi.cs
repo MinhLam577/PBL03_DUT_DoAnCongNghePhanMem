@@ -92,6 +92,7 @@ namespace QLPhongGym.GUI
             f.ShowDialog();
         }
 
+
         /*private void btn_Xoa_Click(object sender, EventArgs e)
         {
             int selectedCount = dataGridView1.SelectedRows.Count;
