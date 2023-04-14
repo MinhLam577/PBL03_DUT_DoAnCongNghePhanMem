@@ -40,7 +40,8 @@ namespace QLPhongGym.GUI
                         if (row.Cells["Mã gói tập"] != null && row.Cells["Mã gói tập"].Value != null)
                         {
                             int id = Convert.ToInt32(row.Cells["Mã gói tập"].Value);
-                            GoiTapBLL.Instance.DeleteGT_BLL(id);
+                            
+                            GoiTapBLL.Instance.DeleteGT(GoiTapBLL.Instance.GetGTByID(id));
                         }
 
                     }
@@ -95,7 +96,7 @@ namespace QLPhongGym.GUI
                 }
                 tb.NameGT = txt_TenGT.Text;
                 tb.Price = Convert.ToDouble(txt_Price.Text);
-                GoiTapBLL.Instance.AddGoiTap_BLL(tb);
+                GoiTapBLL.Instance.AddGT(tb);
                 MessageBox.Show("Đã thêm thành công!!!");
                 Reset();
             }
@@ -125,7 +126,7 @@ namespace QLPhongGym.GUI
                 tb.IDGT = Convert.ToInt32(txt_MGT.Text);
                 tb.Price = Convert.ToDouble(txt_Price.Text);
                 tb.NameGT = txt_TenGT.Text;
-                GoiTapBLL.Instance.UpdateGoiTap_BLL(tb);
+                GoiTapBLL.Instance.UpdateGT(tb);
                 MessageBox.Show("Đã sửa thành công!!!");
                 Reset();
             }

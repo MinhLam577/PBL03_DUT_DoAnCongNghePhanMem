@@ -56,6 +56,7 @@ namespace QLPhongGym.DAL
         {
             db.Entry(GT).State = System.Data.Entity.EntityState.Modified;
             return db.SaveChanges();
+        }
         public DataTable TaoBang()
         {
             DataTable dt = new DataTable();
