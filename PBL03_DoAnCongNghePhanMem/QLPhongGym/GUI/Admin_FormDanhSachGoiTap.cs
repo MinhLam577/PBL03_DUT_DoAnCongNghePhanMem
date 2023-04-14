@@ -93,7 +93,7 @@ namespace QLPhongGym.GUI
                     MessageBox.Show("Giá gói tập không hợp lệ, vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                tb.Name = txt_TenGT.Text;
+                tb.NameGT = txt_TenGT.Text;
                 tb.Price = Convert.ToDouble(txt_Price.Text);
                 GoiTapBLL.Instance.AddGoiTap_BLL(tb);
                 MessageBox.Show("Đã thêm thành công!!!");
@@ -124,7 +124,7 @@ namespace QLPhongGym.GUI
                 }
                 tb.IDGT = Convert.ToInt32(txt_MGT.Text);
                 tb.Price = Convert.ToDouble(txt_Price.Text);
-                tb.Name = txt_TenGT.Text;
+                tb.NameGT = txt_TenGT.Text;
                 GoiTapBLL.Instance.UpdateGoiTap_BLL(tb);
                 MessageBox.Show("Đã sửa thành công!!!");
                 Reset();

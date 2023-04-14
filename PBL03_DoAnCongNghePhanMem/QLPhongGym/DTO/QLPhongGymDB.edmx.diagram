@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="e1d9e6cc1e9e4a5a9f39433587c66352" Name="Diagram1" ZoomLevel="82">
         <EntityTypeShape EntityType="QLPhongGymModel.CaLamViec" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLPhongGymModel.DangKiGoiTap" Width="1.5" PointX="3.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLPhongGymModel.DangKiGoiTap" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
         <EntityTypeShape EntityType="QLPhongGymModel.DanhGiaHLV" Width="1.5" PointX="7.5" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="QLPhongGymModel.GoiTap" Width="1.5" PointX="0.5" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QLPhongGymModel.LichLamViecTrongTuan" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
@@ -31,10 +31,10 @@
         <InheritanceConnector EntityType="QLPhongGymModel.Admin" />
         <EntityTypeShape EntityType="QLPhongGymModel.HLV" Width="1.5" PointX="8.375" PointY="10.75" />
         <InheritanceConnector EntityType="QLPhongGymModel.HLV" />
-        <EntityTypeShape EntityType="QLPhongGymModel.HoaDon" Width="1.5" PointX="2.125" PointY="12.375" />
+        <EntityTypeShape EntityType="QLPhongGymModel.HoaDon" Width="1.5" PointX="2.625" PointY="12.25" />
         <AssociationConnector Association="QLPhongGymModel.FK_HoaDon_GoiTap" />
-        <AssociationConnector Association="QLPhongGymModel.FK_HoaDon_Users" />
-      </Diagram>
+        <AssociationConnector Association="QLPhongGymModel.FK_HoaDon_LichThueHLV" />
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

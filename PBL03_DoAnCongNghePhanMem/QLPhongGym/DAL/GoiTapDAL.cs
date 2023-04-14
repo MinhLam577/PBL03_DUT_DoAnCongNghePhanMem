@@ -38,10 +38,10 @@ namespace QLPhongGym.DAL
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
                 data = TaoBang();
-                var str = from p in db.GoiTaps select new { p.IDGT, p.Name, p.Price };
+                var str = from p in db.GoiTaps select new { p.IDGT, p.NameGT, p.Price };
                 foreach (var item in db.GoiTaps)
                 {
-                    data.Rows.Add(cnt++, item.IDGT, item.Name, item.Price);
+                    data.Rows.Add(cnt++, item.IDGT, item.NameGT, item.Price);
                 }
                 return data;
             }
@@ -86,7 +86,7 @@ namespace QLPhongGym.DAL
                 try
                 {
                     s.IDGT = tb.IDGT;
-                    s.Name = tb.Name;
+                    s.NameGT = tb.NameGT;
                     s.Price = tb.Price;
                     db.SaveChanges();
                 }
