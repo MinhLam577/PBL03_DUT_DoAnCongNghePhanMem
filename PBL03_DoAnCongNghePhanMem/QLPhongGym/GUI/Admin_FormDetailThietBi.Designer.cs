@@ -28,30 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_FormDetailThietBi));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Btn_Change = new System.Windows.Forms.Button();
-            this.btn_Sua = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txt_MTB = new System.Windows.Forms.TextBox();
-            this.txt_TenTB = new System.Windows.Forms.TextBox();
-            this.txt_Price = new System.Windows.Forms.TextBox();
-            this.txt_SLHong = new System.Windows.Forms.TextBox();
-            this.txt_Mota = new System.Windows.Forms.TextBox();
-            this.txt_NhaCungCap = new System.Windows.Forms.TextBox();
-            this.txt_SL = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.btn_Huy = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
+<<<<<<< HEAD
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -248,10 +227,13 @@
             this.btn_Huy.UseVisualStyleBackColor = false;
             this.btn_Huy.Click += new System.EventHandler(this.btn_Huy_Click);
             // 
+=======
+>>>>>>> parent of e502366 (Tách form thiết bị)
             // Admin_FormDetailThietBi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(903, 440);
             this.Controls.Add(this.btn_Huy);
@@ -275,36 +257,15 @@
             this.Controls.Add(this.Btn_Change);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+=======
+            this.ClientSize = new System.Drawing.Size(857, 641);
+>>>>>>> parent of e502366 (Tách form thiết bị)
             this.Name = "Admin_FormDetailThietBi";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin_FormDetailThietBi";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button Btn_Change;
-        private System.Windows.Forms.Button btn_Sua;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txt_MTB;
-        private System.Windows.Forms.TextBox txt_TenTB;
-        private System.Windows.Forms.TextBox txt_Price;
-        private System.Windows.Forms.TextBox txt_SLHong;
-        private System.Windows.Forms.TextBox txt_Mota;
-        private System.Windows.Forms.TextBox txt_NhaCungCap;
-        private System.Windows.Forms.TextBox txt_SL;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button btn_Huy;
     }
 }

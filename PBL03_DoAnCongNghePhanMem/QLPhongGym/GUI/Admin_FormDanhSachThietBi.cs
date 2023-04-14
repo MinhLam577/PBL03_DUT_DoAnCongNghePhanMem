@@ -71,6 +71,7 @@ namespace QLPhongGym.GUI
             }
         }
 
+<<<<<<< HEAD
         private void btn_xem_Click(object sender, EventArgs e)
         {
             //if(dataGridView1.SelectedRows.Count == 1)
@@ -93,6 +94,8 @@ namespace QLPhongGym.GUI
         }
 
 
+=======
+>>>>>>> parent of e502366 (Tách form thiết bị)
         /*private void btn_Xoa_Click(object sender, EventArgs e)
         {
             int selectedCount = dataGridView1.SelectedRows.Count;

@@ -1,12 +1,8 @@
-﻿using QLPhongGym.BLL;
-using QLPhongGym.DTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.Entity.ModelConfiguration.Configuration;
 using System.Drawing;
-using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,14 +12,10 @@ namespace QLPhongGym.GUI
 {
     public partial class Admin_FormDetailThietBi : Form
     {
-        public delegate void Mydel();
-        public Mydel d { get; set; }
-        public string ID { get; set; }
-        static string ImagePath = Application.StartupPath + @"\Resources\No_Image_Available.jpg";
-        public Admin_FormDetailThietBi(string id)
+        public Admin_FormDetailThietBi()
         {
-            ID = id;
             InitializeComponent();
+<<<<<<< HEAD
             GUI();
         }
         public void GUI()
@@ -166,6 +158,8 @@ namespace QLPhongGym.GUI
                 MessageBox.Show("Đã thêm thành công!!!");
                 this.Close();
             }
+=======
+>>>>>>> parent of e502366 (Tách form thiết bị)
         }
     }
 }
