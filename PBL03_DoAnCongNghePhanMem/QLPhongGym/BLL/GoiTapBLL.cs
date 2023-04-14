@@ -34,7 +34,6 @@ namespace QLPhongGym.BLL
         public GoiTap GetGTByName(string name)
         {
             return GoiTapDAL.Instance.GetGTByName(name);
-            return GoiTapDAL.Instance.GetData_DAL();
         }
         public bool AddGT(GoiTap GT)
         {
