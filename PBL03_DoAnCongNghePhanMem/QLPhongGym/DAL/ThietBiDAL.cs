@@ -34,6 +34,7 @@ namespace QLPhongGym.DAL
             dt.Columns.Add("Số lượng", typeof(int));
             dt.Columns.Add("Số lượng hỏng", typeof(int));
             dt.Columns.Add("Nhà cung cấp", typeof(string));
+            dt.Columns.Add("Năm sản xuất", typeof(DateTime));
             dt.Columns.Add("Mô tả", typeof(string));
             dt.Columns.Add("Giá tiền(vnd)", typeof(double));
             return dt;
@@ -45,10 +46,10 @@ namespace QLPhongGym.DAL
             DataTable dt = new DataTable();
             int cnt = 1;
             dt = createDataTable();
-            var str = from p in db.ThietBis select new { p.IDTB, p.Name, p.SoLuong, p.SoLuongHong, p.NhaCungCap, p.MoTa, p.Price };
+            var str = from p in db.ThietBis select new { p.IDTB, p.Name, p.SoLuong, p.SoLuongHong, p.NhaCungCap, p.MoTa, p.Price,p.NamSX};
             foreach (var item in str)
             {
-                dt.Rows.Add(cnt++,item.IDTB, item.Name, item.SoLuong, item.SoLuongHong, item.NhaCungCap, item.MoTa, item.Price);
+                dt.Rows.Add(cnt++,item.IDTB, item.Name, item.SoLuong, item.SoLuongHong,item.NhaCungCap, item.NamSX,item.MoTa, item.Price);
             }
             return dt;
         }
@@ -68,6 +69,7 @@ namespace QLPhongGym.DAL
                     s.SoLuong = tb.SoLuong;
                     s.SoLuongHong = tb.SoLuongHong;
                     s.Image = tb.Image;
+                    s.NamSX = tb.NamSX;
                     db.SaveChanges();
                 }
                 catch (Exception e)
@@ -113,7 +115,7 @@ namespace QLPhongGym.DAL
                 dt = createDataTable();
                 foreach (var item in s)
                 {
-                    dt.Rows.Add(cnt++,item.IDTB, item.Name, item.SoLuong, item.SoLuongHong, item.NhaCungCap, item.MoTa, item.Price);
+                    dt.Rows.Add(cnt++, item.IDTB, item.Name, item.SoLuong, item.SoLuongHong, item.NhaCungCap, item.NamSX, item.MoTa, item.Price);
                 }
                 return dt;
             }
@@ -123,7 +125,7 @@ namespace QLPhongGym.DAL
                 dt = createDataTable();
                 foreach (var item in query)
                 {
-                    dt.Rows.Add(cnt++, item.IDTB, item.Name, item.SoLuong, item.SoLuongHong, item.NhaCungCap, item.MoTa, item.Price);
+                    dt.Rows.Add(cnt++, item.IDTB, item.Name, item.SoLuong, item.SoLuongHong, item.NhaCungCap, item.NamSX, item.MoTa, item.Price);
                 }
                 return dt;
             }
@@ -142,7 +144,7 @@ namespace QLPhongGym.DAL
                         dt = createDataTable();
                         foreach (var item in query)
                         {
-                            dt.Rows.Add(cnt++,item.IDTB, item.Name, item.SoLuong, item.SoLuongHong, item.NhaCungCap, item.MoTa, item.Price);
+                            dt.Rows.Add(cnt++, item.IDTB, item.Name, item.SoLuong, item.SoLuongHong, item.NhaCungCap, item.NamSX, item.MoTa, item.Price);
                         }
                         break;
                     case "Nhà cung cấp":
@@ -150,7 +152,7 @@ namespace QLPhongGym.DAL
                         dt = createDataTable();
                         foreach (var item in str)
                         {
-                            dt.Rows.Add(cnt++, item.IDTB, item.Name, item.SoLuong, item.SoLuongHong, item.NhaCungCap, item.MoTa, item.Price);
+                            dt.Rows.Add(cnt++, item.IDTB, item.Name, item.SoLuong, item.SoLuongHong, item.NhaCungCap, item.NamSX, item.MoTa, item.Price);
                         }
                         break;
                     case "Số lượng hỏng":
@@ -158,7 +160,7 @@ namespace QLPhongGym.DAL
                         dt = createDataTable();
                         foreach (var item in st)
                         {
-                            dt.Rows.Add(cnt++, item.IDTB, item.Name, item.SoLuong, item.SoLuongHong, item.NhaCungCap, item.MoTa, item.Price);
+                            dt.Rows.Add(cnt++, item.IDTB, item.Name, item.SoLuong, item.SoLuongHong, item.NhaCungCap, item.NamSX, item.MoTa, item.Price);
                         }
                         break;
                     case "Tên thiết bị":
@@ -166,7 +168,7 @@ namespace QLPhongGym.DAL
                         dt = createDataTable();
                         foreach (var item in t)
                         {
-                            dt.Rows.Add(cnt++, item.IDTB, item.Name, item.SoLuong, item.SoLuongHong, item.NhaCungCap, item.MoTa, item.Price);
+                            dt.Rows.Add(cnt++, item.IDTB, item.Name, item.SoLuong, item.SoLuongHong, item.NhaCungCap, item.NamSX, item.MoTa, item.Price);
                         }
                         break;
                     default:
@@ -182,7 +184,7 @@ namespace QLPhongGym.DAL
                         dt = createDataTable();
                         foreach (var item in query)
                         {
-                            dt.Rows.Add(cnt++, item.IDTB, item.Name, item.SoLuong, item.SoLuongHong, item.NhaCungCap, item.MoTa, item.Price);
+                            dt.Rows.Add(cnt++, item.IDTB, item.Name, item.SoLuong, item.SoLuongHong, item.NhaCungCap, item.NamSX, item.MoTa, item.Price);
                         }
                         break;
                     case "Nhà cung cấp":
@@ -190,7 +192,7 @@ namespace QLPhongGym.DAL
                         dt = createDataTable();
                         foreach (var item in str)
                         {
-                            dt.Rows.Add(cnt++, item.IDTB, item.Name, item.SoLuong, item.SoLuongHong, item.NhaCungCap, item.MoTa, item.Price);
+                            dt.Rows.Add(cnt++, item.IDTB, item.Name, item.SoLuong, item.SoLuongHong, item.NhaCungCap, item.NamSX, item.MoTa, item.Price);
                         }
                         break;
                     case "Số lượng hỏng":
@@ -198,7 +200,7 @@ namespace QLPhongGym.DAL
                         dt = createDataTable();
                         foreach (var item in st)
                         {
-                            dt.Rows.Add(cnt++, item.IDTB, item.Name, item.SoLuong, item.SoLuongHong, item.NhaCungCap, item.MoTa, item.Price);
+                            dt.Rows.Add(cnt++, item.IDTB, item.Name, item.SoLuong, item.SoLuongHong, item.NhaCungCap, item.NamSX, item.MoTa, item.Price);
                         }
                         break;
                     case "Tên thiết bị":
@@ -206,7 +208,7 @@ namespace QLPhongGym.DAL
                         dt = createDataTable();
                         foreach (var item in t)
                         {
-                            dt.Rows.Add(cnt++, item.IDTB, item.Name, item.SoLuong, item.SoLuongHong, item.NhaCungCap, item.MoTa, item.Price);
+                            dt.Rows.Add(cnt++, item.IDTB, item.Name, item.SoLuong, item.SoLuongHong, item.NhaCungCap, item.NamSX, item.MoTa, item.Price);
                         }
                         break;
                     default:
@@ -227,6 +229,27 @@ namespace QLPhongGym.DAL
                 return null;
             }
 
+        }
+        public bool KiemTraTen_DAL(string name)
+        {
+            bool TB = false;
+            try
+            {
+                int count = db.ThietBis.Count(p => p.Name == name);
+                if (count > 0)
+                {
+                    TB = true;
+                }
+                else
+                {
+                    TB = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return TB;
         }
     }
 }

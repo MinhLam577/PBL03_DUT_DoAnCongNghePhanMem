@@ -1,10 +1,11 @@
 ﻿using QLPhongGym.DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 namespace QLPhongGym.DAL
 {
     class GoiTapDAL
@@ -15,7 +16,7 @@ namespace QLPhongGym.DAL
         {
             get
             {
-                if(instance == null)
+                if (instance == null)
                     instance = new GoiTapDAL();
                 return instance;
             }
@@ -55,6 +56,29 @@ namespace QLPhongGym.DAL
         {
             db.Entry(GT).State = System.Data.Entity.EntityState.Modified;
             return db.SaveChanges();
+        public DataTable TaoBang()
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("STT", typeof(int));
+            dt.Columns.Add("Mã gói tập", typeof(int));
+            dt.Columns.Add("Gói tập", typeof(string));
+            dt.Columns.Add("Giá(vnđ)", typeof(double));
+            return dt;
+        }
+        public DataTable GetData_DAL()
+        {
+            DataTable data = new DataTable();
+            int cnt = 1;
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                data = TaoBang();
+                var str = from p in db.GoiTaps select new { p.IDGT, p.NameGT, p.Price };
+                foreach (var item in db.GoiTaps)
+                {
+                    data.Rows.Add(cnt++, item.IDGT, item.NameGT, item.Price);
+                }
+                return data;
+            }
         }
     }
 }
