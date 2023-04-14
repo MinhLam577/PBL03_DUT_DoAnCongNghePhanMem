@@ -73,23 +73,23 @@ namespace QLPhongGym.GUI
 
         private void btn_xem_Click(object sender, EventArgs e)
         {
-            if(dataGridView1.SelectedRows.Count == 1)
-            {
-                if (dataGridView1.SelectedRows[0].Cells["ID"] != null && dataGridView1.SelectedRows[0].Cells["ID"].Value != null)
-                {
-                    string id = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
-                    Admin_FormDetailThietBi f = new Admin_FormDetailThietBi(id);
-                    f.d += new Admin_FormDetailThietBi.Mydel(ShowData);
-                    f.ShowDialog();
-                }
-            }
+            //if(dataGridView1.SelectedRows.Count == 1)
+            //{
+            //    if (dataGridView1.SelectedRows[0].Cells["ID"] != null && dataGridView1.SelectedRows[0].Cells["ID"].Value != null)
+            //    {
+            //        string id = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
+            //        Admin_FormDetailThietBi f = new Admin_FormDetailThietBi(id);
+            //        f.d += new Admin_FormDetailThietBi.Mydel(ShowData);
+            //        f.ShowDialog();
+            //    }
+            //}
         }
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-            Admin_FormDetailThietBi f = new Admin_FormDetailThietBi("");
-            f.d += new Admin_FormDetailThietBi.Mydel(ShowData);
-            f.ShowDialog();
+            //Admin_FormDetailThietBi f = new Admin_FormDetailThietBi("");
+            //f.d += new Admin_FormDetailThietBi.Mydel(ShowData);
+            //f.ShowDialog();
         }
 
 

@@ -6,8 +6,6 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using QLPhongGym.DAL;
-using QLPhongGym.DTO;
 using System.Drawing;
 
 namespace QLPhongGym.BLL

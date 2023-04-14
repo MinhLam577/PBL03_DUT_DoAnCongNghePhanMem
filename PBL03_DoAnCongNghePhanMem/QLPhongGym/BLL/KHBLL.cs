@@ -10,7 +10,7 @@ namespace QLPhongGym.BLL
 {
     public class KHBLL:UsersBLL
     {
-        private static KHBLL  instance;
+        private static KHBLL instance;
         public static KHBLL Instance
         {
             get
@@ -21,14 +21,11 @@ namespace QLPhongGym.BLL
             }
             private set { }
         }
-        public DataTable SortListKHBy(string Require, DataTable data)
+        public KH GetKHByID(int ID)
         {
-            return KHDAL.Instance.SortKHBy(Require, data);
+            return KHDAL.Instance.GetKHByID(ID);
         }
-        public DataTable FindListKHByIDOrName(string txt)
-        {
-            return KHDAL.Instance.FindListKHByIDOrName(txt);
-        }
-        
+
+
     }
 }

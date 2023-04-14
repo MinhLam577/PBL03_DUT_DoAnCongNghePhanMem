@@ -110,11 +110,7 @@ namespace QLPhongGym.GUI
             hideMenu();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Admin_FormDKiGoiTapKH());
-            hideMenu();
-        }
+       
 
         private void button8_Click(object sender, EventArgs e)
         {
