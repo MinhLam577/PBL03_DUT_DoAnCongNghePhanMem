@@ -29,8 +29,8 @@ namespace QLPhongGym.GUI
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            panel3.Controls.Add(childForm);
-            panel3.Tag = childForm;
+            panel4.Controls.Add(childForm);
+            panel4.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
@@ -110,7 +110,7 @@ namespace QLPhongGym.GUI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Admin_FormDKiGoiTapKH());
+            OpenChildForm(new DangKiGoiTapFormKH());
         }
 
         private void button8_Click(object sender, EventArgs e)

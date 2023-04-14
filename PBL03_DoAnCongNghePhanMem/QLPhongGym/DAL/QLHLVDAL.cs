@@ -266,7 +266,7 @@ namespace QLPhongGym.DAL
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi");
+                MessageBox.Show(ex.Message, "Lỗi");
             };
             return dt;
         }

@@ -18,7 +18,6 @@ namespace QLPhongGym.DTO
         public User()
         {
             this.DangKiGoiTaps = new HashSet<DangKiGoiTap>();
-            this.HoaDons = new HashSet<HoaDon>();
             this.LichLamViecTrongTuans = new HashSet<LichLamViecTrongTuan>();
             this.HLVs = new HashSet<LichThueHLV>();
             this.KHs = new HashSet<LichThueHLV>();
@@ -37,8 +36,6 @@ namespace QLPhongGym.DTO
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DangKiGoiTap> DangKiGoiTaps { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HoaDon> HoaDons { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LichLamViecTrongTuan> LichLamViecTrongTuans { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

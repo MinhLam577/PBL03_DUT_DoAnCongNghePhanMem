@@ -6,13 +6,11 @@
     <edmx:Diagrams>
       <Diagram DiagramId="e1d9e6cc1e9e4a5a9f39433587c66352" Name="Diagram1" ZoomLevel="82">
         <EntityTypeShape EntityType="QLPhongGymModel.CaLamViec" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLPhongGymModel.DangKiGoiTap" Width="1.5" PointX="3.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLPhongGymModel.DangKiGoiTap" Width="1.5" PointX="2.875" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QLPhongGymModel.DanhGiaHLV" Width="1.5" PointX="7.5" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="QLPhongGymModel.GoiTap" Width="1.5" PointX="0.5" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLPhongGymModel.HoaDon" Width="1.5" PointX="3" PointY="12.125" IsExpanded="true" />
         <EntityTypeShape EntityType="QLPhongGymModel.LichLamViecTrongTuan" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="QLPhongGymModel.LichThueHLV" Width="1.5" PointX="10" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLPhongGymModel.PhanQuyen" Width="1.5" PointX="11.25" PointY="12.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QLPhongGymModel.TinhTrangLamViecHLV" Width="1.5" PointX="5.25" PointY="4.25" IsExpanded="true" />
         <EntityTypeShape EntityType="QLPhongGymModel.TK" Width="1.5" PointX="8.125" PointY="12.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QLPhongGymModel.User" Width="1.5" PointX="5.25" PointY="7.875" IsExpanded="true" />
@@ -20,13 +18,10 @@
         <AssociationConnector Association="QLPhongGymModel.FK_DangKiGoiTap_GoiTap" ManuallyRouted="false" />
         <AssociationConnector Association="QLPhongGymModel.FK_DangKiGoiTap_Users" ManuallyRouted="false" />
         <AssociationConnector Association="QLPhongGymModel.FK_DanhGiaHLV_TinhTrangLamViecHLV" ManuallyRouted="false" />
-        <AssociationConnector Association="QLPhongGymModel.FK_HoaDon_GoiTap" ManuallyRouted="false" />
-        <AssociationConnector Association="QLPhongGymModel.FK_HoaDon_Users" ManuallyRouted="false" />
         <AssociationConnector Association="QLPhongGymModel.FK_LichLamViecTrongTuan_Users" ManuallyRouted="false" />
         <AssociationConnector Association="QLPhongGymModel.FK_TinhTrangLamViecHLV_LichLamViecTrongTuan" ManuallyRouted="false" />
         <AssociationConnector Association="QLPhongGymModel.FK_LichThueHLV_Users" ManuallyRouted="false" />
         <AssociationConnector Association="QLPhongGymModel.FK_LichThueHLV_Users1" ManuallyRouted="false" />
-        <AssociationConnector Association="QLPhongGymModel.FK_TK_PhanQuyen" ManuallyRouted="false" />
         <AssociationConnector Association="QLPhongGymModel.FK_TK_Users" ManuallyRouted="false" />
         <EntityTypeShape EntityType="QLPhongGymModel.KH" Width="1.5" PointX="8.375" PointY="7.625" />
         <InheritanceConnector EntityType="QLPhongGymModel.KH" />
@@ -34,6 +29,11 @@
         <InheritanceConnector EntityType="QLPhongGymModel.Admin" />
         <EntityTypeShape EntityType="QLPhongGymModel.HLV" Width="1.5" PointX="8.375" PointY="10.75" />
         <InheritanceConnector EntityType="QLPhongGymModel.HLV" />
+        <EntityTypeShape EntityType="QLPhongGymModel.HoaDon" Width="1.5" PointX="2.625" PointY="12.125" />
+        <AssociationConnector Association="QLPhongGymModel.FK_HoaDon_GoiTap" />
+        <AssociationConnector Association="QLPhongGymModel.FK_HoaDon_LichThueHLV" />
+        <EntityTypeShape EntityType="QLPhongGymModel.PhanQuyen" Width="1.5" PointX="11.375" PointY="13.25" />
+        <AssociationConnector Association="QLPhongGymModel.FK_TK_PhanQuyen" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

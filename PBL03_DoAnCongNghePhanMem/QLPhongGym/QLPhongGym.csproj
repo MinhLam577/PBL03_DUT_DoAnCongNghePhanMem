@@ -58,11 +58,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\DangKiGoiTapBLL.cs" />
+    <Compile Include="BLL\GoiTapBLL.cs" />
     <Compile Include="BLL\KHBLL.cs" />
     <Compile Include="BLL\QLHLVBLL.cs" />
     <Compile Include="BLL\ThietBi_BLL.cs" />
     <Compile Include="BLL\TKBLL.cs" />
     <Compile Include="BLL\UsersBLL.cs" />
+    <Compile Include="DAL\DangKiGoiTapDAL.cs" />
+    <Compile Include="DAL\GoiTapDAL.cs" />
     <Compile Include="DAL\KHDAL.cs" />
     <Compile Include="DAL\QLHLVDAL.cs" />
     <Compile Include="DAL\ThietBiDAL.cs" />
@@ -128,6 +132,12 @@
     <Compile Include="DTO\User.cs">
       <DependentUpon>QLPhongGymDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="GUI\AddOrEditFormKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AddOrEditFormKH.Designer.cs">
+      <DependentUpon>AddOrEditFormKH.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Admin_FormDanhSachGoiTap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,11 +162,11 @@
     <Compile Include="GUI\Admin_FormDanhSachThietBi.Designer.cs">
       <DependentUpon>Admin_FormDanhSachThietBi.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Admin_FormDKiGoiTapKH.cs">
+    <Compile Include="GUI\DangKiGoiTapFormKH.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Admin_FormDKiGoiTapKH.Designer.cs">
-      <DependentUpon>Admin_FormDKiGoiTapKH.cs</DependentUpon>
+    <Compile Include="GUI\DangKiGoiTapFormKH.Designer.cs">
+      <DependentUpon>DangKiGoiTapFormKH.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Admin_FormDKiTapCungHLV.cs">
       <SubType>Form</SubType>
@@ -200,6 +210,12 @@
     <Compile Include="GUI\FormTrangChu.Designer.cs">
       <DependentUpon>FormTrangChu.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\HoaDonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HoaDonForm.Designer.cs">
+      <DependentUpon>HoaDonForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +230,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\AddOrEditFormKH.resx">
+      <DependentUpon>AddOrEditFormKH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin_FormDanhSachGoiTap.resx">
       <DependentUpon>Admin_FormDanhSachGoiTap.cs</DependentUpon>
     </EmbeddedResource>
@@ -226,8 +245,8 @@
     <EmbeddedResource Include="GUI\Admin_FormDanhSachThietBi.resx">
       <DependentUpon>Admin_FormDanhSachThietBi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Admin_FormDKiGoiTapKH.resx">
-      <DependentUpon>Admin_FormDKiGoiTapKH.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\DangKiGoiTapFormKH.resx">
+      <DependentUpon>DangKiGoiTapFormKH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin_FormDKiTapCungHLV.resx">
       <DependentUpon>Admin_FormDKiTapCungHLV.cs</DependentUpon>
@@ -249,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormTrangChu.resx">
       <DependentUpon>FormTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HoaDonForm.resx">
+      <DependentUpon>HoaDonForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

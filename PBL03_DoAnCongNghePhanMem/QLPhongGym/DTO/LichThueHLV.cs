@@ -14,6 +14,12 @@ namespace QLPhongGym.DTO
     
     public partial class LichThueHLV
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public LichThueHLV()
+        {
+            this.HoaDons = new HashSet<HoaDon>();
+        }
+    
         public int IDLT { get; set; }
         public int IDHLV { get; set; }
         public Nullable<int> IDCa { get; set; }
@@ -22,5 +28,7 @@ namespace QLPhongGym.DTO
     
         public virtual User User_HLV { get; set; }
         public virtual User User_KH { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HoaDon> HoaDons { get; set; }
     }
 }

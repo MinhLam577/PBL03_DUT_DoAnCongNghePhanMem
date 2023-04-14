@@ -20,7 +20,7 @@ namespace QLPhongGym.DTO
         public int IDQuyen { get; set; }
         public Nullable<bool> TrangThai { get; set; }
     
-        public virtual PhanQuyen PhanQuyen { get; set; }
         public virtual User User { get; set; }
+        public virtual PhanQuyen PhanQuyen { get; set; }
     }
 }
