@@ -17,11 +17,11 @@ namespace QLPhongGym.DTO
         public int IDHD { get; set; }
         public int IDKH { get; set; }
         public Nullable<int> IDGT { get; set; }
-        public Nullable<int> IDHLV { get; set; }
+        public Nullable<int> IDLT { get; set; }
         public Nullable<System.DateTime> NgayThanhToan { get; set; }
         public Nullable<double> Price { get; set; }
     
         public virtual GoiTap GoiTap { get; set; }
-        public virtual User User { get; set; }
+        public virtual LichThueHLV LichThueHLV { get; set; }
     }
 }
