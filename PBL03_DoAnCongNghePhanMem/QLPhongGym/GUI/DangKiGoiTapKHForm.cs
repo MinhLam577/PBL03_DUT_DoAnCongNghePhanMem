@@ -164,7 +164,12 @@ namespace QLPhongGym.GUI
             cb_gt.DisplayMember = "NameGT";
             cb_gt.DataSource = GoiTapBLL.Instance.GetAllGT();
             if(GoiTap != "")
+            {
                 cb_gt.Text = GoiTap;
+                dtp_ngaydangki.Enabled = false;
+                dtp_ngayketthuc.Enabled = false;
+            }
+                
         }
         private void cb_gt_SelectedIndexChanged(object sender, EventArgs e)
         {
