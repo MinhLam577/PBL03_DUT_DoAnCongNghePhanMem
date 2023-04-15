@@ -1,6 +1,6 @@
 ﻿namespace QLPhongGym.GUI
 {
-    partial class DangKiGoiTapFormKH
+    partial class DangKiGoiTapKHForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangKiGoiTapFormKH));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangKiGoiTapKHForm));
             this.label9 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dtp_ngayketthuc = new System.Windows.Forms.DateTimePicker();
@@ -40,6 +40,8 @@
             this.dtp_ngaydangki = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cb_inhoadon = new System.Windows.Forms.CheckBox();
+            this.btn_cancel = new System.Windows.Forms.Button();
+            this.btn_save = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.numeric_giamgia = new System.Windows.Forms.NumericUpDown();
             this.rb_voucher = new System.Windows.Forms.RadioButton();
@@ -53,8 +55,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_cancel = new System.Windows.Forms.Button();
-            this.btn_save = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_giamgia)).BeginInit();
@@ -77,7 +77,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(29, 213);
+            this.label2.Location = new System.Drawing.Point(29, 207);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(163, 29);
             this.label2.TabIndex = 97;
@@ -89,7 +89,7 @@
             this.dtp_ngayketthuc.CustomFormat = "dd/MM/yyyy";
             this.dtp_ngayketthuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_ngayketthuc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_ngayketthuc.Location = new System.Drawing.Point(225, 213);
+            this.dtp_ngayketthuc.Location = new System.Drawing.Point(225, 207);
             this.dtp_ngayketthuc.Name = "dtp_ngayketthuc";
             this.dtp_ngayketthuc.ShowUpDown = true;
             this.dtp_ngayketthuc.Size = new System.Drawing.Size(388, 34);
@@ -194,6 +194,42 @@
             this.cb_inhoadon.TabIndex = 9;
             this.cb_inhoadon.Text = "IN HÓA ĐƠN";
             this.cb_inhoadon.UseVisualStyleBackColor = true;
+            // 
+            // btn_cancel
+            // 
+            this.btn_cancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_cancel.BackColor = System.Drawing.Color.White;
+            this.btn_cancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
+            this.btn_cancel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancel.ForeColor = System.Drawing.Color.Black;
+            this.btn_cancel.Image = ((System.Drawing.Image)(resources.GetObject("btn_cancel.Image")));
+            this.btn_cancel.Location = new System.Drawing.Point(1243, 651);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(150, 74);
+            this.btn_cancel.TabIndex = 11;
+            this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_cancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_cancel.UseVisualStyleBackColor = false;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            // 
+            // btn_save
+            // 
+            this.btn_save.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_save.BackColor = System.Drawing.Color.White;
+            this.btn_save.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
+            this.btn_save.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save.ForeColor = System.Drawing.Color.Black;
+            this.btn_save.Image = ((System.Drawing.Image)(resources.GetObject("btn_save.Image")));
+            this.btn_save.Location = new System.Drawing.Point(1058, 651);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(150, 74);
+            this.btn_save.TabIndex = 10;
+            this.btn_save.Text = "Save";
+            this.btn_save.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_save.UseVisualStyleBackColor = false;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // panel3
             // 
@@ -361,43 +397,7 @@
             this.panel1.Size = new System.Drawing.Size(1432, 142);
             this.panel1.TabIndex = 100;
             // 
-            // btn_cancel
-            // 
-            this.btn_cancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_cancel.BackColor = System.Drawing.Color.White;
-            this.btn_cancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
-            this.btn_cancel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.ForeColor = System.Drawing.Color.Black;
-            this.btn_cancel.Image = ((System.Drawing.Image)(resources.GetObject("btn_cancel.Image")));
-            this.btn_cancel.Location = new System.Drawing.Point(1243, 651);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(150, 74);
-            this.btn_cancel.TabIndex = 11;
-            this.btn_cancel.Text = "Cancel";
-            this.btn_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_cancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_cancel.UseVisualStyleBackColor = false;
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
-            // 
-            // btn_save
-            // 
-            this.btn_save.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_save.BackColor = System.Drawing.Color.White;
-            this.btn_save.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan;
-            this.btn_save.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_save.ForeColor = System.Drawing.Color.Black;
-            this.btn_save.Image = ((System.Drawing.Image)(resources.GetObject("btn_save.Image")));
-            this.btn_save.Location = new System.Drawing.Point(1058, 651);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(150, 74);
-            this.btn_save.TabIndex = 10;
-            this.btn_save.Text = "Save";
-            this.btn_save.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_save.UseVisualStyleBackColor = false;
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
-            // 
-            // DangKiGoiTapFormKH
+            // DangKiGoiTapKHForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -405,7 +405,7 @@
             this.ClientSize = new System.Drawing.Size(1433, 728);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
-            this.Name = "DangKiGoiTapFormKH";
+            this.Name = "DangKiGoiTapKHForm";
             this.Text = "Admin_FormDKiGoiTapKH";
             this.Load += new System.EventHandler(this.DangKiGoiTapFormKH_Load);
             this.panel2.ResumeLayout(false);

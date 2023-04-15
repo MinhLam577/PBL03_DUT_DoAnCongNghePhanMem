@@ -86,6 +86,10 @@ namespace QLPhongGym.DAL
             }
             
         }
+        public bool CheckUserExist(string CCCD, string Name)
+        {
+            return db.Users.Any(s => s.CCCD.Equals(CCCD) && s.Name.Equals(Name));
+        }
         public bool checkEmail(string email)
         {
             if (email == "") return true;

@@ -28,237 +28,451 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_FormDanhSachKH));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txb_search = new System.Windows.Forms.TextBox();
-            this.cb_sapxep = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_search = new System.Windows.Forms.Button();
-            this.btn_sapxep = new System.Windows.Forms.Button();
-            this.btn_xoa = new System.Windows.Forms.Button();
-            this.btn_sua = new System.Windows.Forms.Button();
-            this.btn_them = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pb_change = new System.Windows.Forms.PictureBox();
+            this.lb_mathe_cccd = new System.Windows.Forms.Label();
+            this.txb_ten_sdt = new System.Windows.Forms.TextBox();
+            this.lb_ten_sdt = new System.Windows.Forms.Label();
+            this.txb_mathe_cccd = new System.Windows.Forms.TextBox();
+            this.dgv_kh = new System.Windows.Forms.DataGridView();
+            this.kh_mns = new System.Windows.Forms.MenuStrip();
+            this.thêmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sửaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.fitlerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mãThẻToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.giớiTínhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lb_tenkh = new System.Windows.Forms.Label();
             this.pb_kh = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dgv_gt = new System.Windows.Forms.DataGridView();
+            this.GT_mns = new System.Windows.Forms.MenuStrip();
+            this.đăngKíToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.giaHạnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sửaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xóaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_change)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_kh)).BeginInit();
+            this.kh_mns.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_kh)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_gt)).BeginInit();
+            this.GT_mns.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // groupBox1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.btn_search);
-            this.panel1.Controls.Add(this.txb_search);
-            this.panel1.Controls.Add(this.cb_sapxep);
-            this.panel1.Controls.Add(this.btn_sapxep);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(1, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1560, 442);
-            this.panel1.TabIndex = 64;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.groupBox1.Controls.Add(this.pb_change);
+            this.groupBox1.Controls.Add(this.lb_mathe_cccd);
+            this.groupBox1.Controls.Add(this.txb_ten_sdt);
+            this.groupBox1.Controls.Add(this.lb_ten_sdt);
+            this.groupBox1.Controls.Add(this.txb_mathe_cccd);
+            this.groupBox1.Controls.Add(this.dgv_kh);
+            this.groupBox1.Controls.Add(this.kh_mns);
+            this.groupBox1.Location = new System.Drawing.Point(0, 1);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(791, 785);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
             // 
-            // dataGridView1
+            // pb_change
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.pb_change.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pb_change.Image = ((System.Drawing.Image)(resources.GetObject("pb_change.Image")));
+            this.pb_change.InitialImage = ((System.Drawing.Image)(resources.GetObject("pb_change.InitialImage")));
+            this.pb_change.Location = new System.Drawing.Point(696, 84);
+            this.pb_change.Name = "pb_change";
+            this.pb_change.Size = new System.Drawing.Size(72, 89);
+            this.pb_change.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_change.TabIndex = 58;
+            this.pb_change.TabStop = false;
+            this.pb_change.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // lb_mathe_cccd
+            // 
+            this.lb_mathe_cccd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 154);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.RowTemplate.ReadOnly = true;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1557, 288);
-            this.dataGridView1.TabIndex = 49;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.lb_mathe_cccd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_mathe_cccd.Location = new System.Drawing.Point(6, 89);
+            this.lb_mathe_cccd.Name = "lb_mathe_cccd";
+            this.lb_mathe_cccd.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lb_mathe_cccd.Size = new System.Drawing.Size(207, 29);
+            this.lb_mathe_cccd.TabIndex = 52;
+            this.lb_mathe_cccd.Text = "Mã thẻ:";
+            this.lb_mathe_cccd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txb_search
+            // txb_ten_sdt
             // 
-            this.txb_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txb_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_search.Location = new System.Drawing.Point(0, 113);
-            this.txb_search.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txb_search.Name = "txb_search";
-            this.txb_search.Size = new System.Drawing.Size(368, 34);
-            this.txb_search.TabIndex = 44;
+            this.txb_ten_sdt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txb_ten_sdt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_ten_sdt.Location = new System.Drawing.Point(229, 139);
+            this.txb_ten_sdt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txb_ten_sdt.Name = "txb_ten_sdt";
+            this.txb_ten_sdt.Size = new System.Drawing.Size(437, 34);
+            this.txb_ten_sdt.TabIndex = 54;
+            this.txb_ten_sdt.TextChanged += new System.EventHandler(this.txb_ten_sdt_TextChanged);
             // 
-            // cb_sapxep
+            // lb_ten_sdt
             // 
-            this.cb_sapxep.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cb_sapxep.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_sapxep.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_sapxep.FormattingEnabled = true;
-            this.cb_sapxep.Items.AddRange(new object[] {
-            "Mã",
-            "Tên",
-            "Giới tính",
-            "Gói tập"});
-            this.cb_sapxep.Location = new System.Drawing.Point(1281, 112);
-            this.cb_sapxep.Name = "cb_sapxep";
-            this.cb_sapxep.Size = new System.Drawing.Size(276, 37);
-            this.cb_sapxep.TabIndex = 46;
+            this.lb_ten_sdt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_ten_sdt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_ten_sdt.Location = new System.Drawing.Point(6, 144);
+            this.lb_ten_sdt.Name = "lb_ten_sdt";
+            this.lb_ten_sdt.Size = new System.Drawing.Size(207, 29);
+            this.lb_ten_sdt.TabIndex = 53;
+            this.lb_ten_sdt.Text = "Tên:";
+            this.lb_ten_sdt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label1
+            // txb_mathe_cccd
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(534, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(442, 38);
-            this.label1.TabIndex = 48;
-            this.label1.Text = "THÔNG TIN KHÁCH HÀNG";
+            this.txb_mathe_cccd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txb_mathe_cccd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txb_mathe_cccd.Location = new System.Drawing.Point(229, 86);
+            this.txb_mathe_cccd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txb_mathe_cccd.Name = "txb_mathe_cccd";
+            this.txb_mathe_cccd.Size = new System.Drawing.Size(437, 34);
+            this.txb_mathe_cccd.TabIndex = 51;
+            this.txb_mathe_cccd.TextChanged += new System.EventHandler(this.txb_mathe_gmail_TextChanged);
             // 
-            // btn_search
+            // dgv_kh
             // 
-            this.btn_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_search.BackgroundImage")));
-            this.btn_search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_search.Location = new System.Drawing.Point(375, 114);
-            this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(42, 30);
-            this.btn_search.TabIndex = 45;
-            this.btn_search.UseVisualStyleBackColor = true;
-            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
+            this.dgv_kh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_kh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_kh.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv_kh.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_kh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgv_kh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_kh.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgv_kh.Location = new System.Drawing.Point(11, 190);
+            this.dgv_kh.Name = "dgv_kh";
+            this.dgv_kh.ReadOnly = true;
+            this.dgv_kh.RowHeadersWidth = 51;
+            this.dgv_kh.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgv_kh.RowTemplate.Height = 24;
+            this.dgv_kh.RowTemplate.ReadOnly = true;
+            this.dgv_kh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_kh.Size = new System.Drawing.Size(780, 595);
+            this.dgv_kh.TabIndex = 50;
+            this.dgv_kh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_kh_CellClick);
             // 
-            // btn_sapxep
+            // kh_mns
             // 
-            this.btn_sapxep.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_sapxep.BackColor = System.Drawing.Color.Black;
-            this.btn_sapxep.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sapxep.ForeColor = System.Drawing.Color.Cyan;
-            this.btn_sapxep.Image = ((System.Drawing.Image)(resources.GetObject("btn_sapxep.Image")));
-            this.btn_sapxep.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btn_sapxep.Location = new System.Drawing.Point(1136, 108);
-            this.btn_sapxep.Name = "btn_sapxep";
-            this.btn_sapxep.Size = new System.Drawing.Size(139, 44);
-            this.btn_sapxep.TabIndex = 47;
-            this.btn_sapxep.Text = "Sắp xếp";
-            this.btn_sapxep.UseVisualStyleBackColor = false;
-            this.btn_sapxep.Click += new System.EventHandler(this.btn_sapxep_Click);
+            this.kh_mns.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kh_mns.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.kh_mns.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.kh_mns.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.thêmToolStripMenuItem,
+            this.xóaToolStripMenuItem,
+            this.sửaToolStripMenuItem1,
+            this.fitlerToolStripMenuItem,
+            this.reloadToolStripMenuItem});
+            this.kh_mns.Location = new System.Drawing.Point(3, 18);
+            this.kh_mns.Name = "kh_mns";
+            this.kh_mns.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.kh_mns.Size = new System.Drawing.Size(785, 40);
+            this.kh_mns.TabIndex = 57;
+            this.kh_mns.Text = "kh_menustrip";
             // 
-            // btn_xoa
+            // thêmToolStripMenuItem
             // 
-            this.btn_xoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_xoa.BackColor = System.Drawing.Color.Black;
-            this.btn_xoa.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_xoa.ForeColor = System.Drawing.Color.Cyan;
-            this.btn_xoa.Image = ((System.Drawing.Image)(resources.GetObject("btn_xoa.Image")));
-            this.btn_xoa.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btn_xoa.Location = new System.Drawing.Point(443, 568);
-            this.btn_xoa.Name = "btn_xoa";
-            this.btn_xoa.Size = new System.Drawing.Size(139, 44);
-            this.btn_xoa.TabIndex = 13;
-            this.btn_xoa.Text = "Xóa";
-            this.btn_xoa.UseVisualStyleBackColor = false;
-            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
+            this.thêmToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thêmToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("thêmToolStripMenuItem.Image")));
+            this.thêmToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.thêmToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.thêmToolStripMenuItem.Name = "thêmToolStripMenuItem";
+            this.thêmToolStripMenuItem.Size = new System.Drawing.Size(130, 36);
+            this.thêmToolStripMenuItem.Text = "Thêm";
+            this.thêmToolStripMenuItem.Click += new System.EventHandler(this.thêmToolStripMenuItem_Click);
             // 
-            // btn_sua
+            // xóaToolStripMenuItem
             // 
-            this.btn_sua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_sua.BackColor = System.Drawing.Color.Black;
-            this.btn_sua.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sua.ForeColor = System.Drawing.Color.Cyan;
-            this.btn_sua.Image = ((System.Drawing.Image)(resources.GetObject("btn_sua.Image")));
-            this.btn_sua.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btn_sua.Location = new System.Drawing.Point(750, 568);
-            this.btn_sua.Name = "btn_sua";
-            this.btn_sua.Size = new System.Drawing.Size(139, 44);
-            this.btn_sua.TabIndex = 12;
-            this.btn_sua.Text = "Sửa";
-            this.btn_sua.UseVisualStyleBackColor = false;
-            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
+            this.xóaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("xóaToolStripMenuItem.Image")));
+            this.xóaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
+            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(110, 36);
+            this.xóaToolStripMenuItem.Text = "Xóa";
+            this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
             // 
-            // btn_them
+            // sửaToolStripMenuItem1
             // 
-            this.btn_them.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_them.BackColor = System.Drawing.Color.Black;
-            this.btn_them.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_them.ForeColor = System.Drawing.Color.Cyan;
-            this.btn_them.Image = ((System.Drawing.Image)(resources.GetObject("btn_them.Image")));
-            this.btn_them.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btn_them.Location = new System.Drawing.Point(135, 568);
-            this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(139, 44);
-            this.btn_them.TabIndex = 10;
-            this.btn_them.Text = "Thêm";
-            this.btn_them.UseVisualStyleBackColor = false;
-            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
+            this.sửaToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("sửaToolStripMenuItem1.Image")));
+            this.sửaToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.sửaToolStripMenuItem1.Name = "sửaToolStripMenuItem1";
+            this.sửaToolStripMenuItem1.Size = new System.Drawing.Size(108, 36);
+            this.sửaToolStripMenuItem1.Text = "Sửa";
+            this.sửaToolStripMenuItem1.Click += new System.EventHandler(this.sửaToolStripMenuItem1_Click);
+            // 
+            // fitlerToolStripMenuItem
+            // 
+            this.fitlerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mãThẻToolStripMenuItem,
+            this.tênToolStripMenuItem,
+            this.giớiTínhToolStripMenuItem});
+            this.fitlerToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("fitlerToolStripMenuItem.Image")));
+            this.fitlerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.fitlerToolStripMenuItem.Name = "fitlerToolStripMenuItem";
+            this.fitlerToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.fitlerToolStripMenuItem.Size = new System.Drawing.Size(120, 36);
+            this.fitlerToolStripMenuItem.Text = "Fitler";
+            this.fitlerToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // mãThẻToolStripMenuItem
+            // 
+            this.mãThẻToolStripMenuItem.Name = "mãThẻToolStripMenuItem";
+            this.mãThẻToolStripMenuItem.Size = new System.Drawing.Size(197, 34);
+            this.mãThẻToolStripMenuItem.Text = "Mã thẻ";
+            this.mãThẻToolStripMenuItem.Click += new System.EventHandler(this.mãThẻToolStripMenuItem_Click);
+            // 
+            // tênToolStripMenuItem
+            // 
+            this.tênToolStripMenuItem.Name = "tênToolStripMenuItem";
+            this.tênToolStripMenuItem.Size = new System.Drawing.Size(197, 34);
+            this.tênToolStripMenuItem.Text = "Tên";
+            this.tênToolStripMenuItem.Click += new System.EventHandler(this.tênToolStripMenuItem_Click);
+            // 
+            // giớiTínhToolStripMenuItem
+            // 
+            this.giớiTínhToolStripMenuItem.Name = "giớiTínhToolStripMenuItem";
+            this.giớiTínhToolStripMenuItem.Size = new System.Drawing.Size(197, 34);
+            this.giớiTínhToolStripMenuItem.Text = "Giới tính";
+            this.giớiTínhToolStripMenuItem.Click += new System.EventHandler(this.giớiTínhToolStripMenuItem_Click);
+            // 
+            // reloadToolStripMenuItem
+            // 
+            this.reloadToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("reloadToolStripMenuItem.Image")));
+            this.reloadToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.reloadToolStripMenuItem.Name = "reloadToolStripMenuItem";
+            this.reloadToolStripMenuItem.Size = new System.Drawing.Size(147, 36);
+            this.reloadToolStripMenuItem.Text = "Reload";
+            this.reloadToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.reloadToolStripMenuItem.Click += new System.EventHandler(this.reloadToolStripMenuItem_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.lb_tenkh);
+            this.groupBox2.Controls.Add(this.pb_kh);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(792, 9);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1020, 344);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Thông tin chi tiết";
+            // 
+            // lb_tenkh
+            // 
+            this.lb_tenkh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_tenkh.AutoSize = true;
+            this.lb_tenkh.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_tenkh.ForeColor = System.Drawing.Color.Blue;
+            this.lb_tenkh.Location = new System.Drawing.Point(5, 34);
+            this.lb_tenkh.Name = "lb_tenkh";
+            this.lb_tenkh.Size = new System.Drawing.Size(0, 38);
+            this.lb_tenkh.TabIndex = 2;
+            this.lb_tenkh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pb_kh
             // 
-            this.pb_kh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pb_kh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb_kh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pb_kh.Image = ((System.Drawing.Image)(resources.GetObject("pb_kh.Image")));
-            this.pb_kh.Location = new System.Drawing.Point(1083, 450);
+            this.pb_kh.Location = new System.Drawing.Point(6, 71);
             this.pb_kh.Name = "pb_kh";
-            this.pb_kh.Size = new System.Drawing.Size(344, 265);
+            this.pb_kh.Size = new System.Drawing.Size(339, 267);
             this.pb_kh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_kh.TabIndex = 63;
+            this.pb_kh.TabIndex = 0;
             this.pb_kh.TabStop = false;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.dgv_gt);
+            this.groupBox3.Controls.Add(this.GT_mns);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(791, 353);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(1015, 433);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Gói tập đăng kí";
+            // 
+            // dgv_gt
+            // 
+            this.dgv_gt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_gt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_gt.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv_gt.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_gt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgv_gt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_gt.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgv_gt.Location = new System.Drawing.Point(1, 91);
+            this.dgv_gt.Name = "dgv_gt";
+            this.dgv_gt.ReadOnly = true;
+            this.dgv_gt.RowHeadersWidth = 51;
+            this.dgv_gt.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgv_gt.RowTemplate.Height = 24;
+            this.dgv_gt.RowTemplate.ReadOnly = true;
+            this.dgv_gt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_gt.Size = new System.Drawing.Size(760, 336);
+            this.dgv_gt.TabIndex = 59;
+            // 
+            // GT_mns
+            // 
+            this.GT_mns.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GT_mns.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.GT_mns.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.đăngKíToolStripMenuItem,
+            this.giaHạnToolStripMenuItem,
+            this.sửaToolStripMenuItem,
+            this.xóaToolStripMenuItem1});
+            this.GT_mns.Location = new System.Drawing.Point(3, 30);
+            this.GT_mns.Name = "GT_mns";
+            this.GT_mns.Size = new System.Drawing.Size(1009, 37);
+            this.GT_mns.TabIndex = 60;
+            this.GT_mns.Text = "GT_mns";
+            // 
+            // đăngKíToolStripMenuItem
+            // 
+            this.đăngKíToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("đăngKíToolStripMenuItem.Image")));
+            this.đăngKíToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.đăngKíToolStripMenuItem.Name = "đăngKíToolStripMenuItem";
+            this.đăngKíToolStripMenuItem.Size = new System.Drawing.Size(151, 33);
+            this.đăngKíToolStripMenuItem.Text = "Đăng kí";
+            this.đăngKíToolStripMenuItem.Click += new System.EventHandler(this.đăngKíToolStripMenuItem_Click);
+            // 
+            // giaHạnToolStripMenuItem
+            // 
+            this.giaHạnToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("giaHạnToolStripMenuItem.Image")));
+            this.giaHạnToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.giaHạnToolStripMenuItem.Name = "giaHạnToolStripMenuItem";
+            this.giaHạnToolStripMenuItem.Size = new System.Drawing.Size(152, 33);
+            this.giaHạnToolStripMenuItem.Text = "Gia hạn";
+            this.giaHạnToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.giaHạnToolStripMenuItem.Click += new System.EventHandler(this.giaHạnToolStripMenuItem_Click);
+            // 
+            // sửaToolStripMenuItem
+            // 
+            this.sửaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sửaToolStripMenuItem.Image")));
+            this.sửaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.sửaToolStripMenuItem.Name = "sửaToolStripMenuItem";
+            this.sửaToolStripMenuItem.Size = new System.Drawing.Size(108, 33);
+            this.sửaToolStripMenuItem.Text = "Sửa";
+            this.sửaToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // xóaToolStripMenuItem1
+            // 
+            this.xóaToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("xóaToolStripMenuItem1.Image")));
+            this.xóaToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.xóaToolStripMenuItem1.Name = "xóaToolStripMenuItem1";
+            this.xóaToolStripMenuItem1.Size = new System.Drawing.Size(110, 33);
+            this.xóaToolStripMenuItem1.Text = "Xóa";
+            this.xóaToolStripMenuItem1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Admin_FormDanhSachKH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1559, 717);
-            this.Controls.Add(this.btn_xoa);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btn_sua);
-            this.Controls.Add(this.btn_them);
-            this.Controls.Add(this.pb_kh);
+            this.ClientSize = new System.Drawing.Size(1807, 781);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.MainMenuStrip = this.kh_mns;
             this.Name = "Admin_FormDanhSachKH";
-            this.Text = "Admin_FormDanhSachKH";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "DanhSachKHForm";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_change)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_kh)).EndInit();
+            this.kh_mns.ResumeLayout(false);
+            this.kh_mns.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_kh)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_gt)).EndInit();
+            this.GT_mns.ResumeLayout(false);
+            this.GT_mns.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btn_xoa;
-        private System.Windows.Forms.Button btn_sua;
-        private System.Windows.Forms.Button btn_them;
+
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView dgv_kh;
+        private System.Windows.Forms.TextBox txb_ten_sdt;
+        private System.Windows.Forms.Label lb_ten_sdt;
+        private System.Windows.Forms.Label lb_mathe_cccd;
+        private System.Windows.Forms.TextBox txb_mathe_cccd;
+        private System.Windows.Forms.PictureBox pb_change;
+        private System.Windows.Forms.MenuStrip kh_mns;
+        private System.Windows.Forms.ToolStripMenuItem thêmToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xóaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sửaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem fitlerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mãThẻToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tênToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem giớiTínhToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.PictureBox pb_kh;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btn_search;
-        private System.Windows.Forms.TextBox txb_search;
-        private System.Windows.Forms.ComboBox cb_sapxep;
-        private System.Windows.Forms.Button btn_sapxep;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lb_tenkh;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.DataGridView dgv_gt;
+        private System.Windows.Forms.MenuStrip GT_mns;
+        private System.Windows.Forms.ToolStripMenuItem đăngKíToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem giaHạnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sửaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xóaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem reloadToolStripMenuItem;
     }
 }

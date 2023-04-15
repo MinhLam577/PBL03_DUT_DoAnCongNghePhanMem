@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -46,6 +47,22 @@ namespace QLPhongGym.BLL
         public DangKiGoiTap GetDKGTByIDKH_NgayDangKi_NgayKetThuc(int IDKH, DateTime ngaydangki, DateTime ngayketthuc)
         {
             return DangKiGoiTapDAL.Instance.GetDKGTByIDKH_NgayDangKi_NgayKetThuc(IDKH, ngaydangki, ngayketthuc);
+        }
+        public DataTable GetDKKHDataTableByIDKH(int IDKH)
+        {
+            return DangKiGoiTapDAL.Instance.GetDKKHDataTableByIDKH(IDKH);
+        }
+        public List<DangKiGoiTap> GetAllDKGTByIDKH(int IDKH)
+        {
+            return DangKiGoiTapDAL.Instance.GetAllDKGTByIDKH(IDKH);
+        }
+        public void DeleteAllDKGT(List<DangKiGoiTap> list)
+        {
+            DangKiGoiTapDAL.Instance.DeleteAllDKGTByIDKH(list);
+        }
+        public DangKiGoiTap GetDKGTByIDKH(int IDKH)
+        {
+            return DangKiGoiTapDAL.Instance.GetDKKHByIDKH(IDKH);
         }
     }
 }

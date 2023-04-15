@@ -17,6 +17,7 @@ namespace QLPhongGym.GUI
     {
         static string DefaultImagePath = Application.StartupPath + @"\Resources\User.png";
         public string ID { get; set; }
+        public event EventHandler ThayDoiThanhCong;
         public AddOrEditFormKH()
         {
             InitializeComponent();
@@ -126,10 +127,10 @@ namespace QLPhongGym.GUI
                 };
                 try
                 {
-                    DangKiGoiTapFormKH f = new DangKiGoiTapFormKH(kh);
+                    DangKiGoiTapKHForm f = new DangKiGoiTapKHForm(kh, "");
                     f.DangKiThanhCong += (o, a) =>
                     {
-                        (o as DangKiGoiTapFormKH).Close();
+                        (o as DangKiGoiTapKHForm).Close();
                         this.Close();
                     };
                     f.ShowDialog();
@@ -190,7 +191,11 @@ namespace QLPhongGym.GUI
                             kh.Gmail = txb_gmail.Text.Trim(); kh.Address = txb_diachi.Text.Trim(); kh.CCCD = txb_CCCD.Text.Trim();
                             kh.Sex = gen; kh.Image = Anh;
                             if (KHBLL.Instance.UpdateUser(kh))
+                            {
                                 MessageBox.Show("Cật nhật khách hàng thành công");
+                                ThayDoiThanhCong(this, new EventArgs());
+                            }
+                                
                             break;
                         case DialogResult.Cancel:
                             break;
@@ -206,7 +211,6 @@ namespace QLPhongGym.GUI
         {
             this.Close();
         }
-
         private void btn_upload_Click(object sender, EventArgs e)
         {
             try

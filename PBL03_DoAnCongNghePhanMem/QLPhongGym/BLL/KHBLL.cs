@@ -23,9 +23,27 @@ namespace QLPhongGym.BLL
         }
         public KH GetKHByID(int ID)
         {
-            return KHDAL.Instance.GetKHByID(ID);
+            return (KH)UsersBLL.Instance.GetUserByID(ID);
         }
-
-
+        public DataTable FindListKHByIDOrName(string txt)
+        {
+            return KHDAL.Instance.FindListKHByIDOrName(txt);
+        }
+        public DataTable FindListKHByNameAndID(string Name, string ID)
+        {
+            return KHDAL.Instance.FindListKHByNameAndID(Name, ID);
+        }
+        public DataTable FindListKHBySdtOrCCCD(string txt)
+        {
+            return KHDAL.Instance.FindListKHBySDTOrCCCD(txt);
+        }
+        public DataTable FindListKHBySDTAndCCCD(string sdt, string cccd)
+        {
+            return KHDAL.Instance.FindListKHBySDTAndCCCD(sdt, cccd);
+        }
+        public DataTable SortListKHBy(string require, DataTable dt)
+        {
+            return KHDAL.Instance.SortDKKHBy(require, dt);
+        }
     }
 }

@@ -77,6 +77,10 @@ namespace QLPhongGym.BLL
         {
             return UsersDAL.Instance.CheckNamKinhNghiem(NamKinhNghiem);
         }
+        public bool CheckUserExist(string CCCD, string Name)
+        {
+            return UsersDAL.Instance.CheckUserExist(CCCD, Name);
+        }
         public int GetUserID(string CCCD)
         {
             return UsersDAL.Instance.GetUsersID(CCCD);
