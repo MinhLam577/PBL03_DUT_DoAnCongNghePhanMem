@@ -99,10 +99,10 @@
             // 
             this.txb_ghichu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txb_ghichu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_ghichu.Location = new System.Drawing.Point(32, 423);
+            this.txb_ghichu.Location = new System.Drawing.Point(3, 423);
             this.txb_ghichu.Multiline = true;
             this.txb_ghichu.Name = "txb_ghichu";
-            this.txb_ghichu.Size = new System.Drawing.Size(581, 289);
+            this.txb_ghichu.Size = new System.Drawing.Size(610, 289);
             this.txb_ghichu.TabIndex = 5;
             // 
             // cb_gt

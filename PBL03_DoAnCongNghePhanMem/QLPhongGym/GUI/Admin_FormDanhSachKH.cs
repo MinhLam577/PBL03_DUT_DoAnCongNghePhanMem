@@ -23,11 +23,16 @@ namespace QLPhongGym.GUI
         }
         public void LoadListAllKH()
         {
+            
             dgv_kh.DataSource = KHBLL.Instance.FindListKHByIDOrName("");
         }
         public void LoadListDKGT(int IDKH)
-        {
-            dgv_gt.DataSource = DangKiGoiTapBLL.Instance.GetDKKHDataTableByIDKH(IDKH);
+        {  
+            dgv_gt.DataSource = DangKiGoiTapBLL.Instance.GetDKKH_Newest_DataTableByIDKH(IDKH);
+            DangKiGoiTap dkgt = DangKiGoiTapBLL.Instance.GetDKKH_Newest_ByIDKH(IDKH);
+            if (dkgt != null)
+                lb_description.Text = dkgt.Description;
+            else lb_description.Text = "";
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -53,7 +58,11 @@ namespace QLPhongGym.GUI
                 {
                     int IDKH = Convert.ToInt32(dgv_kh.SelectedRows[0].Cells["IDThe"].Value.ToString());
                     KH kh = (KH)UsersBLL.Instance.GetUserByID(IDKH);
+                    
                     lb_tenkh.Text = kh.Name;
+                    if ((bool)kh.Sex)
+                        lb_gioitinh.Text = "Giới tính: Nam";
+                    else lb_gioitinh.Text = "Giới tính: Nữ";
                     LoadListDKGT(kh.IDUsers);
                     if (kh.Image != null)
                         pb_kh.Image = Image.FromFile(Application.StartupPath + @"\PersonImage\" + kh.Image);
@@ -284,6 +293,39 @@ namespace QLPhongGym.GUI
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Gia hạn thất bại");
+            }
+        }
+
+        private void xóaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            
+            if(dgv_gt.SelectedRows.Count > 0)
+            {
+                try
+                {
+                    
+                    int IDKH = Convert.ToInt32(dgv_kh.SelectedRows[0].Cells["IDThe"].Value.ToString());
+                    switch(MessageBox.Show("Có chắc chắn muốn xóa?", "Xin chờ một lát", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
+                    {
+                        case DialogResult.OK:
+                            foreach (DataGridViewRow i in dgv_gt.SelectedRows)
+                            {
+                                DateTime ngaybatdau = Convert.ToDateTime(i.Cells["NgayDangKi"].Value.ToString()).Date;
+                                DateTime ngayketthuc = Convert.ToDateTime(i.Cells["NgayKetThuc"].Value.ToString()).Date;
+                                int IDGT = GoiTapBLL.Instance.GetGTByName(i.Cells["GoiTap"].Value.ToString()).IDGT;
+                                DangKiGoiTapBLL.Instance.DeleteDKGT(DangKiGoiTapBLL.Instance.GetDLGTByIDKH_NgayDangKi_NgayKetThuc_IDGT(IDKH, ngaybatdau, ngayketthuc, IDGT));
+                            }
+                            LoadListDKGT(IDKH);
+                            break;
+                        case DialogResult.Cancel:
+                            break;
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Xóa đăng kí gói tập không thành công");
+                }
+                
             }
         }
     }

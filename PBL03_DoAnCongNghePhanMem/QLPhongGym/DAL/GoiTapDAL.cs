@@ -41,7 +41,7 @@ namespace QLPhongGym.DAL
         }
         public GoiTap GetGTByID(int ID)
         {
-            return db.GoiTaps.Where(s => (int)s.IDGT == ID).FirstOrDefault();
+            return db.GoiTaps.Where(s => s.IDGT == ID).FirstOrDefault();
         }
         public int AddGT(GoiTap GT)
         {

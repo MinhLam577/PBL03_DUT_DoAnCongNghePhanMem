@@ -28,10 +28,6 @@ namespace QLPhongGym.BLL
         {
             return DangKiGoiTapDAL.Instance.FindListDKKHByIDOrName(txt);
         }
-        public DataTable SortListDKKHBy(string require, DataTable dt)
-        {
-            return DangKiGoiTapDAL.Instance.SortDKKHBy(require, dt);
-        }
         public bool AddDKGT(DangKiGoiTap dkgt)
         {
             return DangKiGoiTapDAL.Instance.AddDKGT(dkgt) > 0;
@@ -44,13 +40,9 @@ namespace QLPhongGym.BLL
         {
             DangKiGoiTapDAL.Instance.DeleteDKGT(dkgt);
         }
-        public DangKiGoiTap GetDKGTByIDKH_NgayDangKi_NgayKetThuc(int IDKH, DateTime ngaydangki, DateTime ngayketthuc)
+        public DataTable GetDKKH_Newest_DataTableByIDKH(int IDKH)
         {
-            return DangKiGoiTapDAL.Instance.GetDKGTByIDKH_NgayDangKi_NgayKetThuc(IDKH, ngaydangki, ngayketthuc);
-        }
-        public DataTable GetDKKHDataTableByIDKH(int IDKH)
-        {
-            return DangKiGoiTapDAL.Instance.GetDKKHDataTableByIDKH(IDKH);
+            return DangKiGoiTapDAL.Instance.GetDKKH_Newest_DataTableByIDKH(IDKH);
         }
         public List<DangKiGoiTap> GetAllDKGTByIDKH(int IDKH)
         {
@@ -60,9 +52,17 @@ namespace QLPhongGym.BLL
         {
             DangKiGoiTapDAL.Instance.DeleteAllDKGTByIDKH(list);
         }
-        public DangKiGoiTap GetDKGTByIDKH(int IDKH)
+        public DangKiGoiTap GetDKKH_Newest_ByIDKH(int IDKH)
         {
-            return DangKiGoiTapDAL.Instance.GetDKKHByIDKH(IDKH);
+            return DangKiGoiTapDAL.Instance.GetDKKH_Newest_ByIDKH(IDKH);
+        }
+        public DangKiGoiTap GetDKGTByIDKH_NgayDangKi_IDGT(int IDKH, DateTime ngaydangki, int IDGT)
+        {
+            return DangKiGoiTapDAL.Instance.GetDKGTByIDKH_NgayDangKi_IDGT(IDKH, ngaydangki, IDGT);
+        }
+        public DangKiGoiTap GetDLGTByIDKH_NgayDangKi_NgayKetThuc_IDGT(int IDKH, DateTime ngaydangki, DateTime ngayketthuc, int IDGT)
+        {
+            return DangKiGoiTapDAL.Instance.GetDLGTByIDKH_NgayDangKi_NgayKetThuc_IDGT(IDKH, ngaydangki, ngayketthuc, IDGT);
         }
     }
 }
