@@ -17,8 +17,8 @@ namespace QLPhongGym.DTO
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public GoiTap()
         {
-            this.DangKiGoiTaps = new HashSet<DangKiGoiTap>();
             this.HoaDons = new HashSet<HoaDon>();
+            this.DangKiGoiTaps = new HashSet<DangKiGoiTap>();
         }
     
         public int IDGT { get; set; }
@@ -26,8 +26,8 @@ namespace QLPhongGym.DTO
         public string NameGT { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DangKiGoiTap> DangKiGoiTaps { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DangKiGoiTap> DangKiGoiTaps { get; set; }
     }
 }

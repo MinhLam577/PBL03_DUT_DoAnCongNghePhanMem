@@ -24,6 +24,9 @@
           <Property Name="Description" Type="nvarchar(max)" />
           <Property Name="NgayDangKiGT" Type="date" />
           <Property Name="NgayKetThucGT" Type="date" />
+          <Property Name="NgayKetThucBaoLuu" Type="date" />
+          <Property Name="SoNgayConLai" Type="int" />
+          <Property Name="BaoLuu" Type="bit" />
         </EntityType>
         <EntityType Name="DanhGiaHLV">
           <Key>
@@ -354,19 +357,6 @@
           <Property Name="GioKetThuc" Type="Time" Precision="7" />
           <NavigationProperty Name="LichLamViecTrongTuans" Relationship="Self.FK_LichLamViecTrongTuan_CaLamViec" FromRole="CaLamViec" ToRole="LichLamViecTrongTuan" />
         </EntityType>
-        <EntityType Name="DangKiGoiTap">
-          <Key>
-            <PropertyRef Name="IDDK" />
-          </Key>
-          <Property Name="IDDK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="IDKH" Type="Int32" />
-          <Property Name="IDGT" Type="Int32" />
-          <Property Name="NgayDangKiGT" Type="DateTime" Precision="0" />
-          <Property Name="NgayKetThucGT" Type="DateTime" Precision="0" />
-          <NavigationProperty Name="GoiTap" Relationship="Self.FK_DangKiGoiTap_GoiTap" FromRole="DangKiGoiTap" ToRole="GoiTap" />
-          <NavigationProperty Name="User" Relationship="Self.FK_DangKiGoiTap_Users" FromRole="DangKiGoiTap" ToRole="Users" />
-          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-        </EntityType>
         <EntityType Name="DanhGiaHLV">
           <Key>
             <PropertyRef Name="IDDG" />
@@ -386,9 +376,9 @@
           </Key>
           <Property Name="IDGT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Price" Type="Double" />
-          <NavigationProperty Name="DangKiGoiTaps" Relationship="Self.FK_DangKiGoiTap_GoiTap" FromRole="GoiTap" ToRole="DangKiGoiTap" />
           <Property Name="NameGT" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="HoaDons" Relationship="QLPhongGymModel.FK_HoaDon_GoiTap" FromRole="GoiTap" ToRole="HoaDon" />
+          <NavigationProperty Name="DangKiGoiTaps" Relationship="QLPhongGymModel.FK_DangKiGoiTap_GoiTap" FromRole="GoiTap" ToRole="DangKiGoiTap" />
         </EntityType>
         <EntityType Name="LichLamViecTrongTuan">
           <Key>
@@ -467,11 +457,11 @@
           <Property Name="Gmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Sdt" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="DangKiGoiTaps" Relationship="Self.FK_DangKiGoiTap_Users" FromRole="Users" ToRole="DangKiGoiTap" />
           <NavigationProperty Name="LichLamViecTrongTuans" Relationship="Self.FK_LichLamViecTrongTuan_Users" FromRole="Users" ToRole="LichLamViecTrongTuan" />
           <NavigationProperty Name="HLVs" Relationship="Self.FK_LichThueHLV_Users" FromRole="Users" ToRole="LichThueHLV" />
           <NavigationProperty Name="KHs" Relationship="Self.FK_LichThueHLV_Users1" FromRole="Users" ToRole="LichThueHLV" />
           <NavigationProperty Name="TKs" Relationship="Self.FK_TK_Users" FromRole="Users" ToRole="TK" />
+          <NavigationProperty Name="DangKiGoiTaps" Relationship="QLPhongGymModel.FK_DangKiGoiTap_Users" FromRole="User" ToRole="DangKiGoiTap" />
         </EntityType>
         <Association Name="FK_LichLamViecTrongTuan_CaLamViec">
           <End Role="CaLamViec" Type="Self.CaLamViec" Multiplicity="0..1" />
@@ -482,30 +472,6 @@
             </Principal>
             <Dependent Role="LichLamViecTrongTuan">
               <PropertyRef Name="IDCa" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_DangKiGoiTap_GoiTap">
-          <End Role="GoiTap" Type="Self.GoiTap" Multiplicity="0..1" />
-          <End Role="DangKiGoiTap" Type="Self.DangKiGoiTap" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="GoiTap">
-              <PropertyRef Name="IDGT" />
-            </Principal>
-            <Dependent Role="DangKiGoiTap">
-              <PropertyRef Name="IDGT" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_DangKiGoiTap_Users">
-          <End Role="Users" Type="Self.User" Multiplicity="0..1" />
-          <End Role="DangKiGoiTap" Type="Self.DangKiGoiTap" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Users">
-              <PropertyRef Name="IDUsers" />
-            </Principal>
-            <Dependent Role="DangKiGoiTap">
-              <PropertyRef Name="IDKH" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -583,7 +549,6 @@
         </Association>
         <EntityContainer Name="QLPhongGymDB" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CaLamViecs" EntityType="Self.CaLamViec" />
-          <EntitySet Name="DangKiGoiTaps" EntityType="Self.DangKiGoiTap" />
           <EntitySet Name="DanhGiaHLVs" EntityType="Self.DanhGiaHLV" />
           <EntitySet Name="GoiTaps" EntityType="Self.GoiTap" />
           <EntitySet Name="LichLamViecTrongTuans" EntityType="Self.LichLamViecTrongTuan" />
@@ -595,14 +560,6 @@
           <AssociationSet Name="FK_LichLamViecTrongTuan_CaLamViec" Association="Self.FK_LichLamViecTrongTuan_CaLamViec">
             <End Role="CaLamViec" EntitySet="CaLamViecs" />
             <End Role="LichLamViecTrongTuan" EntitySet="LichLamViecTrongTuans" />
-          </AssociationSet>
-          <AssociationSet Name="FK_DangKiGoiTap_GoiTap" Association="Self.FK_DangKiGoiTap_GoiTap">
-            <End Role="GoiTap" EntitySet="GoiTaps" />
-            <End Role="DangKiGoiTap" EntitySet="DangKiGoiTaps" />
-          </AssociationSet>
-          <AssociationSet Name="FK_DangKiGoiTap_Users" Association="Self.FK_DangKiGoiTap_Users">
-            <End Role="Users" EntitySet="Users" />
-            <End Role="DangKiGoiTap" EntitySet="DangKiGoiTaps" />
           </AssociationSet>
           <AssociationSet Name="FK_DanhGiaHLV_TinhTrangLamViecHLV" Association="Self.FK_DanhGiaHLV_TinhTrangLamViecHLV">
             <End Role="TinhTrangLamViecHLV" EntitySet="TinhTrangLamViecHLVs" />
@@ -641,6 +598,15 @@
           <AssociationSet Name="FK_TK_PhanQuyen" Association="QLPhongGymModel.FK_TK_PhanQuyen">
             <End Role="PhanQuyen" EntitySet="PhanQuyens" />
             <End Role="TK" EntitySet="TKs" />
+          </AssociationSet>
+          <EntitySet Name="DangKiGoiTaps" EntityType="QLPhongGymModel.DangKiGoiTap" />
+          <AssociationSet Name="FK_DangKiGoiTap_GoiTap" Association="QLPhongGymModel.FK_DangKiGoiTap_GoiTap">
+            <End Role="GoiTap" EntitySet="GoiTaps" />
+            <End Role="DangKiGoiTap" EntitySet="DangKiGoiTaps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DangKiGoiTap_Users" Association="QLPhongGymModel.FK_DangKiGoiTap_Users">
+            <End Role="User" EntitySet="Users" />
+            <End Role="DangKiGoiTap" EntitySet="DangKiGoiTaps" />
           </AssociationSet>
           </EntityContainer>
         <EntityType Name="KH" BaseType="QLPhongGymModel.User" />
@@ -706,6 +672,46 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="DangKiGoiTap">
+          <Key>
+            <PropertyRef Name="IDDK" />
+          </Key>
+          <Property Name="IDDK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDKH" Type="Int32" />
+          <Property Name="IDGT" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NgayDangKiGT" Type="DateTime" Precision="0" />
+          <Property Name="NgayKetThucGT" Type="DateTime" Precision="0" />
+          <Property Name="NgayKetThucBaoLuu" Type="DateTime" Precision="0" />
+          <Property Name="SoNgayConLai" Type="Int32" />
+          <Property Name="BaoLuu" Type="Boolean" />
+          <NavigationProperty Name="GoiTap" Relationship="QLPhongGymModel.FK_DangKiGoiTap_GoiTap" FromRole="DangKiGoiTap" ToRole="GoiTap" />
+          <NavigationProperty Name="User" Relationship="QLPhongGymModel.FK_DangKiGoiTap_Users" FromRole="DangKiGoiTap" ToRole="User" />
+        </EntityType>
+        <Association Name="FK_DangKiGoiTap_GoiTap">
+          <End Type="QLPhongGymModel.GoiTap" Role="GoiTap" Multiplicity="0..1" />
+          <End Type="QLPhongGymModel.DangKiGoiTap" Role="DangKiGoiTap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GoiTap">
+              <PropertyRef Name="IDGT" />
+            </Principal>
+            <Dependent Role="DangKiGoiTap">
+              <PropertyRef Name="IDGT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DangKiGoiTap_Users">
+          <End Type="QLPhongGymModel.User" Role="User" Multiplicity="0..1" />
+          <End Type="QLPhongGymModel.DangKiGoiTap" Role="DangKiGoiTap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="IDUsers" />
+            </Principal>
+            <Dependent Role="DangKiGoiTap">
+              <PropertyRef Name="IDKH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -719,18 +725,6 @@
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="GioBatDau" ColumnName="GioBatDau" />
                 <ScalarProperty Name="GioKetThuc" ColumnName="GioKetThuc" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="DangKiGoiTaps">
-            <EntityTypeMapping TypeName="QLPhongGymModel.DangKiGoiTap">
-              <MappingFragment StoreEntitySet="DangKiGoiTap">
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="IDDK" ColumnName="IDDK" />
-                <ScalarProperty Name="IDKH" ColumnName="IDKH" />
-                <ScalarProperty Name="IDGT" ColumnName="IDGT" />
-                <ScalarProperty Name="NgayDangKiGT" ColumnName="NgayDangKiGT" />
-                <ScalarProperty Name="NgayKetThucGT" ColumnName="NgayKetThucGT" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -867,6 +861,21 @@
               <MappingFragment StoreEntitySet="PhanQuyen">
                 <ScalarProperty Name="TenQuyen" ColumnName="TenQuyen" />
                 <ScalarProperty Name="IDQuyen" ColumnName="IDQuyen" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DangKiGoiTaps">
+            <EntityTypeMapping TypeName="QLPhongGymModel.DangKiGoiTap">
+              <MappingFragment StoreEntitySet="DangKiGoiTap">
+                <ScalarProperty Name="BaoLuu" ColumnName="BaoLuu" />
+                <ScalarProperty Name="SoNgayConLai" ColumnName="SoNgayConLai" />
+                <ScalarProperty Name="NgayKetThucBaoLuu" ColumnName="NgayKetThucBaoLuu" />
+                <ScalarProperty Name="NgayKetThucGT" ColumnName="NgayKetThucGT" />
+                <ScalarProperty Name="NgayDangKiGT" ColumnName="NgayDangKiGT" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IDGT" ColumnName="IDGT" />
+                <ScalarProperty Name="IDKH" ColumnName="IDKH" />
+                <ScalarProperty Name="IDDK" ColumnName="IDDK" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

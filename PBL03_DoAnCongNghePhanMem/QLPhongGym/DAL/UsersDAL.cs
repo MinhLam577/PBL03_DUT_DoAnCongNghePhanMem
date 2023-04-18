@@ -61,7 +61,7 @@ namespace QLPhongGym.DAL
             }
             
         }
-        public int GetUsersID(string CCCD)
+        public int GetUsersIDByCCCD(string CCCD)
         {
             try
             {
@@ -192,5 +192,6 @@ namespace QLPhongGym.DAL
             }
             
         }
+         
     }
 }

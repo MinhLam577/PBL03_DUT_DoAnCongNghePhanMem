@@ -97,7 +97,7 @@ namespace QLPhongGym.GUI
                     {
                         try
                         {
-                            tk.IDUser = UsersBLL.Instance.GetUserID(cccd);
+                            tk.IDUser = UsersBLL.Instance.GetUserIDByCCCD(cccd);
                             if (TKBLL.Instance.AddTK(this.tk))
                             {
                                 switch (MessageBox.Show("Đăng kí thành công", "Thông báo", MessageBoxButtons.OK))
@@ -122,7 +122,7 @@ namespace QLPhongGym.GUI
                     {
                         try
                         {
-                            tk.IDUser = UsersBLL.Instance.GetUserID(cccd);
+                            tk.IDUser = UsersBLL.Instance.GetUserIDByCCCD(cccd);
                             if (TKBLL.Instance.AddTK(this.tk))
                             {
                                 switch (MessageBox.Show("Đăng kí thành công", "Thông báo", MessageBoxButtons.OK))

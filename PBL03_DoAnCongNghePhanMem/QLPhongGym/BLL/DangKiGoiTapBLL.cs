@@ -24,10 +24,7 @@ namespace QLPhongGym.BLL
             }
             private set { }
         }
-        public DataTable FindListDKKHByIDOrName(string txt)
-        {
-            return DangKiGoiTapDAL.Instance.FindListDKKHByIDOrName(txt);
-        }
+        
         public bool AddDKGT(DangKiGoiTap dkgt)
         {
             return DangKiGoiTapDAL.Instance.AddDKGT(dkgt) > 0;

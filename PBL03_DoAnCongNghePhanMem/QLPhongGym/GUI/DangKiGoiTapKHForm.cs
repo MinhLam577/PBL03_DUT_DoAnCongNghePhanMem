@@ -51,7 +51,6 @@ namespace QLPhongGym.GUI
                 int IDGT;
                 DateTime NgayDangKi = dtp_ngaydangki.Value;
                 DateTime NgayKetThuc = dtp_ngayketthuc.Value;
-                
                 if (string.IsNullOrEmpty(gt))
                 {
                     MessageBox.Show("Mời nhập vào thông tin còn trống");
@@ -77,7 +76,8 @@ namespace QLPhongGym.GUI
                             IDKH = kh.IDUsers,
                             NgayDangKiGT = NgayDangKi,
                             NgayKetThucGT = NgayKetThuc,
-                            Description = description
+                            Description = description,
+                            BaoLuu = false
                         };
                         try
                         {
@@ -140,13 +140,15 @@ namespace QLPhongGym.GUI
                         IDKH = kh.IDUsers,
                         NgayDangKiGT = NgayDangKi,
                         NgayKetThucGT = NgayKetThuc,
-                        Description = description
+                        Description = description,
+                        BaoLuu = false
                     };
                     switch (MessageBox.Show("Xác nhận đăng kí?", "Xin chờ một lát", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
                     {
                         case DialogResult.OK:
                             if (DangKiGoiTapBLL.Instance.GetDKGTByIDKH_NgayDangKi_IDGT(kh.IDUsers, dkgt.NgayDangKiGT.Value.Date, (int)dkgt.IDGT) != null)
                             {
+                                
                                 DangKiGoiTap t = DangKiGoiTapBLL.Instance.GetDKGTByIDKH_NgayDangKi_IDGT(kh.IDUsers, dkgt.NgayDangKiGT.Value.Date, (int)dkgt.IDGT);
                                 DangKiGoiTapBLL.Instance.DeleteDKGT(t);
                             }
@@ -201,13 +203,9 @@ namespace QLPhongGym.GUI
             rb_tienmat.Checked = true;
             cb_gt.DisplayMember = "NameGT";
             cb_gt.DataSource = GoiTapBLL.Instance.GetAllGT();
-            if(GoiTap != "")
-            {
-                cb_gt.Text = GoiTap;
-                dtp_ngaydangki.Enabled = false;
-                dtp_ngayketthuc.Enabled = false;
-            }
-                
+            dtp_ngaydangki.Enabled = false;
+            if (GoiTap != "")
+                cb_gt.Text = GoiTap;    
         }
         private void cb_gt_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -328,7 +326,6 @@ namespace QLPhongGym.GUI
             }
                 
         }
-
         private void numeric_giamgia_ValueChanged(object sender, EventArgs e)
         {
             int giamgia = Convert.ToInt32(numeric_giamgia.Value);
@@ -337,7 +334,5 @@ namespace QLPhongGym.GUI
             lb_thanhtien.Text = thanhtien.ToString();
             lb_thanhtoan.Text = lb_thanhtien.Text;
         }
-
-       
     }
 }

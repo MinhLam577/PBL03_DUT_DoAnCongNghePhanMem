@@ -45,5 +45,9 @@ namespace QLPhongGym.BLL
         {
             return KHDAL.Instance.SortDKKHBy(require, dt);
         }
+        public List<int> GetAllKHID()
+        {
+            return KHDAL.Instance.GetAllKHID();
+        }
     }
 }

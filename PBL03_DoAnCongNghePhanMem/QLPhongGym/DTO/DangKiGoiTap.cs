@@ -17,9 +17,12 @@ namespace QLPhongGym.DTO
         public int IDDK { get; set; }
         public Nullable<int> IDKH { get; set; }
         public Nullable<int> IDGT { get; set; }
+        public string Description { get; set; }
         public Nullable<System.DateTime> NgayDangKiGT { get; set; }
         public Nullable<System.DateTime> NgayKetThucGT { get; set; }
-        public string Description { get; set; }
+        public Nullable<System.DateTime> NgayKetThucBaoLuu { get; set; }
+        public Nullable<int> SoNgayConLai { get; set; }
+        public Nullable<bool> BaoLuu { get; set; }
     
         public virtual GoiTap GoiTap { get; set; }
         public virtual User User { get; set; }

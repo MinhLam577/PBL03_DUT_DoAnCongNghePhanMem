@@ -143,5 +143,9 @@ namespace QLPhongGym.DAL
                 dt.Rows.Add(cnt++, i.IDUsers, i.Name, i.DateBorn, i.Sex, i.CCCD, i.Address, i.Gmail, i.Sdt);
             return dt;
         }
+        public List<int> GetAllKHID()
+        {
+            return db.Users.OfType<KH>().Select(s => s.IDUsers).ToList();
+        }
     }
 }

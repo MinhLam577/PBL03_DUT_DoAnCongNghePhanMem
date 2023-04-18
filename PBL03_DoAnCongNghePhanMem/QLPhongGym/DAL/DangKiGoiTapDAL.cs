@@ -38,18 +38,18 @@ namespace QLPhongGym.DAL
                 new DataColumn{ColumnName = "GoiTap", DataType = typeof(string)},
                 new DataColumn{ColumnName = "NgayDangKi", DataType = typeof(DateTime)},
                 new DataColumn{ColumnName = "NgayKetThuc", DataType = typeof(DateTime)},
-                new DataColumn{ColumnName = "DaysLeft", DataType = typeof(double)}
+                new DataColumn{ColumnName = "DaysLeft", DataType = typeof(double)},
+                new DataColumn{ColumnName = "BaoLuu", DataType = typeof(bool)}
             });
             return dt;
         }
-
         public DataTable GetDKKH_Newest_DataTableByIDKH(int IDKH)
         {
             dt = CreateTable();
             var data = (from dkgt in db.DangKiGoiTaps
                         join kh in db.Users.OfType<KH>() on dkgt.IDKH equals kh.IDUsers
                         join gt in db.GoiTaps on dkgt.IDGT equals gt.IDGT
-                        where kh.IDUsers == IDKH && dkgt.NgayKetThucGT.Value > DateTime.Today
+                        where kh.IDUsers == IDKH && dkgt.NgayKetThucGT.Value >= DateTime.Today
                         orderby dkgt.NgayDangKiGT descending
                         select new
                         {
@@ -58,11 +58,12 @@ namespace QLPhongGym.DAL
                             kh.Name,
                             gt.NameGT,
                             dkgt.NgayDangKiGT,
-                            dkgt.NgayKetThucGT
+                            dkgt.NgayKetThucGT,
+                            dkgt.BaoLuu
                         }).ToList();
             if (data != default)
                 foreach (var d in data)
-                    dt.Rows.Add(d.IDUsers, d.Name, d.NameGT, d.NgayDangKiGT, d.NgayKetThucGT, (d.NgayKetThucGT - d.NgayDangKiGT).Value.TotalDays);
+                    dt.Rows.Add(d.IDUsers, d.Name, d.NameGT, d.NgayDangKiGT, d.NgayKetThucGT, (d.NgayKetThucGT - DateTime.Today).Value.Days, d.BaoLuu);
             return dt;
         }
         public DangKiGoiTap GetDKKH_Newest_ByIDKH(int IDKH)
@@ -72,7 +73,7 @@ namespace QLPhongGym.DAL
             var data = (from dkgt in db.DangKiGoiTaps
                         join kh in db.Users.OfType<KH>() on dkgt.IDKH equals kh.IDUsers
                         join gt in db.GoiTaps on dkgt.IDGT equals gt.IDGT
-                        where kh.IDUsers == IDKH
+                        where kh.IDUsers == IDKH && dkgt.NgayKetThucGT.Value >= DateTime.Today
                         orderby dkgt.NgayDangKiGT descending
                         select new
                         {
@@ -83,7 +84,8 @@ namespace QLPhongGym.DAL
                             gt.NameGT,
                             dkgt.Description,
                             dkgt.NgayDangKiGT,
-                            dkgt.NgayKetThucGT
+                            dkgt.NgayKetThucGT,
+                            dkgt.BaoLuu,
                         }).ToList().FirstOrDefault();
             if (data != null)
                 d = new DangKiGoiTap
@@ -93,34 +95,10 @@ namespace QLPhongGym.DAL
                     IDGT = data.IDGT,
                     NgayDangKiGT = data.NgayDangKiGT,
                     NgayKetThucGT = data.NgayKetThucGT,
-                    Description = data.Description
+                    Description = data.Description,
+                    BaoLuu = data.BaoLuu,
                 }; 
             return d;
-        }
-        public DataTable FindListDKKHByIDOrName(string txt)
-        {
-            dt = CreateTable(); int cnt = 1;
-            var data = (from kh in db.Users.OfType<KH>()
-                        join dkgt in db.DangKiGoiTaps on kh.IDUsers equals dkgt.IDKH
-                        join gt in db.GoiTaps on dkgt.IDGT equals gt.IDGT
-                        where kh.IDUsers.ToString().Contains(txt) || kh.Name.Contains(txt)
-                        select new
-                        {
-                            kh.IDUsers,
-                            kh.Name,
-                            kh.DateBorn,
-                            kh.Sex,
-                            kh.Sdt,
-                            kh.Gmail,
-                            kh.Address,
-                            kh.CCCD,
-                            dkgt.NgayDangKiGT,
-                            dkgt.NgayKetThucGT,
-                            gt.NameGT
-                        }).ToList();
-            foreach (var i in data)
-                dt.Rows.Add(cnt++, i.IDUsers, i.Name, i.DateBorn, i.Sex, i.CCCD, i.Address, i.Gmail, i.Sdt, i.NgayDangKiGT, i.NgayKetThucGT , i.NameGT);
-            return dt;
         }
         public int AddDKGT(DangKiGoiTap dkgt)
         {
@@ -152,8 +130,8 @@ namespace QLPhongGym.DAL
         }
         public DangKiGoiTap GetDLGTByIDKH_NgayDangKi_NgayKetThuc_IDGT(int IDKH, DateTime ngaydangki, DateTime ngayketthuc, int IDGT)
         {
-            var item = db.DangKiGoiTaps.Where(s => (int)s.IDKH == IDKH && s.NgayDangKiGT.Value == ngaydangki && s.NgayKetThucGT.Value == ngayketthuc && (int)s.IDGT == IDGT).FirstOrDefault();
             return db.DangKiGoiTaps.Where(s => (int)s.IDKH == IDKH && s.NgayDangKiGT.Value == ngaydangki && s.NgayKetThucGT.Value == ngayketthuc && (int)s.IDGT == IDGT).FirstOrDefault();
         }
+        
     }
 }
