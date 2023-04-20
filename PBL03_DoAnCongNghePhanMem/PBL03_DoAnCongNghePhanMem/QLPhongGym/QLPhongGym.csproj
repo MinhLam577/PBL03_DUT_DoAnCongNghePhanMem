@@ -216,6 +216,12 @@
     <Compile Include="GUI\FormTrangChu.Designer.cs">
       <DependentUpon>FormTrangChu.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\HLV_FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HLV_FormMain.Designer.cs">
+      <DependentUpon>HLV_FormMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\HoaDonForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,6 +284,9 @@
     <EmbeddedResource Include="GUI\FormTrangChu.resx">
       <DependentUpon>FormTrangChu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HLV_FormMain.resx">
+      <DependentUpon>HLV_FormMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\HoaDonForm.resx">
       <DependentUpon>HoaDonForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -328,6 +337,7 @@
       <DependentUpon>QLPhongGymDB.edmx</DependentUpon>
       <LastGenOutput>QLPhongGymDB.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\output_7bZFQx.gif" />
     <None Include="Resources\person.ico" />
     <None Include="Resources\person.png" />
   </ItemGroup>
