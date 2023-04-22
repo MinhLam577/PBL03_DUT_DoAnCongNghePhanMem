@@ -110,15 +110,10 @@ namespace QLPhongGym.GUI
             hideMenu();
         }
 
-       
-
-        private void button8_Click(object sender, EventArgs e)
+        private void panel2_Click(object sender, EventArgs e)
         {
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
+            if (currentFormChild != null)
+                currentFormChild.Close();
         }
     }
 }
