@@ -96,7 +96,5 @@ namespace QLPhongGym.GUI
             this.Hide();
             qmkf.Show();
         }
-
-        
     }
 }
