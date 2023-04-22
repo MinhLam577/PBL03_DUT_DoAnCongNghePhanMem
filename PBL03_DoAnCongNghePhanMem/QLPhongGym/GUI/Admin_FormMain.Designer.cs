@@ -49,15 +49,18 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel_hlv.SuspendLayout();
             this.Menu_Panel.SuspendLayout();
             this.panel_tk.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // button5
@@ -103,7 +106,6 @@
             this.button8.Text = "Đăng kí giờ làm";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -202,7 +204,6 @@
             this.button4.Text = "Lịch tập cùng huấn luyện viên";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button2
             // 
@@ -371,12 +372,13 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(219, 210);
             this.panel2.TabIndex = 0;
+            this.panel2.Click += new System.EventHandler(this.panel2_Click);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.panel4.Location = new System.Drawing.Point(240, 0);
@@ -384,35 +386,47 @@
             this.panel4.Size = new System.Drawing.Size(954, 89);
             this.panel4.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 45);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(82, 33);
+            this.label1.Location = new System.Drawing.Point(104, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Home";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(31, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(55, 45);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(240, 89);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(954, 499);
             this.panel3.TabIndex = 2;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(954, 499);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // Admin_FormMain
             // 
@@ -433,6 +447,8 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -462,5 +478,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

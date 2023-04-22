@@ -63,6 +63,16 @@ namespace QLPhongGym.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap output_7bZFQx {
+            get {
+                object obj = ResourceManager.GetObject("output_7bZFQx", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap person {
             get {
                 object obj = ResourceManager.GetObject("person", resourceCulture);
