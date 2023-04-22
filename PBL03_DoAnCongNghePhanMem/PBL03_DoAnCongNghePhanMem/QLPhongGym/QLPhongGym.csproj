@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6C42A97A-72B3-4755-9455-B2D0D13F4EFB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QLPhongGym</RootNamespace>
+    <AssemblyName>QLPhongGym</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="eCryptography, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Eramake.eCryptography.1.1.6\lib\net45\eCryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\DangKiGoiTapBLL.cs" />
+    <Compile Include="BLL\GoiTapBLL.cs" />
+    <Compile Include="BLL\KHBLL.cs" />
+    <Compile Include="BLL\QLHLVBLL.cs" />
+    <Compile Include="BLL\ThietBi_BLL.cs" />
+    <Compile Include="BLL\TKBLL.cs" />
+    <Compile Include="BLL\UsersBLL.cs" />
+    <Compile Include="DAL\DangKiGoiTapDAL.cs" />
+    <Compile Include="DAL\GoiTapDAL.cs" />
+    <Compile Include="DAL\KHDAL.cs" />
+    <Compile Include="DAL\QLHLVDAL.cs" />
+    <Compile Include="DAL\ThietBiDAL.cs" />
+    <Compile Include="DAL\TKDAL.cs" />
+    <Compile Include="DAL\UsersDAL.cs" />
+    <Compile Include="DTO\Admin.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\CaLamViec.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\DangKiGoiTap.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\DanhGiaHLV.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\GoiTap.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\HLV.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\HoaDon.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\KH.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\LichLamViecTrongTuan.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\LichThueHLV.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\PhanQuyen.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\QLPhongGymDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLPhongGymDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\QLPhongGymDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\QLPhongGymDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLPhongGymDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\ThietBi.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\TinhTrangLamViecHLV.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\TK.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\User.cs">
+      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\AddOrEditFormKH.cs" />
+    <Compile Include="GUI\AddOrEditFormKH.Designer.cs">
+      <DependentUpon>AddOrEditFormKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_FormDanhSachGoiTap.cs" />
+    <Compile Include="GUI\Admin_FormDanhSachGoiTap.Designer.cs">
+      <DependentUpon>Admin_FormDanhSachGoiTap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_FormDanhSachHLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_FormDanhSachHLV.Designer.cs">
+      <DependentUpon>Admin_FormDanhSachHLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_FormDanhSachKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_FormDanhSachKH.Designer.cs">
+      <DependentUpon>Admin_FormDanhSachKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_FormDanhSachThietBi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_FormDanhSachThietBi.Designer.cs">
+      <DependentUpon>Admin_FormDanhSachThietBi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_FormDetailThietBi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_FormDetailThietBi.Designer.cs">
+      <DependentUpon>Admin_FormDetailThietBi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DangKiGoiTapFormKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DangKiGoiTapFormKH.Designer.cs">
+      <DependentUpon>DangKiGoiTapFormKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_FormDKiTapCungHLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_FormDKiTapCungHLV.Designer.cs">
+      <DependentUpon>Admin_FormDKiTapCungHLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_FormDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_FormDoanhThu.Designer.cs">
+      <DependentUpon>Admin_FormDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_FormHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_FormHoaDon.Designer.cs">
+      <DependentUpon>Admin_FormHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_FormMain.Designer.cs">
+      <DependentUpon>Admin_FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DangKiAdminOrKHForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DangKiAdminOrKHForm.designer.cs">
+      <DependentUpon>DangKiAdminOrKHForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DangKiTKForm.cs" />
+    <Compile Include="GUI\DangKiTKForm.Designer.cs">
+      <DependentUpon>DangKiTKForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormTrangChu.cs" />
+    <Compile Include="GUI\FormTrangChu.Designer.cs">
+      <DependentUpon>FormTrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HLV_FormMain.cs" />
+    <Compile Include="GUI\HLV_FormMain.Designer.cs">
+      <DependentUpon>HLV_FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HoaDonForm.cs" />
+    <Compile Include="GUI\HoaDonForm.Designer.cs">
+      <DependentUpon>HoaDonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LoginForm.cs" />
+    <Compile Include="GUI\LoginForm.designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QuenMatKhauForm.cs" />
+    <Compile Include="GUI\QuenMatKhauForm.designer.cs">
+      <DependentUpon>QuenMatKhauForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\AddOrEditFormKH.resx">
+      <DependentUpon>AddOrEditFormKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin_FormDanhSachGoiTap.resx">
+      <DependentUpon>Admin_FormDanhSachGoiTap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin_FormDanhSachHLV.resx">
+      <DependentUpon>Admin_FormDanhSachHLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin_FormDanhSachKH.resx">
+      <DependentUpon>Admin_FormDanhSachKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin_FormDanhSachThietBi.resx">
+      <DependentUpon>Admin_FormDanhSachThietBi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin_FormDetailThietBi.resx">
+      <DependentUpon>Admin_FormDetailThietBi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DangKiGoiTapFormKH.resx">
+      <DependentUpon>DangKiGoiTapFormKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin_FormDKiTapCungHLV.resx">
+      <DependentUpon>Admin_FormDKiTapCungHLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin_FormDoanhThu.resx">
+      <DependentUpon>Admin_FormDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin_FormHoaDon.resx">
+      <DependentUpon>Admin_FormHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin_FormMain.resx">
+      <DependentUpon>Admin_FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DangKiAdminOrKHForm.resx">
+      <DependentUpon>DangKiAdminOrKHForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DangKiTKForm.resx">
+      <DependentUpon>DangKiTKForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormTrangChu.resx">
+      <DependentUpon>FormTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HLV_FormMain.resx">
+      <DependentUpon>HLV_FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HoaDonForm.resx">
+      <DependentUpon>HoaDonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QuenMatKhauForm.resx">
+      <DependentUpon>QuenMatKhauForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <EntityDeploy Include="DTO\QLPhongGymDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLPhongGymDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DTO\QLPhongGymDB.edmx.diagram">
+      <DependentUpon>QLPhongGymDB.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DTO\QLPhongGymDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLPhongGymDB.edmx</DependentUpon>
+      <LastGenOutput>QLPhongGymDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DTO\QLPhongGymDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLPhongGymDB.edmx</DependentUpon>
+      <LastGenOutput>QLPhongGymDB.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\output_7bZFQx.gif" />
+    <None Include="Resources\person.ico" />
+    <None Include="Resources\person.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
