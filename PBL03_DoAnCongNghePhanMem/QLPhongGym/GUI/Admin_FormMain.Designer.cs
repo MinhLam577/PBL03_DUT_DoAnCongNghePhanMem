@@ -49,8 +49,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel_hlv.SuspendLayout();
             this.Menu_Panel.SuspendLayout();
@@ -384,17 +384,6 @@
             this.panel4.Size = new System.Drawing.Size(954, 89);
             this.panel4.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(82, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 29);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Home";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -405,6 +394,17 @@
             this.pictureBox1.Size = new System.Drawing.Size(55, 45);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(82, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 29);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Home";
             // 
             // panel3
             // 
