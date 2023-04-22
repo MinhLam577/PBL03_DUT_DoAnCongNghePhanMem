@@ -105,7 +105,7 @@
             this.txb_mk.BackColor = System.Drawing.Color.White;
             this.txb_mk.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txb_mk.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_mk.ForeColor = System.Drawing.Color.Cyan;
+            this.txb_mk.ForeColor = System.Drawing.Color.Black;
             this.txb_mk.Location = new System.Drawing.Point(872, 376);
             this.txb_mk.Name = "txb_mk";
             this.txb_mk.PasswordChar = '*';
@@ -118,7 +118,7 @@
             this.txb_TenTk.BackColor = System.Drawing.Color.White;
             this.txb_TenTk.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txb_TenTk.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_TenTk.ForeColor = System.Drawing.Color.Aqua;
+            this.txb_TenTk.ForeColor = System.Drawing.Color.Black;
             this.txb_TenTk.Location = new System.Drawing.Point(872, 288);
             this.txb_TenTk.Name = "txb_TenTk";
             this.txb_TenTk.Size = new System.Drawing.Size(363, 31);
@@ -198,7 +198,6 @@
             this.HelpButton = true;
             this.Name = "LoginForm";
             this.Text = "Đăng nhập";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pb_eye)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
