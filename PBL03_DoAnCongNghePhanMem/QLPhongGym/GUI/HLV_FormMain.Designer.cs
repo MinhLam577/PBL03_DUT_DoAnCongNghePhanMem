@@ -240,6 +240,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "HLV_FormMain";
             this.Text = "HLV_formmain";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Menu_Panel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

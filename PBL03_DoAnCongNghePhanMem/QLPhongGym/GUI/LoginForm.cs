@@ -25,6 +25,8 @@ namespace QLPhongGym.GUI
             switch (user)
             {
                 case "HLV":
+                    HLV_FormMain hlvfm = new HLV_FormMain();
+                    hlvfm.ShowDialog();
                     break;
                 case "Admin":
                     Admin_FormMain adfm = new Admin_FormMain();
