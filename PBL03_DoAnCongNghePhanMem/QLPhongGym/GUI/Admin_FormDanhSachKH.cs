@@ -30,11 +30,9 @@ namespace QLPhongGym.GUI
         }
         public void LoadListDKGT(int IDKH)
         {  
-            dgv_gt.DataSource = DangKiGoiTapBLL.Instance.GetDKKH_Newest_DataTableByIDKH(IDKH);
-
+            dgv_gt.DataSource = DangKiGoiTapBLL.Instance.GetDKGT_Newest_DataTableByIDKH(IDKH);
             //Lấy ra gói tập có hiệu lực gần nhất có hiệu lực
-            DangKiGoiTap dkgt = DangKiGoiTapBLL.Instance.GetDKKH_Newest_ByIDKH(IDKH);
-            
+            DangKiGoiTap dkgt = DangKiGoiTapBLL.Instance.GetDKGT_Newest_ByIDKH(IDKH);
             //Kiểm tra nếu gói tập có tồn tại thì show ghi chú của user lên giao diện
             if (dkgt != null)
                 lb_description.Text = dkgt.Description;
@@ -155,14 +153,14 @@ namespace QLPhongGym.GUI
                 if (lb_mathe_cccd.Text == "Mã thẻ:" && lb_ten_sdt.Text == "Tên:") //Nếu tìm kiếm bằng mã thẻ và tên
                 {
                     if (txb_mathe_cccd.Text != "" && txb_ten_sdt.Text == "") //Nếu tìm kiếm bằng mã thẻ
-                        dgv_kh.DataSource = KHBLL.Instance.FindListKHByIDOrName(txb_mathe_cccd.Text);
+                        dgv_kh.DataSource = KHBLL.Instance.FindListKHByID(txb_mathe_cccd.Text);
                     else if (txb_mathe_cccd.Text != "" && txb_ten_sdt.Text != "") //Nếu tìm kiếm bằng cả mã thẻ và tên
                         dgv_kh.DataSource = KHBLL.Instance.FindListKHByNameAndID(txb_ten_sdt.Text, txb_mathe_cccd.Text);
                 }
                 else if (lb_mathe_cccd.Text == "CCCD:" && lb_ten_sdt.Text == "Số điện thoại:") //Nếu tìm kiếm bằng cccd và sdt
                 {
                     if (txb_mathe_cccd.Text != "" && txb_ten_sdt.Text == "") //Nếu tìm kiếm bằng cccd
-                        dgv_kh.DataSource = KHBLL.Instance.FindListKHBySdtOrCCCD(txb_mathe_cccd.Text);
+                        dgv_kh.DataSource = KHBLL.Instance.FindListKHByCCCD(txb_mathe_cccd.Text);
                     else if (txb_mathe_cccd.Text != "" && txb_ten_sdt.Text != "") //Nếu tìm kiếm bằng cả sdt và cccd
                         dgv_kh.DataSource = KHBLL.Instance.FindListKHBySDTAndCCCD(txb_ten_sdt.Text, txb_mathe_cccd.Text);
                 }
@@ -187,14 +185,14 @@ namespace QLPhongGym.GUI
                 if (lb_mathe_cccd.Text == "Mã thẻ:" && lb_ten_sdt.Text == "Tên:")//Nếu tìm kiếm bằng mã thẻ và tên
                 {
                     if (txb_mathe_cccd.Text == "" && txb_ten_sdt.Text != "") //Nếu tìm kiếm bằng tên
-                        dgv_kh.DataSource = KHBLL.Instance.FindListKHByIDOrName(txb_ten_sdt.Text);
+                        dgv_kh.DataSource = KHBLL.Instance.FindListKHByName(txb_ten_sdt.Text);
                     else if (txb_mathe_cccd.Text != "" && txb_ten_sdt.Text != "") //Nếu tìm kiếm bằng cả tên và mã thẻ
                         dgv_kh.DataSource = KHBLL.Instance.FindListKHByNameAndID(txb_ten_sdt.Text, txb_mathe_cccd.Text);
                 }
                 else if (lb_mathe_cccd.Text == "CCCD:" && lb_ten_sdt.Text == "Số điện thoại:") //Nếu tìm kiếm bằng cccd và số điện thoại
                 {
                     if (txb_mathe_cccd.Text == "" && txb_ten_sdt.Text != "") //Nếu tìm kiếm bằng sdt
-                        dgv_kh.DataSource = KHBLL.Instance.FindListKHBySdtOrCCCD(txb_ten_sdt.Text);
+                        dgv_kh.DataSource = KHBLL.Instance.FindListKHBySDT(txb_ten_sdt.Text);
                     else if (txb_mathe_cccd.Text != "" && txb_ten_sdt.Text != "") //nếu tìm kiếm bằng cả sdt và cccd
                         dgv_kh.DataSource = KHBLL.Instance.FindListKHBySDTAndCCCD(txb_ten_sdt.Text, txb_mathe_cccd.Text);
                 }

@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.lb_SystemName = new System.Windows.Forms.Label();
             this.pb_eye = new System.Windows.Forms.PictureBox();
-            this.lb_Dangki = new System.Windows.Forms.Label();
             this.btn_DangNhap = new System.Windows.Forms.Button();
             this.txb_mk = new System.Windows.Forms.TextBox();
             this.txb_TenTk = new System.Windows.Forms.TextBox();
@@ -70,20 +69,6 @@
             this.pb_eye.MouseLeave += new System.EventHandler(this.pb_eye_MouseLeave);
             this.pb_eye.MouseHover += new System.EventHandler(this.pb_eye_MouseHover);
             // 
-            // lb_Dangki
-            // 
-            this.lb_Dangki.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lb_Dangki.AutoSize = true;
-            this.lb_Dangki.BackColor = System.Drawing.Color.Transparent;
-            this.lb_Dangki.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Dangki.ForeColor = System.Drawing.Color.Black;
-            this.lb_Dangki.Location = new System.Drawing.Point(707, 626);
-            this.lb_Dangki.Name = "lb_Dangki";
-            this.lb_Dangki.Size = new System.Drawing.Size(126, 32);
-            this.lb_Dangki.TabIndex = 35;
-            this.lb_Dangki.Text = "Đăng kí?";
-            this.lb_Dangki.Click += new System.EventHandler(this.lb_Dangki_Click);
-            // 
             // btn_DangNhap
             // 
             this.btn_DangNhap.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -91,7 +76,7 @@
             this.btn_DangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DangNhap.ForeColor = System.Drawing.Color.Aqua;
-            this.btn_DangNhap.Location = new System.Drawing.Point(881, 488);
+            this.btn_DangNhap.Location = new System.Drawing.Point(872, 466);
             this.btn_DangNhap.Name = "btn_DangNhap";
             this.btn_DangNhap.Size = new System.Drawing.Size(172, 55);
             this.btn_DangNhap.TabIndex = 34;
@@ -144,7 +129,7 @@
             this.lb_QuenMk.BackColor = System.Drawing.Color.Transparent;
             this.lb_QuenMk.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_QuenMk.ForeColor = System.Drawing.Color.Black;
-            this.lb_QuenMk.Location = new System.Drawing.Point(1085, 626);
+            this.lb_QuenMk.Location = new System.Drawing.Point(866, 554);
             this.lb_QuenMk.Name = "lb_QuenMk";
             this.lb_QuenMk.Size = new System.Drawing.Size(223, 32);
             this.lb_QuenMk.TabIndex = 36;
@@ -187,7 +172,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lb_SystemName);
             this.Controls.Add(this.pb_eye);
-            this.Controls.Add(this.lb_Dangki);
             this.Controls.Add(this.btn_DangNhap);
             this.Controls.Add(this.txb_mk);
             this.Controls.Add(this.txb_TenTk);
@@ -209,7 +193,6 @@
 
         private System.Windows.Forms.Label lb_SystemName;
         private System.Windows.Forms.PictureBox pb_eye;
-        private System.Windows.Forms.Label lb_Dangki;
         private System.Windows.Forms.Button btn_DangNhap;
         private System.Windows.Forms.TextBox txb_mk;
         private System.Windows.Forms.TextBox txb_TenTk;

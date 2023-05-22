@@ -62,13 +62,7 @@ namespace QLPhongGym.GUI
             
         }
 
-        private void lb_Dangki_Click(object sender, EventArgs e)
-        {
-            DangKiTKForm dkf = new DangKiTKForm();
-            dkf.Back += (a, b) => { (a as DangKiTKForm).Close(); this.Show(); };
-            this.Hide();
-            dkf.Show();
-        }
+      
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
             string tentk = txb_TenTk.Text, mk = txb_mk.Text, username;

@@ -1639,9 +1639,6 @@
   <metadata name="GT_mns.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>125, 17</value>
   </metadata>
-  <metadata name="GT_mns.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>125, 17</value>
-  </metadata>
   <data name="đăngKíToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZ
@@ -1760,7 +1757,7 @@
   <data name="restoreToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        6gAAAOoB+Ss1JgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAYeSURBVFhHtVYL
+        6QAAAOkBVJIUSwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAYeSURBVFhHtVYL
         VEx5GL/dkWWdPEIsa3fPHotdZ9f7kZoKIcWp9ogeU001TemhOB51VqQSFruplNV0jlCxvTb2iWTTIrIJ
         sUjCWgmhaXrMzJ3f/v93Lstytqba3znfmW/u/b7f97t3fvebyxgMyyWjRNbSRNbGr1Yk9tCKrDxbWBtZ
         TQ9r6XbGynWEUPW/wIgVS2NE1t7N7OJsjdHSGjArWsGEKWEUcB3soj0a/pzYZ7lQ370QWUkV7JzVTcyy

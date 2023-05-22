@@ -40,8 +40,8 @@ namespace QLPhongGym.GUI
                 string PriceGT = GoiTapBLL.Instance.GetGTByName(GTName).Price.ToString();
                 lb_hovaten.Text = UserName;
                 lb_gt.Text = GTName;
-                lb_ngaydki.Text = dkgt.NgayDangKiGT.ToString();
-                lb_ngayketthuc.Text = dkgt.NgayKetThucGT.ToString();
+                lb_ngaydki.Text = dkgt.NgayDangKiGT.Value.Date.ToString();
+                lb_ngayketthuc.Text = dkgt.NgayKetThucGT.Value.Date.ToString();
                 lb_phidki.Text = PriceGT;
                 lb_giamgia.Text = GiamGia;
                 if (lt != null)
@@ -58,6 +58,11 @@ namespace QLPhongGym.GUI
         private void btn_thoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_inhoadon_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

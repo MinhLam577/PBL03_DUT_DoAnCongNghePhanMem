@@ -31,6 +31,7 @@ namespace QLPhongGym.GUI
             this.kh = kh;
             this.GoiTap = GoiTap;
         }
+        
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -211,7 +212,7 @@ namespace QLPhongGym.GUI
         {
             try
             {
-                DateTime now = DateTime.Now;
+                DateTime now = DateTime.Today;
                 if(GoiTap == "")
                 {
                     if ((cb_gt.SelectedItem as GoiTap) != null)
@@ -257,11 +258,12 @@ namespace QLPhongGym.GUI
                 {
                     if ((cb_gt.SelectedItem as GoiTap) != null)
                     {
-                        DangKiGoiTap dkgt = DangKiGoiTapBLL.Instance.GetDKKH_Newest_ByIDKH(kh.IDUsers);
+                        DangKiGoiTap dkgt = DangKiGoiTapBLL.Instance.GetDKGTByIDKH_IDGT(kh.IDUsers, GoiTapBLL.Instance.GetGTByName(GoiTap).IDGT);
                         DateTime ngayketthuc = dkgt.NgayKetThucGT.Value;
                         TimeSpan timeleft = default;
                         if (ngayketthuc > now)
                             timeleft = ngayketthuc.Subtract(now);
+                        else if(ngayketthuc == now) timeleft = TimeSpan.Zero;
                         switch ((cb_gt.SelectedItem as GoiTap).NameGT)
                         {
                             case "1 Tháng":
@@ -324,7 +326,6 @@ namespace QLPhongGym.GUI
                 lb_thanhtien.Text = lb_dongia.Text;
                 lb_thanhtoan.Text = lb_thanhtien.Text;
             }
-                
         }
         private void numeric_giamgia_ValueChanged(object sender, EventArgs e)
         {

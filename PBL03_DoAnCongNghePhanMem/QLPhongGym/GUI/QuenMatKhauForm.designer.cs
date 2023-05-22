@@ -50,9 +50,9 @@
             this.lb_em.ForeColor = System.Drawing.Color.Red;
             this.lb_em.Location = new System.Drawing.Point(122, 389);
             this.lb_em.Name = "lb_em";
-            this.lb_em.Size = new System.Drawing.Size(107, 38);
+            this.lb_em.Size = new System.Drawing.Size(111, 38);
             this.lb_em.TabIndex = 3;
-            this.lb_em.Text = "Email:";
+            this.lb_em.Text = "Gmail:";
             // 
             // gb_resetpass
             // 

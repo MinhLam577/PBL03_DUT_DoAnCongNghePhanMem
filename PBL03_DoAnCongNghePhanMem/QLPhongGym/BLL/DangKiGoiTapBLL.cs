@@ -37,9 +37,9 @@ namespace QLPhongGym.BLL
         {
             DangKiGoiTapDAL.Instance.DeleteDKGT(dkgt);
         }
-        public DataTable GetDKKH_Newest_DataTableByIDKH(int IDKH)
+        public DataTable GetDKGT_Newest_DataTableByIDKH(int IDKH)
         {
-            return DangKiGoiTapDAL.Instance.GetDKKH_Newest_DataTableByIDKH(IDKH);
+            return DangKiGoiTapDAL.Instance.GetDKGT_Newest_DataTableByIDKH(IDKH);
         }
         public List<DangKiGoiTap> GetAllDKGTByIDKH(int IDKH)
         {
@@ -47,11 +47,11 @@ namespace QLPhongGym.BLL
         }
         public void DeleteAllDKGT(List<DangKiGoiTap> list)
         {
-            DangKiGoiTapDAL.Instance.DeleteAllDKGTByIDKH(list);
+            DangKiGoiTapDAL.Instance.DeleteAllDKGT(list);
         }
-        public DangKiGoiTap GetDKKH_Newest_ByIDKH(int IDKH)
+        public DangKiGoiTap GetDKGT_Newest_ByIDKH(int IDKH)
         {
-            return DangKiGoiTapDAL.Instance.GetDKKH_Newest_ByIDKH(IDKH);
+            return DangKiGoiTapDAL.Instance.GetDKGT_Newest_ByIDKH(IDKH);
         }
         public DangKiGoiTap GetDKGTByIDKH_NgayDangKi_IDGT(int IDKH, DateTime ngaydangki, int IDGT)
         {
@@ -60,6 +60,10 @@ namespace QLPhongGym.BLL
         public DangKiGoiTap GetDLGTByIDKH_NgayDangKi_NgayKetThuc_IDGT(int IDKH, DateTime ngaydangki, DateTime ngayketthuc, int IDGT)
         {
             return DangKiGoiTapDAL.Instance.GetDLGTByIDKH_NgayDangKi_NgayKetThuc_IDGT(IDKH, ngaydangki, ngayketthuc, IDGT);
+        }
+        public DangKiGoiTap GetDKGTByIDKH_IDGT(int IDKH, int IDGT)
+        {
+            return DangKiGoiTapDAL.Instance.GetDKGTByIDKH_IDGT(IDKH, IDGT);
         }
     }
 }
