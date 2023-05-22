@@ -45,6 +45,22 @@ namespace QLPhongGym.BLL
         {
             return KHDAL.Instance.SortDKKHBy(require, dt);
         }
+        public DataTable FindListKHBySDT(string Sdt)
+        {
+            return KHDAL.Instance.FindListKHBySDT(Sdt);
+        }
+        public DataTable FindListKHByID(string ID)
+        {
+            return KHDAL.Instance.FindListKHByID(ID);
+        }
+        public DataTable FindListKHByCCCD(string CCCD)
+        {
+            return KHDAL.Instance.FindListKHByCCCD(CCCD);
+        }
+        public DataTable FindListKHByName(string Name)
+        {
+            return KHDAL.Instance.FindListKHByName(Name);
+        }
         public List<int> GetAllKHID()
         {
             return KHDAL.Instance.GetAllKHID();

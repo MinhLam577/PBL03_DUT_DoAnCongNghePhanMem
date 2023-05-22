@@ -43,7 +43,7 @@ namespace QLPhongGym.DAL
             });
             return dt;
         }
-        public DataTable GetDKKH_Newest_DataTableByIDKH(int IDKH)
+        public DataTable GetDKGT_Newest_DataTableByIDKH(int IDKH)
         {
             dt = CreateTable();
             var data = (from dkgt in db.DangKiGoiTaps
@@ -66,7 +66,7 @@ namespace QLPhongGym.DAL
                     dt.Rows.Add(d.IDUsers, d.Name, d.NameGT, d.NgayDangKiGT, d.NgayKetThucGT, (d.NgayKetThucGT - DateTime.Today).Value.Days, d.BaoLuu);
             return dt;
         }
-        public DangKiGoiTap GetDKKH_Newest_ByIDKH(int IDKH)
+        public DangKiGoiTap GetDKGT_Newest_ByIDKH(int IDKH)
         {
             DangKiGoiTap d = null;
             dt = CreateTable();
@@ -119,10 +119,14 @@ namespace QLPhongGym.DAL
         {
             return db.DangKiGoiTaps.Where(s => (int)s.IDKH == IDKH).ToList();
         }
-        public void DeleteAllDKGTByIDKH(List<DangKiGoiTap> list)
+        public void DeleteAllDKGT(List<DangKiGoiTap> list)
         {
             foreach(DangKiGoiTap i in list)
                 DeleteDKGT(i);
+        }
+        public DangKiGoiTap GetDKGTByIDKH_IDGT(int IDKH, int IDGT)
+        {
+            return db.DangKiGoiTaps.Where(s => (int)s.IDKH == IDKH && (int)s.IDGT == IDGT).OrderByDescending(s => s.NgayDangKiGT).FirstOrDefault();
         }
         public DangKiGoiTap GetDKGTByIDKH_NgayDangKi_IDGT(int IDKH, DateTime ngaydangki, int IDGT)
         {

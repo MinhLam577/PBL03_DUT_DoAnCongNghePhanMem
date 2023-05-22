@@ -77,12 +77,12 @@
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(116, 390);
+            this.label8.Location = new System.Drawing.Point(1, 393);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(107, 36);
+            this.label8.Size = new System.Drawing.Size(222, 36);
             this.label8.TabIndex = 89;
-            this.label8.Text = "CCCD:";
+            this.label8.Text = "CCCD(Nếu có):";
             // 
             // txb_gmail
             // 
@@ -288,7 +288,6 @@
             this.btn_reset.BackColor = System.Drawing.Color.Black;
             this.btn_reset.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_reset.ForeColor = System.Drawing.Color.Cyan;
-            this.btn_reset.Image = ((System.Drawing.Image)(resources.GetObject("btn_reset.Image")));
             this.btn_reset.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btn_reset.Location = new System.Drawing.Point(257, 510);
             this.btn_reset.Name = "btn_reset";
@@ -304,7 +303,6 @@
             this.btn_upload.BackColor = System.Drawing.Color.Black;
             this.btn_upload.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_upload.ForeColor = System.Drawing.Color.Cyan;
-            this.btn_upload.Image = ((System.Drawing.Image)(resources.GetObject("btn_upload.Image")));
             this.btn_upload.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btn_upload.Location = new System.Drawing.Point(66, 510);
             this.btn_upload.Name = "btn_upload";

@@ -6,7 +6,9 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using QLPhongGym.DTO;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace QLPhongGym.DAL
 {
@@ -62,7 +64,81 @@ namespace QLPhongGym.DAL
             }
             return dt;
         }
-        
+        public DataTable FindListKHByCCCD(string CCCD){
+            dt = CreateTable(); int cnt = 1;
+            var data = (db.Users.OfType<KH>().Where(k => k.CCCD.Contains(CCCD)).
+                        Select(kh => new
+                        {
+                            kh.IDUsers,
+                            kh.Name,
+                            kh.DateBorn,
+                            kh.Sex,
+                            kh.Sdt,
+                            kh.Gmail,
+                            kh.Address,
+                            kh.CCCD,
+                        })).ToList().Distinct();
+            foreach (var i in data)
+                dt.Rows.Add(cnt++, i.IDUsers, i.Name, i.DateBorn, i.Sex, i.CCCD, i.Address, i.Gmail, i.Sdt);
+            return dt;
+        }
+        public DataTable FindListKHByID(string ID)
+        {
+            dt = CreateTable(); int cnt = 1;
+            var data = (db.Users.OfType<KH>().Where(k => k.IDUsers.ToString().Contains(ID)).
+                        Select(kh => new
+                        {
+                            kh.IDUsers,
+                            kh.Name,
+                            kh.DateBorn,
+                            kh.Sex,
+                            kh.Sdt,
+                            kh.Gmail,
+                            kh.Address,
+                            kh.CCCD,
+                        })).ToList().Distinct();
+            foreach (var i in data)
+                dt.Rows.Add(cnt++, i.IDUsers, i.Name, i.DateBorn, i.Sex, i.CCCD, i.Address, i.Gmail, i.Sdt);
+            return dt;
+        }
+        public DataTable FindListKHByName(string Name)
+        {
+            dt = CreateTable(); int cnt = 1;
+            var data = (db.Users.OfType<KH>().Where(k => k.Name.Contains(Name)).
+                        Select(kh => new
+                        {
+                            kh.IDUsers,
+                            kh.Name,
+                            kh.DateBorn,
+                            kh.Sex,
+                            kh.Sdt,
+                            kh.Gmail,
+                            kh.Address,
+                            kh.CCCD,
+                        })).ToList().Distinct();
+            foreach (var i in data)
+                dt.Rows.Add(cnt++, i.IDUsers, i.Name, i.DateBorn, i.Sex, i.CCCD, i.Address, i.Gmail, i.Sdt);
+            return dt;
+        }
+        public DataTable FindListKHBySDT(string Sdt)
+        {
+            dt = CreateTable(); int cnt = 1;
+            var data = (db.Users.OfType<KH>().Where(k => k.Sdt.Contains(Sdt)).
+                        Select(kh => new
+                        {
+                            kh.IDUsers,
+                            kh.Name,
+                            kh.DateBorn,
+                            kh.Sex,
+                            kh.Sdt,
+                            kh.Gmail,
+                            kh.Address,
+                            kh.CCCD,
+                        })).ToList().Distinct();
+            foreach (var i in data)
+                dt.Rows.Add(cnt++, i.IDUsers, i.Name, i.DateBorn, i.Sex, i.CCCD, i.Address, i.Gmail, i.Sdt);
+            return dt;
+        }
         public DataTable FindListKHByIDOrName(string txt)
         {
             dt = CreateTable(); int cnt = 1;

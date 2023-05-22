@@ -52,7 +52,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_inhoadon = new System.Windows.Forms.Button();
             this.btn_thoat = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -366,17 +366,18 @@
             this.label15.TabIndex = 88;
             this.label15.Text = "Phí đăng kí gói:";
             // 
-            // button1
+            // btn_inhoadon
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button1.Enabled = false;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(428, 584);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(167, 56);
-            this.button1.TabIndex = 96;
-            this.button1.Text = "In hóa đơn";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_inhoadon.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_inhoadon.Enabled = false;
+            this.btn_inhoadon.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_inhoadon.Location = new System.Drawing.Point(428, 584);
+            this.btn_inhoadon.Name = "btn_inhoadon";
+            this.btn_inhoadon.Size = new System.Drawing.Size(167, 56);
+            this.btn_inhoadon.TabIndex = 96;
+            this.btn_inhoadon.Text = "In hóa đơn";
+            this.btn_inhoadon.UseVisualStyleBackColor = true;
+            this.btn_inhoadon.Click += new System.EventHandler(this.btn_inhoadon_Click);
             // 
             // btn_thoat
             // 
@@ -397,7 +398,7 @@
             this.ClientSize = new System.Drawing.Size(1229, 698);
             this.ControlBox = false;
             this.Controls.Add(this.btn_thoat);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_inhoadon);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel1);
@@ -429,7 +430,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_inhoadon;
         private System.Windows.Forms.Button btn_thoat;
         private System.Windows.Forms.Label lb_hlv;
         private System.Windows.Forms.Label lb_ngayketthuc;
