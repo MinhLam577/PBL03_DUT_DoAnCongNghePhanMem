@@ -34,23 +34,13 @@ namespace QLPhongGym.GUI
         }
         private void customizedesing()
         {
-            Menu_Panel.Visible = false;
             panel_hlv.Visible = false;
-            panel_tk.Visible = false;
         }
         private void hideMenu()
         {
-            if (Menu_Panel.Visible == true)
-            {
-                Menu_Panel.Visible = false;
-            }
             if (panel_hlv.Visible == true)
             {
                 panel_hlv.Visible = false;
-            }
-            if (panel_tk.Visible == true)
-            {
-                panel_tk.Visible = false;
             }
         }
         private void showMenu(Panel subMenu)
@@ -66,16 +56,12 @@ namespace QLPhongGym.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            showMenu(Menu_Panel);
+            OpenChildForm(new Admin_FormDanhSachKH());
+            hideMenu();
         }
         private void button10_Click(object sender, EventArgs e)
         {
             showMenu(panel_hlv);
-        }
-
-        private void button13_Click(object sender, EventArgs e)
-        {
-            showMenu(panel_tk);
         }
 
         private void button_ThietBi_Click(object sender, EventArgs e)
@@ -114,6 +100,16 @@ namespace QLPhongGym.GUI
         {
             if (currentFormChild != null)
                 currentFormChild.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (currentFormChild != null)
+            {
+                currentFormChild.Close();
+                hideMenu();
+            }
+                
         }
     }
 }
