@@ -40,13 +40,16 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btn_reset = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txt_thoihan = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_Price
             // 
             this.txt_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Price.Location = new System.Drawing.Point(167, 322);
+            this.txt_Price.Location = new System.Drawing.Point(167, 386);
             this.txt_Price.Name = "txt_Price";
             this.txt_Price.Size = new System.Drawing.Size(194, 30);
             this.txt_Price.TabIndex = 38;
@@ -55,7 +58,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(83, 327);
+            this.label4.Location = new System.Drawing.Point(83, 387);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 25);
             this.label4.TabIndex = 37;
@@ -64,7 +67,7 @@
             // txt_TenGT
             // 
             this.txt_TenGT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TenGT.Location = new System.Drawing.Point(167, 272);
+            this.txt_TenGT.Location = new System.Drawing.Point(167, 274);
             this.txt_TenGT.Name = "txt_TenGT";
             this.txt_TenGT.Size = new System.Drawing.Size(194, 30);
             this.txt_TenGT.TabIndex = 34;
@@ -73,7 +76,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(45, 272);
+            this.label3.Location = new System.Drawing.Point(45, 277);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 25);
             this.label3.TabIndex = 32;
@@ -95,7 +98,7 @@
             this.btn_them.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_them.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_them.ForeColor = System.Drawing.Color.Cyan;
-            this.btn_them.Location = new System.Drawing.Point(17, 433);
+            this.btn_them.Location = new System.Drawing.Point(26, 465);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(75, 44);
             this.btn_them.TabIndex = 39;
@@ -109,7 +112,7 @@
             this.btn_Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Xoa.ForeColor = System.Drawing.Color.Cyan;
-            this.btn_Xoa.Location = new System.Drawing.Point(403, 433);
+            this.btn_Xoa.Location = new System.Drawing.Point(412, 465);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(75, 44);
             this.btn_Xoa.TabIndex = 40;
@@ -123,7 +126,7 @@
             this.btn_Sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Sua.ForeColor = System.Drawing.Color.Cyan;
-            this.btn_Sua.Location = new System.Drawing.Point(145, 433);
+            this.btn_Sua.Location = new System.Drawing.Point(154, 465);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Size = new System.Drawing.Size(75, 44);
             this.btn_Sua.TabIndex = 41;
@@ -162,7 +165,7 @@
             this.btn_reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_reset.ForeColor = System.Drawing.Color.Cyan;
-            this.btn_reset.Location = new System.Drawing.Point(272, 433);
+            this.btn_reset.Location = new System.Drawing.Point(281, 465);
             this.btn_reset.Name = "btn_reset";
             this.btn_reset.Size = new System.Drawing.Size(75, 44);
             this.btn_reset.TabIndex = 44;
@@ -180,12 +183,43 @@
             this.label2.TabIndex = 45;
             this.label2.Text = "Gói tập";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(35, 332);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(96, 25);
+            this.label5.TabIndex = 46;
+            this.label5.Text = "Thời hạn:";
+            // 
+            // txt_thoihan
+            // 
+            this.txt_thoihan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_thoihan.Location = new System.Drawing.Point(167, 327);
+            this.txt_thoihan.Name = "txt_thoihan";
+            this.txt_thoihan.Size = new System.Drawing.Size(83, 30);
+            this.txt_thoihan.TabIndex = 47;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(256, 330);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(71, 25);
+            this.label6.TabIndex = 48;
+            this.label6.Text = "Tháng";
+            // 
             // Admin_FormDanhSachGoiTap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(1009, 664);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txt_thoihan);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_reset);
             this.Controls.Add(this.dataGridView1);
@@ -219,5 +253,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btn_reset;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txt_thoihan;
+        private System.Windows.Forms.Label label6;
     }
 }
