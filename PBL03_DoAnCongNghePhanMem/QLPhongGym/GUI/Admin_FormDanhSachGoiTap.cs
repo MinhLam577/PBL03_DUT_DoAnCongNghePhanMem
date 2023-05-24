@@ -55,6 +55,7 @@ namespace QLPhongGym.GUI
             txt_MGT.Text = "";
             txt_Price.Text = "";
             txt_TenGT.Text = "";
+            txt_thoihan.Text = "";
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -65,6 +66,7 @@ namespace QLPhongGym.GUI
                 txt_MGT.Text = row.Cells["Mã gói tập"].Value.ToString();
                 txt_TenGT.Text = row.Cells["Gói tập"].Value.ToString();
                 txt_Price.Text = row.Cells["Giá(vnđ)"].Value.ToString();
+                txt_thoihan.Text = row.Cells["Thời hạn(Tháng)"].Value.ToString();
             }
         }
 
@@ -94,8 +96,14 @@ namespace QLPhongGym.GUI
                     MessageBox.Show("Giá gói tập không hợp lệ, vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                if (!int.TryParse(txt_thoihan.Text, out int thoihan) || thoihan <= 0)
+                {
+                    MessageBox.Show("Thời hạn gói tập không hợp lệ, vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 tb.NameGT = txt_TenGT.Text;
                 tb.Price = Convert.ToDouble(txt_Price.Text);
+                tb.ThoiHanTapTheoThang = Convert.ToInt32(txt_thoihan.Text);
                 GoiTapBLL.Instance.AddGT(tb);
                 MessageBox.Show("Đã thêm thành công!!!");
                 Reset();
@@ -123,9 +131,15 @@ namespace QLPhongGym.GUI
                     MessageBox.Show("Giá thiết bị không hợp lệ, vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                if (!int.TryParse(txt_thoihan.Text, out int thoihan) || thoihan <= 0)
+                {
+                    MessageBox.Show("Thời hạn gói tập không hợp lệ, vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 tb.IDGT = Convert.ToInt32(txt_MGT.Text);
                 tb.Price = Convert.ToDouble(txt_Price.Text);
                 tb.NameGT = txt_TenGT.Text;
+                tb.ThoiHanTapTheoThang = Convert.ToInt32(txt_thoihan.Text);
                 GoiTapBLL.Instance.UpdateGT(tb);
                 MessageBox.Show("Đã sửa thành công!!!");
                 Reset();

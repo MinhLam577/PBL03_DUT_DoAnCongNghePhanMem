@@ -27,11 +27,14 @@ namespace QLPhongGym.DAL
             List<GoiTap> list = new List<GoiTap>();
             var item = db.GoiTaps.Select(s => new
             {
-                s.IDGT, s.NameGT, s.Price
+                s.IDGT,
+                s.NameGT,
+                s.Price,
+                s.ThoiHanTapTheoThang
             }).ToList();
-            foreach(var i in item)
+            foreach (var i in item)
             {
-                list.Add(new GoiTap { IDGT = i.IDGT, NameGT = i.NameGT, Price = i.Price });
+                list.Add(new GoiTap { IDGT = i.IDGT, NameGT = i.NameGT, Price = i.Price, ThoiHanTapTheoThang = i.ThoiHanTapTheoThang });
             }
             return list;
         }
@@ -46,16 +49,34 @@ namespace QLPhongGym.DAL
         public int AddGT(GoiTap GT)
         {
             db.GoiTaps.Add(GT);
-            return db.SaveChanges(); 
+            return db.SaveChanges();
         }
         public void DeleteGT(GoiTap GT)
         {
             db.GoiTaps.Remove(GT);
+            db.SaveChanges();
         }
-        public int UpdateGT(GoiTap GT)
+        public void UpdateGT(GoiTap GT)
         {
-            db.Entry(GT).State = System.Data.Entity.EntityState.Modified;
-            return db.SaveChanges();
+            var s = db.GoiTaps.FirstOrDefault(p => p.IDGT == GT.IDGT);
+            if (s != null)
+            {
+                try
+                {
+                    s.IDGT = GT.IDGT;
+                    s.NameGT = GT.NameGT;
+                    s.ThoiHanTapTheoThang = GT.ThoiHanTapTheoThang;
+                    s.Price = GT.Price;
+                    db.SaveChanges();
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Lỗi" + e.Message);
+                    throw;
+                }
+                /*db.Entry(GT).State = System.Data.Entity.EntityState.Modified;
+                return db.SaveChanges();*/
+            }
         }
         public DataTable TaoBang()
         {
@@ -64,6 +85,7 @@ namespace QLPhongGym.DAL
             dt.Columns.Add("Mã gói tập", typeof(int));
             dt.Columns.Add("Gói tập", typeof(string));
             dt.Columns.Add("Giá(vnđ)", typeof(double));
+            dt.Columns.Add("Thời hạn(Tháng)", typeof(int));
             return dt;
         }
         public DataTable GetData_DAL()
@@ -73,14 +95,14 @@ namespace QLPhongGym.DAL
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
                 data = TaoBang();
-                var str = from p in db.GoiTaps select new { p.IDGT, p.NameGT, p.Price};
+                var str = from p in db.GoiTaps select new { p.IDGT, p.NameGT, p.Price, p.ThoiHanTapTheoThang };
                 foreach (var item in db.GoiTaps)
                 {
-                    data.Rows.Add(cnt++, item.IDGT, item.NameGT, item.Price);
+                    data.Rows.Add(cnt++, item.IDGT, item.NameGT, item.Price, item.ThoiHanTapTheoThang);
                 }
                 return data;
             }
         }
-        
+
     }
 }
