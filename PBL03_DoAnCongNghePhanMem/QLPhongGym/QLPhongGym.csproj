@@ -82,6 +82,7 @@
     <Compile Include="BLL\QLHLVBLL.cs" />
     <Compile Include="BLL\ThietBi_BLL.cs" />
     <Compile Include="BLL\TKBLL.cs" />
+    <Compile Include="BLL\TKHLV_BLL.cs" />
     <Compile Include="BLL\UsersBLL.cs" />
     <Compile Include="DAL\DangKiGoiTapDAL.cs" />
     <Compile Include="DAL\GoiTapDAL.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="DAL\QLHLVDAL.cs" />
     <Compile Include="DAL\ThietBiDAL.cs" />
     <Compile Include="DAL\TKDAL.cs" />
+    <Compile Include="DAL\TKHLV_DAL.cs" />
     <Compile Include="DAL\UsersDAL.cs" />
     <Compile Include="DTO\Admin.cs">
       <DependentUpon>QLPhongGymDB.tt</DependentUpon>
@@ -151,6 +153,12 @@
     <Compile Include="GUI\AddOrEditFormKH.Designer.cs">
       <DependentUpon>AddOrEditFormKH.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Admin_DangKiTaiKhoanHLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_DangKiTaiKhoanHLV.Designer.cs">
+      <DependentUpon>Admin_DangKiTaiKhoanHLV.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Admin_FormDanhSachGoiTap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +182,12 @@
     </Compile>
     <Compile Include="GUI\Admin_FormDetailThietBi.Designer.cs">
       <DependentUpon>Admin_FormDetailThietBi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_FormThemTKHLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_FormThemTKHLV.Designer.cs">
+      <DependentUpon>Admin_FormThemTKHLV.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Admin_FormThongKe.cs">
       <SubType>Form</SubType>
@@ -276,6 +290,9 @@
     <EmbeddedResource Include="GUI\AddOrEditFormKH.resx">
       <DependentUpon>AddOrEditFormKH.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin_DangKiTaiKhoanHLV.resx">
+      <DependentUpon>Admin_DangKiTaiKhoanHLV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin_FormDanhSachGoiTap.resx">
       <DependentUpon>Admin_FormDanhSachGoiTap.cs</DependentUpon>
     </EmbeddedResource>
@@ -287,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin_FormDetailThietBi.resx">
       <DependentUpon>Admin_FormDetailThietBi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin_FormThemTKHLV.resx">
+      <DependentUpon>Admin_FormThemTKHLV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin_FormThongKe.resx">
       <DependentUpon>Admin_FormThongKe.cs</DependentUpon>

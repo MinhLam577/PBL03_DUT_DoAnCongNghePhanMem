@@ -137,7 +137,6 @@ namespace QLPhongGym.GUI
             if (currentFormChild != null)
                 currentFormChild.Close();
         }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             if (currentFormChild != null)
@@ -147,14 +146,30 @@ namespace QLPhongGym.GUI
             }
                 
         }
-
         private void button13_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Admin_FormThongKe());
             hideMenu();
         }
+        private void BtnTaiKhoan_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Admin_DangKiTaiKhoanHLV());
+            hideMenu();
+        }
 
-        
+        private void label1_Click(object sender, EventArgs e)
+        {
+            if (currentFormChild != null)
+            {
+                currentFormChild.Close();
+                hideMenu();
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            showMenu(pn_tkadmin);
+        }
 
         private void pb_updateimage_Click(object sender, EventArgs e)
         {
