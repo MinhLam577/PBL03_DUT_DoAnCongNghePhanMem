@@ -43,9 +43,9 @@ namespace QLPhongGym.BLL
         {
             GoiTapDAL.Instance.DeleteGT(GT);
         }
-        public bool UpdateGT(GoiTap GT)
+        public void UpdateGT(GoiTap GT)
         {
-            return GoiTapDAL.Instance.UpdateGT(GT) > 0;
+            GoiTapDAL.Instance.UpdateGT(GT);
         }
         public DataTable GetData_BLL()
         {
