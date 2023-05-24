@@ -56,5 +56,9 @@ namespace QLPhongGym.BLL
         {
             return ThietBiDAL.Instance.KiemTraTen_DAL(name);
         }
+        public List<ThietBi> GetAllTB()
+        {
+            return ThietBiDAL.Instance.GetAllTB();
+        }
     }
 }

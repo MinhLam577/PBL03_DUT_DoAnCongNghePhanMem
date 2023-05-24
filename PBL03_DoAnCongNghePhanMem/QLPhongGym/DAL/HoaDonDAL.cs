@@ -36,5 +36,18 @@ namespace QLPhongGym.DAL
             db.HoaDons.Remove(hd);
             db.SaveChanges();
         }
+        public double TongDoanhThuTheoNamVaThang(int year, int month)
+        {
+            var data = db.HoaDons.ToList();
+            double res = 0;
+            foreach( HoaDon hd in data )
+            {
+                if(hd.NgayThanhToan.Value.Year == year && hd.NgayThanhToan.Value.Month == month)
+                {
+                    res += (double)hd.Price;
+                }
+            }
+            return res;
+        }
     }
 }

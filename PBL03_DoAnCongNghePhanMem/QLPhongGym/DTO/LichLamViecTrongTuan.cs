@@ -14,12 +14,6 @@ namespace QLPhongGym.DTO
     
     public partial class LichLamViecTrongTuan
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public LichLamViecTrongTuan()
-        {
-            this.TinhTrangLamViecHLVs = new HashSet<TinhTrangLamViecHLV>();
-        }
-    
         public int IDLLV { get; set; }
         public Nullable<int> IDHLV { get; set; }
         public Nullable<int> IDCa { get; set; }
@@ -29,7 +23,5 @@ namespace QLPhongGym.DTO
     
         public virtual CaLamViec CaLamViec { get; set; }
         public virtual User User { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TinhTrangLamViecHLV> TinhTrangLamViecHLVs { get; set; }
     }
 }

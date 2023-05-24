@@ -280,5 +280,9 @@ namespace QLPhongGym.DAL
             return coarch;
 
         }
+        public List<int> GetAllHLVID()
+        {
+            return db.Users.OfType<HLV>().Select(s=>s.IDUsers).ToList();
+        }
     }
 }

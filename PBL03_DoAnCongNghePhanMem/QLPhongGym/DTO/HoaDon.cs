@@ -21,7 +21,7 @@ namespace QLPhongGym.DTO
         public Nullable<System.DateTime> NgayThanhToan { get; set; }
         public Nullable<double> Price { get; set; }
     
-        public virtual GoiTap GoiTap { get; set; }
         public virtual LichThueHLV LichThueHLV { get; set; }
+        public virtual GoiTap GoiTap { get; set; }
     }
 }

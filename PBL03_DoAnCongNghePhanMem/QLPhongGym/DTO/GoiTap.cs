@@ -17,17 +17,18 @@ namespace QLPhongGym.DTO
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public GoiTap()
         {
-            this.HoaDons = new HashSet<HoaDon>();
             this.DangKiGoiTaps = new HashSet<DangKiGoiTap>();
+            this.HoaDons = new HashSet<HoaDon>();
         }
     
         public int IDGT { get; set; }
-        public Nullable<double> Price { get; set; }
         public string NameGT { get; set; }
+        public Nullable<double> Price { get; set; }
+        public Nullable<int> ThoiHanTapTheoThang { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HoaDon> HoaDons { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DangKiGoiTap> DangKiGoiTaps { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HoaDon> HoaDons { get; set; }
     }
 }

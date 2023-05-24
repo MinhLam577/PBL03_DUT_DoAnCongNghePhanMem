@@ -73,7 +73,7 @@ namespace QLPhongGym.DAL
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
                 data = TaoBang();
-                var str = from p in db.GoiTaps select new { p.IDGT, p.NameGT, p.Price };
+                var str = from p in db.GoiTaps select new { p.IDGT, p.NameGT, p.Price};
                 foreach (var item in db.GoiTaps)
                 {
                     data.Rows.Add(cnt++, item.IDGT, item.NameGT, item.Price);

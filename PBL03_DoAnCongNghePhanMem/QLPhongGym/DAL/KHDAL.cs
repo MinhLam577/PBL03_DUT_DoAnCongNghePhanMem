@@ -223,5 +223,6 @@ namespace QLPhongGym.DAL
         {
             return db.Users.OfType<KH>().Select(s => s.IDUsers).ToList();
         }
+        
     }
 }

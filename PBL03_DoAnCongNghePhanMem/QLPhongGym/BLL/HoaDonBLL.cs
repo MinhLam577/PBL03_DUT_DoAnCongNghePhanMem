@@ -33,5 +33,9 @@ namespace QLPhongGym.BLL
         {
             HoaDonDAL.Instance.DeleteHoaDon(hd);
         }
+        public double GetTongDoanhThuTheoNamVaThang(int year, int month)
+        {
+            return HoaDonDAL.Instance.TongDoanhThuTheoNamVaThang(year, month);
+        }
     }
 }
