@@ -243,6 +243,12 @@
     <Compile Include="GUI\Admin_FormDanhSachKH.Designer.cs">
       <DependentUpon>Admin_FormDanhSachKH.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\DoiMatKhauForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DoiMatKhauForm.Designer.cs">
+      <DependentUpon>DoiMatKhauForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -272,6 +278,12 @@
     </Compile>
     <Compile Include="GUI\QuenMatKhauForm.designer.cs">
       <DependentUpon>QuenMatKhauForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UpdateImageAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\UpdateImageAccountForm.Designer.cs">
+      <DependentUpon>UpdateImageAccountForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -323,6 +335,9 @@
     <EmbeddedResource Include="GUI\Admin_FormDanhSachKH.resx">
       <DependentUpon>Admin_FormDanhSachKH.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DoiMatKhauForm.resx">
+      <DependentUpon>DoiMatKhauForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormTrangChu.resx">
       <DependentUpon>FormTrangChu.cs</DependentUpon>
     </EmbeddedResource>
@@ -337,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QuenMatKhauForm.resx">
       <DependentUpon>QuenMatKhauForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UpdateImageAccountForm.resx">
+      <DependentUpon>UpdateImageAccountForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

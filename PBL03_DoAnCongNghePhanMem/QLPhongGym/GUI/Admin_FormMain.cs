@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QLPhongGym.BLL;
+using QLPhongGym.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +14,37 @@ namespace QLPhongGym.GUI
 {
     public partial class Admin_FormMain : Form
     {
+        public TK tk { get; set; }
+        static string ImageDefaultPath = Application.StartupPath + @"\Resources\account_icon.png";
         public Admin_FormMain()
         {
             InitializeComponent();
             customizedesing();
         }
-
+        public Admin_FormMain(TK tk)
+        {
+            InitializeComponent();
+            this.tk = tk;
+            LoadDuLieuTK();
+            customizedesing();
+        }
+        public void LoadDuLieuTK()
+        {
+            int IDUser = (int)tk.IDUser;
+            Admin ad = (Admin)UsersBLL.Instance.GetUserByID(IDUser);
+            lb_gmailad.Text = ad.Gmail;
+            lb_tenad.Text = ad.Name;
+            if (ad.Image != null)
+            {
+                pb_acc.Image = Image.FromFile(Application.StartupPath + @"\PersonImage\" + ad.Image);
+                pb_ad.Image = Image.FromFile(Application.StartupPath + @"\PersonImage\" + ad.Image);
+            }
+            else
+            {
+                pb_acc.Image = Image.FromFile(ImageDefaultPath);
+                pb_ad.Image = Image.FromFile(ImageDefaultPath);
+            }
+        }
         private Form currentFormChild = null;
         private void OpenChildForm(Form childForm)
         {
@@ -35,12 +62,17 @@ namespace QLPhongGym.GUI
         private void customizedesing()
         {
             panel_hlv.Visible = false;
+            pn_tkadmin.Visible = false;
         }
         private void hideMenu()
         {
             if (panel_hlv.Visible == true)
             {
                 panel_hlv.Visible = false;
+            }
+            if(pn_tkadmin.Visible == true)
+            {
+                pn_tkadmin.Visible = false;
             }
         }
         private void showMenu(Panel subMenu)
@@ -118,10 +150,55 @@ namespace QLPhongGym.GUI
             hideMenu();
         }
 
+
         private void BtnTaiKhoan_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Admin_DangKiTaiKhoanHLV());
             hideMenu();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            if (currentFormChild != null)
+            {
+                currentFormChild.Close();
+                hideMenu();
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            showMenu(pn_tkadmin);
+        }
+
+        private void pb_updateimage_Click(object sender, EventArgs e)
+        {
+            UpdateImageAccountForm updateImageAccountForm = new UpdateImageAccountForm((Admin)UsersBLL.Instance.GetUserByID((int)tk.IDUser));
+            updateImageAccountForm.catnhatthanhcong += new UpdateImageAccountForm.Mydel(LoadDuLieuTK);
+            updateImageAccountForm.ShowDialog();
+            hideMenu();
+        }
+
+        private void btn_updatethongtin_Click(object sender, EventArgs e)
+        {
+            AddOrEditFormKH addOrEditFormKH = new AddOrEditFormKH(tk.IDUser.ToString(), "Admin");
+            addOrEditFormKH.ThayDoiThanhCong += (s, ev) => { 
+                (s as AddOrEditFormKH).Close();
+                LoadDuLieuTK();
+            };
+            addOrEditFormKH.ShowDialog();
+            hideMenu();
+        }
+
+        private void btn_doimatkhau_Click(object sender, EventArgs e)
+        {
+            DoiMatKhauForm dmk = new DoiMatKhauForm(tk);
+            dmk.DoiMatKhauChanged += (s, ev) =>
+            {
+                (s as DoiMatKhauForm).Close();
+            };
+            dmk.ShowDialog();
+        }
+
     }
 }

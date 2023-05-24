@@ -46,6 +46,10 @@ namespace QLPhongGym.BLL
         {
             TKDAL.Instance.DeleteTK(tk);
         }
+        public bool UpdateTK(TK tk)
+        {
+            return TKDAL.Instance.UpdateTK(tk) > 0;
+        }
         public int GetIDQuyen(string username)
         {
             return TKDAL.Instance.GetIDQuyen(username);
@@ -60,6 +64,14 @@ namespace QLPhongGym.BLL
         public bool checkxnmk(string mk, string xnmk)
         {
             return TKDAL.Instance.checkxnmk(mk, xnmk);
+        }
+        public TK GetTKByID(int ID)
+        {
+            return TKDAL.Instance.GetTKByUserID(ID);
+        }
+        public TK GetTKByTenTK(string TenTK)
+        {
+            return TKDAL.Instance.GetTKByTenTK(TenTK);
         }
 
     }

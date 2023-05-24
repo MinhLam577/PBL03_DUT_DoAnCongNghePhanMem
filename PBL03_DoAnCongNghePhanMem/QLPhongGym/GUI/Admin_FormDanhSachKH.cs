@@ -88,7 +88,7 @@ namespace QLPhongGym.GUI
         }
         private void thêmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddOrEditFormKH addOrEditFormKH = new AddOrEditFormKH("");
+            AddOrEditFormKH addOrEditFormKH = new AddOrEditFormKH("", "");
             addOrEditFormKH.ShowDialog();
         }
         private void sửaToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -98,7 +98,7 @@ namespace QLPhongGym.GUI
                 try
                 {
                     int IDKH = KHBLL.Instance.GetUserIDByCCCD(dgv_kh.SelectedRows[0].Cells["CCCD"].Value.ToString());
-                    AddOrEditFormKH f = new AddOrEditFormKH(IDKH.ToString());
+                    AddOrEditFormKH f = new AddOrEditFormKH(IDKH.ToString(), "");
                     f.ThayDoiThanhCong += F_ThayDoiThanhCong;
                     f.ShowDialog();
                 }

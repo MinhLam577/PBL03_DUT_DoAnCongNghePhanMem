@@ -86,6 +86,14 @@ namespace QLPhongGym.DAL
             }
             
         }
+        public User GetUserByName(string Name)
+        {
+            try
+            {
+                return db.Users.FirstOrDefault(s => s.Name == Name);
+            }
+            catch { return null; }
+        }
         public bool CheckUserExist(string CCCD, string Name)
         {
             return db.Users.Any(s => s.CCCD.Equals(CCCD) && s.Name.Equals(Name));
@@ -184,13 +192,13 @@ namespace QLPhongGym.DAL
             try
             {
                 int IDUsers = GetAllUser().Where(p => p.Gmail.Equals(Gmail)).FirstOrDefault().IDUsers;
-                return db.TKs.Where(a => (int)a.IDUser == IDUsers).FirstOrDefault().MatkhauTK;
+                string mk = db.TKs.Where(a => (int)a.IDUser == IDUsers).FirstOrDefault().MatkhauTK;
+                return Eramake.eCryptography.Decrypt(mk);
             }
             catch
             {
                 return null;
             }
-            
         }
          
     }
