@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.lb_SystemName = new System.Windows.Forms.Label();
-            this.pb_eye = new System.Windows.Forms.PictureBox();
             this.btn_DangNhap = new System.Windows.Forms.Button();
             this.txb_mk = new System.Windows.Forms.TextBox();
             this.txb_TenTk = new System.Windows.Forms.TextBox();
@@ -38,8 +37,9 @@
             this.lb_QuenMk = new System.Windows.Forms.Label();
             this.lb_Tk = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_eye)).BeginInit();
+            this.pb_eye = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_eye)).BeginInit();
             this.SuspendLayout();
             // 
             // lb_SystemName
@@ -54,20 +54,6 @@
             this.lb_SystemName.Size = new System.Drawing.Size(432, 70);
             this.lb_SystemName.TabIndex = 33;
             this.lb_SystemName.Text = "California GYM";
-            // 
-            // pb_eye
-            // 
-            this.pb_eye.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pb_eye.BackColor = System.Drawing.Color.White;
-            this.pb_eye.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_eye.BackgroundImage")));
-            this.pb_eye.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pb_eye.Location = new System.Drawing.Point(1206, 376);
-            this.pb_eye.Name = "pb_eye";
-            this.pb_eye.Size = new System.Drawing.Size(29, 31);
-            this.pb_eye.TabIndex = 39;
-            this.pb_eye.TabStop = false;
-            this.pb_eye.MouseLeave += new System.EventHandler(this.pb_eye_MouseLeave);
-            this.pb_eye.MouseHover += new System.EventHandler(this.pb_eye_MouseHover);
             // 
             // btn_DangNhap
             // 
@@ -129,7 +115,7 @@
             this.lb_QuenMk.BackColor = System.Drawing.Color.Transparent;
             this.lb_QuenMk.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_QuenMk.ForeColor = System.Drawing.Color.Black;
-            this.lb_QuenMk.Location = new System.Drawing.Point(866, 554);
+            this.lb_QuenMk.Location = new System.Drawing.Point(847, 556);
             this.lb_QuenMk.Name = "lb_QuenMk";
             this.lb_QuenMk.Size = new System.Drawing.Size(223, 32);
             this.lb_QuenMk.TabIndex = 36;
@@ -161,6 +147,20 @@
             this.pictureBox1.TabIndex = 40;
             this.pictureBox1.TabStop = false;
             // 
+            // pb_eye
+            // 
+            this.pb_eye.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pb_eye.BackColor = System.Drawing.Color.White;
+            this.pb_eye.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_eye.BackgroundImage")));
+            this.pb_eye.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb_eye.Location = new System.Drawing.Point(1206, 376);
+            this.pb_eye.Name = "pb_eye";
+            this.pb_eye.Size = new System.Drawing.Size(29, 31);
+            this.pb_eye.TabIndex = 39;
+            this.pb_eye.TabStop = false;
+            this.pb_eye.MouseLeave += new System.EventHandler(this.pb_eye_MouseLeave);
+            this.pb_eye.MouseHover += new System.EventHandler(this.pb_eye_MouseHover);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -182,8 +182,8 @@
             this.HelpButton = true;
             this.Name = "LoginForm";
             this.Text = "Đăng nhập";
-            ((System.ComponentModel.ISupportInitialize)(this.pb_eye)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_eye)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

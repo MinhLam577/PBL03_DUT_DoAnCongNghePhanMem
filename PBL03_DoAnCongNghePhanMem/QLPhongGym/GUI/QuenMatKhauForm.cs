@@ -16,6 +16,7 @@ namespace QLPhongGym.GUI
 {
     public partial class QuenMatKhauForm : Form
     {
+        public event EventHandler LayLaiMatKhauThanhCong;
         SmtpClient smtpClient = null;
         MailAddress from = new MailAddress("minh32405@gmail.com", "Nhóm PBL03_DUT phần mềm quản lý phòng gym");
         MailAddress to = null;
@@ -32,7 +33,6 @@ namespace QLPhongGym.GUI
             smtpClient.Credentials = new NetworkCredential("minh32405@gmail.com", "hxehdwxujpyzpsfw");
             smtpClient.Send(mail);
         }
-        public event EventHandler Exit;
         private void btn_laylaimk_Click(object sender, EventArgs e)
         {
             if(txb_Email.Text == "") { MessageBox.Show("Mời nhập vào thông tin còn trống"); return; }
@@ -48,7 +48,10 @@ namespace QLPhongGym.GUI
                     try
                     {
                         GuiMail(mail);
-                        MessageBox.Show("Lấy lại mật khẩu thành công", "Vui lòng kiểm tra lại gmail để lấy mật khẩu", MessageBoxButtons.OK);
+                        if(MessageBox.Show("Lấy lại mật khẩu thành công", "Vui lòng kiểm tra lại gmail để lấy mật khẩu", MessageBoxButtons.OK) == DialogResult.OK)
+                        {
+                            LayLaiMatKhauThanhCong(this, new EventArgs());
+                        }
                     }
                     catch(Exception ex)
                     {
@@ -63,7 +66,7 @@ namespace QLPhongGym.GUI
         
         private void btn_exit_Click(object sender, EventArgs e)
         {
-            Exit(this, new EventArgs());
+            this.Close();
         }
     }
 }

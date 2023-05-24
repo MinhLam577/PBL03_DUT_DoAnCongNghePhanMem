@@ -89,6 +89,11 @@ namespace QLPhongGym.BLL
         {
             return UsersDAL.Instance.GetPassword(Gmail);
         }
-        
+        public User GetUserByName(string Name)
+        {
+            return UsersDAL.Instance.GetUserByName(Name);
+        }
+
+
     }
 }
