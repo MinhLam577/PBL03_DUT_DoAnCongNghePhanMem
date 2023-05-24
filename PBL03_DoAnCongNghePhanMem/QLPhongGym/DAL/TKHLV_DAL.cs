@@ -207,5 +207,13 @@ namespace QLPhongGym.DAL
                 return dt;
             }
         }
+        public bool TenTK(string str)
+        {
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                return db.TKs.Any(s => s.TenTK == str);
+            }
+        }
+
     }
 }

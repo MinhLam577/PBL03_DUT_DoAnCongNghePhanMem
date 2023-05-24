@@ -22,6 +22,7 @@ namespace QLPhongGym.GUI
         public void LoadDTG()
         {
             dataGridView1.DataSource = GoiTapBLL.Instance.GetData_BLL();
+            dataGridView1.Columns["Mã gói tập"].Visible = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -86,9 +87,9 @@ namespace QLPhongGym.GUI
                         }
                     }
                 }
-                if(txt_TenGT.Text == "")
+                if(txt_TenGT.Text == "" || GoiTapBLL.Instance.TenGT_BLL(txt_TenGT.Text)== true)
                 {
-                    MessageBox.Show("Gói tập chưa có tên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Tên gói tập bị bỏ trống hoặc đã được sử dụng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 if (!int.TryParse(txt_Price.Text, out int price) || price <= 0)
@@ -121,9 +122,9 @@ namespace QLPhongGym.GUI
             GoiTap tb = new GoiTap();
             if (txt_MGT.Text != "")
             {
-                if (txt_TenGT.Text == "")
+                if (txt_TenGT.Text == "" || GoiTapBLL.Instance.TenGT_BLL(txt_TenGT.Text) == true)
                 {
-                    MessageBox.Show(" Cần nhập tên thiết bị", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Tên gói tập bị bỏ trống hoặc đã được sử dụng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 if (!int.TryParse(txt_Price.Text, out int price) || price <= 0)

@@ -103,6 +103,13 @@ namespace QLPhongGym.DAL
                 return data;
             }
         }
+        public bool TenGT(string str)
+        {
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                return db.GoiTaps.Any(s => s.NameGT == str);
+            }
+        }
 
     }
 }
