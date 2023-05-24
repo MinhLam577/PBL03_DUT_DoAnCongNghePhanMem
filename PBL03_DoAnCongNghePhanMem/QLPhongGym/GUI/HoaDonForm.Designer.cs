@@ -369,9 +369,8 @@
             // btn_inhoadon
             // 
             this.btn_inhoadon.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_inhoadon.Enabled = false;
             this.btn_inhoadon.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_inhoadon.Location = new System.Drawing.Point(428, 584);
+            this.btn_inhoadon.Location = new System.Drawing.Point(413, 584);
             this.btn_inhoadon.Name = "btn_inhoadon";
             this.btn_inhoadon.Size = new System.Drawing.Size(167, 56);
             this.btn_inhoadon.TabIndex = 96;
@@ -383,7 +382,7 @@
             // 
             this.btn_thoat.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_thoat.Location = new System.Drawing.Point(660, 584);
+            this.btn_thoat.Location = new System.Drawing.Point(656, 584);
             this.btn_thoat.Name = "btn_thoat";
             this.btn_thoat.Size = new System.Drawing.Size(167, 56);
             this.btn_thoat.TabIndex = 97;
@@ -403,6 +402,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel1);
             this.Name = "HoaDonForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hóa Đơn";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

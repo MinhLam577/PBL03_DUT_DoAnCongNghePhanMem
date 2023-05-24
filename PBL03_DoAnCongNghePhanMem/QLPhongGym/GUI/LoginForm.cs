@@ -20,16 +20,16 @@ namespace QLPhongGym.GUI
         {
             InitializeComponent();
         }
-        public void OpenUserForm(string user)
+        public void OpenUserForm(string TenQuyen, int IDUser)
         {
-            switch (user)
+            switch (TenQuyen)
             {
                 case "HLV":
                     HLV_FormMain hlvfm = new HLV_FormMain();
                     hlvfm.ShowDialog();
                     break;
                 case "Admin":
-                    Admin_FormMain adfm = new Admin_FormMain();
+                    Admin_FormMain adfm = new Admin_FormMain(TKBLL.Instance.GetTKByID(IDUser));
                     adfm.ShowDialog();
                     break;
             }
@@ -47,7 +47,6 @@ namespace QLPhongGym.GUI
             }
             
         }
-
         private void pb_eye_MouseLeave(object sender, EventArgs e)
         {
             try
@@ -61,11 +60,10 @@ namespace QLPhongGym.GUI
             }
             
         }
-
-      
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
-            string tentk = txb_TenTk.Text, mk = txb_mk.Text, username;
+            string tentk = txb_TenTk.Text, mk = txb_mk.Text, TenQuyen;
+            int userid = -1;
             if (!TKBLL.Instance.CheckTenTKExist(tentk) || !TKBLL.Instance.CheckMKTKExist(mk))
             {
                 MessageBox.Show("Tên tài khoản hoặc mật khẩu không đúng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -73,8 +71,9 @@ namespace QLPhongGym.GUI
             }
             try
             {
-                username = TKBLL.Instance.GetUserName(TKBLL.Instance.GetIDQuyen(tentk));
-                OpenUserForm(username);
+                TenQuyen = TKBLL.Instance.GetUserName(TKBLL.Instance.GetIDQuyen(tentk));
+                userid = (int)TKBLL.Instance.GetTKByTenTK(tentk).IDUser;
+                OpenUserForm(TenQuyen, userid);
             }
             catch(Exception ex)
             {
@@ -86,8 +85,7 @@ namespace QLPhongGym.GUI
         private void lb_QuenMk_Click_1(object sender, EventArgs e)
         {
             QuenMatKhauForm qmkf = new QuenMatKhauForm();
-            qmkf.Exit += (a, b) => { (a as QuenMatKhauForm).Close(); this.Show(); };
-            this.Hide();
+            qmkf.LayLaiMatKhauThanhCong += (a, b) => { (a as QuenMatKhauForm).Close(); };
             qmkf.Show();
         }
     }

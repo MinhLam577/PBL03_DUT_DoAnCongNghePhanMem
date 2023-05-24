@@ -49,16 +49,16 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_reset = new System.Windows.Forms.Button();
             this.btn_upload = new System.Windows.Forms.Button();
-            this.pb_kh = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pb_kh = new System.Windows.Forms.PictureBox();
+            this.lb_main = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_kh)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_kh)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -312,19 +312,6 @@
             this.btn_upload.UseVisualStyleBackColor = false;
             this.btn_upload.Click += new System.EventHandler(this.btn_upload_Click);
             // 
-            // pb_kh
-            // 
-            this.pb_kh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pb_kh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pb_kh.Image = ((System.Drawing.Image)(resources.GetObject("pb_kh.Image")));
-            this.pb_kh.Location = new System.Drawing.Point(0, 0);
-            this.pb_kh.Name = "pb_kh";
-            this.pb_kh.Size = new System.Drawing.Size(448, 478);
-            this.pb_kh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_kh.TabIndex = 94;
-            this.pb_kh.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -374,24 +361,37 @@
             this.btn_save.UseVisualStyleBackColor = false;
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
-            // label1
+            // pb_kh
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pb_kh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pb_kh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb_kh.Image = ((System.Drawing.Image)(resources.GetObject("pb_kh.Image")));
+            this.pb_kh.Location = new System.Drawing.Point(0, 0);
+            this.pb_kh.Name = "pb_kh";
+            this.pb_kh.Size = new System.Drawing.Size(448, 478);
+            this.pb_kh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_kh.TabIndex = 94;
+            this.pb_kh.TabStop = false;
+            // 
+            // lb_main
+            // 
+            this.lb_main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(438, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(369, 54);
-            this.label1.TabIndex = 96;
-            this.label1.Text = "Đăng kí hội viên";
+            this.lb_main.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_main.Location = new System.Drawing.Point(125, 12);
+            this.lb_main.Name = "lb_main";
+            this.lb_main.Size = new System.Drawing.Size(957, 54);
+            this.lb_main.TabIndex = 96;
+            this.lb_main.Text = "Đăng kí hội viên";
+            this.lb_main.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lb_main);
             this.panel2.Location = new System.Drawing.Point(3, -3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1228, 89);
@@ -414,10 +414,9 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_kh)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pb_kh)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -447,7 +446,7 @@
         private System.Windows.Forms.PictureBox pb_kh;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btn_save;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lb_main;
         private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.Panel panel2;
     }
