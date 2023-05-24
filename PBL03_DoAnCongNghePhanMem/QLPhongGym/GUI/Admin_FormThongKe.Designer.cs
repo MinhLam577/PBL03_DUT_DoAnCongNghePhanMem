@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_FormThongKe));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -377,41 +377,41 @@
             // chart_doanhthu
             // 
             this.chart_doanhthu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea3.Name = "ChartArea1";
-            this.chart_doanhthu.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart_doanhthu.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.chart_doanhthu.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart_doanhthu.Legends.Add(legend1);
             this.chart_doanhthu.Location = new System.Drawing.Point(3, 3);
             this.chart_doanhthu.Name = "chart_doanhthu";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series3.LabelForeColor = System.Drawing.Color.Red;
-            series3.Legend = "Legend1";
-            series3.Name = "Doanh thu";
-            series3.YValuesPerPoint = 2;
-            this.chart_doanhthu.Series.Add(series3);
-            this.chart_doanhthu.Size = new System.Drawing.Size(727, 584);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.LabelForeColor = System.Drawing.Color.Red;
+            series1.Legend = "Legend1";
+            series1.Name = "Doanh thu";
+            series1.YValuesPerPoint = 2;
+            this.chart_doanhthu.Series.Add(series1);
+            this.chart_doanhthu.Size = new System.Drawing.Size(746, 584);
             this.chart_doanhthu.TabIndex = 9;
             this.chart_doanhthu.Text = "char1";
             // 
             // chart_nhucaudkgt
             // 
             this.chart_nhucaudkgt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea4.Name = "ChartArea1";
-            this.chart_nhucaudkgt.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart_nhucaudkgt.Legends.Add(legend4);
-            this.chart_nhucaudkgt.Location = new System.Drawing.Point(736, 3);
+            chartArea2.Name = "ChartArea1";
+            this.chart_nhucaudkgt.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart_nhucaudkgt.Legends.Add(legend2);
+            this.chart_nhucaudkgt.Location = new System.Drawing.Point(755, 3);
             this.chart_nhucaudkgt.Name = "chart_nhucaudkgt";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
-            series4.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series4.LabelForeColor = System.Drawing.Color.Red;
-            series4.Legend = "Legend1";
-            series4.Name = "Số lượng đăng kí gói";
-            this.chart_nhucaudkgt.Series.Add(series4);
-            this.chart_nhucaudkgt.Size = new System.Drawing.Size(768, 584);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
+            series2.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series2.LabelForeColor = System.Drawing.Color.Red;
+            series2.Legend = "Legend1";
+            series2.Name = "Số lượng đăng kí gói";
+            this.chart_nhucaudkgt.Series.Add(series2);
+            this.chart_nhucaudkgt.Size = new System.Drawing.Size(754, 584);
             this.chart_nhucaudkgt.TabIndex = 10;
             this.chart_nhucaudkgt.Text = "char1";
             // 
