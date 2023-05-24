@@ -24,7 +24,7 @@ namespace QLPhongGym.DTO
         public Nullable<int> SoNgayConLai { get; set; }
         public Nullable<bool> BaoLuu { get; set; }
     
-        public virtual GoiTap GoiTap { get; set; }
         public virtual User User { get; set; }
+        public virtual GoiTap GoiTap { get; set; }
     }
 }

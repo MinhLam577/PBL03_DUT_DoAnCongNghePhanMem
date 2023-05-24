@@ -62,5 +62,9 @@ namespace QLPhongGym.BLL
         {
             return QLHLVDAL.getInstance.GetInfoHLV(ma);
         }
+        public List<int> GetAllHLVID()
+        {
+            return QLHLVDAL.getInstance.GetAllHLVID();
+        }
     }
 }

@@ -136,6 +136,18 @@ namespace QLPhongGym.DAL
         {
             return db.DangKiGoiTaps.Where(s => (int)s.IDKH == IDKH && s.NgayDangKiGT.Value == ngaydangki && s.NgayKetThucGT.Value == ngayketthuc && (int)s.IDGT == IDGT).FirstOrDefault();
         }
-        
+        public int GetSoLuongDKGTTheoNamVaThang(int year, int month)
+        {
+            var data = db.DangKiGoiTaps.ToList();
+            int cnt = 0;
+            foreach (DangKiGoiTap dkgt in data)
+            {
+                if(dkgt.NgayDangKiGT.Value.Year == year && dkgt.NgayDangKiGT.Value.Month == month)
+                {
+                    cnt++;
+                }
+            }
+            return cnt;
+        }
     }
 }

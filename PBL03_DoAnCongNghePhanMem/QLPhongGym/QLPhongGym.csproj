@@ -63,6 +63,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -97,9 +98,6 @@
       <DependentUpon>QLPhongGymDB.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\DangKiGoiTap.cs">
-      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DTO\DanhGiaHLV.cs">
       <DependentUpon>QLPhongGymDB.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\GoiTap.cs">
@@ -141,9 +139,6 @@
     <Compile Include="DTO\ThietBi.cs">
       <DependentUpon>QLPhongGymDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="DTO\TinhTrangLamViecHLV.cs">
-      <DependentUpon>QLPhongGymDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="DTO\TK.cs">
       <DependentUpon>QLPhongGymDB.tt</DependentUpon>
     </Compile>
@@ -179,6 +174,12 @@
     </Compile>
     <Compile Include="GUI\Admin_FormDetailThietBi.Designer.cs">
       <DependentUpon>Admin_FormDetailThietBi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin_FormThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_FormThongKe.Designer.cs">
+      <DependentUpon>Admin_FormThongKe.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\DangKiGoiTapKHForm.cs">
       <SubType>Form</SubType>
@@ -274,6 +275,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin_FormDetailThietBi.resx">
       <DependentUpon>Admin_FormDetailThietBi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin_FormThongKe.resx">
+      <DependentUpon>Admin_FormThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DangKiGoiTapKHForm.resx">
       <DependentUpon>DangKiGoiTapKHForm.cs</DependentUpon>

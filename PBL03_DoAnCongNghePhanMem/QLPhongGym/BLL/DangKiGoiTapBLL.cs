@@ -65,5 +65,9 @@ namespace QLPhongGym.BLL
         {
             return DangKiGoiTapDAL.Instance.GetDKGTByIDKH_IDGT(IDKH, IDGT);
         }
+        public int GetSoLuongDKGTTheoNamVaThang(int year, int month)
+        {
+            return DangKiGoiTapDAL.Instance.GetSoLuongDKGTTheoNamVaThang(year, month);
+        }
     }
 }

@@ -40,7 +40,10 @@ namespace QLPhongGym.DAL
             return dt;
         }
 
-
+        public List<ThietBi> GetAllTB()
+        {
+            return db.ThietBis.ToList();
+        }
         public DataTable GetAllDanhSachThietBi_DAL()
         {
             DataTable dt = new DataTable();
