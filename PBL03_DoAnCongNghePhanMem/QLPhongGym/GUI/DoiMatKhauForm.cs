@@ -84,7 +84,7 @@ namespace QLPhongGym.GUI
 
         private void btn_cancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DoiMatKhauChanged(this, new EventArgs());
         }
     }
 }

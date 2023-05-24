@@ -19,6 +19,7 @@ namespace QLPhongGym.GUI
         public Admin ad { get; set; }
         static string DefaultImagePath = Application.StartupPath + @"\Resources\account_icon.png";
         public delegate void Mydel();
+        public event EventHandler LuuThanhCong;
         public Mydel catnhatthanhcong { get; set; }
         public UpdateImageAccountForm()
         {
@@ -95,6 +96,7 @@ namespace QLPhongGym.GUI
                 {
                     MessageBox.Show("Cật nhật ảnh thành công");
                     catnhatthanhcong();
+                    LuuThanhCong(this, new EventArgs());
                 }
             }
             catch
