@@ -28,6 +28,25 @@ namespace QLPhongGym.GUI
             InitializeComponent();
             this.ID = ID;
             TenQuyen = tenQuyen;
+            if(ID == "")
+            {
+                lb_main.Text = "Đăng kí khách hàng";
+                lb_main.Font = new Font("Arial", 28, FontStyle.Bold);
+                lb_main.ForeColor = Color.Black;
+            }
+            else { 
+                if(tenQuyen == "Admin")
+                {
+                    lb_main.Text = "Cật nhật thông tin Admin";
+                    lb_main.Font = new Font("Arial", 28, FontStyle.Bold);
+                    lb_main.ForeColor = Color.Black;
+                }
+                else {
+                    lb_main.Text = "Cật nhật thông tin khách hàng";
+                    lb_main.Font = new Font("Arial", 28, FontStyle.Bold);
+                    lb_main.ForeColor = Color.Black;
+                }
+            }
         }
         private void LoadData()
         {

@@ -50,16 +50,16 @@
             this.btn_reset = new System.Windows.Forms.Button();
             this.btn_upload = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lb_main = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
             this.pb_kh = new System.Windows.Forms.PictureBox();
+            this.lb_main = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_kh)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txb_CCCD
@@ -325,29 +325,6 @@
             this.panel1.Size = new System.Drawing.Size(447, 673);
             this.panel1.TabIndex = 95;
             // 
-            // lb_main
-            // 
-            this.lb_main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lb_main.AutoSize = true;
-            this.lb_main.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_main.Location = new System.Drawing.Point(438, 12);
-            this.lb_main.Name = "lb_main";
-            this.lb_main.Size = new System.Drawing.Size(369, 54);
-            this.lb_main.TabIndex = 96;
-            this.lb_main.Text = "Đăng kí hội viên";
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.lb_main);
-            this.panel2.Location = new System.Drawing.Point(3, -3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1228, 89);
-            this.panel2.TabIndex = 96;
-            // 
             // btn_cancel
             // 
             this.btn_cancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -397,6 +374,29 @@
             this.pb_kh.TabIndex = 94;
             this.pb_kh.TabStop = false;
             // 
+            // lb_main
+            // 
+            this.lb_main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_main.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_main.Location = new System.Drawing.Point(125, 12);
+            this.lb_main.Name = "lb_main";
+            this.lb_main.Size = new System.Drawing.Size(957, 54);
+            this.lb_main.TabIndex = 96;
+            this.lb_main.Text = "Đăng kí hội viên";
+            this.lb_main.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.lb_main);
+            this.panel2.Location = new System.Drawing.Point(3, -3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1228, 89);
+            this.panel2.TabIndex = 96;
+            // 
             // AddOrEditFormKH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -415,9 +415,8 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_kh)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
