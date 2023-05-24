@@ -203,6 +203,7 @@ namespace QLPhongGym.GUI
         {
             rb_tienmat.Checked = true;
             cb_gt.DisplayMember = "NameGT";
+            cb_gt.ValueMember = "IDGT";
             cb_gt.DataSource = GoiTapBLL.Instance.GetAllGT();
             dtp_ngaydangki.Enabled = false;
             if (GoiTap != "")
@@ -217,41 +218,13 @@ namespace QLPhongGym.GUI
                 {
                     if ((cb_gt.SelectedItem as GoiTap) != null)
                     {
-                        switch ((cb_gt.SelectedItem as GoiTap).NameGT)
-                        {
-                            case "1 Tháng":
-                                dtp_ngaydangki.Value = now;
-                                dtp_ngayketthuc.Value = dtp_ngaydangki.Value.AddMonths(1);
-                                numeric_giamgia.Value = 0;
-                                lb_dongia.Text = (cb_gt.SelectedItem as GoiTap).Price.ToString();
-                                lb_thanhtien.Text = lb_dongia.Text;
-                                lb_thanhtoan.Text = lb_thanhtien.Text;
-                                break;
-                            case "6 Tháng":
-                                dtp_ngaydangki.Value = now;
-                                dtp_ngayketthuc.Value = dtp_ngaydangki.Value.AddMonths(6);
-                                numeric_giamgia.Value = 0;
-                                lb_dongia.Text = (cb_gt.SelectedItem as GoiTap).Price.ToString();
-                                lb_thanhtien.Text = lb_dongia.Text;
-                                lb_thanhtoan.Text = lb_thanhtien.Text;
-                                break;
-                            case "1 Năm":
-                                dtp_ngaydangki.Value = now;
-                                dtp_ngayketthuc.Value = dtp_ngaydangki.Value.AddYears(1);
-                                numeric_giamgia.Value = 0;
-                                lb_dongia.Text = (cb_gt.SelectedItem as GoiTap).Price.ToString();
-                                lb_thanhtien.Text = lb_dongia.Text;
-                                lb_thanhtoan.Text = lb_thanhtien.Text;
-                                break;
-                            case "2 Năm":
-                                dtp_ngaydangki.Value = now;
-                                dtp_ngayketthuc.Value = dtp_ngaydangki.Value.AddYears(2);
-                                numeric_giamgia.Value = 0;
-                                lb_dongia.Text = (cb_gt.SelectedItem as GoiTap).Price.ToString();
-                                lb_thanhtien.Text = lb_dongia.Text;
-                                lb_thanhtoan.Text = lb_thanhtien.Text;
-                                break;
-                        }
+                        int TimeGT = (int)(cb_gt.SelectedItem as GoiTap).ThoiHanTapTheoThang;
+                        dtp_ngaydangki.Value = now;
+                        dtp_ngayketthuc.Value = dtp_ngaydangki.Value.AddMonths(TimeGT);
+                        numeric_giamgia.Value = 0;
+                        lb_dongia.Text = (cb_gt.SelectedItem as GoiTap).Price.ToString();
+                        lb_thanhtien.Text = lb_dongia.Text;
+                        lb_thanhtoan.Text = lb_thanhtien.Text;
                     }
                 }
                 else
@@ -261,52 +234,18 @@ namespace QLPhongGym.GUI
                         DangKiGoiTap dkgt = DangKiGoiTapBLL.Instance.GetDKGTByIDKH_IDGT(kh.IDUsers, GoiTapBLL.Instance.GetGTByName(GoiTap).IDGT);
                         DateTime ngayketthuc = dkgt.NgayKetThucGT.Value;
                         TimeSpan timeleft = default;
+                        int Timegt = (cb_gt.SelectedItem as GoiTap).ThoiHanTapTheoThang.Value;
                         if (ngayketthuc > now)
                             timeleft = ngayketthuc.Subtract(now);
                         else if(ngayketthuc == now) timeleft = TimeSpan.Zero;
-                        switch ((cb_gt.SelectedItem as GoiTap).NameGT)
-                        {
-                            case "1 Tháng":
-                                dtp_ngaydangki.Value = now;
-                                if (timeleft != default)
-                                    dtp_ngayketthuc.Value = dtp_ngaydangki.Value.AddMonths(1).Add(timeleft);
-                                else dtp_ngayketthuc.Value = dtp_ngaydangki.Value.AddMonths(1);
-                                numeric_giamgia.Value = 0;
-                                lb_dongia.Text = (cb_gt.SelectedItem as GoiTap).Price.ToString();
-                                lb_thanhtien.Text = lb_dongia.Text;
-                                lb_thanhtoan.Text = lb_thanhtien.Text;
-                                break;
-                            case "6 Tháng":
-                                dtp_ngaydangki.Value = now;
-                                if (timeleft != default)
-                                    dtp_ngayketthuc.Value = dtp_ngaydangki.Value.AddMonths(6).Add(timeleft);
-                                else dtp_ngayketthuc.Value = dtp_ngaydangki.Value.AddMonths(6);
-                                numeric_giamgia.Value = 0;
-                                lb_dongia.Text = (cb_gt.SelectedItem as GoiTap).Price.ToString();
-                                lb_thanhtien.Text = lb_dongia.Text;
-                                lb_thanhtoan.Text = lb_thanhtien.Text;
-                                break;
-                            case "1 Năm":
-                                dtp_ngaydangki.Value = now;
-                                if (timeleft != default)
-                                    dtp_ngayketthuc.Value = dtp_ngaydangki.Value.AddYears(1).Add(timeleft);
-                                else dtp_ngayketthuc.Value = dtp_ngaydangki.Value.AddYears(1);
-                                numeric_giamgia.Value = 0;
-                                lb_dongia.Text = (cb_gt.SelectedItem as GoiTap).Price.ToString();
-                                lb_thanhtien.Text = lb_dongia.Text;
-                                lb_thanhtoan.Text = lb_thanhtien.Text;
-                                break;
-                            case "2 Năm":
-                                dtp_ngaydangki.Value = now;
-                                if (timeleft != default)
-                                    dtp_ngayketthuc.Value = dtp_ngaydangki.Value.AddYears(2).Add(timeleft);
-                                else dtp_ngayketthuc.Value = dtp_ngaydangki.Value.AddYears(2);
-                                numeric_giamgia.Value = 0;
-                                lb_dongia.Text = (cb_gt.SelectedItem as GoiTap).Price.ToString();
-                                lb_thanhtien.Text = lb_dongia.Text;
-                                lb_thanhtoan.Text = lb_thanhtien.Text;
-                                break;
-                        }
+                        dtp_ngaydangki.Value = now;
+                        if (timeleft != TimeSpan.Zero)
+                            dtp_ngayketthuc.Value = dtp_ngaydangki.Value.AddMonths(Timegt).Add(timeleft);
+                        else dtp_ngayketthuc.Value = dtp_ngaydangki.Value.AddMonths(Timegt);
+                        numeric_giamgia.Value = 0;
+                        lb_dongia.Text = (cb_gt.SelectedItem as GoiTap).Price.ToString();
+                        lb_thanhtien.Text = lb_dongia.Text;
+                        lb_thanhtoan.Text = lb_thanhtien.Text;
                     }
                 }
             }
