@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_FormMain));
-            this.button5 = new System.Windows.Forms.Button();
+            this.BtnTaiKhoan = new System.Windows.Forms.Button();
             this.panel_hlv = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -67,32 +67,34 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_acc)).BeginInit();
             this.SuspendLayout();
             // 
-            // button5
+            // BtnTaiKhoan
             // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button5.Location = new System.Drawing.Point(0, 110);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(219, 55);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "Lịch làm việc";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = true;
+            this.BtnTaiKhoan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnTaiKhoan.FlatAppearance.BorderSize = 0;
+            this.BtnTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnTaiKhoan.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnTaiKhoan.Location = new System.Drawing.Point(0, 110);
+            this.BtnTaiKhoan.Name = "BtnTaiKhoan";
+            this.BtnTaiKhoan.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
+            this.BtnTaiKhoan.Size = new System.Drawing.Size(219, 55);
+            this.BtnTaiKhoan.TabIndex = 2;
+            this.BtnTaiKhoan.Text = "Tài khoản";
+            this.BtnTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnTaiKhoan.UseVisualStyleBackColor = true;
+            this.BtnTaiKhoan.Click += new System.EventHandler(this.BtnTaiKhoan_Click);
             // 
             // panel_hlv
             // 
             this.panel_hlv.BackColor = System.Drawing.Color.PeachPuff;
-            this.panel_hlv.Controls.Add(this.button5);
+            this.panel_hlv.Controls.Add(this.BtnTaiKhoan);
             this.panel_hlv.Controls.Add(this.button8);
             this.panel_hlv.Controls.Add(this.button9);
             this.panel_hlv.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_hlv.Location = new System.Drawing.Point(0, 393);
             this.panel_hlv.Name = "panel_hlv";
-            this.panel_hlv.Size = new System.Drawing.Size(219, 225);
+            this.panel_hlv.Size = new System.Drawing.Size(219, 220);
+
             this.panel_hlv.TabIndex = 4;
             // 
             // button8
@@ -136,7 +138,8 @@
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button13.Location = new System.Drawing.Point(0, 802);
+
+            this.button13.Location = new System.Drawing.Point(0, 797);
             this.button13.Name = "button13";
             this.button13.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.button13.Size = new System.Drawing.Size(219, 91);
@@ -172,7 +175,7 @@
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button14.Location = new System.Drawing.Point(0, 893);
+            this.button14.Location = new System.Drawing.Point(0, 888);
             this.button14.Name = "button14";
             this.button14.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.button14.Size = new System.Drawing.Size(219, 83);
@@ -190,7 +193,8 @@
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button16.Location = new System.Drawing.Point(0, 709);
+
+            this.button16.Location = new System.Drawing.Point(0, 704);
             this.button16.Name = "button16";
             this.button16.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.button16.Size = new System.Drawing.Size(219, 93);
@@ -208,7 +212,7 @@
             this.button_ThietBi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_ThietBi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_ThietBi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button_ThietBi.Location = new System.Drawing.Point(0, 618);
+            this.button_ThietBi.Location = new System.Drawing.Point(0, 613);
             this.button_ThietBi.Name = "button_ThietBi";
             this.button_ThietBi.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.button_ThietBi.Size = new System.Drawing.Size(219, 91);
@@ -457,7 +461,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button BtnTaiKhoan;
         private System.Windows.Forms.Panel panel_hlv;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
