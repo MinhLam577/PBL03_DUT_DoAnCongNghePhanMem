@@ -117,5 +117,11 @@ namespace QLPhongGym.GUI
             OpenChildForm(new Admin_FormThongKe());
             hideMenu();
         }
+
+        private void BtnTaiKhoan_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Admin_DangKiTaiKhoanHLV());
+            hideMenu();
+        }
     }
 }

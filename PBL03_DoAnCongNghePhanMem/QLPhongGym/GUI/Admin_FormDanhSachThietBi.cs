@@ -25,11 +25,13 @@ namespace QLPhongGym.GUI
         public void ShowData()
         {
             dataGridView1.DataSource = ThietBi_BLL.Instance.GetAllThietBi_BLL();
+            dataGridView1.Columns["ID"].Visible = false;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             dataGridView1.DataSource = ThietBi_BLL.Instance.Search_BLL(txt_Search.Text);
+            dataGridView1.Columns["ID"].Visible = false;
         }
         private void btn_xoa_Click(object sender, EventArgs e)
         {
@@ -42,16 +44,7 @@ namespace QLPhongGym.GUI
                                                        MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
-                    // Xóa các hàng được chọn
-                    foreach (DataGridViewRow row in dataGridView1.SelectedRows)
-                    {
-                        if (row.Cells["ID"] != null && row.Cells["ID"].Value != null)
-                        {
-                            int id = Convert.ToInt32(row.Cells["ID"].Value);
-                            ThietBi_BLL.Instance.DeleteTB_BLL(id);
-                        }
-
-                    }
+                    
                 }
                 ShowData();
 
@@ -69,6 +62,7 @@ namespace QLPhongGym.GUI
                 MessageBox.Show("Chọn thứ bạn muốn sắp xếp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            dataGridView1.Columns["ID"].Visible = false;
         }
 
         private void btn_xem_Click(object sender, EventArgs e)
@@ -82,6 +76,7 @@ namespace QLPhongGym.GUI
                     f.d += new Admin_FormDetailThietBi.Mydel(ShowData);
                     f.ShowDialog();
                 }
+                dataGridView1.Columns["ID"].Visible = false;
             }
         }
 
@@ -90,6 +85,7 @@ namespace QLPhongGym.GUI
             Admin_FormDetailThietBi f = new Admin_FormDetailThietBi("");
             f.d += new Admin_FormDetailThietBi.Mydel(ShowData);
             f.ShowDialog();
+            dataGridView1.Columns["ID"].Visible = false;
         }
 
     }

@@ -45,7 +45,7 @@ namespace DAL
         }
         public bool CheckMKTKExist(string mk)
         {
-            return LoadAllTK().Any(t => t.MatkhauTK.Equals(Eramake.eCryptography.Encrypt(mk)));
+            return LoadAllTK().Any(t => t.MatkhauTK.Equals(Eramake.eCryptography.Encrypt(mk)) || t.MatkhauTK.Equals(mk));
         }
         public bool CheckTenTKExist(string tentk)
         {
