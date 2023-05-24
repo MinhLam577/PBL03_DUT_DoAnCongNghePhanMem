@@ -56,6 +56,7 @@ namespace QLPhongGym.GUI
                 Txt_TK.Text = Ten;
                 txt_MaHLV.Enabled = false;
                 Txt_TenHLV.Enabled = false;
+                Txt_TK.Enabled = false;
             }
         }
 
@@ -77,7 +78,11 @@ namespace QLPhongGym.GUI
             a.IDQuyen = 2;
             a.IDUser = Convert.ToInt32(ID);
             if (Ten == "")
-            {
+            {   if(TKHLV_BLL.Instance.TenTK_BLL(Txt_TK.Text) == true)
+                {
+                    MessageBox.Show("Tên tài khoản đã được sử dụng");
+                    return;
+                }
                 TKHLV_BLL.Instance.ADD_BLL(a);
                 d();
             }

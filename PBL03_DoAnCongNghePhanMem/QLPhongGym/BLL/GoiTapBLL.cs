@@ -51,5 +51,9 @@ namespace QLPhongGym.BLL
         {
             return GoiTapDAL.Instance.GetData_DAL();
         }
+        public bool TenGT_BLL(string str)
+        {
+            return GoiTapDAL.Instance.TenGT(str);
+        }
     }
 }

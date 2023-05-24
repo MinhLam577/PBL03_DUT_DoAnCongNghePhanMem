@@ -58,5 +58,9 @@ namespace QLPhongGym.BLL
         {
             return TKHLV_DAL.Instance.SearchSP_DAL(str);
         }
+        public bool TenTK_BLL(string str)
+        {
+            return TKHLV_DAL.Instance.TenTK(str);
+        }
     }
 }
