@@ -32,8 +32,12 @@ namespace QLPhongGym.GUI
         {
             int IDUser = (int)tk.IDUser;
             Admin ad = (Admin)UsersBLL.Instance.GetUserByID(IDUser);
-            lb_gmailad.Text = ad.Gmail;
-            lb_tenad.Text = ad.Name;
+            if(ad != null)
+            {
+                lb_gmailad.Text = ad.Gmail;
+                lb_tenad.Text = ad.Name;
+            }
+            
             if (ad.Image != null)
             {
                 pb_acc.Image = Image.FromFile(Application.StartupPath + @"\PersonImage\" + ad.Image);
@@ -133,7 +137,6 @@ namespace QLPhongGym.GUI
             if (currentFormChild != null)
                 currentFormChild.Close();
         }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             if (currentFormChild != null)
@@ -143,14 +146,11 @@ namespace QLPhongGym.GUI
             }
                 
         }
-
         private void button13_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Admin_FormThongKe());
             hideMenu();
         }
-
-
         private void BtnTaiKhoan_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Admin_DangKiTaiKhoanHLV());
@@ -175,6 +175,10 @@ namespace QLPhongGym.GUI
         {
             UpdateImageAccountForm updateImageAccountForm = new UpdateImageAccountForm((Admin)UsersBLL.Instance.GetUserByID((int)tk.IDUser));
             updateImageAccountForm.catnhatthanhcong += new UpdateImageAccountForm.Mydel(LoadDuLieuTK);
+            updateImageAccountForm.LuuThanhCong += (s, ev) =>
+            {
+                (s as UpdateImageAccountForm).Close();
+            };
             updateImageAccountForm.ShowDialog();
             hideMenu();
         }
@@ -196,9 +200,52 @@ namespace QLPhongGym.GUI
             dmk.DoiMatKhauChanged += (s, ev) =>
             {
                 (s as DoiMatKhauForm).Close();
+                hideMenu();
             };
             dmk.ShowDialog();
         }
 
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+            if (currentFormChild != null)
+            {
+                currentFormChild.Close();
+                hideMenu();
+            }
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+            showMenu(pn_tkadmin);
+        }
+
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            if (currentFormChild != null)
+            {
+                currentFormChild.Close();
+                hideMenu();
+            }
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+            if (currentFormChild != null)
+            {
+                currentFormChild.Close();
+                hideMenu();
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            showMenu(pn_tkadmin);
+        }
+
+        private void pb_ad_Click(object sender, EventArgs e)
+        {
+            showMenu(pn_tkadmin);
+        }
     }
 }

@@ -56,7 +56,7 @@ namespace QLPhongGym.GUI
         {
             int x = DateTime.Now.Year;
             chart_nhucaudkgt.Titles.Add(new System.Windows.Forms.DataVisualization.Charting.Title(
-                "Nhu cầu đăng kí gói tập trong năm " + x, System.Windows.Forms.DataVisualization.Charting.Docking.Top,
+                "số lượng đăng kí gói tập trong năm " + x, System.Windows.Forms.DataVisualization.Charting.Docking.Top,
                 new Font("Arial", 18, FontStyle.Bold), Color.Black));
             for (int i = 1, j = 0; i <= 12; i++, j++)
             {

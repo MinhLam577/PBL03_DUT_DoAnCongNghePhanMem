@@ -40,30 +40,31 @@
             this.button_ThietBi = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pb_ad = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pn_tkadmin = new System.Windows.Forms.Panel();
-            this.lb_gmailad = new System.Windows.Forms.Label();
-            this.lb_tenad = new System.Windows.Forms.Label();
+            this.btn_doimatkhau = new System.Windows.Forms.Button();
             this.btn_updatethongtin = new System.Windows.Forms.Button();
             this.pb_updateimage = new System.Windows.Forms.PictureBox();
+            this.lb_gmailad = new System.Windows.Forms.Label();
+            this.lb_tenad = new System.Windows.Forms.Label();
             this.pb_acc = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pb_ad = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_doimatkhau = new System.Windows.Forms.Button();
             this.panel_hlv.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_ad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pn_tkadmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_updateimage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_acc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_ad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnTaiKhoan
@@ -260,12 +261,24 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(219, 210);
+            this.panel2.TabIndex = 0;
+            this.panel2.Click += new System.EventHandler(this.panel2_Click);
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.pb_ad);
             this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.pictureBox1);
+            this.panel4.Controls.Add(this.label2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.panel4.Location = new System.Drawing.Point(240, 0);
@@ -273,17 +286,52 @@
             this.panel4.Size = new System.Drawing.Size(954, 82);
             this.panel4.TabIndex = 0;
             // 
+            // pb_ad
+            // 
+            this.pb_ad.Image = ((System.Drawing.Image)(resources.GetObject("pb_ad.Image")));
+            this.pb_ad.Location = new System.Drawing.Point(196, 15);
+            this.pb_ad.Name = "pb_ad";
+            this.pb_ad.Size = new System.Drawing.Size(67, 61);
+            this.pb_ad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_ad.TabIndex = 2;
+            this.pb_ad.TabStop = false;
+            this.pb_ad.Click += new System.EventHandler(this.pb_ad_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(269, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 29);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Admin";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(55, 61);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(92, 39);
+            this.label1.Location = new System.Drawing.Point(67, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Home";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // panel3
             // 
@@ -294,6 +342,17 @@
             this.panel3.Size = new System.Drawing.Size(954, 506);
             this.panel3.TabIndex = 2;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(954, 506);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // pn_tkadmin
             // 
             this.pn_tkadmin.BackColor = System.Drawing.Color.White;
@@ -303,30 +362,21 @@
             this.pn_tkadmin.Controls.Add(this.lb_gmailad);
             this.pn_tkadmin.Controls.Add(this.lb_tenad);
             this.pn_tkadmin.Controls.Add(this.pb_acc);
-            this.pn_tkadmin.Location = new System.Drawing.Point(437, 75);
+            this.pn_tkadmin.Location = new System.Drawing.Point(436, 85);
             this.pn_tkadmin.Name = "pn_tkadmin";
-            this.pn_tkadmin.Size = new System.Drawing.Size(511, 158);
+            this.pn_tkadmin.Size = new System.Drawing.Size(511, 152);
             this.pn_tkadmin.TabIndex = 3;
             // 
-            // lb_gmailad
+            // btn_doimatkhau
             // 
-            this.lb_gmailad.AutoSize = true;
-            this.lb_gmailad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_gmailad.Location = new System.Drawing.Point(128, 57);
-            this.lb_gmailad.Name = "lb_gmailad";
-            this.lb_gmailad.Size = new System.Drawing.Size(217, 25);
-            this.lb_gmailad.TabIndex = 5;
-            this.lb_gmailad.Text = "minh32405@gmail.com";
-            // 
-            // lb_tenad
-            // 
-            this.lb_tenad.AutoSize = true;
-            this.lb_tenad.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_tenad.Location = new System.Drawing.Point(127, 11);
-            this.lb_tenad.Name = "lb_tenad";
-            this.lb_tenad.Size = new System.Drawing.Size(229, 36);
-            this.lb_tenad.TabIndex = 4;
-            this.lb_tenad.Text = "Lâm Nhật Minh";
+            this.btn_doimatkhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_doimatkhau.Location = new System.Drawing.Point(283, 102);
+            this.btn_doimatkhau.Name = "btn_doimatkhau";
+            this.btn_doimatkhau.Size = new System.Drawing.Size(205, 42);
+            this.btn_doimatkhau.TabIndex = 8;
+            this.btn_doimatkhau.Text = "Đổi mật khẩu";
+            this.btn_doimatkhau.UseVisualStyleBackColor = true;
+            this.btn_doimatkhau.Click += new System.EventHandler(this.btn_doimatkhau_Click);
             // 
             // btn_updatethongtin
             // 
@@ -350,6 +400,26 @@
             this.pb_updateimage.TabStop = false;
             this.pb_updateimage.Click += new System.EventHandler(this.pb_updateimage_Click);
             // 
+            // lb_gmailad
+            // 
+            this.lb_gmailad.AutoSize = true;
+            this.lb_gmailad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_gmailad.Location = new System.Drawing.Point(128, 57);
+            this.lb_gmailad.Name = "lb_gmailad";
+            this.lb_gmailad.Size = new System.Drawing.Size(217, 25);
+            this.lb_gmailad.TabIndex = 5;
+            this.lb_gmailad.Text = "minh32405@gmail.com";
+            // 
+            // lb_tenad
+            // 
+            this.lb_tenad.AutoSize = true;
+            this.lb_tenad.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_tenad.Location = new System.Drawing.Point(127, 14);
+            this.lb_tenad.Name = "lb_tenad";
+            this.lb_tenad.Size = new System.Drawing.Size(229, 36);
+            this.lb_tenad.TabIndex = 4;
+            this.lb_tenad.Text = "Lâm Nhật Minh";
+            // 
             // pb_acc
             // 
             this.pb_acc.Image = ((System.Drawing.Image)(resources.GetObject("pb_acc.Image")));
@@ -359,62 +429,6 @@
             this.pb_acc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_acc.TabIndex = 3;
             this.pb_acc.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(954, 506);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pb_ad
-            // 
-            this.pb_ad.Image = ((System.Drawing.Image)(resources.GetObject("pb_ad.Image")));
-            this.pb_ad.Location = new System.Drawing.Point(196, 23);
-            this.pb_ad.Name = "pb_ad";
-            this.pb_ad.Size = new System.Drawing.Size(71, 45);
-            this.pb_ad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_ad.TabIndex = 2;
-            this.pb_ad.TabStop = false;
-            this.pb_ad.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(31, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 45);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(219, 210);
-            this.panel2.TabIndex = 0;
-            this.panel2.Click += new System.EventHandler(this.panel2_Click);
-            // 
-            // btn_doimatkhau
-            // 
-            this.btn_doimatkhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_doimatkhau.Location = new System.Drawing.Point(283, 102);
-            this.btn_doimatkhau.Name = "btn_doimatkhau";
-            this.btn_doimatkhau.Size = new System.Drawing.Size(205, 42);
-            this.btn_doimatkhau.TabIndex = 8;
-            this.btn_doimatkhau.Text = "Đổi mật khẩu";
-            this.btn_doimatkhau.UseVisualStyleBackColor = true;
-            this.btn_doimatkhau.Click += new System.EventHandler(this.btn_doimatkhau_Click);
             // 
             // Admin_FormMain
             // 
@@ -433,14 +447,14 @@
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_ad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pn_tkadmin.ResumeLayout(false);
             this.pn_tkadmin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_updateimage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_acc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_ad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -472,5 +486,6 @@
         private System.Windows.Forms.PictureBox pb_updateimage;
         private System.Windows.Forms.Button btn_updatethongtin;
         private System.Windows.Forms.Button btn_doimatkhau;
+        private System.Windows.Forms.Label label2;
     }
 }

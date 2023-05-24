@@ -27,10 +27,12 @@ namespace QLPhongGym.GUI
         public void LoadListAllKH()
         {
             dgv_kh.DataSource = KHBLL.Instance.FindListKHByIDOrName("");
+            dgv_kh.Columns["IDThe"].Visible = false;
         }
         public void LoadListDKGT(int IDKH)
         {  
             dgv_gt.DataSource = DangKiGoiTapBLL.Instance.GetDKGT_Newest_DataTableByIDKH(IDKH);
+            dgv_gt.Columns["IDThe"].Visible = false;
             //Lấy ra gói tập có hiệu lực gần nhất có hiệu lực
             DangKiGoiTap dkgt = DangKiGoiTapBLL.Instance.GetDKGT_Newest_ByIDKH(IDKH);
             //Kiểm tra nếu gói tập có tồn tại thì show ghi chú của user lên giao diện
