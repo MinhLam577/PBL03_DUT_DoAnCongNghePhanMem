@@ -42,10 +42,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pb_ad = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pb_ad = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pn_tkadmin = new System.Windows.Forms.Panel();
@@ -58,8 +58,8 @@
             this.panel_hlv.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_ad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_ad)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pn_tkadmin.SuspendLayout();
@@ -93,8 +93,7 @@
             this.panel_hlv.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_hlv.Location = new System.Drawing.Point(0, 393);
             this.panel_hlv.Name = "panel_hlv";
-            this.panel_hlv.Size = new System.Drawing.Size(219, 220);
-
+            this.panel_hlv.Size = new System.Drawing.Size(219, 175);
             this.panel_hlv.TabIndex = 4;
             // 
             // button8
@@ -125,7 +124,7 @@
             this.button9.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
             this.button9.Size = new System.Drawing.Size(219, 55);
             this.button9.TabIndex = 0;
-            this.button9.Text = "Danh sách";
+            this.button9.Text = "Thông tin huấn luyện viên";
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
@@ -138,8 +137,7 @@
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-
-            this.button13.Location = new System.Drawing.Point(0, 797);
+            this.button13.Location = new System.Drawing.Point(0, 752);
             this.button13.Name = "button13";
             this.button13.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.button13.Size = new System.Drawing.Size(219, 91);
@@ -175,7 +173,7 @@
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button14.Location = new System.Drawing.Point(0, 888);
+            this.button14.Location = new System.Drawing.Point(0, 843);
             this.button14.Name = "button14";
             this.button14.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.button14.Size = new System.Drawing.Size(219, 83);
@@ -193,8 +191,7 @@
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-
-            this.button16.Location = new System.Drawing.Point(0, 704);
+            this.button16.Location = new System.Drawing.Point(0, 659);
             this.button16.Name = "button16";
             this.button16.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.button16.Size = new System.Drawing.Size(219, 93);
@@ -212,7 +209,7 @@
             this.button_ThietBi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_ThietBi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_ThietBi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button_ThietBi.Location = new System.Drawing.Point(0, 613);
+            this.button_ThietBi.Location = new System.Drawing.Point(0, 568);
             this.button_ThietBi.Name = "button_ThietBi";
             this.button_ThietBi.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.button_ThietBi.Size = new System.Drawing.Size(219, 91);
@@ -286,29 +283,6 @@
             this.panel4.Size = new System.Drawing.Size(954, 82);
             this.panel4.TabIndex = 0;
             // 
-            // pb_ad
-            // 
-            this.pb_ad.Image = ((System.Drawing.Image)(resources.GetObject("pb_ad.Image")));
-            this.pb_ad.Location = new System.Drawing.Point(196, 15);
-            this.pb_ad.Name = "pb_ad";
-            this.pb_ad.Size = new System.Drawing.Size(67, 61);
-            this.pb_ad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_ad.TabIndex = 2;
-            this.pb_ad.TabStop = false;
-            this.pb_ad.Click += new System.EventHandler(this.pb_ad_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(269, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 29);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Admin";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -321,6 +295,17 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
+            // pb_ad
+            // 
+            this.pb_ad.Image = ((System.Drawing.Image)(resources.GetObject("pb_ad.Image")));
+            this.pb_ad.Location = new System.Drawing.Point(196, 15);
+            this.pb_ad.Name = "pb_ad";
+            this.pb_ad.Size = new System.Drawing.Size(67, 61);
+            this.pb_ad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_ad.TabIndex = 2;
+            this.pb_ad.TabStop = false;
+            this.pb_ad.Click += new System.EventHandler(this.pb_ad_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -332,6 +317,18 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Home";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(269, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 29);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Admin";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel3
             // 
@@ -447,8 +444,8 @@
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_ad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_ad)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pn_tkadmin.ResumeLayout(false);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLPhongGym.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,15 +8,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using QLPhongGym.BLL;
 namespace QLPhongGym.GUI
 {
     public partial class HLV_FormMain : Form
     {
+        public TK tk { get; set; }
+        static string ImageDefaultPath = Application.StartupPath + @"\Resources\account_icon.png";
         public HLV_FormMain()
         {
             InitializeComponent();
             customizedesing();
+        }
+        public HLV_FormMain(TK tk)
+        {
+            InitializeComponent();
+            this.tk = tk;
+            LoadDuLieuTK();
+            customizedesing();
+        }
+        public void LoadDuLieuTK()
+        {
+            int IDUser = (int)tk.IDUser;
+            HLV hlv = (HLV)UsersBLL.Instance.GetUserByID(IDUser);
+            if (hlv != null)
+            {
+                lb_gmailhlv.Text = hlv.Gmail;
+                lb_tenhlv.Text = hlv.Name;
+            }
+            if (hlv.Image != null)
+            {
+                pb_acc.Image = Image.FromFile(Application.StartupPath + @"\PersonImage\" + hlv.Image);
+                pb_hlv.Image = Image.FromFile(Application.StartupPath + @"\PersonImage\" + hlv.Image);
+            }
+            else
+            {
+                pb_acc.Image = Image.FromFile(ImageDefaultPath);
+                pb_hlv.Image = Image.FromFile(ImageDefaultPath);
+            }
         }
         private Form currentFormChild = null;
         private void OpenChildForm(Form childForm)
@@ -33,14 +63,12 @@ namespace QLPhongGym.GUI
         }
         private void customizedesing()
         {
-            Menu_Panel.Visible = false;
+            pn_tkhlv.Visible = false;
         }
         private void hideMenu()
         {
-            if (Menu_Panel.Visible == true)
-            {
-                Menu_Panel.Visible = false;
-            }
+            if (pn_tkhlv.Visible)
+                pn_tkhlv.Visible = false;
         }
         private void showMenu(Panel subMenu)
         {
@@ -58,9 +86,72 @@ namespace QLPhongGym.GUI
             this.Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btn_thoat_Click(object sender, EventArgs e)
         {
-            showMenu(Menu_Panel);
+            switch(MessageBox.Show("Bạn có chắc chắn muốn thoát ứng dụng?", "Xin chờ một lát", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)){
+                case DialogResult.OK:
+                    this.Close();
+                    break;
+                case DialogResult.Cancel:
+                    break;
+            }
+            
+        }
+
+        private void pb_home_Click(object sender, EventArgs e)
+        {
+            if (currentFormChild != null)
+            {
+                currentFormChild.Close();
+                hideMenu();
+            }
+        }
+
+        private void lb_home_Click(object sender, EventArgs e)
+        {
+            if (currentFormChild != null)
+            {
+                currentFormChild.Close();
+                hideMenu();
+            }
+        }
+
+        private void pb_acc_Click(object sender, EventArgs e)
+        {
+            showMenu(pn_tkhlv);
+        }
+
+        private void lb_acc_Click(object sender, EventArgs e)
+        {
+            showMenu(pn_tkhlv);
+        }
+
+        private void btn_updatethongtin_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pb_updateimage_Click(object sender, EventArgs e)
+        {
+            UpdateImageAccountForm updateImageAccountForm = new UpdateImageAccountForm((HLV)UsersBLL.Instance.GetUserByID((int)tk.IDUser));
+            updateImageAccountForm.catnhatthanhcong += new UpdateImageAccountForm.Mydel(LoadDuLieuTK);
+            updateImageAccountForm.LuuThanhCong += (s, ev) =>
+            {
+                (s as UpdateImageAccountForm).Close();
+            };
+            updateImageAccountForm.ShowDialog();
+            hideMenu();
+        }
+
+        private void btn_doimatkhau_Click(object sender, EventArgs e)
+        {
+            DoiMatKhauForm dmk = new DoiMatKhauForm(tk);
+            dmk.DoiMatKhauChanged += (s, ev) =>
+            {
+                (s as DoiMatKhauForm).Close();
+                hideMenu();
+            };
+            dmk.ShowDialog();
         }
     }
 }
