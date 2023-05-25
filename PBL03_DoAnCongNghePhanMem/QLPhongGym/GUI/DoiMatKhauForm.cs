@@ -31,6 +31,7 @@ namespace QLPhongGym.GUI
         private void btn_save_Click(object sender, EventArgs e)
         {
             string Mkcu = txb_mkcu.Text, mkmoi = txb_mkmoi.Text, xnmk = txb_xnmkmoi.Text;
+            string tentk = tk.TenTK;
             try
             {
                 if (Mkcu == "" || mkmoi == "" || xnmk == "")
@@ -38,7 +39,7 @@ namespace QLPhongGym.GUI
                     MessageBox.Show("Mời nhập vào dữ liệu còn trống");
                     return;
                 }
-                if (!TKBLL.Instance.CheckMKTKExist(Mkcu))
+                if (!TKBLL.Instance.CheckMKTKExist(tentk, Mkcu))
                 {
                     MessageBox.Show("Mật khẩu cũ không chính xác");
                     return;
@@ -50,7 +51,7 @@ namespace QLPhongGym.GUI
                         MessageBox.Show("Tài khoản và mật khẩu chỉ chứa kí tự số hoặc chữ hoa thường và bao gồm 6 đến 20 kí tự");
                         return;
                     }
-                    if (TKBLL.Instance.CheckMKTKExist(mkmoi))
+                    if (mkmoi.Equals(Mkcu))
                     {
                         MessageBox.Show("Mật khẩu phải khác với mật khẩu cũ");
                         return;

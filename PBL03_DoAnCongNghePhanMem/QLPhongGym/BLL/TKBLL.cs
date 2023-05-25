@@ -34,9 +34,9 @@ namespace QLPhongGym.BLL
         {
             return TKDAL.Instance.CheckTenTKExist(tentk);
         }
-        public bool CheckMKTKExist(string mk)
+        public bool CheckMKTKExist(string tk, string mk)
         {
-            return TKDAL.Instance.CheckMKTKExist(mk);
+            return TKDAL.Instance.CheckMKTKExist(tk, mk);
         }
         public bool AddTK(TK tk)
         {

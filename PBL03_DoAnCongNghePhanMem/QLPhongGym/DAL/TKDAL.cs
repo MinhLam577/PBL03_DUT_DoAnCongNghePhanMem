@@ -42,9 +42,9 @@ namespace DAL
         {
             return Regex.IsMatch(cmnd, "^[0-9]{12}$");
         }
-        public bool CheckMKTKExist(string mk)
+        public bool CheckMKTKExist(string tk, string mk)
         {
-            return LoadAllTK().Any(t => t.MatkhauTK.Equals(Eramake.eCryptography.Encrypt(mk)) || t.MatkhauTK.Equals(mk));
+            return LoadAllTK().Any(t => (t.TenTK.Equals(tk) && t.MatkhauTK.Equals(Eramake.eCryptography.Encrypt(mk))) || (t.TenTK.Equals(tk) && t.MatkhauTK.Equals(mk)));
         }
         public bool CheckTenTKExist(string tentk)
         {
