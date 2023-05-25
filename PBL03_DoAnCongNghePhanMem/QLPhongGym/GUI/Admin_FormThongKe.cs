@@ -29,7 +29,7 @@ namespace QLPhongGym.GUI
                 tonghlv++;
             foreach (var i in ThietBi_BLL.Instance.GetAllTB())
                 tongtb++;
-            foreach(var i in GoiTapBLL.Instance.GetAllGT())
+            foreach (var i in GoiTapBLL.Instance.GetAllGT())
                 tonggt++;
             lb_totalcoach.Text = tonghlv.ToString();
             lb_totalcustomer.Text = tongkhachhang.ToString();
@@ -63,6 +63,11 @@ namespace QLPhongGym.GUI
                 chart_nhucaudkgt.Series["Số lượng đăng kí gói"].Points.AddXY(i, DangKiGoiTapBLL.Instance.GetSoLuongDKGTTheoNamVaThang(x, i));
                 chart_nhucaudkgt.Series["Số lượng đăng kí gói"].Points[j].Label = DangKiGoiTapBLL.Instance.GetSoLuongDKGTTheoNamVaThang(x, i).ToString();
             }
+        }
+
+        private void Admin_FormThongKe_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
