@@ -1,12 +1,14 @@
-﻿using QLPhongGym.DAL;
-using QLPhongGym.DTO;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QLPhongGym.DAL;
+using QLPhongGym.DTO;
 using System.Drawing;
+using System.Net;
 
 namespace QLPhongGym.BLL
 {
@@ -41,14 +43,14 @@ namespace QLPhongGym.BLL
             return QLHLVDAL.getInstance.Delete(idHLv);
         }
         // them 
-        public bool Them(string name, DateTime ngaysinh, bool sex, string cccd, string gmail, string sdt, string diachi, string degree, string anh)
+        public bool Them(HLV a )
         {
-            return QLHLVDAL.getInstance.Them(name, ngaysinh, sex, cccd, gmail, sdt, diachi, degree, anh);
+            return QLHLVDAL.getInstance.Them(a);
         }
         // sửa 
-        public bool Update(int ma, string name, DateTime ngaysinh, bool sex, string cccd, string gmail, string sdt, string diachi, string degree, string anh)
+        public bool Update(HLV a)
         {
-            return QLHLVDAL.getInstance.Update(ma, name, ngaysinh, sex, cccd, gmail, sdt, diachi, degree, anh);
+            return QLHLVDAL.getInstance.Update(a);
         }
         public DataTable SearchHLVByNameID(string NameorId)
         {
@@ -62,9 +64,30 @@ namespace QLPhongGym.BLL
         {
             return QLHLVDAL.getInstance.GetInfoHLV(ma);
         }
+        public bool CheckCmndExitEDit(HLV a)
+        {
+            return QLHLVDAL.getInstance.CheckCmndExitEDit(a);
+        }
+        public bool CheckSDTExitEdit(HLV a)
+        {
+            return QLHLVDAL.getInstance.CheckSDTExitEdit(a);
+        }
+        public bool CheckGmailExitEdit(HLV a)
+        {
+            return QLHLVDAL.getInstance.CheckGmailExitEdit(a);
+        }
+        public List<HLV> GetHLVs()
+        {
+            return QLHLVDAL.getInstance.getHLVs();
+        }
+        public DataTable getinfoLichHLV()
+        {
+            dt = new DataTable();
+            return QLHLVDAL.getInstance.getinfoLichHLV();
+        }
         public List<int> GetAllHLVID()
         {
-            return QLHLVDAL.getInstance.GetAllHLVID();
+            return db.Users.OfType<HLV>().Select(s => s.IDUsers).ToList();
         }
     }
 }

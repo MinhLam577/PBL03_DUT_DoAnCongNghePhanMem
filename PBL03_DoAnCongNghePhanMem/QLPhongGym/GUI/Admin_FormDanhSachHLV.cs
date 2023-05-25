@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace QLPhongGym.GUI
 {
@@ -18,16 +19,16 @@ namespace QLPhongGym.GUI
         public Admin_FormDanhSachHLV()
         {
             InitializeComponent();
-        }
-        static string ImageLink = Application.StartupPath + @"\Resources\Admin.png";
+        }        
+        /*static string ImageLink = Application.StartupPath + @"\Resources\Admin.png";*/
         private void CapNhatListHLV()
         {
             dataGridView1.DataSource = QLHLVBLL.getInstance.CapNhatListHLV();
         }
+        int lc = -1;
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Bạn chắc chắn muốn xóa ? ", "Xóa ", MessageBoxButtons.OKCancel);
-
+            var result = MessageBox.Show("Bạn chắc chắn muốn xóa ? ", "Xóa ", MessageBoxButtons.OKCancel);          
             if (result == DialogResult.OK)
             {
                 try
@@ -39,226 +40,88 @@ namespace QLPhongGym.GUI
                         CapNhatListHLV();
                     }
                 }
-                catch (Exception ex)
+                catch(Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Xóa huấn luyện viên thất bại");
                 }
-
+                
             }
         }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void Edit(object hlv)
         {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-    }
-}
-/*
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            int Ma = Convert.ToInt32(textMaHLv.Text.Trim());
-            string Name = textNameHLV.Text.Trim();
-            DateTime DateBorn = Convert.ToDateTime(dateTimeHLV.Value);
-            bool Sex;
-            if (radioBtnMale.Checked == true)
+            HLV a = (HLV)hlv;
+            if (QLHLVBLL.getInstance.Update(a) == true)
             {
-                Sex = true;
+                MessageBox.Show("Sua Thanh cong");
+                CapNhatListHLV();
             }
             else
             {
-                Sex = false;
+                MessageBox.Show("Sua huấn luyện viên thất bại");
             }
-            string CCCD = textCCCD.Text.Trim();
-            string Gmail = textGmai.Text.Trim();
-            string Sdt = textSDT.Text.Trim();
-            string DiaChi = textDiachi.Text.Trim();
-            string BangCap = textBangcap.Text.Trim();
-            string Anh = null;
-            try
-            {
-                if (pictureHLV.Tag != null)
-                {
-                    if (!string.IsNullOrEmpty(pictureHLV.Tag.ToString()))
-                        Anh = pictureHLV.Tag.ToString();
-                }
-                if (!UsersBLL.Instance.CheckHoTen(Name)) { MessageBox.Show("Họ tên không đúng định dạng"); return; }
-                if (!UsersBLL.Instance.CheckNS(DateBorn))
-                {
-                    MessageBox.Show("Đô tuổi không đúng quy định(10 < Tuổi <= 120)");
-                    return;
-                }
-                if (!UsersBLL.Instance.CheckCccd(CCCD))
-                {
-                    MessageBox.Show("Căn cước công dân không đúng định dạng"); return;
-                }
-                if (!UsersBLL.Instance.CheckGmail(Gmail))
-                {
-                    MessageBox.Show("Gmail không đúng định dạng");
-                    return;
-                }
-                if (!UsersBLL.Instance.CheckSDT(Sdt))
-                {
-                    MessageBox.Show("Số điện thoại không đúng định dạng");
-                    return;
-                }
-                if (!UsersBLL.Instance.CheckDiaChi(DiaChi))
-                {
-                    MessageBox.Show("Địa chỉ không đúng định dạng");
-                    return;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "UpDate huấn luyện viên thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            if (QLHLVBLL.getInstance.Update(Ma, Name, DateBorn, Sex, CCCD, Gmail, Sdt, DiaChi, BangCap, Anh) == true)
-            {
-                MessageBox.Show("UpDate huấn luyện viên Thành Công ");
-                CapNhatListHLV();
-            }
-
         }
+        public void inforfromData(HLV a)
+        {
+                int rowSelected = -1;
+                rowSelected = dataGridView1.CurrentRow.Index;
+                if(rowSelected != -1) { 
+                a.IDUsers = Convert.ToInt32(dataGridView1.Rows[rowSelected].Cells[1].Value);
+                a.Name = dataGridView1.Rows[rowSelected].Cells[2].Value.ToString();
+                a.DateBorn = Convert.ToDateTime(dataGridView1.Rows[rowSelected].Cells[3].Value.ToString());
+                a.Sex = Convert.ToBoolean(dataGridView1.Rows[rowSelected].Cells[4].Value.ToString());
+                a.CCCD =(dataGridView1.Rows[rowSelected].Cells[5].Value.ToString());
+                a.Gmail = (dataGridView1.Rows[rowSelected].Cells[6].Value.ToString());
+                a.Sdt = (dataGridView1.Rows[rowSelected].Cells[7].Value.ToString());
+                a.Address = (dataGridView1.Rows[rowSelected].Cells[8].Value.ToString());
+                a.BangCap = (dataGridView1.Rows[rowSelected].Cells[9].Value.ToString());
+                HLV b = new HLV();
+                b = QLHLVBLL.getInstance.GetInfoHLV(a.IDUsers);
+                
+                a.Image = b.Image;
+            }
+            else
+            {
 
+            }
+        }
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if ( dataGridView1.CurrentRow.Index !=-1)
+            {                
+                AddEdit_HLV a = new AddEdit_HLV();
+                HLV aa = new HLV();
+                a.luachon(2);
+                inforfromData(aa);
+                a.getinfofromAB(aa);
+                a.Show();
+                a.buon += new AddEdit_HLV.mydelegate(Edit);
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn hàng lại để tiếp tục");
+                return;
+            }
+        }
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string name = textNameHLV.Text.ToString().Trim();
-            bool gioitinh = radioBtnFemale.Checked;
-            DateTime ngaysinh = Convert.ToDateTime(dateTimeHLV.Value);
-            string bangcap = textBangcap.Text.Trim();
-            string sdt = textSDT.Text.Trim();
-            string cccd = textCCCD.Text.Trim();
-            string gmail = textGmai.Text.Trim();
-            string diachi = textDiachi.Text.Trim();
-            string Anh = null;
-            if (pictureHLV.Tag != null)
-            {
-                if (!string.IsNullOrEmpty(pictureHLV.Tag.ToString()))
-                    Anh = pictureHLV.Tag.ToString();
-            }
-            try
-            {
-
-                if (!UsersBLL.Instance.CheckHoTen(name)) { MessageBox.Show("Họ tên không đúng định dạng"); return; }
-                if (!UsersBLL.Instance.CheckNS(ngaysinh))
-                {
-                    MessageBox.Show("Đô tuổi không đúng quy định(10 < Tuổi <= 120)");
-                    return;
-                }
-                if (!UsersBLL.Instance.CheckCccd(cccd))
-                {
-                    MessageBox.Show("Căn cước công dân không đúng định dạng"); return;
-                }
-                else
-                {
-                    if (UsersBLL.Instance.checkCCCDexist(cccd))
-                    {
-                        MessageBox.Show("Căn cước công dân đã tồn tại"); return;
-                    }
-                }
-                if (!UsersBLL.Instance.CheckGmail(gmail))
-                {
-                    MessageBox.Show("Gmail không đúng định dạng");
-                    return;
-                }
-                else
-                    if (UsersBLL.Instance.CheckGmailExist(gmail))
-                {
-                    MessageBox.Show("Gmail đã tồn tại");
-                    return;
-                }
-                if (!UsersBLL.Instance.CheckSDT(sdt))
-                {
-                    MessageBox.Show("Số điện thoại không đúng định dạng");
-                    return;
-                }
-                if (UsersBLL.Instance.CheckSDTExist(sdt))
-                {
-                    MessageBox.Show("Số điện thoại đã tồn tại");
-                    return;
-                }
-                if (!UsersBLL.Instance.CheckDiaChi(diachi))
-                {
-                    MessageBox.Show("Địa chỉ không đúng định dạng");
-                    return;
-                }
-
-                if (QLHLVBLL.getInstance.Them(name, ngaysinh, gioitinh, cccd, gmail, sdt, diachi, bangcap, Anh) == true)
-                {
-                    MessageBox.Show("Them Thanh cong");
-                    CapNhatListHLV();
-                };
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Thêm huấn luyện viên thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            textMaHLv.Text = "";
-            textNameHLV.Text = "";
-            textGmai.Text = "";
-            textDiachi.Text = "";
-            textSDT.Text = "";
-            textBangcap.Text = "";
-            textCCCD.Text = "";
-            pictureHLV.Tag = null;
-            radioBtnFemale.Checked = false;
-            radioBtnMale.Checked = false;
-            dateTimeHLV.Value = DateTime.Now;
-            pictureHLV.Image = Image.FromFile(ImageLink);
-            cbbSort.SelectedItem = null;
-            textSearch.Text = "";
+            AddEdit_HLV a = new AddEdit_HLV();
+            a.Show();
+            a.buon += new AddEdit_HLV.mydelegate(Add);
             CapNhatListHLV();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            try
+         }
+         private void Add(object hlv)
+         {
+            HLV a = (HLV)hlv;
+            if (QLHLVBLL.getInstance.Them(a) == true)
             {
-                string PathAnh = Application.StartupPath + @"\PersonImage\"; // duong dan 
-                var codecs = ImageCodecInfo.GetImageEncoders();
-                var codecFilter = "Image Files|";
-                foreach (var codec in codecs)
-                {
-                    codecFilter += codec.FilenameExtension + ";";
-                }
-
-                using (OpenFileDialog ofd = new OpenFileDialog()
-                {
-                    Filter = codecFilter,
-                    Multiselect = false,
-                    InitialDirectory = Application.StartupPath + @"\PersonImage\"
-                })
-                {
-                    if (ofd.ShowDialog() == DialogResult.OK)
-                    {
-                        string filename = ofd.FileName;// ten ảnh 
-                        pictureHLV.Image = Image.FromFile(filename);
-                        pictureHLV.Tag = filename.Replace(PathAnh, "");
-                    }
-                }
+                MessageBox.Show("Them Thanh cong");
+                CapNhatListHLV();
             }
-            catch(Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message, "Upload ảnh thất bại");
+                MessageBox.Show("Thêm huấn luyện viên thất bại");
             }
-            
-
-        }
-        private void btnResetPic_Click(object sender, EventArgs e)
-        {
-            pictureHLV.Image = Image.FromFile(ImageLink);
-            pictureHLV.Tag = null;
-        }
-
+         }
         private void btnSapXep_Click(object sender, EventArgs e)
         {
             try
@@ -274,14 +137,11 @@ namespace QLPhongGym.GUI
                     dataGridView1.DataSource = QLHLVBLL.getInstance.SortHLV(textsort, textSearch.Text.Trim());
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Lỗi sắp xếp");
             }
-            
-
         }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             try
@@ -289,59 +149,68 @@ namespace QLPhongGym.GUI
                 string name = textSearch.Text.Trim();
                 dataGridView1.DataSource = QLHLVBLL.getInstance.SearchHLVByNameID(name);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Lỗi tìm kiếm");
             }
-            
+
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                int row = dataGridView1.CurrentRow.Index;
-                textMaHLv.Text = (dataGridView1.Rows[row].Cells[1].Value.ToString());
-                textNameHLV.Text = dataGridView1.Rows[row].Cells[2].Value.ToString();
-                dateTimeHLV.Value = Convert.ToDateTime(dataGridView1.Rows[row].Cells[3].Value.ToString());
-                if (dataGridView1.Rows[row].Cells[4].Value.ToString().Equals("True"))
-                {
-                    radioBtnMale.Checked = Convert.ToBoolean(dataGridView1.Rows[row].Cells[4].Value.ToString());
-                }
-                else
-                {
-                    radioBtnFemale.Checked = true;
-                }
-                textCCCD.Text = (dataGridView1.Rows[row].Cells[5].Value.ToString());
-                textGmai.Text = (dataGridView1.Rows[row].Cells[6].Value.ToString());
-                textSDT.Text = (dataGridView1.Rows[row].Cells[7].Value.ToString());
-                textDiachi.Text = (dataGridView1.Rows[row].Cells[8].Value.ToString());
-                textBangcap.Text = (dataGridView1.Rows[row].Cells[9].Value.ToString());
-                HLV a = new HLV();
-                a = QLHLVBLL.getInstance.GetInfoHLV(Convert.ToInt32(textMaHLv.Text));
-                pictureHLV.Tag = a.Image;
-                if (pictureHLV.Tag != null)
-                {
-                    if (!string.IsNullOrEmpty(pictureHLV.Tag.ToString()))
-                    {
-                        pictureHLV.Image = Image.FromFile(Application.StartupPath + @"\PersonImage\" + pictureHLV.Tag);
-                    }
-                }
-                else
-                {
-                    pictureHLV.Image = Image.FromFile(Application.StartupPath + @"\Resources\Admin.png");
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Lỗi datagridview_cell_click");
-            }
-            
-        }
+        /* private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+         {
 
+             HLV b = new HLV();
+             b = QLHLVBLL.getInstance.GetInfoHLV(a.IDUsers);
+             a.Image = b.Image;
+
+             try
+             {
+                 int row = dataGridView1.CurrentRow.Index;
+                  = (dataGridView1.Rows[row].Cells[1].Value.ToString());
+                 textNameHLV.Text = dataGridView1.Rows[row].Cells[2].Value.ToString();
+                 dateTimeHLV.Value = Convert.ToDateTime(dataGridView1.Rows[row].Cells[3].Value.ToString());
+                 if (dataGridView1.Rows[row].Cells[4].Value.ToString().Equals("True"))
+                 {
+                     radioBtnMale.Checked = Convert.ToBoolean(dataGridView1.Rows[row].Cells[4].Value.ToString());
+                 }
+                 else
+                 {
+                     radioBtnFemale.Checked = true;
+                 }
+                 textCCCD.Text = (dataGridView1.Rows[row].Cells[5].Value.ToString());
+                 textGmai.Text = (dataGridView1.Rows[row].Cells[6].Value.ToString());
+                 textSDT.Text = (dataGridView1.Rows[row].Cells[7].Value.ToString());
+                 textDiachi.Text = (dataGridView1.Rows[row].Cells[8].Value.ToString());
+                 textBangcap.Text = (dataGridView1.Rows[row].Cells[9].Value.ToString());
+                 HLV a = new HLV();
+                 a = QLHLVBLL.getInstance.GetInfoHLV(Convert.ToInt32(textMaHLv.Text));
+                 pictureHLV.Tag = a.Image;
+                 if (pictureHLV.Tag != null)
+                 {
+                     if (!string.IsNullOrEmpty(pictureHLV.Tag.ToString()))
+                     {
+                         pictureHLV.Image = Image.FromFile(Application.StartupPath + @"\PersonImage\" + pictureHLV.Tag);
+                     }
+                 }
+                 else
+                 {
+                     pictureHLV.Image = Image.FromFile(Application.StartupPath + @"\Resources\Admin.png");
+                 }
+             }
+             catch(Exception ex)
+             {
+                 MessageBox.Show(ex.Message, "Lỗi datagridview_cell_click");
+             }
+
+         }*/
         private void Admin_FormDanhSachHLV_Load_1(object sender, EventArgs e)
         {
             CapNhatListHLV();
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
-}*/
+}

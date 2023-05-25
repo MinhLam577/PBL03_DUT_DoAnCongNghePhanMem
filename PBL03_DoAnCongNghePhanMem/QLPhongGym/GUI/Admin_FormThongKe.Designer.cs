@@ -424,6 +424,7 @@
             this.Name = "Admin_FormThongKe";
             this.Text = "Admin_FormThongKe";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Admin_FormThongKe_Load);
             this.panel1.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
