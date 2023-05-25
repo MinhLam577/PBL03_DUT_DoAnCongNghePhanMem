@@ -59,7 +59,7 @@
             this.btnSearch.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.Cyan;
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnSearch.Location = new System.Drawing.Point(163, 67);
+            this.btnSearch.Location = new System.Drawing.Point(2, 77);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(139, 44);
             this.btnSearch.TabIndex = 82;
@@ -71,9 +71,9 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(364, 9);
+            this.label1.Location = new System.Drawing.Point(376, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(422, 38);
             this.label1.TabIndex = 0;
@@ -89,16 +89,16 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-3, 127);
+            this.dataGridView1.Location = new System.Drawing.Point(2, 127);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1182, 474);
+            this.dataGridView1.Size = new System.Drawing.Size(1177, 474);
             this.dataGridView1.TabIndex = 0;
             // 
             // btnThem
             // 
-            this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnThem.BackColor = System.Drawing.Color.Black;
             this.btnThem.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.Cyan;
@@ -113,7 +113,7 @@
             // 
             // btnSua
             // 
-            this.btnSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnSua.BackColor = System.Drawing.Color.Black;
             this.btnSua.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.Cyan;
@@ -128,7 +128,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnXoa.BackColor = System.Drawing.Color.Black;
             this.btnXoa.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.Cyan;
@@ -148,7 +148,7 @@
             this.btnSapXep.Font = new System.Drawing.Font("Arial Rounded MT Bold", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSapXep.ForeColor = System.Drawing.Color.Cyan;
             this.btnSapXep.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnSapXep.Location = new System.Drawing.Point(790, 62);
+            this.btnSapXep.Location = new System.Drawing.Point(805, 74);
             this.btnSapXep.Name = "btnSapXep";
             this.btnSapXep.Size = new System.Drawing.Size(139, 44);
             this.btnSapXep.TabIndex = 81;
@@ -159,7 +159,7 @@
             // textSearch
             // 
             this.textSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textSearch.Location = new System.Drawing.Point(320, 72);
+            this.textSearch.Location = new System.Drawing.Point(147, 82);
             this.textSearch.Name = "textSearch";
             this.textSearch.Size = new System.Drawing.Size(223, 34);
             this.textSearch.TabIndex = 85;
@@ -174,7 +174,7 @@
             "ID",
             "Name",
             "Date"});
-            this.cbbSort.Location = new System.Drawing.Point(952, 67);
+            this.cbbSort.Location = new System.Drawing.Point(959, 79);
             this.cbbSort.Name = "cbbSort";
             this.cbbSort.Size = new System.Drawing.Size(220, 37);
             this.cbbSort.TabIndex = 84;

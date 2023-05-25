@@ -247,5 +247,11 @@ namespace QLPhongGym.GUI
         {
             showMenu(pn_tkadmin);
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormDangKiLichHLV1());
+            hideMenu();
+        }
     }
 }
