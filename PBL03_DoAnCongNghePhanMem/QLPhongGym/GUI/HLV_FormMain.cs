@@ -125,12 +125,43 @@ namespace QLPhongGym.GUI
         {
             showMenu(pn_tkhlv);
         }
-
+        private void Edit(object hlv)
+        {
+            HLV a = (HLV)hlv;
+            if (QLHLVBLL.getInstance.Update(a) == true)
+            {
+                if (a != null)
+                {
+                    lb_gmailhlv.Text = a.Gmail;
+                    lb_tenhlv.Text = a.Name;
+                }
+                if (a.Image != null)
+                {
+                    pb_acc.Image = Image.FromFile(Application.StartupPath + @"\PersonImage\" + a.Image);
+                    pb_hlv.Image = Image.FromFile(Application.StartupPath + @"\PersonImage\" + a.Image);
+                }
+                else
+                {
+                    pb_acc.Image = Image.FromFile(ImageDefaultPath);
+                    pb_hlv.Image = Image.FromFile(ImageDefaultPath);
+                }
+                MessageBox.Show("Sua Thanh cong");
+            }
+            else
+            {
+                MessageBox.Show("Sua huấn luyện viên thất bại");
+            }
+        }
         private void btn_updatethongtin_Click(object sender, EventArgs e)
         {
-            
+            AddEdit_HLV a = new AddEdit_HLV();
+            int ID = (int)tk.IDUser;
+            HLV hlv = (HLV)UsersBLL.Instance.GetUserByID(ID);
+            a.buon += new AddEdit_HLV.mydelegate(Edit);
+            a.luachon(2);
+            a.getinfofromAB(hlv);
+            a.Show();
         }
-
         private void pb_updateimage_Click(object sender, EventArgs e)
         {
             UpdateImageAccountForm updateImageAccountForm = new UpdateImageAccountForm((HLV)UsersBLL.Instance.GetUserByID((int)tk.IDUser));

@@ -53,7 +53,7 @@ namespace QLPhongGym.GUI
             if(hlv != null)
             {
                 if (hlv.Image != null)
-                    pb_imageacc.Image = Image.FromFile(Application.StartupPath + @"\PersonImage\" + ad.Image);
+                    pb_imageacc.Image = Image.FromFile(Application.StartupPath + @"\PersonImage\" + hlv.Image);
                 else pb_imageacc.Image = Image.FromFile(DefaultImagePath);
             }
         }
