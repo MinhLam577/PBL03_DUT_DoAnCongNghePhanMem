@@ -31,10 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HLV_FormMain));
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.Menu_Panel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -42,7 +39,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.Menu_Panel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -65,7 +61,7 @@
             this.button3.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.button3.Size = new System.Drawing.Size(273, 87);
             this.button3.TabIndex = 3;
-            this.button3.Text = "Thống kê";
+            this.button3.Text = "Khách hàng";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
@@ -88,41 +84,6 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // button4
-            // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button4.Location = new System.Drawing.Point(0, 55);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(273, 55);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Lương";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(273, 55);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Lịch làm việc";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.Black;
@@ -131,34 +92,21 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(0, 478);
+            this.button5.Location = new System.Drawing.Point(0, 353);
             this.button5.Name = "button5";
             this.button5.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(273, 91);
+            this.button5.Size = new System.Drawing.Size(273, 86);
             this.button5.TabIndex = 5;
-            this.button5.Text = "Đăng xuất";
+            this.button5.Text = "Thoát";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // Menu_Panel
-            // 
-            this.Menu_Panel.BackColor = System.Drawing.Color.PeachPuff;
-            this.Menu_Panel.Controls.Add(this.button4);
-            this.Menu_Panel.Controls.Add(this.button2);
-            this.Menu_Panel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Menu_Panel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Menu_Panel.Location = new System.Drawing.Point(0, 353);
-            this.Menu_Panel.Name = "Menu_Panel";
-            this.Menu_Panel.Size = new System.Drawing.Size(273, 125);
-            this.Menu_Panel.TabIndex = 4;
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.Menu_Panel);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panel2);
@@ -204,7 +152,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(152, 49);
+            this.label1.Location = new System.Drawing.Point(141, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(227, 29);
             this.label1.TabIndex = 1;
@@ -241,7 +189,6 @@
             this.Name = "HLV_FormMain";
             this.Text = "HLV_formmain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Menu_Panel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -257,10 +204,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Panel Menu_Panel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
