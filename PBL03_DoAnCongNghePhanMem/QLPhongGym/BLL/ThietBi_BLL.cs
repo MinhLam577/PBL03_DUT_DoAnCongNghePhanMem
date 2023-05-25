@@ -52,13 +52,5 @@ namespace QLPhongGym.BLL
         {
             return ThietBiDAL.Instance.GetThietBiByID(id);
         }
-        public bool KiemTraTen_BLL(string name)
-        {
-            return ThietBiDAL.Instance.KiemTraTen_DAL(name);
-        }
-        public List<ThietBi> GetAllTB()
-        {
-            return ThietBiDAL.Instance.GetAllTB();
-        }
     }
 }

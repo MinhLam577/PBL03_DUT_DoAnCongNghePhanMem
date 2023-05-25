@@ -61,7 +61,7 @@ namespace QLPhongGym.DAL
             }
             
         }
-        public int GetUsersIDByCCCD(string CCCD)
+        public int GetUsersID(string CCCD)
         {
             try
             {
@@ -85,18 +85,6 @@ namespace QLPhongGym.DAL
                 return null;
             }
             
-        }
-        public User GetUserByName(string Name)
-        {
-            try
-            {
-                return db.Users.FirstOrDefault(s => s.Name == Name);
-            }
-            catch { return null; }
-        }
-        public bool CheckUserExist(string CCCD, string Name)
-        {
-            return db.Users.Any(s => s.CCCD.Equals(CCCD) && s.Name.Equals(Name));
         }
         public bool checkEmail(string email)
         {
@@ -192,14 +180,13 @@ namespace QLPhongGym.DAL
             try
             {
                 int IDUsers = GetAllUser().Where(p => p.Gmail.Equals(Gmail)).FirstOrDefault().IDUsers;
-                string mk = db.TKs.Where(a => (int)a.IDUser == IDUsers).FirstOrDefault().MatkhauTK;
-                return Eramake.eCryptography.Decrypt(mk);
+                return db.TKs.Where(a => (int)a.IDUser == IDUsers).FirstOrDefault().MatkhauTK;
             }
             catch
             {
                 return null;
             }
+            
         }
-         
     }
 }

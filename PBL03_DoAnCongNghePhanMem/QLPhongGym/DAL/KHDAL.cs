@@ -6,7 +6,6 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 using QLPhongGym.DTO;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -29,11 +28,11 @@ namespace QLPhongGym.DAL
         DataTable dt = null;
         public DataTable CreateTable()
         {
-            dt = new DataTable();
+            dt = new DataTable(); 
             dt.Columns.AddRange(new DataColumn[]
             {
                 new DataColumn{ColumnName = "STT", DataType = typeof(int)},
-                new DataColumn{ColumnName = "IDThe", DataType = typeof(int)},
+                new DataColumn{ColumnName = "ID", DataType = typeof(int)},
                 new DataColumn{ColumnName = "Name", DataType = typeof(string)},
                 new DataColumn{ColumnName = "DateBorn", DataType = typeof(DateTime)},
                 new DataColumn{ColumnName = "Sex", DataType = typeof(bool)},
@@ -44,184 +43,69 @@ namespace QLPhongGym.DAL
             });
             return dt;
         }
-        public DataTable SortDKKHBy(string Require, DataTable data)
+        public KH GetKHByDataRow(DataRow dtr)
         {
-            DataView dv = data.DefaultView;
-            switch (Require)
+            return new KH
             {
-                case "Tên":
-                    dv.Sort = "Name";
-                    dt = dv.ToTable();
-                    break;
-                case "Mã thẻ":
-                    dv.Sort = "IDThe";
-                    dt = dv.ToTable();
-                    break;
-                case "Giới tính":
-                    dv.Sort = "Sex";
-                    dt = dv.ToTable();
-                    break;
+                IDUsers = Convert.ToInt32(dtr["ID"].ToString()),
+                Name = dtr["Name"].ToString(),
+                DateBorn = Convert.ToDateTime(dtr["DateBorn"].ToString()),
+                Sex = Convert.ToBoolean(dtr["Sex"].ToString()),
+                CCCD = dtr["CCCD"].ToString(),
+                Address = dtr["Address"].ToString(),
+                Gmail = dtr["Gmail"].ToString(),
+                Sdt = dtr["Sdt"].ToString()
+            };
+        }
+        public DataTable GetDataTableByList(List<KH> list)
+        {
+            dt = CreateTable(); int cnt = 1;
+            foreach (var i in list)
+            {
+                dt.Rows.Add(cnt++, i.IDUsers, i.Name, i.DateBorn, i.Sex, i.CCCD, i.Address, i.Gmail, i.Sdt);
             }
             return dt;
         }
-        public DataTable FindListKHByCCCD(string CCCD){
-            dt = CreateTable(); int cnt = 1;
-            var data = (db.Users.OfType<KH>().Where(k => k.CCCD.Contains(CCCD)).
-                        Select(kh => new
-                        {
-                            kh.IDUsers,
-                            kh.Name,
-                            kh.DateBorn,
-                            kh.Sex,
-                            kh.Sdt,
-                            kh.Gmail,
-                            kh.Address,
-                            kh.CCCD,
-                        })).ToList().Distinct();
-            foreach (var i in data)
-                dt.Rows.Add(cnt++, i.IDUsers, i.Name, i.DateBorn, i.Sex, i.CCCD, i.Address, i.Gmail, i.Sdt);
-            return dt;
-        }
-        public DataTable FindListKHByID(string ID)
+        public List<KH> GetListKHByDataTable(DataTable data)
         {
-            dt = CreateTable(); int cnt = 1;
-            var data = (db.Users.OfType<KH>().Where(k => k.IDUsers.ToString().Contains(ID)).
-                        Select(kh => new
-                        {
-                            kh.IDUsers,
-                            kh.Name,
-                            kh.DateBorn,
-                            kh.Sex,
-                            kh.Sdt,
-                            kh.Gmail,
-                            kh.Address,
-                            kh.CCCD,
-                        })).ToList().Distinct();
-            foreach (var i in data)
-                dt.Rows.Add(cnt++, i.IDUsers, i.Name, i.DateBorn, i.Sex, i.CCCD, i.Address, i.Gmail, i.Sdt);
-            return dt;
+            List<KH> list = new List<KH>();
+            foreach (DataRow dr in data.Rows)
+            {
+                list.Add(GetKHByDataRow(dr));
+            }
+            return list;
         }
-        public DataTable FindListKHByName(string Name)
+        public DataTable SortKHBy(string Require, DataTable data)
         {
-            dt = CreateTable(); int cnt = 1;
-            var data = (db.Users.OfType<KH>().Where(k => k.Name.Contains(Name)).
-                        Select(kh => new
-                        {
-                            kh.IDUsers,
-                            kh.Name,
-                            kh.DateBorn,
-                            kh.Sex,
-                            kh.Sdt,
-                            kh.Gmail,
-                            kh.Address,
-                            kh.CCCD,
-                        })).ToList().Distinct();
-            foreach (var i in data)
-                dt.Rows.Add(cnt++, i.IDUsers, i.Name, i.DateBorn, i.Sex, i.CCCD, i.Address, i.Gmail, i.Sdt);
-            return dt;
-        }
-        public DataTable FindListKHBySDT(string Sdt)
-        {
-            dt = CreateTable(); int cnt = 1;
-            var data = (db.Users.OfType<KH>().Where(k => k.Sdt.Contains(Sdt)).
-                        Select(kh => new
-                        {
-                            kh.IDUsers,
-                            kh.Name,
-                            kh.DateBorn,
-                            kh.Sex,
-                            kh.Sdt,
-                            kh.Gmail,
-                            kh.Address,
-                            kh.CCCD,
-                        })).ToList().Distinct();
-            foreach (var i in data)
-                dt.Rows.Add(cnt++, i.IDUsers, i.Name, i.DateBorn, i.Sex, i.CCCD, i.Address, i.Gmail, i.Sdt);
+            List<KH> list = GetListKHByDataTable(data);
+            dt = new DataTable();
+            switch(Require){
+                case "Tên":
+                    list = list.OrderBy(s => s.Name).ToList();
+                    dt = GetDataTableByList(list);
+                    break;
+                case "Mã":
+                    list = list.OrderBy(s => s.IDUsers).ToList();
+                    dt = GetDataTableByList(list);
+                    break;
+                case "Giới tính":
+                    list = list.OrderBy(s => s.Sex).ToList();
+                    dt = GetDataTableByList(list);
+                    break;
+            }
             return dt;
         }
         public DataTable FindListKHByIDOrName(string txt)
         {
             dt = CreateTable(); int cnt = 1;
-            var data = (from kh in db.Users.OfType<KH>()
-                        where kh.Name.Contains(txt) || kh.IDUsers.ToString().Contains(txt)
-                        select new
-                        {
-                            kh.IDUsers,
-                            kh.Name,
-                            kh.DateBorn,
-                            kh.Sex,
-                            kh.Sdt,
-                            kh.Gmail,
-                            kh.Address,
-                            kh.CCCD,
-                        }).ToList().Distinct();
-            foreach (var i in data)
+            foreach(var i in db.Users.OfType<KH>().Where(k => k.IDUsers.ToString().Contains(txt) || k.Name.Contains(txt)).Select(p => new
+            {
+                p.IDUsers,p.Name,p.DateBorn,p.Sex,p.Sdt,p.Gmail,p.Address,p.CCCD
+            }).ToList())
+            {
                 dt.Rows.Add(cnt++, i.IDUsers, i.Name, i.DateBorn, i.Sex, i.CCCD, i.Address, i.Gmail, i.Sdt);
+            }
             return dt;
-        }
-        public DataTable FindListKHByNameAndID(string Name, string ID)
-        {
-            dt = CreateTable(); int cnt = 1;
-            var data = (from kh in db.Users.OfType<KH>()
-                        where kh.Name.Contains(Name) && kh.IDUsers.ToString().Contains(ID)
-                        select new
-                        {
-                            kh.IDUsers,
-                            kh.Name,
-                            kh.DateBorn,
-                            kh.Sex,
-                            kh.Sdt,
-                            kh.Gmail,
-                            kh.Address,
-                            kh.CCCD,
-                        }).ToList().Distinct();
-            foreach (var i in data)
-                dt.Rows.Add(cnt++, i.IDUsers, i.Name, i.DateBorn, i.Sex, i.CCCD, i.Address, i.Gmail, i.Sdt);
-            return dt;
-        }
-        public DataTable FindListKHBySDTOrCCCD(string txt)
-        {
-            dt = CreateTable(); int cnt = 1;
-            var data = (from kh in db.Users.OfType<KH>()
-                        where kh.Sdt.Contains(txt) || kh.CCCD.Contains(txt)
-                        select new
-                        {
-                            kh.IDUsers,
-                            kh.Name,
-                            kh.DateBorn,
-                            kh.Sex,
-                            kh.Sdt,
-                            kh.Gmail,
-                            kh.Address,
-                            kh.CCCD,
-                        }).ToList().Distinct();
-            foreach (var i in data)
-                dt.Rows.Add(cnt++, i.IDUsers, i.Name, i.DateBorn, i.Sex, i.CCCD, i.Address, i.Gmail, i.Sdt);
-            return dt;
-        }
-        public DataTable FindListKHBySDTAndCCCD(string sdt, string cccd)
-        {
-            dt = CreateTable(); int cnt = 1;
-            var data = (from kh in db.Users.OfType<KH>()
-                        where kh.Sdt.Contains(sdt) && kh.CCCD.Contains(cccd)
-                        select new
-                        {
-                            kh.IDUsers,
-                            kh.Name,
-                            kh.DateBorn,
-                            kh.Sex,
-                            kh.Sdt,
-                            kh.Gmail,
-                            kh.Address,
-                            kh.CCCD,
-                        }).ToList().Distinct();
-            foreach (var i in data)
-                dt.Rows.Add(cnt++, i.IDUsers, i.Name, i.DateBorn, i.Sex, i.CCCD, i.Address, i.Gmail, i.Sdt);
-            return dt;
-        }
-        public List<int> GetAllKHID()
-        {
-            return db.Users.OfType<KH>().Select(s => s.IDUsers).ToList();
         }
         
     }

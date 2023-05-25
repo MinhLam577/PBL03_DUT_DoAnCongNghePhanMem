@@ -20,16 +20,14 @@ namespace QLPhongGym.GUI
         {
             InitializeComponent();
         }
-        public void OpenUserForm(string TenQuyen, int IDUser)
+        public void OpenUserForm(string user)
         {
-            switch (TenQuyen)
+            switch (user)
             {
                 case "HLV":
-                    HLV_FormMain hlvfm = new HLV_FormMain(TKBLL.Instance.GetTKByID(IDUser));
-                    hlvfm.ShowDialog();
                     break;
                 case "Admin":
-                    Admin_FormMain adfm = new Admin_FormMain(TKBLL.Instance.GetTKByID(IDUser));
+                    Admin_FormMain adfm = new Admin_FormMain();
                     adfm.ShowDialog();
                     break;
             }
@@ -47,6 +45,7 @@ namespace QLPhongGym.GUI
             }
             
         }
+
         private void pb_eye_MouseLeave(object sender, EventArgs e)
         {
             try
@@ -60,20 +59,26 @@ namespace QLPhongGym.GUI
             }
             
         }
+
+        private void lb_Dangki_Click(object sender, EventArgs e)
+        {
+            DangKiTKForm dkf = new DangKiTKForm();
+            dkf.Back += (a, b) => { (a as DangKiTKForm).Close(); this.Show(); };
+            this.Hide();
+            dkf.Show();
+        }
         private void btn_DangNhap_Click(object sender, EventArgs e)
         {
-            string tentk = txb_TenTk.Text, mk = txb_mk.Text, TenQuyen;
-            int userid = -1;
-            if (!TKBLL.Instance.CheckTenTKExist(tentk) || !TKBLL.Instance.CheckMKTKExist(tentk, mk))
+            string tentk = txb_TenTk.Text, mk = txb_mk.Text, username;
+            if (!TKBLL.Instance.CheckTenTKExist(tentk) || !TKBLL.Instance.CheckMKTKExist(mk))
             {
                 MessageBox.Show("Tên tài khoản hoặc mật khẩu không đúng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             try
             {
-                TenQuyen = TKBLL.Instance.GetUserName(TKBLL.Instance.GetIDQuyen(tentk));
-                userid = (int)TKBLL.Instance.GetTKByTenTK(tentk).IDUser;
-                OpenUserForm(TenQuyen, userid);
+                username = TKBLL.Instance.GetUserName(TKBLL.Instance.GetIDQuyen(tentk));
+                OpenUserForm(username);
             }
             catch(Exception ex)
             {
@@ -85,8 +90,11 @@ namespace QLPhongGym.GUI
         private void lb_QuenMk_Click_1(object sender, EventArgs e)
         {
             QuenMatKhauForm qmkf = new QuenMatKhauForm();
-            qmkf.LayLaiMatKhauThanhCong += (a, b) => { (a as QuenMatKhauForm).Close(); };
+            qmkf.Exit += (a, b) => { (a as QuenMatKhauForm).Close(); this.Show(); };
+            this.Hide();
             qmkf.Show();
         }
+
+        
     }
 }

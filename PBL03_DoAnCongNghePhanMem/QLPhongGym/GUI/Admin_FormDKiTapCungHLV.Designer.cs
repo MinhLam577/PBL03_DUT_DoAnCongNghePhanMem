@@ -101,7 +101,7 @@
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(1004, 393);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(286, 30);
+            this.textBox3.Size = new System.Drawing.Size(287, 30);
             this.textBox3.TabIndex = 46;
             // 
             // label7
@@ -229,6 +229,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "Admin_FormDKiTapCungHLV";
             this.Text = "Admin_FormDKiTapCungHLV";
+            this.Load += new System.EventHandler(this.Admin_FormDKiTapCungHLV_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

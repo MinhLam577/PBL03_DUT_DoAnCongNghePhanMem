@@ -10,7 +10,7 @@ namespace QLPhongGym.BLL
 {
     public class KHBLL:UsersBLL
     {
-        private static KHBLL instance;
+        private static KHBLL  instance;
         public static KHBLL Instance
         {
             get
@@ -21,49 +21,14 @@ namespace QLPhongGym.BLL
             }
             private set { }
         }
-        public KH GetKHByID(int ID)
+        public DataTable SortListKHBy(string Require, DataTable data)
         {
-            return (KH)UsersBLL.Instance.GetUserByID(ID);
+            return KHDAL.Instance.SortKHBy(Require, data);
         }
         public DataTable FindListKHByIDOrName(string txt)
         {
             return KHDAL.Instance.FindListKHByIDOrName(txt);
         }
-        public DataTable FindListKHByNameAndID(string Name, string ID)
-        {
-            return KHDAL.Instance.FindListKHByNameAndID(Name, ID);
-        }
-        public DataTable FindListKHBySdtOrCCCD(string txt)
-        {
-            return KHDAL.Instance.FindListKHBySDTOrCCCD(txt);
-        }
-        public DataTable FindListKHBySDTAndCCCD(string sdt, string cccd)
-        {
-            return KHDAL.Instance.FindListKHBySDTAndCCCD(sdt, cccd);
-        }
-        public DataTable SortListKHBy(string require, DataTable dt)
-        {
-            return KHDAL.Instance.SortDKKHBy(require, dt);
-        }
-        public DataTable FindListKHBySDT(string Sdt)
-        {
-            return KHDAL.Instance.FindListKHBySDT(Sdt);
-        }
-        public DataTable FindListKHByID(string ID)
-        {
-            return KHDAL.Instance.FindListKHByID(ID);
-        }
-        public DataTable FindListKHByCCCD(string CCCD)
-        {
-            return KHDAL.Instance.FindListKHByCCCD(CCCD);
-        }
-        public DataTable FindListKHByName(string Name)
-        {
-            return KHDAL.Instance.FindListKHByName(Name);
-        }
-        public List<int> GetAllKHID()
-        {
-            return KHDAL.Instance.GetAllKHID();
-        }
+        
     }
 }

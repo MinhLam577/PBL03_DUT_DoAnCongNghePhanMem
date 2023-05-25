@@ -38,13 +38,14 @@ namespace DAL
         {
             return mk.Equals(xnmk);
         }
+        
         public bool checkcmnd(string cmnd)
         {
             return Regex.IsMatch(cmnd, "^[0-9]{12}$");
         }
-        public bool CheckMKTKExist(string tk, string mk)
+        public bool CheckMKTKExist(string mk)
         {
-            return LoadAllTK().Any(t => (t.TenTK.Equals(tk) && t.MatkhauTK.Equals(Eramake.eCryptography.Encrypt(mk))) || (t.TenTK.Equals(tk) && t.MatkhauTK.Equals(mk)));
+            return LoadAllTK().Any(t => t.MatkhauTK.Equals(Eramake.eCryptography.Encrypt(mk)));
         }
         public bool CheckTenTKExist(string tentk)
         {
@@ -71,18 +72,6 @@ namespace DAL
         {
             db.Entry(acc).State = System.Data.Entity.EntityState.Modified;
             return db.SaveChanges();
-        }
-        public TK GetTKByUserID(int ID)
-        {
-            return db.TKs.FirstOrDefault(tk => (int)tk.IDUser == ID);
-        }
-        public TK GetTKByTenTK(string TenTK)
-        {
-            return db.TKs.FirstOrDefault(tk => tk.TenTK.Equals(TenTK));
-        }
-        public TK GetTKByMK(string MKTK)
-        {
-            return db.TKs.FirstOrDefault(tk => tk.MatkhauTK.Equals(Eramake.eCryptography.Encrypt(MKTK)));
         }
     }
 }

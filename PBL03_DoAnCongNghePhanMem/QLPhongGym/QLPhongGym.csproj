@@ -12,21 +12,6 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -57,13 +42,11 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
-    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -75,23 +58,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\DangKiGoiTapBLL.cs" />
-    <Compile Include="BLL\GoiTapBLL.cs" />
-    <Compile Include="BLL\HoaDonBLL.cs" />
+    <Compile Include="BLL\DangKiLichLamViecBAL.cs" />
     <Compile Include="BLL\KHBLL.cs" />
     <Compile Include="BLL\QLHLVBLL.cs" />
     <Compile Include="BLL\ThietBi_BLL.cs" />
     <Compile Include="BLL\TKBLL.cs" />
-    <Compile Include="BLL\TKHLV_BLL.cs" />
     <Compile Include="BLL\UsersBLL.cs" />
-    <Compile Include="DAL\DangKiGoiTapDAL.cs" />
-    <Compile Include="DAL\GoiTapDAL.cs" />
-    <Compile Include="DAL\HoaDonDAL.cs" />
+    <Compile Include="DAL\DangKiLichLamViecDAL.cs" />
     <Compile Include="DAL\KHDAL.cs" />
     <Compile Include="DAL\QLHLVDAL.cs" />
     <Compile Include="DAL\ThietBiDAL.cs" />
     <Compile Include="DAL\TKDAL.cs" />
-    <Compile Include="DAL\TKHLV_DAL.cs" />
     <Compile Include="DAL\UsersDAL.cs" />
     <Compile Include="DTO\Admin.cs">
       <DependentUpon>QLPhongGymDB.tt</DependentUpon>
@@ -147,17 +124,11 @@
     <Compile Include="DTO\User.cs">
       <DependentUpon>QLPhongGymDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="GUI\AddOrEditFormKH.cs">
+    <Compile Include="GUI\AddEdit_HLV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\AddOrEditFormKH.Designer.cs">
-      <DependentUpon>AddOrEditFormKH.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Admin_DangKiTaiKhoanHLV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Admin_DangKiTaiKhoanHLV.Designer.cs">
-      <DependentUpon>Admin_DangKiTaiKhoanHLV.cs</DependentUpon>
+    <Compile Include="GUI\AddEdit_HLV.Designer.cs">
+      <DependentUpon>AddEdit_HLV.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Admin_FormDanhSachGoiTap.cs">
       <SubType>Form</SubType>
@@ -171,35 +142,23 @@
     <Compile Include="GUI\Admin_FormDanhSachHLV.Designer.cs">
       <DependentUpon>Admin_FormDanhSachHLV.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Admin_FormDanhSachKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_FormDanhSachKH.Designer.cs">
+      <DependentUpon>Admin_FormDanhSachKH.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Admin_FormDanhSachThietBi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Admin_FormDanhSachThietBi.Designer.cs">
       <DependentUpon>Admin_FormDanhSachThietBi.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Admin_FormDetailThietBi.cs">
+    <Compile Include="GUI\Admin_FormDKiGoiTapKH.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Admin_FormDetailThietBi.Designer.cs">
-      <DependentUpon>Admin_FormDetailThietBi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Admin_FormThemTKHLV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Admin_FormThemTKHLV.Designer.cs">
-      <DependentUpon>Admin_FormThemTKHLV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Admin_FormThongKe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Admin_FormThongKe.Designer.cs">
-      <DependentUpon>Admin_FormThongKe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\DangKiGoiTapKHForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\DangKiGoiTapKHForm.Designer.cs">
-      <DependentUpon>DangKiGoiTapKHForm.cs</DependentUpon>
+    <Compile Include="GUI\Admin_FormDKiGoiTapKH.Designer.cs">
+      <DependentUpon>Admin_FormDKiGoiTapKH.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Admin_FormDKiTapCungHLV.cs">
       <SubType>Form</SubType>
@@ -237,35 +196,23 @@
     <Compile Include="GUI\DangKiTKForm.Designer.cs">
       <DependentUpon>DangKiTKForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Admin_FormDanhSachKH.cs">
+    <Compile Include="GUI\FormDangKiLichHLV1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\Admin_FormDanhSachKH.Designer.cs">
-      <DependentUpon>Admin_FormDanhSachKH.cs</DependentUpon>
+    <Compile Include="GUI\FormDangKiLichHLV1.Designer.cs">
+      <DependentUpon>FormDangKiLichHLV1.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\DoiMatKhauForm.cs">
+    <Compile Include="GUI\FormEditLichLamViec.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\DoiMatKhauForm.Designer.cs">
-      <DependentUpon>DoiMatKhauForm.cs</DependentUpon>
+    <Compile Include="GUI\FormEditLichLamViec.Designer.cs">
+      <DependentUpon>FormEditLichLamViec.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FormTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\FormTrangChu.Designer.cs">
       <DependentUpon>FormTrangChu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\HLV_FormMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\HLV_FormMain.Designer.cs">
-      <DependentUpon>HLV_FormMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\HoaDonForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\HoaDonForm.Designer.cs">
-      <DependentUpon>HoaDonForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\LoginForm.cs">
       <SubType>Form</SubType>
@@ -279,19 +226,22 @@
     <Compile Include="GUI\QuenMatKhauForm.designer.cs">
       <DependentUpon>QuenMatKhauForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\UpdateImageAccountForm.cs">
+    <Compile Include="GUI\XepLichHLV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\UpdateImageAccountForm.Designer.cs">
-      <DependentUpon>UpdateImageAccountForm.cs</DependentUpon>
+    <Compile Include="GUI\XepLichHLV.Designer.cs">
+      <DependentUpon>XepLichHLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\XoaDangKiCaHLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\XoaDangKiCaHLV.Designer.cs">
+      <DependentUpon>XoaDangKiCaHLV.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUI\AddOrEditFormKH.resx">
-      <DependentUpon>AddOrEditFormKH.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Admin_DangKiTaiKhoanHLV.resx">
-      <DependentUpon>Admin_DangKiTaiKhoanHLV.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\AddEdit_HLV.resx">
+      <DependentUpon>AddEdit_HLV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin_FormDanhSachGoiTap.resx">
       <DependentUpon>Admin_FormDanhSachGoiTap.cs</DependentUpon>
@@ -299,20 +249,14 @@
     <EmbeddedResource Include="GUI\Admin_FormDanhSachHLV.resx">
       <DependentUpon>Admin_FormDanhSachHLV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin_FormDanhSachKH.resx">
+      <DependentUpon>Admin_FormDanhSachKH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin_FormDanhSachThietBi.resx">
       <DependentUpon>Admin_FormDanhSachThietBi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Admin_FormDetailThietBi.resx">
-      <DependentUpon>Admin_FormDetailThietBi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Admin_FormThemTKHLV.resx">
-      <DependentUpon>Admin_FormThemTKHLV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Admin_FormThongKe.resx">
-      <DependentUpon>Admin_FormThongKe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\DangKiGoiTapKHForm.resx">
-      <DependentUpon>DangKiGoiTapKHForm.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Admin_FormDKiGoiTapKH.resx">
+      <DependentUpon>Admin_FormDKiGoiTapKH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin_FormDKiTapCungHLV.resx">
       <DependentUpon>Admin_FormDKiTapCungHLV.cs</DependentUpon>
@@ -332,20 +276,14 @@
     <EmbeddedResource Include="GUI\DangKiTKForm.resx">
       <DependentUpon>DangKiTKForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Admin_FormDanhSachKH.resx">
-      <DependentUpon>Admin_FormDanhSachKH.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\FormDangKiLichHLV1.resx">
+      <DependentUpon>FormDangKiLichHLV1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\DoiMatKhauForm.resx">
-      <DependentUpon>DoiMatKhauForm.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\FormEditLichLamViec.resx">
+      <DependentUpon>FormEditLichLamViec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormTrangChu.resx">
       <DependentUpon>FormTrangChu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\HLV_FormMain.resx">
-      <DependentUpon>HLV_FormMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\HoaDonForm.resx">
-      <DependentUpon>HoaDonForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -353,8 +291,11 @@
     <EmbeddedResource Include="GUI\QuenMatKhauForm.resx">
       <DependentUpon>QuenMatKhauForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\UpdateImageAccountForm.resx">
-      <DependentUpon>UpdateImageAccountForm.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\XepLichHLV.resx">
+      <DependentUpon>XepLichHLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\XoaDangKiCaHLV.resx">
+      <DependentUpon>XoaDangKiCaHLV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -385,18 +326,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="DTO\QLPhongGymDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

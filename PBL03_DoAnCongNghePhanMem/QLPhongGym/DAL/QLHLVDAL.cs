@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Entity;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
@@ -34,9 +35,7 @@ namespace QLPhongGym.DAL
                 return instance;
             }
             private set
-            {
-
-            }
+            {}
         }
         QLPhongGymDB db = new QLPhongGymDB();
         DataTable dt = new DataTable();
@@ -92,25 +91,25 @@ namespace QLPhongGym.DAL
                       );
             return dt;
         }
-        public bool Them(string name, DateTime ngaysinh, bool sex, string cccd, string gmail, string sdt, string diachi, string degree, string
-            image)
+        public bool Them(HLV a)
         {
             var them = new HLV
             {
-                Name = name,
-                DateBorn = ngaysinh,
-                Sex = sex,
-                Gmail = gmail,
-                Address = diachi,
-                Sdt = sdt,
-                CCCD = cccd,
-                BangCap = degree,
-                Image = image
+                Name = a.Name,
+                DateBorn = a.DateBorn,
+                Sex = a.Sex,
+                Gmail = a.Gmail,
+                Address = a.Address,
+                Sdt = a.Sdt,
+                CCCD = a.CCCD,
+                BangCap = a.BangCap,
+                Image = a.Image
             };
             // Thêm đối tượng HLV mới vào bảng Users
             db.Users.Add(them);
             db.SaveChanges();
             return true;
+
         }
         public bool Delete(int idHLV)
         {
@@ -119,24 +118,24 @@ namespace QLPhongGym.DAL
             db.SaveChanges();
             return true;
         }
-        public bool Update(int ma, string name, DateTime ngaysinh, bool sex, string cccd, string gmail, string sdt, string diachi, string degree, string anh)
+        public bool Update(HLV a)
         {
             // lấy ra danh sách huấn luyện viên trong bảng users 
             var coarches = db.Users.OfType<HLV>();
             // tìm huyến luyện viên chỉnh bằng use method 
             // tìm huyến luyện viên cần chỉnh bằng sử dụng SingleorDefalut();
-            var coarch = coarches.SingleOrDefault(c => c.IDUsers == ma);
+            var coarch = coarches.SingleOrDefault(c => c.IDUsers == a.IDUsers);
             if (coarch != null)
-                coarch.IDUsers = ma;
-            coarch.Name = name;
-            coarch.DateBorn = ngaysinh;
-            coarch.Sex = sex;
-            coarch.CCCD = cccd;
-            coarch.Gmail = gmail;
-            coarch.Sdt = sdt;
-            coarch.Address = diachi;
-            coarch.BangCap = degree;
-            coarch.Image = anh;
+            coarch.IDUsers = a.IDUsers;
+            coarch.Name = a.Name;
+            coarch.DateBorn = a.DateBorn;
+            coarch.Sex = a.Sex;
+            coarch.CCCD = a.CCCD;
+            coarch.Gmail = a.Gmail;
+            coarch.Sdt = a.Sdt;
+            coarch.Address = a.Address;
+            coarch.BangCap = a.BangCap;
+            coarch.Image = a.Image;
             db.SaveChanges();
             return true;
         }
@@ -212,7 +211,7 @@ namespace QLPhongGym.DAL
                                   list.Sdt,
                                   list.Address,
                                   list.BangCap
-                        );
+                    );
                 }
             }
             else if (required.Equals("Date"))
@@ -266,7 +265,7 @@ namespace QLPhongGym.DAL
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Lỗi");
+                MessageBox.Show("Lỗi");
             };
             return dt;
         }
@@ -278,11 +277,36 @@ namespace QLPhongGym.DAL
             // tìm huyến luyện viên cần chỉnh bằng sử dụng SingleorDefalut();
             var coarch = coarches.SingleOrDefault(c => c.IDUsers == ma);
             return coarch;
-
         }
-        public List<int> GetAllHLVID()
+        public bool CheckCmndExitEDit(HLV a)
         {
-            return db.Users.OfType<HLV>().Select(s=>s.IDUsers).ToList();
+            return db.Users.OfType<HLV>().Any(s => s.CCCD == a.CCCD && s.IDUsers != a.IDUsers);
         }
+        public bool CheckSDTExitEdit(HLV a)
+        {
+            return db.Users.OfType<HLV>().Any(s => s.Sdt == a.Sdt && s.IDUsers != a.IDUsers);
+        }
+        public bool CheckGmailExitEdit(HLV a)
+        {
+            return db.Users.OfType<HLV>().Any(s => s.Gmail == a.Gmail && s.IDUsers != a.IDUsers);
+        }
+        public List<HLV> getHLVs()
+        {
+            //var list = db.Users.OfType<HLV>().Select(p=> new {ID = p.IDUsers, Name = p.Name}).ToList();
+            return db.Users.OfType<HLV>().ToList();
+        }
+        public DataTable getinfoLichHLV()
+        {
+            dt = new DataTable();
+            dt.Columns.AddRange(new DataColumn[] {
+                new DataColumn{ColumnName="STT",DataType= typeof(int)},
+                new DataColumn{ColumnName = "ID", DataType = typeof(int)},
+                /*new DataColumn{ColumnName = "Name", DataType = typeof(string)},
+                new DataColumn{ColumnName = "Ca", DataType = typeof(string)},*/
+                //new DataColumn{ColumnName = "NgayLam",DataType = typeof(DateTime)}
+            });
+            return dt;
+        }
+        
     }
 }

@@ -16,5 +16,10 @@ namespace QLPhongGym.GUI
         {
             InitializeComponent();
         }
+
+        private void Admin_FormDKiTapCungHLV_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

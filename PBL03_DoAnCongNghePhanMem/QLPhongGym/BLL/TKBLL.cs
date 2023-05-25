@@ -25,18 +25,18 @@ namespace QLPhongGym.BLL
             }
             private set { }
         }
-/*        public List<TK> GetAllTK()
+        public List<TK> GetAllTK()
         {
             return TKDAL.Instance.LoadAllTK();
-        }*/
+        }
         
         public bool CheckTenTKExist(string tentk)
         {
             return TKDAL.Instance.CheckTenTKExist(tentk);
         }
-        public bool CheckMKTKExist(string tk, string mk)
+        public bool CheckMKTKExist(string mk)
         {
-            return TKDAL.Instance.CheckMKTKExist(tk, mk);
+            return TKDAL.Instance.CheckMKTKExist(mk);
         }
         public bool AddTK(TK tk)
         {
@@ -45,10 +45,6 @@ namespace QLPhongGym.BLL
         public void DeleteTK(TK tk)
         {
             TKDAL.Instance.DeleteTK(tk);
-        }
-        public bool UpdateTK(TK tk)
-        {
-            return TKDAL.Instance.UpdateTK(tk) > 0;
         }
         public int GetIDQuyen(string username)
         {
@@ -64,14 +60,6 @@ namespace QLPhongGym.BLL
         public bool checkxnmk(string mk, string xnmk)
         {
             return TKDAL.Instance.checkxnmk(mk, xnmk);
-        }
-        public TK GetTKByID(int ID)
-        {
-            return TKDAL.Instance.GetTKByUserID(ID);
-        }
-        public TK GetTKByTenTK(string TenTK)
-        {
-            return TKDAL.Instance.GetTKByTenTK(TenTK);
         }
 
     }
