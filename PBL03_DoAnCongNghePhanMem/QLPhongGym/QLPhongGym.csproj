@@ -80,6 +80,7 @@
     <Compile Include="BLL\GoiTapBLL.cs" />
     <Compile Include="BLL\HoaDonBLL.cs" />
     <Compile Include="BLL\KHBLL.cs" />
+    <Compile Include="BLL\LichThueBLL.cs" />
     <Compile Include="BLL\QLHLVBLL.cs" />
     <Compile Include="BLL\ThietBi_BLL.cs" />
     <Compile Include="BLL\TKBLL.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="DAL\GoiTapDAL.cs" />
     <Compile Include="DAL\HoaDonDAL.cs" />
     <Compile Include="DAL\KHDAL.cs" />
+    <Compile Include="DAL\LichThueDAL.cs" />
     <Compile Include="DAL\QLHLVDAL.cs" />
     <Compile Include="DAL\ThietBiDAL.cs" />
     <Compile Include="DAL\TKDAL.cs" />
@@ -245,6 +247,12 @@
     <Compile Include="GUI\FormLichHLV.Designer.cs">
       <DependentUpon>FormLichHLV.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\HLV_FormDanhSachKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HLV_FormDanhSachKH.Designer.cs">
+      <DependentUpon>HLV_FormDanhSachKH.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\HLV_FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -336,6 +344,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormLichHLV.resx">
       <DependentUpon>FormLichHLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HLV_FormDanhSachKH.resx">
+      <DependentUpon>HLV_FormDanhSachKH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\HLV_FormMain.resx">
       <DependentUpon>HLV_FormMain.cs</DependentUpon>
