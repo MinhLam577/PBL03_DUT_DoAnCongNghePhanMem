@@ -51,7 +51,7 @@ namespace QLPhongGym.GUI
         private void OpenChildForm(Form childForm)
         {
             if (currentFormChild != null)
-                currentFormChild.Close();
+            currentFormChild.Close();
             currentFormChild = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -68,7 +68,9 @@ namespace QLPhongGym.GUI
         private void hideMenu()
         {
             if (pn_tkhlv.Visible)
+            {
                 pn_tkhlv.Visible = false;
+            }
         }
         private void showMenu(Panel subMenu)
         {
@@ -175,9 +177,23 @@ namespace QLPhongGym.GUI
             dmk.ShowDialog();
         }
 
+        private void HLV_FormMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_lichlamviec_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormLichHLV());
+            hideMenu();
+        }
+        private void btn_kh_Click(object sender, EventArgs e)
+        {
+
+        }
         private void btn_thoat_Click_1(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Bạn có muốn thoát chương trình?", "Xin chờ một lát", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            if (MessageBox.Show("Bạn có muốn thoát chương trình?", "Xin chờ một lát", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 this.Close();
         }
     }
