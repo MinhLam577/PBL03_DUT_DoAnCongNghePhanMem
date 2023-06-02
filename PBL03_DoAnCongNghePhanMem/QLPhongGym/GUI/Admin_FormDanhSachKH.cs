@@ -567,23 +567,6 @@ namespace QLPhongGym.GUI
             }
         }
 
-        private void đangTậpToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (dgv_kh.SelectedRows.Count == 1)
-            {
-                fitlerDKGT_tsmi.Text = "Đang tập";
-                try
-                {
-                    int IDKH = Convert.ToInt32(dgv_kh.SelectedRows[0].Cells["IDThe"].Value.ToString());
-                    if (fitlerDKGT_tsmi.Text != "Fitler" && fitlerDKGT_tsmi.Text != "None")
-                        dgv_gt.DataSource = DangKiGoiTapBLL.Instance.FitlerListDKGT(IDKH, fitlerDKGT_tsmi.Text, cb_gt.SelectedItem as string);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Fitler gói tập đăng kí thất bại, Lỗi: " + ex.Message);
-                }
-            }
-        }
 
         private void góiTậpĐangBảoLưuToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -608,6 +591,48 @@ namespace QLPhongGym.GUI
             if (dgv_kh.SelectedRows.Count == 1)
             {
                 fitlerDKGT_tsmi.Text = "Đã hết hạn";
+                try
+                {
+                    int IDKH = Convert.ToInt32(dgv_kh.SelectedRows[0].Cells["IDThe"].Value.ToString());
+                    if (fitlerDKGT_tsmi.Text != "Fitler" && fitlerDKGT_tsmi.Text != "None")
+                        dgv_gt.DataSource = DangKiGoiTapBLL.Instance.FitlerListDKGT(IDKH, fitlerDKGT_tsmi.Text, cb_gt.SelectedItem as string);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Fitler gói tập đăng kí thất bại, Lỗi: " + ex.Message);
+                }
+            }
+        }
+
+        private void đăngKíGóiTậpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgv_kh.SelectedRows.Count == 1)
+                {
+                    //Đăng kí và gia hạn đều sài chung cùng 1 form là đăng kí gói tập khách hàng, truyền vào tham số là khách hàng và tên gói tập
+                    //Đăng kí thì truyền vào tên gói tập là rỗng
+                    int IDKH = Convert.ToInt32(dgv_kh.SelectedRows[0].Cells["IDThe"].Value.ToString());
+                    KH kh = (KH)UsersBLL.Instance.GetUserByID(IDKH);
+                    DangKiGoiTapKHForm dkf = new DangKiGoiTapKHForm(kh, "");
+                    dkf.DangKiThanhCong += (o, a) =>
+                    {
+                        (o as DangKiGoiTapKHForm).Close();
+                    };
+                    dkf.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Gia hạn thất bại");
+            }
+        }
+
+        private void đangTậpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dgv_kh.SelectedRows.Count == 1)
+            {
+                fitlerDKGT_tsmi.Text = "Đang tập";
                 try
                 {
                     int IDKH = Convert.ToInt32(dgv_kh.SelectedRows[0].Cells["IDThe"].Value.ToString());

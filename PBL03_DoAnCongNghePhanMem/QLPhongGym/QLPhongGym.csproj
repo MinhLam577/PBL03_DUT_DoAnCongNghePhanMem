@@ -209,41 +209,11 @@
     <Compile Include="GUI\DangKiGoiTapKHForm.Designer.cs">
       <DependentUpon>DangKiGoiTapKHForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Admin_FormDKiTapCungHLV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Admin_FormDKiTapCungHLV.Designer.cs">
-      <DependentUpon>Admin_FormDKiTapCungHLV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Admin_FormDoanhThu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Admin_FormDoanhThu.Designer.cs">
-      <DependentUpon>Admin_FormDoanhThu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Admin_FormHoaDon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Admin_FormHoaDon.Designer.cs">
-      <DependentUpon>Admin_FormHoaDon.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\Admin_FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Admin_FormMain.Designer.cs">
       <DependentUpon>Admin_FormMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\DangKiAdminOrKHForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\DangKiAdminOrKHForm.designer.cs">
-      <DependentUpon>DangKiAdminOrKHForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\DangKiTKForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\DangKiTKForm.Designer.cs">
-      <DependentUpon>DangKiTKForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Admin_FormDanhSachKH.cs">
       <SubType>Form</SubType>
@@ -268,12 +238,6 @@
     </Compile>
     <Compile Include="GUI\FormEditLichLamViec.designer.cs">
       <DependentUpon>FormEditLichLamViec.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\FormTrangChu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\FormTrangChu.Designer.cs">
-      <DependentUpon>FormTrangChu.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\HLV_FormMain.cs">
       <SubType>Form</SubType>
@@ -349,23 +313,8 @@
     <EmbeddedResource Include="GUI\DangKiGoiTapKHForm.resx">
       <DependentUpon>DangKiGoiTapKHForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Admin_FormDKiTapCungHLV.resx">
-      <DependentUpon>Admin_FormDKiTapCungHLV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Admin_FormDoanhThu.resx">
-      <DependentUpon>Admin_FormDoanhThu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Admin_FormHoaDon.resx">
-      <DependentUpon>Admin_FormHoaDon.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin_FormMain.resx">
       <DependentUpon>Admin_FormMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\DangKiAdminOrKHForm.resx">
-      <DependentUpon>DangKiAdminOrKHForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\DangKiTKForm.resx">
-      <DependentUpon>DangKiTKForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin_FormDanhSachKH.resx">
       <DependentUpon>Admin_FormDanhSachKH.cs</DependentUpon>
@@ -378,9 +327,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormEditLichLamViec.resx">
       <DependentUpon>FormEditLichLamViec.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FormTrangChu.resx">
-      <DependentUpon>FormTrangChu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\HLV_FormMain.resx">
       <DependentUpon>HLV_FormMain.cs</DependentUpon>
