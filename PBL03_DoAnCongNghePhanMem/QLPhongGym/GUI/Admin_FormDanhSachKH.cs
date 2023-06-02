@@ -22,6 +22,7 @@ namespace QLPhongGym.GUI
         {
             InitializeComponent();
             LoadListAllKH();
+            LoadCBBGT();
             LocDuLieu();
         }
         public void LoadListAllKH()
@@ -29,16 +30,25 @@ namespace QLPhongGym.GUI
             dgv_kh.DataSource = KHBLL.Instance.FindListKHByIDOrName("");
             dgv_kh.Columns["IDThe"].Visible = false;
         }
+        private void LoadCBBGT()
+        {
+            List<string> list = new List<string> { "Tất cả"};
+            List<GoiTap> list_gt = GoiTapBLL.Instance.GetAllGT();
+            foreach(GoiTap gt in list_gt)
+                list.Add(gt.NameGT);
+            list.Add("None");
+            cb_gt.DataSource = list;
+        }
         public void LoadListDKGT(int IDKH)
-        {  
-            dgv_gt.DataSource = DangKiGoiTapBLL.Instance.GetDKGT_Newest_DataTableByIDKH(IDKH);
+        {
+            dgv_gt.DataSource = DangKiGoiTapBLL.Instance.FitlerListDKGT(IDKH, fitlerDKGT_tsmi.Text, cb_gt.SelectedItem as string);
             dgv_gt.Columns["IDThe"].Visible = false;
             //Lấy ra gói tập có hiệu lực gần nhất có hiệu lực
             DangKiGoiTap dkgt = DangKiGoiTapBLL.Instance.GetDKGT_Newest_ByIDKH(IDKH);
             //Kiểm tra nếu gói tập có tồn tại thì show ghi chú của user lên giao diện
             if (dkgt != null)
                 lb_description.Text = dkgt.Description;
-            else lb_description.Text = "";
+            else lb_description.Text = "";            
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -177,7 +187,11 @@ namespace QLPhongGym.GUI
 
         private void reloadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LoadListAllKH() ;
+            LoadListAllKH();
+            dgv_gt.DataSource = null;
+            fitlerDKGT_tsmi.Text = "Fitler";
+            sortkh_tsmi.Text = "Sắp xếp";
+            cb_gt.Text = "None";
         }
 
         private void txb_ten_sdt_TextChanged(object sender, EventArgs e)
@@ -210,6 +224,7 @@ namespace QLPhongGym.GUI
         {
             try
             {
+                sortkh_tsmi.Text = "Mã thẻ";
                 //Sắp xếp theo dữ liệu tìm kiếm
                 //Lọc dữ liệu tìm kiếm theo tên hoặc mã thẻ hoặc cả mã thẻ và tên hoặc tất cả
                 if (txb_mathe_cccd.Text != "" && txb_ten_sdt.Text == "") //Nếu dữ liệu tìm kiếm bằng mã thẻ
@@ -232,6 +247,7 @@ namespace QLPhongGym.GUI
             try
             {
                 //Tương tự như trên
+                sortkh_tsmi.Text = "Giới tính";
                 if (txb_mathe_cccd.Text != "" && txb_ten_sdt.Text == "")
                     dgv_kh.DataSource = KHBLL.Instance.SortListKHBy("Giới tính", KHBLL.Instance.FindListKHByIDOrName(txb_mathe_cccd.Text));
                 else if (txb_ten_sdt.Text != "" && txb_mathe_cccd.Text == "")
@@ -253,6 +269,7 @@ namespace QLPhongGym.GUI
             try
             {
                 //Tương tự như trên
+                sortkh_tsmi.Text = "Tên";
                 if (txb_mathe_cccd.Text != "" && txb_ten_sdt.Text == "")
                     dgv_kh.DataSource = KHBLL.Instance.SortListKHBy("Tên", KHBLL.Instance.FindListKHByIDOrName(txb_mathe_cccd.Text));
                 else if (txb_ten_sdt.Text != "" && txb_mathe_cccd.Text == "")
@@ -276,6 +293,11 @@ namespace QLPhongGym.GUI
                 {
                     //Đăng kí và gia hạn đều sài chung cùng 1 form là đăng kí gói tập khách hàng, truyền vào tham số là khách hàng và tên gói tập
                     //Gia hạn thì truyền vào tên gói tập là tên gói tập đã đăng kí trước đó
+                    if(fitlerDKGT_tsmi.Text != "Đang tập")
+                    {
+                        MessageBox.Show("Chỉ có thể gia hạn được gói tập mà khách hàng đang tập");
+                        return;
+                    }
                     int IDKH = Convert.ToInt32(dgv_kh.SelectedRows[0].Cells["IDThe"].Value.ToString());
 
                     //Lấy tên gói tập
@@ -362,9 +384,15 @@ namespace QLPhongGym.GUI
                 {
                     //Kiểm tra gói tập đã được bao lưu hay chưa
                     bool IsBaoLuu = Convert.ToBoolean(dgv_gt.SelectedRows[0].Cells["BaoLuu"].Value.ToString());
+                    int day = Convert.ToInt32(dgv_gt.SelectedRows[0].Cells["DaysLeft"].Value.ToString());
                     if (IsBaoLuu)
                     {
                         MessageBox.Show("Gói tập đã được bảo lưu rồi");
+                        return;
+                    }
+                    if(day <= 0)
+                    {
+                        MessageBox.Show("Gói tập đã hết hạn");
                         return;
                     }
                     int songaybaoluu = 0; //Khai báo biến số ngày bảo lưu ban đầu = 0 nghĩa là không bảo lưu
@@ -504,6 +532,93 @@ namespace QLPhongGym.GUI
             }
             
         }
-        
+        private void allToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dgv_kh.SelectedRows.Count == 1)
+            {
+                fitlerDKGT_tsmi.Text = "Tất cả";
+                try
+                {
+                    int IDKH = Convert.ToInt32(dgv_kh.SelectedRows[0].Cells["IDThe"].Value.ToString());
+                    if (fitlerDKGT_tsmi.Text != "Fitler" && fitlerDKGT_tsmi.Text != "None")
+                        dgv_gt.DataSource = DangKiGoiTapBLL.Instance.FitlerListDKGT(IDKH, fitlerDKGT_tsmi.Text, cb_gt.SelectedItem as string);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Fitler gói tập đăng kí thất bại, Lỗi: " + ex.Message);
+                }
+            }
+        }
+
+        private void cb_gt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (dgv_kh.SelectedRows.Count == 1)
+            {
+                try
+                {
+                    int IDKH = Convert.ToInt32(dgv_kh.SelectedRows[0].Cells["IDThe"].Value.ToString());
+                    if(fitlerDKGT_tsmi.Text != "Fitler" && fitlerDKGT_tsmi.Text != "None")
+                        dgv_gt.DataSource = DangKiGoiTapBLL.Instance.FitlerListDKGT(IDKH, fitlerDKGT_tsmi.Text, cb_gt.SelectedItem as string);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Fitler thất bại, Lỗi: " + ex.Message);
+                }
+            }
+        }
+
+        private void đangTậpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dgv_kh.SelectedRows.Count == 1)
+            {
+                fitlerDKGT_tsmi.Text = "Đang tập";
+                try
+                {
+                    int IDKH = Convert.ToInt32(dgv_kh.SelectedRows[0].Cells["IDThe"].Value.ToString());
+                    if (fitlerDKGT_tsmi.Text != "Fitler" && fitlerDKGT_tsmi.Text != "None")
+                        dgv_gt.DataSource = DangKiGoiTapBLL.Instance.FitlerListDKGT(IDKH, fitlerDKGT_tsmi.Text, cb_gt.SelectedItem as string);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Fitler gói tập đăng kí thất bại, Lỗi: " + ex.Message);
+                }
+            }
+        }
+
+        private void góiTậpĐangBảoLưuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dgv_kh.SelectedRows.Count == 1)
+            {
+                fitlerDKGT_tsmi.Text = "Đang bảo lưu";
+                try
+                {
+                    int IDKH = Convert.ToInt32(dgv_kh.SelectedRows[0].Cells["IDThe"].Value.ToString());
+                    if (fitlerDKGT_tsmi.Text != "Fitler" && fitlerDKGT_tsmi.Text != "None")
+                        dgv_gt.DataSource = DangKiGoiTapBLL.Instance.FitlerListDKGT(IDKH, fitlerDKGT_tsmi.Text, cb_gt.SelectedItem as string);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Fitler gói tập đăng kí thất bại, Lỗi: " + ex.Message);
+                }
+            }
+        }
+
+        private void góiTậpSắpHếtHạnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dgv_kh.SelectedRows.Count == 1)
+            {
+                fitlerDKGT_tsmi.Text = "Đã hết hạn";
+                try
+                {
+                    int IDKH = Convert.ToInt32(dgv_kh.SelectedRows[0].Cells["IDThe"].Value.ToString());
+                    if (fitlerDKGT_tsmi.Text != "Fitler" && fitlerDKGT_tsmi.Text != "None")
+                        dgv_gt.DataSource = DangKiGoiTapBLL.Instance.FitlerListDKGT(IDKH, fitlerDKGT_tsmi.Text, cb_gt.SelectedItem as string);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Fitler gói tập đăng kí thất bại, Lỗi: " + ex.Message);
+                }
+            }
+        }
     }
 }

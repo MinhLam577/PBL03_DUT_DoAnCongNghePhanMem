@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing.Imaging;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -100,6 +101,228 @@ namespace QLPhongGym.DAL
                 }; 
             return d;
         }
+        public DataTable FitlerListDKGT(int IDKH, string require, string GoiTap)
+        {
+            dt = CreateTable();
+            switch(require)
+            {
+                case "Tất cả":
+                    switch (GoiTap)
+                    {
+                        case "None":
+                            break;
+                        case "Tất cả":
+                            var data1 = (from dkgt in db.DangKiGoiTaps
+                                    join kh in db.Users.OfType<KH>() on dkgt.IDKH equals kh.IDUsers
+                                    join gt in db.GoiTaps on dkgt.IDGT equals gt.IDGT
+                                    where kh.IDUsers == IDKH
+                                    select new
+                                    {
+                                        dkgt.IDDK,
+                                        kh.IDUsers,
+                                        kh.Name,
+                                        gt.NameGT,
+                                        dkgt.NgayDangKiGT,
+                                        dkgt.NgayKetThucGT,
+                                        dkgt.BaoLuu
+                                    }).ToList();
+                            if (data1 != null)
+                                foreach (var d in data1)
+                                {
+                                    int Day = (d.NgayKetThucGT - DateTime.Today).Value.Days;
+                                    if (Day < 0) Day = 0;
+                                    dt.Rows.Add(d.IDUsers, d.Name, d.NameGT, d.NgayDangKiGT, d.NgayKetThucGT, Day, d.BaoLuu);
+                                }
+                            return dt;
+                        default:
+                             var data2 = (from dkgt in db.DangKiGoiTaps
+                                        join kh in db.Users.OfType<KH>() on dkgt.IDKH equals kh.IDUsers
+                                        join gt in db.GoiTaps on dkgt.IDGT equals gt.IDGT
+                                        where kh.IDUsers == IDKH && gt.NameGT == GoiTap
+                                        select new
+                                        {
+                                            dkgt.IDDK,
+                                            kh.IDUsers,
+                                            kh.Name,
+                                            gt.NameGT,
+                                            dkgt.NgayDangKiGT,
+                                            dkgt.NgayKetThucGT,
+                                            dkgt.BaoLuu
+                                        }).ToList();
+                            if (data2 != null)
+                                foreach (var d in data2)
+                                {
+                                    int Day = (d.NgayKetThucGT - DateTime.Today).Value.Days;
+                                    if (Day < 0) Day = 0;
+                                    dt.Rows.Add(d.IDUsers, d.Name, d.NameGT, d.NgayDangKiGT, d.NgayKetThucGT, Day, d.BaoLuu);
+                                }
+                            return dt;
+                    }
+                    break;
+                case "Đang tập":
+                    switch (GoiTap)
+                    {
+                        case "None":
+                            break;
+                        case "Tất cả":
+                            var data1 = (from dkgt in db.DangKiGoiTaps
+                                         join kh in db.Users.OfType<KH>() on dkgt.IDKH equals kh.IDUsers
+                                         join gt in db.GoiTaps on dkgt.IDGT equals gt.IDGT
+                                         where kh.IDUsers == IDKH && dkgt.NgayKetThucGT.Value >= DateTime.Today && dkgt.BaoLuu == false
+                                         select new
+                                         {
+                                             dkgt.IDDK,
+                                             kh.IDUsers,
+                                             kh.Name,
+                                             gt.NameGT,
+                                             dkgt.NgayDangKiGT,
+                                             dkgt.NgayKetThucGT,
+                                             dkgt.BaoLuu
+                                         }).ToList();
+                            if (data1 != null)
+                                foreach (var d in data1)
+                                {
+                                    int Day = (d.NgayKetThucGT - DateTime.Today).Value.Days;
+                                    if (Day < 0) Day = 0;
+                                    dt.Rows.Add(d.IDUsers, d.Name, d.NameGT, d.NgayDangKiGT, d.NgayKetThucGT, Day, d.BaoLuu);
+                                }
+                            return dt;
+                        default:
+                            var data2 = (from dkgt in db.DangKiGoiTaps
+                                         join kh in db.Users.OfType<KH>() on dkgt.IDKH equals kh.IDUsers
+                                         join gt in db.GoiTaps on dkgt.IDGT equals gt.IDGT
+                                         where kh.IDUsers == IDKH && gt.NameGT == GoiTap && dkgt.NgayKetThucGT.Value >= DateTime.Today && dkgt.BaoLuu == false
+                                         select new
+                                         {
+                                             dkgt.IDDK,
+                                             kh.IDUsers,
+                                             kh.Name,
+                                             gt.NameGT,
+                                             dkgt.NgayDangKiGT,
+                                             dkgt.NgayKetThucGT,
+                                             dkgt.BaoLuu
+                                         }).ToList();
+                            if (data2 != null)
+                                foreach (var d in data2)
+                                {
+                                    int Day = (d.NgayKetThucGT - DateTime.Today).Value.Days;
+                                    if (Day < 0) Day = 0;
+                                    dt.Rows.Add(d.IDUsers, d.Name, d.NameGT, d.NgayDangKiGT, d.NgayKetThucGT, Day, d.BaoLuu);
+                                }
+                            return dt;
+                    }
+                    break;
+                case "Đang bảo lưu":
+                    switch (GoiTap)
+                    {
+                        case "None":
+                            break;
+                        case "Tất cả":
+                            var data1 = (from dkgt in db.DangKiGoiTaps
+                                         join kh in db.Users.OfType<KH>() on dkgt.IDKH equals kh.IDUsers
+                                         join gt in db.GoiTaps on dkgt.IDGT equals gt.IDGT
+                                         where kh.IDUsers == IDKH && dkgt.NgayKetThucGT.Value >= DateTime.Today && dkgt.BaoLuu == true
+                                         select new
+                                         {
+                                             dkgt.IDDK,
+                                             kh.IDUsers,
+                                             kh.Name,
+                                             gt.NameGT,
+                                             dkgt.NgayDangKiGT,
+                                             dkgt.NgayKetThucGT,
+                                             dkgt.BaoLuu
+                                         }).ToList();
+                            if (data1 != null)
+                                foreach (var d in data1)
+                                {
+                                    int Day = (d.NgayKetThucGT - DateTime.Today).Value.Days;
+                                    if (Day < 0) Day = 0;
+                                    dt.Rows.Add(d.IDUsers, d.Name, d.NameGT, d.NgayDangKiGT, d.NgayKetThucGT, Day, d.BaoLuu);
+                                }
+                            return dt;
+                        default:
+                            var data2 = (from dkgt in db.DangKiGoiTaps
+                                         join kh in db.Users.OfType<KH>() on dkgt.IDKH equals kh.IDUsers
+                                         join gt in db.GoiTaps on dkgt.IDGT equals gt.IDGT
+                                         where kh.IDUsers == IDKH && gt.NameGT == GoiTap && dkgt.NgayKetThucGT.Value >= DateTime.Today && dkgt.BaoLuu == true
+                                         select new
+                                         {
+                                             dkgt.IDDK,
+                                             kh.IDUsers,
+                                             kh.Name,
+                                             gt.NameGT,
+                                             dkgt.NgayDangKiGT,
+                                             dkgt.NgayKetThucGT,
+                                             dkgt.BaoLuu
+                                         }).ToList();
+                            if (data2 != null)
+                                foreach (var d in data2)
+                                {
+                                    int Day = (d.NgayKetThucGT - DateTime.Today).Value.Days;
+                                    if (Day < 0) Day = 0;
+                                    dt.Rows.Add(d.IDUsers, d.Name, d.NameGT, d.NgayDangKiGT, d.NgayKetThucGT, Day, d.BaoLuu);
+                                }
+                            return dt;
+                    }
+                    break;
+                case "Đã hết hạn":
+                    switch (GoiTap)
+                    {
+                        case "None":
+                            break;
+                        case "Tất cả":
+                            var data1 = (from dkgt in db.DangKiGoiTaps
+                                         join kh in db.Users.OfType<KH>() on dkgt.IDKH equals kh.IDUsers
+                                         join gt in db.GoiTaps on dkgt.IDGT equals gt.IDGT
+                                         where kh.IDUsers == IDKH && dkgt.NgayKetThucGT.Value < DateTime.Today
+                                         select new
+                                         {
+                                             dkgt.IDDK,
+                                             kh.IDUsers,
+                                             kh.Name,
+                                             gt.NameGT,
+                                             dkgt.NgayDangKiGT,
+                                             dkgt.NgayKetThucGT,
+                                             dkgt.BaoLuu
+                                         }).ToList();
+                            if (data1 != null)
+                                foreach (var d in data1)
+                                {
+                                    int Day = (d.NgayKetThucGT - DateTime.Today).Value.Days;
+                                    if (Day < 0) Day = 0;
+                                    dt.Rows.Add(d.IDUsers, d.Name, d.NameGT, d.NgayDangKiGT, d.NgayKetThucGT, Day, d.BaoLuu);
+                                }
+                            return dt;
+                        default:
+                            var data2 = (from dkgt in db.DangKiGoiTaps
+                                         join kh in db.Users.OfType<KH>() on dkgt.IDKH equals kh.IDUsers
+                                         join gt in db.GoiTaps on dkgt.IDGT equals gt.IDGT
+                                         where kh.IDUsers == IDKH && gt.NameGT == GoiTap && dkgt.NgayKetThucGT.Value < DateTime.Today
+                                         select new
+                                         {
+                                             dkgt.IDDK,
+                                             kh.IDUsers,
+                                             kh.Name,
+                                             gt.NameGT,
+                                             dkgt.NgayDangKiGT,
+                                             dkgt.NgayKetThucGT,
+                                             dkgt.BaoLuu
+                                         }).ToList();
+                            if (data2 != null)
+                                foreach (var d in data2)
+                                {
+                                    int Day = (d.NgayKetThucGT - DateTime.Today).Value.Days;
+                                    if (Day < 0) Day = 0;
+                                    dt.Rows.Add(d.IDUsers, d.Name, d.NameGT, d.NgayDangKiGT, d.NgayKetThucGT, Day, d.BaoLuu);
+                                }
+                            return dt;
+                    }
+                    break;
+                default:
+                    break;
+            }
+            return dt;
+        }
         public int AddDKGT(DangKiGoiTap dkgt)
         {
             db.DangKiGoiTaps.Add(dkgt);
@@ -124,9 +347,9 @@ namespace QLPhongGym.DAL
             foreach(DangKiGoiTap i in list)
                 DeleteDKGT(i);
         }
-        public DangKiGoiTap GetDKGTByIDKH_IDGT(int IDKH, int IDGT)
-        {
-            return db.DangKiGoiTaps.Where(s => (int)s.IDKH == IDKH && (int)s.IDGT == IDGT).OrderByDescending(s => s.NgayDangKiGT).FirstOrDefault();
+        public DangKiGoiTap GetDKGT_Newest_ByIDKH_IDGT(int IDKH, int IDGT)
+        { 
+            return db.DangKiGoiTaps.Where(s => (int)s.IDKH == IDKH && (int)s.IDGT == IDGT && s.NgayKetThucGT >= DateTime.Today).OrderByDescending(s => s.NgayDangKiGT).FirstOrDefault();
         }
         public DangKiGoiTap GetDKGTByIDKH_NgayDangKi_IDGT(int IDKH, DateTime ngaydangki, int IDGT)
         {

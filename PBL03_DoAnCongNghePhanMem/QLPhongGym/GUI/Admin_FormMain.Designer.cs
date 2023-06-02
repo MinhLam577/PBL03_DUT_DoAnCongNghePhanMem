@@ -235,7 +235,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(240, 588);
+            this.panel1.Size = new System.Drawing.Size(240, 586);
             this.panel1.TabIndex = 1;
             // 
             // button1
@@ -281,7 +281,7 @@
             this.panel4.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.panel4.Location = new System.Drawing.Point(240, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(954, 82);
+            this.panel4.Size = new System.Drawing.Size(953, 82);
             this.panel4.TabIndex = 0;
             // 
             // pictureBox1
@@ -305,7 +305,7 @@
             this.pb_ad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_ad.TabIndex = 2;
             this.pb_ad.TabStop = false;
-            this.pb_ad.Click += new System.EventHandler(this.pb_ad_Click);
+            this.pb_ad.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label2_MouseClick);
             // 
             // label1
             // 
@@ -329,7 +329,7 @@
             this.label2.Size = new System.Drawing.Size(81, 29);
             this.label2.TabIndex = 3;
             this.label2.Text = "Admin";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label2_MouseClick);
             // 
             // panel3
             // 
@@ -337,7 +337,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(240, 82);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(954, 506);
+            this.panel3.Size = new System.Drawing.Size(953, 504);
             this.panel3.TabIndex = 2;
             // 
             // pictureBox2
@@ -346,7 +346,7 @@
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(954, 506);
+            this.pictureBox2.Size = new System.Drawing.Size(953, 504);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -360,9 +360,9 @@
             this.pn_tkadmin.Controls.Add(this.lb_gmailad);
             this.pn_tkadmin.Controls.Add(this.lb_tenad);
             this.pn_tkadmin.Controls.Add(this.pb_acc);
-            this.pn_tkadmin.Location = new System.Drawing.Point(436, 85);
+            this.pn_tkadmin.Location = new System.Drawing.Point(436, 79);
             this.pn_tkadmin.Name = "pn_tkadmin";
-            this.pn_tkadmin.Size = new System.Drawing.Size(511, 152);
+            this.pn_tkadmin.Size = new System.Drawing.Size(511, 158);
             this.pn_tkadmin.TabIndex = 3;
             // 
             // btn_doimatkhau
@@ -432,7 +432,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1194, 588);
+            this.ClientSize = new System.Drawing.Size(1193, 586);
             this.Controls.Add(this.pn_tkadmin);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
