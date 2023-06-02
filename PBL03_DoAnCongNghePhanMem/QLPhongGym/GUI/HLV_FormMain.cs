@@ -67,20 +67,10 @@ namespace QLPhongGym.GUI
         }
         private void hideMenu()
         {
-            /*if (pn_tkhlv.Visible)
+            if (pn_tkhlv.Visible)
             {
                 pn_tkhlv.Visible = false;
-            }*/
-            if (panel4.Visible == true)
-            {
-                panel4.Visible = false;
             }
-            if (panel3.Visible == true)
-            {
-                panel3.Visible = false;
-            }
-
-
         }
         private void showMenu(Panel subMenu)
         {
@@ -194,12 +184,9 @@ namespace QLPhongGym.GUI
 
         private void btn_lichlamviec_Click(object sender, EventArgs e)
         {
-           
-            OpenChildForm( new FormLichHLV());
+            OpenChildForm(new FormLichHLV());
             hideMenu();
-
         }
-
         private void btn_kh_Click(object sender, EventArgs e)
         {
 
