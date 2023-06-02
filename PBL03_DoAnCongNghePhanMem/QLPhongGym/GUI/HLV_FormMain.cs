@@ -86,17 +86,7 @@ namespace QLPhongGym.GUI
             this.Close();
         }
 
-        private void btn_thoat_Click(object sender, EventArgs e)
-        {
-            switch(MessageBox.Show("Bạn có chắc chắn muốn thoát ứng dụng?", "Xin chờ một lát", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)){
-                case DialogResult.OK:
-                    this.Close();
-                    break;
-                case DialogResult.Cancel:
-                    break;
-            }
-            
-        }
+        
 
         private void pb_home_Click(object sender, EventArgs e)
         {
@@ -183,6 +173,16 @@ namespace QLPhongGym.GUI
                 hideMenu();
             };
             dmk.ShowDialog();
+        }
+
+        private void btn_thoat_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_kh_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
