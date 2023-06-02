@@ -208,17 +208,6 @@ namespace QLPhongGym.GUI
 
         }
 
-
-
-
-
-
-
-
-
-
-
-
         private void dateTimeNgayStart_ValueChanged(object sender, EventArgs e)
         {
             /*  // Kiểm tra nếu labelWeek có giá trị là "Tuần 1"
@@ -510,10 +499,7 @@ namespace QLPhongGym.GUI
             this.Dispose();
         }
 
-        private void btnNgaylamviec_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
            
