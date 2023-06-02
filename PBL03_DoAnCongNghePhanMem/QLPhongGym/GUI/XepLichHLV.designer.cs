@@ -222,7 +222,7 @@
             // btnCong
             // 
             this.btnCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCong.Location = new System.Drawing.Point(841, 35);
+            this.btnCong.Location = new System.Drawing.Point(853, 35);
             this.btnCong.Name = "btnCong";
             this.btnCong.Size = new System.Drawing.Size(29, 29);
             this.btnCong.TabIndex = 41;
