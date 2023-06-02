@@ -56,8 +56,8 @@ namespace QLPhongGym.GUI
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            panel3.Controls.Add(childForm);
-            panel3.Tag = childForm;
+            pn_cha.Controls.Add(childForm);
+            pn_cha.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
@@ -180,7 +180,5 @@ namespace QLPhongGym.GUI
             if(MessageBox.Show("Bạn có muốn thoát chương trình?", "Xin chờ một lát", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 this.Close();
         }
-
-        
     }
 }

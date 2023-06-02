@@ -333,6 +333,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.pn_tkadmin);
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(240, 82);
@@ -360,7 +361,7 @@
             this.pn_tkadmin.Controls.Add(this.lb_gmailad);
             this.pn_tkadmin.Controls.Add(this.lb_tenad);
             this.pn_tkadmin.Controls.Add(this.pb_acc);
-            this.pn_tkadmin.Location = new System.Drawing.Point(436, 79);
+            this.pn_tkadmin.Location = new System.Drawing.Point(196, 3);
             this.pn_tkadmin.Name = "pn_tkadmin";
             this.pn_tkadmin.Size = new System.Drawing.Size(511, 158);
             this.pn_tkadmin.TabIndex = 3;
@@ -433,7 +434,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1193, 586);
-            this.Controls.Add(this.pn_tkadmin);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
