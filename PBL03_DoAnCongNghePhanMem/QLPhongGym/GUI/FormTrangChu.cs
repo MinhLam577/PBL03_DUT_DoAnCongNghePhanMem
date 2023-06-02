@@ -17,6 +17,9 @@ namespace QLPhongGym.GUI
             InitializeComponent();
         }
 
-        
+        private void FormTrangChu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

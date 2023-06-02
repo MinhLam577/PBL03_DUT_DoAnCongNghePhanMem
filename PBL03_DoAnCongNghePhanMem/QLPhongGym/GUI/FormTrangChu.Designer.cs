@@ -79,6 +79,7 @@
             this.Name = "FormTrangChu";
             this.Text = "FormTrangChu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FormTrangChu_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.ResumeLayout(false);

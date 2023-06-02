@@ -1033,5 +1033,10 @@ namespace QLPhongGym.GUI
         {
 
         }
+
+        private void lbTuanLam_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }       

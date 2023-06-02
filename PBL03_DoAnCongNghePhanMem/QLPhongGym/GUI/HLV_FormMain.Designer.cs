@@ -36,11 +36,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lb_acc = new System.Windows.Forms.Label();
             this.pb_acc = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.pb_home = new System.Windows.Forms.PictureBox();
             this.lb_home = new System.Windows.Forms.Label();
+            this.lb_acc = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.pn_tkhlv = new System.Windows.Forms.Panel();
             this.btn_doimatkhau = new System.Windows.Forms.Button();
             this.btn_updatethongtin = new System.Windows.Forms.Button();
@@ -78,6 +78,7 @@
             this.btn_kh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_kh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_kh.UseVisualStyleBackColor = false;
+            this.btn_kh.Click += new System.EventHandler(this.btn_kh_Click);
             // 
             // btn_lichlamviec
             // 
@@ -95,6 +96,7 @@
             this.btn_lichlamviec.Text = "Lịch làm việc";
             this.btn_lichlamviec.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_lichlamviec.UseVisualStyleBackColor = false;
+            this.btn_lichlamviec.Click += new System.EventHandler(this.btn_lichlamviec_Click);
             // 
             // btn_thoat
             // 
@@ -162,17 +164,6 @@
             this.panel3.Size = new System.Drawing.Size(891, 83);
             this.panel3.TabIndex = 4;
             // 
-            // lb_acc
-            // 
-            this.lb_acc.AutoSize = true;
-            this.lb_acc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_acc.Location = new System.Drawing.Point(262, 49);
-            this.lb_acc.Name = "lb_acc";
-            this.lb_acc.Size = new System.Drawing.Size(182, 29);
-            this.lb_acc.TabIndex = 1;
-            this.lb_acc.Text = "Huấn luyện viên";
-            this.lb_acc.Click += new System.EventHandler(this.lb_acc_Click);
-            // 
             // pb_acc
             // 
             this.pb_acc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -184,16 +175,6 @@
             this.pb_acc.TabIndex = 0;
             this.pb_acc.TabStop = false;
             this.pb_acc.Click += new System.EventHandler(this.pb_acc_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(273, 83);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(891, 530);
-            this.panel4.TabIndex = 5;
             // 
             // pb_home
             // 
@@ -218,6 +199,27 @@
             this.lb_home.TabIndex = 3;
             this.lb_home.Text = "Home";
             this.lb_home.Click += new System.EventHandler(this.lb_home_Click);
+            // 
+            // lb_acc
+            // 
+            this.lb_acc.AutoSize = true;
+            this.lb_acc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_acc.Location = new System.Drawing.Point(262, 49);
+            this.lb_acc.Name = "lb_acc";
+            this.lb_acc.Size = new System.Drawing.Size(182, 29);
+            this.lb_acc.TabIndex = 1;
+            this.lb_acc.Text = "Huấn luyện viên";
+            this.lb_acc.Click += new System.EventHandler(this.lb_acc_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(273, 83);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(891, 530);
+            this.panel4.TabIndex = 5;
             // 
             // pn_tkhlv
             // 
@@ -308,6 +310,7 @@
             this.Name = "HLV_FormMain";
             this.Text = "HLV_formmain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.HLV_FormMain_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

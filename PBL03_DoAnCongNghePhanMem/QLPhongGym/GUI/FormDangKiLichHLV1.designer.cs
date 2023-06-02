@@ -39,13 +39,7 @@
             this.lbca2 = new System.Windows.Forms.Label();
             this.labelca3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btntru1 = new System.Windows.Forms.Button();
-            this.butncong1 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.btnthangtruoc = new System.Windows.Forms.Button();
-            this.btnthangsau = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.buttontuantiep = new System.Windows.Forms.Button();
             this.lbTuanLam = new System.Windows.Forms.Label();
             this.btnNgaylamviec = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -56,115 +50,121 @@
             this.dateTimeNgayStart = new System.Windows.Forms.DateTimePicker();
             this.btnTest = new System.Windows.Forms.Button();
             this.panel19 = new System.Windows.Forms.Panel();
-            this.btntru3 = new System.Windows.Forms.Button();
-            this.btncong3 = new System.Windows.Forms.Button();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.panel21 = new System.Windows.Forms.Panel();
-            this.btntru5 = new System.Windows.Forms.Button();
-            this.btncong5 = new System.Windows.Forms.Button();
             this.listBox5 = new System.Windows.Forms.ListBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btntru4 = new System.Windows.Forms.Button();
-            this.btncong4 = new System.Windows.Forms.Button();
             this.listBox4 = new System.Windows.Forms.ListBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btntru7 = new System.Windows.Forms.Button();
-            this.btncong7 = new System.Windows.Forms.Button();
             this.listBox7 = new System.Windows.Forms.ListBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btntru2 = new System.Windows.Forms.Button();
-            this.btncong2 = new System.Windows.Forms.Button();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btntru9 = new System.Windows.Forms.Button();
-            this.btncong9 = new System.Windows.Forms.Button();
             this.listBox9 = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btntru6 = new System.Windows.Forms.Button();
-            this.btncong6 = new System.Windows.Forms.Button();
             this.listBox6 = new System.Windows.Forms.ListBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.btntru8 = new System.Windows.Forms.Button();
-            this.btncong8 = new System.Windows.Forms.Button();
             this.listBox8 = new System.Windows.Forms.ListBox();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.btntru10 = new System.Windows.Forms.Button();
-            this.btncong10 = new System.Windows.Forms.Button();
             this.listBox10 = new System.Windows.Forms.ListBox();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.btntru11 = new System.Windows.Forms.Button();
-            this.btncong11 = new System.Windows.Forms.Button();
             this.listBox11 = new System.Windows.Forms.ListBox();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.btntru12 = new System.Windows.Forms.Button();
-            this.btncong12 = new System.Windows.Forms.Button();
             this.listBox12 = new System.Windows.Forms.ListBox();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.btntru13 = new System.Windows.Forms.Button();
-            this.btncong13 = new System.Windows.Forms.Button();
             this.listBox13 = new System.Windows.Forms.ListBox();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.btntru14 = new System.Windows.Forms.Button();
-            this.btn14 = new System.Windows.Forms.Button();
             this.listBox14 = new System.Windows.Forms.ListBox();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.btntru15 = new System.Windows.Forms.Button();
-            this.btncong15 = new System.Windows.Forms.Button();
             this.listBox15 = new System.Windows.Forms.ListBox();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.btntru16 = new System.Windows.Forms.Button();
-            this.btncong16 = new System.Windows.Forms.Button();
             this.listBox16 = new System.Windows.Forms.ListBox();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.btntru17 = new System.Windows.Forms.Button();
-            this.btncong17 = new System.Windows.Forms.Button();
             this.listBox17 = new System.Windows.Forms.ListBox();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.btntru18 = new System.Windows.Forms.Button();
-            this.btncong18 = new System.Windows.Forms.Button();
             this.listBox18 = new System.Windows.Forms.ListBox();
             this.panel17 = new System.Windows.Forms.Panel();
-            this.btntru19 = new System.Windows.Forms.Button();
-            this.btncong19 = new System.Windows.Forms.Button();
             this.listBox19 = new System.Windows.Forms.ListBox();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.btntru20 = new System.Windows.Forms.Button();
-            this.btncong20 = new System.Windows.Forms.Button();
             this.listBox20 = new System.Windows.Forms.ListBox();
             this.panel20 = new System.Windows.Forms.Panel();
-            this.btntru21 = new System.Windows.Forms.Button();
-            this.btncong21 = new System.Windows.Forms.Button();
             this.listBox21 = new System.Windows.Forms.ListBox();
-            this.btncong22 = new System.Windows.Forms.Button();
             this.listBox22 = new System.Windows.Forms.ListBox();
             this.panel22 = new System.Windows.Forms.Panel();
-            this.btntru22 = new System.Windows.Forms.Button();
             this.panel23 = new System.Windows.Forms.Panel();
-            this.btntru23 = new System.Windows.Forms.Button();
-            this.btncong23 = new System.Windows.Forms.Button();
             this.listBox23 = new System.Windows.Forms.ListBox();
             this.panel24 = new System.Windows.Forms.Panel();
-            this.btntru24 = new System.Windows.Forms.Button();
-            this.btncong24 = new System.Windows.Forms.Button();
             this.listBox24 = new System.Windows.Forms.ListBox();
             this.panel25 = new System.Windows.Forms.Panel();
-            this.btntru25 = new System.Windows.Forms.Button();
-            this.btncong25 = new System.Windows.Forms.Button();
             this.listBox25 = new System.Windows.Forms.ListBox();
             this.panel26 = new System.Windows.Forms.Panel();
-            this.btntru26 = new System.Windows.Forms.Button();
-            this.btncong26 = new System.Windows.Forms.Button();
             this.listBox26 = new System.Windows.Forms.ListBox();
             this.panel27 = new System.Windows.Forms.Panel();
-            this.btntru27 = new System.Windows.Forms.Button();
-            this.btncong27 = new System.Windows.Forms.Button();
             this.listBox27 = new System.Windows.Forms.ListBox();
             this.panel28 = new System.Windows.Forms.Panel();
-            this.bntru28 = new System.Windows.Forms.Button();
-            this.btncong28 = new System.Windows.Forms.Button();
             this.listBox28 = new System.Windows.Forms.ListBox();
             this.lbca4 = new System.Windows.Forms.Label();
+            this.bntru28 = new System.Windows.Forms.Button();
+            this.btncong28 = new System.Windows.Forms.Button();
+            this.btntru6 = new System.Windows.Forms.Button();
+            this.btncong6 = new System.Windows.Forms.Button();
+            this.btntru7 = new System.Windows.Forms.Button();
+            this.btncong7 = new System.Windows.Forms.Button();
+            this.btntru27 = new System.Windows.Forms.Button();
+            this.btncong27 = new System.Windows.Forms.Button();
+            this.btntru26 = new System.Windows.Forms.Button();
+            this.btncong26 = new System.Windows.Forms.Button();
+            this.btntru25 = new System.Windows.Forms.Button();
+            this.btncong25 = new System.Windows.Forms.Button();
+            this.btntru24 = new System.Windows.Forms.Button();
+            this.btncong24 = new System.Windows.Forms.Button();
+            this.btntru23 = new System.Windows.Forms.Button();
+            this.btncong23 = new System.Windows.Forms.Button();
+            this.btntru22 = new System.Windows.Forms.Button();
+            this.btncong22 = new System.Windows.Forms.Button();
+            this.btntru21 = new System.Windows.Forms.Button();
+            this.btncong21 = new System.Windows.Forms.Button();
+            this.btntru20 = new System.Windows.Forms.Button();
+            this.btncong20 = new System.Windows.Forms.Button();
+            this.btntru19 = new System.Windows.Forms.Button();
+            this.btncong19 = new System.Windows.Forms.Button();
+            this.btntru18 = new System.Windows.Forms.Button();
+            this.btncong18 = new System.Windows.Forms.Button();
+            this.btntru17 = new System.Windows.Forms.Button();
+            this.btncong17 = new System.Windows.Forms.Button();
+            this.btntru16 = new System.Windows.Forms.Button();
+            this.btncong16 = new System.Windows.Forms.Button();
+            this.btntru15 = new System.Windows.Forms.Button();
+            this.btncong15 = new System.Windows.Forms.Button();
+            this.btntru14 = new System.Windows.Forms.Button();
+            this.btn14 = new System.Windows.Forms.Button();
+            this.btntru13 = new System.Windows.Forms.Button();
+            this.btncong13 = new System.Windows.Forms.Button();
+            this.btntru12 = new System.Windows.Forms.Button();
+            this.btncong12 = new System.Windows.Forms.Button();
+            this.btntru11 = new System.Windows.Forms.Button();
+            this.btncong11 = new System.Windows.Forms.Button();
+            this.btntru10 = new System.Windows.Forms.Button();
+            this.btncong10 = new System.Windows.Forms.Button();
+            this.btntru8 = new System.Windows.Forms.Button();
+            this.btncong8 = new System.Windows.Forms.Button();
+            this.btntru9 = new System.Windows.Forms.Button();
+            this.btncong9 = new System.Windows.Forms.Button();
+            this.btntru2 = new System.Windows.Forms.Button();
+            this.btncong2 = new System.Windows.Forms.Button();
+            this.btntru4 = new System.Windows.Forms.Button();
+            this.btncong4 = new System.Windows.Forms.Button();
+            this.btntru5 = new System.Windows.Forms.Button();
+            this.btncong5 = new System.Windows.Forms.Button();
+            this.btntru3 = new System.Windows.Forms.Button();
+            this.btncong3 = new System.Windows.Forms.Button();
+            this.btnthangtruoc = new System.Windows.Forms.Button();
+            this.btnthangsau = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.buttontuantiep = new System.Windows.Forms.Button();
+            this.btntru1 = new System.Windows.Forms.Button();
+            this.butncong1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel21.SuspendLayout();
@@ -304,26 +304,6 @@
             this.panel1.Size = new System.Drawing.Size(145, 114);
             this.panel1.TabIndex = 10;
             // 
-            // btntru1
-            // 
-            this.btntru1.Image = ((System.Drawing.Image)(resources.GetObject("btntru1.Image")));
-            this.btntru1.Location = new System.Drawing.Point(120, 72);
-            this.btntru1.Name = "btntru1";
-            this.btntru1.Size = new System.Drawing.Size(25, 23);
-            this.btntru1.TabIndex = 85;
-            this.btntru1.UseVisualStyleBackColor = true;
-            this.btntru1.Click += new System.EventHandler(this.btntru1_Click);
-            // 
-            // butncong1
-            // 
-            this.butncong1.Image = ((System.Drawing.Image)(resources.GetObject("butncong1.Image")));
-            this.butncong1.Location = new System.Drawing.Point(118, 16);
-            this.butncong1.Name = "butncong1";
-            this.butncong1.Size = new System.Drawing.Size(27, 23);
-            this.butncong1.TabIndex = 1;
-            this.butncong1.UseVisualStyleBackColor = true;
-            this.butncong1.Click += new System.EventHandler(this.butncong1_Click);
-            // 
             // listBox1
             // 
             this.listBox1.BackColor = System.Drawing.SystemColors.Highlight;
@@ -335,54 +315,6 @@
             this.listBox1.Size = new System.Drawing.Size(148, 112);
             this.listBox1.TabIndex = 0;
             // 
-            // btnthangtruoc
-            // 
-            this.btnthangtruoc.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnthangtruoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnthangtruoc.Image = ((System.Drawing.Image)(resources.GetObject("btnthangtruoc.Image")));
-            this.btnthangtruoc.Location = new System.Drawing.Point(608, 47);
-            this.btnthangtruoc.Name = "btnthangtruoc";
-            this.btnthangtruoc.Size = new System.Drawing.Size(54, 23);
-            this.btnthangtruoc.TabIndex = 60;
-            this.btnthangtruoc.UseVisualStyleBackColor = true;
-            this.btnthangtruoc.Click += new System.EventHandler(this.btnthangtruoc_Click);
-            // 
-            // btnthangsau
-            // 
-            this.btnthangsau.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnthangsau.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnthangsau.Image = ((System.Drawing.Image)(resources.GetObject("btnthangsau.Image")));
-            this.btnthangsau.Location = new System.Drawing.Point(782, 47);
-            this.btnthangsau.Name = "btnthangsau";
-            this.btnthangsau.Size = new System.Drawing.Size(49, 23);
-            this.btnthangsau.TabIndex = 59;
-            this.btnthangsau.UseVisualStyleBackColor = true;
-            this.btnthangsau.Click += new System.EventHandler(this.btnthangsau_Click);
-            // 
-            // button5
-            // 
-            this.button5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(608, 5);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(54, 23);
-            this.button5.TabIndex = 55;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // buttontuantiep
-            // 
-            this.buttontuantiep.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttontuantiep.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttontuantiep.Image = ((System.Drawing.Image)(resources.GetObject("buttontuantiep.Image")));
-            this.buttontuantiep.Location = new System.Drawing.Point(782, 5);
-            this.buttontuantiep.Name = "buttontuantiep";
-            this.buttontuantiep.Size = new System.Drawing.Size(49, 23);
-            this.buttontuantiep.TabIndex = 54;
-            this.buttontuantiep.UseVisualStyleBackColor = true;
-            this.buttontuantiep.Click += new System.EventHandler(this.buttontuantiep_Click);
-            // 
             // lbTuanLam
             // 
             this.lbTuanLam.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -392,7 +324,8 @@
             this.lbTuanLam.Name = "lbTuanLam";
             this.lbTuanLam.Size = new System.Drawing.Size(87, 29);
             this.lbTuanLam.TabIndex = 53;
-            this.lbTuanLam.Text = "Tuần 4";
+            this.lbTuanLam.Text = "Tuần 4\r\n";
+            this.lbTuanLam.Click += new System.EventHandler(this.lbTuanLam_Click_1);
             // 
             // btnNgaylamviec
             // 
@@ -499,26 +432,6 @@
             this.panel19.Size = new System.Drawing.Size(145, 114);
             this.panel19.TabIndex = 64;
             // 
-            // btntru3
-            // 
-            this.btntru3.Image = ((System.Drawing.Image)(resources.GetObject("btntru3.Image")));
-            this.btntru3.Location = new System.Drawing.Point(122, 71);
-            this.btntru3.Name = "btntru3";
-            this.btntru3.Size = new System.Drawing.Size(25, 23);
-            this.btntru3.TabIndex = 87;
-            this.btntru3.UseVisualStyleBackColor = true;
-            this.btntru3.Click += new System.EventHandler(this.btntru3_Click);
-            // 
-            // btncong3
-            // 
-            this.btncong3.Image = ((System.Drawing.Image)(resources.GetObject("btncong3.Image")));
-            this.btncong3.Location = new System.Drawing.Point(120, 15);
-            this.btncong3.Name = "btncong3";
-            this.btncong3.Size = new System.Drawing.Size(27, 23);
-            this.btncong3.TabIndex = 87;
-            this.btncong3.UseVisualStyleBackColor = true;
-            this.btncong3.Click += new System.EventHandler(this.btncong3_Click);
-            // 
             // listBox3
             // 
             this.listBox3.BackColor = System.Drawing.SystemColors.Highlight;
@@ -541,26 +454,6 @@
             this.panel21.Size = new System.Drawing.Size(145, 114);
             this.panel21.TabIndex = 66;
             // 
-            // btntru5
-            // 
-            this.btntru5.Image = ((System.Drawing.Image)(resources.GetObject("btntru5.Image")));
-            this.btntru5.Location = new System.Drawing.Point(120, 70);
-            this.btntru5.Name = "btntru5";
-            this.btntru5.Size = new System.Drawing.Size(25, 23);
-            this.btntru5.TabIndex = 89;
-            this.btntru5.UseVisualStyleBackColor = true;
-            this.btntru5.Click += new System.EventHandler(this.btntru5_Click);
-            // 
-            // btncong5
-            // 
-            this.btncong5.Image = ((System.Drawing.Image)(resources.GetObject("btncong5.Image")));
-            this.btncong5.Location = new System.Drawing.Point(118, 14);
-            this.btncong5.Name = "btncong5";
-            this.btncong5.Size = new System.Drawing.Size(27, 23);
-            this.btncong5.TabIndex = 89;
-            this.btncong5.UseVisualStyleBackColor = true;
-            this.btncong5.Click += new System.EventHandler(this.btncong5_Click);
-            // 
             // listBox5
             // 
             this.listBox5.BackColor = System.Drawing.SystemColors.Highlight;
@@ -581,26 +474,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(145, 114);
             this.panel2.TabIndex = 63;
-            // 
-            // btntru4
-            // 
-            this.btntru4.Image = ((System.Drawing.Image)(resources.GetObject("btntru4.Image")));
-            this.btntru4.Location = new System.Drawing.Point(121, 70);
-            this.btntru4.Name = "btntru4";
-            this.btntru4.Size = new System.Drawing.Size(25, 23);
-            this.btntru4.TabIndex = 88;
-            this.btntru4.UseVisualStyleBackColor = true;
-            this.btntru4.Click += new System.EventHandler(this.btntru4_Click);
-            // 
-            // btncong4
-            // 
-            this.btncong4.Image = ((System.Drawing.Image)(resources.GetObject("btncong4.Image")));
-            this.btncong4.Location = new System.Drawing.Point(119, 14);
-            this.btncong4.Name = "btncong4";
-            this.btncong4.Size = new System.Drawing.Size(27, 23);
-            this.btncong4.TabIndex = 88;
-            this.btncong4.UseVisualStyleBackColor = true;
-            this.btncong4.Click += new System.EventHandler(this.btncong4_Click);
             // 
             // listBox4
             // 
@@ -624,26 +497,6 @@
             this.panel3.Size = new System.Drawing.Size(145, 114);
             this.panel3.TabIndex = 64;
             // 
-            // btntru7
-            // 
-            this.btntru7.Image = ((System.Drawing.Image)(resources.GetObject("btntru7.Image")));
-            this.btntru7.Location = new System.Drawing.Point(123, 70);
-            this.btntru7.Name = "btntru7";
-            this.btntru7.Size = new System.Drawing.Size(25, 23);
-            this.btntru7.TabIndex = 91;
-            this.btntru7.UseVisualStyleBackColor = true;
-            this.btntru7.Click += new System.EventHandler(this.btntru7_Click);
-            // 
-            // btncong7
-            // 
-            this.btncong7.Image = ((System.Drawing.Image)(resources.GetObject("btncong7.Image")));
-            this.btncong7.Location = new System.Drawing.Point(115, 14);
-            this.btncong7.Name = "btncong7";
-            this.btncong7.Size = new System.Drawing.Size(27, 23);
-            this.btncong7.TabIndex = 91;
-            this.btncong7.UseVisualStyleBackColor = true;
-            this.btncong7.Click += new System.EventHandler(this.btncong7_Click);
-            // 
             // listBox7
             // 
             this.listBox7.BackColor = System.Drawing.SystemColors.Highlight;
@@ -666,26 +519,6 @@
             this.panel4.Size = new System.Drawing.Size(145, 114);
             this.panel4.TabIndex = 63;
             // 
-            // btntru2
-            // 
-            this.btntru2.Image = ((System.Drawing.Image)(resources.GetObject("btntru2.Image")));
-            this.btntru2.Location = new System.Drawing.Point(121, 72);
-            this.btntru2.Name = "btntru2";
-            this.btntru2.Size = new System.Drawing.Size(25, 23);
-            this.btntru2.TabIndex = 86;
-            this.btntru2.UseVisualStyleBackColor = true;
-            this.btntru2.Click += new System.EventHandler(this.btntru2_Click);
-            // 
-            // btncong2
-            // 
-            this.btncong2.Image = ((System.Drawing.Image)(resources.GetObject("btncong2.Image")));
-            this.btncong2.Location = new System.Drawing.Point(120, 16);
-            this.btncong2.Name = "btncong2";
-            this.btncong2.Size = new System.Drawing.Size(27, 23);
-            this.btncong2.TabIndex = 86;
-            this.btncong2.UseVisualStyleBackColor = true;
-            this.btncong2.Click += new System.EventHandler(this.btncong2_Click);
-            // 
             // listBox2
             // 
             this.listBox2.BackColor = System.Drawing.SystemColors.Highlight;
@@ -707,26 +540,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(145, 114);
             this.panel5.TabIndex = 64;
-            // 
-            // btntru9
-            // 
-            this.btntru9.Image = ((System.Drawing.Image)(resources.GetObject("btntru9.Image")));
-            this.btntru9.Location = new System.Drawing.Point(122, 65);
-            this.btntru9.Name = "btntru9";
-            this.btntru9.Size = new System.Drawing.Size(25, 23);
-            this.btntru9.TabIndex = 87;
-            this.btntru9.UseVisualStyleBackColor = true;
-            this.btntru9.Click += new System.EventHandler(this.btntru9_Click);
-            // 
-            // btncong9
-            // 
-            this.btncong9.Image = ((System.Drawing.Image)(resources.GetObject("btncong9.Image")));
-            this.btncong9.Location = new System.Drawing.Point(120, 21);
-            this.btncong9.Name = "btncong9";
-            this.btncong9.Size = new System.Drawing.Size(27, 23);
-            this.btncong9.TabIndex = 87;
-            this.btncong9.UseVisualStyleBackColor = true;
-            this.btncong9.Click += new System.EventHandler(this.btncong9_Click);
             // 
             // listBox9
             // 
@@ -761,26 +574,6 @@
             this.panel6.Size = new System.Drawing.Size(145, 114);
             this.panel6.TabIndex = 72;
             // 
-            // btntru6
-            // 
-            this.btntru6.Image = ((System.Drawing.Image)(resources.GetObject("btntru6.Image")));
-            this.btntru6.Location = new System.Drawing.Point(120, 70);
-            this.btntru6.Name = "btntru6";
-            this.btntru6.Size = new System.Drawing.Size(25, 23);
-            this.btntru6.TabIndex = 90;
-            this.btntru6.UseVisualStyleBackColor = true;
-            this.btntru6.Click += new System.EventHandler(this.btntru6_Click);
-            // 
-            // btncong6
-            // 
-            this.btncong6.Image = ((System.Drawing.Image)(resources.GetObject("btncong6.Image")));
-            this.btncong6.Location = new System.Drawing.Point(118, 14);
-            this.btncong6.Name = "btncong6";
-            this.btncong6.Size = new System.Drawing.Size(27, 23);
-            this.btncong6.TabIndex = 90;
-            this.btncong6.UseVisualStyleBackColor = true;
-            this.btncong6.Click += new System.EventHandler(this.btncong6_Click);
-            // 
             // listBox6
             // 
             this.listBox6.BackColor = System.Drawing.SystemColors.Highlight;
@@ -802,26 +595,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(145, 114);
             this.panel7.TabIndex = 73;
-            // 
-            // btntru8
-            // 
-            this.btntru8.Image = ((System.Drawing.Image)(resources.GetObject("btntru8.Image")));
-            this.btntru8.Location = new System.Drawing.Point(121, 64);
-            this.btntru8.Name = "btntru8";
-            this.btntru8.Size = new System.Drawing.Size(25, 23);
-            this.btntru8.TabIndex = 86;
-            this.btntru8.UseVisualStyleBackColor = true;
-            this.btntru8.Click += new System.EventHandler(this.btntru8_Click);
-            // 
-            // btncong8
-            // 
-            this.btncong8.Image = ((System.Drawing.Image)(resources.GetObject("btncong8.Image")));
-            this.btncong8.Location = new System.Drawing.Point(118, 20);
-            this.btncong8.Name = "btncong8";
-            this.btncong8.Size = new System.Drawing.Size(27, 23);
-            this.btncong8.TabIndex = 86;
-            this.btncong8.UseVisualStyleBackColor = true;
-            this.btncong8.Click += new System.EventHandler(this.btncong8_Click);
             // 
             // listBox8
             // 
@@ -845,26 +618,6 @@
             this.panel8.Size = new System.Drawing.Size(145, 114);
             this.panel8.TabIndex = 74;
             // 
-            // btntru10
-            // 
-            this.btntru10.Image = ((System.Drawing.Image)(resources.GetObject("btntru10.Image")));
-            this.btntru10.Location = new System.Drawing.Point(123, 66);
-            this.btntru10.Name = "btntru10";
-            this.btntru10.Size = new System.Drawing.Size(25, 23);
-            this.btntru10.TabIndex = 88;
-            this.btntru10.UseVisualStyleBackColor = true;
-            this.btntru10.Click += new System.EventHandler(this.btntru10_Click);
-            // 
-            // btncong10
-            // 
-            this.btncong10.Image = ((System.Drawing.Image)(resources.GetObject("btncong10.Image")));
-            this.btncong10.Location = new System.Drawing.Point(121, 22);
-            this.btncong10.Name = "btncong10";
-            this.btncong10.Size = new System.Drawing.Size(27, 23);
-            this.btncong10.TabIndex = 88;
-            this.btncong10.UseVisualStyleBackColor = true;
-            this.btncong10.Click += new System.EventHandler(this.btncong10_Click);
-            // 
             // listBox10
             // 
             this.listBox10.BackColor = System.Drawing.SystemColors.Highlight;
@@ -886,26 +639,6 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(145, 114);
             this.panel9.TabIndex = 74;
-            // 
-            // btntru11
-            // 
-            this.btntru11.Image = ((System.Drawing.Image)(resources.GetObject("btntru11.Image")));
-            this.btntru11.Location = new System.Drawing.Point(121, 67);
-            this.btntru11.Name = "btntru11";
-            this.btntru11.Size = new System.Drawing.Size(25, 23);
-            this.btntru11.TabIndex = 89;
-            this.btntru11.UseVisualStyleBackColor = true;
-            this.btntru11.Click += new System.EventHandler(this.btntru11_Click);
-            // 
-            // btncong11
-            // 
-            this.btncong11.Image = ((System.Drawing.Image)(resources.GetObject("btncong11.Image")));
-            this.btncong11.Location = new System.Drawing.Point(119, 23);
-            this.btncong11.Name = "btncong11";
-            this.btncong11.Size = new System.Drawing.Size(27, 23);
-            this.btncong11.TabIndex = 89;
-            this.btncong11.UseVisualStyleBackColor = true;
-            this.btncong11.Click += new System.EventHandler(this.btncong11_Click);
             // 
             // listBox11
             // 
@@ -929,26 +662,6 @@
             this.panel10.Size = new System.Drawing.Size(145, 114);
             this.panel10.TabIndex = 75;
             // 
-            // btntru12
-            // 
-            this.btntru12.Image = ((System.Drawing.Image)(resources.GetObject("btntru12.Image")));
-            this.btntru12.Location = new System.Drawing.Point(121, 66);
-            this.btntru12.Name = "btntru12";
-            this.btntru12.Size = new System.Drawing.Size(25, 23);
-            this.btntru12.TabIndex = 90;
-            this.btntru12.UseVisualStyleBackColor = true;
-            this.btntru12.Click += new System.EventHandler(this.btntru12_Click);
-            // 
-            // btncong12
-            // 
-            this.btncong12.Image = ((System.Drawing.Image)(resources.GetObject("btncong12.Image")));
-            this.btncong12.Location = new System.Drawing.Point(118, 22);
-            this.btncong12.Name = "btncong12";
-            this.btncong12.Size = new System.Drawing.Size(27, 23);
-            this.btncong12.TabIndex = 90;
-            this.btncong12.UseVisualStyleBackColor = true;
-            this.btncong12.Click += new System.EventHandler(this.btncong12_Click);
-            // 
             // listBox12
             // 
             this.listBox12.BackColor = System.Drawing.SystemColors.Highlight;
@@ -970,26 +683,6 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(145, 114);
             this.panel11.TabIndex = 76;
-            // 
-            // btntru13
-            // 
-            this.btntru13.Image = ((System.Drawing.Image)(resources.GetObject("btntru13.Image")));
-            this.btntru13.Location = new System.Drawing.Point(121, 66);
-            this.btntru13.Name = "btntru13";
-            this.btntru13.Size = new System.Drawing.Size(25, 23);
-            this.btntru13.TabIndex = 91;
-            this.btntru13.UseVisualStyleBackColor = true;
-            this.btntru13.Click += new System.EventHandler(this.btntru13_Click);
-            // 
-            // btncong13
-            // 
-            this.btncong13.Image = ((System.Drawing.Image)(resources.GetObject("btncong13.Image")));
-            this.btncong13.Location = new System.Drawing.Point(121, 22);
-            this.btncong13.Name = "btncong13";
-            this.btncong13.Size = new System.Drawing.Size(27, 23);
-            this.btncong13.TabIndex = 91;
-            this.btncong13.UseVisualStyleBackColor = true;
-            this.btncong13.Click += new System.EventHandler(this.btncong13_Click);
             // 
             // listBox13
             // 
@@ -1013,26 +706,6 @@
             this.panel12.Size = new System.Drawing.Size(145, 120);
             this.panel12.TabIndex = 77;
             // 
-            // btntru14
-            // 
-            this.btntru14.Image = ((System.Drawing.Image)(resources.GetObject("btntru14.Image")));
-            this.btntru14.Location = new System.Drawing.Point(121, 67);
-            this.btntru14.Name = "btntru14";
-            this.btntru14.Size = new System.Drawing.Size(25, 23);
-            this.btntru14.TabIndex = 92;
-            this.btntru14.UseVisualStyleBackColor = true;
-            this.btntru14.Click += new System.EventHandler(this.btntru14_Click);
-            // 
-            // btn14
-            // 
-            this.btn14.Image = ((System.Drawing.Image)(resources.GetObject("btn14.Image")));
-            this.btn14.Location = new System.Drawing.Point(121, 23);
-            this.btn14.Name = "btn14";
-            this.btn14.Size = new System.Drawing.Size(27, 23);
-            this.btn14.TabIndex = 92;
-            this.btn14.UseVisualStyleBackColor = true;
-            this.btn14.Click += new System.EventHandler(this.btn14_Click);
-            // 
             // listBox14
             // 
             this.listBox14.BackColor = System.Drawing.SystemColors.Highlight;
@@ -1054,26 +727,6 @@
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(145, 114);
             this.panel13.TabIndex = 78;
-            // 
-            // btntru15
-            // 
-            this.btntru15.Image = ((System.Drawing.Image)(resources.GetObject("btntru15.Image")));
-            this.btntru15.Location = new System.Drawing.Point(121, 66);
-            this.btntru15.Name = "btntru15";
-            this.btntru15.Size = new System.Drawing.Size(25, 23);
-            this.btntru15.TabIndex = 87;
-            this.btntru15.UseVisualStyleBackColor = true;
-            this.btntru15.Click += new System.EventHandler(this.btntru15_Click);
-            // 
-            // btncong15
-            // 
-            this.btncong15.Image = ((System.Drawing.Image)(resources.GetObject("btncong15.Image")));
-            this.btncong15.Location = new System.Drawing.Point(121, 24);
-            this.btncong15.Name = "btncong15";
-            this.btncong15.Size = new System.Drawing.Size(27, 23);
-            this.btncong15.TabIndex = 87;
-            this.btncong15.UseVisualStyleBackColor = true;
-            this.btncong15.Click += new System.EventHandler(this.btncong15_Click);
             // 
             // listBox15
             // 
@@ -1097,26 +750,6 @@
             this.panel14.Size = new System.Drawing.Size(145, 114);
             this.panel14.TabIndex = 79;
             // 
-            // btntru16
-            // 
-            this.btntru16.Image = ((System.Drawing.Image)(resources.GetObject("btntru16.Image")));
-            this.btntru16.Location = new System.Drawing.Point(121, 66);
-            this.btntru16.Name = "btntru16";
-            this.btntru16.Size = new System.Drawing.Size(25, 23);
-            this.btntru16.TabIndex = 88;
-            this.btntru16.UseVisualStyleBackColor = true;
-            this.btntru16.Click += new System.EventHandler(this.btntru16_Click);
-            // 
-            // btncong16
-            // 
-            this.btncong16.Image = ((System.Drawing.Image)(resources.GetObject("btncong16.Image")));
-            this.btncong16.Location = new System.Drawing.Point(118, 24);
-            this.btncong16.Name = "btncong16";
-            this.btncong16.Size = new System.Drawing.Size(27, 23);
-            this.btncong16.TabIndex = 88;
-            this.btncong16.UseVisualStyleBackColor = true;
-            this.btncong16.Click += new System.EventHandler(this.btncong16_Click);
-            // 
             // listBox16
             // 
             this.listBox16.BackColor = System.Drawing.SystemColors.Highlight;
@@ -1138,26 +771,6 @@
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(145, 114);
             this.panel15.TabIndex = 80;
-            // 
-            // btntru17
-            // 
-            this.btntru17.Image = ((System.Drawing.Image)(resources.GetObject("btntru17.Image")));
-            this.btntru17.Location = new System.Drawing.Point(123, 67);
-            this.btntru17.Name = "btntru17";
-            this.btntru17.Size = new System.Drawing.Size(25, 23);
-            this.btntru17.TabIndex = 89;
-            this.btntru17.UseVisualStyleBackColor = true;
-            this.btntru17.Click += new System.EventHandler(this.btntru17_Click);
-            // 
-            // btncong17
-            // 
-            this.btncong17.Image = ((System.Drawing.Image)(resources.GetObject("btncong17.Image")));
-            this.btncong17.Location = new System.Drawing.Point(121, 27);
-            this.btncong17.Name = "btncong17";
-            this.btncong17.Size = new System.Drawing.Size(27, 23);
-            this.btncong17.TabIndex = 89;
-            this.btncong17.UseVisualStyleBackColor = true;
-            this.btncong17.Click += new System.EventHandler(this.btncong17_Click);
             // 
             // listBox17
             // 
@@ -1181,26 +794,6 @@
             this.panel16.Size = new System.Drawing.Size(145, 114);
             this.panel16.TabIndex = 81;
             // 
-            // btntru18
-            // 
-            this.btntru18.Image = ((System.Drawing.Image)(resources.GetObject("btntru18.Image")));
-            this.btntru18.Location = new System.Drawing.Point(120, 68);
-            this.btntru18.Name = "btntru18";
-            this.btntru18.Size = new System.Drawing.Size(25, 23);
-            this.btntru18.TabIndex = 90;
-            this.btntru18.UseVisualStyleBackColor = true;
-            this.btntru18.Click += new System.EventHandler(this.btntru18_Click);
-            // 
-            // btncong18
-            // 
-            this.btncong18.Image = ((System.Drawing.Image)(resources.GetObject("btncong18.Image")));
-            this.btncong18.Location = new System.Drawing.Point(118, 30);
-            this.btncong18.Name = "btncong18";
-            this.btncong18.Size = new System.Drawing.Size(27, 23);
-            this.btncong18.TabIndex = 90;
-            this.btncong18.UseVisualStyleBackColor = true;
-            this.btncong18.Click += new System.EventHandler(this.btncong18_Click);
-            // 
             // listBox18
             // 
             this.listBox18.BackColor = System.Drawing.SystemColors.Highlight;
@@ -1222,26 +815,6 @@
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(145, 114);
             this.panel17.TabIndex = 82;
-            // 
-            // btntru19
-            // 
-            this.btntru19.Image = ((System.Drawing.Image)(resources.GetObject("btntru19.Image")));
-            this.btntru19.Location = new System.Drawing.Point(121, 69);
-            this.btntru19.Name = "btntru19";
-            this.btntru19.Size = new System.Drawing.Size(25, 23);
-            this.btntru19.TabIndex = 91;
-            this.btntru19.UseVisualStyleBackColor = true;
-            this.btntru19.Click += new System.EventHandler(this.btntru19_Click);
-            // 
-            // btncong19
-            // 
-            this.btncong19.Image = ((System.Drawing.Image)(resources.GetObject("btncong19.Image")));
-            this.btncong19.Location = new System.Drawing.Point(121, 31);
-            this.btncong19.Name = "btncong19";
-            this.btncong19.Size = new System.Drawing.Size(27, 23);
-            this.btncong19.TabIndex = 91;
-            this.btncong19.UseVisualStyleBackColor = true;
-            this.btncong19.Click += new System.EventHandler(this.btncong19_Click);
             // 
             // listBox19
             // 
@@ -1265,26 +838,6 @@
             this.panel18.Size = new System.Drawing.Size(145, 114);
             this.panel18.TabIndex = 83;
             // 
-            // btntru20
-            // 
-            this.btntru20.Image = ((System.Drawing.Image)(resources.GetObject("btntru20.Image")));
-            this.btntru20.Location = new System.Drawing.Point(121, 66);
-            this.btntru20.Name = "btntru20";
-            this.btntru20.Size = new System.Drawing.Size(25, 23);
-            this.btntru20.TabIndex = 92;
-            this.btntru20.UseVisualStyleBackColor = true;
-            this.btntru20.Click += new System.EventHandler(this.btntru20_Click);
-            // 
-            // btncong20
-            // 
-            this.btncong20.Image = ((System.Drawing.Image)(resources.GetObject("btncong20.Image")));
-            this.btncong20.Location = new System.Drawing.Point(118, 28);
-            this.btncong20.Name = "btncong20";
-            this.btncong20.Size = new System.Drawing.Size(27, 23);
-            this.btncong20.TabIndex = 92;
-            this.btncong20.UseVisualStyleBackColor = true;
-            this.btncong20.Click += new System.EventHandler(this.btncong20_Click);
-            // 
             // listBox20
             // 
             this.listBox20.BackColor = System.Drawing.SystemColors.Highlight;
@@ -1307,26 +860,6 @@
             this.panel20.Size = new System.Drawing.Size(145, 114);
             this.panel20.TabIndex = 84;
             // 
-            // btntru21
-            // 
-            this.btntru21.Image = ((System.Drawing.Image)(resources.GetObject("btntru21.Image")));
-            this.btntru21.Location = new System.Drawing.Point(123, 66);
-            this.btntru21.Name = "btntru21";
-            this.btntru21.Size = new System.Drawing.Size(25, 23);
-            this.btntru21.TabIndex = 93;
-            this.btntru21.UseVisualStyleBackColor = true;
-            this.btntru21.Click += new System.EventHandler(this.btntru21_Click);
-            // 
-            // btncong21
-            // 
-            this.btncong21.Image = ((System.Drawing.Image)(resources.GetObject("btncong21.Image")));
-            this.btncong21.Location = new System.Drawing.Point(119, 28);
-            this.btncong21.Name = "btncong21";
-            this.btncong21.Size = new System.Drawing.Size(27, 23);
-            this.btncong21.TabIndex = 93;
-            this.btncong21.UseVisualStyleBackColor = true;
-            this.btncong21.Click += new System.EventHandler(this.btncong21_Click);
-            // 
             // listBox21
             // 
             this.listBox21.BackColor = System.Drawing.SystemColors.Highlight;
@@ -1337,16 +870,6 @@
             this.listBox21.Name = "listBox21";
             this.listBox21.Size = new System.Drawing.Size(142, 112);
             this.listBox21.TabIndex = 0;
-            // 
-            // btncong22
-            // 
-            this.btncong22.Image = ((System.Drawing.Image)(resources.GetObject("btncong22.Image")));
-            this.btncong22.Location = new System.Drawing.Point(120, 13);
-            this.btncong22.Name = "btncong22";
-            this.btncong22.Size = new System.Drawing.Size(27, 23);
-            this.btncong22.TabIndex = 89;
-            this.btncong22.UseVisualStyleBackColor = true;
-            this.btncong22.Click += new System.EventHandler(this.btncong22_Click);
             // 
             // listBox22
             // 
@@ -1370,16 +893,6 @@
             this.panel22.Size = new System.Drawing.Size(145, 123);
             this.panel22.TabIndex = 90;
             // 
-            // btntru22
-            // 
-            this.btntru22.Image = ((System.Drawing.Image)(resources.GetObject("btntru22.Image")));
-            this.btntru22.Location = new System.Drawing.Point(122, 76);
-            this.btntru22.Name = "btntru22";
-            this.btntru22.Size = new System.Drawing.Size(25, 23);
-            this.btntru22.TabIndex = 88;
-            this.btntru22.UseVisualStyleBackColor = true;
-            this.btntru22.Click += new System.EventHandler(this.btntru22_Click);
-            // 
             // panel23
             // 
             this.panel23.BackColor = System.Drawing.SystemColors.Highlight;
@@ -1390,26 +903,6 @@
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(147, 123);
             this.panel23.TabIndex = 90;
-            // 
-            // btntru23
-            // 
-            this.btntru23.Image = ((System.Drawing.Image)(resources.GetObject("btntru23.Image")));
-            this.btntru23.Location = new System.Drawing.Point(117, 79);
-            this.btntru23.Name = "btntru23";
-            this.btntru23.Size = new System.Drawing.Size(25, 23);
-            this.btntru23.TabIndex = 90;
-            this.btntru23.UseVisualStyleBackColor = true;
-            this.btntru23.Click += new System.EventHandler(this.btntru23_Click);
-            // 
-            // btncong23
-            // 
-            this.btncong23.Image = ((System.Drawing.Image)(resources.GetObject("btncong23.Image")));
-            this.btncong23.Location = new System.Drawing.Point(117, 16);
-            this.btncong23.Name = "btncong23";
-            this.btncong23.Size = new System.Drawing.Size(27, 23);
-            this.btncong23.TabIndex = 90;
-            this.btncong23.UseVisualStyleBackColor = true;
-            this.btncong23.Click += new System.EventHandler(this.btncong23_Click);
             // 
             // listBox23
             // 
@@ -1433,26 +926,6 @@
             this.panel24.Size = new System.Drawing.Size(148, 125);
             this.panel24.TabIndex = 91;
             // 
-            // btntru24
-            // 
-            this.btntru24.Image = ((System.Drawing.Image)(resources.GetObject("btntru24.Image")));
-            this.btntru24.Location = new System.Drawing.Point(120, 81);
-            this.btntru24.Name = "btntru24";
-            this.btntru24.Size = new System.Drawing.Size(25, 23);
-            this.btntru24.TabIndex = 91;
-            this.btntru24.UseVisualStyleBackColor = true;
-            this.btntru24.Click += new System.EventHandler(this.btntru24_Click);
-            // 
-            // btncong24
-            // 
-            this.btncong24.Image = ((System.Drawing.Image)(resources.GetObject("btncong24.Image")));
-            this.btncong24.Location = new System.Drawing.Point(118, 18);
-            this.btncong24.Name = "btncong24";
-            this.btncong24.Size = new System.Drawing.Size(27, 23);
-            this.btncong24.TabIndex = 91;
-            this.btncong24.UseVisualStyleBackColor = true;
-            this.btncong24.Click += new System.EventHandler(this.btncong24_Click);
-            // 
             // listBox24
             // 
             this.listBox24.BackColor = System.Drawing.SystemColors.Highlight;
@@ -1474,26 +947,6 @@
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(148, 125);
             this.panel25.TabIndex = 92;
-            // 
-            // btntru25
-            // 
-            this.btntru25.Image = ((System.Drawing.Image)(resources.GetObject("btntru25.Image")));
-            this.btntru25.Location = new System.Drawing.Point(123, 79);
-            this.btntru25.Name = "btntru25";
-            this.btntru25.Size = new System.Drawing.Size(25, 23);
-            this.btntru25.TabIndex = 96;
-            this.btntru25.UseVisualStyleBackColor = true;
-            this.btntru25.Click += new System.EventHandler(this.btntru25_Click);
-            // 
-            // btncong25
-            // 
-            this.btncong25.Image = ((System.Drawing.Image)(resources.GetObject("btncong25.Image")));
-            this.btncong25.Location = new System.Drawing.Point(123, 16);
-            this.btncong25.Name = "btncong25";
-            this.btncong25.Size = new System.Drawing.Size(27, 23);
-            this.btncong25.TabIndex = 96;
-            this.btncong25.UseVisualStyleBackColor = true;
-            this.btncong25.Click += new System.EventHandler(this.btncong25_Click);
             // 
             // listBox25
             // 
@@ -1517,26 +970,6 @@
             this.panel26.Size = new System.Drawing.Size(148, 125);
             this.panel26.TabIndex = 93;
             // 
-            // btntru26
-            // 
-            this.btntru26.Image = ((System.Drawing.Image)(resources.GetObject("btntru26.Image")));
-            this.btntru26.Location = new System.Drawing.Point(123, 81);
-            this.btntru26.Name = "btntru26";
-            this.btntru26.Size = new System.Drawing.Size(25, 23);
-            this.btntru26.TabIndex = 97;
-            this.btntru26.UseVisualStyleBackColor = true;
-            this.btntru26.Click += new System.EventHandler(this.btntru26_Click);
-            // 
-            // btncong26
-            // 
-            this.btncong26.Image = ((System.Drawing.Image)(resources.GetObject("btncong26.Image")));
-            this.btncong26.Location = new System.Drawing.Point(121, 18);
-            this.btncong26.Name = "btncong26";
-            this.btncong26.Size = new System.Drawing.Size(27, 23);
-            this.btncong26.TabIndex = 97;
-            this.btncong26.UseVisualStyleBackColor = true;
-            this.btncong26.Click += new System.EventHandler(this.btncong26_Click);
-            // 
             // listBox26
             // 
             this.listBox26.BackColor = System.Drawing.SystemColors.Highlight;
@@ -1558,26 +991,6 @@
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(148, 125);
             this.panel27.TabIndex = 94;
-            // 
-            // btntru27
-            // 
-            this.btntru27.Image = ((System.Drawing.Image)(resources.GetObject("btntru27.Image")));
-            this.btntru27.Location = new System.Drawing.Point(123, 84);
-            this.btntru27.Name = "btntru27";
-            this.btntru27.Size = new System.Drawing.Size(25, 23);
-            this.btntru27.TabIndex = 98;
-            this.btntru27.UseVisualStyleBackColor = true;
-            this.btntru27.Click += new System.EventHandler(this.btntru27_Click);
-            // 
-            // btncong27
-            // 
-            this.btncong27.Image = ((System.Drawing.Image)(resources.GetObject("btncong27.Image")));
-            this.btncong27.Location = new System.Drawing.Point(118, 21);
-            this.btncong27.Name = "btncong27";
-            this.btncong27.Size = new System.Drawing.Size(27, 23);
-            this.btncong27.TabIndex = 98;
-            this.btncong27.UseVisualStyleBackColor = true;
-            this.btncong27.Click += new System.EventHandler(this.btncong27_Click);
             // 
             // listBox27
             // 
@@ -1602,26 +1015,6 @@
             this.panel28.Size = new System.Drawing.Size(148, 123);
             this.panel28.TabIndex = 99;
             // 
-            // bntru28
-            // 
-            this.bntru28.Image = ((System.Drawing.Image)(resources.GetObject("bntru28.Image")));
-            this.bntru28.Location = new System.Drawing.Point(120, 77);
-            this.bntru28.Name = "bntru28";
-            this.bntru28.Size = new System.Drawing.Size(25, 23);
-            this.bntru28.TabIndex = 99;
-            this.bntru28.UseVisualStyleBackColor = true;
-            this.bntru28.Click += new System.EventHandler(this.bntru28_Click);
-            // 
-            // btncong28
-            // 
-            this.btncong28.Image = ((System.Drawing.Image)(resources.GetObject("btncong28.Image")));
-            this.btncong28.Location = new System.Drawing.Point(121, 14);
-            this.btncong28.Name = "btncong28";
-            this.btncong28.Size = new System.Drawing.Size(27, 23);
-            this.btncong28.TabIndex = 99;
-            this.btncong28.UseVisualStyleBackColor = true;
-            this.btncong28.Click += new System.EventHandler(this.btncong28_Click);
-            // 
             // listBox28
             // 
             this.listBox28.BackColor = System.Drawing.SystemColors.Highlight;
@@ -1642,6 +1035,614 @@
             this.lbca4.Size = new System.Drawing.Size(54, 25);
             this.lbca4.TabIndex = 100;
             this.lbca4.Text = "Ca 4";
+            // 
+            // bntru28
+            // 
+            this.bntru28.Image = ((System.Drawing.Image)(resources.GetObject("bntru28.Image")));
+            this.bntru28.Location = new System.Drawing.Point(120, 77);
+            this.bntru28.Name = "bntru28";
+            this.bntru28.Size = new System.Drawing.Size(25, 23);
+            this.bntru28.TabIndex = 99;
+            this.bntru28.UseVisualStyleBackColor = true;
+            this.bntru28.Click += new System.EventHandler(this.bntru28_Click);
+            // 
+            // btncong28
+            // 
+            this.btncong28.Image = ((System.Drawing.Image)(resources.GetObject("btncong28.Image")));
+            this.btncong28.Location = new System.Drawing.Point(121, 14);
+            this.btncong28.Name = "btncong28";
+            this.btncong28.Size = new System.Drawing.Size(27, 23);
+            this.btncong28.TabIndex = 99;
+            this.btncong28.UseVisualStyleBackColor = true;
+            this.btncong28.Click += new System.EventHandler(this.btncong28_Click);
+            // 
+            // btntru6
+            // 
+            this.btntru6.Image = ((System.Drawing.Image)(resources.GetObject("btntru6.Image")));
+            this.btntru6.Location = new System.Drawing.Point(120, 70);
+            this.btntru6.Name = "btntru6";
+            this.btntru6.Size = new System.Drawing.Size(25, 23);
+            this.btntru6.TabIndex = 90;
+            this.btntru6.UseVisualStyleBackColor = true;
+            this.btntru6.Click += new System.EventHandler(this.btntru6_Click);
+            // 
+            // btncong6
+            // 
+            this.btncong6.Image = ((System.Drawing.Image)(resources.GetObject("btncong6.Image")));
+            this.btncong6.Location = new System.Drawing.Point(118, 14);
+            this.btncong6.Name = "btncong6";
+            this.btncong6.Size = new System.Drawing.Size(27, 23);
+            this.btncong6.TabIndex = 90;
+            this.btncong6.UseVisualStyleBackColor = true;
+            this.btncong6.Click += new System.EventHandler(this.btncong6_Click);
+            // 
+            // btntru7
+            // 
+            this.btntru7.Image = ((System.Drawing.Image)(resources.GetObject("btntru7.Image")));
+            this.btntru7.Location = new System.Drawing.Point(123, 70);
+            this.btntru7.Name = "btntru7";
+            this.btntru7.Size = new System.Drawing.Size(25, 23);
+            this.btntru7.TabIndex = 91;
+            this.btntru7.UseVisualStyleBackColor = true;
+            this.btntru7.Click += new System.EventHandler(this.btntru7_Click);
+            // 
+            // btncong7
+            // 
+            this.btncong7.Image = ((System.Drawing.Image)(resources.GetObject("btncong7.Image")));
+            this.btncong7.Location = new System.Drawing.Point(115, 14);
+            this.btncong7.Name = "btncong7";
+            this.btncong7.Size = new System.Drawing.Size(27, 23);
+            this.btncong7.TabIndex = 91;
+            this.btncong7.UseVisualStyleBackColor = true;
+            this.btncong7.Click += new System.EventHandler(this.btncong7_Click);
+            // 
+            // btntru27
+            // 
+            this.btntru27.Image = ((System.Drawing.Image)(resources.GetObject("btntru27.Image")));
+            this.btntru27.Location = new System.Drawing.Point(123, 84);
+            this.btntru27.Name = "btntru27";
+            this.btntru27.Size = new System.Drawing.Size(25, 23);
+            this.btntru27.TabIndex = 98;
+            this.btntru27.UseVisualStyleBackColor = true;
+            this.btntru27.Click += new System.EventHandler(this.btntru27_Click);
+            // 
+            // btncong27
+            // 
+            this.btncong27.Image = ((System.Drawing.Image)(resources.GetObject("btncong27.Image")));
+            this.btncong27.Location = new System.Drawing.Point(118, 21);
+            this.btncong27.Name = "btncong27";
+            this.btncong27.Size = new System.Drawing.Size(27, 23);
+            this.btncong27.TabIndex = 98;
+            this.btncong27.UseVisualStyleBackColor = true;
+            this.btncong27.Click += new System.EventHandler(this.btncong27_Click);
+            // 
+            // btntru26
+            // 
+            this.btntru26.Image = ((System.Drawing.Image)(resources.GetObject("btntru26.Image")));
+            this.btntru26.Location = new System.Drawing.Point(123, 81);
+            this.btntru26.Name = "btntru26";
+            this.btntru26.Size = new System.Drawing.Size(25, 23);
+            this.btntru26.TabIndex = 97;
+            this.btntru26.UseVisualStyleBackColor = true;
+            this.btntru26.Click += new System.EventHandler(this.btntru26_Click);
+            // 
+            // btncong26
+            // 
+            this.btncong26.Image = ((System.Drawing.Image)(resources.GetObject("btncong26.Image")));
+            this.btncong26.Location = new System.Drawing.Point(121, 18);
+            this.btncong26.Name = "btncong26";
+            this.btncong26.Size = new System.Drawing.Size(27, 23);
+            this.btncong26.TabIndex = 97;
+            this.btncong26.UseVisualStyleBackColor = true;
+            this.btncong26.Click += new System.EventHandler(this.btncong26_Click);
+            // 
+            // btntru25
+            // 
+            this.btntru25.Image = ((System.Drawing.Image)(resources.GetObject("btntru25.Image")));
+            this.btntru25.Location = new System.Drawing.Point(123, 79);
+            this.btntru25.Name = "btntru25";
+            this.btntru25.Size = new System.Drawing.Size(25, 23);
+            this.btntru25.TabIndex = 96;
+            this.btntru25.UseVisualStyleBackColor = true;
+            this.btntru25.Click += new System.EventHandler(this.btntru25_Click);
+            // 
+            // btncong25
+            // 
+            this.btncong25.Image = ((System.Drawing.Image)(resources.GetObject("btncong25.Image")));
+            this.btncong25.Location = new System.Drawing.Point(123, 16);
+            this.btncong25.Name = "btncong25";
+            this.btncong25.Size = new System.Drawing.Size(27, 23);
+            this.btncong25.TabIndex = 96;
+            this.btncong25.UseVisualStyleBackColor = true;
+            this.btncong25.Click += new System.EventHandler(this.btncong25_Click);
+            // 
+            // btntru24
+            // 
+            this.btntru24.Image = ((System.Drawing.Image)(resources.GetObject("btntru24.Image")));
+            this.btntru24.Location = new System.Drawing.Point(120, 81);
+            this.btntru24.Name = "btntru24";
+            this.btntru24.Size = new System.Drawing.Size(25, 23);
+            this.btntru24.TabIndex = 91;
+            this.btntru24.UseVisualStyleBackColor = true;
+            this.btntru24.Click += new System.EventHandler(this.btntru24_Click);
+            // 
+            // btncong24
+            // 
+            this.btncong24.Image = ((System.Drawing.Image)(resources.GetObject("btncong24.Image")));
+            this.btncong24.Location = new System.Drawing.Point(118, 18);
+            this.btncong24.Name = "btncong24";
+            this.btncong24.Size = new System.Drawing.Size(27, 23);
+            this.btncong24.TabIndex = 91;
+            this.btncong24.UseVisualStyleBackColor = true;
+            this.btncong24.Click += new System.EventHandler(this.btncong24_Click);
+            // 
+            // btntru23
+            // 
+            this.btntru23.Image = ((System.Drawing.Image)(resources.GetObject("btntru23.Image")));
+            this.btntru23.Location = new System.Drawing.Point(117, 79);
+            this.btntru23.Name = "btntru23";
+            this.btntru23.Size = new System.Drawing.Size(25, 23);
+            this.btntru23.TabIndex = 90;
+            this.btntru23.UseVisualStyleBackColor = true;
+            this.btntru23.Click += new System.EventHandler(this.btntru23_Click);
+            // 
+            // btncong23
+            // 
+            this.btncong23.Image = ((System.Drawing.Image)(resources.GetObject("btncong23.Image")));
+            this.btncong23.Location = new System.Drawing.Point(117, 16);
+            this.btncong23.Name = "btncong23";
+            this.btncong23.Size = new System.Drawing.Size(27, 23);
+            this.btncong23.TabIndex = 90;
+            this.btncong23.UseVisualStyleBackColor = true;
+            this.btncong23.Click += new System.EventHandler(this.btncong23_Click);
+            // 
+            // btntru22
+            // 
+            this.btntru22.Image = ((System.Drawing.Image)(resources.GetObject("btntru22.Image")));
+            this.btntru22.Location = new System.Drawing.Point(122, 76);
+            this.btntru22.Name = "btntru22";
+            this.btntru22.Size = new System.Drawing.Size(25, 23);
+            this.btntru22.TabIndex = 88;
+            this.btntru22.UseVisualStyleBackColor = true;
+            this.btntru22.Click += new System.EventHandler(this.btntru22_Click);
+            // 
+            // btncong22
+            // 
+            this.btncong22.Image = ((System.Drawing.Image)(resources.GetObject("btncong22.Image")));
+            this.btncong22.Location = new System.Drawing.Point(120, 13);
+            this.btncong22.Name = "btncong22";
+            this.btncong22.Size = new System.Drawing.Size(27, 23);
+            this.btncong22.TabIndex = 89;
+            this.btncong22.UseVisualStyleBackColor = true;
+            this.btncong22.Click += new System.EventHandler(this.btncong22_Click);
+            // 
+            // btntru21
+            // 
+            this.btntru21.Image = ((System.Drawing.Image)(resources.GetObject("btntru21.Image")));
+            this.btntru21.Location = new System.Drawing.Point(123, 66);
+            this.btntru21.Name = "btntru21";
+            this.btntru21.Size = new System.Drawing.Size(25, 23);
+            this.btntru21.TabIndex = 93;
+            this.btntru21.UseVisualStyleBackColor = true;
+            this.btntru21.Click += new System.EventHandler(this.btntru21_Click);
+            // 
+            // btncong21
+            // 
+            this.btncong21.Image = ((System.Drawing.Image)(resources.GetObject("btncong21.Image")));
+            this.btncong21.Location = new System.Drawing.Point(119, 28);
+            this.btncong21.Name = "btncong21";
+            this.btncong21.Size = new System.Drawing.Size(27, 23);
+            this.btncong21.TabIndex = 93;
+            this.btncong21.UseVisualStyleBackColor = true;
+            this.btncong21.Click += new System.EventHandler(this.btncong21_Click);
+            // 
+            // btntru20
+            // 
+            this.btntru20.Image = ((System.Drawing.Image)(resources.GetObject("btntru20.Image")));
+            this.btntru20.Location = new System.Drawing.Point(121, 66);
+            this.btntru20.Name = "btntru20";
+            this.btntru20.Size = new System.Drawing.Size(25, 23);
+            this.btntru20.TabIndex = 92;
+            this.btntru20.UseVisualStyleBackColor = true;
+            this.btntru20.Click += new System.EventHandler(this.btntru20_Click);
+            // 
+            // btncong20
+            // 
+            this.btncong20.Image = ((System.Drawing.Image)(resources.GetObject("btncong20.Image")));
+            this.btncong20.Location = new System.Drawing.Point(118, 28);
+            this.btncong20.Name = "btncong20";
+            this.btncong20.Size = new System.Drawing.Size(27, 23);
+            this.btncong20.TabIndex = 92;
+            this.btncong20.UseVisualStyleBackColor = true;
+            this.btncong20.Click += new System.EventHandler(this.btncong20_Click);
+            // 
+            // btntru19
+            // 
+            this.btntru19.Image = ((System.Drawing.Image)(resources.GetObject("btntru19.Image")));
+            this.btntru19.Location = new System.Drawing.Point(121, 69);
+            this.btntru19.Name = "btntru19";
+            this.btntru19.Size = new System.Drawing.Size(25, 23);
+            this.btntru19.TabIndex = 91;
+            this.btntru19.UseVisualStyleBackColor = true;
+            this.btntru19.Click += new System.EventHandler(this.btntru19_Click);
+            // 
+            // btncong19
+            // 
+            this.btncong19.Image = ((System.Drawing.Image)(resources.GetObject("btncong19.Image")));
+            this.btncong19.Location = new System.Drawing.Point(121, 31);
+            this.btncong19.Name = "btncong19";
+            this.btncong19.Size = new System.Drawing.Size(27, 23);
+            this.btncong19.TabIndex = 91;
+            this.btncong19.UseVisualStyleBackColor = true;
+            this.btncong19.Click += new System.EventHandler(this.btncong19_Click);
+            // 
+            // btntru18
+            // 
+            this.btntru18.Image = ((System.Drawing.Image)(resources.GetObject("btntru18.Image")));
+            this.btntru18.Location = new System.Drawing.Point(120, 68);
+            this.btntru18.Name = "btntru18";
+            this.btntru18.Size = new System.Drawing.Size(25, 23);
+            this.btntru18.TabIndex = 90;
+            this.btntru18.UseVisualStyleBackColor = true;
+            this.btntru18.Click += new System.EventHandler(this.btntru18_Click);
+            // 
+            // btncong18
+            // 
+            this.btncong18.Image = ((System.Drawing.Image)(resources.GetObject("btncong18.Image")));
+            this.btncong18.Location = new System.Drawing.Point(118, 30);
+            this.btncong18.Name = "btncong18";
+            this.btncong18.Size = new System.Drawing.Size(27, 23);
+            this.btncong18.TabIndex = 90;
+            this.btncong18.UseVisualStyleBackColor = true;
+            this.btncong18.Click += new System.EventHandler(this.btncong18_Click);
+            // 
+            // btntru17
+            // 
+            this.btntru17.Image = ((System.Drawing.Image)(resources.GetObject("btntru17.Image")));
+            this.btntru17.Location = new System.Drawing.Point(123, 67);
+            this.btntru17.Name = "btntru17";
+            this.btntru17.Size = new System.Drawing.Size(25, 23);
+            this.btntru17.TabIndex = 89;
+            this.btntru17.UseVisualStyleBackColor = true;
+            this.btntru17.Click += new System.EventHandler(this.btntru17_Click);
+            // 
+            // btncong17
+            // 
+            this.btncong17.Image = ((System.Drawing.Image)(resources.GetObject("btncong17.Image")));
+            this.btncong17.Location = new System.Drawing.Point(121, 27);
+            this.btncong17.Name = "btncong17";
+            this.btncong17.Size = new System.Drawing.Size(27, 23);
+            this.btncong17.TabIndex = 89;
+            this.btncong17.UseVisualStyleBackColor = true;
+            this.btncong17.Click += new System.EventHandler(this.btncong17_Click);
+            // 
+            // btntru16
+            // 
+            this.btntru16.Image = ((System.Drawing.Image)(resources.GetObject("btntru16.Image")));
+            this.btntru16.Location = new System.Drawing.Point(121, 66);
+            this.btntru16.Name = "btntru16";
+            this.btntru16.Size = new System.Drawing.Size(25, 23);
+            this.btntru16.TabIndex = 88;
+            this.btntru16.UseVisualStyleBackColor = true;
+            this.btntru16.Click += new System.EventHandler(this.btntru16_Click);
+            // 
+            // btncong16
+            // 
+            this.btncong16.Image = ((System.Drawing.Image)(resources.GetObject("btncong16.Image")));
+            this.btncong16.Location = new System.Drawing.Point(118, 24);
+            this.btncong16.Name = "btncong16";
+            this.btncong16.Size = new System.Drawing.Size(27, 23);
+            this.btncong16.TabIndex = 88;
+            this.btncong16.UseVisualStyleBackColor = true;
+            this.btncong16.Click += new System.EventHandler(this.btncong16_Click);
+            // 
+            // btntru15
+            // 
+            this.btntru15.Image = ((System.Drawing.Image)(resources.GetObject("btntru15.Image")));
+            this.btntru15.Location = new System.Drawing.Point(121, 66);
+            this.btntru15.Name = "btntru15";
+            this.btntru15.Size = new System.Drawing.Size(25, 23);
+            this.btntru15.TabIndex = 87;
+            this.btntru15.UseVisualStyleBackColor = true;
+            this.btntru15.Click += new System.EventHandler(this.btntru15_Click);
+            // 
+            // btncong15
+            // 
+            this.btncong15.Image = ((System.Drawing.Image)(resources.GetObject("btncong15.Image")));
+            this.btncong15.Location = new System.Drawing.Point(121, 24);
+            this.btncong15.Name = "btncong15";
+            this.btncong15.Size = new System.Drawing.Size(27, 23);
+            this.btncong15.TabIndex = 87;
+            this.btncong15.UseVisualStyleBackColor = true;
+            this.btncong15.Click += new System.EventHandler(this.btncong15_Click);
+            // 
+            // btntru14
+            // 
+            this.btntru14.Image = ((System.Drawing.Image)(resources.GetObject("btntru14.Image")));
+            this.btntru14.Location = new System.Drawing.Point(121, 67);
+            this.btntru14.Name = "btntru14";
+            this.btntru14.Size = new System.Drawing.Size(25, 23);
+            this.btntru14.TabIndex = 92;
+            this.btntru14.UseVisualStyleBackColor = true;
+            this.btntru14.Click += new System.EventHandler(this.btntru14_Click);
+            // 
+            // btn14
+            // 
+            this.btn14.Image = ((System.Drawing.Image)(resources.GetObject("btn14.Image")));
+            this.btn14.Location = new System.Drawing.Point(121, 23);
+            this.btn14.Name = "btn14";
+            this.btn14.Size = new System.Drawing.Size(27, 23);
+            this.btn14.TabIndex = 92;
+            this.btn14.UseVisualStyleBackColor = true;
+            this.btn14.Click += new System.EventHandler(this.btn14_Click);
+            // 
+            // btntru13
+            // 
+            this.btntru13.Image = ((System.Drawing.Image)(resources.GetObject("btntru13.Image")));
+            this.btntru13.Location = new System.Drawing.Point(121, 66);
+            this.btntru13.Name = "btntru13";
+            this.btntru13.Size = new System.Drawing.Size(25, 23);
+            this.btntru13.TabIndex = 91;
+            this.btntru13.UseVisualStyleBackColor = true;
+            this.btntru13.Click += new System.EventHandler(this.btntru13_Click);
+            // 
+            // btncong13
+            // 
+            this.btncong13.Image = ((System.Drawing.Image)(resources.GetObject("btncong13.Image")));
+            this.btncong13.Location = new System.Drawing.Point(121, 22);
+            this.btncong13.Name = "btncong13";
+            this.btncong13.Size = new System.Drawing.Size(27, 23);
+            this.btncong13.TabIndex = 91;
+            this.btncong13.UseVisualStyleBackColor = true;
+            this.btncong13.Click += new System.EventHandler(this.btncong13_Click);
+            // 
+            // btntru12
+            // 
+            this.btntru12.Image = ((System.Drawing.Image)(resources.GetObject("btntru12.Image")));
+            this.btntru12.Location = new System.Drawing.Point(121, 66);
+            this.btntru12.Name = "btntru12";
+            this.btntru12.Size = new System.Drawing.Size(25, 23);
+            this.btntru12.TabIndex = 90;
+            this.btntru12.UseVisualStyleBackColor = true;
+            this.btntru12.Click += new System.EventHandler(this.btntru12_Click);
+            // 
+            // btncong12
+            // 
+            this.btncong12.Image = ((System.Drawing.Image)(resources.GetObject("btncong12.Image")));
+            this.btncong12.Location = new System.Drawing.Point(118, 22);
+            this.btncong12.Name = "btncong12";
+            this.btncong12.Size = new System.Drawing.Size(27, 23);
+            this.btncong12.TabIndex = 90;
+            this.btncong12.UseVisualStyleBackColor = true;
+            this.btncong12.Click += new System.EventHandler(this.btncong12_Click);
+            // 
+            // btntru11
+            // 
+            this.btntru11.Image = ((System.Drawing.Image)(resources.GetObject("btntru11.Image")));
+            this.btntru11.Location = new System.Drawing.Point(121, 67);
+            this.btntru11.Name = "btntru11";
+            this.btntru11.Size = new System.Drawing.Size(25, 23);
+            this.btntru11.TabIndex = 89;
+            this.btntru11.UseVisualStyleBackColor = true;
+            this.btntru11.Click += new System.EventHandler(this.btntru11_Click);
+            // 
+            // btncong11
+            // 
+            this.btncong11.Image = ((System.Drawing.Image)(resources.GetObject("btncong11.Image")));
+            this.btncong11.Location = new System.Drawing.Point(119, 23);
+            this.btncong11.Name = "btncong11";
+            this.btncong11.Size = new System.Drawing.Size(27, 23);
+            this.btncong11.TabIndex = 89;
+            this.btncong11.UseVisualStyleBackColor = true;
+            this.btncong11.Click += new System.EventHandler(this.btncong11_Click);
+            // 
+            // btntru10
+            // 
+            this.btntru10.Image = ((System.Drawing.Image)(resources.GetObject("btntru10.Image")));
+            this.btntru10.Location = new System.Drawing.Point(123, 66);
+            this.btntru10.Name = "btntru10";
+            this.btntru10.Size = new System.Drawing.Size(25, 23);
+            this.btntru10.TabIndex = 88;
+            this.btntru10.UseVisualStyleBackColor = true;
+            this.btntru10.Click += new System.EventHandler(this.btntru10_Click);
+            // 
+            // btncong10
+            // 
+            this.btncong10.Image = ((System.Drawing.Image)(resources.GetObject("btncong10.Image")));
+            this.btncong10.Location = new System.Drawing.Point(121, 22);
+            this.btncong10.Name = "btncong10";
+            this.btncong10.Size = new System.Drawing.Size(27, 23);
+            this.btncong10.TabIndex = 88;
+            this.btncong10.UseVisualStyleBackColor = true;
+            this.btncong10.Click += new System.EventHandler(this.btncong10_Click);
+            // 
+            // btntru8
+            // 
+            this.btntru8.Image = ((System.Drawing.Image)(resources.GetObject("btntru8.Image")));
+            this.btntru8.Location = new System.Drawing.Point(121, 64);
+            this.btntru8.Name = "btntru8";
+            this.btntru8.Size = new System.Drawing.Size(25, 23);
+            this.btntru8.TabIndex = 86;
+            this.btntru8.UseVisualStyleBackColor = true;
+            this.btntru8.Click += new System.EventHandler(this.btntru8_Click);
+            // 
+            // btncong8
+            // 
+            this.btncong8.Image = ((System.Drawing.Image)(resources.GetObject("btncong8.Image")));
+            this.btncong8.Location = new System.Drawing.Point(118, 20);
+            this.btncong8.Name = "btncong8";
+            this.btncong8.Size = new System.Drawing.Size(27, 23);
+            this.btncong8.TabIndex = 86;
+            this.btncong8.UseVisualStyleBackColor = true;
+            this.btncong8.Click += new System.EventHandler(this.btncong8_Click);
+            // 
+            // btntru9
+            // 
+            this.btntru9.Image = ((System.Drawing.Image)(resources.GetObject("btntru9.Image")));
+            this.btntru9.Location = new System.Drawing.Point(122, 65);
+            this.btntru9.Name = "btntru9";
+            this.btntru9.Size = new System.Drawing.Size(25, 23);
+            this.btntru9.TabIndex = 87;
+            this.btntru9.UseVisualStyleBackColor = true;
+            this.btntru9.Click += new System.EventHandler(this.btntru9_Click);
+            // 
+            // btncong9
+            // 
+            this.btncong9.Image = ((System.Drawing.Image)(resources.GetObject("btncong9.Image")));
+            this.btncong9.Location = new System.Drawing.Point(120, 21);
+            this.btncong9.Name = "btncong9";
+            this.btncong9.Size = new System.Drawing.Size(27, 23);
+            this.btncong9.TabIndex = 87;
+            this.btncong9.UseVisualStyleBackColor = true;
+            this.btncong9.Click += new System.EventHandler(this.btncong9_Click);
+            // 
+            // btntru2
+            // 
+            this.btntru2.Image = ((System.Drawing.Image)(resources.GetObject("btntru2.Image")));
+            this.btntru2.Location = new System.Drawing.Point(121, 72);
+            this.btntru2.Name = "btntru2";
+            this.btntru2.Size = new System.Drawing.Size(25, 23);
+            this.btntru2.TabIndex = 86;
+            this.btntru2.UseVisualStyleBackColor = true;
+            this.btntru2.Click += new System.EventHandler(this.btntru2_Click);
+            // 
+            // btncong2
+            // 
+            this.btncong2.Image = ((System.Drawing.Image)(resources.GetObject("btncong2.Image")));
+            this.btncong2.Location = new System.Drawing.Point(120, 16);
+            this.btncong2.Name = "btncong2";
+            this.btncong2.Size = new System.Drawing.Size(27, 23);
+            this.btncong2.TabIndex = 86;
+            this.btncong2.UseVisualStyleBackColor = true;
+            this.btncong2.Click += new System.EventHandler(this.btncong2_Click);
+            // 
+            // btntru4
+            // 
+            this.btntru4.Image = ((System.Drawing.Image)(resources.GetObject("btntru4.Image")));
+            this.btntru4.Location = new System.Drawing.Point(121, 70);
+            this.btntru4.Name = "btntru4";
+            this.btntru4.Size = new System.Drawing.Size(25, 23);
+            this.btntru4.TabIndex = 88;
+            this.btntru4.UseVisualStyleBackColor = true;
+            this.btntru4.Click += new System.EventHandler(this.btntru4_Click);
+            // 
+            // btncong4
+            // 
+            this.btncong4.Image = ((System.Drawing.Image)(resources.GetObject("btncong4.Image")));
+            this.btncong4.Location = new System.Drawing.Point(119, 14);
+            this.btncong4.Name = "btncong4";
+            this.btncong4.Size = new System.Drawing.Size(27, 23);
+            this.btncong4.TabIndex = 88;
+            this.btncong4.UseVisualStyleBackColor = true;
+            this.btncong4.Click += new System.EventHandler(this.btncong4_Click);
+            // 
+            // btntru5
+            // 
+            this.btntru5.Image = ((System.Drawing.Image)(resources.GetObject("btntru5.Image")));
+            this.btntru5.Location = new System.Drawing.Point(120, 70);
+            this.btntru5.Name = "btntru5";
+            this.btntru5.Size = new System.Drawing.Size(25, 23);
+            this.btntru5.TabIndex = 89;
+            this.btntru5.UseVisualStyleBackColor = true;
+            this.btntru5.Click += new System.EventHandler(this.btntru5_Click);
+            // 
+            // btncong5
+            // 
+            this.btncong5.Image = ((System.Drawing.Image)(resources.GetObject("btncong5.Image")));
+            this.btncong5.Location = new System.Drawing.Point(118, 14);
+            this.btncong5.Name = "btncong5";
+            this.btncong5.Size = new System.Drawing.Size(27, 23);
+            this.btncong5.TabIndex = 89;
+            this.btncong5.UseVisualStyleBackColor = true;
+            this.btncong5.Click += new System.EventHandler(this.btncong5_Click);
+            // 
+            // btntru3
+            // 
+            this.btntru3.Image = ((System.Drawing.Image)(resources.GetObject("btntru3.Image")));
+            this.btntru3.Location = new System.Drawing.Point(122, 71);
+            this.btntru3.Name = "btntru3";
+            this.btntru3.Size = new System.Drawing.Size(25, 23);
+            this.btntru3.TabIndex = 87;
+            this.btntru3.UseVisualStyleBackColor = true;
+            this.btntru3.Click += new System.EventHandler(this.btntru3_Click);
+            // 
+            // btncong3
+            // 
+            this.btncong3.Image = ((System.Drawing.Image)(resources.GetObject("btncong3.Image")));
+            this.btncong3.Location = new System.Drawing.Point(120, 15);
+            this.btncong3.Name = "btncong3";
+            this.btncong3.Size = new System.Drawing.Size(27, 23);
+            this.btncong3.TabIndex = 87;
+            this.btncong3.UseVisualStyleBackColor = true;
+            this.btncong3.Click += new System.EventHandler(this.btncong3_Click);
+            // 
+            // btnthangtruoc
+            // 
+            this.btnthangtruoc.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnthangtruoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnthangtruoc.Image = ((System.Drawing.Image)(resources.GetObject("btnthangtruoc.Image")));
+            this.btnthangtruoc.Location = new System.Drawing.Point(608, 47);
+            this.btnthangtruoc.Name = "btnthangtruoc";
+            this.btnthangtruoc.Size = new System.Drawing.Size(54, 23);
+            this.btnthangtruoc.TabIndex = 60;
+            this.btnthangtruoc.UseVisualStyleBackColor = true;
+            this.btnthangtruoc.Click += new System.EventHandler(this.btnthangtruoc_Click);
+            // 
+            // btnthangsau
+            // 
+            this.btnthangsau.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnthangsau.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnthangsau.Image = ((System.Drawing.Image)(resources.GetObject("btnthangsau.Image")));
+            this.btnthangsau.Location = new System.Drawing.Point(782, 47);
+            this.btnthangsau.Name = "btnthangsau";
+            this.btnthangsau.Size = new System.Drawing.Size(49, 23);
+            this.btnthangsau.TabIndex = 59;
+            this.btnthangsau.UseVisualStyleBackColor = true;
+            this.btnthangsau.Click += new System.EventHandler(this.btnthangsau_Click);
+            // 
+            // button5
+            // 
+            this.button5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(608, 5);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(54, 23);
+            this.button5.TabIndex = 55;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // buttontuantiep
+            // 
+            this.buttontuantiep.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttontuantiep.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttontuantiep.Image = ((System.Drawing.Image)(resources.GetObject("buttontuantiep.Image")));
+            this.buttontuantiep.Location = new System.Drawing.Point(782, 5);
+            this.buttontuantiep.Name = "buttontuantiep";
+            this.buttontuantiep.Size = new System.Drawing.Size(49, 23);
+            this.buttontuantiep.TabIndex = 54;
+            this.buttontuantiep.UseVisualStyleBackColor = true;
+            this.buttontuantiep.Click += new System.EventHandler(this.buttontuantiep_Click);
+            // 
+            // btntru1
+            // 
+            this.btntru1.Image = ((System.Drawing.Image)(resources.GetObject("btntru1.Image")));
+            this.btntru1.Location = new System.Drawing.Point(120, 72);
+            this.btntru1.Name = "btntru1";
+            this.btntru1.Size = new System.Drawing.Size(25, 23);
+            this.btntru1.TabIndex = 85;
+            this.btntru1.UseVisualStyleBackColor = true;
+            this.btntru1.Click += new System.EventHandler(this.btntru1_Click);
+            // 
+            // butncong1
+            // 
+            this.butncong1.Image = ((System.Drawing.Image)(resources.GetObject("butncong1.Image")));
+            this.butncong1.Location = new System.Drawing.Point(118, 16);
+            this.butncong1.Name = "butncong1";
+            this.butncong1.Size = new System.Drawing.Size(27, 23);
+            this.butncong1.TabIndex = 1;
+            this.butncong1.UseVisualStyleBackColor = true;
+            this.butncong1.Click += new System.EventHandler(this.butncong1_Click);
             // 
             // FormDangKiLichHLV1
             // 

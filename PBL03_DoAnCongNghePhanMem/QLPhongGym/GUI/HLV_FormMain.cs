@@ -51,7 +51,7 @@ namespace QLPhongGym.GUI
         private void OpenChildForm(Form childForm)
         {
             if (currentFormChild != null)
-                currentFormChild.Close();
+            currentFormChild.Close();
             currentFormChild = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -67,8 +67,20 @@ namespace QLPhongGym.GUI
         }
         private void hideMenu()
         {
-            if (pn_tkhlv.Visible)
+            /*if (pn_tkhlv.Visible)
+            {
                 pn_tkhlv.Visible = false;
+            }*/
+            if (panel4.Visible == true)
+            {
+                panel4.Visible = false;
+            }
+            if (panel3.Visible == true)
+            {
+                panel3.Visible = false;
+            }
+
+
         }
         private void showMenu(Panel subMenu)
         {
@@ -152,6 +164,24 @@ namespace QLPhongGym.GUI
                 hideMenu();
             };
             dmk.ShowDialog();
+        }
+
+        private void HLV_FormMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_lichlamviec_Click(object sender, EventArgs e)
+        {
+           
+            OpenChildForm( new FormLichHLV());
+            hideMenu();
+
+        }
+
+        private void btn_kh_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
