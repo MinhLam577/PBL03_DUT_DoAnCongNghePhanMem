@@ -26,9 +26,9 @@ namespace QLPhongGym.DTO
         public Nullable<System.DateTime> NgayThue { get; set; }
         public int IDKH { get; set; }
     
-        public virtual User User_HLV { get; set; }
-        public virtual User User_KH { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }
+        public virtual User HLVs { get; set; }
+        public virtual User KHs { get; set; }
     }
 }

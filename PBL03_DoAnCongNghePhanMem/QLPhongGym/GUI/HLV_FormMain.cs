@@ -195,7 +195,7 @@ namespace QLPhongGym.GUI
 
         private void btn_kh_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new HLV_FormDanhSachKH());
+            OpenChildForm(new HLV_FormDanhSachKH((HLV)UsersBLL.Instance.GetUserByID(tk.IDUser.Value)));
             hideMenu();
         }
     }
