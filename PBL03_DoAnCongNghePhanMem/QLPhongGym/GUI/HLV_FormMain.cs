@@ -180,5 +180,11 @@ namespace QLPhongGym.GUI
             if(MessageBox.Show("Bạn có muốn thoát chương trình?", "Xin chờ một lát", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 this.Close();
         }
+
+        private void btn_kh_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new HLV_FormDanhSachKH());
+            hideMenu();
+        }
     }
 }

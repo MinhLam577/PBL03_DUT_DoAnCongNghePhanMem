@@ -41,7 +41,6 @@
             this.lb_home = new System.Windows.Forms.Label();
             this.lb_acc = new System.Windows.Forms.Label();
             this.pn_cha = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pn_tkhlv = new System.Windows.Forms.Panel();
             this.btn_doimatkhau = new System.Windows.Forms.Button();
             this.btn_updatethongtin = new System.Windows.Forms.Button();
@@ -49,6 +48,7 @@
             this.lb_gmailhlv = new System.Windows.Forms.Label();
             this.lb_tenhlv = new System.Windows.Forms.Label();
             this.pb_hlv = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -56,10 +56,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_acc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_home)).BeginInit();
             this.pn_cha.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pn_tkhlv.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_updateimage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_hlv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_lichlamviec
@@ -95,6 +95,7 @@
             this.btn_kh.Text = "Khách hàng";
             this.btn_kh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_kh.UseVisualStyleBackColor = false;
+            this.btn_kh.Click += new System.EventHandler(this.btn_kh_Click);
             // 
             // panel1
             // 
@@ -219,17 +220,6 @@
             this.pn_cha.Size = new System.Drawing.Size(891, 530);
             this.pn_cha.TabIndex = 5;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(891, 530);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // pn_tkhlv
             // 
             this.pn_tkhlv.BackColor = System.Drawing.Color.White;
@@ -307,6 +297,17 @@
             this.pb_hlv.TabIndex = 3;
             this.pb_hlv.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(891, 530);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // HLV_FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -326,11 +327,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_acc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_home)).EndInit();
             this.pn_cha.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pn_tkhlv.ResumeLayout(false);
             this.pn_tkhlv.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_updateimage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_hlv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
