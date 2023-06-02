@@ -29,18 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HLV_FormMain));
-            this.btn_kh = new System.Windows.Forms.Button();
             this.btn_lichlamviec = new System.Windows.Forms.Button();
-            this.btn_thoat = new System.Windows.Forms.Button();
+            this.btn_kh = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lb_acc = new System.Windows.Forms.Label();
             this.pb_acc = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.pb_home = new System.Windows.Forms.PictureBox();
             this.lb_home = new System.Windows.Forms.Label();
+            this.lb_acc = new System.Windows.Forms.Label();
             this.pn_tkhlv = new System.Windows.Forms.Panel();
             this.btn_doimatkhau = new System.Windows.Forms.Button();
             this.btn_updatethongtin = new System.Windows.Forms.Button();
@@ -48,6 +46,8 @@
             this.lb_gmailhlv = new System.Windows.Forms.Label();
             this.lb_tenhlv = new System.Windows.Forms.Label();
             this.pb_hlv = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_thoat = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -58,26 +58,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_updateimage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_hlv)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_kh
-            // 
-            this.btn_kh.BackColor = System.Drawing.Color.Black;
-            this.btn_kh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_kh.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_kh.FlatAppearance.BorderSize = 0;
-            this.btn_kh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_kh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_kh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_kh.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btn_kh.Location = new System.Drawing.Point(0, 266);
-            this.btn_kh.Name = "btn_kh";
-            this.btn_kh.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btn_kh.Size = new System.Drawing.Size(273, 87);
-            this.btn_kh.TabIndex = 3;
-            this.btn_kh.Text = "Khách hàng";
-            this.btn_kh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_kh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_kh.UseVisualStyleBackColor = false;
             // 
             // btn_lichlamviec
             // 
@@ -90,29 +70,29 @@
             this.btn_lichlamviec.Location = new System.Drawing.Point(0, 175);
             this.btn_lichlamviec.Name = "btn_lichlamviec";
             this.btn_lichlamviec.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btn_lichlamviec.Size = new System.Drawing.Size(273, 91);
+            this.btn_lichlamviec.Size = new System.Drawing.Size(273, 85);
             this.btn_lichlamviec.TabIndex = 1;
             this.btn_lichlamviec.Text = "Lịch làm việc";
             this.btn_lichlamviec.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_lichlamviec.UseVisualStyleBackColor = false;
             // 
-            // btn_thoat
+            // btn_kh
             // 
-            this.btn_thoat.BackColor = System.Drawing.Color.Black;
-            this.btn_thoat.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_thoat.FlatAppearance.BorderSize = 0;
-            this.btn_thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_thoat.ForeColor = System.Drawing.Color.White;
-            this.btn_thoat.Location = new System.Drawing.Point(0, 353);
-            this.btn_thoat.Name = "btn_thoat";
-            this.btn_thoat.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btn_thoat.Size = new System.Drawing.Size(273, 86);
-            this.btn_thoat.TabIndex = 5;
-            this.btn_thoat.Text = "Thoát";
-            this.btn_thoat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_thoat.UseVisualStyleBackColor = false;
-            this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
+            this.btn_kh.BackColor = System.Drawing.Color.Black;
+            this.btn_kh.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_kh.FlatAppearance.BorderSize = 0;
+            this.btn_kh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_kh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_kh.ForeColor = System.Drawing.Color.White;
+            this.btn_kh.Location = new System.Drawing.Point(0, 260);
+            this.btn_kh.Name = "btn_kh";
+            this.btn_kh.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btn_kh.Size = new System.Drawing.Size(273, 86);
+            this.btn_kh.TabIndex = 5;
+            this.btn_kh.Text = "Khách hàng";
+            this.btn_kh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_kh.UseVisualStyleBackColor = false;
+            this.btn_kh.Click += new System.EventHandler(this.btn_kh_Click);
             // 
             // panel1
             // 
@@ -162,17 +142,6 @@
             this.panel3.Size = new System.Drawing.Size(891, 83);
             this.panel3.TabIndex = 4;
             // 
-            // lb_acc
-            // 
-            this.lb_acc.AutoSize = true;
-            this.lb_acc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_acc.Location = new System.Drawing.Point(262, 49);
-            this.lb_acc.Name = "lb_acc";
-            this.lb_acc.Size = new System.Drawing.Size(182, 29);
-            this.lb_acc.TabIndex = 1;
-            this.lb_acc.Text = "Huấn luyện viên";
-            this.lb_acc.Click += new System.EventHandler(this.lb_acc_Click);
-            // 
             // pb_acc
             // 
             this.pb_acc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -184,16 +153,6 @@
             this.pb_acc.TabIndex = 0;
             this.pb_acc.TabStop = false;
             this.pb_acc.Click += new System.EventHandler(this.pb_acc_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(273, 83);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(891, 530);
-            this.panel4.TabIndex = 5;
             // 
             // pb_home
             // 
@@ -218,6 +177,17 @@
             this.lb_home.TabIndex = 3;
             this.lb_home.Text = "Home";
             this.lb_home.Click += new System.EventHandler(this.lb_home_Click);
+            // 
+            // lb_acc
+            // 
+            this.lb_acc.AutoSize = true;
+            this.lb_acc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_acc.Location = new System.Drawing.Point(262, 49);
+            this.lb_acc.Name = "lb_acc";
+            this.lb_acc.Size = new System.Drawing.Size(182, 29);
+            this.lb_acc.TabIndex = 1;
+            this.lb_acc.Text = "Huấn luyện viên";
+            this.lb_acc.Click += new System.EventHandler(this.lb_acc_Click);
             // 
             // pn_tkhlv
             // 
@@ -296,6 +266,34 @@
             this.pb_hlv.TabIndex = 3;
             this.pb_hlv.TabStop = false;
             // 
+            // panel4
+            // 
+            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(273, 83);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(891, 530);
+            this.panel4.TabIndex = 5;
+            // 
+            // btn_thoat
+            // 
+            this.btn_thoat.BackColor = System.Drawing.Color.Black;
+            this.btn_thoat.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_thoat.FlatAppearance.BorderSize = 0;
+            this.btn_thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_thoat.ForeColor = System.Drawing.Color.White;
+            this.btn_thoat.Location = new System.Drawing.Point(0, 346);
+            this.btn_thoat.Name = "btn_thoat";
+            this.btn_thoat.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btn_thoat.Size = new System.Drawing.Size(273, 86);
+            this.btn_thoat.TabIndex = 6;
+            this.btn_thoat.Text = "Thoát";
+            this.btn_thoat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_thoat.UseVisualStyleBackColor = false;
+            this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click_1);
+            // 
             // HLV_FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -326,9 +324,8 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btn_kh;
         private System.Windows.Forms.Button btn_lichlamviec;
-        private System.Windows.Forms.Button btn_thoat;
+        private System.Windows.Forms.Button btn_kh;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
@@ -344,5 +341,6 @@
         private System.Windows.Forms.Label lb_gmailhlv;
         private System.Windows.Forms.Label lb_tenhlv;
         private System.Windows.Forms.PictureBox pb_hlv;
+        private System.Windows.Forms.Button btn_thoat;
     }
 }

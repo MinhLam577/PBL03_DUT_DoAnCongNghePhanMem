@@ -76,7 +76,6 @@ namespace QLPhongGym.GUI
                 a.BangCap = (dataGridView1.Rows[rowSelected].Cells[9].Value.ToString());
                 HLV b = new HLV();
                 b = QLHLVBLL.getInstance.GetInfoHLV(a.IDUsers);
-                
                 a.Image = b.Image;
             }
             else
@@ -155,54 +154,6 @@ namespace QLPhongGym.GUI
             }
 
         }
-
-        /* private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-         {
-
-             HLV b = new HLV();
-             b = QLHLVBLL.getInstance.GetInfoHLV(a.IDUsers);
-             a.Image = b.Image;
-
-             try
-             {
-                 int row = dataGridView1.CurrentRow.Index;
-                  = (dataGridView1.Rows[row].Cells[1].Value.ToString());
-                 textNameHLV.Text = dataGridView1.Rows[row].Cells[2].Value.ToString();
-                 dateTimeHLV.Value = Convert.ToDateTime(dataGridView1.Rows[row].Cells[3].Value.ToString());
-                 if (dataGridView1.Rows[row].Cells[4].Value.ToString().Equals("True"))
-                 {
-                     radioBtnMale.Checked = Convert.ToBoolean(dataGridView1.Rows[row].Cells[4].Value.ToString());
-                 }
-                 else
-                 {
-                     radioBtnFemale.Checked = true;
-                 }
-                 textCCCD.Text = (dataGridView1.Rows[row].Cells[5].Value.ToString());
-                 textGmai.Text = (dataGridView1.Rows[row].Cells[6].Value.ToString());
-                 textSDT.Text = (dataGridView1.Rows[row].Cells[7].Value.ToString());
-                 textDiachi.Text = (dataGridView1.Rows[row].Cells[8].Value.ToString());
-                 textBangcap.Text = (dataGridView1.Rows[row].Cells[9].Value.ToString());
-                 HLV a = new HLV();
-                 a = QLHLVBLL.getInstance.GetInfoHLV(Convert.ToInt32(textMaHLv.Text));
-                 pictureHLV.Tag = a.Image;
-                 if (pictureHLV.Tag != null)
-                 {
-                     if (!string.IsNullOrEmpty(pictureHLV.Tag.ToString()))
-                     {
-                         pictureHLV.Image = Image.FromFile(Application.StartupPath + @"\PersonImage\" + pictureHLV.Tag);
-                     }
-                 }
-                 else
-                 {
-                     pictureHLV.Image = Image.FromFile(Application.StartupPath + @"\Resources\Admin.png");
-                 }
-             }
-             catch(Exception ex)
-             {
-                 MessageBox.Show(ex.Message, "Lỗi datagridview_cell_click");
-             }
-
-         }*/
         private void Admin_FormDanhSachHLV_Load_1(object sender, EventArgs e)
         {
             CapNhatListHLV();
