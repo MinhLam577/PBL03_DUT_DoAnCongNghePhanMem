@@ -198,14 +198,14 @@
             this.txt_thoihan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_thoihan.Location = new System.Drawing.Point(167, 327);
             this.txt_thoihan.Name = "txt_thoihan";
-            this.txt_thoihan.Size = new System.Drawing.Size(83, 30);
+            this.txt_thoihan.Size = new System.Drawing.Size(117, 30);
             this.txt_thoihan.TabIndex = 47;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(256, 330);
+            this.label6.Location = new System.Drawing.Point(290, 332);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 25);
             this.label6.TabIndex = 48;
