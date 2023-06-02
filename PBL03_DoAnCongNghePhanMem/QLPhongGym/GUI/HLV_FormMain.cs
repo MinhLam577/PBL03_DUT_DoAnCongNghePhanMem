@@ -56,8 +56,8 @@ namespace QLPhongGym.GUI
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            panel3.Controls.Add(childForm);
-            panel3.Tag = childForm;
+            pn_cha.Controls.Add(childForm);
+            pn_cha.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
@@ -98,17 +98,7 @@ namespace QLPhongGym.GUI
             this.Close();
         }
 
-        private void btn_thoat_Click(object sender, EventArgs e)
-        {
-            switch(MessageBox.Show("Bạn có chắc chắn muốn thoát ứng dụng?", "Xin chờ một lát", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)){
-                case DialogResult.OK:
-                    this.Close();
-                    break;
-                case DialogResult.Cancel:
-                    break;
-            }
-            
-        }
+        
 
         private void pb_home_Click(object sender, EventArgs e)
         {
@@ -137,12 +127,43 @@ namespace QLPhongGym.GUI
         {
             showMenu(pn_tkhlv);
         }
-
+        private void Edit(object hlv)
+        {
+            HLV a = (HLV)hlv;
+            if (QLHLVBLL.getInstance.Update(a) == true)
+            {
+                if (a != null)
+                {
+                    lb_gmailhlv.Text = a.Gmail;
+                    lb_tenhlv.Text = a.Name;
+                }
+                if (a.Image != null)
+                {
+                    pb_acc.Image = Image.FromFile(Application.StartupPath + @"\PersonImage\" + a.Image);
+                    pb_hlv.Image = Image.FromFile(Application.StartupPath + @"\PersonImage\" + a.Image);
+                }
+                else
+                {
+                    pb_acc.Image = Image.FromFile(ImageDefaultPath);
+                    pb_hlv.Image = Image.FromFile(ImageDefaultPath);
+                }
+                MessageBox.Show("Sua Thanh cong");
+            }
+            else
+            {
+                MessageBox.Show("Sua huấn luyện viên thất bại");
+            }
+        }
         private void btn_updatethongtin_Click(object sender, EventArgs e)
         {
-            
+            AddEdit_HLV a = new AddEdit_HLV();
+            int ID = (int)tk.IDUser;
+            HLV hlv = (HLV)UsersBLL.Instance.GetUserByID(ID);
+            a.buon += new AddEdit_HLV.mydelegate(Edit);
+            a.luachon(2);
+            a.getinfofromAB(hlv);
+            a.Show();
         }
-
         private void pb_updateimage_Click(object sender, EventArgs e)
         {
             UpdateImageAccountForm updateImageAccountForm = new UpdateImageAccountForm((HLV)UsersBLL.Instance.GetUserByID((int)tk.IDUser));
@@ -182,6 +203,11 @@ namespace QLPhongGym.GUI
         private void btn_kh_Click(object sender, EventArgs e)
         {
 
+        }
+        private void btn_thoat_Click_1(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát chương trình?", "Xin chờ một lát", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                this.Close();
         }
     }
 }

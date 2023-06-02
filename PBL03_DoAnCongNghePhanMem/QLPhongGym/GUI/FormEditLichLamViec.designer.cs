@@ -45,55 +45,61 @@
             // CA
             // 
             this.CA.AutoSize = true;
-            this.CA.Location = new System.Drawing.Point(160, 107);
+            this.CA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CA.Location = new System.Drawing.Point(178, 107);
             this.CA.Name = "CA";
-            this.CA.Size = new System.Drawing.Size(38, 16);
+            this.CA.Size = new System.Drawing.Size(60, 25);
             this.CA.TabIndex = 0;
             this.CA.Text = "IDCA";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(152, 180);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(168, 180);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 16);
+            this.label2.Size = new System.Drawing.Size(70, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "IDHLV";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(123, 257);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(123, 256);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 16);
+            this.label3.Size = new System.Drawing.Size(115, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "NGÀY LÀM";
             // 
             // textIdHLV
             // 
-            this.textIdHLV.Location = new System.Drawing.Point(345, 174);
+            this.textIdHLV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textIdHLV.Location = new System.Drawing.Point(405, 174);
             this.textIdHLV.Name = "textIdHLV";
-            this.textIdHLV.Size = new System.Drawing.Size(200, 22);
+            this.textIdHLV.Size = new System.Drawing.Size(247, 30);
             this.textIdHLV.TabIndex = 5;
             // 
             // cbbCa
             // 
+            this.cbbCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbCa.FormattingEnabled = true;
             this.cbbCa.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4"});
-            this.cbbCa.Location = new System.Drawing.Point(345, 99);
+            this.cbbCa.Location = new System.Drawing.Point(405, 99);
             this.cbbCa.Name = "cbbCa";
-            this.cbbCa.Size = new System.Drawing.Size(200, 24);
+            this.cbbCa.Size = new System.Drawing.Size(247, 33);
             this.cbbCa.TabIndex = 8;
             // 
             // btnEDIT
             // 
-            this.btnEDIT.Location = new System.Drawing.Point(199, 351);
+            this.btnEDIT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEDIT.Location = new System.Drawing.Point(128, 337);
             this.btnEDIT.Name = "btnEDIT";
-            this.btnEDIT.Size = new System.Drawing.Size(75, 23);
+            this.btnEDIT.Size = new System.Drawing.Size(136, 64);
             this.btnEDIT.TabIndex = 9;
             this.btnEDIT.Text = "OKI";
             this.btnEDIT.UseVisualStyleBackColor = true;
@@ -101,9 +107,10 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(470, 351);
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(516, 337);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(136, 64);
             this.btnCancel.TabIndex = 10;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -112,51 +119,54 @@
             // timeNgaylam
             // 
             this.timeNgaylam.CustomFormat = "yyyy-MM-dd";
+            this.timeNgaylam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeNgaylam.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.timeNgaylam.Location = new System.Drawing.Point(345, 251);
+            this.timeNgaylam.Location = new System.Drawing.Point(405, 251);
             this.timeNgaylam.Name = "timeNgaylam";
-            this.timeNgaylam.Size = new System.Drawing.Size(200, 22);
+            this.timeNgaylam.Size = new System.Drawing.Size(247, 30);
             this.timeNgaylam.TabIndex = 12;
             this.timeNgaylam.Value = new System.DateTime(2023, 4, 21, 0, 0, 0, 0);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(432, 14);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(419, 14);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(24, 16);
+            this.label10.Size = new System.Drawing.Size(36, 25);
             this.label10.TabIndex = 68;
             this.label10.Text = "To";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(123, 14);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(38, 16);
+            this.label11.Size = new System.Drawing.Size(57, 25);
             this.label11.TabIndex = 67;
             this.label11.Text = "From";
             // 
             // dateTimeNgayEnd
             // 
             this.dateTimeNgayEnd.CustomFormat = "yyyy-MM-dd";
-            this.dateTimeNgayEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeNgayEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeNgayEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimeNgayEnd.Location = new System.Drawing.Point(497, 6);
+            this.dateTimeNgayEnd.Location = new System.Drawing.Point(497, 9);
             this.dateTimeNgayEnd.Name = "dateTimeNgayEnd";
             this.dateTimeNgayEnd.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateTimeNgayEnd.Size = new System.Drawing.Size(155, 27);
+            this.dateTimeNgayEnd.Size = new System.Drawing.Size(155, 30);
             this.dateTimeNgayEnd.TabIndex = 66;
             this.dateTimeNgayEnd.Value = new System.DateTime(2023, 4, 21, 0, 0, 0, 0);
             // 
             // dateTimeNgayStart
             // 
             this.dateTimeNgayStart.CustomFormat = "yyyy-MM-dd";
-            this.dateTimeNgayStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeNgayStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeNgayStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimeNgayStart.Location = new System.Drawing.Point(223, 6);
+            this.dateTimeNgayStart.Location = new System.Drawing.Point(214, 9);
             this.dateTimeNgayStart.Name = "dateTimeNgayStart";
-            this.dateTimeNgayStart.Size = new System.Drawing.Size(155, 27);
+            this.dateTimeNgayStart.Size = new System.Drawing.Size(155, 30);
             this.dateTimeNgayStart.TabIndex = 65;
             this.dateTimeNgayStart.Value = new System.DateTime(2023, 4, 21, 0, 0, 0, 0);
             // 
@@ -164,7 +174,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ControlBox = false;
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.dateTimeNgayEnd);

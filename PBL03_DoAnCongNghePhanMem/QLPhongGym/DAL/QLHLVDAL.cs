@@ -137,6 +137,7 @@ namespace QLPhongGym.DAL
             coarch.BangCap = a.BangCap;
             coarch.Image = a.Image;
             db.SaveChanges();
+           
             return true;
         }
         public DataTable SearchHLVByNameID(string NameorId)

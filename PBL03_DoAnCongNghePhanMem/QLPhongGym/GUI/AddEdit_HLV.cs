@@ -40,7 +40,6 @@ namespace QLPhongGym.GUI
         }
         private void btnOKI_Click(object sender, EventArgs e)
         {
-
             HLV a = new HLV();
             if (luachon(lc) == 2)
             {
@@ -64,6 +63,11 @@ namespace QLPhongGym.GUI
             a.Image = Anh;
             try
             {
+                if(textBangcap.Text == "")
+                {
+                    MessageBox.Show("Mời nhập vào dữ liệu còn trống");
+                    return;
+                }
                 if (!UsersBLL.Instance.CheckHoTen(a.Name)) { MessageBox.Show("Họ tên không đúng định dạng"); return; }
                 if (!UsersBLL.Instance.CheckNS((DateTime)a.DateBorn))
                 {

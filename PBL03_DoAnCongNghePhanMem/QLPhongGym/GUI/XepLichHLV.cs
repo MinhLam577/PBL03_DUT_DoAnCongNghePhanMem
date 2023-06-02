@@ -131,14 +131,10 @@ namespace QLPhongGym.GUI
             if (cbbCaLam.SelectedIndex != -1)
             {
                 //dataGridView1.DataSource = QLHLVBLL.getInstance.getinfoLichHLV();
-                MessageBox.Show("oki");
                 //dataGridView1.Rows.Add(0, 1);
                 tuan = new List<LichLamViecTrongTuan>();
                 for (int i = 0; i < checkedListBox1.Items.Count; i++)
                 {
-                    string numbers = "";
-                    string letters = "";
-
                     // Kiểm tra xem phần tử này đã được chọn chưa
                     if (checkedListBox1.GetItemChecked(i))
                     {
@@ -207,17 +203,6 @@ namespace QLPhongGym.GUI
             aa.hienthilenlistboxHang(dateTimeNgayStart.Value);
 
         }
-
-
-
-
-
-
-
-
-
-
-
 
         private void dateTimeNgayStart_ValueChanged(object sender, EventArgs e)
         {
@@ -510,10 +495,7 @@ namespace QLPhongGym.GUI
             this.Dispose();
         }
 
-        private void btnNgaylamviec_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
            

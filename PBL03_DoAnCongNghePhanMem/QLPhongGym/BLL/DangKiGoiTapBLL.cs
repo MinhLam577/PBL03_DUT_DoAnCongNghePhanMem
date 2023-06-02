@@ -24,7 +24,10 @@ namespace QLPhongGym.BLL
             }
             private set { }
         }
-        
+        public DataTable CreateTable()
+        {
+            return DangKiGoiTapDAL.Instance.CreateTable();
+        }
         public bool AddDKGT(DangKiGoiTap dkgt)
         {
             return DangKiGoiTapDAL.Instance.AddDKGT(dkgt) > 0;
@@ -61,13 +64,17 @@ namespace QLPhongGym.BLL
         {
             return DangKiGoiTapDAL.Instance.GetDLGTByIDKH_NgayDangKi_NgayKetThuc_IDGT(IDKH, ngaydangki, ngayketthuc, IDGT);
         }
-        public DangKiGoiTap GetDKGTByIDKH_IDGT(int IDKH, int IDGT)
+        public DangKiGoiTap GetDKGT_Newest_ByIDKH_IDGT(int IDKH, int IDGT)
         {
-            return DangKiGoiTapDAL.Instance.GetDKGTByIDKH_IDGT(IDKH, IDGT);
+            return DangKiGoiTapDAL.Instance.GetDKGT_Newest_ByIDKH_IDGT(IDKH, IDGT);
         }
         public int GetSoLuongDKGTTheoNamVaThang(int year, int month)
         {
             return DangKiGoiTapDAL.Instance.GetSoLuongDKGTTheoNamVaThang(year, month);
+        }
+        public DataTable FitlerListDKGT(int IDKH, string require, string GoiTap)
+        {
+            return DangKiGoiTapDAL.Instance.FitlerListDKGT(IDKH, require, GoiTap);
         }
     }
 }
