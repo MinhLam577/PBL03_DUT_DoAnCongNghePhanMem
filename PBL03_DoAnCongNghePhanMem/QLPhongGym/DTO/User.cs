@@ -18,10 +18,10 @@ namespace QLPhongGym.DTO
         public User()
         {
             this.LichLamViecTrongTuans = new HashSet<LichLamViecTrongTuan>();
-            this.HLVs = new HashSet<LichThueHLV>();
-            this.KHs = new HashSet<LichThueHLV>();
             this.TKs = new HashSet<TK>();
             this.DangKiGoiTaps = new HashSet<DangKiGoiTap>();
+            this.HLV_LichThue = new HashSet<LichThueHLV>();
+            this.KH_LichThue = new HashSet<LichThueHLV>();
         }
     
         public int IDUsers { get; set; }
@@ -37,12 +37,12 @@ namespace QLPhongGym.DTO
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LichLamViecTrongTuan> LichLamViecTrongTuans { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<LichThueHLV> HLVs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<LichThueHLV> KHs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TK> TKs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DangKiGoiTap> DangKiGoiTaps { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<LichThueHLV> HLV_LichThue { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<LichThueHLV> KH_LichThue { get; set; }
     }
 }

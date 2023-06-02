@@ -21,6 +21,11 @@ namespace QLPhongGym.BLL
             }
             private set { }
         }
+
+        public DataTable CreateTable()
+        {
+            return KHDAL.Instance.CreateTable();    
+        }
         public KH GetKHByID(int ID)
         {
             return (KH)UsersBLL.Instance.GetUserByID(ID);

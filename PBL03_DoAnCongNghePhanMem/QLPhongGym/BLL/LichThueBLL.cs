@@ -21,5 +21,13 @@ namespace QLPhongGym.BLL
             }
             private set { }
         }
+        public List<LichThueHLV> GetLichThueByIDKH_IDHLV(int IDKH, int IDHLV)
+        {
+            return LichThueDAL.Instance.GetLichThueByIDKH_IDHLV(IDKH, IDHLV);
+        }
+        public List<LichThueHLV> GetLichThueByIDHLV(int IDHLV)
+        {
+            return LichThueDAL.Instance.GetLichThueByIDHLV(IDHLV);
+        }
     }
 }

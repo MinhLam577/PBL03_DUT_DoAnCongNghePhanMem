@@ -21,5 +21,16 @@ namespace QLPhongGym.DAL
             }
             private set { }
         }
+        
+        public List<LichThueHLV> GetLichThueByIDKH_IDHLV(int IDKH, int IDHLV)
+        {
+            var data = db.LichThueHLVs.Where(l => l.IDKH == IDKH && l.IDHLV == IDHLV).ToList();
+            return data;
+        }
+        public List<LichThueHLV> GetLichThueByIDHLV(int IDHLV)
+        {
+            var data = db.LichThueHLVs.Where(l => l.IDHLV == IDHLV).ToList();
+            return data;
+        }
     }
 }
