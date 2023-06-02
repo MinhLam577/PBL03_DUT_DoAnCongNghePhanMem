@@ -78,15 +78,18 @@
             this.btn_lichlamviec.Text = "Lịch làm việc";
             this.btn_lichlamviec.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_lichlamviec.UseVisualStyleBackColor = false;
+            this.btn_lichlamviec.Click += new System.EventHandler(this.btn_lichlamviec_Click);
             // 
             // btn_kh
             // 
             this.btn_kh.BackColor = System.Drawing.Color.Black;
+            this.btn_kh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_kh.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_kh.FlatAppearance.BorderSize = 0;
             this.btn_kh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_kh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_kh.ForeColor = System.Drawing.Color.White;
+            this.btn_kh.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btn_kh.Location = new System.Drawing.Point(0, 260);
             this.btn_kh.Name = "btn_kh";
             this.btn_kh.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
@@ -94,6 +97,7 @@
             this.btn_kh.TabIndex = 5;
             this.btn_kh.Text = "Khách hàng";
             this.btn_kh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_kh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_kh.UseVisualStyleBackColor = false;
             this.btn_kh.Click += new System.EventHandler(this.btn_kh_Click);
             // 
@@ -319,6 +323,7 @@
             this.Name = "HLV_FormMain";
             this.Text = "HLV_formmain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.HLV_FormMain_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

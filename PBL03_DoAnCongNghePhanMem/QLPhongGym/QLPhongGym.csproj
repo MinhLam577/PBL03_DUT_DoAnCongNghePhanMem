@@ -239,11 +239,11 @@
     <Compile Include="GUI\FormEditLichLamViec.designer.cs">
       <DependentUpon>FormEditLichLamViec.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\HLV_FormDanhSachKH.cs">
+    <Compile Include="GUI\FormLichHLV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\HLV_FormDanhSachKH.Designer.cs">
-      <DependentUpon>HLV_FormDanhSachKH.cs</DependentUpon>
+    <Compile Include="GUI\FormLichHLV.Designer.cs">
+      <DependentUpon>FormLichHLV.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\HLV_FormMain.cs">
       <SubType>Form</SubType>
@@ -334,8 +334,8 @@
     <EmbeddedResource Include="GUI\FormEditLichLamViec.resx">
       <DependentUpon>FormEditLichLamViec.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\HLV_FormDanhSachKH.resx">
-      <DependentUpon>HLV_FormDanhSachKH.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\FormLichHLV.resx">
+      <DependentUpon>FormLichHLV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\HLV_FormMain.resx">
       <DependentUpon>HLV_FormMain.cs</DependentUpon>
