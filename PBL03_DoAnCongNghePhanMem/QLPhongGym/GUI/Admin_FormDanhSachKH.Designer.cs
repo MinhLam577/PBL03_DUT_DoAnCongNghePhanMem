@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_FormDanhSachKH));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pb_change = new System.Windows.Forms.PictureBox();
             this.lb_mathe_cccd = new System.Windows.Forms.Label();
@@ -41,6 +41,7 @@
             this.txb_mathe_cccd = new System.Windows.Forms.TextBox();
             this.dgv_kh = new System.Windows.Forms.DataGridView();
             this.kh_mns = new System.Windows.Forms.MenuStrip();
+            this.xemLịchThuêHuấnLuyệnViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thêmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sửaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,6 +61,8 @@
             this.dgv_gt = new System.Windows.Forms.DataGridView();
             this.GT_mns = new System.Windows.Forms.MenuStrip();
             this.đăngKíToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.đăngKíGóiTậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.đăngKíLịchThuêHuấnLuyệnViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giaHạnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xóaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.fitlerDKGT_tsmi = new System.Windows.Forms.ToolStripMenuItem();
@@ -94,7 +97,7 @@
             this.groupBox1.Controls.Add(this.kh_mns);
             this.groupBox1.Location = new System.Drawing.Point(0, 1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(791, 785);
+            this.groupBox1.Size = new System.Drawing.Size(806, 785);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -103,7 +106,7 @@
             this.pb_change.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pb_change.Image = ((System.Drawing.Image)(resources.GetObject("pb_change.Image")));
             this.pb_change.InitialImage = ((System.Drawing.Image)(resources.GetObject("pb_change.InitialImage")));
-            this.pb_change.Location = new System.Drawing.Point(696, 84);
+            this.pb_change.Location = new System.Drawing.Point(717, 77);
             this.pb_change.Name = "pb_change";
             this.pb_change.Size = new System.Drawing.Size(72, 89);
             this.pb_change.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -116,10 +119,10 @@
             this.lb_mathe_cccd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_mathe_cccd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_mathe_cccd.Location = new System.Drawing.Point(6, 89);
+            this.lb_mathe_cccd.Location = new System.Drawing.Point(17, 82);
             this.lb_mathe_cccd.Name = "lb_mathe_cccd";
             this.lb_mathe_cccd.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb_mathe_cccd.Size = new System.Drawing.Size(207, 29);
+            this.lb_mathe_cccd.Size = new System.Drawing.Size(222, 29);
             this.lb_mathe_cccd.TabIndex = 52;
             this.lb_mathe_cccd.Text = "Mã thẻ:";
             this.lb_mathe_cccd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -129,10 +132,10 @@
             this.txb_ten_sdt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txb_ten_sdt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_ten_sdt.Location = new System.Drawing.Point(229, 139);
+            this.txb_ten_sdt.Location = new System.Drawing.Point(240, 132);
             this.txb_ten_sdt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txb_ten_sdt.Name = "txb_ten_sdt";
-            this.txb_ten_sdt.Size = new System.Drawing.Size(437, 34);
+            this.txb_ten_sdt.Size = new System.Drawing.Size(452, 34);
             this.txb_ten_sdt.TabIndex = 54;
             this.txb_ten_sdt.TextChanged += new System.EventHandler(this.txb_ten_sdt_TextChanged);
             // 
@@ -141,9 +144,9 @@
             this.lb_ten_sdt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_ten_sdt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_ten_sdt.Location = new System.Drawing.Point(6, 144);
+            this.lb_ten_sdt.Location = new System.Drawing.Point(17, 137);
             this.lb_ten_sdt.Name = "lb_ten_sdt";
-            this.lb_ten_sdt.Size = new System.Drawing.Size(207, 29);
+            this.lb_ten_sdt.Size = new System.Drawing.Size(222, 29);
             this.lb_ten_sdt.TabIndex = 53;
             this.lb_ten_sdt.Text = "Tên:";
             this.lb_ten_sdt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -153,10 +156,10 @@
             this.txb_mathe_cccd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txb_mathe_cccd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txb_mathe_cccd.Location = new System.Drawing.Point(229, 86);
+            this.txb_mathe_cccd.Location = new System.Drawing.Point(240, 79);
             this.txb_mathe_cccd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txb_mathe_cccd.Name = "txb_mathe_cccd";
-            this.txb_mathe_cccd.Size = new System.Drawing.Size(437, 34);
+            this.txb_mathe_cccd.Size = new System.Drawing.Size(452, 34);
             this.txb_mathe_cccd.TabIndex = 51;
             this.txb_mathe_cccd.TextChanged += new System.EventHandler(this.txb_mathe_gmail_TextChanged);
             // 
@@ -168,23 +171,23 @@
             this.dgv_kh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_kh.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_kh.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_kh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_kh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_kh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_kh.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_kh.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_kh.Location = new System.Drawing.Point(11, 190);
             this.dgv_kh.Name = "dgv_kh";
             this.dgv_kh.ReadOnly = true;
@@ -193,16 +196,17 @@
             this.dgv_kh.RowTemplate.Height = 24;
             this.dgv_kh.RowTemplate.ReadOnly = true;
             this.dgv_kh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_kh.Size = new System.Drawing.Size(780, 595);
+            this.dgv_kh.Size = new System.Drawing.Size(795, 589);
             this.dgv_kh.TabIndex = 50;
             this.dgv_kh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_kh_CellClick);
             // 
             // kh_mns
             // 
-            this.kh_mns.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kh_mns.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kh_mns.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.kh_mns.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.kh_mns.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.xemLịchThuêHuấnLuyệnViênToolStripMenuItem,
             this.thêmToolStripMenuItem,
             this.xóaToolStripMenuItem,
             this.sửaToolStripMenuItem1,
@@ -211,18 +215,24 @@
             this.kh_mns.Location = new System.Drawing.Point(3, 18);
             this.kh_mns.Name = "kh_mns";
             this.kh_mns.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.kh_mns.Size = new System.Drawing.Size(785, 44);
+            this.kh_mns.Size = new System.Drawing.Size(800, 44);
             this.kh_mns.TabIndex = 57;
             this.kh_mns.Text = "kh_menustrip";
             // 
+            // xemLịchThuêHuấnLuyệnViênToolStripMenuItem
+            // 
+            this.xemLịchThuêHuấnLuyệnViênToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("xemLịchThuêHuấnLuyệnViênToolStripMenuItem.Image")));
+            this.xemLịchThuêHuấnLuyệnViênToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.xemLịchThuêHuấnLuyệnViênToolStripMenuItem.Name = "xemLịchThuêHuấnLuyệnViênToolStripMenuItem";
+            this.xemLịchThuêHuấnLuyệnViênToolStripMenuItem.Size = new System.Drawing.Size(176, 40);
+            this.xemLịchThuêHuấnLuyệnViênToolStripMenuItem.Text = "Lịch thuê HLV";
+            // 
             // thêmToolStripMenuItem
             // 
-            this.thêmToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thêmToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("thêmToolStripMenuItem.Image")));
-            this.thêmToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.thêmToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.thêmToolStripMenuItem.Name = "thêmToolStripMenuItem";
-            this.thêmToolStripMenuItem.Size = new System.Drawing.Size(130, 40);
+            this.thêmToolStripMenuItem.Size = new System.Drawing.Size(105, 40);
             this.thêmToolStripMenuItem.Text = "Thêm";
             this.thêmToolStripMenuItem.Click += new System.EventHandler(this.thêmToolStripMenuItem_Click);
             // 
@@ -231,7 +241,7 @@
             this.xóaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("xóaToolStripMenuItem.Image")));
             this.xóaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
-            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(110, 40);
+            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(91, 40);
             this.xóaToolStripMenuItem.Text = "Xóa";
             this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
             // 
@@ -240,7 +250,7 @@
             this.sửaToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("sửaToolStripMenuItem1.Image")));
             this.sửaToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.sửaToolStripMenuItem1.Name = "sửaToolStripMenuItem1";
-            this.sửaToolStripMenuItem1.Size = new System.Drawing.Size(108, 40);
+            this.sửaToolStripMenuItem1.Size = new System.Drawing.Size(91, 40);
             this.sửaToolStripMenuItem1.Text = "Sửa";
             this.sửaToolStripMenuItem1.Click += new System.EventHandler(this.sửaToolStripMenuItem1_Click);
             // 
@@ -254,28 +264,28 @@
             this.sortkh_tsmi.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.sortkh_tsmi.Name = "sortkh_tsmi";
             this.sortkh_tsmi.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.sortkh_tsmi.Size = new System.Drawing.Size(158, 40);
+            this.sortkh_tsmi.Size = new System.Drawing.Size(126, 40);
             this.sortkh_tsmi.Text = "Sắp xếp";
             this.sortkh_tsmi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // mãThẻToolStripMenuItem
             // 
             this.mãThẻToolStripMenuItem.Name = "mãThẻToolStripMenuItem";
-            this.mãThẻToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
+            this.mãThẻToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
             this.mãThẻToolStripMenuItem.Text = "Mã thẻ";
             this.mãThẻToolStripMenuItem.Click += new System.EventHandler(this.mãThẻToolStripMenuItem_Click);
             // 
             // tênToolStripMenuItem
             // 
             this.tênToolStripMenuItem.Name = "tênToolStripMenuItem";
-            this.tênToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
+            this.tênToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
             this.tênToolStripMenuItem.Text = "Tên";
             this.tênToolStripMenuItem.Click += new System.EventHandler(this.tênToolStripMenuItem_Click);
             // 
             // giớiTínhToolStripMenuItem
             // 
             this.giớiTínhToolStripMenuItem.Name = "giớiTínhToolStripMenuItem";
-            this.giớiTínhToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
+            this.giớiTínhToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
             this.giớiTínhToolStripMenuItem.Text = "Giới tính";
             this.giớiTínhToolStripMenuItem.Click += new System.EventHandler(this.giớiTínhToolStripMenuItem_Click);
             // 
@@ -284,7 +294,7 @@
             this.toolStripMenuItem8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem8.Image")));
             this.toolStripMenuItem8.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(147, 40);
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(117, 40);
             this.toolStripMenuItem8.Text = "Reload";
             this.toolStripMenuItem8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.toolStripMenuItem8.Click += new System.EventHandler(this.reloadToolStripMenuItem_Click);
@@ -297,9 +307,9 @@
             this.groupBox2.Controls.Add(this.lb_tenkh);
             this.groupBox2.Controls.Add(this.pb_kh);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(792, 9);
+            this.groupBox2.Location = new System.Drawing.Point(806, 9);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1020, 377);
+            this.groupBox2.Size = new System.Drawing.Size(989, 377);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin chi tiết";
@@ -310,9 +320,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_description.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_description.ForeColor = System.Drawing.Color.Blue;
-            this.lb_description.Location = new System.Drawing.Point(361, 71);
+            this.lb_description.Location = new System.Drawing.Point(399, 58);
             this.lb_description.Name = "lb_description";
-            this.lb_description.Size = new System.Drawing.Size(399, 300);
+            this.lb_description.Size = new System.Drawing.Size(496, 300);
             this.lb_description.TabIndex = 4;
             // 
             // lb_gioitinh
@@ -360,9 +370,9 @@
             this.groupBox3.Controls.Add(this.dgv_gt);
             this.groupBox3.Controls.Add(this.GT_mns);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(791, 386);
+            this.groupBox3.Location = new System.Drawing.Point(806, 386);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1021, 400);
+            this.groupBox3.Size = new System.Drawing.Size(989, 400);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Gói tập khách hàng đăng kí";
@@ -373,7 +383,7 @@
             this.cb_gt.FormattingEnabled = true;
             this.cb_gt.Location = new System.Drawing.Point(134, 80);
             this.cb_gt.Name = "cb_gt";
-            this.cb_gt.Size = new System.Drawing.Size(607, 37);
+            this.cb_gt.Size = new System.Drawing.Size(581, 37);
             this.cb_gt.TabIndex = 61;
             this.cb_gt.SelectedIndexChanged += new System.EventHandler(this.cb_gt_SelectedIndexChanged);
             // 
@@ -398,24 +408,24 @@
             this.dgv_gt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_gt.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_gt.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_gt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_gt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_gt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_gt.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dgv_gt.Location = new System.Drawing.Point(1, 123);
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_gt.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_gt.Location = new System.Drawing.Point(13, 123);
             this.dgv_gt.Name = "dgv_gt";
             this.dgv_gt.ReadOnly = true;
             this.dgv_gt.RowHeadersWidth = 51;
@@ -423,7 +433,7 @@
             this.dgv_gt.RowTemplate.Height = 24;
             this.dgv_gt.RowTemplate.ReadOnly = true;
             this.dgv_gt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_gt.Size = new System.Drawing.Size(740, 271);
+            this.dgv_gt.Size = new System.Drawing.Size(702, 271);
             this.dgv_gt.TabIndex = 59;
             // 
             // GT_mns
@@ -439,18 +449,33 @@
             this.restoreToolStripMenuItem});
             this.GT_mns.Location = new System.Drawing.Point(3, 30);
             this.GT_mns.Name = "GT_mns";
-            this.GT_mns.Size = new System.Drawing.Size(1015, 40);
+            this.GT_mns.Size = new System.Drawing.Size(983, 40);
             this.GT_mns.TabIndex = 60;
             this.GT_mns.Text = "GT_mns";
             // 
             // đăngKíToolStripMenuItem
             // 
+            this.đăngKíToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.đăngKíGóiTậpToolStripMenuItem,
+            this.đăngKíLịchThuêHuấnLuyệnViênToolStripMenuItem});
             this.đăngKíToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("đăngKíToolStripMenuItem.Image")));
             this.đăngKíToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.đăngKíToolStripMenuItem.Name = "đăngKíToolStripMenuItem";
             this.đăngKíToolStripMenuItem.Size = new System.Drawing.Size(128, 36);
             this.đăngKíToolStripMenuItem.Text = "Đăng kí";
-            this.đăngKíToolStripMenuItem.Click += new System.EventHandler(this.đăngKíToolStripMenuItem_Click);
+            // 
+            // đăngKíGóiTậpToolStripMenuItem
+            // 
+            this.đăngKíGóiTậpToolStripMenuItem.Name = "đăngKíGóiTậpToolStripMenuItem";
+            this.đăngKíGóiTậpToolStripMenuItem.Size = new System.Drawing.Size(391, 26);
+            this.đăngKíGóiTậpToolStripMenuItem.Text = "Đăng kí gói tập";
+            this.đăngKíGóiTậpToolStripMenuItem.Click += new System.EventHandler(this.đăngKíGóiTậpToolStripMenuItem_Click);
+            // 
+            // đăngKíLịchThuêHuấnLuyệnViênToolStripMenuItem
+            // 
+            this.đăngKíLịchThuêHuấnLuyệnViênToolStripMenuItem.Name = "đăngKíLịchThuêHuấnLuyệnViênToolStripMenuItem";
+            this.đăngKíLịchThuêHuấnLuyệnViênToolStripMenuItem.Size = new System.Drawing.Size(391, 26);
+            this.đăngKíLịchThuêHuấnLuyệnViênToolStripMenuItem.Text = "Đăng kí lịch thuê huấn luyện viên";
             // 
             // giaHạnToolStripMenuItem
             // 
@@ -600,5 +625,8 @@
         private System.Windows.Forms.ToolStripMenuItem góiTậpSắpHếtHạnToolStripMenuItem;
         private System.Windows.Forms.ComboBox cb_gt;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem xemLịchThuêHuấnLuyệnViênToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem đăngKíGóiTậpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem đăngKíLịchThuêHuấnLuyệnViênToolStripMenuItem;
     }
 }
