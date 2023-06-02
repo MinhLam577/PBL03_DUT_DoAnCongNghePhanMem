@@ -38,8 +38,6 @@ namespace QLPhongGym.GUI
         }
         public bool CheckNgay(DateTime ngaydangki, DateTime ngayketthuc)
         {
-            if (ngaydangki.Date < DateTime.Today)
-                return false;
             if(ngayketthuc.Date <= ngaydangki.Date)
                 return false;
             return true;
@@ -50,6 +48,7 @@ namespace QLPhongGym.GUI
             {
                 string gt = cb_gt.Text;
                 int IDGT;
+                string description = "";
                 DateTime NgayDangKi = dtp_ngaydangki.Value;
                 DateTime NgayKetThuc = dtp_ngayketthuc.Value;
                 if (string.IsNullOrEmpty(gt))
@@ -62,9 +61,7 @@ namespace QLPhongGym.GUI
                     MessageBox.Show("Ngày đăng kí hoặc ngày kết thúc không đúng");
                     return;
                 }
-                
                 IDGT = GoiTapBLL.Instance.GetGTByName(gt).IDGT;
-                string description = "";
                 if(!KHBLL.Instance.CheckUserExist(kh.CCCD, kh.Name))
                 {
                     if (KHBLL.Instance.AddUser(kh))
@@ -133,60 +130,108 @@ namespace QLPhongGym.GUI
                 }
                 else
                 {
+                    DangKiGoiTap dangKiGoiTap = null;
                     if (!string.IsNullOrEmpty(txb_ghichu.Text))
                         description = txb_ghichu.Text;
-                    DangKiGoiTap dkgt = new DangKiGoiTap
+                    if (this.GoiTap == "")
                     {
-                        IDGT = IDGT,
-                        IDKH = kh.IDUsers,
-                        NgayDangKiGT = NgayDangKi,
-                        NgayKetThucGT = NgayKetThuc,
-                        Description = description,
-                        BaoLuu = false
-                    };
-                    switch (MessageBox.Show("Xác nhận đăng kí?", "Xin chờ một lát", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
-                    {
-                        case DialogResult.OK:
-                            if (DangKiGoiTapBLL.Instance.GetDKGTByIDKH_NgayDangKi_IDGT(kh.IDUsers, dkgt.NgayDangKiGT.Value.Date, (int)dkgt.IDGT) != null)
-                            {
-                                
-                                DangKiGoiTap t = DangKiGoiTapBLL.Instance.GetDKGTByIDKH_NgayDangKi_IDGT(kh.IDUsers, dkgt.NgayDangKiGT.Value.Date, (int)dkgt.IDGT);
-                                DangKiGoiTapBLL.Instance.DeleteDKGT(t);
-                            }
-                            if (DangKiGoiTapBLL.Instance.AddDKGT(dkgt))
-                            {
-                                string giamgia = (Convert.ToInt32(lb_dongia.Text) * numeric_giamgia.Value / 100).ToString();
-                                HoaDon hd = new HoaDon
+                        switch (MessageBox.Show("Xác nhận đăng kí?", "Xin chờ một lát", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
+                        {
+                            case DialogResult.OK:
+                                if (DangKiGoiTapBLL.Instance.GetDKGT_Newest_ByIDKH_IDGT(kh.IDUsers, IDGT) != null)
+                                    if (MessageBox.Show("Bạn dường như đã đăng kí và đang tập gói tập này, bạn chỉ có thể gia hạn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK)
+                                    {
+                                        DangKiThanhCong(this, new EventArgs());
+                                        return;
+                                    }
+                                          
+                                dangKiGoiTap = new DangKiGoiTap
                                 {
                                     IDGT = IDGT,
                                     IDKH = kh.IDUsers,
-                                    NgayThanhToan = DateTime.Now,
-                                    Price = Convert.ToDouble(lb_dongia.Text) - Convert.ToDouble(giamgia)
+                                    NgayDangKiGT = NgayDangKi,
+                                    NgayKetThucGT = NgayKetThuc,
+                                    Description = description,
+                                    BaoLuu = false
                                 };
-                                try
+                                if (DangKiGoiTapBLL.Instance.AddDKGT(dangKiGoiTap))
                                 {
-                                    HoaDonBLL.Instance.AddHoaDon(hd);
-                                }
-                                catch (Exception ex)
-                                {
-                                    MessageBox.Show(ex.Message, "Thêm hóa đơn không thành công");
-                                }
-
-                                if (MessageBox.Show("Đăng kí gói tập thành công") == DialogResult.OK)
-                                {
-                                    if (cb_inhoadon.Checked)
+                                    string giamgia = (Convert.ToInt32(lb_dongia.Text) * numeric_giamgia.Value / 100).ToString();
+                                    HoaDon hd = new HoaDon
                                     {
-                                        HoaDonForm f = new HoaDonForm(kh.Name, gt, giamgia, dkgt, null);
-                                        DangKiThanhCong(this, new EventArgs());
-                                        f.Show();
+                                        IDGT = IDGT,
+                                        IDKH = kh.IDUsers,
+                                        NgayThanhToan = DateTime.Now,
+                                        Price = Convert.ToDouble(lb_dongia.Text) - Convert.ToDouble(giamgia)
+                                    };
+                                    try
+                                    {
+                                        HoaDonBLL.Instance.AddHoaDon(hd);
                                     }
-                                    else
-                                        DangKiThanhCong(this, new EventArgs());
+                                    catch (Exception ex)
+                                    {
+                                        MessageBox.Show(ex.Message, "Thêm hóa đơn không thành công");
+                                    }
+
+                                    if (MessageBox.Show("Đăng kí gói tập thành công") == DialogResult.OK)
+                                    {
+                                        if (cb_inhoadon.Checked)
+                                        {
+                                            HoaDonForm f = new HoaDonForm(kh.Name, gt, giamgia, dangKiGoiTap, null);
+                                            DangKiThanhCong(this, new EventArgs());
+                                            f.Show();
+                                        }
+                                        else
+                                            DangKiThanhCong(this, new EventArgs());
+                                    }
                                 }
-                            }
-                            break;
-                        case DialogResult.Cancel:
-                            break;
+                                break;
+                            case DialogResult.Cancel:
+                                break;
+                        }
+                    }
+                    else {
+                        dangKiGoiTap = DangKiGoiTapBLL.Instance.GetDKGT_Newest_ByIDKH_IDGT(kh.IDUsers, IDGT);
+                        dangKiGoiTap.NgayKetThucGT = dtp_ngayketthuc.Value.Date;
+                        switch (MessageBox.Show("Xác nhận gia hạn?", "Xin chờ một lát", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
+                        {
+                            case DialogResult.OK:
+                                if (DangKiGoiTapBLL.Instance.UpdateDKGT(dangKiGoiTap))
+                                {
+                                    string giamgia = (Convert.ToInt32(lb_dongia.Text) * numeric_giamgia.Value / 100).ToString();
+                                    HoaDon hd = new HoaDon
+                                    {
+                                        IDGT = IDGT,
+                                        IDKH = kh.IDUsers,
+                                        NgayThanhToan = DateTime.Now,
+                                        Price = Convert.ToDouble(lb_dongia.Text) - Convert.ToDouble(giamgia)
+                                    };
+                                    try
+                                    {
+                                        HoaDonBLL.Instance.AddHoaDon(hd);
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        MessageBox.Show(ex.Message, "Thêm hóa đơn không thành công");
+                                    }
+
+                                    if (MessageBox.Show("Gia hạn gói tập thành công") == DialogResult.OK)
+                                    {
+                                        if (cb_inhoadon.Checked)
+                                        {
+                                            HoaDonForm f = new HoaDonForm(kh.Name, gt, giamgia, dangKiGoiTap, null);
+                                            DangKiThanhCong(this, new EventArgs());
+                                            f.Show();
+                                        }
+                                        else
+                                            DangKiThanhCong(this, new EventArgs());
+                                    }
+                                }
+                                break;
+                            case DialogResult.Cancel:
+                                break;
+                        }
+                        
                     }
                 }
             }
@@ -207,7 +252,12 @@ namespace QLPhongGym.GUI
             cb_gt.DataSource = GoiTapBLL.Instance.GetAllGT();
             dtp_ngaydangki.Enabled = false;
             if (GoiTap != "")
-                cb_gt.Text = GoiTap;    
+            {
+                cb_gt.Text = GoiTap;
+                cb_gt.Enabled = false;
+            }
+            else cb_gt.Enabled = true;
+                  
         }
         private void cb_gt_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -231,14 +281,14 @@ namespace QLPhongGym.GUI
                 {
                     if ((cb_gt.SelectedItem as GoiTap) != null)
                     {
-                        DangKiGoiTap dkgt = DangKiGoiTapBLL.Instance.GetDKGTByIDKH_IDGT(kh.IDUsers, GoiTapBLL.Instance.GetGTByName(GoiTap).IDGT);
+                        DangKiGoiTap dkgt = DangKiGoiTapBLL.Instance.GetDKGT_Newest_ByIDKH_IDGT(kh.IDUsers, GoiTapBLL.Instance.GetGTByName(GoiTap).IDGT);
                         DateTime ngayketthuc = dkgt.NgayKetThucGT.Value;
                         TimeSpan timeleft = default;
                         int Timegt = (cb_gt.SelectedItem as GoiTap).ThoiHanTapTheoThang.Value;
                         if (ngayketthuc > now)
                             timeleft = ngayketthuc.Subtract(now);
                         else if(ngayketthuc == now) timeleft = TimeSpan.Zero;
-                        dtp_ngaydangki.Value = now;
+                        dtp_ngaydangki.Value = dkgt.NgayDangKiGT.Value;
                         if (timeleft != TimeSpan.Zero)
                             dtp_ngayketthuc.Value = dtp_ngaydangki.Value.AddMonths(Timegt).Add(timeleft);
                         else dtp_ngayketthuc.Value = dtp_ngaydangki.Value.AddMonths(Timegt);

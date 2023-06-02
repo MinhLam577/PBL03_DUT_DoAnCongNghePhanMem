@@ -62,6 +62,7 @@
             this.xóaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.bảoLưuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.restoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fItlerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_change)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_kh)).BeginInit();
@@ -204,7 +205,7 @@
             this.kh_mns.Location = new System.Drawing.Point(3, 18);
             this.kh_mns.Name = "kh_mns";
             this.kh_mns.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.kh_mns.Size = new System.Drawing.Size(785, 40);
+            this.kh_mns.Size = new System.Drawing.Size(785, 44);
             this.kh_mns.TabIndex = 57;
             this.kh_mns.Text = "kh_menustrip";
             // 
@@ -215,7 +216,7 @@
             this.thêmToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.thêmToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.thêmToolStripMenuItem.Name = "thêmToolStripMenuItem";
-            this.thêmToolStripMenuItem.Size = new System.Drawing.Size(130, 36);
+            this.thêmToolStripMenuItem.Size = new System.Drawing.Size(130, 40);
             this.thêmToolStripMenuItem.Text = "Thêm";
             this.thêmToolStripMenuItem.Click += new System.EventHandler(this.thêmToolStripMenuItem_Click);
             // 
@@ -224,7 +225,7 @@
             this.xóaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("xóaToolStripMenuItem.Image")));
             this.xóaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
-            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(110, 36);
+            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(110, 40);
             this.xóaToolStripMenuItem.Text = "Xóa";
             this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
             // 
@@ -233,7 +234,7 @@
             this.sửaToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("sửaToolStripMenuItem1.Image")));
             this.sửaToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.sửaToolStripMenuItem1.Name = "sửaToolStripMenuItem1";
-            this.sửaToolStripMenuItem1.Size = new System.Drawing.Size(108, 36);
+            this.sửaToolStripMenuItem1.Size = new System.Drawing.Size(108, 40);
             this.sửaToolStripMenuItem1.Text = "Sửa";
             this.sửaToolStripMenuItem1.Click += new System.EventHandler(this.sửaToolStripMenuItem1_Click);
             // 
@@ -247,7 +248,7 @@
             this.fitlerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.fitlerToolStripMenuItem.Name = "fitlerToolStripMenuItem";
             this.fitlerToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.fitlerToolStripMenuItem.Size = new System.Drawing.Size(154, 36);
+            this.fitlerToolStripMenuItem.Size = new System.Drawing.Size(158, 40);
             this.fitlerToolStripMenuItem.Text = "Sắp xếp";
             this.fitlerToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -277,7 +278,7 @@
             this.toolStripMenuItem8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem8.Image")));
             this.toolStripMenuItem8.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(147, 36);
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(147, 40);
             this.toolStripMenuItem8.Text = "Reload";
             this.toolStripMenuItem8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.toolStripMenuItem8.Click += new System.EventHandler(this.reloadToolStripMenuItem_Click);
@@ -353,7 +354,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(791, 443);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1015, 343);
+            this.groupBox3.Size = new System.Drawing.Size(1021, 343);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Gói tập có hiệu lực";
@@ -391,22 +392,23 @@
             this.dgv_gt.RowTemplate.Height = 24;
             this.dgv_gt.RowTemplate.ReadOnly = true;
             this.dgv_gt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_gt.Size = new System.Drawing.Size(742, 249);
+            this.dgv_gt.Size = new System.Drawing.Size(748, 249);
             this.dgv_gt.TabIndex = 59;
             // 
             // GT_mns
             // 
-            this.GT_mns.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GT_mns.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GT_mns.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.GT_mns.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.đăngKíToolStripMenuItem,
             this.giaHạnToolStripMenuItem,
             this.xóaToolStripMenuItem1,
             this.bảoLưuToolStripMenuItem,
-            this.restoreToolStripMenuItem});
+            this.restoreToolStripMenuItem,
+            this.fItlerToolStripMenuItem1});
             this.GT_mns.Location = new System.Drawing.Point(3, 30);
             this.GT_mns.Name = "GT_mns";
-            this.GT_mns.Size = new System.Drawing.Size(1009, 40);
+            this.GT_mns.Size = new System.Drawing.Size(1015, 40);
             this.GT_mns.TabIndex = 60;
             this.GT_mns.Text = "GT_mns";
             // 
@@ -415,7 +417,7 @@
             this.đăngKíToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("đăngKíToolStripMenuItem.Image")));
             this.đăngKíToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.đăngKíToolStripMenuItem.Name = "đăngKíToolStripMenuItem";
-            this.đăngKíToolStripMenuItem.Size = new System.Drawing.Size(151, 36);
+            this.đăngKíToolStripMenuItem.Size = new System.Drawing.Size(135, 36);
             this.đăngKíToolStripMenuItem.Text = "Đăng kí";
             this.đăngKíToolStripMenuItem.Click += new System.EventHandler(this.đăngKíToolStripMenuItem_Click);
             // 
@@ -424,7 +426,7 @@
             this.giaHạnToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("giaHạnToolStripMenuItem.Image")));
             this.giaHạnToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.giaHạnToolStripMenuItem.Name = "giaHạnToolStripMenuItem";
-            this.giaHạnToolStripMenuItem.Size = new System.Drawing.Size(152, 36);
+            this.giaHạnToolStripMenuItem.Size = new System.Drawing.Size(137, 36);
             this.giaHạnToolStripMenuItem.Text = "Gia hạn";
             this.giaHạnToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.giaHạnToolStripMenuItem.Click += new System.EventHandler(this.giaHạnToolStripMenuItem_Click);
@@ -434,7 +436,7 @@
             this.xóaToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("xóaToolStripMenuItem1.Image")));
             this.xóaToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.xóaToolStripMenuItem1.Name = "xóaToolStripMenuItem1";
-            this.xóaToolStripMenuItem1.Size = new System.Drawing.Size(110, 36);
+            this.xóaToolStripMenuItem1.Size = new System.Drawing.Size(101, 36);
             this.xóaToolStripMenuItem1.Text = "Xóa";
             this.xóaToolStripMenuItem1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.xóaToolStripMenuItem1.Click += new System.EventHandler(this.xóaToolStripMenuItem1_Click);
@@ -445,7 +447,7 @@
             this.bảoLưuToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bảoLưuToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bảoLưuToolStripMenuItem.Name = "bảoLưuToolStripMenuItem";
-            this.bảoLưuToolStripMenuItem.Size = new System.Drawing.Size(147, 36);
+            this.bảoLưuToolStripMenuItem.Size = new System.Drawing.Size(131, 36);
             this.bảoLưuToolStripMenuItem.Text = "Bảo lưu";
             this.bảoLưuToolStripMenuItem.Click += new System.EventHandler(this.bảoLưuToolStripMenuItem_Click);
             // 
@@ -455,9 +457,16 @@
             this.restoreToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.restoreToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.restoreToolStripMenuItem.Name = "restoreToolStripMenuItem";
-            this.restoreToolStripMenuItem.Size = new System.Drawing.Size(151, 36);
+            this.restoreToolStripMenuItem.Size = new System.Drawing.Size(132, 36);
             this.restoreToolStripMenuItem.Text = "Restore";
             this.restoreToolStripMenuItem.Click += new System.EventHandler(this.restoreToolStripMenuItem_Click);
+            // 
+            // fItlerToolStripMenuItem1
+            // 
+            this.fItlerToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("fItlerToolStripMenuItem1.Image")));
+            this.fItlerToolStripMenuItem1.Name = "fItlerToolStripMenuItem1";
+            this.fItlerToolStripMenuItem1.Size = new System.Drawing.Size(94, 36);
+            this.fItlerToolStripMenuItem1.Text = "Fitler";
             // 
             // Admin_FormDanhSachKH
             // 
@@ -519,5 +528,6 @@
         private System.Windows.Forms.ToolStripMenuItem bảoLưuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem restoreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
+        private System.Windows.Forms.ToolStripMenuItem fItlerToolStripMenuItem1;
     }
 }

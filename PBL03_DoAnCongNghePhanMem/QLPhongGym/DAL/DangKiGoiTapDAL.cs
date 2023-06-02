@@ -124,9 +124,9 @@ namespace QLPhongGym.DAL
             foreach(DangKiGoiTap i in list)
                 DeleteDKGT(i);
         }
-        public DangKiGoiTap GetDKGTByIDKH_IDGT(int IDKH, int IDGT)
-        {
-            return db.DangKiGoiTaps.Where(s => (int)s.IDKH == IDKH && (int)s.IDGT == IDGT).OrderByDescending(s => s.NgayDangKiGT).FirstOrDefault();
+        public DangKiGoiTap GetDKGT_Newest_ByIDKH_IDGT(int IDKH, int IDGT)
+        { 
+            return db.DangKiGoiTaps.Where(s => (int)s.IDKH == IDKH && (int)s.IDGT == IDGT && s.NgayKetThucGT >= DateTime.Today).OrderByDescending(s => s.NgayDangKiGT).FirstOrDefault();
         }
         public DangKiGoiTap GetDKGTByIDKH_NgayDangKi_IDGT(int IDKH, DateTime ngaydangki, int IDGT)
         {
