@@ -216,7 +216,6 @@
             // 
             // pn_cha
             // 
-            this.pn_cha.Controls.Add(this.pn_tkhlv);
             this.pn_cha.Controls.Add(this.pictureBox1);
             this.pn_cha.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_cha.Location = new System.Drawing.Point(273, 83);
@@ -233,7 +232,7 @@
             this.pn_tkhlv.Controls.Add(this.lb_gmailhlv);
             this.pn_tkhlv.Controls.Add(this.lb_tenhlv);
             this.pn_tkhlv.Controls.Add(this.pb_hlv);
-            this.pn_tkhlv.Location = new System.Drawing.Point(201, 0);
+            this.pn_tkhlv.Location = new System.Drawing.Point(474, 89);
             this.pn_tkhlv.Name = "pn_tkhlv";
             this.pn_tkhlv.Size = new System.Drawing.Size(525, 155);
             this.pn_tkhlv.TabIndex = 7;
@@ -317,6 +316,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1164, 613);
+            this.Controls.Add(this.pn_tkhlv);
             this.Controls.Add(this.pn_cha);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
