@@ -32,6 +32,7 @@
             this.btn_lichlamviec = new System.Windows.Forms.Button();
             this.btn_kh = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_thoat = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -47,7 +48,6 @@
             this.lb_tenhlv = new System.Windows.Forms.Label();
             this.pb_hlv = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btn_thoat = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -92,7 +92,6 @@
             this.btn_kh.Text = "Khách hàng";
             this.btn_kh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_kh.UseVisualStyleBackColor = false;
-            this.btn_kh.Click += new System.EventHandler(this.btn_kh_Click);
             // 
             // panel1
             // 
@@ -107,6 +106,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(273, 613);
             this.panel1.TabIndex = 3;
+            // 
+            // btn_thoat
+            // 
+            this.btn_thoat.BackColor = System.Drawing.Color.Black;
+            this.btn_thoat.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_thoat.FlatAppearance.BorderSize = 0;
+            this.btn_thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_thoat.ForeColor = System.Drawing.Color.White;
+            this.btn_thoat.Location = new System.Drawing.Point(0, 346);
+            this.btn_thoat.Name = "btn_thoat";
+            this.btn_thoat.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btn_thoat.Size = new System.Drawing.Size(273, 86);
+            this.btn_thoat.TabIndex = 6;
+            this.btn_thoat.Text = "Thoát";
+            this.btn_thoat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_thoat.UseVisualStyleBackColor = false;
+            this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click_1);
             // 
             // panel2
             // 
@@ -275,24 +292,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(891, 530);
             this.panel4.TabIndex = 5;
-            // 
-            // btn_thoat
-            // 
-            this.btn_thoat.BackColor = System.Drawing.Color.Black;
-            this.btn_thoat.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_thoat.FlatAppearance.BorderSize = 0;
-            this.btn_thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_thoat.ForeColor = System.Drawing.Color.White;
-            this.btn_thoat.Location = new System.Drawing.Point(0, 346);
-            this.btn_thoat.Name = "btn_thoat";
-            this.btn_thoat.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btn_thoat.Size = new System.Drawing.Size(273, 86);
-            this.btn_thoat.TabIndex = 6;
-            this.btn_thoat.Text = "Thoát";
-            this.btn_thoat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_thoat.UseVisualStyleBackColor = false;
-            this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click_1);
             // 
             // HLV_FormMain
             // 

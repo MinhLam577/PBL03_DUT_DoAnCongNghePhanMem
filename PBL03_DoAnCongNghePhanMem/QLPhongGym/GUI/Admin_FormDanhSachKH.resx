@@ -1371,7 +1371,7 @@
         fQE16jbcz0hR/QAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="fitlerToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="sortkh_tsmi.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAu
         IgAALiIBquLdkgAABRVJREFUWEfNmGtPHGUUx7evTHxp4jfwC3DtLQ1NDLG7lJuwXHZ3ZmCXAgJLqwVl
@@ -1751,7 +1751,7 @@
         RNl5i3awAusAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="fItlerToolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="fitlerDKGT_tsmi.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAABABJREFUWEfF
         l89vVFUcxSdxpS74B2TK0BZcICF2YTDE0oCD6cwomya4YIW0M6WCUsRUiIm4URIwISotENiRAC0KGAML
@@ -1788,7 +1788,7 @@
   <data name="restoreToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        5gAAAOYBIly6UQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAYeSURBVFhHtVYL
+        5QAAAOUBj+WbPAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAYeSURBVFhHtVYL
         VEx5GL/dkWWdPEIsa3fPHotdZ9f7kZoKIcWp9ogeU001TemhOB51VqQSFruplNV0jlCxvTb2iWTTIrIJ
         sUjCWgmhaXrMzJ3f/v93Lstytqba3znfmW/u/b7f97t3fvebyxgMyyWjRNbSRNbGr1Yk9tCKrDxbWBtZ
         TQ9r6XbGynWEUPW/wIgVS2NE1t7N7OJsjdHSGjArWsGEKWEUcB3soj0a/pzYZ7lQ370QWUkV7JzVTcyy

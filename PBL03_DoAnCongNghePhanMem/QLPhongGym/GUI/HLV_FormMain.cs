@@ -181,9 +181,6 @@ namespace QLPhongGym.GUI
                 this.Close();
         }
 
-        private void btn_kh_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

@@ -74,8 +74,6 @@ namespace QLPhongGym.DAL
                     MessageBox.Show("Lỗi" + e.Message);
                     throw;
                 }
-                /*db.Entry(GT).State = System.Data.Entity.EntityState.Modified;
-                return db.SaveChanges();*/
             }
         }
         public DataTable TaoBang()

@@ -24,7 +24,10 @@ namespace QLPhongGym.BLL
             }
             private set { }
         }
-        
+        public DataTable CreateTable()
+        {
+            return DangKiGoiTapDAL.Instance.CreateTable();
+        }
         public bool AddDKGT(DangKiGoiTap dkgt)
         {
             return DangKiGoiTapDAL.Instance.AddDKGT(dkgt) > 0;
@@ -68,6 +71,10 @@ namespace QLPhongGym.BLL
         public int GetSoLuongDKGTTheoNamVaThang(int year, int month)
         {
             return DangKiGoiTapDAL.Instance.GetSoLuongDKGTTheoNamVaThang(year, month);
+        }
+        public DataTable FitlerListDKGT(int IDKH, string require, string GoiTap)
+        {
+            return DangKiGoiTapDAL.Instance.FitlerListDKGT(IDKH, require, GoiTap);
         }
     }
 }
