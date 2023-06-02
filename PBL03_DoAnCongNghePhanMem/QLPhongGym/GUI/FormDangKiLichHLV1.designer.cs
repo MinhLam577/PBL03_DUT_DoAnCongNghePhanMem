@@ -660,7 +660,7 @@
             this.listBox7.ItemHeight = 16;
             this.listBox7.Location = new System.Drawing.Point(0, 1);
             this.listBox7.Name = "listBox7";
-            this.listBox7.Size = new System.Drawing.Size(142, 112);
+            this.listBox7.Size = new System.Drawing.Size(148, 112);
             this.listBox7.TabIndex = 0;
             // 
             // panel4
@@ -746,7 +746,7 @@
             this.listBox9.ItemHeight = 16;
             this.listBox9.Location = new System.Drawing.Point(0, 1);
             this.listBox9.Name = "listBox9";
-            this.listBox9.Size = new System.Drawing.Size(142, 112);
+            this.listBox9.Size = new System.Drawing.Size(148, 112);
             this.listBox9.TabIndex = 0;
             // 
             // label4
@@ -800,7 +800,7 @@
             this.listBox6.ItemHeight = 16;
             this.listBox6.Location = new System.Drawing.Point(0, 0);
             this.listBox6.Name = "listBox6";
-            this.listBox6.Size = new System.Drawing.Size(142, 112);
+            this.listBox6.Size = new System.Drawing.Size(148, 112);
             this.listBox6.TabIndex = 0;
             // 
             // panel7
@@ -843,7 +843,7 @@
             this.listBox8.ItemHeight = 16;
             this.listBox8.Location = new System.Drawing.Point(0, 1);
             this.listBox8.Name = "listBox8";
-            this.listBox8.Size = new System.Drawing.Size(142, 112);
+            this.listBox8.Size = new System.Drawing.Size(148, 112);
             this.listBox8.TabIndex = 0;
             // 
             // panel8
@@ -886,7 +886,7 @@
             this.listBox10.ItemHeight = 16;
             this.listBox10.Location = new System.Drawing.Point(0, -1);
             this.listBox10.Name = "listBox10";
-            this.listBox10.Size = new System.Drawing.Size(142, 112);
+            this.listBox10.Size = new System.Drawing.Size(148, 112);
             this.listBox10.TabIndex = 0;
             // 
             // panel9
@@ -929,7 +929,7 @@
             this.listBox11.ItemHeight = 16;
             this.listBox11.Location = new System.Drawing.Point(0, -1);
             this.listBox11.Name = "listBox11";
-            this.listBox11.Size = new System.Drawing.Size(142, 112);
+            this.listBox11.Size = new System.Drawing.Size(148, 112);
             this.listBox11.TabIndex = 0;
             // 
             // panel10
@@ -972,7 +972,7 @@
             this.listBox12.ItemHeight = 16;
             this.listBox12.Location = new System.Drawing.Point(0, -1);
             this.listBox12.Name = "listBox12";
-            this.listBox12.Size = new System.Drawing.Size(142, 112);
+            this.listBox12.Size = new System.Drawing.Size(148, 112);
             this.listBox12.TabIndex = 0;
             // 
             // panel11
@@ -1015,7 +1015,7 @@
             this.listBox13.ItemHeight = 16;
             this.listBox13.Location = new System.Drawing.Point(0, 0);
             this.listBox13.Name = "listBox13";
-            this.listBox13.Size = new System.Drawing.Size(142, 112);
+            this.listBox13.Size = new System.Drawing.Size(148, 112);
             this.listBox13.TabIndex = 0;
             // 
             // panel12
@@ -1058,7 +1058,7 @@
             this.listBox14.ItemHeight = 16;
             this.listBox14.Location = new System.Drawing.Point(3, 0);
             this.listBox14.Name = "listBox14";
-            this.listBox14.Size = new System.Drawing.Size(142, 112);
+            this.listBox14.Size = new System.Drawing.Size(148, 112);
             this.listBox14.TabIndex = 0;
             // 
             // panel13
@@ -1101,7 +1101,7 @@
             this.listBox15.ItemHeight = 16;
             this.listBox15.Location = new System.Drawing.Point(0, -1);
             this.listBox15.Name = "listBox15";
-            this.listBox15.Size = new System.Drawing.Size(142, 112);
+            this.listBox15.Size = new System.Drawing.Size(148, 112);
             this.listBox15.TabIndex = 0;
             // 
             // panel14
@@ -1144,7 +1144,7 @@
             this.listBox16.ItemHeight = 16;
             this.listBox16.Location = new System.Drawing.Point(0, -1);
             this.listBox16.Name = "listBox16";
-            this.listBox16.Size = new System.Drawing.Size(142, 112);
+            this.listBox16.Size = new System.Drawing.Size(148, 112);
             this.listBox16.TabIndex = 0;
             // 
             // panel15
@@ -1187,7 +1187,7 @@
             this.listBox17.ItemHeight = 16;
             this.listBox17.Location = new System.Drawing.Point(0, -1);
             this.listBox17.Name = "listBox17";
-            this.listBox17.Size = new System.Drawing.Size(142, 112);
+            this.listBox17.Size = new System.Drawing.Size(148, 112);
             this.listBox17.TabIndex = 0;
             // 
             // panel16
@@ -1230,7 +1230,7 @@
             this.listBox18.ItemHeight = 16;
             this.listBox18.Location = new System.Drawing.Point(0, -1);
             this.listBox18.Name = "listBox18";
-            this.listBox18.Size = new System.Drawing.Size(142, 112);
+            this.listBox18.Size = new System.Drawing.Size(148, 112);
             this.listBox18.TabIndex = 0;
             // 
             // panel17
@@ -1273,7 +1273,7 @@
             this.listBox19.ItemHeight = 16;
             this.listBox19.Location = new System.Drawing.Point(0, -1);
             this.listBox19.Name = "listBox19";
-            this.listBox19.Size = new System.Drawing.Size(142, 112);
+            this.listBox19.Size = new System.Drawing.Size(148, 112);
             this.listBox19.TabIndex = 0;
             // 
             // panel18
@@ -1316,7 +1316,7 @@
             this.listBox20.ItemHeight = 16;
             this.listBox20.Location = new System.Drawing.Point(0, -1);
             this.listBox20.Name = "listBox20";
-            this.listBox20.Size = new System.Drawing.Size(142, 112);
+            this.listBox20.Size = new System.Drawing.Size(148, 112);
             this.listBox20.TabIndex = 0;
             // 
             // panel20
@@ -1359,7 +1359,7 @@
             this.listBox21.ItemHeight = 16;
             this.listBox21.Location = new System.Drawing.Point(3, -1);
             this.listBox21.Name = "listBox21";
-            this.listBox21.Size = new System.Drawing.Size(142, 112);
+            this.listBox21.Size = new System.Drawing.Size(148, 112);
             this.listBox21.TabIndex = 0;
             // 
             // panel23
@@ -1402,7 +1402,7 @@
             this.listBox23.ItemHeight = 16;
             this.listBox23.Location = new System.Drawing.Point(0, -1);
             this.listBox23.Name = "listBox23";
-            this.listBox23.Size = new System.Drawing.Size(142, 112);
+            this.listBox23.Size = new System.Drawing.Size(148, 112);
             this.listBox23.TabIndex = 90;
             // 
             // panel24
@@ -1412,9 +1412,9 @@
             this.panel24.Controls.Add(this.btntru24);
             this.panel24.Controls.Add(this.btncong24);
             this.panel24.Controls.Add(this.listBox24);
-            this.panel24.Location = new System.Drawing.Point(514, 559);
+            this.panel24.Location = new System.Drawing.Point(517, 559);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(148, 125);
+            this.panel24.Size = new System.Drawing.Size(145, 125);
             this.panel24.TabIndex = 91;
             // 
             // btntru24
@@ -1443,9 +1443,9 @@
             this.listBox24.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox24.FormattingEnabled = true;
             this.listBox24.ItemHeight = 16;
-            this.listBox24.Location = new System.Drawing.Point(0, 5);
+            this.listBox24.Location = new System.Drawing.Point(3, 5);
             this.listBox24.Name = "listBox24";
-            this.listBox24.Size = new System.Drawing.Size(142, 112);
+            this.listBox24.Size = new System.Drawing.Size(145, 112);
             this.listBox24.TabIndex = 95;
             // 
             // panel25
@@ -1488,7 +1488,7 @@
             this.listBox25.ItemHeight = 16;
             this.listBox25.Location = new System.Drawing.Point(0, 4);
             this.listBox25.Name = "listBox25";
-            this.listBox25.Size = new System.Drawing.Size(142, 112);
+            this.listBox25.Size = new System.Drawing.Size(148, 112);
             this.listBox25.TabIndex = 96;
             // 
             // panel27
@@ -1532,7 +1532,7 @@
             this.listBox27.ItemHeight = 16;
             this.listBox27.Location = new System.Drawing.Point(3, 6);
             this.listBox27.Name = "listBox27";
-            this.listBox27.Size = new System.Drawing.Size(142, 112);
+            this.listBox27.Size = new System.Drawing.Size(148, 112);
             this.listBox27.TabIndex = 98;
             // 
             // panel28
@@ -1575,7 +1575,7 @@
             this.listBox28.ItemHeight = 16;
             this.listBox28.Location = new System.Drawing.Point(0, 0);
             this.listBox28.Name = "listBox28";
-            this.listBox28.Size = new System.Drawing.Size(142, 112);
+            this.listBox28.Size = new System.Drawing.Size(148, 112);
             this.listBox28.TabIndex = 0;
             // 
             // lbca4
@@ -1627,7 +1627,7 @@
             this.listBox22.ItemHeight = 16;
             this.listBox22.Location = new System.Drawing.Point(0, 0);
             this.listBox22.Name = "listBox22";
-            this.listBox22.Size = new System.Drawing.Size(142, 112);
+            this.listBox22.Size = new System.Drawing.Size(148, 112);
             this.listBox22.TabIndex = 90;
             // 
             // panel26
@@ -1669,7 +1669,7 @@
             this.listBox26.ItemHeight = 16;
             this.listBox26.Location = new System.Drawing.Point(3, 6);
             this.listBox26.Name = "listBox26";
-            this.listBox26.Size = new System.Drawing.Size(142, 112);
+            this.listBox26.Size = new System.Drawing.Size(148, 112);
             this.listBox26.TabIndex = 98;
             // 
             // FormDangKiLichHLV1
