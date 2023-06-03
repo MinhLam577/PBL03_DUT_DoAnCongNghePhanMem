@@ -208,7 +208,7 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(644, 66);
+            this.label4.Location = new System.Drawing.Point(637, 66);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 20);
             this.label4.TabIndex = 18;
@@ -225,7 +225,7 @@
             "Tài khoản cá nhân",
             "Tài khoản đang hoạt động",
             "Tài khoản bị ban"});
-            this.cb_tk.Location = new System.Drawing.Point(697, 64);
+            this.cb_tk.Location = new System.Drawing.Point(690, 64);
             this.cb_tk.Name = "cb_tk";
             this.cb_tk.Size = new System.Drawing.Size(333, 28);
             this.cb_tk.TabIndex = 62;
