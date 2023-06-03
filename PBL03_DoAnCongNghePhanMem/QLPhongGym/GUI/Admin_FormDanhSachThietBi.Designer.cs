@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_FormDanhSachThietBi));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_Search = new System.Windows.Forms.TextBox();
@@ -37,7 +38,9 @@
             this.btn_xoa = new System.Windows.Forms.Button();
             this.btn_them = new System.Windows.Forms.Button();
             this.btn_sort = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -50,19 +53,19 @@
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 100);
+            this.dataGridView1.Location = new System.Drawing.Point(186, 100);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1100, 474);
+            this.dataGridView1.Size = new System.Drawing.Size(902, 474);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(27, 24);
+            this.label1.Location = new System.Drawing.Point(59, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(364, 50);
             this.label1.TabIndex = 0;
@@ -96,7 +99,7 @@
             this.btn_xem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_xem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_xem.ForeColor = System.Drawing.Color.Cyan;
-            this.btn_xem.Location = new System.Drawing.Point(92, 580);
+            this.btn_xem.Location = new System.Drawing.Point(186, 580);
             this.btn_xem.Name = "btn_xem";
             this.btn_xem.Size = new System.Drawing.Size(114, 41);
             this.btn_xem.TabIndex = 9;
@@ -152,21 +155,38 @@
             // btn_sort
             // 
             this.btn_sort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_sort.BackColor = System.Drawing.Color.White;
+            this.btn_sort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_sort.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_sort.ForeColor = System.Drawing.Color.Black;
             this.btn_sort.Location = new System.Drawing.Point(807, 53);
             this.btn_sort.Name = "btn_sort";
             this.btn_sort.Size = new System.Drawing.Size(114, 41);
             this.btn_sort.TabIndex = 11;
             this.btn_sort.Text = "Sắp xếp";
-            this.btn_sort.UseVisualStyleBackColor = true;
+            this.btn_sort.UseVisualStyleBackColor = false;
             this.btn_sort.Click += new System.EventHandler(this.btn_sort_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 100);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(168, 474);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // Admin_FormDanhSachThietBi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Linen;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(1100, 633);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_sort);
             this.Controls.Add(this.btn_xem);
             this.Controls.Add(this.btn_them);
@@ -179,6 +199,7 @@
             this.Name = "Admin_FormDanhSachThietBi";
             this.Text = "Admin_FormDanhSachThietBi";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,5 +216,6 @@
         private System.Windows.Forms.Button btn_xoa;
         private System.Windows.Forms.Button btn_them;
         private System.Windows.Forms.Button btn_sort;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

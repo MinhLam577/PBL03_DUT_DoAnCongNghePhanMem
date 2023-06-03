@@ -33,7 +33,7 @@ namespace QLPhongGym.GUI
                 tonggt++;
             lb_totalcoach.Text = tonghlv.ToString();
             lb_totalcustomer.Text = tongkhachhang.ToString();
-            lb_equipment.Text = tongtb.ToString();
+            label_equipment.Text = tongtb.ToString();
             lb_package.Text = tonggt.ToString();
         }
         public void LoadDuLieuBieuDo()
@@ -65,9 +65,5 @@ namespace QLPhongGym.GUI
             }
         }
 
-        private void Admin_FormThongKe_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
