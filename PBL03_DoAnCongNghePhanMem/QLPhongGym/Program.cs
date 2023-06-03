@@ -41,7 +41,7 @@ namespace QLPhongGym.GUI
             Application.SetCompatibleTextRenderingDefault(false);
 
 
-            Application.Run(new LoginForm());
+            Application.Run(new Admin_FormMain());
 
         }
     }

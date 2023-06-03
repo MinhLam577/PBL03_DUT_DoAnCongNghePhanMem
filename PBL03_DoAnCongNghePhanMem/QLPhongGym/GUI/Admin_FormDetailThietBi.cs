@@ -109,7 +109,7 @@ namespace QLPhongGym.GUI
                 MessageBox.Show("Bạn phải nhập mô tả thiết bị", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (!int.TryParse(txt_Price.Text, out int price) || price <= 0)
+            if (!int.TryParse(txt_Price.Text, out int price) || price <= 1000)
             {
                 MessageBox.Show("Giá thiết bị không hợp lệ, vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -122,15 +122,12 @@ namespace QLPhongGym.GUI
             tb.Name = txt_TenTB.Text;
             tb.MoTa = txt_Mota.Text;
             tb.SoLuong = Convert.ToInt32(txt_SL.Text);
-            if (txt_SLHong.Text != "")
+            if (!int.TryParse(txt_SLHong.Text, out int slhong) || slhong < 0 || slhong > Convert.ToInt32(txt_SL.Text))
             {
-                if (!int.TryParse(txt_SLHong.Text, out int slhong) || slhong <= 0 || slhong > Convert.ToInt32(txt_SL.Text))
-                {
-                    MessageBox.Show("Số lượng hỏng không hợp lệ, vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                tb.SoLuongHong = Convert.ToInt32(txt_SLHong.Text);
+                MessageBox.Show("Số lượng hỏng không hợp lệ, vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+            tb.SoLuongHong = Convert.ToInt32(txt_SLHong.Text);
             tb.Price = Convert.ToDouble(txt_Price.Text);
             tb.NhaCungCap = txt_NhaCungCap.Text;
             tb.NamSX = Convert.ToDateTime(dateTimePicker1.Text);

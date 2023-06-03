@@ -44,7 +44,15 @@ namespace QLPhongGym.GUI
                                                        MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
-                    
+                    foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+                    {
+                        if (row.Cells["ID"] != null && row.Cells["ID"].Value != null)
+                        {
+                            int id = Convert.ToInt32(row.Cells["ID"].Value);
+                            ThietBi_BLL.Instance.DeleteTB_BLL(id);
+                        }
+
+                    }
                 }
                 ShowData();
 
