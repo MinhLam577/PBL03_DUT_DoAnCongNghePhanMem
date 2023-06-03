@@ -47,7 +47,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pn_tkadmin = new System.Windows.Forms.Panel();
             this.btn_doimatkhau = new System.Windows.Forms.Button();
             this.btn_updatethongtin = new System.Windows.Forms.Button();
@@ -55,16 +54,17 @@
             this.lb_gmailad = new System.Windows.Forms.Label();
             this.lb_tenad = new System.Windows.Forms.Label();
             this.pb_acc = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel_hlv.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ad)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pn_tkadmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_updateimage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_acc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnTaiKhoan
@@ -305,7 +305,7 @@
             this.pb_ad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_ad.TabIndex = 2;
             this.pb_ad.TabStop = false;
-            this.pb_ad.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label2_MouseClick);
+            this.pb_ad.Click += new System.EventHandler(this.pb_ad_Click);
             // 
             // label1
             // 
@@ -329,7 +329,7 @@
             this.label2.Size = new System.Drawing.Size(81, 29);
             this.label2.TabIndex = 3;
             this.label2.Text = "Admin";
-            this.label2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label2_MouseClick);
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel3
             // 
@@ -340,17 +340,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(953, 504);
             this.panel3.TabIndex = 2;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(953, 504);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
             // 
             // pn_tkadmin
             // 
@@ -429,6 +418,17 @@
             this.pb_acc.TabIndex = 3;
             this.pb_acc.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(953, 504);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // Admin_FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -448,11 +448,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ad)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pn_tkadmin.ResumeLayout(false);
             this.pn_tkadmin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_updateimage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_acc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

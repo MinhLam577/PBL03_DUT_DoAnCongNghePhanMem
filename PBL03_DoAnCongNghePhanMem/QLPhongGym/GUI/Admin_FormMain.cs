@@ -246,12 +246,18 @@ namespace QLPhongGym.GUI
             hideMenu();
         }
 
-        private void pn_tkadmin_MouseLeave(object sender, EventArgs e)
-        {
-            //hideMenu();
-        }
 
         private void label2_MouseClick(object sender, MouseEventArgs e)
+        {
+            showMenu(pn_tkadmin);
+        }
+
+        private void pb_ad_Click(object sender, EventArgs e)
+        {
+            showMenu(pn_tkadmin);
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
             showMenu(pn_tkadmin);
         }
