@@ -62,6 +62,9 @@ namespace QLPhongGym.GUI
 
         private void button_OK_Click(object sender, EventArgs e)
         {
+            TK tk = null;
+            if (Ten != "")
+                tk = TKBLL.Instance.GetTKByTenTK(Ten);
             TK a = new TK();
             if (Txt_TK.Text == "")
             {
@@ -89,6 +92,7 @@ namespace QLPhongGym.GUI
             }
             else
             {
+                a.TrangThai = tk.TrangThai;
                 TKHLV_BLL.Instance.UpdateTK_BLl(a);
                 d();
             }
