@@ -25,11 +25,6 @@ namespace QLPhongGym.BLL
             }
             private set { }
         }
-/*        public List<TK> GetAllTK()
-        {
-            return TKDAL.Instance.LoadAllTK();
-        }*/
-        
         public bool CheckTenTKExist(string tentk)
         {
             return TKDAL.Instance.CheckTenTKExist(tentk);

@@ -20,7 +20,6 @@ namespace QLPhongGym.GUI
         public HLV_FormMain()
         {
             InitializeComponent();
-            customizedesing();
         }
         public HLV_FormMain(TK tk)
         {
@@ -32,11 +31,9 @@ namespace QLPhongGym.GUI
         public void LoadDuLieuTK()
         {
             int IDUser = (int)tk.IDUser;
-            HLV hlv = null;
             if (!IsGanHLV)
             {
-                hlv = (HLV)UsersBLL.Instance.GetUserByID(IDUser);
-                Hlv = hlv;
+                Hlv = (HLV)UsersBLL.Instance.GetUserByID(IDUser);
                 IsGanHLV = true;
             }
             if (Hlv != null)
@@ -143,7 +140,6 @@ namespace QLPhongGym.GUI
         {
             AddEdit_HLV a = new AddEdit_HLV();
             int ID = (int)tk.IDUser;
-            //Hlv = (HLV)UsersBLL.Instance.GetUserByID(ID);
             a.buon += new AddEdit_HLV.mydelegate(Edit);
             a.luachon(2);
             a.getinfofromAB(Hlv);
@@ -172,10 +168,6 @@ namespace QLPhongGym.GUI
             dmk.ShowDialog();
         }
 
-        private void HLV_FormMain_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void btn_lichlamviec_Click(object sender, EventArgs e)
         {
@@ -192,6 +184,11 @@ namespace QLPhongGym.GUI
         {
             OpenChildForm(new HLV_FormDanhSachKH((HLV)UsersBLL.Instance.GetUserByID(tk.IDUser.Value)));
             hideMenu();
+        }
+
+        private void HLV_FormMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            IsGanHLV = false;
         }
     }
 }
