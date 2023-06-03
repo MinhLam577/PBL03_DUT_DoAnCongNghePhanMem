@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using QLPhongGym.DTO;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace QLPhongGym.DAL
 {
@@ -157,6 +156,51 @@ namespace QLPhongGym.DAL
                         }).ToList().Distinct();
             foreach (var i in data)
                 dt.Rows.Add(cnt++, i.IDUsers, i.Name, i.DateBorn, i.Sex, i.CCCD, i.Address, i.Gmail, i.Sdt);
+            return dt;
+        }
+        public DataTable FindListKHByIDHLV_NgayThue_IDCa_IDOrName(string txt, int IDHLV, DateTime NgayThue, int? IDCa)
+        {
+            dt = CreateTable(); int cnt = 1;
+            if(IDCa != null)
+            {
+                var data = (from kh in db.Users.OfType<KH>()
+                            join lt in db.LichThueHLVs on kh.IDUsers equals lt.IDKH
+                            where (kh.Name.Contains(txt) && lt.IDHLV == IDHLV && lt.NgayThue.Value == NgayThue && lt.IDCa.Value == IDCa.Value)
+                            || (kh.IDUsers.ToString().Contains(txt) && lt.IDHLV == IDHLV && lt.NgayThue.Value == NgayThue && lt.IDCa.Value == IDCa.Value)
+                            select new
+                            {
+                                kh.IDUsers,
+                                kh.Name,
+                                kh.DateBorn,
+                                kh.Sex,
+                                kh.Sdt,
+                                kh.Gmail,
+                                kh.Address,
+                                kh.CCCD,
+                            }).ToList().Distinct();
+                foreach (var i in data)
+                    dt.Rows.Add(cnt++, i.IDUsers, i.Name, i.DateBorn, i.Sex, i.CCCD, i.Address, i.Gmail, i.Sdt);
+            }
+            else
+            {
+                var data = (from kh in db.Users.OfType<KH>()
+                            join lt in db.LichThueHLVs on kh.IDUsers equals lt.IDKH
+                            where (kh.Name.Contains(txt) && lt.IDHLV == IDHLV && lt.NgayThue.Value == NgayThue)
+                            || (kh.IDUsers.ToString().Contains(txt) && lt.IDHLV == IDHLV && lt.NgayThue.Value == NgayThue)
+                            select new
+                            {
+                                kh.IDUsers,
+                                kh.Name,
+                                kh.DateBorn,
+                                kh.Sex,
+                                kh.Sdt,
+                                kh.Gmail,
+                                kh.Address,
+                                kh.CCCD,
+                            }).ToList().Distinct();
+                foreach (var i in data)
+                    dt.Rows.Add(cnt++, i.IDUsers, i.Name, i.DateBorn, i.Sex, i.CCCD, i.Address, i.Gmail, i.Sdt);
+            }
             return dt;
         }
         public DataTable FindListKHByNameAndID(string Name, string ID)

@@ -16,6 +16,7 @@ namespace QLPhongGym.GUI
 {
     public partial class LoginForm : Form
     {
+        static TK tk = null;
         public LoginForm()
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace QLPhongGym.GUI
             switch (TenQuyen)
             {
                 case "HLV":
-                    TK tk = TKBLL.Instance.GetTKByID(IDUser);
+                    tk = TKBLL.Instance.GetTKByID(IDUser);
                     if(tk.TrangThai == false)
                     {
                         MessageBox.Show("Tài khoan đã bị ban, vui lòng liên hệ admin để mở ban");

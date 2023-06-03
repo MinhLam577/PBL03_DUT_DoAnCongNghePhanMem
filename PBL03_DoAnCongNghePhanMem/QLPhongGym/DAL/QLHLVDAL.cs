@@ -126,18 +126,21 @@ namespace QLPhongGym.DAL
             // tìm huyến luyện viên cần chỉnh bằng sử dụng SingleorDefalut();
             var coarch = coarches.SingleOrDefault(c => c.IDUsers == a.IDUsers);
             if (coarch != null)
-            coarch.IDUsers = a.IDUsers;
-            coarch.Name = a.Name;
-            coarch.DateBorn = a.DateBorn;
-            coarch.Sex = a.Sex;
-            coarch.CCCD = a.CCCD;
-            coarch.Gmail = a.Gmail;
-            coarch.Sdt = a.Sdt;
-            coarch.Address = a.Address;
-            coarch.BangCap = a.BangCap;
-            coarch.Image = a.Image;
+            {
+                coarch.IDUsers = a.IDUsers;
+                coarch.Name = a.Name;
+                coarch.DateBorn = a.DateBorn;
+                coarch.Sex = a.Sex;
+                coarch.CCCD = a.CCCD;
+                coarch.Gmail = a.Gmail;
+                coarch.Sdt = a.Sdt;
+                coarch.Address = a.Address;
+                coarch.BangCap = a.BangCap;
+                coarch.Image = a.Image;
+                
+            }
             db.SaveChanges();
-           
+
             return true;
         }
         public DataTable SearchHLVByNameID(string NameorId)
