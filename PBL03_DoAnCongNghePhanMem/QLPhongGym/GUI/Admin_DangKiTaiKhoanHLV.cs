@@ -113,5 +113,96 @@ namespace QLPhongGym.GUI
             dgv_hlv.DataSource = TKHLV_BLL.Instance.SearchSP_BLL(textBox1.Text);
             dgv_tkhlv.DataSource = TKHLV_BLL.Instance.SearchSP_BLL2(textBox1.Text);
         }
+
+        private void btn_bantk_Click(object sender, EventArgs e)
+        {
+            if (dgv_tkhlv.SelectedRows.Count == 1)
+            {
+                if (dgv_tkhlv.SelectedRows[0].Cells["ID"] != null && dgv_tkhlv.SelectedRows[0].Cells["ID"].Value != null)
+                {
+                    try
+                    {
+                        string ten = dgv_tkhlv.SelectedRows[0].Cells["Tên TK"].Value.ToString();
+                        TK tk = TKBLL.Instance.GetTKByTenTK(ten);
+                        if(tk.TrangThai != null && tk.TrangThai == true)
+                        {
+                            tk.TrangThai = false;
+                            if (TKBLL.Instance.UpdateTK(tk))
+                            {
+                                MessageBox.Show("Ban tài khoản thành công");
+                                Load_DataTK();
+                            }
+                        }
+                        else MessageBox.Show("tài khoản đã bị ban");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Ban tài khoản thất bại");
+                    }
+                    
+                }
+            }
+        }
+
+        private void btn_moban_Click(object sender, EventArgs e)
+        {
+            if (dgv_tkhlv.SelectedRows.Count == 1)
+            {
+                if (dgv_tkhlv.SelectedRows[0].Cells["ID"] != null && dgv_tkhlv.SelectedRows[0].Cells["ID"].Value != null)
+                {
+                    try
+                    {
+                        string ten = dgv_tkhlv.SelectedRows[0].Cells["Tên TK"].Value.ToString();
+                        TK tk = TKBLL.Instance.GetTKByTenTK(ten);
+                        if (tk.TrangThai != null && tk.TrangThai == false)
+                        {
+                            tk.TrangThai = true;
+                            if (TKBLL.Instance.UpdateTK(tk))
+                            {
+                                MessageBox.Show("Mở ban tài khoản thành công");
+                                Load_DataTK();
+                            }
+                        }
+                        else MessageBox.Show("tài khoản chưa bị ban");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Ban tài khoản thất bại");
+                    }
+
+                }
+            }
+        }
+
+        private void cb_gt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string require = cb_tk.Text;
+            try
+            {
+                if (require != null)
+                {
+                    if(require != "Tài khoản cá nhân")
+                    {
+                        dgv_tkhlv.DataSource = TKHLV_BLL.Instance.FitlerTaiKhoanBy(require, "");
+                        dgv_tkhlv.Columns["ID"].Visible = false;
+                    }
+                    else
+                    {
+                        if (dgv_hlv.SelectedRows.Count == 1)
+                        {
+                            string IDHLV = dgv_hlv.SelectedRows[0].Cells["ID"].Value.ToString();
+                            dgv_tkhlv.DataSource = TKHLV_BLL.Instance.FitlerTaiKhoanBy(require, IDHLV);
+                            dgv_tkhlv.Columns["ID"].Visible = false;
+                        }
+                        else MessageBox.Show("Cần chọn dữ liệu khách hàng khi lọc tài khoản cá nhân");
+                    }
+                    
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Lọc thất bại");
+            }
+        }
     }
 }

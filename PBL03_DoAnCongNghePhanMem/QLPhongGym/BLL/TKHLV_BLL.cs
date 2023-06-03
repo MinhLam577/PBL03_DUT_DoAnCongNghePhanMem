@@ -62,5 +62,9 @@ namespace QLPhongGym.BLL
         {
             return TKHLV_DAL.Instance.TenTK(str);
         }
+        public DataTable FitlerTaiKhoanBy(string require, string IDHLV)
+        {
+            return TKHLV_DAL.Instance.FitlerTaiKhoanBy(require, IDHLV);
+        }
     }
 }

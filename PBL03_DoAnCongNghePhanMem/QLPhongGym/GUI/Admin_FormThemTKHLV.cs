@@ -76,6 +76,7 @@ namespace QLPhongGym.GUI
             }
             a.MatkhauTK = Eramake.eCryptography.Encrypt(Txt_NhapLai.Text);
             a.IDQuyen = 2;
+            a.TrangThai = true;
             a.IDUser = Convert.ToInt32(ID);
             if (Ten == "")
             {   if(TKHLV_BLL.Instance.TenTK_BLL(Txt_TK.Text) == true)

@@ -25,7 +25,13 @@ namespace QLPhongGym.GUI
             switch (TenQuyen)
             {
                 case "HLV":
-                    HLV_FormMain hlvfm = new HLV_FormMain(TKBLL.Instance.GetTKByID(IDUser));
+                    TK tk = TKBLL.Instance.GetTKByID(IDUser);
+                    if(tk.TrangThai == false)
+                    {
+                        MessageBox.Show("Tài khoan đã bị ban, vui lòng liên hệ admin để mở ban");
+                        return;
+                    }
+                    HLV_FormMain hlvfm = new HLV_FormMain(tk);
                     hlvfm.ShowDialog();
                     break;
                 case "Admin":
