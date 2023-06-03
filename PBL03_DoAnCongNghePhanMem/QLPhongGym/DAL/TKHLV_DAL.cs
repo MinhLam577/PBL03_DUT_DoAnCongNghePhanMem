@@ -215,5 +215,67 @@ namespace QLPhongGym.DAL
             }
         }
 
+        public DataTable FitlerTaiKhoanBy(string require, string IDHLV)
+        {
+            DataTable dt = CreateDataTable2();
+            QLPhongGymDB db = new QLPhongGymDB();
+            int cnt = 1;
+            switch (require)
+            {
+                case "Tất cả":
+                    dt = GetDataTableByList2();
+                    return dt;
+                case "Tài khoản bị ban":
+                    var data1 = from p in db.TKs
+                                join t in db.Users on p.IDUser equals t.IDUsers
+                                where p.IDQuyen == 2 && p.TrangThai.Value == false
+                                select new { p.TenTK, p.IDUser, t.Name, p.MatkhauTK };
+                    foreach (var i in data1)
+                    {
+                        dt.Rows.Add(
+                                  cnt++,
+                                  i.IDUser,
+                                  i.Name,
+                                  i.TenTK,
+                                  i.MatkhauTK
+                          );
+                    }
+                    return dt;
+                case "Tài khoản đang hoạt động":
+                    var data2 = from p in db.TKs
+                                join t in db.Users on p.IDUser equals t.IDUsers
+                                where p.IDQuyen == 2 && p.TrangThai.Value == true
+                                select new { p.TenTK, p.IDUser, t.Name, p.MatkhauTK };
+                    foreach (var i in data2)
+                    {
+                        dt.Rows.Add(
+                                  cnt++,
+                                  i.IDUser,
+                                  i.Name,
+                                  i.TenTK,
+                                  i.MatkhauTK
+                          );
+                    }
+                    return dt;
+                default:
+                    int idhlv = Convert.ToInt32(IDHLV);
+                    var data3 = from p in db.TKs
+                                join t in db.Users on p.IDUser equals t.IDUsers
+                                where p.IDQuyen == 2 && p.TrangThai.Value == true && t.IDUsers == idhlv
+                                select new { p.TenTK, p.IDUser, t.Name, p.MatkhauTK };
+                    foreach (var i in data3)
+                    {
+                        dt.Rows.Add(
+                                  cnt++,
+                                  i.IDUser,
+                                  i.Name,
+                                  i.TenTK,
+                                  i.MatkhauTK
+                          );
+                    }
+                    return dt;
+            }
+        }
+
     }
 }
