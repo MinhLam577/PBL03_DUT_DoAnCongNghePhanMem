@@ -78,6 +78,7 @@ namespace QLPhongGym.GUI
             {
                 pn_tkadmin.Visible = false;
             }
+            
         }
         private void showMenu(Panel subMenu)
         {
@@ -247,10 +248,6 @@ namespace QLPhongGym.GUI
         }
 
 
-        private void label2_MouseClick(object sender, MouseEventArgs e)
-        {
-            showMenu(pn_tkadmin);
-        }
 
         private void pb_ad_Click(object sender, EventArgs e)
         {

@@ -47,6 +47,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pn_tkadmin = new System.Windows.Forms.Panel();
             this.btn_doimatkhau = new System.Windows.Forms.Button();
             this.btn_updatethongtin = new System.Windows.Forms.Button();
@@ -54,17 +55,16 @@
             this.lb_gmailad = new System.Windows.Forms.Label();
             this.lb_tenad = new System.Windows.Forms.Label();
             this.pb_acc = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel_hlv.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ad)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pn_tkadmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_updateimage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_acc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnTaiKhoan
@@ -333,13 +333,23 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.pn_tkadmin);
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(240, 82);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(953, 504);
             this.panel3.TabIndex = 2;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(953, 504);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // pn_tkadmin
             // 
@@ -350,10 +360,10 @@
             this.pn_tkadmin.Controls.Add(this.lb_gmailad);
             this.pn_tkadmin.Controls.Add(this.lb_tenad);
             this.pn_tkadmin.Controls.Add(this.pb_acc);
-            this.pn_tkadmin.Location = new System.Drawing.Point(196, 3);
+            this.pn_tkadmin.Location = new System.Drawing.Point(436, 82);
             this.pn_tkadmin.Name = "pn_tkadmin";
-            this.pn_tkadmin.Size = new System.Drawing.Size(511, 158);
-            this.pn_tkadmin.TabIndex = 3;
+            this.pn_tkadmin.Size = new System.Drawing.Size(507, 181);
+            this.pn_tkadmin.TabIndex = 4;
             // 
             // btn_doimatkhau
             // 
@@ -418,22 +428,12 @@
             this.pb_acc.TabIndex = 3;
             this.pb_acc.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(953, 504);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
             // Admin_FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1193, 586);
+            this.Controls.Add(this.pn_tkadmin);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
@@ -448,11 +448,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ad)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pn_tkadmin.ResumeLayout(false);
             this.pn_tkadmin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_updateimage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_acc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -477,13 +477,13 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pb_ad;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pn_tkadmin;
+        private System.Windows.Forms.Button btn_doimatkhau;
+        private System.Windows.Forms.Button btn_updatethongtin;
+        private System.Windows.Forms.PictureBox pb_updateimage;
         private System.Windows.Forms.Label lb_gmailad;
         private System.Windows.Forms.Label lb_tenad;
         private System.Windows.Forms.PictureBox pb_acc;
-        private System.Windows.Forms.PictureBox pb_updateimage;
-        private System.Windows.Forms.Button btn_updatethongtin;
-        private System.Windows.Forms.Button btn_doimatkhau;
-        private System.Windows.Forms.Label label2;
     }
 }
