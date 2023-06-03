@@ -28,36 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_tkhlv = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.button_add = new System.Windows.Forms.Button();
             this.button_edit = new System.Windows.Forms.Button();
             this.button_xoa = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgv_hlv = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_tkhlv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_hlv)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgv_tkhlv
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgv_tkhlv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(668, 129);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(372, 465);
-            this.dataGridView1.TabIndex = 0;
+            this.dgv_tkhlv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_tkhlv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv_tkhlv.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_tkhlv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_tkhlv.Location = new System.Drawing.Point(668, 129);
+            this.dgv_tkhlv.Name = "dgv_tkhlv";
+            this.dgv_tkhlv.ReadOnly = true;
+            this.dgv_tkhlv.RowHeadersWidth = 51;
+            this.dgv_tkhlv.RowTemplate.Height = 24;
+            this.dgv_tkhlv.Size = new System.Drawing.Size(372, 465);
+            this.dgv_tkhlv.TabIndex = 0;
             // 
             // label1
             // 
@@ -106,7 +106,7 @@
             this.button_xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_xoa.ForeColor = System.Drawing.Color.Aqua;
-            this.button_xoa.Location = new System.Drawing.Point(497, 392);
+            this.button_xoa.Location = new System.Drawing.Point(497, 404);
             this.button_xoa.Name = "button_xoa";
             this.button_xoa.Size = new System.Drawing.Size(138, 47);
             this.button_xoa.TabIndex = 4;
@@ -132,21 +132,21 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "Danh sách huấn luyện viên";
             // 
-            // dataGridView2
+            // dgv_hlv
             // 
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgv_hlv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(31, 129);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(426, 465);
-            this.dataGridView2.TabIndex = 12;
+            this.dgv_hlv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_hlv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv_hlv.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_hlv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_hlv.Location = new System.Drawing.Point(31, 129);
+            this.dgv_hlv.Name = "dgv_hlv";
+            this.dgv_hlv.ReadOnly = true;
+            this.dgv_hlv.RowHeadersWidth = 51;
+            this.dgv_hlv.RowTemplate.Height = 24;
+            this.dgv_hlv.Size = new System.Drawing.Size(426, 465);
+            this.dgv_hlv.TabIndex = 12;
             // 
             // label3
             // 
@@ -178,17 +178,17 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dgv_hlv);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button_xoa);
             this.Controls.Add(this.button_edit);
             this.Controls.Add(this.button_add);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_tkhlv);
             this.Name = "Admin_DangKiTaiKhoanHLV";
             this.Text = "Admin_DangKiTaiKhoanHLV";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_tkhlv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_hlv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,14 +196,14 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_tkhlv;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button_add;
         private System.Windows.Forms.Button button_edit;
         private System.Windows.Forms.Button button_xoa;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgv_hlv;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
     }

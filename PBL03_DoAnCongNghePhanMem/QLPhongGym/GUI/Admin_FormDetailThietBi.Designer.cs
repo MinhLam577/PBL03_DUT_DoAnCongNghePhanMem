@@ -68,7 +68,7 @@
             this.Btn_Change.Location = new System.Drawing.Point(63, 272);
             this.Btn_Change.Name = "Btn_Change";
             this.Btn_Change.Size = new System.Drawing.Size(98, 42);
-            this.Btn_Change.TabIndex = 1;
+            this.Btn_Change.TabIndex = 8;
             this.Btn_Change.Text = "Đổi";
             this.Btn_Change.UseVisualStyleBackColor = true;
             this.Btn_Change.Click += new System.EventHandler(this.Btn_Change_Click);
@@ -82,7 +82,7 @@
             this.btn_Sua.Location = new System.Drawing.Point(275, 377);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Size = new System.Drawing.Size(176, 51);
-            this.btn_Sua.TabIndex = 7;
+            this.btn_Sua.TabIndex = 8;
             this.btn_Sua.Text = "OK";
             this.btn_Sua.UseVisualStyleBackColor = false;
             this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
@@ -190,7 +190,7 @@
             this.txt_Price.Location = new System.Drawing.Point(701, 189);
             this.txt_Price.Name = "txt_Price";
             this.txt_Price.Size = new System.Drawing.Size(192, 30);
-            this.txt_Price.TabIndex = 5;
+            this.txt_Price.TabIndex = 6;
             // 
             // txt_SLHong
             // 
@@ -207,7 +207,7 @@
             this.txt_Mota.Multiline = true;
             this.txt_Mota.Name = "txt_Mota";
             this.txt_Mota.Size = new System.Drawing.Size(241, 79);
-            this.txt_Mota.TabIndex = 6;
+            this.txt_Mota.TabIndex = 7;
             // 
             // txt_NhaCungCap
             // 
@@ -232,7 +232,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(702, 131);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(176, 30);
-            this.dateTimePicker1.TabIndex = 19;
+            this.dateTimePicker1.TabIndex = 5;
             // 
             // btn_Huy
             // 
@@ -243,7 +243,7 @@
             this.btn_Huy.Location = new System.Drawing.Point(501, 377);
             this.btn_Huy.Name = "btn_Huy";
             this.btn_Huy.Size = new System.Drawing.Size(172, 51);
-            this.btn_Huy.TabIndex = 8;
+            this.btn_Huy.TabIndex = 9;
             this.btn_Huy.Text = "Thoát";
             this.btn_Huy.UseVisualStyleBackColor = false;
             this.btn_Huy.Click += new System.EventHandler(this.btn_Huy_Click);

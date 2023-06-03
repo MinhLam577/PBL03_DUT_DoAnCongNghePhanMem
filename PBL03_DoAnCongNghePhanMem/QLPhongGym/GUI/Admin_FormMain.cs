@@ -148,7 +148,7 @@ namespace QLPhongGym.GUI
         }
         private void button13_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Admin_FormThongKe());
+            OpenChildForm(new Admin_ThongKeForm());
             hideMenu();
         }
         private void BtnTaiKhoan_Click(object sender, EventArgs e)

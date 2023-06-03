@@ -94,6 +94,10 @@ namespace QLPhongGym.DAL
             }
             catch { return null; }
         }
+        public User GetUserByGmail(string gmail)
+        {
+            return db.Users.FirstOrDefault(u => u.Gmail == gmail);
+        }
         public bool CheckUserExist(string CCCD, string Name)
         {
             return db.Users.Any(s => s.CCCD.Equals(CCCD) && s.Name.Equals(Name));

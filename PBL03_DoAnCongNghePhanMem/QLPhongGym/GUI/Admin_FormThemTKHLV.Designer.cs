@@ -47,7 +47,7 @@
             this.txt_MaHLV.Location = new System.Drawing.Point(229, 42);
             this.txt_MaHLV.Name = "txt_MaHLV";
             this.txt_MaHLV.Size = new System.Drawing.Size(215, 22);
-            this.txt_MaHLV.TabIndex = 28;
+            this.txt_MaHLV.TabIndex = 1;
             // 
             // label7
             // 
@@ -63,7 +63,7 @@
             this.Txt_TenHLV.Location = new System.Drawing.Point(229, 85);
             this.Txt_TenHLV.Name = "Txt_TenHLV";
             this.Txt_TenHLV.Size = new System.Drawing.Size(215, 22);
-            this.Txt_TenHLV.TabIndex = 26;
+            this.Txt_TenHLV.TabIndex = 2;
             // 
             // label6
             // 
@@ -79,7 +79,7 @@
             this.Txt_TK.Location = new System.Drawing.Point(229, 126);
             this.Txt_TK.Name = "Txt_TK";
             this.Txt_TK.Size = new System.Drawing.Size(215, 22);
-            this.Txt_TK.TabIndex = 24;
+            this.Txt_TK.TabIndex = 3;
             // 
             // label4
             // 
@@ -96,7 +96,7 @@
             this.Txt_Mk.Name = "Txt_Mk";
             this.Txt_Mk.PasswordChar = '*';
             this.Txt_Mk.Size = new System.Drawing.Size(215, 22);
-            this.Txt_Mk.TabIndex = 22;
+            this.Txt_Mk.TabIndex = 4;
             // 
             // Txt_NhapLai
             // 
@@ -104,7 +104,7 @@
             this.Txt_NhapLai.Name = "Txt_NhapLai";
             this.Txt_NhapLai.PasswordChar = '*';
             this.Txt_NhapLai.Size = new System.Drawing.Size(215, 22);
-            this.Txt_NhapLai.TabIndex = 21;
+            this.Txt_NhapLai.TabIndex = 5;
             // 
             // label3
             // 
@@ -133,7 +133,7 @@
             this.button_OK.Location = new System.Drawing.Point(113, 277);
             this.button_OK.Name = "button_OK";
             this.button_OK.Size = new System.Drawing.Size(108, 45);
-            this.button_OK.TabIndex = 29;
+            this.button_OK.TabIndex = 6;
             this.button_OK.Text = "OK";
             this.button_OK.UseVisualStyleBackColor = false;
             this.button_OK.Click += new System.EventHandler(this.button_OK_Click);
@@ -147,7 +147,7 @@
             this.button_Cancel.Location = new System.Drawing.Point(298, 277);
             this.button_Cancel.Name = "button_Cancel";
             this.button_Cancel.Size = new System.Drawing.Size(111, 45);
-            this.button_Cancel.TabIndex = 30;
+            this.button_Cancel.TabIndex = 7;
             this.button_Cancel.Text = "Cancel";
             this.button_Cancel.UseVisualStyleBackColor = false;
             this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
@@ -156,7 +156,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(531, 350);
+            this.ControlBox = false;
             this.Controls.Add(this.button_Cancel);
             this.Controls.Add(this.button_OK);
             this.Controls.Add(this.txt_MaHLV);

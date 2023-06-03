@@ -309,7 +309,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(806, 9);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(989, 377);
+            this.groupBox2.Size = new System.Drawing.Size(989, 420);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin chi tiết";
@@ -320,9 +320,9 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.lb_description.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_description.ForeColor = System.Drawing.Color.Blue;
-            this.lb_description.Location = new System.Drawing.Point(351, 68);
+            this.lb_description.Location = new System.Drawing.Point(316, 71);
             this.lb_description.Name = "lb_description";
-            this.lb_description.Size = new System.Drawing.Size(392, 303);
+            this.lb_description.Size = new System.Drawing.Size(433, 340);
             this.lb_description.TabIndex = 4;
             // 
             // lb_gioitinh
@@ -332,7 +332,7 @@
             this.lb_gioitinh.AutoSize = true;
             this.lb_gioitinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_gioitinh.ForeColor = System.Drawing.Color.Blue;
-            this.lb_gioitinh.Location = new System.Drawing.Point(360, 30);
+            this.lb_gioitinh.Location = new System.Drawing.Point(310, 34);
             this.lb_gioitinh.Name = "lb_gioitinh";
             this.lb_gioitinh.Size = new System.Drawing.Size(0, 38);
             this.lb_gioitinh.TabIndex = 3;
@@ -357,7 +357,7 @@
             this.pb_kh.Image = ((System.Drawing.Image)(resources.GetObject("pb_kh.Image")));
             this.pb_kh.Location = new System.Drawing.Point(6, 71);
             this.pb_kh.Name = "pb_kh";
-            this.pb_kh.Size = new System.Drawing.Size(339, 300);
+            this.pb_kh.Size = new System.Drawing.Size(304, 343);
             this.pb_kh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_kh.TabIndex = 0;
             this.pb_kh.TabStop = false;
@@ -370,9 +370,9 @@
             this.groupBox3.Controls.Add(this.dgv_gt);
             this.groupBox3.Controls.Add(this.GT_mns);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(806, 386);
+            this.groupBox3.Location = new System.Drawing.Point(806, 435);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(989, 400);
+            this.groupBox3.Size = new System.Drawing.Size(989, 351);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Gói tập khách hàng đăng kí";
@@ -433,7 +433,7 @@
             this.dgv_gt.RowTemplate.Height = 24;
             this.dgv_gt.RowTemplate.ReadOnly = true;
             this.dgv_gt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_gt.Size = new System.Drawing.Size(702, 271);
+            this.dgv_gt.Size = new System.Drawing.Size(702, 222);
             this.dgv_gt.TabIndex = 59;
             // 
             // GT_mns
