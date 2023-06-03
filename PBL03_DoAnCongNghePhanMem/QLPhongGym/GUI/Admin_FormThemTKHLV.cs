@@ -65,16 +65,16 @@ namespace QLPhongGym.GUI
             TK a = new TK();
             if (Txt_TK.Text == "")
             {
-                MessageBox.Show("Cân nhập tên tài khoản");
+                MessageBox.Show("Cần nhập tên tài khoản");
                 return;
             }
             a.TenTK = Txt_TK.Text;
             if(Txt_Mk.Text != Txt_NhapLai.Text || Txt_Mk.Text == "")
             {
-                MessageBox.Show("Mật khẩu nhập lại chưa đúng với mật khẩu! Bạn xem lại");
+                MessageBox.Show("Xác nhận mật khẩu không đồng dạng");
                 return ;
             }
-            a.MatkhauTK = Txt_NhapLai.Text;
+            a.MatkhauTK = Eramake.eCryptography.Encrypt(Txt_NhapLai.Text);
             a.IDQuyen = 2;
             a.IDUser = Convert.ToInt32(ID);
             if (Ten == "")

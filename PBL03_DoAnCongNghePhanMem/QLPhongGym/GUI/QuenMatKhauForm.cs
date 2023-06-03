@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,14 +36,31 @@ namespace QLPhongGym.GUI
         }
         private void btn_laylaimk_Click(object sender, EventArgs e)
         {
+            string gmail = txb_Email.Text;
             if(txb_Email.Text == "") { MessageBox.Show("Mời nhập vào thông tin còn trống"); return; }
             else
             {
                 if (UsersBLL.Instance.CheckGmailExist(txb_Email.Text))
                 {
+                    try
+                    {
+                        KH kh = (KH)UsersBLL.Instance.GetUserByGmail(gmail);
+                        MessageBox.Show("Bạn là khách hàng và không có tài khoản trong hệ thống");
+                        return;
+                    }
+                    catch
+                    {
+
+                    }
                     to = new MailAddress(txb_Email.Text);
                     mail = new MailMessage(from, to);
                     mail.Subject = "Lấy lại mật khẩu tài khoản phần mềm quản lý phòng gym";
+                    string password = UsersBLL.Instance.GetPassword(txb_Email.Text);
+                    if (string.IsNullOrEmpty(password))
+                    {
+                        MessageBox.Show("Bạn chưa có tài khoản trong hệ thống");
+                        return;
+                    }
                     mail.Body = "Mật khẩu tài khoản của bạn: " + UsersBLL.Instance.GetPassword(txb_Email.Text);
                     mail.IsBodyHtml = true;
                     try

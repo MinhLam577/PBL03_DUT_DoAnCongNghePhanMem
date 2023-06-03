@@ -52,12 +52,12 @@ namespace QLPhongGym.GUI
             HLV a = (HLV)hlv;
             if (QLHLVBLL.getInstance.Update(a) == true)
             {
-                MessageBox.Show("Sua Thanh cong");
+                MessageBox.Show("Sửa thành công");
                 CapNhatListHLV();
             }
             else
             {
-                MessageBox.Show("Sua huấn luyện viên thất bại");
+                MessageBox.Show("Sửa huấn luyện viên thất bại");
             }
         }
         public void inforfromData(HLV a)
@@ -113,7 +113,7 @@ namespace QLPhongGym.GUI
             HLV a = (HLV)hlv;
             if (QLHLVBLL.getInstance.Them(a) == true)
             {
-                MessageBox.Show("Them Thanh cong");
+                MessageBox.Show("Thêm thành công");
                 CapNhatListHLV();
             }
             else
@@ -127,7 +127,7 @@ namespace QLPhongGym.GUI
             {
                 if (cbbSort.SelectedItem == null)
                 {
-                    MessageBox.Show("Bạn chưa nhập giá trị cần tìm kiếm  ", "Thong Báo", MessageBoxButtons.OK);
+                    MessageBox.Show("Bạn chưa nhập giá trị cần tìm kiếm  ", "Thông Báo", MessageBoxButtons.OK);
                     cbbSort.Focus();
                 }
                 else
