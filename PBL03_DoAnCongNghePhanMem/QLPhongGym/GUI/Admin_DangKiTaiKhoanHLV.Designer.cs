@@ -151,6 +151,7 @@
             this.dgv_hlv.RowTemplate.Height = 24;
             this.dgv_hlv.Size = new System.Drawing.Size(426, 600);
             this.dgv_hlv.TabIndex = 12;
+            this.dgv_hlv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_hlv_CellClick);
             // 
             // label3
             // 

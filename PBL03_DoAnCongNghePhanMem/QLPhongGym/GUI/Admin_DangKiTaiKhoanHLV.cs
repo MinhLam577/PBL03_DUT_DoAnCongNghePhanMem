@@ -194,7 +194,6 @@ namespace QLPhongGym.GUI
                             dgv_tkhlv.DataSource = TKHLV_BLL.Instance.FitlerTaiKhoanBy(require, IDHLV);
                             dgv_tkhlv.Columns["ID"].Visible = false;
                         }
-                        else MessageBox.Show("Cần chọn dữ liệu khách hàng khi lọc tài khoản cá nhân");
                     }
                     
                 }
@@ -203,6 +202,26 @@ namespace QLPhongGym.GUI
             {
                 MessageBox.Show("Lọc thất bại");
             }
+        }
+
+        private void dgv_hlv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int cur_row = dgv_hlv.CurrentRow.Index;
+            string require = cb_tk.Text;
+            try
+            {
+                if (cur_row != -1 && require != null)
+                {
+                    string IDHLV = dgv_hlv.Rows[cur_row].Cells["ID"].Value.ToString();
+                    dgv_tkhlv.DataSource = TKHLV_BLL.Instance.FitlerTaiKhoanBy(require, IDHLV);
+                    dgv_tkhlv.Columns["ID"].Visible = false;
+                }
+            }
+            catch
+            {
+                
+            }
+            
         }
     }
 }
