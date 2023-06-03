@@ -362,7 +362,7 @@
             this.pn_tkadmin.Controls.Add(this.pb_acc);
             this.pn_tkadmin.Location = new System.Drawing.Point(436, 82);
             this.pn_tkadmin.Name = "pn_tkadmin";
-            this.pn_tkadmin.Size = new System.Drawing.Size(507, 181);
+            this.pn_tkadmin.Size = new System.Drawing.Size(507, 159);
             this.pn_tkadmin.TabIndex = 4;
             // 
             // btn_doimatkhau

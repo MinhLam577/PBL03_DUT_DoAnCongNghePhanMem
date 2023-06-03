@@ -60,5 +60,9 @@ namespace QLPhongGym.BLL
         {
             return ThietBiDAL.Instance.GetAllTB();
         }
+        public int GetTongSoLuongThietBiCoSan()
+        {
+            return ThietBiDAL.Instance.GetTongSoLuongThietBiCoSan();
+        }
     }
 }

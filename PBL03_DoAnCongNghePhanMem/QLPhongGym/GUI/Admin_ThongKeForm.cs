@@ -30,13 +30,11 @@ namespace QLPhongGym.GUI
                 tongkhachhang++;
             foreach (var i in QLHLVBLL.getInstance.GetAllHLVID())
                 tonghlv++;
-            foreach (var i in ThietBi_BLL.Instance.GetAllTB())
-                tongtb++;
             foreach (var i in GoiTapBLL.Instance.GetAllGT())
                 tonggt++;
             lb_totalcoach.Text = tonghlv.ToString();
             lb_totalcustomer.Text = tongkhachhang.ToString();
-            lb_equipment.Text = tongtb.ToString();
+            lb_equipment.Text = ThietBi_BLL.Instance.GetTongSoLuongThietBiCoSan().ToString();
             lb_package.Text = tonggt.ToString();
         }
         public void LoadDuLieuBieuDo()
