@@ -70,5 +70,9 @@ namespace QLPhongGym.BLL
         {
             return KHDAL.Instance.GetAllKHID();
         }
+        public DataTable FindListKHByIDHLV_NgayThue_IDCa_IDOrName(string txt, int IDHLV, DateTime NgayThue, int? IDCa)
+        {
+            return KHDAL.Instance.FindListKHByIDHLV_NgayThue_IDCa_IDOrName(txt, IDHLV, NgayThue, IDCa);
+        }
     }
 }

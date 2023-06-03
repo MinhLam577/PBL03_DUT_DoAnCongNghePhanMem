@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,17 +26,10 @@ namespace QLPhongGym.GUI
         {
             this.hlv = hlv;
             InitializeComponent();
-            LoadCBBCa();
-            DateTime NgayThue = dtp_nt.Value.Date;
-            string TenCa = cb_tenca.Text;
-            List<KH> kh = new List<KH>();
-            if(!string.IsNullOrEmpty(TenCa))
-                kh = DangKiLichLamViecBAL.getInStance.FitlerListKHByNgayThue_IDCa_IDHLV(NgayThue, TenCa, hlv.IDUsers);
-            LoadDGVByListKH(kh);
         }
         public void LoadDGVByListKH(List<KH> listkh)
         {
-            int cnt = 0;
+            int cnt = 1;
             DataTable dt = KHBLL.Instance.CreateTable();
             foreach (KH kh in listkh)
             {
@@ -79,7 +73,10 @@ namespace QLPhongGym.GUI
                     if ((bool)kh.Sex)
                         lb_gioitinh.Text = "Giới tính: Nam";
                     else lb_gioitinh.Text = "Giới tính: Nữ";
-                    LoadThongTinChiTiet(IDKH, hlv.IDUsers, dtp_nt.Value.Date);
+                    LoadThongTinChiTiet(IDKH, hlv.IDUsers, DateTime.ParseExact(cb_nt.Text,
+                            "dd/MM/yyyy",
+                            CultureInfo.InvariantCulture,
+                            DateTimeStyles.None).Date);
                     //Kiểm tra show ảnh lên giao diện
                     if (kh.Image != null)
                         pb_kh.Image = Image.FromFile(Application.StartupPath + @"\PersonImage\" + kh.Image);
@@ -95,7 +92,10 @@ namespace QLPhongGym.GUI
         private void LoadCBBCa()
         {
             int IDHLV = hlv.IDUsers;
-            DateTime NgayLam = dtp_nt.Value.Date;
+            DateTime NgayLam = DateTime.ParseExact(cb_nt.Text,
+                            "dd/MM/yyyy",
+                            CultureInfo.InvariantCulture,
+                            DateTimeStyles.None).Date;
             List<int> List_IDCa = DangKiLichLamViecBAL.getInStance.GetCaLamViecByNgayLam_IDHLV(IDHLV, NgayLam);
             List<string> List_Ca = new List<string> { "All" };
             foreach (int i in List_IDCa)
@@ -105,14 +105,13 @@ namespace QLPhongGym.GUI
             }
             cb_tenca.DataSource = List_Ca;
         }
-        private void dtp_ns_ValueChanged(object sender, EventArgs e)
-        {
-            LoadCBBCa();
-        }
 
         private void cb_tenca_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DateTime NgayThue = dtp_nt.Value.Date;
+            DateTime NgayThue = DateTime.ParseExact(cb_nt.Text,
+                            "dd/MM/yyyy",
+                            CultureInfo.InvariantCulture,
+                            DateTimeStyles.None).Date;
             string TenCa = cb_tenca.Text;
             var data = DangKiLichLamViecBAL.getInStance.FitlerListKHByNgayThue_IDCa_IDHLV(NgayThue, TenCa, hlv.IDUsers);
             LoadDGVByListKH(data);
@@ -127,7 +126,62 @@ namespace QLPhongGym.GUI
 
         private void txb_ten_sdt_TextChanged(object sender, EventArgs e)
         {
-            dgv_kh.DataSource = KHBLL.Instance.FindListKHByIDOrName(txb_ten_sdt.Text);
+            try
+            {
+                DateTime NgayThue = DateTime.ParseExact(cb_nt.Text,
+                            "dd/MM/yyyy",
+                            CultureInfo.InvariantCulture,
+                            DateTimeStyles.None).Date;
+                string TenCa = cb_tenca.Text;
+                if (cb_tenca.Text != "All")
+                {
+                    dgv_kh.DataSource = KHBLL.Instance.FindListKHByIDHLV_NgayThue_IDCa_IDOrName(txb_ten_sdt.Text,
+                        hlv.IDUsers, NgayThue, DangKiLichLamViecBAL.getInStance.GetCaLamViecByTenCa(TenCa).IDCa);
+                }
+                else
+                {
+                    dgv_kh.DataSource = KHBLL.Instance.FindListKHByIDHLV_NgayThue_IDCa_IDOrName(txb_ten_sdt.Text,
+                        hlv.IDUsers, NgayThue, null);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Tìm kiếm thất bại");
+            }
+            
         }
+        private void nmup_tuan_ValueChanged(object sender, EventArgs e)
+        {
+            int Month = dtp_thangnam.Value.Month;
+            int Year = dtp_thangnam.Value.Year;
+            dtp_from.Value = new DateTime(Year, Month, 7 * ((int)nmup_tuan.Value - 1) + 1);
+            dtp_to.Value = dtp_from.Value.AddDays(6);
+            List<string> CBB_data = new List<string>();
+            for(int i = 0; i <= 6; i++)
+            {
+                DateTime dt = dtp_from.Value.AddDays(i);
+                CBB_data.Add(dt.ToString("dd/MM/yyyy"));
+            }
+            cb_nt.DataSource = CBB_data;
+        }
+
+        private void dtp_thangnam_ValueChanged(object sender, EventArgs e)
+        {
+            int Month = dtp_thangnam.Value.Month;
+            int Year = dtp_thangnam.Value.Year;
+            nmup_tuan.Value = nmup_tuan.Minimum;
+            nmup_tuan_ValueChanged(sender, e);
+        }
+
+        private void HLV_FormDanhSachKH_Load(object sender, EventArgs e)
+        {
+            dtp_thangnam_ValueChanged(sender, e);
+        }
+
+        private void cb_nt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadCBBCa();
+        }
+
     }
 }
