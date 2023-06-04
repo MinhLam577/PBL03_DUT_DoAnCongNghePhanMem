@@ -235,7 +235,6 @@
             this.lb_tongthunhap.TabIndex = 3;
             this.lb_tongthunhap.Text = "109";
             this.lb_tongthunhap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lb_tongthunhap.Click += new System.EventHandler(this.lb_tongthunhap_Click);
             // 
             // lb
             // 

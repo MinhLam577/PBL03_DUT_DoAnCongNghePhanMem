@@ -74,6 +74,7 @@
             // 
             // textIdHLV
             // 
+            this.textIdHLV.Enabled = false;
             this.textIdHLV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textIdHLV.Location = new System.Drawing.Point(405, 174);
             this.textIdHLV.Name = "textIdHLV";
@@ -82,6 +83,7 @@
             // 
             // cbbCa
             // 
+            this.cbbCa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbCa.FormattingEnabled = true;
             this.cbbCa.Items.AddRange(new object[] {

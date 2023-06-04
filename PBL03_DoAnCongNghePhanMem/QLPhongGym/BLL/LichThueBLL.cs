@@ -38,11 +38,11 @@ namespace QLPhongGym.BLL
         {
             return LichThueDAL.Instance.xoa(ma);
         }
-    
+
         public bool Capnhat1(int idca, int idhlv, DateTime ngaylam, int IDCA, int IDHLV, DateTime NGAYLAM)
         {
-            return LichThueDAL.Instance.Capnhat1(idca, idhlv, ngaylam, IDCA, IDHLV,  NGAYLAM);
-
+            return LichThueDAL.Instance.Capnhat1(idca, idhlv, ngaylam, IDCA, IDHLV, NGAYLAM);
+        }
         public List<LichThueHLV> GetLichThueByIDKH_IDHLV(int IDKH, int IDHLV)
         {
             return LichThueDAL.Instance.GetLichThueByIDKH_IDHLV(IDKH, IDHLV);

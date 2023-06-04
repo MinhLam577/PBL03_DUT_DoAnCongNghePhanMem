@@ -665,11 +665,6 @@ namespace QLPhongGym.GUI
             a.Show();
         }
 
-        private void Admin_FormDanhSachKH_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void xemLịchThuêHuấnLuyệnViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // show lịch thue 

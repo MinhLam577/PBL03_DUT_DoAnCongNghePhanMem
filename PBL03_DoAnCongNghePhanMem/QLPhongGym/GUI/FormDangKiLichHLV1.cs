@@ -22,7 +22,6 @@ namespace QLPhongGym.GUI
             labelTheoTuan();
 
         }
-
         // ham tru tuan 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -33,15 +32,12 @@ namespace QLPhongGym.GUI
             {
                 lbTuanLam.Text = parts[0] + " " + (--weekNumber);
             }
-            //ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
             tuanlam();
             labelTheoTuan();
             ClearListBox();
             hienthilenlistboxHang(dateTimeNgayStart.Value);
         }
         // ham cong tuan 
-
-
         private void btnthangtruoc_Click(object sender, EventArgs e)
         {
             if (dateTimeNgayStart.Value.Month > 1 && dateTimeNgayStart.Value.Month <= 12)
@@ -56,7 +52,6 @@ namespace QLPhongGym.GUI
                 {
                     dateTimeNgayStart.Value = new DateTime(nam, thang, 29);
                     dateTimeNgayEnd.Value = new DateTime(nam, thang, daysInMonth);
-                   // ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
                 }
                 else if (lbTuanLam.Text == "Tuần 5" && daysInMonth == 28)
                 {
@@ -68,7 +63,6 @@ namespace QLPhongGym.GUI
                 {
                     dateTimeNgayStart.Value = new DateTime(nam, thang, ngaybatdau);
                     dateTimeNgayEnd.Value = new DateTime(nam, thang, ngayketthuc);
-                   // ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
                 }
             }
             labelTheoTuan();
@@ -88,19 +82,16 @@ namespace QLPhongGym.GUI
                 {
                     dateTimeNgayStart.Value = new DateTime(nam, thang, 29);
                     dateTimeNgayEnd.Value = new DateTime(nam, thang, daysInMonth);
-                   // ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
                 }
                 else if(lbTuanLam.Text == "Tuần 5" && daysInMonth ==28 )
                 {
                     dateTimeNgayStart.Value = new DateTime(nam, thang, 28);
                     dateTimeNgayEnd.Value = new DateTime(nam, thang, daysInMonth);
-                    //ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
                 }
                 else
                 {
                     dateTimeNgayStart.Value = new DateTime(nam, thang, ngaybatdau);
                     dateTimeNgayEnd.Value = new DateTime(nam, thang, ngayketthuc);
-                   // ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
                 }
             }
             labelTheoTuan();
@@ -140,20 +131,6 @@ namespace QLPhongGym.GUI
                 ngaylamviec.Value = new DateTime(ngaylamviec.Value.Year, ngaylamviec.Value.Month, day);
             }
         }
-
-        private void dateTimeNgayStart_ValueChanged(object sender, EventArgs e)
-        {
-            /*  // Kiểm tra nếu labelWeek có giá trị là "Tuần 1"
-              if (lbTuanLam.Text == "Tuần 1")
-              {
-                  // Tạo một đối tượng DateTime mới với ngày là 1 và giờ phút giây là 0
-                  DateTime date = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
-                  // Thiết lập giá trị của DateTimePicker là ngày vừa tạo
-                  dateTimeNgayStart.Value = date;
-                  dateTimeNgayEnd.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 8);
-              }*/
-            //ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
-        }
         private void tuanlam()
         {
             if (lbTuanLam.Text == "Tuần 1")
@@ -170,7 +147,6 @@ namespace QLPhongGym.GUI
                 // Thiết lập giá trị của DateTimePicker là ngày vừa tạo
                 dateTimeNgayStart.Value = date;
                 dateTimeNgayEnd.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, 14);
-               // ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
             }
             else if (lbTuanLam.Text == "Tuần 3")
             {
@@ -178,7 +154,6 @@ namespace QLPhongGym.GUI
                 // Thiết lập giá trị của DateTimePicker là ngày vừa tạo
                 dateTimeNgayStart.Value = date;
                 dateTimeNgayEnd.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, 21);
-                //ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
             }
             else if (lbTuanLam.Text == "Tuần 4")
             {
@@ -203,21 +178,15 @@ namespace QLPhongGym.GUI
                     dateTimeNgayStart.Value = date;
                     dateTimeNgayEnd.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, daysInMonth);
                 }
-                // Thiết lập giá trị của DateTimePicker là ngày vừa tạo
                 
             }
         }
         private void FormDangKiLichHLV1_Load(object sender, EventArgs e)
-        {
-            
-            
+        {   
             ngaylamviec.Value = DateTime.Now;
             hienthingayStart_End();
             labelTheoTuan();
             hienthilenlistboxHang(dateTimeNgayStart.Value);
-            
-
-
         }
         // xu li them 7 ngay vao 7 label 
         private void labelTheoTuan()
@@ -249,35 +218,7 @@ namespace QLPhongGym.GUI
         private void btnTest_Click_1(object sender, EventArgs e)
         {
             labelTheoTuan();
-            checkHiddenlabel();
-            //hienlistLabel();
             hienthilenlistboxHang(dateTimeNgayStart.Value);
-            // listBox2.Items.AddRange(DangKiLichLamViecBAL.getInStance.danhsachsinhvientheongayca(DateTime, 1).ToArray());
-
-        }
-        private void checkHiddenlabel()
-        {
-            if (label6.Text == "")
-            {
-                //panel6.Visible = false; 
-            }
-            if (label5.Text == "")
-            {
-                // panel5.Visible = false;
-            }
-            if (label4.Text == "")
-            {
-                // panel4.Visible = false;
-            }
-            if (label7.Text == "")
-            {
-                //panel7.Visible = false;
-            }
-        }
-
-        private void lbTuanLam_Click(object sender, EventArgs e)
-        {
-
         }
         private void buttontuantiep_Click(object sender, EventArgs e)
         {
@@ -288,15 +229,10 @@ namespace QLPhongGym.GUI
             {
                 lbTuanLam.Text = parts[0] + " " + (++weekNumber);
             }
-            //ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
             tuanlam();
             labelTheoTuan();
             ClearListBox();
             hienthilenlistboxHang(dateTimeNgayStart.Value);
-        }
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-
         }
         // ds hlv dang ki ca 
         public void hienthilenlistboxHang(DateTime dateTimeStart/*, int idca*/)
@@ -351,9 +287,6 @@ namespace QLPhongGym.GUI
                         listBox6.Items.Clear();
                         listBox7.Items.Clear();
                         listBox8.Items.Clear();
-
-                        /* listBox3.Items.Clear();
-                         listBox4.Items.Clear();*/
                         listBox5.Items.AddRange(DangKiLichLamViecBAL.getInStance.danhsachsinhvientheongayca(nextDate, 1).ToArray());
                         listBox6.Items.AddRange(DangKiLichLamViecBAL.getInStance.danhsachsinhvientheongayca(nextDate, 2).ToArray());
                         listBox7.Items.AddRange(DangKiLichLamViecBAL.getInStance.danhsachsinhvientheongayca(nextDate, 3).ToArray());
@@ -377,9 +310,6 @@ namespace QLPhongGym.GUI
             try
             {
                 XepLichHLV A = new XepLichHLV();
-                /*string labeltext = label1.Text;// dd/MM/yyyy
-               // string dateString = "2023-06-01";
-                DateTime date = DateTime.ParseExact(labeltext, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal);*/
                 // Chuỗi ngày tháng ban đầu
                 string dateString1 = label1.Text;
                 // Định dạng ngày tháng ban đầu
@@ -396,10 +326,8 @@ namespace QLPhongGym.GUI
 
                 // su dung delegate 
                 A.HLVDelegate = new XepLichHLV.AddHLVToListBox(hienthilenlistboxHang);
-               
-                //A.edithlv = new XepLichHLV.EditHLVToListBox(hienthilenlistboxHang);
             }
-            catch (Exception ex)
+            catch
             {
 
             }
@@ -429,9 +357,6 @@ namespace QLPhongGym.GUI
             try
             {
                 XepLichHLV A = new XepLichHLV();
-                /*string labeltext = label1.Text;// dd/MM/yyyy
-               // string dateString = "2023-06-01";
-                DateTime date = DateTime.ParseExact(labeltext, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal);*/
                 // Chuỗi ngày tháng ban đầu
                 string dateString1 = label2.Text;
                 // Định dạng ngày tháng ban đầu
@@ -446,11 +371,10 @@ namespace QLPhongGym.GUI
                 A.ngayketthuc1 = dateTimeNgayEnd.Value;
                 A.Show();
                 A.HLVDelegate = new XepLichHLV.AddHLVToListBox(hienthilenlistboxHang);
-               // A.edithlv = new XepLichHLV.EditHLVToListBox(hienthilenlistboxHang);
             }
-            catch(Exception ex)
+            catch
             {
-                //MessageBox.Show("Loi");
+
             }
         }
         private void btntru2_Click(object sender, EventArgs e)
@@ -475,9 +399,6 @@ namespace QLPhongGym.GUI
         {
             try{
                 XepLichHLV A = new XepLichHLV();
-                /*string labeltext = label1.Text;// dd/MM/yyyy
-               // string dateString = "2023-06-01";
-                DateTime date = DateTime.ParseExact(labeltext, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal);*/
                 // Chuỗi ngày tháng ban đầu
                 string dateString1 = label3.Text;
                 // Định dạng ngày tháng ban đầu
@@ -493,7 +414,7 @@ namespace QLPhongGym.GUI
                 A.Show();
                 A.HLVDelegate = new XepLichHLV.AddHLVToListBox(hienthilenlistboxHang);
                 
-            }catch(Exception ex)
+            }catch
             {
 
             }
@@ -520,9 +441,6 @@ namespace QLPhongGym.GUI
         private void btncong4_Click(object sender, EventArgs e)
         {
             XepLichHLV A = new XepLichHLV();
-            /*string labeltext = label1.Text;// dd/MM/yyyy
-           // string dateString = "2023-06-01";
-            DateTime date = DateTime.ParseExact(labeltext, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal);*/
             // Chuỗi ngày tháng ban đầu
             string dateString1 = label4.Text;
             // Định dạng ngày tháng ban đầu
@@ -561,9 +479,7 @@ namespace QLPhongGym.GUI
         private void btncong5_Click(object sender, EventArgs e)
         {
             XepLichHLV A = new XepLichHLV();
-            /*string labeltext = label1.Text;// dd/MM/yyyy
-           // string dateString = "2023-06-01";
-            DateTime date = DateTime.ParseExact(labeltext, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal);*/
+           
             // Chuỗi ngày tháng ban đầu
             string dateString1 = label5.Text;
             // Định dạng ngày tháng ban đầu
@@ -601,9 +517,6 @@ namespace QLPhongGym.GUI
         private void btncong6_Click(object sender, EventArgs e)
         {
             XepLichHLV A = new XepLichHLV();
-            /*string labeltext = label1.Text;// dd/MM/yyyy
-           // string dateString = "2023-06-01";
-            DateTime date = DateTime.ParseExact(labeltext, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal);*/
             // Chuỗi ngày tháng ban đầu
             string dateString1 = label6.Text;
             // Định dạng ngày tháng ban đầu
@@ -640,9 +553,6 @@ namespace QLPhongGym.GUI
         private void btncong7_Click(object sender, EventArgs e)
         {
             XepLichHLV A = new XepLichHLV();
-            /*string labeltext = label1.Text;// dd/MM/yyyy
-           // string dateString = "2023-06-01";
-            DateTime date = DateTime.ParseExact(labeltext, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal);*/
             // Chuỗi ngày tháng ban đầu
             string dateString1 = label7.Text;
             // Định dạng ngày tháng ban đầu
@@ -697,9 +607,6 @@ namespace QLPhongGym.GUI
         private void btnCong(string a, string ca)
         {
             XepLichHLV A = new XepLichHLV();
-            /*string labeltext = label1.Text;// dd/MM/yyyy
-           // string dateString = "2023-06-01";
-            DateTime date = DateTime.ParseExact(labeltext, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal);*/
             // Chuỗi ngày tháng ban đầu
             string dateString1 = a;
             // Định dạng ngày tháng ban đầu
@@ -875,7 +782,6 @@ namespace QLPhongGym.GUI
             dateTimeNgayStart.Value = date;
             dateTimeNgayEnd.Value = new DateTime(ngaylamviec.Value.Year, ngaylamviec.Value.Month, 7);
             if (ngayhomnay >= dateTimeNgayStart.Value && ngayhomnay <= (dateTimeNgayEnd.Value)) {
-                //lbTuanLam.Text = "Tuần 1";
                 return true;
             }
             return false;
@@ -888,7 +794,6 @@ namespace QLPhongGym.GUI
             dateTimeNgayEnd.Value = new DateTime(ngaylamviec.Value.Year, ngaylamviec.Value.Month, 14);
             if (ngayhomnay >= dateTimeNgayStart.Value && ngayhomnay <= (dateTimeNgayEnd.Value))
             {
-                //lbTuanLam.Text = "Tuần 2";
                 return true;
             }
             return false;
@@ -901,7 +806,6 @@ namespace QLPhongGym.GUI
             dateTimeNgayEnd.Value = new DateTime(ngaylamviec.Value.Year, ngaylamviec.Value.Month, 7);
             if (ngayhomnay >= dateTimeNgayStart.Value && ngayhomnay <= (dateTimeNgayEnd.Value))
             {
-                //lbTuanLam.Text = "Tuần 1";
                 return true;
             }
             return false;
@@ -914,7 +818,6 @@ namespace QLPhongGym.GUI
             dateTimeNgayEnd.Value = new DateTime(ngaylamviec.Value.Year, ngaylamviec.Value.Month, 21);
             if (ngayhomnay >= dateTimeNgayStart.Value && ngayhomnay <= (dateTimeNgayEnd.Value))
             {
-               // lbTuanLam.Text = "Tuần 3";
                 return true;
             }
             return false;
@@ -927,7 +830,6 @@ namespace QLPhongGym.GUI
             dateTimeNgayEnd.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, 28);
             if (ngayhomnay >= dateTimeNgayStart.Value && ngayhomnay <= (dateTimeNgayEnd.Value))
             {
-                //lbTuanLam.Text = "Tuần 4";
                 return true;
             }
             return false;
@@ -945,7 +847,6 @@ namespace QLPhongGym.GUI
                 dateTimeNgayEnd.Value = new DateTime(ngaylamviec.Value.Year, ngaylamviec.Value.Month, daysInMonth);
                 if(ngayhomnay >= dateTimeNgayStart.Value && ngayhomnay <= dateTimeNgayEnd.Value)
                 {
-                   // lbTuanLam.Text = "Tuần 5";
                     return true;
                 }
             }

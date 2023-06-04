@@ -94,6 +94,7 @@
             // 
             // cbbCaLam
             // 
+            this.cbbCaLam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbCaLam.FormattingEnabled = true;
             this.cbbCaLam.Items.AddRange(new object[] {
             "Ca 1",
