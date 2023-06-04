@@ -36,15 +36,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnXem = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.btnThem = new System.Windows.Forms.Button();
             this.textTimebatdau = new System.Windows.Forms.TextBox();
             this.textTimeEnd = new System.Windows.Forms.TextBox();
             this.ngaylamviec = new System.Windows.Forms.DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btntru = new System.Windows.Forms.Button();
-            this.btnCong = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -57,6 +53,7 @@
             // 
             // cbbCaLam
             // 
+            this.cbbCaLam.Enabled = false;
             this.cbbCaLam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbCaLam.FormattingEnabled = true;
             this.cbbCaLam.Items.AddRange(new object[] {
@@ -102,9 +99,9 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(189, 501);
+            this.btnEdit.Location = new System.Drawing.Point(110, 534);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(85, 43);
+            this.btnEdit.Size = new System.Drawing.Size(121, 59);
             this.btnEdit.TabIndex = 9;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -142,16 +139,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1010, 336);
             this.dataGridView1.TabIndex = 14;
             // 
-            // btnXem
-            // 
-            this.btnXem.Location = new System.Drawing.Point(64, 501);
-            this.btnXem.Name = "btnXem";
-            this.btnXem.Size = new System.Drawing.Size(85, 43);
-            this.btnXem.TabIndex = 15;
-            this.btnXem.Text = "Xem";
-            this.btnXem.UseVisualStyleBackColor = true;
-            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -174,6 +161,7 @@
             // 
             // textTimebatdau
             // 
+            this.textTimebatdau.Enabled = false;
             this.textTimebatdau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textTimebatdau.Location = new System.Drawing.Point(759, 265);
             this.textTimebatdau.Name = "textTimebatdau";
@@ -182,6 +170,7 @@
             // 
             // textTimeEnd
             // 
+            this.textTimeEnd.Enabled = false;
             this.textTimeEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textTimeEnd.Location = new System.Drawing.Point(759, 202);
             this.textTimeEnd.Name = "textTimeEnd";
@@ -191,49 +180,18 @@
             // ngaylamviec
             // 
             this.ngaylamviec.CustomFormat = "yyyy-MM-dd";
+            this.ngaylamviec.Enabled = false;
             this.ngaylamviec.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ngaylamviec.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.ngaylamviec.Location = new System.Drawing.Point(561, 34);
+            this.ngaylamviec.Location = new System.Drawing.Point(712, 34);
             this.ngaylamviec.Name = "ngaylamviec";
             this.ngaylamviec.Size = new System.Drawing.Size(165, 30);
             this.ngaylamviec.TabIndex = 22;
             this.ngaylamviec.Value = new System.DateTime(2023, 4, 21, 0, 0, 0, 0);
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(754, 39);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 25);
-            this.label8.TabIndex = 27;
-            this.label8.Text = "Hôm Nay";
-            // 
-            // btntru
-            // 
-            this.btntru.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btntru.Location = new System.Drawing.Point(411, 35);
-            this.btntru.Name = "btntru";
-            this.btntru.Size = new System.Drawing.Size(38, 29);
-            this.btntru.TabIndex = 40;
-            this.btntru.Text = "-";
-            this.btntru.UseVisualStyleBackColor = true;
-            this.btntru.Click += new System.EventHandler(this.btntru_Click);
-            // 
-            // btnCong
-            // 
-            this.btnCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCong.Location = new System.Drawing.Point(853, 35);
-            this.btnCong.Name = "btnCong";
-            this.btnCong.Size = new System.Drawing.Size(29, 29);
-            this.btnCong.TabIndex = 41;
-            this.btnCong.Text = "+";
-            this.btnCong.UseVisualStyleBackColor = true;
-            this.btnCong.Click += new System.EventHandler(this.btnCong_Click);
-            // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(110, 588);
+            this.btnCancel.Location = new System.Drawing.Point(110, 661);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(121, 59);
             this.btnCancel.TabIndex = 48;
@@ -264,6 +222,7 @@
             // dateTimeNgayEnd
             // 
             this.dateTimeNgayEnd.CustomFormat = "yyyy-MM-dd";
+            this.dateTimeNgayEnd.Enabled = false;
             this.dateTimeNgayEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeNgayEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimeNgayEnd.Location = new System.Drawing.Point(1178, 34);
@@ -276,6 +235,7 @@
             // dateTimeNgayStart
             // 
             this.dateTimeNgayStart.CustomFormat = "yyyy-MM-dd";
+            this.dateTimeNgayStart.Enabled = false;
             this.dateTimeNgayStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeNgayStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimeNgayStart.Location = new System.Drawing.Point(962, 34);
@@ -298,7 +258,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(455, 39);
+            this.label7.Location = new System.Drawing.Point(596, 39);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(94, 25);
             this.label7.TabIndex = 66;
@@ -319,15 +279,11 @@
             this.Controls.Add(this.dateTimeNgayEnd);
             this.Controls.Add(this.dateTimeNgayStart);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnCong);
-            this.Controls.Add(this.btntru);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.ngaylamviec);
             this.Controls.Add(this.textTimeEnd);
             this.Controls.Add(this.textTimebatdau);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.btnXem);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.label4);
@@ -355,15 +311,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnXem;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.TextBox textTimebatdau;
         private System.Windows.Forms.TextBox textTimeEnd;
         private System.Windows.Forms.DateTimePicker ngaylamviec;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btntru;
-        private System.Windows.Forms.Button btnCong;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;

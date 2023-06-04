@@ -472,7 +472,7 @@ namespace QLPhongGym.DAL
             }
             return listhlv;
         }
-        // ca theo ngay cua list hlv
+        // hiển thi tên ca theo ngay cua list hlv
         public List<String> danhsachsinhvientheongayca(DateTime ngay, int idca)
         {
             List<String> danhsachsinhvien = new List<string>();
@@ -492,6 +492,24 @@ namespace QLPhongGym.DAL
             return danhsachsinhvien;
         }
 
+        public List<String> danhsachmasinhvientheongayca(DateTime ngay, int idca, string name)
+        {
+            List<String> danhsachsinhvien = new List<string>();
+            var result = (from u in db.LichLamViecTrongTuans
+                          from i in db.Users.OfType<HLV>()
+                          where u.IDHLV == i.IDUsers && u.NgayLam == ngay && u.IDCa == idca && i.Name.Contains(name)
+
+                          select new
+                          {
+                              i.IDUsers
+                          }).ToList();
+            foreach (var every in result)
+            {
+                danhsachsinhvien.Add(every.IDUsers.ToString());
+
+            }
+            return danhsachsinhvien;
+        }
         public DataTable ListHLVByCaForm2(DateTime ngaylam, int idca)
         {
             dt = CreatDataTable(); int cnt = 1;

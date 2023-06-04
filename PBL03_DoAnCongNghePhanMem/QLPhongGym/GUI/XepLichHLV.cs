@@ -29,21 +29,10 @@ namespace QLPhongGym.GUI
 
         public delegate void AddHLVToListBox(DateTime ngaybatdau);
         public AddHLVToListBox HLVDelegate;
-
-        /*public delegate void EditHLVToListBox(DateTime ngaybatdau);
-        public EditHLVToListBox edithlv;*/
-
-        
         public XepLichHLV()
         {
             InitializeComponent();
-            //floatTimeNgayLam();
         }
-       /* private void floatTimeNgayLam()
-        {
-            ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
-
-        }*/
         public DateTime ngaylamviec1 { get; set; }
         public string ca { get; set; }
        
@@ -52,9 +41,6 @@ namespace QLPhongGym.GUI
 
         private void XepLichHLV_Load(object sender, EventArgs e)
         {
-           
-          
-
             ngaylamviec.Value = ngaylamviec1;
             cbbCaLam.SelectedItem = ca;
             dateTimeNgayStart.Value = ngaybatdau1;
@@ -62,33 +48,18 @@ namespace QLPhongGym.GUI
             string s = cbbCaLam.SelectedItem.ToString().Trim();
             int id = Convert.ToInt32(s.Substring(3, 1));
             dataGridView1.DataSource =DangKiLichLamViecBAL.getInStance.ListHLVByCaForm2(ngaylamviec.Value, id);
-            // them danh sach hlv len checklist box
             var listHLV = QLHLVBLL.getInstance.GetHLVs();
             foreach (var list in listHLV)
             {
                 checkedListBox1.Items.Add(list.IDUsers + " " + list.Name);
             }
-                //tuanlam();*/
-
-
         }
         string luachon = "";
         private void btnXem_Click(object sender, EventArgs e)
         {
-            int cnt = 0;
-            //dataGridView1.DataSource = DangKiLichLamViecBAL.getInStance.CapNhatListDangKiCa(dateTimeNgayStart.Value, dateTimeNgayEnd.Value);
-           
-
-                dataGridView1.DataSource = DangKiLichLamViecBAL.getInStance.XemTheoNgay(ngaylamviec.Value);
-        
-
-                dataGridView1.DataSource = DangKiLichLamViecBAL.getInStance.XemTheoTuan(dateTimeNgayStart.Value, dateTimeNgayEnd.Value);
-            
-           
-
-                dataGridView1.DataSource = DangKiLichLamViecBAL.getInStance.CapNhatListHLVAll();
-            
-            // sap xep theo ngay luon 
+            dataGridView1.DataSource = DangKiLichLamViecBAL.getInStance.XemTheoNgay(ngaylamviec.Value);
+            dataGridView1.DataSource = DangKiLichLamViecBAL.getInStance.XemTheoTuan(dateTimeNgayStart.Value, dateTimeNgayEnd.Value);
+            dataGridView1.DataSource = DangKiLichLamViecBAL.getInStance.CapNhatListHLVAll();
         }
         private void cbbCaLam_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -130,8 +101,6 @@ namespace QLPhongGym.GUI
         {
             if (cbbCaLam.SelectedIndex != -1)
             {
-                //dataGridView1.DataSource = QLHLVBLL.getInstance.getinfoLichHLV();
-                //dataGridView1.Rows.Add(0, 1);
                 tuan = new List<LichLamViecTrongTuan>();
                 for (int i = 0; i < checkedListBox1.Items.Count; i++)
                 {
@@ -169,18 +138,14 @@ namespace QLPhongGym.GUI
                                 MessageBox.Show("Lỗi ");
                                 break;
                         }
-                        /* MessageBox.Show(ma.ToString());
-                         MessageBox.Show(hoTen);*/
 
                         a.NgayLam = ngaylamviec.Value;
-                        //MessageBox.Show(a.NgayLam.ToString());
                         a.NgayBatDau = dateTimeNgayStart.Value;
 
                         a.NgayKetThuc = dateTimeNgayEnd.Value;
                         if (DangKiLichLamViecBAL.getInStance.AddPersonIfNotExists((int)a.IDHLV, (int)a.IDCa, (DateTime)a.NgayBatDau, (DateTime)a.NgayKetThuc, (DateTime)a.NgayLam))
                         {
                             MessageBox.Show("Thêm Thành công "+ a.IDHLV.ToString() +" "+ hoTen );
-                            //dataGridView1.DataSource = DangKiLichLamViecBAL.getInStance.CapNhatListDangKiCa(dateTimeNgayStart.Value, dateTimeNgayEnd.Value);
                             dataGridView1.DataSource= DangKiLichLamViecBAL.getInStance.ListHLVByCaForm2(ngaylamviec.Value,idca);
                             
                         }
@@ -206,85 +171,10 @@ namespace QLPhongGym.GUI
 
         private void dateTimeNgayStart_ValueChanged(object sender, EventArgs e)
         {
-            /*  // Kiểm tra nếu labelWeek có giá trị là "Tuần 1"
-              if (lbTuanLam.Text == "Tuần 1")
-              {
-                  // Tạo một đối tượng DateTime mới với ngày là 1 và giờ phút giây là 0
-                  DateTime date = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
-                  // Thiết lập giá trị của DateTimePicker là ngày vừa tạo
-                  dateTimeNgayStart.Value = date;
-                  dateTimeNgayEnd.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 8);
-              }*/
             ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
-        }
-        private void tuanlam()
-        {
-           /* if (lbTuanLam.Text == "Tuần 1")
-            {
-                // Tạo một đối tượng DateTime mới với ngày là 1 và giờ phút giây là 0
-                DateTime date = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, 1);
-                // Thiết lập giá trị của DateTimePicker là ngày vừa tạo
-                dateTimeNgayStart.Value = date;
-                dateTimeNgayEnd.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, 7);
-            }
-            else if (lbTuanLam.Text == "Tuần 2")
-            {
-                DateTime date = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, 8);
-                // Thiết lập giá trị của DateTimePicker là ngày vừa tạo
-                dateTimeNgayStart.Value = date;
-                dateTimeNgayEnd.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, 14);
-                ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
-            }
-            else if (lbTuanLam.Text == "Tuần 3")
-            {
-                DateTime date = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, 15);
-                // Thiết lập giá trị của DateTimePicker là ngày vừa tạo
-                dateTimeNgayStart.Value = date;
-                dateTimeNgayEnd.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, 21);
-                ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
-            }
-            else if (lbTuanLam.Text == "Tuần 4")
-            {
-                DateTime date = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, 22);
-                // Thiết lập giá trị của DateTimePicker là ngày vừa tạo
-                dateTimeNgayStart.Value = date;
-                dateTimeNgayEnd.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, 28);
-            }
-            else if (lbTuanLam.Text == "Tuần 5")
-            {
-                // tinh so ngay trong thang  
-                int daysInMonth = DateTime.DaysInMonth(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month);
-                DateTime date = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, 29);
-                // Thiết lập giá trị của DateTimePicker là ngày vừa tạo
-                dateTimeNgayStart.Value = date;
-                dateTimeNgayEnd.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, daysInMonth);
-            }*/
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            /*string Sotuan = lbTuanLam.Text.Trim();
-            string[] parts = Sotuan.Split(' ');
-            int weekNumber = Int32.Parse(parts[1]);
-            if (weekNumber < 5)
-            {
-                lbTuanLam.Text = parts[0] + " " + (++weekNumber);
-            }
-            ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);*/
-        }
-        private void button5_Click(object sender, EventArgs e)
-        {
-           /* string Sotuan = lbTuanLam.Text.Trim();
-            string[] parts = Sotuan.Split(' '); // Tách chuỗi thành mảng các chuỗi con dựa trên ký tự khoảng trắng
-            int weekNumber = Int32.Parse(parts[1]);
-            if (weekNumber > 1)
-            {
-                lbTuanLam.Text = parts[0] + " " + (--weekNumber);
-            }
-            ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);*/
         }
         private void lbTuanLam_TextChanged(object sender, EventArgs e)
         {
-            tuanlam();
             ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
         }
         private void btnXoa_Click(object sender, EventArgs e)
@@ -294,7 +184,6 @@ namespace QLPhongGym.GUI
                 // Hàng đầu tiên trên DataGridView đã được chọn
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
                 // can than loi thieu value
-                //int idca = Convert.ToInt32(selectedRow.Cells[1].Value.ToString());
                 int idhlv = Convert.ToInt32(selectedRow.Cells[1].Value.ToString());
                 DateTime ngaylam = Convert.ToDateTime(selectedRow.Cells[3].Value.ToString());
                 LichLamViecTrongTuan a = new LichLamViecTrongTuan();
@@ -314,28 +203,6 @@ namespace QLPhongGym.GUI
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            // tim kiem ca theo tuan 
-/*            if (cbbTimKiemCaLam.SelectedIndex != -1)
-            {
-                string a = cbbTimKiemCaLam.SelectedItem.ToString();
-                string[] parts = a.Split(' ');
-                string caNumberString = parts[parts.Length - 1];
-                int caNumber = int.Parse(caNumberString);
-               
-                    dataGridView1.DataSource = DangKiLichLamViecBAL.getInStance.TimKiemLichLamViec(caNumber, dateTimeNgayStart.Value, dateTimeNgayEnd.Value);
-             
-                    dataGridView1.DataSource = DangKiLichLamViecBAL.getInStance.TimKiemLichLamViecTheoNgay(caNumber, ngaylamviec.Value);
-
-
-                }
-                else
-                {
-                    MessageBox.Show("Ban chua kick o radiobutton ");
-                }*/
-        }
-
         private void btnEdit_Click(object sender, EventArgs e)
         {
             FormEditLichLamViec a = new FormEditLichLamViec();
@@ -345,16 +212,11 @@ namespace QLPhongGym.GUI
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 DataGridViewRow row = dataGridView1.SelectedRows[0];
-                // int IDCa = Convert.ToInt32(row.Cells[1].Value.ToString());
                 int IDCa = Convert.ToInt32(cbbCaLam.SelectedItem.ToString().Substring(3, 1));
                 int IDHLV = Convert.ToInt32(row.Cells[1].Value.ToString());
-                /*DateTime NgayBatDau = Convert.ToDateTime(row.Cells[4].Value.ToString());
-                DateTime NgayKetThuc = Convert.ToDateTime(row.Cells[5].Value.ToString());*/
                 DateTime NgayLam = Convert.ToDateTime(row.Cells[3].Value.ToString());
                 a.idca = IDCa;
                 a.idhlv = IDHLV;
-               /* a.ngaybatdau = NgayBatDau;
-                a.ngayketthuc = NgayKetThuc;*/
                 a.ngaylam = NgayLam;
                 a.Show();
                 a.buon += new FormEditLichLamViec.mydelegate(Edit);
@@ -368,14 +230,10 @@ namespace QLPhongGym.GUI
         }
         public void Edit(int idca, int idhlv, DateTime ngaybatdau, /*DateTime ngayketthuc,*/ DateTime ngaylam)
         {
-            /*DangKiLichLamViecBAL.getInStance.UpdateOrder(idhlv,idca,ngaybatdau,ngayketthuc,ngaylam);
-            */
             try {
                 DataGridViewRow row = dataGridView1.SelectedRows[0];
                 int IDCa = Convert.ToInt32(cbbCaLam.SelectedItem.ToString().Substring(3, 1));
                 int IDHLV = Convert.ToInt32(row.Cells[1].Value.ToString());
-               // DateTime NgayBatDau = Convert.ToDateTime(row.Cells[4].Value.ToString());
-                /*DateTime NgayKetThuc = Convert.ToDateTime(row.Cells[5].Value.ToString());*/
                 DateTime NgayLam = Convert.ToDateTime(row.Cells[3].Value.ToString());
                 if (IDCa != idca || IDHLV != idhlv || ngaylam != NgayLam)
                 {
@@ -407,59 +265,6 @@ namespace QLPhongGym.GUI
                 MessageBox.Show("Đã rồn tại rồi ");
             }
         }
-
-
-        private void btnthangsau_Click(object sender, EventArgs e)
-        {
-            /*if (dateTimeNgayStart.Value.Month >= 1 && dateTimeNgayStart.Value.Month < 12)
-            {
-                int nam = dateTimeNgayStart.Value.Year;
-                int thang = dateTimeNgayStart.Value.Month;
-                int ngaybatdau = dateTimeNgayStart.Value.Day;
-                int ngayketthuc = dateTimeNgayEnd.Value.Day;
-
-                thang = ++thang;
-                int daysInMonth = DateTime.DaysInMonth(nam, thang);
-                if (lbTuanLam.Text == "Tuần 5")
-                {
-                    dateTimeNgayStart.Value = new DateTime(nam, thang, 29);
-                    dateTimeNgayEnd.Value = new DateTime(nam, thang, daysInMonth);
-                    ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
-                }
-                else
-                {
-                    dateTimeNgayStart.Value = new DateTime(nam, thang, ngaybatdau);
-                    dateTimeNgayEnd.Value = new DateTime(nam, thang, ngayketthuc);
-                    ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
-                }
-            }*/
-        }
-
-        private void btnthangtruoc_Click(object sender, EventArgs e)
-        {
-            /*if (dateTimeNgayStart.Value.Month > 1 && dateTimeNgayStart.Value.Month <= 12)
-            {
-                int nam = dateTimeNgayStart.Value.Year;
-                int thang = dateTimeNgayStart.Value.Month;
-                int ngaybatdau = dateTimeNgayStart.Value.Day;
-                int ngayketthuc = dateTimeNgayEnd.Value.Day;
-                thang = --thang;
-                int daysInMonth = DateTime.DaysInMonth(nam, thang);
-                if (lbTuanLam.Text == "Tuần 5")
-                {
-                    dateTimeNgayStart.Value = new DateTime(nam, thang, 29);
-                    dateTimeNgayEnd.Value = new DateTime(nam, thang, daysInMonth);
-                    ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
-                }
-                else
-                {
-                    dateTimeNgayStart.Value = new DateTime(nam, thang, ngaybatdau);
-                    dateTimeNgayEnd.Value = new DateTime(nam, thang, ngayketthuc);
-                    ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
-                }
-            }*/
-        }
-
         private void btntru_Click(object sender, EventArgs e)
         {
             if (ngaylamviec.Value > dateTimeNgayStart.Value && ngaylamviec.Value <= dateTimeNgayEnd.Value)
@@ -477,11 +282,6 @@ namespace QLPhongGym.GUI
                 day = ++day;
                 ngaylamviec.Value = new DateTime(ngaylamviec.Value.Year, ngaylamviec.Value.Month, day);
             }
-        }
-
-        private void lbTuanLam_Click(object sender, EventArgs e)
-        {
-
         }
         private void btbOKI_Click(object sender, EventArgs e)
         {

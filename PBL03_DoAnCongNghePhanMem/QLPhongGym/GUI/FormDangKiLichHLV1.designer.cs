@@ -47,7 +47,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.buttontuantiep = new System.Windows.Forms.Button();
             this.lbTuanLam = new System.Windows.Forms.Label();
-            this.btnNgaylamviec = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -398,17 +397,6 @@
             this.lbTuanLam.TabIndex = 53;
             this.lbTuanLam.Text = "Tuần 4";
             // 
-            // btnNgaylamviec
-            // 
-            this.btnNgaylamviec.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnNgaylamviec.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNgaylamviec.Location = new System.Drawing.Point(327, 718);
-            this.btnNgaylamviec.Name = "btnNgaylamviec";
-            this.btnNgaylamviec.Size = new System.Drawing.Size(149, 53);
-            this.btnNgaylamviec.TabIndex = 52;
-            this.btnNgaylamviec.Text = "Ngày Làm";
-            this.btnNgaylamviec.UseVisualStyleBackColor = true;
-            // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -446,6 +434,7 @@
             // 
             this.ngaylamviec.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ngaylamviec.CustomFormat = "yyyy-MM-dd";
+            this.ngaylamviec.Enabled = false;
             this.ngaylamviec.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ngaylamviec.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.ngaylamviec.Location = new System.Drawing.Point(150, 23);
@@ -458,6 +447,7 @@
             // 
             this.dateTimeNgayEnd.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dateTimeNgayEnd.CustomFormat = "yyyy-MM-dd";
+            this.dateTimeNgayEnd.Enabled = false;
             this.dateTimeNgayEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeNgayEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimeNgayEnd.Location = new System.Drawing.Point(1192, 19);
@@ -471,6 +461,7 @@
             // 
             this.dateTimeNgayStart.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dateTimeNgayStart.CustomFormat = "yyyy-MM-dd";
+            this.dateTimeNgayStart.Enabled = false;
             this.dateTimeNgayStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeNgayStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimeNgayStart.Location = new System.Drawing.Point(964, 19);
@@ -478,17 +469,16 @@
             this.dateTimeNgayStart.Size = new System.Drawing.Size(155, 34);
             this.dateTimeNgayStart.TabIndex = 46;
             this.dateTimeNgayStart.Value = new System.DateTime(2023, 4, 21, 0, 0, 0, 0);
-            this.dateTimeNgayStart.ValueChanged += new System.EventHandler(this.dateTimeNgayStart_ValueChanged);
             // 
             // btnTest
             // 
             this.btnTest.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTest.Location = new System.Drawing.Point(1112, 718);
+            this.btnTest.Location = new System.Drawing.Point(702, 718);
             this.btnTest.Name = "btnTest";
             this.btnTest.Size = new System.Drawing.Size(149, 53);
             this.btnTest.TabIndex = 61;
-            this.btnTest.Text = "Update";
+            this.btnTest.Text = "Reload";
             this.btnTest.UseVisualStyleBackColor = true;
             this.btnTest.Click += new System.EventHandler(this.btnTest_Click_1);
             // 
@@ -1711,7 +1701,6 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.buttontuantiep);
             this.Controls.Add(this.lbTuanLam);
-            this.Controls.Add(this.btnNgaylamviec);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
@@ -1785,7 +1774,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button buttontuantiep;
         private System.Windows.Forms.Label lbTuanLam;
-        private System.Windows.Forms.Button btnNgaylamviec;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;

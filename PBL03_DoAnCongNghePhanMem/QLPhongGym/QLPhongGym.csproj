@@ -265,6 +265,24 @@
     <Compile Include="GUI\HoaDonForm.Designer.cs">
       <DependentUpon>HoaDonForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\KH_DangKiHLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KH_DangKiHLV.Designer.cs">
+      <DependentUpon>KH_DangKiHLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KH_QuanLyLichThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KH_QuanLyLichThue.Designer.cs">
+      <DependentUpon>KH_QuanLyLichThue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\KH_SuaLich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\KH_SuaLich.Designer.cs">
+      <DependentUpon>KH_SuaLich.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -353,6 +371,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\HoaDonForm.resx">
       <DependentUpon>HoaDonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KH_DangKiHLV.resx">
+      <DependentUpon>KH_DangKiHLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KH_QuanLyLichThue.resx">
+      <DependentUpon>KH_QuanLyLichThue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\KH_SuaLich.resx">
+      <DependentUpon>KH_SuaLich.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
