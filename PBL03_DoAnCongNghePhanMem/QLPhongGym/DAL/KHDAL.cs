@@ -24,7 +24,7 @@ namespace QLPhongGym.DAL
             }
             private set { }
         }
-        QLPhongGymDB db = new QLPhongGymDB();
+        readonly QLPhongGymDB db = new QLPhongGymDB();
         DataTable dt = null;
         public DataTable CreateTable()
         {

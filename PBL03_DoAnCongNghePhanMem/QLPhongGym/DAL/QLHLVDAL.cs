@@ -37,7 +37,7 @@ namespace QLPhongGym.DAL
             private set
             {}
         }
-        QLPhongGymDB db = new QLPhongGymDB();
+        readonly QLPhongGymDB db = new QLPhongGymDB();
         DataTable dt = new DataTable();
         // tao cot bang
         public DataTable CreatDataTable()

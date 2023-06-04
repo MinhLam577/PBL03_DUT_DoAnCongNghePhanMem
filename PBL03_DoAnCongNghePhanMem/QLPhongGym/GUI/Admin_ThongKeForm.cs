@@ -25,7 +25,7 @@ namespace QLPhongGym.GUI
         }
         public void LoadDuLieuForm()
         {
-            int tongkhachhang = 0, tonghlv = 0, tongtb = 0, tonggt = 0;
+            int tongkhachhang = 0, tonghlv = 0, tonggt = 0;
             foreach (var i in KHBLL.Instance.GetAllKHID())
                 tongkhachhang++;
             foreach (var i in QLHLVBLL.getInstance.GetAllHLVID())
@@ -86,7 +86,6 @@ namespace QLPhongGym.GUI
                 "Nhu cầu đăng kí gói tập trong năm " + x, System.Windows.Forms.DataVisualization.Charting.Docking.Top,
                 new Font("Arial", 20, FontStyle.Bold), Color.Black));
             List<GoiTap> list_gt = GoiTapBLL.Instance.GetAllGT();
-            int cnt_gt = list_gt.Count;
             chart_nhucaudkgt.ChartAreas[0].AxisX.Title = "Tháng";
             chart_nhucaudkgt.ChartAreas[0].AxisX.TitleFont = new Font("Times new roman", 14, FontStyle.Bold);
             chart_nhucaudkgt.ChartAreas[0].AxisX.TitleAlignment = StringAlignment.Near;

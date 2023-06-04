@@ -16,7 +16,7 @@ namespace QLPhongGym.DAL
 {
     class DangKiGoiTapDAL
     {
-        QLPhongGymDB db = new QLPhongGymDB();
+        readonly QLPhongGymDB db = new QLPhongGymDB();
         private static DangKiGoiTapDAL instance;
         public static DangKiGoiTapDAL Instance
         {
