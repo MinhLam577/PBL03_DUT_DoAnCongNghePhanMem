@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
 using System.Diagnostics;
+using System.Runtime.InteropServices.ComTypes;
 
 namespace QLPhongGym.GUI
 {
@@ -29,6 +30,7 @@ namespace QLPhongGym.GUI
         {
             dgv_kh.DataSource = KHBLL.Instance.FindListKHByIDOrName("");
             dgv_kh.Columns["IDThe"].Visible = false;
+            dgv_kh.Columns.Cast<DataGridViewColumn>().ToList().ForEach(f => f.SortMode = DataGridViewColumnSortMode.NotSortable);
         }
         private void LoadCBBGT()
         {
@@ -43,6 +45,7 @@ namespace QLPhongGym.GUI
         {
             dgv_gt.DataSource = DangKiGoiTapBLL.Instance.FitlerListDKGT(IDKH, fitlerDKGT_tsmi.Text, cb_gt.SelectedItem as string);
             dgv_gt.Columns["IDThe"].Visible = false;
+            dgv_gt.Columns.Cast<DataGridViewColumn>().ToList().ForEach(f => f.SortMode = DataGridViewColumnSortMode.NotSortable);
             //Lấy ra gói tập có hiệu lực gần nhất có hiệu lực
             DangKiGoiTap dkgt = DangKiGoiTapBLL.Instance.GetDKGT_Newest_ByIDKH(IDKH);
             //Kiểm tra nếu gói tập có tồn tại thì show ghi chú của user lên giao diện
@@ -90,9 +93,9 @@ namespace QLPhongGym.GUI
                         pb_kh.Image = Image.FromFile(Application.StartupPath + @"\PersonImage\" + kh.Image);
                     else pb_kh.Image = Image.FromFile(ImagePath);
                 }
-                catch (Exception ex)
+                catch 
                 {
-                    MessageBox.Show(ex.Message);
+
                 }
 
             }
@@ -192,6 +195,8 @@ namespace QLPhongGym.GUI
             fitlerDKGT_tsmi.Text = "Fitler";
             sortkh_tsmi.Text = "Sắp xếp";
             cb_gt.Text = "None";
+            txb_mathe_cccd.Text = "";
+            txb_ten_sdt.Text = "";
         }
 
         private void txb_ten_sdt_TextChanged(object sender, EventArgs e)
@@ -235,6 +240,7 @@ namespace QLPhongGym.GUI
                     dgv_kh.DataSource = KHBLL.Instance.SortListKHBy("Mã thẻ", KHBLL.Instance.FindListKHByNameAndID(txb_ten_sdt.Text, txb_mathe_cccd.Text));
                 else //Nếu dữ liệu tìm kiếm là tất cả
                     dgv_kh.DataSource = KHBLL.Instance.SortListKHBy("Mã thẻ", KHBLL.Instance.FindListKHByIDOrName(""));
+
             }
             catch(Exception ex) {
                 MessageBox.Show(ex.Message, "Sắp xếp thất bại");
@@ -293,9 +299,9 @@ namespace QLPhongGym.GUI
                 {
                     //Đăng kí và gia hạn đều sài chung cùng 1 form là đăng kí gói tập khách hàng, truyền vào tham số là khách hàng và tên gói tập
                     //Gia hạn thì truyền vào tên gói tập là tên gói tập đã đăng kí trước đó
-                    if(fitlerDKGT_tsmi.Text != "Đang tập")
+                    if (Convert.ToInt32(dgv_gt.SelectedRows[0].Cells["DaysLeft"].Value.ToString()) <= 0)
                     {
-                        MessageBox.Show("Chỉ có thể gia hạn được gói tập mà khách hàng đang tập");
+                        MessageBox.Show("Chỉ có thể gia hạn gói tập còn hiệu lực(chưa hết hạn sử dụng)");
                         return;
                     }
                     int IDKH = Convert.ToInt32(dgv_kh.SelectedRows[0].Cells["IDThe"].Value.ToString());
@@ -671,6 +677,15 @@ namespace QLPhongGym.GUI
             KH_QuanLyLichThue a = new KH_QuanLyLichThue();
             a.Show();
 
+        }
+
+        private void dgv_kh_DataSourceChanged(object sender, EventArgs e)
+        {
+            int cnt = 0;
+            for(int i = 0; i < dgv_kh.Rows.Count - 1; i++)
+            {
+                dgv_kh.Rows[i].Cells["STT"].Value = ++cnt;
+            }
         }
     }
 }

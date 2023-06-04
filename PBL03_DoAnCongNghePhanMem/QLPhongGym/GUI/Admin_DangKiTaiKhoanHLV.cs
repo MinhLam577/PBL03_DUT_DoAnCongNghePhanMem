@@ -24,11 +24,13 @@ namespace QLPhongGym.GUI
         public void Load_Datahlv()
         {
             dgv_hlv.DataSource = TKHLV_BLL.Instance.GetDataTableByList_BLL();
+            dgv_hlv.Columns.Cast<DataGridViewColumn>().ToList().ForEach(f => f.SortMode = DataGridViewColumnSortMode.NotSortable);
             dgv_hlv.Columns["ID"].Visible = false;
         }
         public void Load_DataTK()
         {
             dgv_tkhlv.DataSource = TKHLV_BLL.Instance.GetDataTableByList2_BLL();
+            dgv_tkhlv.Columns.Cast<DataGridViewColumn>().ToList().ForEach(f => f.SortMode = DataGridViewColumnSortMode.NotSortable);
             dgv_tkhlv.Columns["ID"].Visible = false;
         }
 
@@ -222,6 +224,24 @@ namespace QLPhongGym.GUI
                 
             }
             
+        }
+
+        private void dgv_hlv_DataSourceChanged(object sender, EventArgs e)
+        {
+            int cnt = 0;
+            for (int i = 0; i < dgv_hlv.Rows.Count - 1; i++)
+            {
+                dgv_hlv.Rows[i].Cells["STT"].Value = ++cnt;
+            }
+        }
+
+        private void dgv_tkhlv_DataSourceChanged(object sender, EventArgs e)
+        {
+            int cnt = 0;
+            for (int i = 0; i < dgv_tkhlv.Rows.Count - 1; i++)
+            {
+                dgv_tkhlv.Rows[i].Cells["STT"].Value = ++cnt;
+            }
         }
     }
 }

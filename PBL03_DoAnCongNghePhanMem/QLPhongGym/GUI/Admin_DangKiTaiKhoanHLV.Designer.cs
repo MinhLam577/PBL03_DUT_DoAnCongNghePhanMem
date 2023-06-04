@@ -62,6 +62,7 @@
             this.dgv_tkhlv.RowTemplate.Height = 24;
             this.dgv_tkhlv.Size = new System.Drawing.Size(706, 600);
             this.dgv_tkhlv.TabIndex = 0;
+            this.dgv_tkhlv.DataSourceChanged += new System.EventHandler(this.dgv_tkhlv_DataSourceChanged);
             // 
             // label1
             // 
@@ -151,6 +152,7 @@
             this.dgv_hlv.RowTemplate.Height = 24;
             this.dgv_hlv.Size = new System.Drawing.Size(426, 600);
             this.dgv_hlv.TabIndex = 12;
+            this.dgv_hlv.DataSourceChanged += new System.EventHandler(this.dgv_hlv_DataSourceChanged);
             this.dgv_hlv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_hlv_CellClick);
             // 
             // label3

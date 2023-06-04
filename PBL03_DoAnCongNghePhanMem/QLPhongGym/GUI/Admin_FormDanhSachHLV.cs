@@ -24,6 +24,8 @@ namespace QLPhongGym.GUI
         private void CapNhatListHLV()
         {
             dataGridView1.DataSource = QLHLVBLL.getInstance.CapNhatListHLV();
+            dataGridView1.Columns["ID"].Visible = false;
+            dataGridView1.Columns.Cast<DataGridViewColumn>().ToList().ForEach(f => f.SortMode = DataGridViewColumnSortMode.NotSortable);
         }
         int lc = -1;
         private void btnXoa_Click(object sender, EventArgs e)
@@ -162,6 +164,15 @@ namespace QLPhongGym.GUI
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void dataGridView1_DataSourceChanged(object sender, EventArgs e)
+        {
+            int cnt = 0;
+            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            {
+                dataGridView1.Rows[i].Cells["STT"].Value = ++cnt;
+            }
         }
     }
 }
