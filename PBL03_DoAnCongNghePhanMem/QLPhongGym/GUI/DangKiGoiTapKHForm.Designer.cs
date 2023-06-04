@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangKiGoiTapKHForm));
-            this.label9 = new System.Windows.Forms.Label();
+            this.lb_main = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dtp_ngayketthuc = new System.Windows.Forms.DateTimePicker();
             this.txb_ghichu = new System.Windows.Forms.TextBox();
@@ -63,16 +63,16 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label9
+            // lb_main
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(572, 17);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(472, 42);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Đăng kí gói tập khách hàng";
+            this.lb_main.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lb_main.AutoSize = true;
+            this.lb_main.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_main.Location = new System.Drawing.Point(572, 17);
+            this.lb_main.Name = "lb_main";
+            this.lb_main.Size = new System.Drawing.Size(472, 42);
+            this.lb_main.TabIndex = 0;
+            this.lb_main.Text = "Đăng kí gói tập khách hàng";
             // 
             // label2
             // 
@@ -391,7 +391,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.lb_main);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.cb_gt);
             this.panel1.Location = new System.Drawing.Point(0, 2);
@@ -429,7 +429,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lb_main;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtp_ngayketthuc;
         private System.Windows.Forms.TextBox txb_ghichu;

@@ -253,10 +253,16 @@ namespace QLPhongGym.GUI
             dtp_ngaydangki.Enabled = false;
             if (GoiTap != "")
             {
+                lb_main.Text = "Gia hạn gói tập khách hàng";
                 cb_gt.Text = GoiTap;
                 cb_gt.Enabled = false;
             }
-            else cb_gt.Enabled = true;
+            else
+            {
+                cb_gt.Enabled = true;
+                lb_main.Text = "Đăng kí gói tập khách hàng";
+            }
+
                   
         }
         private void cb_gt_SelectedIndexChanged(object sender, EventArgs e)

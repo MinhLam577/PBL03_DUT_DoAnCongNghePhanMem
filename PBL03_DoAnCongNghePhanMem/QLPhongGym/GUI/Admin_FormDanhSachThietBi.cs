@@ -25,6 +25,7 @@ namespace QLPhongGym.GUI
         public void ShowData()
         {
             dataGridView1.DataSource = ThietBi_BLL.Instance.GetAllThietBi_BLL();
+            dataGridView1.Columns.Cast<DataGridViewColumn>().ToList().ForEach(f => f.SortMode = DataGridViewColumnSortMode.NotSortable);
             dataGridView1.Columns["ID"].Visible = false;
         }
 
@@ -96,5 +97,13 @@ namespace QLPhongGym.GUI
             dataGridView1.Columns["ID"].Visible = false;
         }
 
+        private void dataGridView1_DataSourceChanged(object sender, EventArgs e)
+        {
+            int cnt = 0;
+            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            {
+                dataGridView1.Rows[i].Cells["STT"].Value = ++cnt;
+            }
+        }
     }
 }

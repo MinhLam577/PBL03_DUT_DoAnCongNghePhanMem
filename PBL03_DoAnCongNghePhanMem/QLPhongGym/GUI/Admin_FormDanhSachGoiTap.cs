@@ -23,6 +23,7 @@ namespace QLPhongGym.GUI
         {
             dataGridView1.DataSource = GoiTapBLL.Instance.GetData_BLL();
             dataGridView1.Columns["Mã gói tập"].Visible = false;
+            dataGridView1.Columns.Cast<DataGridViewColumn>().ToList().ForEach(f => f.SortMode = DataGridViewColumnSortMode.NotSortable);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -146,6 +147,15 @@ namespace QLPhongGym.GUI
                 Reset();
             }
             LoadDTG();
+        }
+
+        private void dataGridView1_DataSourceChanged(object sender, EventArgs e)
+        {
+            int cnt = 0;
+            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            {
+                dataGridView1.Rows[i].Cells["STT"].Value = ++cnt;
+            }
         }
     }
 }
