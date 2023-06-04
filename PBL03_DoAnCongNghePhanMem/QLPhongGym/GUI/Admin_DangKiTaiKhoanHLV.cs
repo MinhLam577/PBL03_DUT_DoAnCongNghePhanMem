@@ -23,22 +23,22 @@ namespace QLPhongGym.GUI
         }
         public void Load_Datahlv()
         {
-            dataGridView2.DataSource = TKHLV_BLL.Instance.GetDataTableByList_BLL();
-            dataGridView2.Columns["ID"].Visible = false;
+            dgv_hlv.DataSource = TKHLV_BLL.Instance.GetDataTableByList_BLL();
+            dgv_hlv.Columns["ID"].Visible = false;
         }
         public void Load_DataTK()
         {
-            dataGridView1.DataSource = TKHLV_BLL.Instance.GetDataTableByList2_BLL();
-            dataGridView1.Columns["ID"].Visible = false;
+            dgv_tkhlv.DataSource = TKHLV_BLL.Instance.GetDataTableByList2_BLL();
+            dgv_tkhlv.Columns["ID"].Visible = false;
         }
 
         private void button_add_Click(object sender, EventArgs e)
         {
-            if (dataGridView2.SelectedRows.Count == 1)
+            if (dgv_hlv.SelectedRows.Count == 1)
             {
-                if (dataGridView2.SelectedRows[0].Cells["ID"] != null && dataGridView2.SelectedRows[0].Cells["ID"].Value != null)
+                if (dgv_hlv.SelectedRows[0].Cells["ID"] != null && dgv_hlv.SelectedRows[0].Cells["ID"].Value != null)
                 {
-                    int hlvID = Convert.ToInt32(dataGridView2.SelectedRows[0].Cells["ID"].Value.ToString());
+                    int hlvID = Convert.ToInt32(dgv_hlv.SelectedRows[0].Cells["ID"].Value.ToString());
                     bool hlvHasAccount = TKHLV_BLL.Instance.CheckHLVHasAccount_BLL(hlvID);
                     if (hlvHasAccount)
                     {
@@ -47,7 +47,7 @@ namespace QLPhongGym.GUI
                     }
                     else
                     {
-                        string msp = dataGridView2.SelectedRows[0].Cells["ID"].Value.ToString();
+                        string msp = dgv_hlv.SelectedRows[0].Cells["ID"].Value.ToString();
                         Admin_FormThemTKHLV f = new Admin_FormThemTKHLV(msp,"");
                         f.d += new Admin_FormThemTKHLV.Mydel(Load_DataTK);
                         f.ShowDialog();
@@ -60,7 +60,7 @@ namespace QLPhongGym.GUI
         {
             try
             {
-                int selectedcount = dataGridView1.SelectedRows.Count;
+                int selectedcount = dgv_tkhlv.SelectedRows.Count;
                 if (selectedcount > 0)
                 {
                     DialogResult result = MessageBox.Show(string.Format("Bạn có chắc chắn muốn xóa {0} hàng đã chọn?", selectedcount),
@@ -71,7 +71,7 @@ namespace QLPhongGym.GUI
                     {
                         List<string> list = new List<string>();
                         // Xóa các hàng được chọn
-                        foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+                        foreach (DataGridViewRow row in dgv_tkhlv.SelectedRows)
                         {
                             if (row.Cells["ID"] != null && row.Cells["ID"].Value != null)
                             {
@@ -95,13 +95,12 @@ namespace QLPhongGym.GUI
 
         private void button_edit_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count == 1)
+            if (dgv_tkhlv.SelectedRows.Count == 1)
             {
-                if (dataGridView1.SelectedRows[0].Cells["ID"] != null && dataGridView1.SelectedRows[0].Cells["ID"].Value != null)
+                if (dgv_tkhlv.SelectedRows[0].Cells["ID"] != null && dgv_tkhlv.SelectedRows[0].Cells["ID"].Value != null)
                 {
-
-                        string msp = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
-                        string ten = dataGridView1.SelectedRows[0].Cells["Tên TK"].Value.ToString();
+                        string msp = dgv_tkhlv.SelectedRows[0].Cells["ID"].Value.ToString();
+                        string ten = dgv_tkhlv.SelectedRows[0].Cells["Tên TK"].Value.ToString();
                         Admin_FormThemTKHLV f = new Admin_FormThemTKHLV(msp,ten);
                         f.d += new Admin_FormThemTKHLV.Mydel(Load_DataTK);
                         f.ShowDialog();
@@ -111,8 +110,118 @@ namespace QLPhongGym.GUI
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            dataGridView2.DataSource = TKHLV_BLL.Instance.SearchSP_BLL(textBox1.Text);
-            dataGridView1.DataSource = TKHLV_BLL.Instance.SearchSP_BLL2(textBox1.Text);
+            dgv_hlv.DataSource = TKHLV_BLL.Instance.SearchSP_BLL(textBox1.Text);
+            dgv_tkhlv.DataSource = TKHLV_BLL.Instance.SearchSP_BLL2(textBox1.Text);
+        }
+
+        private void btn_bantk_Click(object sender, EventArgs e)
+        {
+            if (dgv_tkhlv.SelectedRows.Count == 1)
+            {
+                if (dgv_tkhlv.SelectedRows[0].Cells["ID"] != null && dgv_tkhlv.SelectedRows[0].Cells["ID"].Value != null)
+                {
+                    try
+                    {
+                        string ten = dgv_tkhlv.SelectedRows[0].Cells["Tên TK"].Value.ToString();
+                        TK tk = TKBLL.Instance.GetTKByTenTK(ten);
+                        if(tk.TrangThai != null && tk.TrangThai == true)
+                        {
+                            tk.TrangThai = false;
+                            if (TKBLL.Instance.UpdateTK(tk))
+                            {
+                                MessageBox.Show("Ban tài khoản thành công");
+                                Load_DataTK();
+                            }
+                        }
+                        else MessageBox.Show("tài khoản đã bị ban");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Ban tài khoản thất bại");
+                    }
+                    
+                }
+            }
+        }
+
+        private void btn_moban_Click(object sender, EventArgs e)
+        {
+            if (dgv_tkhlv.SelectedRows.Count == 1)
+            {
+                if (dgv_tkhlv.SelectedRows[0].Cells["ID"] != null && dgv_tkhlv.SelectedRows[0].Cells["ID"].Value != null)
+                {
+                    try
+                    {
+                        string ten = dgv_tkhlv.SelectedRows[0].Cells["Tên TK"].Value.ToString();
+                        TK tk = TKBLL.Instance.GetTKByTenTK(ten);
+                        if (tk.TrangThai != null && tk.TrangThai == false)
+                        {
+                            tk.TrangThai = true;
+                            if (TKBLL.Instance.UpdateTK(tk))
+                            {
+                                MessageBox.Show("Mở ban tài khoản thành công");
+                                Load_DataTK();
+                            }
+                        }
+                        else MessageBox.Show("tài khoản chưa bị ban");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Ban tài khoản thất bại");
+                    }
+
+                }
+            }
+        }
+
+        private void cb_gt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string require = cb_tk.Text;
+            try
+            {
+                if (require != null)
+                {
+                    if(require != "Tài khoản cá nhân")
+                    {
+                        dgv_tkhlv.DataSource = TKHLV_BLL.Instance.FitlerTaiKhoanBy(require, "");
+                        dgv_tkhlv.Columns["ID"].Visible = false;
+                    }
+                    else
+                    {
+                        if (dgv_hlv.SelectedRows.Count == 1)
+                        {
+                            string IDHLV = dgv_hlv.SelectedRows[0].Cells["ID"].Value.ToString();
+                            dgv_tkhlv.DataSource = TKHLV_BLL.Instance.FitlerTaiKhoanBy(require, IDHLV);
+                            dgv_tkhlv.Columns["ID"].Visible = false;
+                        }
+                    }
+                    
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Lọc thất bại");
+            }
+        }
+
+        private void dgv_hlv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int cur_row = dgv_hlv.CurrentRow.Index;
+            string require = cb_tk.Text;
+            try
+            {
+                if (cur_row != -1 && require != null)
+                {
+                    string IDHLV = dgv_hlv.Rows[cur_row].Cells["ID"].Value.ToString();
+                    dgv_tkhlv.DataSource = TKHLV_BLL.Instance.FitlerTaiKhoanBy(require, IDHLV);
+                    dgv_tkhlv.Columns["ID"].Visible = false;
+                }
+            }
+            catch
+            {
+                
+            }
+            
         }
     }
 }

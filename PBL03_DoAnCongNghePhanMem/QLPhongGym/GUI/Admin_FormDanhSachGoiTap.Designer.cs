@@ -52,7 +52,7 @@
             this.txt_Price.Location = new System.Drawing.Point(167, 386);
             this.txt_Price.Name = "txt_Price";
             this.txt_Price.Size = new System.Drawing.Size(194, 30);
-            this.txt_Price.TabIndex = 38;
+            this.txt_Price.TabIndex = 3;
             // 
             // label4
             // 
@@ -70,7 +70,7 @@
             this.txt_TenGT.Location = new System.Drawing.Point(167, 274);
             this.txt_TenGT.Name = "txt_TenGT";
             this.txt_TenGT.Size = new System.Drawing.Size(194, 30);
-            this.txt_TenGT.TabIndex = 34;
+            this.txt_TenGT.TabIndex = 1;
             // 
             // label3
             // 
@@ -101,7 +101,7 @@
             this.btn_them.Location = new System.Drawing.Point(26, 465);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(75, 44);
-            this.btn_them.TabIndex = 39;
+            this.btn_them.TabIndex = 4;
             this.btn_them.Text = "Thêm";
             this.btn_them.UseVisualStyleBackColor = false;
             this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
@@ -115,7 +115,7 @@
             this.btn_Xoa.Location = new System.Drawing.Point(412, 465);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(75, 44);
-            this.btn_Xoa.TabIndex = 40;
+            this.btn_Xoa.TabIndex = 7;
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.UseVisualStyleBackColor = false;
             this.btn_Xoa.Click += new System.EventHandler(this.button2_Click);
@@ -129,7 +129,7 @@
             this.btn_Sua.Location = new System.Drawing.Point(154, 465);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Size = new System.Drawing.Size(75, 44);
-            this.btn_Sua.TabIndex = 41;
+            this.btn_Sua.TabIndex = 5;
             this.btn_Sua.Text = "Sửa ";
             this.btn_Sua.UseVisualStyleBackColor = false;
             this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
@@ -168,7 +168,7 @@
             this.btn_reset.Location = new System.Drawing.Point(281, 465);
             this.btn_reset.Name = "btn_reset";
             this.btn_reset.Size = new System.Drawing.Size(75, 44);
-            this.btn_reset.TabIndex = 44;
+            this.btn_reset.TabIndex = 6;
             this.btn_reset.Text = "Reset";
             this.btn_reset.UseVisualStyleBackColor = false;
             this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
@@ -199,7 +199,7 @@
             this.txt_thoihan.Location = new System.Drawing.Point(167, 327);
             this.txt_thoihan.Name = "txt_thoihan";
             this.txt_thoihan.Size = new System.Drawing.Size(117, 30);
-            this.txt_thoihan.TabIndex = 47;
+            this.txt_thoihan.TabIndex = 2;
             // 
             // label6
             // 

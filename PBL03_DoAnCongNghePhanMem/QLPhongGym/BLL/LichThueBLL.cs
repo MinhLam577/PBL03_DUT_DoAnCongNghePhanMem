@@ -9,13 +9,9 @@ using System.Threading.Tasks;
 
 namespace QLPhongGym.BLL
 {
-    public class LichThueBLL
+    class LichThueBLL
     {
         private static LichThueBLL instance;
-        public LichThueBLL()
-        {
-
-        }
         public static LichThueBLL Instance
         {
             get
@@ -47,6 +43,13 @@ namespace QLPhongGym.BLL
         {
             return LichThueDAL.Instance.Capnhat1(idca, idhlv, ngaylam, IDCA, IDHLV,  NGAYLAM);
 
+        public List<LichThueHLV> GetLichThueByIDKH_IDHLV(int IDKH, int IDHLV)
+        {
+            return LichThueDAL.Instance.GetLichThueByIDKH_IDHLV(IDKH, IDHLV);
+        }
+        public List<LichThueHLV> GetLichThueByIDHLV(int IDHLV)
+        {
+            return LichThueDAL.Instance.GetLichThueByIDHLV(IDHLV);
         }
     }
 }

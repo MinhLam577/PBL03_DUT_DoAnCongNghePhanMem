@@ -305,7 +305,7 @@
             this.pb_ad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_ad.TabIndex = 2;
             this.pb_ad.TabStop = false;
-            this.pb_ad.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label2_MouseClick);
+            this.pb_ad.Click += new System.EventHandler(this.pb_ad_Click);
             // 
             // label1
             // 
@@ -329,11 +329,10 @@
             this.label2.Size = new System.Drawing.Size(81, 29);
             this.label2.TabIndex = 3;
             this.label2.Text = "Admin";
-            this.label2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label2_MouseClick);
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.pn_tkadmin);
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(240, 82);
@@ -361,10 +360,10 @@
             this.pn_tkadmin.Controls.Add(this.lb_gmailad);
             this.pn_tkadmin.Controls.Add(this.lb_tenad);
             this.pn_tkadmin.Controls.Add(this.pb_acc);
-            this.pn_tkadmin.Location = new System.Drawing.Point(196, 3);
+            this.pn_tkadmin.Location = new System.Drawing.Point(436, 82);
             this.pn_tkadmin.Name = "pn_tkadmin";
-            this.pn_tkadmin.Size = new System.Drawing.Size(511, 158);
-            this.pn_tkadmin.TabIndex = 3;
+            this.pn_tkadmin.Size = new System.Drawing.Size(507, 159);
+            this.pn_tkadmin.TabIndex = 4;
             // 
             // btn_doimatkhau
             // 
@@ -434,6 +433,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1193, 586);
+            this.Controls.Add(this.pn_tkadmin);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
@@ -477,13 +477,13 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pb_ad;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pn_tkadmin;
+        private System.Windows.Forms.Button btn_doimatkhau;
+        private System.Windows.Forms.Button btn_updatethongtin;
+        private System.Windows.Forms.PictureBox pb_updateimage;
         private System.Windows.Forms.Label lb_gmailad;
         private System.Windows.Forms.Label lb_tenad;
         private System.Windows.Forms.PictureBox pb_acc;
-        private System.Windows.Forms.PictureBox pb_updateimage;
-        private System.Windows.Forms.Button btn_updatethongtin;
-        private System.Windows.Forms.Button btn_doimatkhau;
-        private System.Windows.Forms.Label label2;
     }
 }

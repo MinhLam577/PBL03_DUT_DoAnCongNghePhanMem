@@ -21,6 +21,11 @@ namespace QLPhongGym.BLL
             }
             private set { }
         }
+
+        public DataTable CreateTable()
+        {
+            return KHDAL.Instance.CreateTable();    
+        }
         public KH GetKHByID(int ID)
         {
             return (KH)UsersBLL.Instance.GetUserByID(ID);
@@ -64,6 +69,10 @@ namespace QLPhongGym.BLL
         public List<int> GetAllKHID()
         {
             return KHDAL.Instance.GetAllKHID();
+        }
+        public DataTable FindListKHByIDHLV_NgayThue_IDCa_IDOrName(string txt, int IDHLV, DateTime NgayThue, int? IDCa)
+        {
+            return KHDAL.Instance.FindListKHByIDHLV_NgayThue_IDCa_IDOrName(txt, IDHLV, NgayThue, IDCa);
         }
     }
 }

@@ -76,5 +76,13 @@ namespace QLPhongGym.BLL
         {
             return DangKiGoiTapDAL.Instance.FitlerListDKGT(IDKH, require, GoiTap);
         }
+        public List<DangKiGoiTap> GetListDKGTDangTap(int IDKH)
+        {
+            return DangKiGoiTapDAL.Instance.GetListDKGTDangTap(IDKH);
+        }
+        public int GetSoLuongNhuCauDKGTTheoNam_Thang_IDGT(int year, int month, int IDGT)
+        {
+            return DangKiGoiTapDAL.Instance.GetSoLuongNhuCauDKGTTheoNam_Thang_IDGT(year, month, IDGT);
+        }
     }
 }

@@ -120,5 +120,25 @@ namespace QLPhongGym.BLL
             return DangKiLichLamViecDAL.getInStance.danhsachmasinhvientheongayca(ngay, idca, name);
         }
        
+        public List<int> GetCaLamViecByNgayLam_IDHLV(int IDHLV, DateTime NgayLam)
+        {
+            return DangKiLichLamViecDAL.getInStance.GetCaLamViecByNgayLam_IDHLV(IDHLV, NgayLam);
+        }
+        public CaLamViec GetCaLamViecByIDCa(int IDCa)
+        {
+            return DangKiLichLamViecDAL.getInStance.GetCaLamViecByIDCa(IDCa);
+        }
+        public CaLamViec GetCaLamViecByTenCa(string TenCa)
+        {
+            return DangKiLichLamViecDAL.getInStance.GetCaLamViecByTenCa(TenCa);
+        }
+        public List<KH> FitlerListKHByNgayThue_IDCa_IDHLV(DateTime NgayThue, string TenCa, int IDHLV)
+        {
+            return DangKiLichLamViecDAL.getInStance.FitlerListKHByNgayThue_IDCa_IDHLV(NgayThue, TenCa, IDHLV); 
+        }
+        public List<int> GetListCaLamViecByNgayLam_IDHLV_IDKH(int IDHLV, DateTime NgayLam, int IDKH)
+        {
+            return DangKiLichLamViecDAL.getInStance.GetListCaLamViecByNgayLam_IDHLV_IDKH(IDHLV, NgayLam, IDKH); 
+        }
     }
 }

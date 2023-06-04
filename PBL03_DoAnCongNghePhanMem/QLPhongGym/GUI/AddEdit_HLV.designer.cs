@@ -62,6 +62,7 @@
             // 
             // panel1
             // 
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.Controls.Add(this.btnOKI);
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnResetPic);
@@ -361,7 +362,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1540, 645);
+            this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Name = "AddEdit_HLV";
             this.Text = "AddEdit_HLV";

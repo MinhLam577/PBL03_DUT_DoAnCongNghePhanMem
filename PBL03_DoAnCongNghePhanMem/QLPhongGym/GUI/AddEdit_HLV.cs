@@ -31,7 +31,7 @@ namespace QLPhongGym.GUI
         }
         private ToolTip toolTip = new ToolTip();
         private bool isShown = false;
-        static string ImageLink = Application.StartupPath + @"\PersonImage\Admin.png";
+        static string ImageLink = Application.StartupPath + @"\Resources\Admin.png";
 
         public int lc = -1;
         public int luachon(int luachon)
@@ -45,9 +45,20 @@ namespace QLPhongGym.GUI
             {
                 a.IDUsers = Convert.ToInt32(textMaHLv.Text.ToString().Trim());
             }
-
+            bool sex = false, check = false;
+            if(radioBtnMale.Checked == true)
+            {
+                sex = true;
+            }
+            if (radioBtnMale.Checked || radioBtnFemale.Checked)
+                check = true;
+            if (!check)
+            {
+                MessageBox.Show("Mời chọn giới tính");
+                return;
+            }
             a.Name = textNameHLV.Text.ToString().Trim();
-            a.Sex = radioBtnFemale.Checked;
+            a.Sex = sex;
             a.DateBorn = Convert.ToDateTime(dateTimeHLV.Value);
             a.BangCap = textBangcap.Text.Trim();
             a.Sdt = textSDT.Text.Trim();
@@ -114,7 +125,7 @@ namespace QLPhongGym.GUI
                     {
                         if (QLHLVBLL.getInstance.CheckGmailExitEdit(a))
                         {
-                            MessageBox.Show("Gmail Cap nhat da ton tai");
+                            MessageBox.Show("Gmail cật nhật đã tồn tại");
                             return;
                         }
                     }
@@ -207,11 +218,11 @@ namespace QLPhongGym.GUI
             textNameHLV.Text = a.Name.ToString().Trim();
             if (a.Sex == true)
             {
-                radioBtnFemale.Checked = (bool)a.Sex;
+                radioBtnMale.Checked = (bool)a.Sex;
             }
             else
             {
-                radioBtnMale.Checked = true;
+                radioBtnFemale.Checked = true;
             }
             textDiachi.Text = a.Address.ToString().Trim();
             textSDT.Text = a.Sdt.ToString().Trim();
@@ -225,7 +236,8 @@ namespace QLPhongGym.GUI
             }
             else
             {
-                MessageBox.Show("Anh chua co");
+                pictureHLV.Image = Image.FromFile(ImageLink);
+                pictureHLV.Tag = a.Image;
             }
         }
 

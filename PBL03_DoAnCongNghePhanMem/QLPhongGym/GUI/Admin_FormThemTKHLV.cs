@@ -62,20 +62,24 @@ namespace QLPhongGym.GUI
 
         private void button_OK_Click(object sender, EventArgs e)
         {
+            TK tk = null;
+            if (Ten != "")
+                tk = TKBLL.Instance.GetTKByTenTK(Ten);
             TK a = new TK();
             if (Txt_TK.Text == "")
             {
-                MessageBox.Show("Cân nhập tên tài khoản");
+                MessageBox.Show("Cần nhập tên tài khoản");
                 return;
             }
             a.TenTK = Txt_TK.Text;
             if(Txt_Mk.Text != Txt_NhapLai.Text || Txt_Mk.Text == "")
             {
-                MessageBox.Show("Mật khẩu nhập lại chưa đúng với mật khẩu! Bạn xem lại");
+                MessageBox.Show("Xác nhận mật khẩu không đồng dạng");
                 return ;
             }
-            a.MatkhauTK = Txt_NhapLai.Text;
+            a.MatkhauTK = Eramake.eCryptography.Encrypt(Txt_NhapLai.Text);
             a.IDQuyen = 2;
+            a.TrangThai = true;
             a.IDUser = Convert.ToInt32(ID);
             if (Ten == "")
             {   if(TKHLV_BLL.Instance.TenTK_BLL(Txt_TK.Text) == true)
@@ -88,6 +92,7 @@ namespace QLPhongGym.GUI
             }
             else
             {
+                a.TrangThai = tk.TrangThai;
                 TKHLV_BLL.Instance.UpdateTK_BLl(a);
                 d();
             }

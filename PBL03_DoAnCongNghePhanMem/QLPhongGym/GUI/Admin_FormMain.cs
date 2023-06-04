@@ -78,6 +78,7 @@ namespace QLPhongGym.GUI
             {
                 pn_tkadmin.Visible = false;
             }
+            
         }
         private void showMenu(Panel subMenu)
         {
@@ -148,7 +149,7 @@ namespace QLPhongGym.GUI
         }
         private void button13_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Admin_FormThongKe());
+            OpenChildForm(new Admin_ThongKeForm());
             hideMenu();
         }
         private void BtnTaiKhoan_Click(object sender, EventArgs e)
@@ -246,12 +247,14 @@ namespace QLPhongGym.GUI
             hideMenu();
         }
 
-        private void pn_tkadmin_MouseLeave(object sender, EventArgs e)
+
+
+        private void pb_ad_Click(object sender, EventArgs e)
         {
-            //hideMenu();
+            showMenu(pn_tkadmin);
         }
 
-        private void label2_MouseClick(object sender, MouseEventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
             showMenu(pn_tkadmin);
         }

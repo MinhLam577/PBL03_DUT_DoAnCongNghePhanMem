@@ -254,5 +254,14 @@ namespace QLPhongGym.DAL
             }
             return TB;
         }
+        public int GetTongSoLuongThietBiCoSan()
+        {
+            int cnt = 0;
+            foreach(var item in db.ThietBis)
+            {
+                cnt += item.SoLuong.Value - item.SoLuongHong.Value;
+            }
+            return cnt;
+        }
     }
 }

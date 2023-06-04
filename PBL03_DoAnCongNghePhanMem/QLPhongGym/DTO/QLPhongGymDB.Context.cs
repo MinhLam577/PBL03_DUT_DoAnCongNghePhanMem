@@ -27,7 +27,6 @@ namespace QLPhongGym.DTO
     
         public virtual DbSet<CaLamViec> CaLamViecs { get; set; }
         public virtual DbSet<LichLamViecTrongTuan> LichLamViecTrongTuans { get; set; }
-        public virtual DbSet<LichThueHLV> LichThueHLVs { get; set; }
         public virtual DbSet<ThietBi> ThietBis { get; set; }
         public virtual DbSet<TK> TKs { get; set; }
         public virtual DbSet<User> Users { get; set; }
@@ -35,5 +34,6 @@ namespace QLPhongGym.DTO
         public virtual DbSet<PhanQuyen> PhanQuyens { get; set; }
         public virtual DbSet<DangKiGoiTap> DangKiGoiTaps { get; set; }
         public virtual DbSet<GoiTap> GoiTaps { get; set; }
+        public virtual DbSet<LichThueHLV> LichThueHLVs { get; set; }
     }
 }

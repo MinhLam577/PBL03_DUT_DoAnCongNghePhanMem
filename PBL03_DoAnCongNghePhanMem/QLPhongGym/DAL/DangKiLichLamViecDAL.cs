@@ -8,6 +8,7 @@ using System.Linq.Expressions;
 using System.Runtime.InteropServices.ComTypes;
 using System.Runtime.Remoting.Contexts;
 using System.Security.Cryptography.Xml;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -96,6 +97,7 @@ namespace QLPhongGym.DAL
             db.SaveChanges();
             return true;
         }
+        
         // kiem tra xem doi tuong dang ki da ton tai chua
         public bool IsDifferentFromAllCaOther(LichLamViecTrongTuan a)
         {
@@ -531,8 +533,49 @@ namespace QLPhongGym.DAL
                         );
             return dt;
         }
+        public List<int> GetCaLamViecByNgayLam_IDHLV(int IDHLV, DateTime NgayLam)
+        {
+            return db.LichThueHLVs.Where(l => l.NgayThue.Value == NgayLam && l.IDHLV == IDHLV).Select(s => s.IDCa.Value).Distinct().ToList();
+        }
+        public List<int> GetListCaLamViecByNgayLam_IDHLV_IDKH(int IDHLV, DateTime NgayLam, int IDKH)
+        {
+            return db.LichThueHLVs.Where(l => l.NgayThue.Value == NgayLam && l.IDHLV == IDHLV && l.IDKH == IDKH).Select(s => s.IDCa.Value).Distinct().ToList();
+        }
+        public CaLamViec GetCaLamViecByIDCa(int IDCa)
+        {
+            return db.CaLamViecs.FirstOrDefault(c => c.IDCa == IDCa);
+        }
+        public CaLamViec GetCaLamViecByTenCa(string TenCa)
+        {
+            return db.CaLamViecs.FirstOrDefault(c => c.Name == TenCa);
+        }
+        public List<KH> FitlerListKHByNgayThue_IDCa_IDHLV(DateTime NgayThue, string TenCa, int IDHLV)
+        {
+            List<KH> list_kh = new List<KH>();
+            switch (TenCa)
+            {
+                case "All":
+                    var data1 = db.LichThueHLVs.Where(l => l.NgayThue.Value == NgayThue && l.IDHLV == IDHLV).Select(k => k.IDKH).Distinct().ToList();
+                    foreach(int i in data1)
+                    {
+                        KH kh = (KH)UsersDAL.Instance.GetUserByID(i);
+                        list_kh.Add(kh);
+                    }
+                    break;
+                default:
+                    int IDCa = GetCaLamViecByTenCa(TenCa).IDCa;
+                    var data2 = db.LichThueHLVs.Where(l => l.NgayThue.Value == NgayThue && l.IDHLV == IDHLV && l.IDCa.Value == IDCa).Select(k => k.IDKH).Distinct().ToList();
+                    foreach (int i in data2)
+                    {
+                        KH kh = (KH)UsersDAL.Instance.GetUserByID(i);
+                        list_kh.Add(kh);
+                    }
+                    break;
+            }
+            return list_kh;
+        }
     }
-}
+ }
 
 
 

@@ -15,10 +15,11 @@ namespace QLPhongGym.GUI
     {
         public TK tk { get; set; }
         static string ImageDefaultPath = Application.StartupPath + @"\Resources\account_icon.png";
+        static bool IsGanHLV = false;
+        static HLV Hlv = null;
         public HLV_FormMain()
         {
             InitializeComponent();
-            customizedesing();
         }
         public HLV_FormMain(TK tk)
         {
@@ -30,16 +31,20 @@ namespace QLPhongGym.GUI
         public void LoadDuLieuTK()
         {
             int IDUser = (int)tk.IDUser;
-            HLV hlv = (HLV)UsersBLL.Instance.GetUserByID(IDUser);
-            if (hlv != null)
+            if (!IsGanHLV)
             {
-                lb_gmailhlv.Text = hlv.Gmail;
-                lb_tenhlv.Text = hlv.Name;
+                Hlv = (HLV)UsersBLL.Instance.GetUserByID(IDUser);
+                IsGanHLV = true;
             }
-            if (hlv.Image != null)
+            if (Hlv != null)
             {
-                pb_acc.Image = Image.FromFile(Application.StartupPath + @"\PersonImage\" + hlv.Image);
-                pb_hlv.Image = Image.FromFile(Application.StartupPath + @"\PersonImage\" + hlv.Image);
+                lb_gmailhlv.Text = Hlv.Gmail;
+                lb_tenhlv.Text = Hlv.Name;
+            }
+            if (Hlv.Image != null)
+            {
+                pb_acc.Image = Image.FromFile(Application.StartupPath + @"\PersonImage\" + Hlv.Image);
+                pb_hlv.Image = Image.FromFile(Application.StartupPath + @"\PersonImage\" + Hlv.Image);
             }
             else
             {
@@ -122,21 +127,8 @@ namespace QLPhongGym.GUI
             HLV a = (HLV)hlv;
             if (QLHLVBLL.getInstance.Update(a) == true)
             {
-                if (a != null)
-                {
-                    lb_gmailhlv.Text = a.Gmail;
-                    lb_tenhlv.Text = a.Name;
-                }
-                if (a.Image != null)
-                {
-                    pb_acc.Image = Image.FromFile(Application.StartupPath + @"\PersonImage\" + a.Image);
-                    pb_hlv.Image = Image.FromFile(Application.StartupPath + @"\PersonImage\" + a.Image);
-                }
-                else
-                {
-                    pb_acc.Image = Image.FromFile(ImageDefaultPath);
-                    pb_hlv.Image = Image.FromFile(ImageDefaultPath);
-                }
+                Hlv = a;
+                LoadDuLieuTK();
                 MessageBox.Show("Sua Thanh cong");
             }
             else
@@ -148,10 +140,9 @@ namespace QLPhongGym.GUI
         {
             AddEdit_HLV a = new AddEdit_HLV();
             int ID = (int)tk.IDUser;
-            HLV hlv = (HLV)UsersBLL.Instance.GetUserByID(ID);
             a.buon += new AddEdit_HLV.mydelegate(Edit);
             a.luachon(2);
-            a.getinfofromAB(hlv);
+            a.getinfofromAB(Hlv);
             a.Show();
         }
         private void pb_updateimage_Click(object sender, EventArgs e)
@@ -177,24 +168,27 @@ namespace QLPhongGym.GUI
             dmk.ShowDialog();
         }
 
-        private void HLV_FormMain_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void btn_lichlamviec_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormLichHLV());
             hideMenu();
         }
-        private void btn_kh_Click(object sender, EventArgs e)
-        {
-
-        }
         private void btn_thoat_Click_1(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn thoát chương trình?", "Xin chờ một lát", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 this.Close();
+        }
+
+        private void btn_kh_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new HLV_FormDanhSachKH((HLV)UsersBLL.Instance.GetUserByID(tk.IDUser.Value)));
+            hideMenu();
+        }
+
+        private void HLV_FormMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            IsGanHLV = false;
         }
     }
 }

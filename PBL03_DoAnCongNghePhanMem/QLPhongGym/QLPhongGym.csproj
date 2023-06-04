@@ -80,6 +80,7 @@
     <Compile Include="BLL\GoiTapBLL.cs" />
     <Compile Include="BLL\HoaDonBLL.cs" />
     <Compile Include="BLL\KHBLL.cs" />
+    <Compile Include="BLL\LichThueBLL.cs" />
     <Compile Include="BLL\QLHLVBLL.cs" />
     <Compile Include="BLL\ThietBi_BLL.cs" />
     <Compile Include="BLL\TKBLL.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="DAL\GoiTapDAL.cs" />
     <Compile Include="DAL\HoaDonDAL.cs" />
     <Compile Include="DAL\KHDAL.cs" />
+    <Compile Include="DAL\LichThueDAL.cs" />
     <Compile Include="DAL\QLHLVDAL.cs" />
     <Compile Include="DAL\ThietBiDAL.cs" />
     <Compile Include="DAL\TKDAL.cs" />
@@ -197,12 +199,6 @@
     <Compile Include="GUI\Admin_FormThemTKHLV.Designer.cs">
       <DependentUpon>Admin_FormThemTKHLV.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Admin_FormThongKe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Admin_FormThongKe.Designer.cs">
-      <DependentUpon>Admin_FormThongKe.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\DangKiGoiTapKHForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +223,12 @@
     <Compile Include="GUI\DoiMatKhauForm.Designer.cs">
       <DependentUpon>DoiMatKhauForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Admin_ThongKeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin_ThongKeForm.Designer.cs">
+      <DependentUpon>Admin_ThongKeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormDangKiLichHLV1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,6 +246,12 @@
     </Compile>
     <Compile Include="GUI\FormLichHLV.Designer.cs">
       <DependentUpon>FormLichHLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HLV_FormDanhSachKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HLV_FormDanhSachKH.Designer.cs">
+      <DependentUpon>HLV_FormDanhSachKH.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\HLV_FormMain.cs">
       <SubType>Form</SubType>
@@ -331,9 +339,6 @@
     <EmbeddedResource Include="GUI\Admin_FormThemTKHLV.resx">
       <DependentUpon>Admin_FormThemTKHLV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Admin_FormThongKe.resx">
-      <DependentUpon>Admin_FormThongKe.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\DangKiGoiTapKHForm.resx">
       <DependentUpon>DangKiGoiTapKHForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -346,6 +351,9 @@
     <EmbeddedResource Include="GUI\DoiMatKhauForm.resx">
       <DependentUpon>DoiMatKhauForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin_ThongKeForm.resx">
+      <DependentUpon>Admin_ThongKeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormDangKiLichHLV1.resx">
       <DependentUpon>FormDangKiLichHLV1.cs</DependentUpon>
     </EmbeddedResource>
@@ -354,6 +362,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormLichHLV.resx">
       <DependentUpon>FormLichHLV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HLV_FormDanhSachKH.resx">
+      <DependentUpon>HLV_FormDanhSachKH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\HLV_FormMain.resx">
       <DependentUpon>HLV_FormMain.cs</DependentUpon>

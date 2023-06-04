@@ -14,14 +14,10 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace QLPhongGym.DAL
 {
-    public class LichThueDAL
+    class LichThueDAL
     {
         QLPhongGymDB db = new QLPhongGymDB();
         private static LichThueDAL instance;
-        public LichThueDAL()
-        {
-
-        }
         public static LichThueDAL Instance
         {
             get
@@ -146,7 +142,16 @@ namespace QLPhongGym.DAL
             db.SaveChanges();
             return true;
         }
+        
+        public List<LichThueHLV> GetLichThueByIDKH_IDHLV(int IDKH, int IDHLV)
+        {
+            var data = db.LichThueHLVs.Where(l => l.IDKH == IDKH && l.IDHLV == IDHLV).ToList();
+            return data;
+        }
+        public List<LichThueHLV> GetLichThueByIDHLV(int IDHLV)
+        {
+            var data = db.LichThueHLVs.Where(l => l.IDHLV == IDHLV).ToList();
+            return data;
+        }
     }
 }
-    
-    
