@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HLV_FormDanhSachKH));
             this.txb_ten_sdt = new System.Windows.Forms.TextBox();
             this.lb_ten_sdt = new System.Windows.Forms.Label();
@@ -98,23 +98,23 @@
             this.dgv_kh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_kh.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_kh.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_kh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_kh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_kh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_kh.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_kh.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_kh.Location = new System.Drawing.Point(8, 254);
             this.dgv_kh.Name = "dgv_kh";
             this.dgv_kh.ReadOnly = true;
@@ -345,7 +345,7 @@
             this.nmup_tuan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nmup_tuan.Location = new System.Drawing.Point(501, 31);
             this.nmup_tuan.Maximum = new decimal(new int[] {
-            4,
+            5,
             0,
             0,
             0});
@@ -355,6 +355,7 @@
             0,
             0});
             this.nmup_tuan.Name = "nmup_tuan";
+            this.nmup_tuan.ReadOnly = true;
             this.nmup_tuan.Size = new System.Drawing.Size(273, 34);
             this.nmup_tuan.TabIndex = 2;
             this.nmup_tuan.Value = new decimal(new int[] {
@@ -382,7 +383,7 @@
             this.dtp_from.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp_from.Location = new System.Drawing.Point(155, 81);
             this.dtp_from.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dtp_from.MinDate = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
+            this.dtp_from.MinDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
             this.dtp_from.Name = "dtp_from";
             this.dtp_from.ShowUpDown = true;
             this.dtp_from.Size = new System.Drawing.Size(260, 34);
@@ -408,7 +409,7 @@
             this.dtp_to.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp_to.Location = new System.Drawing.Point(501, 81);
             this.dtp_to.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dtp_to.MinDate = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
+            this.dtp_to.MinDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
             this.dtp_to.Name = "dtp_to";
             this.dtp_to.ShowUpDown = true;
             this.dtp_to.Size = new System.Drawing.Size(273, 34);
@@ -421,7 +422,7 @@
             this.dtp_thangnam.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp_thangnam.Location = new System.Drawing.Point(156, 28);
             this.dtp_thangnam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dtp_thangnam.MinDate = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
+            this.dtp_thangnam.MinDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
             this.dtp_thangnam.Name = "dtp_thangnam";
             this.dtp_thangnam.ShowUpDown = true;
             this.dtp_thangnam.Size = new System.Drawing.Size(260, 34);

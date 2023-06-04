@@ -150,19 +150,69 @@ namespace QLPhongGym.GUI
             }
             
         }
+        private bool checkNamNhuan(int year)
+        {
+            return (((year % 4 == 0) && (year % 100 != 0)) ||
+                    (year % 400 == 0));
+        }
         private void nmup_tuan_ValueChanged(object sender, EventArgs e)
         {
             int Month = dtp_thangnam.Value.Month;
             int Year = dtp_thangnam.Value.Year;
-            dtp_from.Value = new DateTime(Year, Month, 7 * ((int)nmup_tuan.Value - 1) + 1);
-            dtp_to.Value = dtp_from.Value.AddDays(6);
             List<string> CBB_data = new List<string>();
-            for(int i = 0; i <= 6; i++)
+            switch ((int)nmup_tuan.Value)
             {
-                DateTime dt = dtp_from.Value.AddDays(i);
-                CBB_data.Add(dt.ToString("dd/MM/yyyy"));
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                    dtp_from.Value = new DateTime(Year, Month, 7 * ((int)nmup_tuan.Value - 1) + 1);
+                    dtp_to.Value = dtp_from.Value.AddDays(6);
+                    for (int i = 0; i <= 6; i++)
+                    {
+                        DateTime dt = dtp_from.Value.AddDays(i);
+                        CBB_data.Add(dt.ToString("dd/MM/yyyy"));
+                    }
+                    cb_nt.DataSource = CBB_data;
+                    break;
+                case 5:
+                    int day = -1;
+                    int ngayle = -1;
+                    if(Month == 2)
+                    {
+                        if (checkNamNhuan(Year))
+                        {
+                            dtp_from.Value = new DateTime(Year, Month, 29);
+                            dtp_to.Value = dtp_from.Value;
+                            DateTime dt = dtp_from.Value;
+                            CBB_data.Add(dt.ToString("dd/MM/yyyy"));
+                            cb_nt.DataSource = CBB_data;
+                        }
+                        else
+                        {
+                            dtp_from.Value = new DateTime(Year, Month, 28);
+                            dtp_to.Value = dtp_from.Value;
+                            DateTime dt = dtp_from.Value;
+                            CBB_data.Add(dt.ToString("dd/MM/yyyy"));
+                            cb_nt.DataSource = CBB_data;
+                        }
+                            
+                    }    
+                    else
+                    {
+                        dtp_from.Value = new DateTime(Year, Month, 7 * ((int)nmup_tuan.Value - 1) + 1);
+                        day = DateTime.DaysInMonth(Year, Month);
+                        ngayle = day - 28;
+                        dtp_to.Value = dtp_from.Value.AddDays(ngayle - 1);
+                        for (int i = 0; i < ngayle; i++)
+                        {
+                            DateTime dt = dtp_from.Value.AddDays(i);
+                            CBB_data.Add(dt.ToString("dd/MM/yyyy"));
+                        }
+                        cb_nt.DataSource = CBB_data;
+                    }
+                    break;
             }
-            cb_nt.DataSource = CBB_data;
         }
 
         private void dtp_thangnam_ValueChanged(object sender, EventArgs e)
