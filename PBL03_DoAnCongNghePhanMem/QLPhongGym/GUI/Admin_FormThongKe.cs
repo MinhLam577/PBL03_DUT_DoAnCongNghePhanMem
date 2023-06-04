@@ -69,5 +69,10 @@ namespace QLPhongGym.GUI
         {
 
         }
+
+        private void lb_tongthunhap_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

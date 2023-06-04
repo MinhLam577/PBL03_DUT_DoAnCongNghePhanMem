@@ -115,5 +115,10 @@ namespace QLPhongGym.BLL
         {
             return DangKiLichLamViecDAL.getInStance.ListHLVByCaForm2(ngaylam, idca);
         }
+        public List<String> danhsachmasinhvientheongayca(DateTime ngay, int idca, string name)
+        {
+            return DangKiLichLamViecDAL.getInStance.danhsachmasinhvientheongayca(ngay, idca, name);
+        }
+       
     }
 }

@@ -348,8 +348,7 @@ namespace QLPhongGym.GUI
                 // int IDCa = Convert.ToInt32(row.Cells[1].Value.ToString());
                 int IDCa = Convert.ToInt32(cbbCaLam.SelectedItem.ToString().Substring(3, 1));
                 int IDHLV = Convert.ToInt32(row.Cells[1].Value.ToString());
-                /*DateTime NgayBatDau = Convert.ToDateTime(row.Cells[4].Value.ToString());
-                DateTime NgayKetThuc = Convert.ToDateTime(row.Cells[5].Value.ToString());*/
+              
                 DateTime NgayLam = Convert.ToDateTime(row.Cells[3].Value.ToString());
                 a.idca = IDCa;
                 a.idhlv = IDHLV;

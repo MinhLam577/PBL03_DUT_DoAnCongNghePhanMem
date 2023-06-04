@@ -29,10 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_FormDanhSachKH));
+<<<<<<< Updated upstream
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+=======
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+>>>>>>> Stashed changes
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pb_change = new System.Windows.Forms.PictureBox();
             this.lb_mathe_cccd = new System.Windows.Forms.Label();
@@ -171,6 +178,7 @@
             this.dgv_kh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_kh.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_kh.BackgroundColor = System.Drawing.Color.White;
+<<<<<<< Updated upstream
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -188,6 +196,25 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Red;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_kh.DefaultCellStyle = dataGridViewCellStyle2;
+=======
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_kh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgv_kh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_kh.DefaultCellStyle = dataGridViewCellStyle6;
+>>>>>>> Stashed changes
             this.dgv_kh.Location = new System.Drawing.Point(11, 190);
             this.dgv_kh.Name = "dgv_kh";
             this.dgv_kh.ReadOnly = true;
@@ -226,6 +253,7 @@
             this.xemLịchThuêHuấnLuyệnViênToolStripMenuItem.Name = "xemLịchThuêHuấnLuyệnViênToolStripMenuItem";
             this.xemLịchThuêHuấnLuyệnViênToolStripMenuItem.Size = new System.Drawing.Size(176, 40);
             this.xemLịchThuêHuấnLuyệnViênToolStripMenuItem.Text = "Lịch thuê HLV";
+            this.xemLịchThuêHuấnLuyệnViênToolStripMenuItem.Click += new System.EventHandler(this.xemLịchThuêHuấnLuyệnViênToolStripMenuItem_Click);
             // 
             // thêmToolStripMenuItem
             // 
@@ -408,6 +436,7 @@
             this.dgv_gt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_gt.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_gt.BackgroundColor = System.Drawing.Color.White;
+<<<<<<< Updated upstream
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -425,6 +454,25 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Red;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_gt.DefaultCellStyle = dataGridViewCellStyle4;
+=======
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_gt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgv_gt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_gt.DefaultCellStyle = dataGridViewCellStyle8;
+>>>>>>> Stashed changes
             this.dgv_gt.Location = new System.Drawing.Point(13, 123);
             this.dgv_gt.Name = "dgv_gt";
             this.dgv_gt.ReadOnly = true;
@@ -476,6 +524,7 @@
             this.đăngKíLịchThuêHuấnLuyệnViênToolStripMenuItem.Name = "đăngKíLịchThuêHuấnLuyệnViênToolStripMenuItem";
             this.đăngKíLịchThuêHuấnLuyệnViênToolStripMenuItem.Size = new System.Drawing.Size(391, 26);
             this.đăngKíLịchThuêHuấnLuyệnViênToolStripMenuItem.Text = "Đăng kí lịch thuê huấn luyện viên";
+            this.đăngKíLịchThuêHuấnLuyệnViênToolStripMenuItem.Click += new System.EventHandler(this.đăngKíLịchThuêHuấnLuyệnViênToolStripMenuItem_Click);
             // 
             // giaHạnToolStripMenuItem
             // 
@@ -569,6 +618,7 @@
             this.MainMenuStrip = this.kh_mns;
             this.Name = "Admin_FormDanhSachKH";
             this.Text = "DanhSachKHForm";
+            this.Load += new System.EventHandler(this.Admin_FormDanhSachKH_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_change)).EndInit();

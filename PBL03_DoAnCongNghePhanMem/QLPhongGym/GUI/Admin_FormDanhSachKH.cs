@@ -645,5 +645,37 @@ namespace QLPhongGym.GUI
                 }
             }
         }
+
+        private void đăngKíLịchThuêHuấnLuyệnViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            KH_DangKiHLV a = new KH_DangKiHLV();
+            if(dgv_kh.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn hàng ");
+            }
+            else
+            {
+                DataGridViewRow selectedRow = dgv_kh.SelectedRows[0];
+                // Lấy giá trị của cột đầu tiên trong hàng đã chọn
+                string name = selectedRow.Cells[2].Value.ToString();
+                int ma = Convert.ToInt32(selectedRow.Cells[1].Value.ToString());
+                a.setForm(name, ma);
+            }
+           
+            a.Show();
+        }
+
+        private void Admin_FormDanhSachKH_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void xemLịchThuêHuấnLuyệnViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // show lịch thue 
+            KH_QuanLyLichThue a = new KH_QuanLyLichThue();
+            a.Show();
+
+        }
     }
 }
