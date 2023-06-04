@@ -293,9 +293,9 @@ namespace QLPhongGym.GUI
                 {
                     //Đăng kí và gia hạn đều sài chung cùng 1 form là đăng kí gói tập khách hàng, truyền vào tham số là khách hàng và tên gói tập
                     //Gia hạn thì truyền vào tên gói tập là tên gói tập đã đăng kí trước đó
-                    if(fitlerDKGT_tsmi.Text != "Đang tập")
+                    if (Convert.ToInt32(dgv_gt.SelectedRows[0].Cells["DaysLeft"].Value.ToString()) <= 0)
                     {
-                        MessageBox.Show("Chỉ có thể gia hạn được gói tập mà khách hàng đang tập");
+                        MessageBox.Show("Chỉ có thể gia hạn gói tập còn hiệu lực(chưa hết hạn sử dụng)");
                         return;
                     }
                     int IDKH = Convert.ToInt32(dgv_kh.SelectedRows[0].Cells["IDThe"].Value.ToString());
