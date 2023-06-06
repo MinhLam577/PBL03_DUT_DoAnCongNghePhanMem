@@ -232,17 +232,11 @@ namespace QLPhongGym.GUI
                 hideMenu();
             }
         }
-
-        
-
         private void button8_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormDangKiLichHLV1());
             hideMenu();
         }
-
-
-
         private void pb_ad_Click(object sender, EventArgs e)
         {
             showMenu(pn_tkadmin);
@@ -253,25 +247,6 @@ namespace QLPhongGym.GUI
             showMenu(pn_tkadmin);
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Bạn muốn thoát ứng dụng?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                this.Close();
-            }
-        }
-
-        private void button9_MouseHover(object sender, EventArgs e)
-        {
-            var button = (Button)sender;
-            button.BackColor = Color.Lavender;
-        }
-
-        private void button9_MouseLeave(object sender, EventArgs e)
-        {
-            var button = (Button)sender;
-            button.BackColor = Color.Transparent;
-        }
         const int WM_PARENTNOTIFY = 0x210;
         const int WM_LBUTTONDOWN = 0x201;
 
