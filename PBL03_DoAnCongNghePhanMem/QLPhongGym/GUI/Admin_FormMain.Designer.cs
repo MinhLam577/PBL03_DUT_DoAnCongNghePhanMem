@@ -41,7 +41,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.pn_TitleMenu = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pb_ad = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@
             this.pb_acc = new System.Windows.Forms.PictureBox();
             this.panel_hlv.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.pn_TitleMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ad)).BeginInit();
             this.panel3.SuspendLayout();
@@ -78,7 +78,7 @@
             this.BtnTaiKhoan.Location = new System.Drawing.Point(0, 110);
             this.BtnTaiKhoan.Name = "BtnTaiKhoan";
             this.BtnTaiKhoan.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
-            this.BtnTaiKhoan.Size = new System.Drawing.Size(219, 55);
+            this.BtnTaiKhoan.Size = new System.Drawing.Size(227, 55);
             this.BtnTaiKhoan.TabIndex = 2;
             this.BtnTaiKhoan.Text = "Tài khoản";
             this.BtnTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -91,9 +91,9 @@
             this.panel_hlv.Controls.Add(this.BtnTaiKhoan);
             this.panel_hlv.Controls.Add(this.button8);
             this.panel_hlv.Controls.Add(this.button9);
-            this.panel_hlv.Location = new System.Drawing.Point(240, 286);
+            this.panel_hlv.Location = new System.Drawing.Point(240, 232);
             this.panel_hlv.Name = "panel_hlv";
-            this.panel_hlv.Size = new System.Drawing.Size(219, 164);
+            this.panel_hlv.Size = new System.Drawing.Size(227, 164);
             this.panel_hlv.TabIndex = 4;
             // 
             // button8
@@ -107,7 +107,7 @@
             this.button8.Location = new System.Drawing.Point(0, 55);
             this.button8.Name = "button8";
             this.button8.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(219, 55);
+            this.button8.Size = new System.Drawing.Size(227, 55);
             this.button8.TabIndex = 1;
             this.button8.Text = "Đăng kí giờ làm";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -125,7 +125,7 @@
             this.button9.Location = new System.Drawing.Point(0, 0);
             this.button9.Name = "button9";
             this.button9.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
-            this.button9.Size = new System.Drawing.Size(219, 55);
+            this.button9.Size = new System.Drawing.Size(227, 55);
             this.button9.TabIndex = 0;
             this.button9.Text = "Thông tin huấn luyện viên";
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -286,19 +286,19 @@
             this.panel2.Size = new System.Drawing.Size(240, 146);
             this.panel2.TabIndex = 0;
             // 
-            // panel4
+            // pn_TitleMenu
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.pictureBox1);
-            this.panel4.Controls.Add(this.pb_ad);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.panel4.Location = new System.Drawing.Point(240, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(895, 82);
-            this.panel4.TabIndex = 0;
+            this.pn_TitleMenu.BackColor = System.Drawing.Color.White;
+            this.pn_TitleMenu.Controls.Add(this.pictureBox1);
+            this.pn_TitleMenu.Controls.Add(this.pb_ad);
+            this.pn_TitleMenu.Controls.Add(this.label1);
+            this.pn_TitleMenu.Controls.Add(this.label2);
+            this.pn_TitleMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pn_TitleMenu.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.pn_TitleMenu.Location = new System.Drawing.Point(240, 0);
+            this.pn_TitleMenu.Name = "pn_TitleMenu";
+            this.pn_TitleMenu.Size = new System.Drawing.Size(895, 82);
+            this.pn_TitleMenu.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -453,7 +453,7 @@
             this.Controls.Add(this.pn_tkadmin);
             this.Controls.Add(this.panel_hlv);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.pn_TitleMenu);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Admin_FormMain";
@@ -461,8 +461,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel_hlv.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.pn_TitleMenu.ResumeLayout(false);
+            this.pn_TitleMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ad)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -489,7 +489,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel pn_TitleMenu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;

@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HLV_FormDanhSachKH));
             this.txb_ten_sdt = new System.Windows.Forms.TextBox();
             this.lb_ten_sdt = new System.Windows.Forms.Label();
             this.dgv_kh = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lb_description = new System.Windows.Forms.Label();
             this.lb_gioitinh = new System.Windows.Forms.Label();
             this.lb_tenkh = new System.Windows.Forms.Label();
             this.pb_kh = new System.Windows.Forms.PictureBox();
@@ -60,6 +59,14 @@
             this.dtp_to = new System.Windows.Forms.DateTimePicker();
             this.dtp_thangnam = new System.Windows.Forms.DateTimePicker();
             this.cb_nt = new System.Windows.Forms.ComboBox();
+            this.lb_sdt = new System.Windows.Forms.Label();
+            this.lb_diachi = new System.Windows.Forms.Label();
+            this.lb_gmail = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_kh)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_kh)).BeginInit();
@@ -97,72 +104,73 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_kh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_kh.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgv_kh.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_kh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_kh.BackgroundColor = System.Drawing.Color.PaleTurquoise;
+            this.dgv_kh.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.dgv_kh.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Cyan;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_kh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgv_kh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_kh.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Azure;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_kh.DefaultCellStyle = dataGridViewCellStyle10;
+            this.dgv_kh.EnableHeadersVisualStyles = false;
             this.dgv_kh.Location = new System.Drawing.Point(8, 254);
             this.dgv_kh.Name = "dgv_kh";
             this.dgv_kh.ReadOnly = true;
+            this.dgv_kh.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_kh.RowHeadersVisible = false;
             this.dgv_kh.RowHeadersWidth = 51;
             this.dgv_kh.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.dgv_kh.RowTemplate.Height = 24;
             this.dgv_kh.RowTemplate.ReadOnly = true;
             this.dgv_kh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_kh.Size = new System.Drawing.Size(791, 524);
+            this.dgv_kh.Size = new System.Drawing.Size(791, 551);
             this.dgv_kh.TabIndex = 59;
             this.dgv_kh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_kh_CellClick);
             // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.lb_description);
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.lb_gmail);
+            this.groupBox2.Controls.Add(this.lb_diachi);
+            this.groupBox2.Controls.Add(this.lb_sdt);
             this.groupBox2.Controls.Add(this.lb_gioitinh);
             this.groupBox2.Controls.Add(this.lb_tenkh);
             this.groupBox2.Controls.Add(this.pb_kh);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(805, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(814, 402);
+            this.groupBox2.Size = new System.Drawing.Size(845, 453);
             this.groupBox2.TabIndex = 60;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin chi tiết";
-            // 
-            // lb_description
-            // 
-            this.lb_description.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lb_description.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_description.ForeColor = System.Drawing.Color.Blue;
-            this.lb_description.Location = new System.Drawing.Point(351, 71);
-            this.lb_description.Name = "lb_description";
-            this.lb_description.Size = new System.Drawing.Size(381, 325);
-            this.lb_description.TabIndex = 4;
             // 
             // lb_gioitinh
             // 
             this.lb_gioitinh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_gioitinh.AutoSize = true;
-            this.lb_gioitinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_gioitinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_gioitinh.ForeColor = System.Drawing.Color.Blue;
-            this.lb_gioitinh.Location = new System.Drawing.Point(360, 30);
+            this.lb_gioitinh.Location = new System.Drawing.Point(451, 114);
             this.lb_gioitinh.Name = "lb_gioitinh";
-            this.lb_gioitinh.Size = new System.Drawing.Size(0, 38);
+            this.lb_gioitinh.Size = new System.Drawing.Size(0, 29);
             this.lb_gioitinh.TabIndex = 3;
             this.lb_gioitinh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -171,11 +179,11 @@
             this.lb_tenkh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_tenkh.AutoSize = true;
-            this.lb_tenkh.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_tenkh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_tenkh.ForeColor = System.Drawing.Color.Blue;
-            this.lb_tenkh.Location = new System.Drawing.Point(5, 34);
+            this.lb_tenkh.Location = new System.Drawing.Point(451, 33);
             this.lb_tenkh.Name = "lb_tenkh";
-            this.lb_tenkh.Size = new System.Drawing.Size(0, 38);
+            this.lb_tenkh.Size = new System.Drawing.Size(0, 29);
             this.lb_tenkh.TabIndex = 2;
             this.lb_tenkh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -183,9 +191,9 @@
             // 
             this.pb_kh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pb_kh.Image = ((System.Drawing.Image)(resources.GetObject("pb_kh.Image")));
-            this.pb_kh.Location = new System.Drawing.Point(6, 71);
+            this.pb_kh.Location = new System.Drawing.Point(0, 33);
             this.pb_kh.Name = "pb_kh";
-            this.pb_kh.Size = new System.Drawing.Size(339, 325);
+            this.pb_kh.Size = new System.Drawing.Size(338, 420);
             this.pb_kh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_kh.TabIndex = 0;
             this.pb_kh.TabStop = false;
@@ -203,9 +211,9 @@
             this.groupbox.Controls.Add(this.lb_batdau);
             this.groupbox.Controls.Add(this.label3);
             this.groupbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupbox.Location = new System.Drawing.Point(805, 420);
+            this.groupbox.Location = new System.Drawing.Point(805, 471);
             this.groupbox.Name = "groupbox";
-            this.groupbox.Size = new System.Drawing.Size(814, 358);
+            this.groupbox.Size = new System.Drawing.Size(845, 325);
             this.groupbox.TabIndex = 61;
             this.groupbox.TabStop = false;
             this.groupbox.Text = "Thông tin tập luyện";
@@ -217,7 +225,7 @@
             this.cb_gt.FormattingEnabled = true;
             this.cb_gt.Location = new System.Drawing.Point(367, 56);
             this.cb_gt.Name = "cb_gt";
-            this.cb_gt.Size = new System.Drawing.Size(348, 37);
+            this.cb_gt.Size = new System.Drawing.Size(365, 37);
             this.cb_gt.TabIndex = 77;
             // 
             // label6
@@ -236,7 +244,7 @@
             this.cb_detailca.FormattingEnabled = true;
             this.cb_detailca.Location = new System.Drawing.Point(367, 124);
             this.cb_detailca.Name = "cb_detailca";
-            this.cb_detailca.Size = new System.Drawing.Size(348, 37);
+            this.cb_detailca.Size = new System.Drawing.Size(365, 37);
             this.cb_detailca.TabIndex = 75;
             this.cb_detailca.SelectedIndexChanged += new System.EventHandler(this.cb_detailca_SelectedIndexChanged);
             // 
@@ -441,11 +449,119 @@
             this.cb_nt.TabIndex = 83;
             this.cb_nt.SelectedIndexChanged += new System.EventHandler(this.cb_nt_SelectedIndexChanged);
             // 
+            // lb_sdt
+            // 
+            this.lb_sdt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_sdt.AutoSize = true;
+            this.lb_sdt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_sdt.ForeColor = System.Drawing.Color.Blue;
+            this.lb_sdt.Location = new System.Drawing.Point(451, 195);
+            this.lb_sdt.Name = "lb_sdt";
+            this.lb_sdt.Size = new System.Drawing.Size(0, 29);
+            this.lb_sdt.TabIndex = 4;
+            this.lb_sdt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lb_diachi
+            // 
+            this.lb_diachi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_diachi.AutoSize = true;
+            this.lb_diachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_diachi.ForeColor = System.Drawing.Color.Blue;
+            this.lb_diachi.Location = new System.Drawing.Point(451, 281);
+            this.lb_diachi.Name = "lb_diachi";
+            this.lb_diachi.Size = new System.Drawing.Size(0, 29);
+            this.lb_diachi.TabIndex = 5;
+            this.lb_diachi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lb_gmail
+            // 
+            this.lb_gmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_gmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_gmail.ForeColor = System.Drawing.Color.Blue;
+            this.lb_gmail.Location = new System.Drawing.Point(451, 369);
+            this.lb_gmail.Name = "lb_gmail";
+            this.lb_gmail.Size = new System.Drawing.Size(281, 81);
+            this.lb_gmail.TabIndex = 6;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Blue;
+            this.label11.Location = new System.Drawing.Point(362, 33);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(89, 29);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "Họ tên:";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Blue;
+            this.label12.Location = new System.Drawing.Point(344, 114);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(107, 29);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Giới tính:";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Blue;
+            this.label13.Location = new System.Drawing.Point(396, 195);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(55, 29);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "Sđt:";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Blue;
+            this.label14.Location = new System.Drawing.Point(359, 281);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(92, 29);
+            this.label14.TabIndex = 10;
+            this.label14.Text = "Địa chỉ:";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Blue;
+            this.label15.Location = new System.Drawing.Point(369, 369);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(82, 29);
+            this.label15.TabIndex = 11;
+            this.label15.Text = "Gmail:";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // HLV_FormDanhSachKH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1811, 781);
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.ClientSize = new System.Drawing.Size(1811, 808);
             this.Controls.Add(this.cb_nt);
             this.Controls.Add(this.dtp_thangnam);
             this.Controls.Add(this.dtp_to);
@@ -483,7 +599,6 @@
         private System.Windows.Forms.Label lb_ten_sdt;
         private System.Windows.Forms.DataGridView dgv_kh;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label lb_description;
         private System.Windows.Forms.Label lb_gioitinh;
         private System.Windows.Forms.Label lb_tenkh;
         private System.Windows.Forms.PictureBox pb_kh;
@@ -508,5 +623,13 @@
         private System.Windows.Forms.DateTimePicker dtp_to;
         private System.Windows.Forms.DateTimePicker dtp_thangnam;
         private System.Windows.Forms.ComboBox cb_nt;
+        private System.Windows.Forms.Label lb_gmail;
+        private System.Windows.Forms.Label lb_diachi;
+        private System.Windows.Forms.Label lb_sdt;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
     }
 }

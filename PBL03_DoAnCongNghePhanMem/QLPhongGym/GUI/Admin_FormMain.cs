@@ -53,7 +53,8 @@ namespace QLPhongGym.GUI
         private void OpenChildForm(Form childForm)
         {
             if (currentFormChild != null)
-                currentFormChild.Close();        
+                currentFormChild.Close();
+            pn_TitleMenu.BackColor = childForm.BackColor;
             currentFormChild = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -260,5 +261,6 @@ namespace QLPhongGym.GUI
                 
             base.WndProc(ref m);
         }
+
     }
 }

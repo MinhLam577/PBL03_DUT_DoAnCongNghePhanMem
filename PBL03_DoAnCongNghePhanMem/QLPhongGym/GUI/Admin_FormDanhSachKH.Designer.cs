@@ -96,9 +96,9 @@
             this.groupBox1.Controls.Add(this.txb_mathe_cccd);
             this.groupBox1.Controls.Add(this.dgv_kh);
             this.groupBox1.Controls.Add(this.kh_mns);
-            this.groupBox1.Location = new System.Drawing.Point(0, 1);
+            this.groupBox1.Location = new System.Drawing.Point(0, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(806, 785);
+            this.groupBox1.Size = new System.Drawing.Size(806, 780);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -202,7 +202,7 @@
             this.dgv_kh.RowTemplate.Height = 24;
             this.dgv_kh.RowTemplate.ReadOnly = true;
             this.dgv_kh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_kh.Size = new System.Drawing.Size(800, 589);
+            this.dgv_kh.Size = new System.Drawing.Size(800, 584);
             this.dgv_kh.TabIndex = 50;
             this.dgv_kh.DataSourceChanged += new System.EventHandler(this.dgv_kh_DataSourceChanged);
             this.dgv_kh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_kh_CellClick);
@@ -317,9 +317,9 @@
             this.groupBox2.Controls.Add(this.lb_tenkh);
             this.groupBox2.Controls.Add(this.pb_kh);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(806, 9);
+            this.groupBox2.Location = new System.Drawing.Point(806, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(989, 420);
+            this.groupBox2.Size = new System.Drawing.Size(989, 423);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin chi tiết";
@@ -332,7 +332,7 @@
             this.lb_description.ForeColor = System.Drawing.Color.Blue;
             this.lb_description.Location = new System.Drawing.Point(316, 71);
             this.lb_description.Name = "lb_description";
-            this.lb_description.Size = new System.Drawing.Size(433, 340);
+            this.lb_description.Size = new System.Drawing.Size(433, 343);
             this.lb_description.TabIndex = 4;
             // 
             // lb_gioitinh
@@ -580,7 +580,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1807, 781);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
