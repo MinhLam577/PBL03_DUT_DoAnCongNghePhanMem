@@ -25,7 +25,7 @@ namespace QLPhongGym.GUI
         }
         public void LoadDuLieuForm()
         {
-            int tongkhachhang = 0, tonghlv = 0, tongtb = 0, tonggt = 0;
+            int tongkhachhang = 0, tonghlv = 0, tonggt = 0;
             foreach (var i in KHBLL.Instance.GetAllKHID())
                 tongkhachhang++;
             foreach (var i in QLHLVBLL.getInstance.GetAllHLVID())
@@ -59,6 +59,8 @@ namespace QLPhongGym.GUI
             chart_doanhthu.ChartAreas[0].AxisY.Title = "Tổng doanh thu(VNĐ)";
             chart_doanhthu.ChartAreas[0].AxisY.TitleFont = new Font("Times new roman", 14, FontStyle.Bold);
             chart_doanhthu.ChartAreas[0].AxisY.TitleAlignment = StringAlignment.Near;
+            chart_doanhthu.Legends[0].Font = new Font("Times new roman", 15, FontStyle.Bold);
+            chart_doanhthu.Legends[0].Docking = Docking.Top;
             lb_tongthunhap.Text = tongdoanhthu.ToString();
         }
         public void LoadDuLieuBieuDoSoLuongDangKiGoi()
@@ -71,6 +73,7 @@ namespace QLPhongGym.GUI
             {
                 chart_soluongdkgt.Series["Số lượng đăng kí gói"].Points.AddXY(i, DangKiGoiTapBLL.Instance.GetSoLuongDKGTTheoNamVaThang(x, i));
                 chart_soluongdkgt.Series["Số lượng đăng kí gói"].Points[j].Label = DangKiGoiTapBLL.Instance.GetSoLuongDKGTTheoNamVaThang(x, i).ToString();
+                chart_soluongdkgt.Series["Số lượng đăng kí gói"].Points[j].Font = new Font("Times new roman", 15, FontStyle.Bold);
             }
             chart_soluongdkgt.ChartAreas[0].AxisX.Title = "Tháng";
             chart_soluongdkgt.ChartAreas[0].AxisX.TitleFont = new Font("Times new roman", 14, FontStyle.Bold);
@@ -78,6 +81,8 @@ namespace QLPhongGym.GUI
             chart_soluongdkgt.ChartAreas[0].AxisY.Title = "Tổng số lượng gói tập khách hàng đăng kí";
             chart_soluongdkgt.ChartAreas[0].AxisY.TitleAlignment = StringAlignment.Near;
             chart_soluongdkgt.ChartAreas[0].AxisY.TitleFont = new Font("Times new roman", 14, FontStyle.Bold);
+            chart_soluongdkgt.Legends[0].Font = new Font("Times new roman", 15, FontStyle.Bold);
+            chart_soluongdkgt.Legends[0].Docking = Docking.Top;
         }
         public void LoadDuLieuBieuDoNhuCauDangKiGoi()
         {
@@ -97,7 +102,7 @@ namespace QLPhongGym.GUI
             {
                 chart_nhucaudkgt.Series.Add(i.NameGT);
                 chart_nhucaudkgt.Series[i.NameGT].Font = new Font("Times new roman", 15, FontStyle.Bold);
-                chart_nhucaudkgt.Legends[0].Font = new Font("Times new roman", 15, FontStyle.Bold);
+                chart_nhucaudkgt.Legends[0].Font = new Font("Times new roman", 12, FontStyle.Bold);
             }
 
             for (int i = 1, j = 0; i <= 12; i++, j++)
