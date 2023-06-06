@@ -43,15 +43,17 @@ namespace QLPhongGym.GUI
         }
         public void LoadListDKGT(int IDKH)
         {
+
             dgv_gt.DataSource = DangKiGoiTapBLL.Instance.FitlerListDKGT(IDKH, fitlerDKGT_tsmi.Text, cb_gt.SelectedItem as string);
             dgv_gt.Columns["IDThe"].Visible = false;
+            dgv_gt.Columns["Name"].Visible = false;
             dgv_gt.Columns.Cast<DataGridViewColumn>().ToList().ForEach(f => f.SortMode = DataGridViewColumnSortMode.NotSortable);
             //Lấy ra gói tập có hiệu lực gần nhất có hiệu lực
             DangKiGoiTap dkgt = DangKiGoiTapBLL.Instance.GetDKGT_Newest_ByIDKH(IDKH);
             //Kiểm tra nếu gói tập có tồn tại thì show ghi chú của user lên giao diện
             if (dkgt != null)
                 lb_description.Text = dkgt.Description;
-            else lb_description.Text = "";            
+            else lb_description.Text = "";
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {

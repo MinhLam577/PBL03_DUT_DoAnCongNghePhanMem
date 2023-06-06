@@ -131,12 +131,6 @@ namespace QLPhongGym.GUI
             OpenChildForm(new Admin_FormDanhSachKH());
             hideMenu();
         }
-
-        private void panel2_Click(object sender, EventArgs e)
-        {
-            if (currentFormChild != null)
-                currentFormChild.Close();
-        }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 

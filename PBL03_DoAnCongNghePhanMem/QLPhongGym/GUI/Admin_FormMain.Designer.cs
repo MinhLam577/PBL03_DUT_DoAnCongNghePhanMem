@@ -142,7 +142,7 @@
             this.button13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
             this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button13.Location = new System.Drawing.Point(0, 468);
+            this.button13.Location = new System.Drawing.Point(0, 404);
             this.button13.Name = "button13";
             this.button13.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.button13.Size = new System.Drawing.Size(240, 63);
@@ -163,7 +163,7 @@
             this.button10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
             this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(0, 280);
+            this.button10.Location = new System.Drawing.Point(0, 216);
             this.button10.Name = "button10";
             this.button10.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.button10.Size = new System.Drawing.Size(240, 65);
@@ -204,7 +204,7 @@
             this.button16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button16.Image = ((System.Drawing.Image)(resources.GetObject("button16.Image")));
             this.button16.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button16.Location = new System.Drawing.Point(0, 405);
+            this.button16.Location = new System.Drawing.Point(0, 341);
             this.button16.Name = "button16";
             this.button16.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.button16.Size = new System.Drawing.Size(240, 63);
@@ -225,7 +225,7 @@
             this.button_ThietBi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button_ThietBi.Image = ((System.Drawing.Image)(resources.GetObject("button_ThietBi.Image")));
             this.button_ThietBi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_ThietBi.Location = new System.Drawing.Point(0, 345);
+            this.button_ThietBi.Location = new System.Drawing.Point(0, 281);
             this.button_ThietBi.Name = "button_ThietBi";
             this.button_ThietBi.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.button_ThietBi.Size = new System.Drawing.Size(240, 60);
@@ -264,7 +264,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 210);
+            this.button1.Location = new System.Drawing.Point(0, 146);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.button1.Size = new System.Drawing.Size(240, 70);
@@ -277,18 +277,18 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(240, 210);
+            this.panel2.Size = new System.Drawing.Size(240, 146);
             this.panel2.TabIndex = 0;
-            this.panel2.Click += new System.EventHandler(this.panel2_Click);
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.pb_ad);
             this.panel4.Controls.Add(this.label1);
