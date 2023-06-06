@@ -91,7 +91,7 @@
             this.panel_hlv.Controls.Add(this.button8);
             this.panel_hlv.Controls.Add(this.button9);
             this.panel_hlv.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_hlv.Location = new System.Drawing.Point(0, 393);
+            this.panel_hlv.Location = new System.Drawing.Point(0, 345);
             this.panel_hlv.Name = "panel_hlv";
             this.panel_hlv.Size = new System.Drawing.Size(219, 175);
             this.panel_hlv.TabIndex = 4;
@@ -132,98 +132,112 @@
             // 
             // button13
             // 
-            this.button13.BackColor = System.Drawing.Color.Black;
+            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
             this.button13.Dock = System.Windows.Forms.DockStyle.Top;
             this.button13.FlatAppearance.BorderSize = 0;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button13.Location = new System.Drawing.Point(0, 752);
+            this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
+            this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button13.Location = new System.Drawing.Point(0, 643);
             this.button13.Name = "button13";
             this.button13.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.button13.Size = new System.Drawing.Size(219, 91);
+            this.button13.Size = new System.Drawing.Size(219, 63);
             this.button13.TabIndex = 8;
-            this.button13.Text = "Thống kê";
+            this.button13.Text = "   Thống kê";
             this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button13.UseVisualStyleBackColor = false;
             this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button10
             // 
-            this.button10.BackColor = System.Drawing.Color.Black;
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
             this.button10.Dock = System.Windows.Forms.DockStyle.Top;
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button10.Location = new System.Drawing.Point(0, 297);
+            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
+            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.Location = new System.Drawing.Point(0, 280);
             this.button10.Name = "button10";
             this.button10.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.button10.Size = new System.Drawing.Size(219, 96);
+            this.button10.Size = new System.Drawing.Size(219, 65);
             this.button10.TabIndex = 3;
-            this.button10.Text = "Huấn luyện viên";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.Text = "   Huấn luyện viên";
+            this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button14
             // 
-            this.button14.BackColor = System.Drawing.Color.Black;
-            this.button14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
+            this.button14.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button14.FlatAppearance.BorderSize = 0;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button14.Location = new System.Drawing.Point(0, 843);
+            this.button14.Image = ((System.Drawing.Image)(resources.GetObject("button14.Image")));
+            this.button14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button14.Location = new System.Drawing.Point(0, 706);
             this.button14.Name = "button14";
             this.button14.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.button14.Size = new System.Drawing.Size(219, 83);
+            this.button14.Size = new System.Drawing.Size(219, 51);
             this.button14.TabIndex = 10;
-            this.button14.Text = "Thoát";
+            this.button14.Text = "   Thoát";
             this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button14.UseVisualStyleBackColor = false;
             this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button16
             // 
-            this.button16.BackColor = System.Drawing.Color.Black;
+            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
             this.button16.Dock = System.Windows.Forms.DockStyle.Top;
             this.button16.FlatAppearance.BorderSize = 0;
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button16.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button16.Location = new System.Drawing.Point(0, 659);
+            this.button16.Image = ((System.Drawing.Image)(resources.GetObject("button16.Image")));
+            this.button16.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button16.Location = new System.Drawing.Point(0, 580);
             this.button16.Name = "button16";
             this.button16.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.button16.Size = new System.Drawing.Size(219, 93);
+            this.button16.Size = new System.Drawing.Size(219, 63);
             this.button16.TabIndex = 7;
-            this.button16.Text = "Gói tập";
+            this.button16.Text = "   Gói tập";
             this.button16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button16.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button16.UseVisualStyleBackColor = false;
             this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // button_ThietBi
             // 
-            this.button_ThietBi.BackColor = System.Drawing.Color.Black;
+            this.button_ThietBi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
             this.button_ThietBi.Dock = System.Windows.Forms.DockStyle.Top;
             this.button_ThietBi.FlatAppearance.BorderSize = 0;
             this.button_ThietBi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_ThietBi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ThietBi.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_ThietBi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button_ThietBi.Location = new System.Drawing.Point(0, 568);
+            this.button_ThietBi.Image = ((System.Drawing.Image)(resources.GetObject("button_ThietBi.Image")));
+            this.button_ThietBi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_ThietBi.Location = new System.Drawing.Point(0, 520);
             this.button_ThietBi.Name = "button_ThietBi";
             this.button_ThietBi.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.button_ThietBi.Size = new System.Drawing.Size(219, 91);
+            this.button_ThietBi.Size = new System.Drawing.Size(219, 60);
             this.button_ThietBi.TabIndex = 5;
-            this.button_ThietBi.Text = "Thiết bị";
+            this.button_ThietBi.Text = "   Thiết bị";
             this.button_ThietBi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_ThietBi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_ThietBi.UseVisualStyleBackColor = false;
             this.button_ThietBi.Click += new System.EventHandler(this.button_ThietBi_Click);
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
             this.panel1.Controls.Add(this.button14);
             this.panel1.Controls.Add(this.button13);
             this.panel1.Controls.Add(this.button16);
@@ -240,20 +254,21 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(0, 210);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(219, 87);
+            this.button1.Size = new System.Drawing.Size(219, 70);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Khách hàng";
+            this.button1.Text = "   Khách hàng";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
@@ -261,6 +276,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -281,7 +297,7 @@
             this.panel4.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.panel4.Location = new System.Drawing.Point(240, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(953, 82);
+            this.panel4.Size = new System.Drawing.Size(895, 82);
             this.panel4.TabIndex = 0;
             // 
             // pictureBox1
@@ -333,11 +349,12 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(245)))));
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(240, 82);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(953, 504);
+            this.panel3.Size = new System.Drawing.Size(895, 504);
             this.panel3.TabIndex = 2;
             // 
             // pictureBox2
@@ -346,7 +363,7 @@
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(953, 504);
+            this.pictureBox2.Size = new System.Drawing.Size(895, 504);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -432,7 +449,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1193, 586);
+            this.ClientSize = new System.Drawing.Size(1135, 586);
             this.Controls.Add(this.pn_tkadmin);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);

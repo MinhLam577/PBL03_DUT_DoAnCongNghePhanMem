@@ -258,5 +258,13 @@ namespace QLPhongGym.GUI
         {
             showMenu(pn_tkadmin);
         }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn muốn thoát ứng dụng?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }
