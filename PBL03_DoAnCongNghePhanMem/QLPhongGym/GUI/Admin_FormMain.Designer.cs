@@ -289,7 +289,6 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.pb_ad);
             this.panel4.Controls.Add(this.label1);
