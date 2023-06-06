@@ -190,5 +190,22 @@ namespace QLPhongGym.GUI
         {
             IsGanHLV = false;
         }
+        const int WM_PARENTNOTIFY = 0x210;
+        const int WM_LBUTTONDOWN = 0x201;
+
+        protected override void WndProc(ref Message m)
+        {
+            if (m.Msg == WM_LBUTTONDOWN || (m.Msg == WM_PARENTNOTIFY &&
+                (int)m.WParam == WM_LBUTTONDOWN))
+            {
+                
+                if (!pn_tkhlv.ClientRectangle.Contains(
+                                 pn_tkhlv.PointToClient(Cursor.Position)))
+                    pn_tkhlv.Hide();
+            }
+
+
+            base.WndProc(ref m);
+        }
     }
 }

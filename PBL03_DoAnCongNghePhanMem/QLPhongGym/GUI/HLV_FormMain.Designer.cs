@@ -64,18 +64,18 @@
             // 
             // btn_lichlamviec
             // 
-            this.btn_lichlamviec.BackColor = System.Drawing.Color.Transparent;
+            this.btn_lichlamviec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
             this.btn_lichlamviec.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_lichlamviec.FlatAppearance.BorderSize = 0;
             this.btn_lichlamviec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_lichlamviec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_lichlamviec.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_lichlamviec.ForeColor = System.Drawing.Color.White;
             this.btn_lichlamviec.Image = ((System.Drawing.Image)(resources.GetObject("btn_lichlamviec.Image")));
             this.btn_lichlamviec.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_lichlamviec.Location = new System.Drawing.Point(0, 175);
             this.btn_lichlamviec.Name = "btn_lichlamviec";
             this.btn_lichlamviec.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btn_lichlamviec.Size = new System.Drawing.Size(273, 58);
+            this.btn_lichlamviec.Size = new System.Drawing.Size(273, 71);
             this.btn_lichlamviec.TabIndex = 1;
             this.btn_lichlamviec.Text = "    Lịch làm việc";
             this.btn_lichlamviec.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -84,16 +84,15 @@
             // 
             // btn_kh
             // 
-            this.btn_kh.BackColor = System.Drawing.Color.Transparent;
-            this.btn_kh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_kh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
             this.btn_kh.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_kh.FlatAppearance.BorderSize = 0;
             this.btn_kh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_kh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_kh.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_kh.ForeColor = System.Drawing.Color.White;
             this.btn_kh.Image = ((System.Drawing.Image)(resources.GetObject("btn_kh.Image")));
             this.btn_kh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_kh.Location = new System.Drawing.Point(0, 233);
+            this.btn_kh.Location = new System.Drawing.Point(0, 246);
             this.btn_kh.Name = "btn_kh";
             this.btn_kh.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
             this.btn_kh.Size = new System.Drawing.Size(273, 65);
@@ -120,11 +119,11 @@
             // 
             // btn_thoat
             // 
-            this.btn_thoat.BackColor = System.Drawing.Color.Transparent;
+            this.btn_thoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
             this.btn_thoat.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btn_thoat.FlatAppearance.BorderSize = 0;
             this.btn_thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_thoat.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_thoat.ForeColor = System.Drawing.Color.White;
             this.btn_thoat.Image = ((System.Drawing.Image)(resources.GetObject("btn_thoat.Image")));
             this.btn_thoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
