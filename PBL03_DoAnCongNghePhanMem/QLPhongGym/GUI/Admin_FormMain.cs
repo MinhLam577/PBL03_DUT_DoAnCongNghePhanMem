@@ -120,7 +120,6 @@ namespace QLPhongGym.GUI
             OpenChildForm(new Admin_FormDanhSachGoiTap());
             hideMenu();
         }
-
         private void button9_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Admin_FormDanhSachHLV());
@@ -140,12 +139,7 @@ namespace QLPhongGym.GUI
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (currentFormChild != null)
-            {
-                currentFormChild.Close();
-                hideMenu();
-            }
-                
+
         }
         private void button13_Click(object sender, EventArgs e)
         {
@@ -238,17 +232,11 @@ namespace QLPhongGym.GUI
                 hideMenu();
             }
         }
-
-        
-
         private void button8_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormDangKiLichHLV1());
             hideMenu();
         }
-
-
-
         private void pb_ad_Click(object sender, EventArgs e)
         {
             showMenu(pn_tkadmin);
@@ -257,6 +245,26 @@ namespace QLPhongGym.GUI
         private void label2_Click(object sender, EventArgs e)
         {
             showMenu(pn_tkadmin);
+        }
+
+        const int WM_PARENTNOTIFY = 0x210;
+        const int WM_LBUTTONDOWN = 0x201;
+
+        protected override void WndProc(ref Message m)
+        {
+            if (m.Msg == WM_LBUTTONDOWN || (m.Msg == WM_PARENTNOTIFY &&
+                (int)m.WParam == WM_LBUTTONDOWN))
+            {
+                if (!panel_hlv.ClientRectangle.Contains(
+                                 panel_hlv.PointToClient(Cursor.Position)))
+                    panel_hlv.Hide();
+                if (!pn_tkadmin.ClientRectangle.Contains(
+                                 pn_tkadmin.PointToClient(Cursor.Position)))
+                    pn_tkadmin.Hide();
+            }
+                
+                
+            base.WndProc(ref m);
         }
     }
 }

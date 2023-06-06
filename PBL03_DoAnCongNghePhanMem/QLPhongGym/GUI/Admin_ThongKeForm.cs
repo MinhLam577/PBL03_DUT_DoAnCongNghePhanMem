@@ -25,7 +25,7 @@ namespace QLPhongGym.GUI
         }
         public void LoadDuLieuForm()
         {
-            int tongkhachhang = 0, tonghlv = 0, tongtb = 0, tonggt = 0;
+            int tongkhachhang = 0, tonghlv = 0, tonggt = 0;
             foreach (var i in KHBLL.Instance.GetAllKHID())
                 tongkhachhang++;
             foreach (var i in QLHLVBLL.getInstance.GetAllHLVID())
@@ -42,7 +42,7 @@ namespace QLPhongGym.GUI
             int x = DateTime.Now.Year;
             chart_doanhthu.Titles.Add(new System.Windows.Forms.DataVisualization.Charting.Title(
                 "Doanh thu trong năm " + x, System.Windows.Forms.DataVisualization.Charting.Docking.Top,
-                new Font("Arial", 20, FontStyle.Bold), Color.Black));
+                new Font("Arial", 20, FontStyle.Bold), Color.White));
             chart_doanhthu.Series["Doanh thu"].Color = Color.Red;
             double tongdoanhthu = 0;
 
@@ -59,6 +59,8 @@ namespace QLPhongGym.GUI
             chart_doanhthu.ChartAreas[0].AxisY.Title = "Tổng doanh thu(VNĐ)";
             chart_doanhthu.ChartAreas[0].AxisY.TitleFont = new Font("Times new roman", 14, FontStyle.Bold);
             chart_doanhthu.ChartAreas[0].AxisY.TitleAlignment = StringAlignment.Near;
+            chart_doanhthu.Legends[0].Font = new Font("Times new roman", 15, FontStyle.Bold);
+            chart_doanhthu.Legends[0].Docking = Docking.Top;
             lb_tongthunhap.Text = tongdoanhthu.ToString();
         }
         public void LoadDuLieuBieuDoSoLuongDangKiGoi()
@@ -66,25 +68,29 @@ namespace QLPhongGym.GUI
             int x = DateTime.Now.Year;
             chart_soluongdkgt.Titles.Add(new System.Windows.Forms.DataVisualization.Charting.Title(
                 "số lượng đăng kí gói tập trong năm " + x, System.Windows.Forms.DataVisualization.Charting.Docking.Top,
-                new Font("Arial", 20, FontStyle.Bold), Color.Black));
+                new Font("Arial", 20, FontStyle.Bold), Color.White));
+            chart_soluongdkgt.Series["Số lượng đăng kí gói"].Color = Color.FromArgb(34, 139, 34);
             for (int i = 1, j = 0; i <= 12; i++, j++)
             {
                 chart_soluongdkgt.Series["Số lượng đăng kí gói"].Points.AddXY(i, DangKiGoiTapBLL.Instance.GetSoLuongDKGTTheoNamVaThang(x, i));
                 chart_soluongdkgt.Series["Số lượng đăng kí gói"].Points[j].Label = DangKiGoiTapBLL.Instance.GetSoLuongDKGTTheoNamVaThang(x, i).ToString();
+                chart_soluongdkgt.Series["Số lượng đăng kí gói"].Points[j].Font = new Font("Times new roman", 15, FontStyle.Bold);
             }
             chart_soluongdkgt.ChartAreas[0].AxisX.Title = "Tháng";
             chart_soluongdkgt.ChartAreas[0].AxisX.TitleFont = new Font("Times new roman", 14, FontStyle.Bold);
             chart_soluongdkgt.ChartAreas[0].AxisX.TitleAlignment = StringAlignment.Near;
             chart_soluongdkgt.ChartAreas[0].AxisY.Title = "Tổng số lượng gói tập khách hàng đăng kí";
             chart_soluongdkgt.ChartAreas[0].AxisY.TitleAlignment = StringAlignment.Near;
-            chart_soluongdkgt.ChartAreas[0].AxisY.TitleFont = new Font("Times new roman", 14, FontStyle.Bold);
+            chart_soluongdkgt.ChartAreas[0].AxisY.TitleFont = new Font("Times new roman", 12, FontStyle.Bold);
+            chart_soluongdkgt.Legends[0].Font = new Font("Times new roman", 15, FontStyle.Bold);
+            chart_soluongdkgt.Legends[0].Docking = Docking.Top;
         }
         public void LoadDuLieuBieuDoNhuCauDangKiGoi()
         {
             int x = DateTime.Now.Year;
             chart_nhucaudkgt.Titles.Add(new System.Windows.Forms.DataVisualization.Charting.Title(
                 "Nhu cầu đăng kí gói tập trong năm " + x, System.Windows.Forms.DataVisualization.Charting.Docking.Top,
-                new Font("Arial", 20, FontStyle.Bold), Color.Black));
+                new Font("Arial", 20, FontStyle.Bold), Color.White));
             List<GoiTap> list_gt = GoiTapBLL.Instance.GetAllGT();
             int cnt_gt = list_gt.Count;
             chart_nhucaudkgt.ChartAreas[0].AxisX.Title = "Tháng";
@@ -97,7 +103,7 @@ namespace QLPhongGym.GUI
             {
                 chart_nhucaudkgt.Series.Add(i.NameGT);
                 chart_nhucaudkgt.Series[i.NameGT].Font = new Font("Times new roman", 15, FontStyle.Bold);
-                chart_nhucaudkgt.Legends[0].Font = new Font("Times new roman", 15, FontStyle.Bold);
+                chart_nhucaudkgt.Legends[0].Font = new Font("Times new roman", 12, FontStyle.Bold);
             }
 
             for (int i = 1, j = 0; i <= 12; i++, j++)
@@ -113,6 +119,16 @@ namespace QLPhongGym.GUI
                 foreach(DataPoint p in sr.Points)
                     if (p.YValues[0] == 0)
                         p.IsValueShownAsLabel = false;
+        }
+
+        private void chart_soluongdkgt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart_nhucaudkgt_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
