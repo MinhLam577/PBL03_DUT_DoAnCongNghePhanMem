@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_tkhlv = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.button_add = new System.Windows.Forms.Button();
@@ -53,14 +57,34 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_tkhlv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_tkhlv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgv_tkhlv.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_tkhlv.BackgroundColor = System.Drawing.Color.SeaShell;
+            this.dgv_tkhlv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_tkhlv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_tkhlv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_tkhlv.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_tkhlv.EnableHeadersVisualStyles = false;
             this.dgv_tkhlv.Location = new System.Drawing.Point(668, 153);
             this.dgv_tkhlv.Name = "dgv_tkhlv";
             this.dgv_tkhlv.ReadOnly = true;
+            this.dgv_tkhlv.RowHeadersVisible = false;
             this.dgv_tkhlv.RowHeadersWidth = 51;
             this.dgv_tkhlv.RowTemplate.Height = 24;
-            this.dgv_tkhlv.Size = new System.Drawing.Size(706, 600);
+            this.dgv_tkhlv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_tkhlv.Size = new System.Drawing.Size(750, 614);
             this.dgv_tkhlv.TabIndex = 0;
             this.dgv_tkhlv.DataSourceChanged += new System.EventHandler(this.dgv_tkhlv_DataSourceChanged);
             // 
@@ -81,7 +105,7 @@
             this.button_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_add.ForeColor = System.Drawing.Color.Aqua;
-            this.button_add.Location = new System.Drawing.Point(496, 328);
+            this.button_add.Location = new System.Drawing.Point(498, 276);
             this.button_add.Name = "button_add";
             this.button_add.Size = new System.Drawing.Size(138, 49);
             this.button_add.TabIndex = 2;
@@ -96,7 +120,7 @@
             this.button_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_edit.ForeColor = System.Drawing.Color.Aqua;
-            this.button_edit.Location = new System.Drawing.Point(496, 422);
+            this.button_edit.Location = new System.Drawing.Point(498, 370);
             this.button_edit.Name = "button_edit";
             this.button_edit.Size = new System.Drawing.Size(138, 44);
             this.button_edit.TabIndex = 3;
@@ -111,7 +135,7 @@
             this.button_xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_xoa.ForeColor = System.Drawing.Color.Aqua;
-            this.button_xoa.Location = new System.Drawing.Point(496, 511);
+            this.button_xoa.Location = new System.Drawing.Point(498, 459);
             this.button_xoa.Name = "button_xoa";
             this.button_xoa.Size = new System.Drawing.Size(138, 47);
             this.button_xoa.TabIndex = 4;
@@ -122,18 +146,20 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(665, 125);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(663, 112);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(128, 16);
+            this.label5.Size = new System.Drawing.Size(227, 29);
             this.label5.TabIndex = 11;
             this.label5.Text = "Danh sách tài khoản";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 125);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 112);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(166, 16);
+            this.label2.Size = new System.Drawing.Size(296, 29);
             this.label2.TabIndex = 13;
             this.label2.Text = "Danh sách huấn luyện viên";
             // 
@@ -143,14 +169,34 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dgv_hlv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_hlv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgv_hlv.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_hlv.BackgroundColor = System.Drawing.Color.SeaShell;
+            this.dgv_hlv.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.HotPink;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.HotPink;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_hlv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_hlv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_hlv.Location = new System.Drawing.Point(31, 153);
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightPink;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_hlv.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_hlv.EnableHeadersVisualStyles = false;
+            this.dgv_hlv.Location = new System.Drawing.Point(1, 153);
             this.dgv_hlv.Name = "dgv_hlv";
             this.dgv_hlv.ReadOnly = true;
+            this.dgv_hlv.RowHeadersVisible = false;
             this.dgv_hlv.RowHeadersWidth = 51;
             this.dgv_hlv.RowTemplate.Height = 24;
-            this.dgv_hlv.Size = new System.Drawing.Size(426, 600);
+            this.dgv_hlv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_hlv.Size = new System.Drawing.Size(463, 614);
             this.dgv_hlv.TabIndex = 12;
             this.dgv_hlv.DataSourceChanged += new System.EventHandler(this.dgv_hlv_DataSourceChanged);
             this.dgv_hlv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_hlv_CellClick);
@@ -159,10 +205,10 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1145, 66);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(1137, 66);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 20);
+            this.label3.Size = new System.Drawing.Size(75, 25);
             this.label3.TabIndex = 14;
             this.label3.Text = "Search";
             // 
@@ -183,7 +229,7 @@
             this.btn_bantk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_bantk.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_bantk.ForeColor = System.Drawing.Color.Aqua;
-            this.btn_bantk.Location = new System.Drawing.Point(496, 602);
+            this.btn_bantk.Location = new System.Drawing.Point(498, 550);
             this.btn_bantk.Name = "btn_bantk";
             this.btn_bantk.Size = new System.Drawing.Size(138, 47);
             this.btn_bantk.TabIndex = 16;
@@ -198,7 +244,7 @@
             this.btn_moban.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_moban.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_moban.ForeColor = System.Drawing.Color.Aqua;
-            this.btn_moban.Location = new System.Drawing.Point(496, 681);
+            this.btn_moban.Location = new System.Drawing.Point(498, 629);
             this.btn_moban.Name = "btn_moban";
             this.btn_moban.Size = new System.Drawing.Size(138, 72);
             this.btn_moban.TabIndex = 17;
@@ -208,18 +254,16 @@
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(637, 66);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(663, 62);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 20);
+            this.label4.Size = new System.Drawing.Size(52, 29);
             this.label4.TabIndex = 18;
             this.label4.Text = "Lọc";
             // 
             // cb_tk
             // 
-            this.cb_tk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.cb_tk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_tk.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_tk.FormattingEnabled = true;
@@ -228,7 +272,7 @@
             "Tài khoản cá nhân",
             "Tài khoản đang hoạt động",
             "Tài khoản bị ban"});
-            this.cb_tk.Location = new System.Drawing.Point(690, 64);
+            this.cb_tk.Location = new System.Drawing.Point(724, 64);
             this.cb_tk.Name = "cb_tk";
             this.cb_tk.Size = new System.Drawing.Size(333, 28);
             this.cb_tk.TabIndex = 62;

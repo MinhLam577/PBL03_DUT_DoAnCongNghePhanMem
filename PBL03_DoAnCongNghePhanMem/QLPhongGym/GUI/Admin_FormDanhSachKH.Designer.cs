@@ -172,22 +172,21 @@
             this.dgv_kh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_kh.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_kh.BackgroundColor = System.Drawing.Color.Azure;
-            this.dgv_kh.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
-            this.dgv_kh.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_kh.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Cyan;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_kh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_kh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Blue;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_kh.DefaultCellStyle = dataGridViewCellStyle2;
@@ -420,13 +419,12 @@
             this.dgv_gt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_gt.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_gt.BackgroundColor = System.Drawing.Color.Azure;
-            this.dgv_gt.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
-            this.dgv_gt.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_gt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.PaleTurquoise;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Cyan;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_gt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
@@ -531,28 +529,28 @@
             // allToolStripMenuItem
             // 
             this.allToolStripMenuItem.Name = "allToolStripMenuItem";
-            this.allToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.allToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
             this.allToolStripMenuItem.Text = "Tất cả";
             this.allToolStripMenuItem.Click += new System.EventHandler(this.allToolStripMenuItem_Click);
             // 
             // đangTậpToolStripMenuItem
             // 
             this.đangTậpToolStripMenuItem.Name = "đangTậpToolStripMenuItem";
-            this.đangTậpToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.đangTậpToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
             this.đangTậpToolStripMenuItem.Text = "Đang tập";
             this.đangTậpToolStripMenuItem.Click += new System.EventHandler(this.đangTậpToolStripMenuItem_Click);
             // 
             // góiTậpĐangBảoLưuToolStripMenuItem
             // 
             this.góiTậpĐangBảoLưuToolStripMenuItem.Name = "góiTậpĐangBảoLưuToolStripMenuItem";
-            this.góiTậpĐangBảoLưuToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.góiTậpĐangBảoLưuToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
             this.góiTậpĐangBảoLưuToolStripMenuItem.Text = "Đang bảo lưu";
             this.góiTậpĐangBảoLưuToolStripMenuItem.Click += new System.EventHandler(this.góiTậpĐangBảoLưuToolStripMenuItem_Click);
             // 
             // góiTậpSắpHếtHạnToolStripMenuItem
             // 
             this.góiTậpSắpHếtHạnToolStripMenuItem.Name = "góiTậpSắpHếtHạnToolStripMenuItem";
-            this.góiTậpSắpHếtHạnToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.góiTậpSắpHếtHạnToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
             this.góiTậpSắpHếtHạnToolStripMenuItem.Text = "Đã hết hạn";
             this.góiTậpSắpHếtHạnToolStripMenuItem.Click += new System.EventHandler(this.góiTậpSắpHếtHạnToolStripMenuItem_Click);
             // 

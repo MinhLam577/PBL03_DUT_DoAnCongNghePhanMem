@@ -78,7 +78,7 @@
             this.BtnTaiKhoan.Location = new System.Drawing.Point(0, 110);
             this.BtnTaiKhoan.Name = "BtnTaiKhoan";
             this.BtnTaiKhoan.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
-            this.BtnTaiKhoan.Size = new System.Drawing.Size(227, 55);
+            this.BtnTaiKhoan.Size = new System.Drawing.Size(225, 55);
             this.BtnTaiKhoan.TabIndex = 2;
             this.BtnTaiKhoan.Text = "Tài khoản";
             this.BtnTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -91,9 +91,9 @@
             this.panel_hlv.Controls.Add(this.BtnTaiKhoan);
             this.panel_hlv.Controls.Add(this.button8);
             this.panel_hlv.Controls.Add(this.button9);
-            this.panel_hlv.Location = new System.Drawing.Point(240, 232);
+            this.panel_hlv.Location = new System.Drawing.Point(240, 216);
             this.panel_hlv.Name = "panel_hlv";
-            this.panel_hlv.Size = new System.Drawing.Size(227, 164);
+            this.panel_hlv.Size = new System.Drawing.Size(225, 164);
             this.panel_hlv.TabIndex = 4;
             // 
             // button8
@@ -107,7 +107,7 @@
             this.button8.Location = new System.Drawing.Point(0, 55);
             this.button8.Name = "button8";
             this.button8.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(227, 55);
+            this.button8.Size = new System.Drawing.Size(225, 55);
             this.button8.TabIndex = 1;
             this.button8.Text = "Đăng kí giờ làm";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -125,7 +125,7 @@
             this.button9.Location = new System.Drawing.Point(0, 0);
             this.button9.Name = "button9";
             this.button9.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
-            this.button9.Size = new System.Drawing.Size(227, 55);
+            this.button9.Size = new System.Drawing.Size(225, 55);
             this.button9.TabIndex = 0;
             this.button9.Text = "Thông tin huấn luyện viên";
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
