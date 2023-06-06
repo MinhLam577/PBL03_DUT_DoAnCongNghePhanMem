@@ -68,11 +68,18 @@ namespace QLPhongGym.GUI
 
                     //Show tên khách hàng lên giao diện
                     lb_tenkh.Text = kh.Name;
-
+                    
                     //kiểm tra để show giới tính lên giao diện
                     if ((bool)kh.Sex)
                         lb_gioitinh.Text = "Giới tính: Nam";
                     else lb_gioitinh.Text = "Giới tính: Nữ";
+                    if (!string.IsNullOrEmpty(kh.Gmail))
+                        lb_gmail.Text = kh.Gmail;
+                    else lb_gmail.Text = "NA";
+                    if (!string.IsNullOrEmpty(kh.Sdt))
+                        lb_sdt.Text = kh.Sdt;
+                    else lb_sdt.Text = "NA";
+                    lb_diachi.Text = kh.Address;
                     LoadThongTinChiTiet(IDKH, hlv.IDUsers, DateTime.ParseExact(cb_nt.Text,
                             "dd/MM/yyyy",
                             CultureInfo.InvariantCulture,

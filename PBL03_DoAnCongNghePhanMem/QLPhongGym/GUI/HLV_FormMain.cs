@@ -57,6 +57,7 @@ namespace QLPhongGym.GUI
         {
             if (currentFormChild != null)
             currentFormChild.Close();
+            panel3.BackColor = childForm.BackColor;
             currentFormChild = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
