@@ -165,7 +165,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Blue;
+            this.label15.ForeColor = System.Drawing.Color.Black;
             this.label15.Location = new System.Drawing.Point(369, 369);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(82, 29);
@@ -179,7 +179,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Blue;
+            this.label14.ForeColor = System.Drawing.Color.Black;
             this.label14.Location = new System.Drawing.Point(359, 281);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(92, 29);
@@ -193,7 +193,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Blue;
+            this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.Location = new System.Drawing.Point(396, 195);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(55, 29);
@@ -207,7 +207,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Blue;
+            this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(344, 114);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(107, 29);
@@ -221,7 +221,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Blue;
+            this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(362, 33);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(89, 29);
@@ -234,7 +234,7 @@
             this.lb_gmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_gmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_gmail.ForeColor = System.Drawing.Color.Blue;
+            this.lb_gmail.ForeColor = System.Drawing.Color.Black;
             this.lb_gmail.Location = new System.Drawing.Point(451, 369);
             this.lb_gmail.Name = "lb_gmail";
             this.lb_gmail.Size = new System.Drawing.Size(281, 81);
@@ -246,7 +246,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_diachi.AutoSize = true;
             this.lb_diachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_diachi.ForeColor = System.Drawing.Color.Blue;
+            this.lb_diachi.ForeColor = System.Drawing.Color.Black;
             this.lb_diachi.Location = new System.Drawing.Point(451, 281);
             this.lb_diachi.Name = "lb_diachi";
             this.lb_diachi.Size = new System.Drawing.Size(0, 29);
@@ -259,7 +259,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_sdt.AutoSize = true;
             this.lb_sdt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_sdt.ForeColor = System.Drawing.Color.Blue;
+            this.lb_sdt.ForeColor = System.Drawing.Color.Black;
             this.lb_sdt.Location = new System.Drawing.Point(451, 195);
             this.lb_sdt.Name = "lb_sdt";
             this.lb_sdt.Size = new System.Drawing.Size(0, 29);
@@ -272,7 +272,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_gioitinh.AutoSize = true;
             this.lb_gioitinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_gioitinh.ForeColor = System.Drawing.Color.Blue;
+            this.lb_gioitinh.ForeColor = System.Drawing.Color.Black;
             this.lb_gioitinh.Location = new System.Drawing.Point(451, 114);
             this.lb_gioitinh.Name = "lb_gioitinh";
             this.lb_gioitinh.Size = new System.Drawing.Size(0, 29);
@@ -285,7 +285,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_tenkh.AutoSize = true;
             this.lb_tenkh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_tenkh.ForeColor = System.Drawing.Color.Blue;
+            this.lb_tenkh.ForeColor = System.Drawing.Color.Black;
             this.lb_tenkh.Location = new System.Drawing.Point(451, 33);
             this.lb_tenkh.Name = "lb_tenkh";
             this.lb_tenkh.Size = new System.Drawing.Size(0, 29);
