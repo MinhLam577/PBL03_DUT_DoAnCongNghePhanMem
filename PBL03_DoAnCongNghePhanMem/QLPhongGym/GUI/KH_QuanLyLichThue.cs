@@ -23,19 +23,37 @@ namespace QLPhongGym.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (datagrid_LichThue.Rows.Count > 0)
+            try
             {
-                DataGridViewRow row = datagrid_LichThue.SelectedRows[0];
-                int ma = Convert.ToInt32(row.Cells[0].Value.ToString());
-                if (LichThueBLL.Instance.xoa(ma) == true)
+                if (datagrid_LichThue.SelectedCells.Count > 0)
                 {
-                    MessageBox.Show("Xoa thanh cong");
+                    int selectedRowIndex = datagrid_LichThue.SelectedCells[0].RowIndex;
+                    DataGridViewRow row = datagrid_LichThue.Rows[selectedRowIndex];
+                    if (row.Cells[0].Value != null)  // Kiểm tra giá trị của ô không phải là null trước khi chuyển đổi sang kiểu số nguyên
+                    {
+                        int ma = Convert.ToInt32(row.Cells[0].Value.ToString());
+                        if (LichThueBLL.Instance.xoa(ma) == true)
+                        {
+                            MessageBox.Show("Xoa thanh cong");
+                        }
+                        datagrid_LichThue.DataSource = LichThueBLL.Instance.showlich();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không Xóa Được");
+                    }
                 }
-                datagrid_LichThue.DataSource = LichThueBLL.Instance.showlich();
+                else
+                {
+                    MessageBox.Show("Không Xóa Được");
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Xóa Thất Bại: " + ex.Message);
+            }
+
         }
-
-
         private void KH_QuanLyLichThue_Load(object sender, EventArgs e)
         {
 
@@ -46,31 +64,62 @@ namespace QLPhongGym.GUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // chua fixx loi chon nhieu hang thua
-
             try
             {
-                if (datagrid_LichThue.Rows.Count !=-1 )
+                if (datagrid_LichThue.SelectedCells.Count > 0)
                 {
+                    int selectedRowIndex = datagrid_LichThue.SelectedCells[0].RowIndex;
+                    DataGridViewRow row = datagrid_LichThue.Rows[selectedRowIndex];
+                    int ma = 0;
+                    string tenkhachhang = "";
+                    int idhlv = 0;
+                    string name = "";
+                    DateTime ngaylam = DateTime.Now;
+                    int ca = 0;
+
+                    if (row.Cells[0].Value != null)
+                    {
+                        ma = Convert.ToInt32(row.Cells[0].Value.ToString());
+                    }
+
+                    if (row.Cells[1].Value != null)
+                    {
+                        tenkhachhang = row.Cells[1].Value.ToString();
+                    }
+
+                    if (row.Cells[2].Value != null)
+                    {
+                        idhlv = Convert.ToInt32(row.Cells[2].Value.ToString());
+                    }
+
+                    if (row.Cells[3].Value != null)
+                    {
+                        name = row.Cells[3].Value.ToString();
+                    }
+
+                    if (row.Cells[4].Value != null)
+                    {
+                        ngaylam = Convert.ToDateTime(row.Cells[4].Value.ToString());
+                    }
+
+                    if (row.Cells[5].Value != null)
+                    {
+                        ca = Convert.ToInt32(row.Cells[5].Value.ToString());
+                    }
+
                     KH_SuaLich a = new KH_SuaLich();
-                    DataGridViewRow row = datagrid_LichThue.SelectedRows[0];
-                    int ma = Convert.ToInt32(row.Cells[0].Value.ToString());
-                    string tenkhachhang = row.Cells[1].Value.ToString();
-                    int idhlv = Convert.ToInt32(row.Cells[2].Value.ToString());
-                    string name = row.Cells[3].Value.ToString();
-                    DateTime ngaylam = Convert.ToDateTime(row.Cells[4].Value.ToString());
-                    int ca = Convert.ToInt32(row.Cells[5].Value.ToString());
-                    a.setForm1(ma,tenkhachhang, idhlv, name, ngaylam, ca);
+                    a.setForm1(ma, tenkhachhang, idhlv, name, ngaylam, ca);
                     a.Show();
                     a.buon += new KH_SuaLich.mydelegate(edit);
                 }
                 else
                 {
-                    MessageBox.Show("Chon 1 hang ");
+                    MessageBox.Show("Chọn 1 hàng");
                 }
             }
-            catch(Exception ex) {
-                 
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
             }
         }
            

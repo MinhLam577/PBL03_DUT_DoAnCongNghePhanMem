@@ -256,6 +256,11 @@ namespace QLPhongGym.GUI
         {
             toolTip1.SetToolTip(textGmai, "Gmail phải có cả chữ và số  "); // you can change the first parameter (textbox3) on any control you wanna focus*/
         }
+
+        private void AddEdit_HLV_Load(object sender, EventArgs e)
+        {
+
+        }
     }  
 }
 

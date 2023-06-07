@@ -245,7 +245,7 @@
             this.Controls.Add(this.lbNgayLam);
             this.Name = "KH_SuaLich";
             this.Text = "KH_DangKiHLV";
-            this.Load += new System.EventHandler(this.KH_SuaLich_Load);
+     //       this.Load += new System.EventHandler(this.KH_SuaLich_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

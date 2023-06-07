@@ -1,4 +1,6 @@
 ﻿using QLPhongGym.BLL;
+using QLPhongGym.DAL;
+using QLPhongGym.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,34 +12,43 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 using Label = System.Windows.Forms.Label;
 
 namespace QLPhongGym.GUI
 {
+
+   /* public TK GetTKByTenTK(string TenTK)
+    {
+        return db.TKs.FirstOrDefault(tk => tk.TenTK.Equals(TenTK));
+    }*/
+
+    
+    
     public partial class FormLichHLV : Form
     {
-        public FormLichHLV()
+        public TK tk { get; set; }
+        public int iduser ;
+        public FormLichHLV(TK tk)
         {
+            this.tk = tk;
             InitializeComponent();
             tuanlam();
             labelTheoTuan();
         }
-            // ham tru tuan 
-            private void button5_Click(object sender, EventArgs e)
-            {
+        // ham tru tuan 
+        private void button5_Click(object sender, EventArgs e)
+        {
 
         }
-        // ham cong tuan 
-
-
         private void btnthangtruoc_Click(object sender, EventArgs e)
             {
 
-        }
+             }
         private void btnthangsau_Click(object sender, EventArgs e)
             {
 
-        }
+            }
         // ham kiem tra nam nhuan 
         private bool namnhuan()
             {
@@ -72,7 +83,6 @@ namespace QLPhongGym.GUI
                     ngaylamviec.Value = new DateTime(ngaylamviec.Value.Year, ngaylamviec.Value.Month, day);
                 }
             }
-
             private void dateTimeNgayStart_ValueChanged(object sender, EventArgs e)
             {
                
@@ -162,47 +172,14 @@ namespace QLPhongGym.GUI
             private void btnTest_Click_1(object sender, EventArgs e)
             {
                 labelTheoTuan();
-                checkHiddenlabel();
+                
                 //hienlistLabel();
                 hienthilenlistboxHang(dateTimeNgayStart.Value);
-                // listBox2.Items.AddRange(DangKiLichLamViecBAL.getInStance.danhsachsinhvientheongayca(DateTime, 1).ToArray());
 
             }
-            private void checkHiddenlabel()
-            {
-                if (label6.Text == "")
-                {
-                    //panel6.Visible = false; 
-                }
-                if (label5.Text == "")
-                {
-                    // panel5.Visible = false;
-                }
-                if (label4.Text == "")
-                {
-                    // panel4.Visible = false;
-                }
-                if (label7.Text == "")
-                {
-                    //panel7.Visible = false;
-                }
-            }
-
-            private void lbTuanLam_Click(object sender, EventArgs e)
-            {
-
-            }
-            private void buttontuantiep_Click(object sender, EventArgs e)
-            {
-
-        }
-        private void panel7_Paint(object sender, PaintEventArgs e)
-            {
-
-            }
-            // ds hlv dang ki ca 
             public void hienthilenlistboxHang(DateTime dateTimeStart/*, int idca*/)
             {
+            int ID = (int)tk.IDUser;
                 int u = 7;
                 int v = 14;
                 int z = 21;
@@ -219,11 +196,11 @@ namespace QLPhongGym.GUI
                         listBox.Items.Clear();
                         listBox1.Items.Clear();
                         listBox2.Items.Clear();
-                        listBox3.Items.Clear();
-                        listBox.Items.AddRange(DangKiLichLamViecBAL.getInStance.danhsachsinhvientheongayca(nextDate, 1).ToArray());
-                        listBox1.Items.AddRange(DangKiLichLamViecBAL.getInStance.danhsachsinhvientheongayca(nextDate, 2).ToArray());
-                        listBox2.Items.AddRange(DangKiLichLamViecBAL.getInStance.danhsachsinhvientheongayca(nextDate, 3).ToArray());
-                        listBox3.Items.AddRange(DangKiLichLamViecBAL.getInStance.danhsachsinhvientheongayca(nextDate, 4).ToArray());
+                    listBox3.Items.Clear();
+                        listBox.Items.AddRange(DangKiLichLamViecBAL.getInStance.getTenHLV_theoNgayCaId(nextDate, 1,ID).ToArray());
+                        listBox1.Items.AddRange(DangKiLichLamViecBAL.getInStance.getTenHLV_theoNgayCaId(nextDate, 2, ID).ToArray());
+                        listBox2.Items.AddRange(DangKiLichLamViecBAL.getInStance.getTenHLV_theoNgayCaId(nextDate, 3, ID).ToArray());
+                        listBox3.Items.AddRange(DangKiLichLamViecBAL.getInStance.getTenHLV_theoNgayCaId(nextDate, 4, ID).ToArray());
                     }
                     else
                     // xu li nam nhuan THANG 2
@@ -253,13 +230,10 @@ namespace QLPhongGym.GUI
                             listBox6.Items.Clear();
                             listBox7.Items.Clear();
                             listBox8.Items.Clear();
-
-                            /* listBox3.Items.Clear();
-                             listBox4.Items.Clear();*/
-                            listBox5.Items.AddRange(DangKiLichLamViecBAL.getInStance.danhsachsinhvientheongayca(nextDate, 1).ToArray());
-                            listBox6.Items.AddRange(DangKiLichLamViecBAL.getInStance.danhsachsinhvientheongayca(nextDate, 2).ToArray());
-                            listBox7.Items.AddRange(DangKiLichLamViecBAL.getInStance.danhsachsinhvientheongayca(nextDate, 3).ToArray());
-                            listBox8.Items.AddRange(DangKiLichLamViecBAL.getInStance.danhsachsinhvientheongayca(nextDate, 4).ToArray());
+                            listBox5.Items.AddRange(DangKiLichLamViecBAL.getInStance.getTenHLV_theoNgayCaId(nextDate, 1, ID).ToArray());
+                            listBox6.Items.AddRange(DangKiLichLamViecBAL.getInStance.getTenHLV_theoNgayCaId(nextDate, 2, ID).ToArray());
+                            listBox7.Items.AddRange(DangKiLichLamViecBAL.getInStance.getTenHLV_theoNgayCaId(nextDate, 3, ID).ToArray());
+                            listBox8.Items.AddRange(DangKiLichLamViecBAL.getInStance.getTenHLV_theoNgayCaId(nextDate, 4, ID).ToArray());
 
                         }
                     }
@@ -273,14 +247,6 @@ namespace QLPhongGym.GUI
                     listBox.Items.Clear();
                 }
             }
-
-        
-         
-            // ham tru
-           
-            // btncong
-            
-            // hien thi ngaybat dau , ngay ket thuc ben form kia
             private void hienthingayStart_End()
             {
                 if (checkdisplaytuan1(ngaylamviec.Value) == true)
@@ -325,7 +291,6 @@ namespace QLPhongGym.GUI
                 dateTimeNgayEnd.Value = new DateTime(ngaylamviec.Value.Year, ngaylamviec.Value.Month, 14);
                 if (ngayhomnay >= dateTimeNgayStart.Value && ngayhomnay <= (dateTimeNgayEnd.Value))
                 {
-                    //lbTuanLam.Text = "Tuần 2";
                     return true;
                 }
                 return false;
@@ -338,7 +303,6 @@ namespace QLPhongGym.GUI
                 dateTimeNgayEnd.Value = new DateTime(ngaylamviec.Value.Year, ngaylamviec.Value.Month, 7);
                 if (ngayhomnay >= dateTimeNgayStart.Value && ngayhomnay <= (dateTimeNgayEnd.Value))
                 {
-                    //lbTuanLam.Text = "Tuần 1";
                     return true;
                 }
                 return false;
@@ -369,7 +333,6 @@ namespace QLPhongGym.GUI
                 }
                 return false;
             }
-
             private bool checkdisplaytuan5(DateTime ngayhomnay)
             {
 
@@ -395,28 +358,15 @@ namespace QLPhongGym.GUI
                 }
                 return false;
             }
-
-           
-            private void button1_Click(object sender, EventArgs e)
-            {
-
-            }
-
         private void FormLichHLV_Load(object sender, EventArgs e)
         {
-            tuanlam();
+        tuanlam();
             labelTheoTuan();
             ngaylamviec.Value = DateTime.Now;
             hienthingayStart_End();
             labelTheoTuan();
             hienthilenlistboxHang(dateTimeNgayStart.Value);
         }
-
-        private void btnTest_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             string Sotuan = lbTuanLam.Text.Trim();
@@ -448,7 +398,6 @@ namespace QLPhongGym.GUI
             ClearListBox();
             hienthilenlistboxHang(dateTimeNgayStart.Value);
         }
-
         private void btnGiamThang_Click(object sender, EventArgs e)
         {
             if (dateTimeNgayStart.Value.Month > 1 && dateTimeNgayStart.Value.Month <= 12)

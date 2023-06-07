@@ -167,7 +167,7 @@ namespace QLPhongGym.DAL
         {
             string t = diachi.RemoveUnicode();
             while (t.IndexOf("  ") != -1) t = t.Replace("  ", " ");
-            return Regex.IsMatch(t, "^[a-zA-Z0-9 ]+$");
+            return Regex.IsMatch(t, "^[a-zA-Z0-9 \\-\\/,\\.]+$");
         }
         public bool CheckNS(DateTime NS)
         {

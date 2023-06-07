@@ -368,6 +368,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "AddEdit_HLV";
             this.Text = "AddEdit_HLV";
+            this.Load += new System.EventHandler(this.AddEdit_HLV_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureHLV)).EndInit();

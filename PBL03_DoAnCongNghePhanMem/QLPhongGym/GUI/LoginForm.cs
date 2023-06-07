@@ -71,6 +71,7 @@ namespace QLPhongGym.GUI
         {
             string tentk = txb_TenTk.Text, mk = txb_mk.Text, TenQuyen;
             int userid = -1;
+           
             if (!TKBLL.Instance.CheckTenTKExist(tentk) || !TKBLL.Instance.CheckMKTKExist(tentk, mk))
             {
                 MessageBox.Show("Tên tài khoản hoặc mật khẩu không đúng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);

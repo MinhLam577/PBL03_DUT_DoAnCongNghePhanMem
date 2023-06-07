@@ -28,9 +28,11 @@ namespace QLPhongGym.GUI
             LoadDuLieuTK();
             customizedesing();
         }
+
         public void LoadDuLieuTK()
         {
             int IDUser = (int)tk.IDUser;
+           
             if (!IsGanHLV)
             {
                 Hlv = (HLV)UsersBLL.Instance.GetUserByID(IDUser);
@@ -172,7 +174,7 @@ namespace QLPhongGym.GUI
 
         private void btn_lichlamviec_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormLichHLV());
+            OpenChildForm(new FormLichHLV(tk));
             hideMenu();
         }
         private void btn_thoat_Click_1(object sender, EventArgs e)
@@ -191,6 +193,7 @@ namespace QLPhongGym.GUI
         {
             IsGanHLV = false;
         }
+<<<<<<< Updated upstream
         const int WM_PARENTNOTIFY = 0x210;
         const int WM_LBUTTONDOWN = 0x201;
 
@@ -207,6 +210,12 @@ namespace QLPhongGym.GUI
 
 
             base.WndProc(ref m);
+=======
+
+        private void HLV_FormMain_Load(object sender, EventArgs e)
+        {
+         
+>>>>>>> Stashed changes
         }
     }
 }

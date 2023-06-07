@@ -932,12 +932,32 @@ namespace QLPhongGym.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            btntru(label1.Text, "Ca 4");
         }
 
         private void lbTuanLam_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            btntru(label5.Text, "Ca 4");
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            btntru(label1.Text, "Ca 4");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            btnCong(label1.Text, "Ca 4");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            btnCong(label5.Text, "Ca 4");
         }
     }
 }       

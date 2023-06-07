@@ -11,9 +11,8 @@ namespace QLPhongGym.DTO
 {
     using System;
     using System.Collections.Generic;
-
+    
     public partial class KH : User
     {
-        public object Ten { get; internal set; }
     }
 }

@@ -38,7 +38,7 @@ namespace QLPhongGym.DAL
                           select new
                           {
                               i.Name
-                          }).ToList();
+                          }).Distinct().ToList();
             foreach (var every in result)
             {
 

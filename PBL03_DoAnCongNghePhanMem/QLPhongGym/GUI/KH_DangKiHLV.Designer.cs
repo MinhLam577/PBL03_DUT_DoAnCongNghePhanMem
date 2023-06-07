@@ -111,6 +111,7 @@
             // 
             // textMa
             // 
+            this.textMa.Enabled = false;
             this.textMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textMa.Location = new System.Drawing.Point(207, 193);
             this.textMa.Name = "textMa";
@@ -119,6 +120,7 @@
             // 
             // textTen
             // 
+            this.textTen.Enabled = false;
             this.textTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textTen.Location = new System.Drawing.Point(207, 272);
             this.textTen.Name = "textTen";

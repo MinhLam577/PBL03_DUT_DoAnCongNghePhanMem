@@ -30,23 +30,29 @@ namespace QLPhongGym.GUI
         int lc = -1;
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Bạn chắc chắn muốn xóa ? ", "Xóa ", MessageBoxButtons.OKCancel);          
+            var result = MessageBox.Show("Bạn chắc chắn muốn xóa ? ", "Xóa ", MessageBoxButtons.OKCancel);
             if (result == DialogResult.OK)
             {
                 try
                 {
-                    int idHLV = Convert.ToInt32(dataGridView1.SelectedCells[0].OwningRow.Cells[1].Value.ToString().Trim());
-                    if (QLHLVBLL.getInstance.Delete(idHLV) == true)
+                    if (dataGridView1.SelectedCells.Count > 0)
                     {
-                        MessageBox.Show("Xóa Thành Công");
-                        CapNhatListHLV();
+                        DataGridViewCell selectedCell = dataGridView1.SelectedCells[0];
+                        if (selectedCell.OwningRow.Cells[1].Value != null)
+                        {
+                            int idHLV = Convert.ToInt32(selectedCell.OwningRow.Cells[1].Value.ToString().Trim());
+                            if (QLHLVBLL.getInstance.Delete(idHLV))
+                            {
+                                MessageBox.Show("Xóa Thành Công");
+                                CapNhatListHLV();
+                            }
+                        }
                     }
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Xóa huấn luyện viên thất bại");
                 }
-                
             }
         }
         private void Edit(object hlv)

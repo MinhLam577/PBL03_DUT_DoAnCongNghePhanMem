@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Xml.Linq;
 using QLPhongGym.BLL;
+using QLPhongGym.DAL;
 using QLPhongGym.DTO;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -21,64 +22,40 @@ namespace QLPhongGym.GUI
         {
             InitializeComponent();
         }
-
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-
         }
-
-        private void cbbCa_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-
-
-
-
-        }
-
         private void dateNgayLam_ValueChanged(object sender, EventArgs e)
         {
-
+            cbbCa.SelectedItem = null;
         }
 
         private void KH_DangKiHLV_Load(object sender, EventArgs e)
         {
             
         }
-
         private void cbbCa_DropDown(object sender, EventArgs e)
         {
             DateTime a = dateNgayLam.Value;
             //oki
             cbbCa.Items.Clear();
+            cbbHlv.SelectedItem = null;
             cbbCa.Items.AddRange(LichThueBLL.Instance.danhsachcatheongay(a).ToArray());
         }
-        int id = -1;
+        int idca = -1;
         private void comboBox2_DropDown(object sender, EventArgs e)
         {
             DateTime a = dateNgayLam.Value;
             cbbHlv.Items.Clear();
+            cbbma.SelectedItem = null;
+
             if (cbbCa.SelectedItem != null)
             {
 
-                if (cbbCa.SelectedItem.ToString() == "Ca 1")
-                {
-                    id = 1;
-                }
-                else if (cbbCa.SelectedItem.ToString() == "Ca 2")
-                {
-                    id = 2;
-                }
-                else if (cbbCa.SelectedItem.ToString() == "Ca 3")
-                {
-                    id = 3;
-                }
-                else
-                {
-                    id = 4;
-                }
-                cbbHlv.Items.AddRange(DangKiLichLamViecBAL.getInStance.danhsachsinhvientheongayca(a, id).ToArray());
+                
+                string cbbtenca = cbbCa.SelectedItem.ToString().Trim();
+                idca = DangKiLichLamViecBAL.getInStance.GetIdCa_ByTenCa(cbbtenca);
+                cbbHlv.Items.AddRange(DangKiLichLamViecBAL.getInStance.danhsachsinhvientheongayca(a, idca).ToArray());
             }
             else
             {
@@ -86,33 +63,21 @@ namespace QLPhongGym.GUI
             }
         }
 
+
         private void cbbma_DropDown(object sender, EventArgs e)
         {
 
-
+            cbbma.Items.Clear();
+          
             DateTime ngay = dateNgayLam.Value;
             if (cbbHlv.SelectedItem != null)
             {
-
-                if (cbbCa.SelectedItem.ToString() == "Ca 1")
-                {
-                    id = 1;
-                }
-                else if (cbbCa.SelectedItem.ToString() == "Ca 2")
-                {
-                    id = 2;
-                }
-                else if (cbbCa.SelectedItem.ToString() == "Ca 3")
-                {
-                    id = 3;
-                }
-                else
-                {
-                    id = 4;
-                }
+              
+                string cbbtenca = cbbCa.SelectedItem.ToString().Trim();
+                idca = DangKiLichLamViecBAL.getInStance.GetIdCa_ByTenCa(cbbtenca);
                 string name = cbbHlv.SelectedItem.ToString().Trim();
 
-                cbbma.Items.AddRange(DangKiLichLamViecBAL.getInStance.danhsachmasinhvientheongayca(ngay, id, name).ToArray());
+                cbbma.Items.AddRange(DangKiLichLamViecBAL.getInStance.danhsachmasinhvientheongayca(ngay, idca, name).ToArray());
             }
             else
             {
@@ -136,23 +101,8 @@ namespace QLPhongGym.GUI
             DateTime ngaylam = dateNgayLam.Value;
             int makh = Convert.ToInt32(textMa.Text.ToString().Trim());
             int idca = -1;
-            if (cbbCa.SelectedItem.ToString() == "Ca 1")
-            {
-                id = 1;
-            }
-            else if (cbbCa.SelectedItem.ToString() == "Ca 2")
-            {
-                id = 2;
-            }
-            else if (cbbCa.SelectedItem.ToString() == "Ca 3")
-            {
-                id = 3;
-            }
-            else
-            {
-                id = 4;
-            }
-            idca = id;
+            string cbbtenca = cbbCa.SelectedItem.ToString().Trim();
+            idca = DangKiLichLamViecBAL.getInStance.GetIdCa_ByTenCa(cbbtenca);
             int idhlv = Convert.ToInt32(cbbma.SelectedItem.ToString().Trim());
 
             b.NgayThue = ngaylam;
@@ -171,40 +121,7 @@ namespace QLPhongGym.GUI
             this.Dispose();
 
         }
-        public void setForm1(int makh, int idhlv,string name,DateTime ngaylam,int ca)
-        {
-            textMa.Text = makh.ToString();
-            dateNgayLam.Value = ngaylam;
-
-           
-           
-            //oki
-           /* cbbCa.Items.Clear();
-            cbbCa.Items.AddRange(LichThueBLL.Instance.danhsachcatheongay(ngaylam).ToArray());
-*/
-            string tenca = "";
-            if(id == 1)
-            {
-                tenca = "Ca 1";
-            }
-            else if(id ==2)
-            {
-                tenca = "Ca 2";
-            }
-            else if(id == 3)
-            {
-                tenca = "Ca 3";
-            }
-            else
-            {
-                tenca = "Ca 4";
-            }
-            cbbCa.SelectedItem= tenca;
-            cbbHlv.SelectedItem = name;
-            lb_dongia.Text = "200.000";
-
-
-        }
+      
         
 
         private void cbbma_SelectedIndexChanged(object sender, EventArgs e)
@@ -213,5 +130,9 @@ namespace QLPhongGym.GUI
 
         }
 
+        private void cbbCa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

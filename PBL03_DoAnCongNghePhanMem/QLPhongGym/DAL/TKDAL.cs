@@ -84,5 +84,6 @@ namespace DAL
         {
             return db.TKs.FirstOrDefault(tk => tk.MatkhauTK.Equals(Eramake.eCryptography.Encrypt(MKTK)));
         }
+
     }
 }

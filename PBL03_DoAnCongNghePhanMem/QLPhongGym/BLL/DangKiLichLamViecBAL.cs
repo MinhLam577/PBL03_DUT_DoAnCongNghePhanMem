@@ -119,7 +119,6 @@ namespace QLPhongGym.BLL
         {
             return DangKiLichLamViecDAL.getInStance.danhsachmasinhvientheongayca(ngay, idca, name);
         }
-       
         public List<int> GetCaLamViecByNgayLam_IDHLV(int IDHLV, DateTime NgayLam)
         {
             return DangKiLichLamViecDAL.getInStance.GetCaLamViecByNgayLam_IDHLV(IDHLV, NgayLam);
@@ -139,6 +138,22 @@ namespace QLPhongGym.BLL
         public List<int> GetListCaLamViecByNgayLam_IDHLV_IDKH(int IDHLV, DateTime NgayLam, int IDKH)
         {
             return DangKiLichLamViecDAL.getInStance.GetListCaLamViecByNgayLam_IDHLV_IDKH(IDHLV, NgayLam, IDKH); 
+        }
+        public List<String> getTenHLV_theoNgayCaId(DateTime ngay, int idca, int idhlv)
+        {
+            return DangKiLichLamViecDAL.getInStance.getTenHLV_theoNgayCaId(ngay, idca, idhlv);
+        }
+        public int GetIDuserByTenTK(string TenTK)
+        {
+            return DangKiLichLamViecDAL.getInStance.GetIDuserByTenTK(TenTK);
+        }
+        public int GetIdCa_ByTenCa(string tenca)
+        {
+            return DangKiLichLamViecDAL.getInStance.GetIdCa_ByTenCa(tenca);
+        }
+        public string GetTenCa_ByIdCa(int idca)
+        {
+            return DangKiLichLamViecDAL.getInStance.GetTenCa_ByIdCa(idca);
         }
     }
 }

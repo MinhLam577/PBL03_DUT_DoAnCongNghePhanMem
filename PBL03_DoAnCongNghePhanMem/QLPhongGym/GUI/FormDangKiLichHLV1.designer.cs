@@ -164,6 +164,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.listBox26 = new System.Windows.Forms.ListBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel21.SuspendLayout();
@@ -199,7 +200,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(132, 93);
+            this.label1.Location = new System.Drawing.Point(160, 93);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 25);
             this.label1.TabIndex = 0;
@@ -210,7 +211,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(332, 93);
+            this.label2.Location = new System.Drawing.Point(360, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 25);
             this.label2.TabIndex = 1;
@@ -221,7 +222,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(520, 93);
+            this.label3.Location = new System.Drawing.Point(544, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 25);
             this.label3.TabIndex = 2;
@@ -232,7 +233,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(905, 93);
+            this.label5.Location = new System.Drawing.Point(937, 93);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 25);
             this.label5.TabIndex = 4;
@@ -244,7 +245,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1115, 93);
+            this.label6.Location = new System.Drawing.Point(1143, 93);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 25);
             this.label6.TabIndex = 5;
@@ -256,7 +257,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1308, 93);
+            this.label7.Location = new System.Drawing.Point(1338, 93);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 25);
             this.label7.TabIndex = 6;
@@ -343,7 +344,7 @@
             this.btnthangtruoc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnthangtruoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnthangtruoc.Image = ((System.Drawing.Image)(resources.GetObject("btnthangtruoc.Image")));
-            this.btnthangtruoc.Location = new System.Drawing.Point(608, 47);
+            this.btnthangtruoc.Location = new System.Drawing.Point(608, 50);
             this.btnthangtruoc.Name = "btnthangtruoc";
             this.btnthangtruoc.Size = new System.Drawing.Size(54, 23);
             this.btnthangtruoc.TabIndex = 60;
@@ -391,7 +392,7 @@
             this.lbTuanLam.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbTuanLam.AutoSize = true;
             this.lbTuanLam.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTuanLam.Location = new System.Drawing.Point(679, 24);
+            this.lbTuanLam.Location = new System.Drawing.Point(682, 5);
             this.lbTuanLam.Name = "lbTuanLam";
             this.lbTuanLam.Size = new System.Drawing.Size(87, 29);
             this.lbTuanLam.TabIndex = 53;
@@ -474,7 +475,7 @@
             // 
             this.btnTest.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTest.Location = new System.Drawing.Point(702, 718);
+            this.btnTest.Location = new System.Drawing.Point(701, 728);
             this.btnTest.Name = "btnTest";
             this.btnTest.Size = new System.Drawing.Size(149, 53);
             this.btnTest.TabIndex = 61;
@@ -635,7 +636,7 @@
             // btncong7
             // 
             this.btncong7.Image = ((System.Drawing.Image)(resources.GetObject("btncong7.Image")));
-            this.btncong7.Location = new System.Drawing.Point(115, 14);
+            this.btncong7.Location = new System.Drawing.Point(118, 16);
             this.btncong7.Name = "btncong7";
             this.btncong7.Size = new System.Drawing.Size(27, 23);
             this.btncong7.TabIndex = 91;
@@ -648,7 +649,7 @@
             this.listBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox7.FormattingEnabled = true;
             this.listBox7.ItemHeight = 16;
-            this.listBox7.Location = new System.Drawing.Point(0, 1);
+            this.listBox7.Location = new System.Drawing.Point(0, 0);
             this.listBox7.Name = "listBox7";
             this.listBox7.Size = new System.Drawing.Size(148, 112);
             this.listBox7.TabIndex = 0;
@@ -744,7 +745,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(705, 93);
+            this.label4.Location = new System.Drawing.Point(736, 93);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 25);
             this.label4.TabIndex = 3;
@@ -1599,6 +1600,7 @@
             this.button1.Size = new System.Drawing.Size(25, 23);
             this.button1.TabIndex = 90;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button2
             // 
@@ -1608,6 +1610,7 @@
             this.button2.Size = new System.Drawing.Size(27, 23);
             this.button2.TabIndex = 90;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // listBox22
             // 
@@ -1640,6 +1643,7 @@
             this.button3.Size = new System.Drawing.Size(25, 23);
             this.button3.TabIndex = 98;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -1649,6 +1653,7 @@
             this.button4.Size = new System.Drawing.Size(27, 23);
             this.button4.TabIndex = 98;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // listBox26
             // 
@@ -1662,12 +1667,24 @@
             this.listBox26.Size = new System.Drawing.Size(148, 112);
             this.listBox26.TabIndex = 98;
             // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(682, 44);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(88, 29);
+            this.label9.TabIndex = 101;
+            this.label9.Text = "Tháng ";
+            // 
             // FormDangKiLichHLV1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1727, 783);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.panel26);
             this.Controls.Add(this.panel22);
             this.Controls.Add(this.lbca4);
@@ -1895,5 +1912,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ListBox listBox26;
+        private System.Windows.Forms.Label label9;
     }
 }

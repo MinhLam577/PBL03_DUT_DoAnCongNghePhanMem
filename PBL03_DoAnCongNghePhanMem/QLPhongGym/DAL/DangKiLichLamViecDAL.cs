@@ -1,4 +1,5 @@
-﻿using QLPhongGym.DTO;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using QLPhongGym.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -573,6 +574,59 @@ namespace QLPhongGym.DAL
                     break;
             }
             return list_kh;
+        }
+        public List<String> getTenHLV_theoNgayCaId(DateTime ngay, int idca, int idhlv)
+        {
+            List<String> danhsachsinhvien = new List<string>();
+            var result = (from u in db.LichLamViecTrongTuans
+                          from i in db.Users.OfType<HLV>()
+                          where u.IDHLV == i.IDUsers && u.NgayLam == ngay && u.IDCa == idca && u.IDHLV ==idhlv
+                          select new
+                          {
+                              i.Name
+                          }).ToList();
+            foreach (var every in result)
+            {
+                danhsachsinhvien.Add(every.Name.ToString());
+
+            }
+            return danhsachsinhvien;
+        }
+        public int GetIDuserByTenTK(string TenTK)
+        {
+            var user = db.TKs.FirstOrDefault(t => t.TenTK == TenTK);
+            if (user != null)
+            {
+                return (int)user.IDUser;
+            }
+            else
+            {
+                return -1;
+            }
+        }
+        public int GetIdCa_ByTenCa(string tenca)
+        {
+            var user = db.CaLamViecs.FirstOrDefault(z => z.Name == tenca);
+            if (user != null)
+            {
+                return (int)user.IDCa;
+            }
+            else
+            {
+                return -1;
+            }
+        }
+        public string GetTenCa_ByIdCa(int idca)
+        {
+            var user = db.CaLamViecs.FirstOrDefault(z => z.IDCa == idca);
+            if (user != null)
+            {
+                return user.Name;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
  }
