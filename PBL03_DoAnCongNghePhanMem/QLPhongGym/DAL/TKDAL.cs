@@ -13,7 +13,6 @@ namespace DAL
 {
     public class TKDAL
     {
-        QLPhongGymDB db = new QLPhongGymDB();
         private static TKDAL instance;
         public static TKDAL Instance
         {
@@ -27,7 +26,11 @@ namespace DAL
         }
         public List<TK> LoadAllTK()
         {
-            return db.TKs.ToList();
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                return db.TKs.ToList();
+            }
+                
         }
         public bool checkTkMk(string ac)
         {
@@ -52,37 +55,60 @@ namespace DAL
         }
         public string GetUserByMaQuyen(int IDQuyen)
         {
-            return LoadAllTK().Where(t => t.IDQuyen.Equals(IDQuyen)).Select(t => t.PhanQuyen.TenQuyen).FirstOrDefault();
+            using(QLPhongGymDB db = new QLPhongGymDB())
+            {
+                var data = (from tk in db.TKs 
+                           join pq in db.PhanQuyens
+                           on tk.IDQuyen equals pq.IDQuyen
+                           where pq.IDQuyen == IDQuyen
+                           select pq.TenQuyen).FirstOrDefault();
+                return data;
+            }
         }
         public int GetIDQuyen(string tentk) {
             return LoadAllTK().Where(t => t.TenTK.Equals(tentk)).Select(t => t.IDQuyen).FirstOrDefault();
         }
         public int AddTK(TK acc)
         {
-            db.TKs.Add(acc);
-            return db.SaveChanges();
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                db.TKs.Add(acc);
+                return db.SaveChanges();
+            }
+               
         }
         public void DeleteTK(TK acc)
         {
-            db.TKs.Remove(acc);
-            db.SaveChanges();
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                db.TKs.Remove(acc);
+                db.SaveChanges();
+            }
+                
         }
         public int UpdateTK(TK acc)
         {
-            db.Entry(acc).State = System.Data.Entity.EntityState.Modified;
-            return db.SaveChanges();
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                db.Entry(acc).State = System.Data.Entity.EntityState.Modified;
+                return db.SaveChanges();
+            }
+               
         }
         public TK GetTKByUserID(int ID)
         {
-            return db.TKs.FirstOrDefault(tk => (int)tk.IDUser == ID);
+            using (QLPhongGymDB db = new QLPhongGymDB())
+                return db.TKs.FirstOrDefault(tk => (int)tk.IDUser == ID);
         }
         public TK GetTKByTenTK(string TenTK)
         {
-            return db.TKs.FirstOrDefault(tk => tk.TenTK.Equals(TenTK));
+            using (QLPhongGymDB db = new QLPhongGymDB())
+                return db.TKs.FirstOrDefault(tk => tk.TenTK.Equals(TenTK));
         }
         public TK GetTKByMK(string MKTK)
         {
-            return db.TKs.FirstOrDefault(tk => tk.MatkhauTK.Equals(Eramake.eCryptography.Encrypt(MKTK)));
+            using (QLPhongGymDB db = new QLPhongGymDB())
+                return db.TKs.FirstOrDefault(tk => tk.MatkhauTK.Equals(Eramake.eCryptography.Encrypt(MKTK)));
         }
     }
 }

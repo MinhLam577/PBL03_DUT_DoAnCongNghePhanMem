@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -146,19 +147,11 @@ namespace QLPhongGym.DAL
         }
         public void UpdateTK_DAl(TK sp)
         {
-            QLPhongGymDB db = new QLPhongGymDB();
-            var s = db.TKs.SingleOrDefault(p => p.IDUser == sp.IDUser);
-            var updatedSanPham = new TK
+            using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                IDUser = sp.IDUser,
-                TenTK = sp.TenTK,
-                MatkhauTK = sp.MatkhauTK,
-                IDQuyen = 2,
-            };
-            // Gán đối tượng mới cho đối tượng hiện tại
-            db.Entry(s).CurrentValues.SetValues(updatedSanPham);
-
-            db.SaveChanges();
+                db.Entry(sp).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+            }
         }
         public DataTable SearchSP_DAL(string str)
         {
@@ -218,62 +211,65 @@ namespace QLPhongGym.DAL
         public DataTable FitlerTaiKhoanBy(string require, string IDHLV)
         {
             DataTable dt = CreateDataTable2();
-            QLPhongGymDB db = new QLPhongGymDB();
-            int cnt = 1;
-            switch (require)
+            using(QLPhongGymDB db = new QLPhongGymDB())
             {
-                case "Tất cả":
-                    dt = GetDataTableByList2();
-                    return dt;
-                case "Tài khoản bị ban":
-                    var data1 = from p in db.TKs
-                                join t in db.Users on p.IDUser equals t.IDUsers
-                                where p.IDQuyen == 2 && p.TrangThai.Value == false
-                                select new { p.TenTK, p.IDUser, t.Name, p.MatkhauTK };
-                    foreach (var i in data1)
-                    {
-                        dt.Rows.Add(
-                                  cnt++,
-                                  i.IDUser,
-                                  i.Name,
-                                  i.TenTK,
-                                  i.MatkhauTK
-                          );
-                    }
-                    return dt;
-                case "Tài khoản đang hoạt động":
-                    var data2 = from p in db.TKs
-                                join t in db.Users on p.IDUser equals t.IDUsers
-                                where p.IDQuyen == 2 && p.TrangThai.Value == true
-                                select new { p.TenTK, p.IDUser, t.Name, p.MatkhauTK };
-                    foreach (var i in data2)
-                    {
-                        dt.Rows.Add(
-                                  cnt++,
-                                  i.IDUser,
-                                  i.Name,
-                                  i.TenTK,
-                                  i.MatkhauTK
-                          );
-                    }
-                    return dt;
-                default:
-                    int idhlv = Convert.ToInt32(IDHLV);
-                    var data3 = from p in db.TKs
-                                join t in db.Users on p.IDUser equals t.IDUsers
-                                where p.IDQuyen == 2 && p.TrangThai.Value == true && t.IDUsers == idhlv
-                                select new { p.TenTK, p.IDUser, t.Name, p.MatkhauTK };
-                    foreach (var i in data3)
-                    {
-                        dt.Rows.Add(
-                                  cnt++,
-                                  i.IDUser,
-                                  i.Name,
-                                  i.TenTK,
-                                  i.MatkhauTK
-                          );
-                    }
-                    return dt;
+                int cnt = 1;
+                switch (require)
+                {
+                    case "Tất cả":
+                        dt = GetDataTableByList2();
+                        return dt;
+                    case "Tài khoản bị ban":
+                        var data1 = from p in db.TKs
+                                    join t in db.Users on p.IDUser equals t.IDUsers
+                                    where p.IDQuyen == 2 && p.TrangThai.Value == false
+                                    select new { p.TenTK, p.IDUser, t.Name, p.MatkhauTK };
+                        foreach (var i in data1)
+                        {
+                            dt.Rows.Add(
+                                      cnt++,
+                                      i.IDUser,
+                                      i.Name,
+                                      i.TenTK,
+                                      i.MatkhauTK
+                              );
+                        }
+                        return dt;
+                    case "Tài khoản đang hoạt động":
+                        var data2 = from p in db.TKs
+                                    join t in db.Users on p.IDUser equals t.IDUsers
+                                    where p.IDQuyen == 2 && p.TrangThai.Value == true
+                                    select new { p.TenTK, p.IDUser, t.Name, p.MatkhauTK };
+                        foreach (var i in data2)
+                        {
+                            dt.Rows.Add(
+                                      cnt++,
+                                      i.IDUser,
+                                      i.Name,
+                                      i.TenTK,
+                                      i.MatkhauTK
+                              );
+                        }
+                        return dt;
+                    default:
+                        int idhlv = Convert.ToInt32(IDHLV);
+                        var data3 = from p in db.TKs
+                                    join t in db.Users on p.IDUser equals t.IDUsers
+                                    where p.IDQuyen == 2 && p.TrangThai.Value == true && t.IDUsers == idhlv
+                                    select new { p.TenTK, p.IDUser, t.Name, p.MatkhauTK };
+                        foreach (var i in data3)
+                        {
+                            dt.Rows.Add(
+                                      cnt++,
+                                      i.IDUser,
+                                      i.Name,
+                                      i.TenTK,
+                                      i.MatkhauTK
+                              );
+                        }
+                        return dt;
+                }
+            
             }
         }
 

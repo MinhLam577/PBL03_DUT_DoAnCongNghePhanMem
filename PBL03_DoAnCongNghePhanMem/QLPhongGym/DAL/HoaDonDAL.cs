@@ -9,7 +9,6 @@ namespace QLPhongGym.DAL
     class HoaDonDAL
     {
         private static HoaDonDAL instance;
-        QLPhongGymDB db = new QLPhongGymDB();
         public static HoaDonDAL Instance
         {
             get
@@ -23,31 +22,47 @@ namespace QLPhongGym.DAL
         }
         public int AddHoaDon(HoaDon hd)
         {
-            db.HoaDons.Add(hd);
-            return db.SaveChanges();
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                db.HoaDons.Add(hd);
+                return db.SaveChanges();
+            }
+                
         }
         public int UpdateHoaDon(HoaDon hd)
         {
-            db.Entry(hd).State = System.Data.Entity.EntityState.Modified;
-            return db.SaveChanges() ;
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                db.Entry(hd).State = System.Data.Entity.EntityState.Modified;
+                return db.SaveChanges();
+            }
+                
         }
         public void DeleteHoaDon(HoaDon hd)
         {
-            db.HoaDons.Remove(hd);
-            db.SaveChanges();
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                db.HoaDons.Remove(hd);
+                db.SaveChanges();
+            }
+               
         }
         public double TongDoanhThuTheoNamVaThang(int year, int month)
         {
-            var data = db.HoaDons.ToList();
-            double res = 0;
-            foreach( HoaDon hd in data )
+            using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                if(hd.NgayThanhToan.Value.Year == year && hd.NgayThanhToan.Value.Month == month)
+                var data = db.HoaDons.ToList();
+                double res = 0;
+                foreach (HoaDon hd in data)
                 {
-                    res += (double)hd.Price;
+                    if (hd.NgayThanhToan.Value.Year == year && hd.NgayThanhToan.Value.Month == month)
+                    {
+                        res += (double)hd.Price;
+                    }
                 }
+                return res;
             }
-            return res;
+                
         }
     }
 }

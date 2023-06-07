@@ -37,7 +37,7 @@ namespace QLPhongGym.DAL
             private set
             {}
         }
-        QLPhongGymDB db = new QLPhongGymDB();
+        
         DataTable dt = new DataTable();
         // tao cot bang
         public DataTable CreatDataTable()
@@ -55,140 +55,122 @@ namespace QLPhongGym.DAL
                 new DataColumn{ColumnName = "Sdt", DataType = typeof(string)},
                 new DataColumn{ColumnName = "Adress", DataType = typeof(string)},
                 new DataColumn{ColumnName = "BangCap", DataType = typeof(string)},
-               // new DataColumn{ColumnName = "Image", DataType = typeof(string)}
         });
             return dt;
         }
         public DataTable CapNhatListHLV()
         {
-            dt = CreatDataTable(); int cnt = 1;
-            var result = (from u in db.Users.OfType<HLV>()
-                          select new
-                          {
-                              u.IDUsers,
-                              u.Name,
-                              u.DateBorn,
-                              u.Sex,
-                              u.CCCD,
-                              u.Gmail,
-                              u.Sdt,
-                              u.Address,
-                              u.BangCap,
-                              u.NamKinhNghiem
-                          }).ToList();
-            foreach (var list in result)
-                dt.Rows.Add(
-                              cnt++,
-                              list.IDUsers,
-                              list.Name,
-                              list.DateBorn,
-                              list.Sex,
-                              list.CCCD,
-                              list.Gmail,
-                              list.Sdt,
-                              list.Address,
-                              list.BangCap
-                      );
-            return dt;
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+
+                dt = CreatDataTable(); int cnt = 1;
+                var result = (from u in db.Users.OfType<HLV>()
+                              select new
+                              {
+                                  u.IDUsers,
+                                  u.Name,
+                                  u.DateBorn,
+                                  u.Sex,
+                                  u.CCCD,
+                                  u.Gmail,
+                                  u.Sdt,
+                                  u.Address,
+                                  u.BangCap,
+                                  u.NamKinhNghiem
+                              }).ToList();
+                foreach (var list in result)
+                    dt.Rows.Add(
+                                  cnt++,
+                                  list.IDUsers,
+                                  list.Name,
+                                  list.DateBorn,
+                                  list.Sex,
+                                  list.CCCD,
+                                  list.Gmail,
+                                  list.Sdt,
+                                  list.Address,
+                                  list.BangCap
+                          );
+                return dt;
+
+            }
+
         }
         public bool Them(HLV a)
         {
-            var them = new HLV
+            using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                Name = a.Name,
-                DateBorn = a.DateBorn,
-                Sex = a.Sex,
-                Gmail = a.Gmail,
-                Address = a.Address,
-                Sdt = a.Sdt,
-                CCCD = a.CCCD,
-                BangCap = a.BangCap,
-                Image = a.Image
-            };
-            // Thêm đối tượng HLV mới vào bảng Users
-            db.Users.Add(them);
-            db.SaveChanges();
-            return true;
 
+                var them = new HLV
+                {
+                    Name = a.Name,
+                    DateBorn = a.DateBorn,
+                    Sex = a.Sex,
+                    Gmail = a.Gmail,
+                    Address = a.Address,
+                    Sdt = a.Sdt,
+                    CCCD = a.CCCD,
+                    BangCap = a.BangCap,
+                    Image = a.Image
+                };
+                // Thêm đối tượng HLV mới vào bảng Users
+                db.Users.Add(them);
+                db.SaveChanges();
+                return true;
+
+            }
         }
         public bool Delete(int idHLV)
         {
-            User s = db.Users.Find(idHLV);
-            db.Users.Remove(s);
-            db.SaveChanges();
-            return true;
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+
+                User s = db.Users.Find(idHLV);
+                db.Users.Remove(s);
+                db.SaveChanges();
+                return true;
+
+            }
+
         }
         public bool Update(HLV a)
         {
-            // lấy ra danh sách huấn luyện viên trong bảng users 
-            var coarches = db.Users.OfType<HLV>();
-            // tìm huyến luyện viên chỉnh bằng use method 
-            // tìm huyến luyện viên cần chỉnh bằng sử dụng SingleorDefalut();
-            var coarch = coarches.SingleOrDefault(c => c.IDUsers == a.IDUsers);
-            if (coarch != null)
+            using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                coarch.IDUsers = a.IDUsers;
-                coarch.Name = a.Name;
-                coarch.DateBorn = a.DateBorn;
-                coarch.Sex = a.Sex;
-                coarch.CCCD = a.CCCD;
-                coarch.Gmail = a.Gmail;
-                coarch.Sdt = a.Sdt;
-                coarch.Address = a.Address;
-                coarch.BangCap = a.BangCap;
-                coarch.Image = a.Image;
-                
-            }
-            db.SaveChanges();
 
-            return true;
+                // lấy ra danh sách huấn luyện viên trong bảng users 
+                var coarches = db.Users.OfType<HLV>();
+                // tìm huyến luyện viên chỉnh bằng use method 
+                // tìm huyến luyện viên cần chỉnh bằng sử dụng SingleorDefalut();
+                var coarch = coarches.SingleOrDefault(c => c.IDUsers == a.IDUsers);
+                if (coarch != null)
+                {
+                    coarch.IDUsers = a.IDUsers;
+                    coarch.Name = a.Name;
+                    coarch.DateBorn = a.DateBorn;
+                    coarch.Sex = a.Sex;
+                    coarch.CCCD = a.CCCD;
+                    coarch.Gmail = a.Gmail;
+                    coarch.Sdt = a.Sdt;
+                    coarch.Address = a.Address;
+                    coarch.BangCap = a.BangCap;
+                    coarch.Image = a.Image;
+
+                }
+                db.SaveChanges();
+
+                return true;
+
+            }
+
         }
         public DataTable SearchHLVByNameID(string NameorId)
         {
-            dt = CreatDataTable(); int cnt = 1;
-            var result = (from u in db.Users.OfType<HLV>()
-                          where u.Name.Contains(NameorId) || u.IDUsers.ToString().Contains(NameorId)
-                          select new
-                          {
-                              u.IDUsers,
-                              u.Name,
-                              u.DateBorn,
-                              u.Sex,
-                              u.CCCD,
-                              u.Image,
-                              u.Gmail,
-                              u.Sdt,
-                              u.Address,
-                              u.BangCap,
-                              u.NamKinhNghiem,
-                          }).ToList();
-            foreach (var list in result)
+            using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                dt.Rows.Add(
-
-                              cnt++,
-                              list.IDUsers,
-                              list.Name,
-                              list.DateBorn,
-                              list.Sex,
-                              list.CCCD,
-                              list.Gmail,
-                              list.Sdt,
-                              list.Address,
-                              list.BangCap
-                    );
-            }
-            return dt;
-        }
-        public DataTable SortHLV(string required, string NameorId)
-        {
-
-            dt = CreatDataTable(); int cnt = 1;
-            if (required.Equals("ID"))
-            {
+                dt = CreatDataTable(); int cnt = 1;
                 var result = (from u in db.Users.OfType<HLV>()
                               where u.Name.Contains(NameorId) || u.IDUsers.ToString().Contains(NameorId)
-                              orderby u.IDUsers descending
                               select new
                               {
                                   u.IDUsers,
@@ -201,11 +183,13 @@ namespace QLPhongGym.DAL
                                   u.Sdt,
                                   u.Address,
                                   u.BangCap,
-                                  u.NamKinhNghiem
+                                  u.NamKinhNghiem,
                               }).ToList();
                 foreach (var list in result)
                 {
-                    dt.Rows.Add(cnt++,
+                    dt.Rows.Add(
+
+                                  cnt++,
                                   list.IDUsers,
                                   list.Name,
                                   list.DateBorn,
@@ -215,89 +199,152 @@ namespace QLPhongGym.DAL
                                   list.Sdt,
                                   list.Address,
                                   list.BangCap
-                    );
+                        );
                 }
+                return dt;
             }
-            else if (required.Equals("Date"))
+                
+        }
+        public DataTable SortHLV(string required, string NameorId)
+        {
+            using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                dt = SortDateBorn(NameorId);
+                dt = CreatDataTable(); int cnt = 1;
+                if (required.Equals("ID"))
+                {
+                    var result = (from u in db.Users.OfType<HLV>()
+                                  where u.Name.Contains(NameorId) || u.IDUsers.ToString().Contains(NameorId)
+                                  orderby u.IDUsers descending
+                                  select new
+                                  {
+                                      u.IDUsers,
+                                      u.Name,
+                                      u.DateBorn,
+                                      u.Sex,
+                                      u.CCCD,
+                                      u.Image,
+                                      u.Gmail,
+                                      u.Sdt,
+                                      u.Address,
+                                      u.BangCap,
+                                      u.NamKinhNghiem
+                                  }).ToList();
+                    foreach (var list in result)
+                    {
+                        dt.Rows.Add(cnt++,
+                                      list.IDUsers,
+                                      list.Name,
+                                      list.DateBorn,
+                                      list.Sex,
+                                      list.CCCD,
+                                      list.Gmail,
+                                      list.Sdt,
+                                      list.Address,
+                                      list.BangCap
+                        );
+                    }
+                }
+                else if (required.Equals("Date"))
+                {
+                    dt = SortDateBorn(NameorId);
+                }
+                else // Name
+                {
+                    dt = SortName(NameorId);
+                }
+                return dt;
             }
-            else // Name
-            {
-                dt = SortName(NameorId);
-            }
-            return dt;
+                
         }
         public DataTable GetDataTableByList(List<HLV> list1)
         {
-            dt = CreatDataTable(); int cnt = 1;
-            foreach (var list in list1)
+            using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                dt.Rows.Add(cnt++,
-                                  list.IDUsers,
-                                  list.Name,
-                                  list.DateBorn,
-                                  list.Sex,
-                                  list.CCCD,
-                                  list.Gmail,
-                                  list.Sdt,
-                                  list.Address,
-                                  list.BangCap
+                dt = CreatDataTable(); int cnt = 1;
+                foreach (var list in list1)
+                {
+                    dt.Rows.Add(cnt++,
+                                      list.IDUsers,
+                                      list.Name,
+                                      list.DateBorn,
+                                      list.Sex,
+                                      list.CCCD,
+                                      list.Gmail,
+                                      list.Sdt,
+                                      list.Address,
+                                      list.BangCap
 
-                    );
+                        );
+                }
+                return dt;
             }
-            return dt;
+                
         }
         // code cách 2 sort 
         public DataTable SortDateBorn(string text)
         {
-
-            List<HLV> list = new List<HLV>();
-            list = db.Users.OfType<HLV>().ToList();
-            list = list.Where(p => p.Name.Contains(text) || p.IDUsers.ToString().Contains(text)).OrderByDescending(p => p.DateBorn).ToList();
-            dt = GetDataTableByList(list);
-            return dt;
-        }
-        public DataTable SortName(string text)
-        {
-            try
+            using (QLPhongGymDB db = new QLPhongGymDB())
             {
                 List<HLV> list = new List<HLV>();
                 list = db.Users.OfType<HLV>().ToList();
-                list = list.Where(p => p.Name.Contains(text) || p.IDUsers.ToString().Contains(text)).OrderByDescending(p => p.Name).ToList();
+                list = list.Where(p => p.Name.Contains(text) || p.IDUsers.ToString().Contains(text)).OrderByDescending(p => p.DateBorn).ToList();
                 dt = GetDataTableByList(list);
+                return dt;
             }
-            catch (Exception ex)
+                
+        }
+        public DataTable SortName(string text)
+        {
+            using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                MessageBox.Show("Lỗi");
-            };
-            return dt;
+                try
+                {
+                    List<HLV> list = new List<HLV>();
+                    list = db.Users.OfType<HLV>().ToList();
+                    list = list.Where(p => p.Name.Contains(text) || p.IDUsers.ToString().Contains(text)).OrderByDescending(p => p.Name).ToList();
+                    dt = GetDataTableByList(list);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi");
+                };
+                return dt;
+            }
+                
         }
         // tim kiếm HLV theo id 
         public HLV GetInfoHLV(int ma)
         {
-            var coarches = db.Users.OfType<HLV>();
-            // tìm huyến luyện viên chỉnh bằng use method 
-            // tìm huyến luyện viên cần chỉnh bằng sử dụng SingleorDefalut();
-            var coarch = coarches.SingleOrDefault(c => c.IDUsers == ma);
-            return coarch;
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                var coarches = db.Users.OfType<HLV>();
+                // tìm huyến luyện viên chỉnh bằng use method 
+                // tìm huyến luyện viên cần chỉnh bằng sử dụng SingleorDefalut();
+                var coarch = coarches.SingleOrDefault(c => c.IDUsers == ma);
+                return coarch;
+            }
+                
         }
         public bool CheckCmndExitEDit(HLV a)
         {
-            return db.Users.OfType<HLV>().Any(s => s.CCCD == a.CCCD && s.IDUsers != a.IDUsers);
+            using (QLPhongGymDB db = new QLPhongGymDB())
+                return db.Users.OfType<HLV>().Any(s => s.CCCD == a.CCCD && s.IDUsers != a.IDUsers);
         }
         public bool CheckSDTExitEdit(HLV a)
         {
-            return db.Users.OfType<HLV>().Any(s => s.Sdt == a.Sdt && s.IDUsers != a.IDUsers);
+            using (QLPhongGymDB db = new QLPhongGymDB())
+                return db.Users.OfType<HLV>().Any(s => s.Sdt == a.Sdt && s.IDUsers != a.IDUsers);
         }
         public bool CheckGmailExitEdit(HLV a)
         {
-            return db.Users.OfType<HLV>().Any(s => s.Gmail == a.Gmail && s.IDUsers != a.IDUsers);
+            using (QLPhongGymDB db = new QLPhongGymDB())
+                return db.Users.OfType<HLV>().Any(s => s.Gmail == a.Gmail && s.IDUsers != a.IDUsers);
         }
         public List<HLV> getHLVs()
         {
-            //var list = db.Users.OfType<HLV>().Select(p=> new {ID = p.IDUsers, Name = p.Name}).ToList();
-            return db.Users.OfType<HLV>().ToList();
+            using (QLPhongGymDB db = new QLPhongGymDB())
+                //var list = db.Users.OfType<HLV>().Select(p=> new {ID = p.IDUsers, Name = p.Name}).ToList();
+                return db.Users.OfType<HLV>().ToList();
         }
         public DataTable getinfoLichHLV()
         {
