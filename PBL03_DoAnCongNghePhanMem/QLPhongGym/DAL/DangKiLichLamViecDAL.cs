@@ -656,6 +656,13 @@ namespace QLPhongGym.DAL
             }
                 
         }
+        public List<LichLamViecTrongTuan> GetListLLVByYear(int year)
+        {
+            using(QLPhongGymDB db = new QLPhongGymDB())
+            {
+                return db.LichLamViecTrongTuans.Where(s => s.NgayBatDau.Value.Year == year).ToList();
+            }
+        }
     }
  }
 

@@ -149,5 +149,9 @@ namespace QLPhongGym.BLL
         {
             return DangKiLichLamViecDAL.getInStance.GetListLichLamViecByIDHLV(IDHLV);
         }
+        public List<LichLamViecTrongTuan> GetListLLVByYear(int year)
+        {
+            return DangKiLichLamViecDAL.getInStance.GetListLLVByYear(year);
+        }
     }
 }

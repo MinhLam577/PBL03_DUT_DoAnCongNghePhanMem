@@ -20,17 +20,22 @@ namespace QLPhongGym.GUI
         public Admin_ThongKeForm()
         {
             InitializeComponent();
-            LoadDuLieuForm();
+            LoadDuLieuLabel();
             LoadDuLieuBieuDo();
             LoadDuLieuBieuDoSoLuongDangKiGoi();
             LoadDuLieuBieuDoNhuCauDangKiGoi();
         }
-        public void LoadDuLieuForm()
+        public void LoadDuLieuLabel()
         {
             int tongkhachhang = 0, tonghlv = 0, tonggt = 0;
-            foreach (var i in KHBLL.Instance.GetAllKHID())
+            List<string> list_kh = new List<string>(), list_hlv = new List<string>();
+            foreach (var i in DangKiGoiTapBLL.Instance.GetListDKGTByYear(Nam))
+                list_kh.Add(UsersBLL.Instance.GetUserByID(i.IDKH.Value).Name);
+            foreach(var i in list_kh.Distinct())
                 tongkhachhang++;
-            foreach (var i in QLHLVBLL.getInstance.GetAllHLVID())
+            foreach (var i in DangKiLichLamViecBAL.getInStance.GetListLLVByYear(Nam))
+                list_hlv.Add(UsersBLL.Instance.GetUserByID(i.IDHLV.Value).Name);
+            foreach (var i in list_hlv.Distinct())
                 tonghlv++;
             foreach (var i in GoiTapBLL.Instance.GetAllGT())
                 tonggt++;
@@ -41,19 +46,30 @@ namespace QLPhongGym.GUI
         }
         public void ReloadBieuDoDoanhThu()
         {
+            chart_doanhthu.Titles.Clear();  
+            chart_doanhthu.Titles.Add(new System.Windows.Forms.DataVisualization.Charting.Title(
+                "Doanh thu trong năm " + Nam, System.Windows.Forms.DataVisualization.Charting.Docking.Top,
+                new Font("Arial", 20, FontStyle.Bold), Color.White));
+            double tongdoanhthu = 0;
             foreach (var series in chart_doanhthu.Series)
             {
                 series.Points.Clear();
             }
             for (int i = 1, j = 0; i <= 12; i++, j++)
             {
-
                 chart_doanhthu.Series["Doanh thu"].Points.AddXY(i, HoaDonBLL.Instance.GetTongDoanhThuTheoNamVaThang(Nam, i));
+                tongdoanhthu += HoaDonBLL.Instance.GetTongDoanhThuTheoNamVaThang(Nam, i);
                 chart_doanhthu.Series["Doanh thu"].Points[j].Label = HoaDonBLL.Instance.GetTongDoanhThuTheoNamVaThang(Nam, i).ToString();
             }
+            lb_tongthunhap.Text = tongdoanhthu.ToString();
+
         }
         public void ReloadBieuDoSoLuongDangKi()
         {
+            chart_soluongdkgt.Titles.Clear();
+            chart_soluongdkgt.Titles.Add(new System.Windows.Forms.DataVisualization.Charting.Title(
+                "số lượng đăng kí gói tập trong năm " + Nam, System.Windows.Forms.DataVisualization.Charting.Docking.Top,
+                new Font("Arial", 20, FontStyle.Bold), Color.White));
             foreach (var series in chart_soluongdkgt.Series)
             {
                 series.Points.Clear();
@@ -68,8 +84,11 @@ namespace QLPhongGym.GUI
         
         public void ReloadBieuDoNhuCauDangKi()
         {
+            chart_nhucaudkgt.Titles.Clear();
+            chart_nhucaudkgt.Titles.Add(new System.Windows.Forms.DataVisualization.Charting.Title(
+                "Nhu cầu đăng kí gói tập trong năm " + Nam, System.Windows.Forms.DataVisualization.Charting.Docking.Top,
+                new Font("Arial", 20, FontStyle.Bold), Color.White));
             List<GoiTap> list_gt = GoiTapBLL.Instance.GetAllGT();
-            int cnt_gt = list_gt.Count;
             foreach (var series in chart_nhucaudkgt.Series)
             {
                 series.Points.Clear();
@@ -178,6 +197,7 @@ namespace QLPhongGym.GUI
                 ReloadBieuDoDoanhThu();
                 ReloadBieuDoSoLuongDangKi();
                 ReloadBieuDoNhuCauDangKi();
+                LoadDuLieuLabel();
                 lb_nam.Text = "Năm: " + Nam.ToString();
             }
                
@@ -191,6 +211,7 @@ namespace QLPhongGym.GUI
                 ReloadBieuDoDoanhThu();
                 ReloadBieuDoSoLuongDangKi();
                 ReloadBieuDoNhuCauDangKi();
+                LoadDuLieuLabel();
                 lb_nam.Text = "Năm: " + Nam.ToString();
             }
                 
