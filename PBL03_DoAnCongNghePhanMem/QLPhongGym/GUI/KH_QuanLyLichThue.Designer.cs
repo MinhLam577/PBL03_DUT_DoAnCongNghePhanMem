@@ -77,12 +77,11 @@
             this.datagrid_LichThue.RowHeadersVisible = false;
             this.datagrid_LichThue.RowHeadersWidth = 51;
             this.datagrid_LichThue.RowTemplate.Height = 24;
-<<<<<<< Updated upstream
             this.datagrid_LichThue.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datagrid_LichThue.Size = new System.Drawing.Size(795, 372);
-=======
-            this.datagrid_LichThue.Size = new System.Drawing.Size(795, 223);
->>>>>>> Stashed changes
+
+          
+
             this.datagrid_LichThue.TabIndex = 1;
             // 
             // button1

@@ -51,12 +51,12 @@ namespace QLPhongGym.DAL
         // truy vấn đ/kí thuê hlv  , và xem xét trùng lịch 
         public bool DangKiThueHLV(LichThueHLV a)
         {
-            // kiem tra su ton tai doi tuong 
+   
             bool exist = db.LichThueHLVs.Any(LichThueHLV =>
                 LichThueHLV.IDCa == a.IDCa &&
                 LichThueHLV.IDHLV == a.IDHLV &&
                 LichThueHLV.NgayThue == a.NgayThue);
-            //  LichThueHLV.IDKH == a.IDKH);
+ 
             if (!exist)
             {
                 LichThueHLV newLichThueHLV = new LichThueHLV
@@ -87,7 +87,7 @@ namespace QLPhongGym.DAL
                     new DataColumn { ColumnName = "IDHLV", DataType = typeof(int) },
                     new DataColumn { ColumnName = "NameHLV", DataType = typeof(string) },
                     new DataColumn {ColumnName = "NgayLam",DataType = typeof(DateTime)},
-                    new DataColumn { ColumnName = "Ca", DataType = typeof(int) },
+                    new DataColumn { ColumnName = "Tên Ca", DataType = typeof(string) },
                 });
             return dt;
         }
@@ -105,7 +105,7 @@ namespace QLPhongGym.DAL
                               u.IDUsers, // id khach hang                                  
                               HLVName = u.Name,
                               i.NgayThue,
-                              i.IDCa,
+                              i.IDCa,                         
                               KHName = z.Name // Lấy tên từ bảng Users loại KH
                           }).ToList();
             foreach (var u in result)
@@ -117,7 +117,7 @@ namespace QLPhongGym.DAL
                               u.IDUsers,
                               u.HLVName,                             
                               u.NgayThue,
-                              u.IDCa
+                              DangKiLichLamViecDAL.getInStance.GetTenCa_ByIdCa(u.IDCa.Value)
                       );
             return dt;
 

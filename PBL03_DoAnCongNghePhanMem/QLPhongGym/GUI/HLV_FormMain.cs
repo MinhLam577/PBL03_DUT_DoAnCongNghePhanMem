@@ -193,7 +193,7 @@ namespace QLPhongGym.GUI
         {
             IsGanHLV = false;
         }
-<<<<<<< Updated upstream
+
         const int WM_PARENTNOTIFY = 0x210;
         const int WM_LBUTTONDOWN = 0x201;
 
@@ -202,7 +202,7 @@ namespace QLPhongGym.GUI
             if (m.Msg == WM_LBUTTONDOWN || (m.Msg == WM_PARENTNOTIFY &&
                 (int)m.WParam == WM_LBUTTONDOWN))
             {
-                
+
                 if (!pn_tkhlv.ClientRectangle.Contains(
                                  pn_tkhlv.PointToClient(Cursor.Position)))
                     pn_tkhlv.Hide();
@@ -210,12 +210,12 @@ namespace QLPhongGym.GUI
 
 
             base.WndProc(ref m);
-=======
+        }
 
         private void HLV_FormMain_Load(object sender, EventArgs e)
         {
          
->>>>>>> Stashed changes
         }
+
     }
 }

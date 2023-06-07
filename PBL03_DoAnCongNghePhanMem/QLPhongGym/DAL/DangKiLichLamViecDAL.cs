@@ -542,6 +542,7 @@ namespace QLPhongGym.DAL
         {
             return db.LichThueHLVs.Where(l => l.NgayThue.Value == NgayLam && l.IDHLV == IDHLV && l.IDKH == IDKH).Select(s => s.IDCa.Value).Distinct().ToList();
         }
+
         public CaLamViec GetCaLamViecByIDCa(int IDCa)
         {
             return db.CaLamViecs.FirstOrDefault(c => c.IDCa == IDCa);
