@@ -41,16 +41,28 @@ namespace QLPhongGym.GUI
         }
         public void ReloadBieuDoDoanhThu()
         {
+            foreach (var series in chart_doanhthu.Series)
+            {
+                series.Points.Clear();
+            }
             for (int i = 1, j = 0; i <= 12; i++, j++)
             {
+
+                chart_doanhthu.Series["Doanh thu"].Points.AddXY(i, HoaDonBLL.Instance.GetTongDoanhThuTheoNamVaThang(Nam, i));
                 chart_doanhthu.Series["Doanh thu"].Points[j].Label = HoaDonBLL.Instance.GetTongDoanhThuTheoNamVaThang(Nam, i).ToString();
             }
         }
         public void ReloadBieuDoSoLuongDangKi()
         {
+            foreach (var series in chart_soluongdkgt.Series)
+            {
+                series.Points.Clear();
+            }
             for (int i = 1, j = 0; i <= 12; i++, j++)
             {
+                chart_soluongdkgt.Series["Số lượng đăng kí gói"].Points.AddXY(i, DangKiGoiTapBLL.Instance.GetSoLuongDKGTTheoNamVaThang(Nam, i));
                 chart_soluongdkgt.Series["Số lượng đăng kí gói"].Points[j].Label = DangKiGoiTapBLL.Instance.GetSoLuongDKGTTheoNamVaThang(Nam, i).ToString();
+                chart_soluongdkgt.Series["Số lượng đăng kí gói"].Points[j].Font = new Font("Times new roman", 15, FontStyle.Bold);
             }
         }
         
