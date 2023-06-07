@@ -17,14 +17,6 @@ using Label = System.Windows.Forms.Label;
 
 namespace QLPhongGym.GUI
 {
-
-   /* public TK GetTKByTenTK(string TenTK)
-    {
-        return db.TKs.FirstOrDefault(tk => tk.TenTK.Equals(TenTK));
-    }*/
-
-    
-    
     public partial class FormLichHLV : Form
     {
         public TK tk { get; set; }
@@ -32,23 +24,13 @@ namespace QLPhongGym.GUI
         public FormLichHLV(TK tk)
         {
             this.tk = tk;
+            
             InitializeComponent();
+            lb_thang.Text = "Tháng " + DateTime.Now.Month.ToString();
             tuanlam();
             labelTheoTuan();
         }
         // ham tru tuan 
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void btnthangtruoc_Click(object sender, EventArgs e)
-            {
-
-             }
-        private void btnthangsau_Click(object sender, EventArgs e)
-            {
-
-            }
         // ham kiem tra nam nhuan 
         private bool namnhuan()
             {
@@ -407,6 +389,7 @@ namespace QLPhongGym.GUI
                 int ngaybatdau = dateTimeNgayStart.Value.Day;
                 int ngayketthuc = dateTimeNgayEnd.Value.Day;
                 thang = --thang;
+                lb_thang.Text = "Tháng " + thang.ToString();
                 int daysInMonth = DateTime.DaysInMonth(nam, thang);
                 if (lbTuanLam.Text == "Tuần 5" && daysInMonth >= 29)
                 {
@@ -440,6 +423,7 @@ namespace QLPhongGym.GUI
                 int ngaybatdau = dateTimeNgayStart.Value.Day;
                 int ngayketthuc = dateTimeNgayEnd.Value.Day;
                 thang = ++thang;
+                lb_thang.Text = "Tháng " + thang.ToString();
                 int daysInMonth = DateTime.DaysInMonth(nam, thang);
                 if (lbTuanLam.Text == "Tuần 5" && daysInMonth >= 29)
                 {

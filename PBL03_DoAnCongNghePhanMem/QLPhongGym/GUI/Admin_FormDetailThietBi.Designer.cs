@@ -169,11 +169,12 @@
             // 
             // txt_MTB
             // 
+            this.txt_MTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_MTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_MTB.Location = new System.Drawing.Point(372, 59);
             this.txt_MTB.Name = "txt_MTB";
             this.txt_MTB.ReadOnly = true;
-            this.txt_MTB.Size = new System.Drawing.Size(132, 30);
+            this.txt_MTB.Size = new System.Drawing.Size(132, 23);
             this.txt_MTB.TabIndex = 12;
             // 
             // txt_TenTB
@@ -253,7 +254,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
-            this.ClientSize = new System.Drawing.Size(903, 440);
+            this.ClientSize = new System.Drawing.Size(932, 448);
             this.Controls.Add(this.btn_Huy);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.txt_SL);
@@ -274,7 +275,8 @@
             this.Controls.Add(this.btn_Sua);
             this.Controls.Add(this.Btn_Change);
             this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(950, 495);
+            this.MinimumSize = new System.Drawing.Size(950, 495);
             this.Name = "Admin_FormDetailThietBi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin_FormDetailThietBi";

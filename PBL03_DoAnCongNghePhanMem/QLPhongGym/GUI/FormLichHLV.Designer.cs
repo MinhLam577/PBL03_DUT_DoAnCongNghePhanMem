@@ -72,7 +72,10 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.listBox14 = new System.Windows.Forms.ListBox();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.listBox15 = new System.Windows.Forms.ListBox();
+            this.panel36 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.listBox16 = new System.Windows.Forms.ListBox();
             this.panel15 = new System.Windows.Forms.Panel();
             this.listBox17 = new System.Windows.Forms.ListBox();
             this.panel16 = new System.Windows.Forms.Panel();
@@ -108,10 +111,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.panel36 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.listBox15 = new System.Windows.Forms.ListBox();
-            this.listBox16 = new System.Windows.Forms.ListBox();
+            this.lb_thang = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel21.SuspendLayout();
@@ -144,10 +144,10 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 92);
+            this.label1.Location = new System.Drawing.Point(128, 93);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 25);
             this.label1.TabIndex = 0;
@@ -155,10 +155,10 @@
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(214, 92);
+            this.label2.Location = new System.Drawing.Point(331, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 25);
             this.label2.TabIndex = 1;
@@ -166,10 +166,10 @@
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(420, 92);
+            this.label3.Location = new System.Drawing.Point(536, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 25);
             this.label3.TabIndex = 2;
@@ -177,10 +177,10 @@
             // 
             // label5
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(808, 92);
+            this.label5.Location = new System.Drawing.Point(971, 93);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 25);
             this.label5.TabIndex = 4;
@@ -188,11 +188,11 @@
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(986, 92);
+            this.label6.Location = new System.Drawing.Point(1198, 93);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 25);
             this.label6.TabIndex = 5;
@@ -200,11 +200,11 @@
             // 
             // label7
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1190, 92);
+            this.label7.Location = new System.Drawing.Point(1420, 95);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 25);
             this.label7.TabIndex = 6;
@@ -212,6 +212,7 @@
             // 
             // lbca1
             // 
+            this.lbca1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbca1.AutoSize = true;
             this.lbca1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbca1.Location = new System.Drawing.Point(23, 169);
@@ -222,6 +223,7 @@
             // 
             // lbca2
             // 
+            this.lbca2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbca2.AutoSize = true;
             this.lbca2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbca2.Location = new System.Drawing.Point(23, 312);
@@ -232,6 +234,7 @@
             // 
             // labelca3
             // 
+            this.labelca3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelca3.AutoSize = true;
             this.labelca3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelca3.Location = new System.Drawing.Point(23, 472);
@@ -242,9 +245,10 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel1.Controls.Add(this.listBox1);
-            this.panel1.Location = new System.Drawing.Point(130, 125);
+            this.panel1.Location = new System.Drawing.Point(128, 121);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(145, 114);
             this.panel1.TabIndex = 10;
@@ -265,7 +269,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(345, 24);
+            this.label8.Location = new System.Drawing.Point(321, 21);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(112, 29);
             this.label8.TabIndex = 51;
@@ -276,7 +280,7 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(1134, 21);
+            this.label10.Location = new System.Drawing.Point(1329, 23);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(43, 29);
             this.label10.TabIndex = 50;
@@ -287,7 +291,7 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(870, 21);
+            this.label11.Location = new System.Drawing.Point(1034, 25);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(70, 29);
             this.label11.TabIndex = 49;
@@ -299,7 +303,7 @@
             this.ngaylamviec.CustomFormat = "yyyy-MM-dd";
             this.ngaylamviec.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ngaylamviec.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.ngaylamviec.Location = new System.Drawing.Point(150, 23);
+            this.ngaylamviec.Location = new System.Drawing.Point(126, 20);
             this.ngaylamviec.Name = "ngaylamviec";
             this.ngaylamviec.Size = new System.Drawing.Size(175, 34);
             this.ngaylamviec.TabIndex = 48;
@@ -311,7 +315,7 @@
             this.dateTimeNgayEnd.CustomFormat = "yyyy-MM-dd";
             this.dateTimeNgayEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeNgayEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimeNgayEnd.Location = new System.Drawing.Point(1192, 19);
+            this.dateTimeNgayEnd.Location = new System.Drawing.Point(1387, 21);
             this.dateTimeNgayEnd.Name = "dateTimeNgayEnd";
             this.dateTimeNgayEnd.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dateTimeNgayEnd.Size = new System.Drawing.Size(175, 34);
@@ -324,7 +328,7 @@
             this.dateTimeNgayStart.CustomFormat = "yyyy-MM-dd";
             this.dateTimeNgayStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeNgayStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimeNgayStart.Location = new System.Drawing.Point(964, 19);
+            this.dateTimeNgayStart.Location = new System.Drawing.Point(1159, 21);
             this.dateTimeNgayStart.Name = "dateTimeNgayStart";
             this.dateTimeNgayStart.Size = new System.Drawing.Size(155, 34);
             this.dateTimeNgayStart.TabIndex = 46;
@@ -332,9 +336,10 @@
             // 
             // panel19
             // 
+            this.panel19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel19.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel19.Controls.Add(this.listBox3);
-            this.panel19.Location = new System.Drawing.Point(517, 124);
+            this.panel19.Location = new System.Drawing.Point(536, 121);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(145, 114);
             this.panel19.TabIndex = 64;
@@ -352,9 +357,10 @@
             // 
             // panel21
             // 
+            this.panel21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel21.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel21.Controls.Add(this.listBox5);
-            this.panel21.Location = new System.Drawing.Point(905, 125);
+            this.panel21.Location = new System.Drawing.Point(971, 121);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(145, 114);
             this.panel21.TabIndex = 66;
@@ -371,9 +377,10 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel3.Controls.Add(this.listBox7);
-            this.panel3.Location = new System.Drawing.Point(1305, 120);
+            this.panel3.Location = new System.Drawing.Point(1420, 121);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(145, 114);
             this.panel3.TabIndex = 64;
@@ -391,9 +398,10 @@
             // 
             // panel4
             // 
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel4.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel4.Controls.Add(this.listBox2);
-            this.panel4.Location = new System.Drawing.Point(329, 124);
+            this.panel4.Location = new System.Drawing.Point(331, 121);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(145, 114);
             this.panel4.TabIndex = 63;
@@ -411,9 +419,10 @@
             // 
             // panel5
             // 
+            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel5.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel5.Controls.Add(this.listBox9);
-            this.panel5.Location = new System.Drawing.Point(329, 284);
+            this.panel5.Location = new System.Drawing.Point(331, 284);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(145, 114);
             this.panel5.TabIndex = 64;
@@ -431,10 +440,10 @@
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(619, 92);
+            this.label4.Location = new System.Drawing.Point(753, 93);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 25);
             this.label4.TabIndex = 3;
@@ -442,9 +451,10 @@
             // 
             // panel6
             // 
+            this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel6.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel6.Controls.Add(this.listBox6);
-            this.panel6.Location = new System.Drawing.Point(1112, 122);
+            this.panel6.Location = new System.Drawing.Point(1198, 121);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(145, 114);
             this.panel6.TabIndex = 72;
@@ -462,9 +472,10 @@
             // 
             // panel7
             // 
+            this.panel7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel7.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel7.Controls.Add(this.listBox8);
-            this.panel7.Location = new System.Drawing.Point(130, 284);
+            this.panel7.Location = new System.Drawing.Point(128, 284);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(145, 114);
             this.panel7.TabIndex = 73;
@@ -482,9 +493,10 @@
             // 
             // panel8
             // 
+            this.panel8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel8.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel8.Controls.Add(this.listBox10);
-            this.panel8.Location = new System.Drawing.Point(517, 284);
+            this.panel8.Location = new System.Drawing.Point(536, 284);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(145, 114);
             this.panel8.TabIndex = 74;
@@ -502,9 +514,10 @@
             // 
             // panel9
             // 
+            this.panel9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel9.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel9.Controls.Add(this.listBox11);
-            this.panel9.Location = new System.Drawing.Point(705, 285);
+            this.panel9.Location = new System.Drawing.Point(753, 284);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(145, 114);
             this.panel9.TabIndex = 74;
@@ -522,9 +535,10 @@
             // 
             // panel10
             // 
+            this.panel10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel10.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel10.Controls.Add(this.listBox12);
-            this.panel10.Location = new System.Drawing.Point(905, 287);
+            this.panel10.Location = new System.Drawing.Point(971, 284);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(145, 114);
             this.panel10.TabIndex = 75;
@@ -542,9 +556,10 @@
             // 
             // panel11
             // 
+            this.panel11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel11.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel11.Controls.Add(this.listBox13);
-            this.panel11.Location = new System.Drawing.Point(1115, 284);
+            this.panel11.Location = new System.Drawing.Point(1198, 284);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(145, 114);
             this.panel11.TabIndex = 76;
@@ -562,9 +577,10 @@
             // 
             // panel12
             // 
+            this.panel12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel12.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel12.Controls.Add(this.listBox14);
-            this.panel12.Location = new System.Drawing.Point(1308, 282);
+            this.panel12.Location = new System.Drawing.Point(1420, 284);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(145, 120);
             this.panel12.TabIndex = 77;
@@ -582,28 +598,61 @@
             // 
             // panel13
             // 
+            this.panel13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel13.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel13.Controls.Add(this.listBox15);
             this.panel13.Controls.Add(this.panel36);
-            this.panel13.Location = new System.Drawing.Point(130, 445);
+            this.panel13.Location = new System.Drawing.Point(128, 448);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(145, 114);
             this.panel13.TabIndex = 78;
             // 
+            // listBox15
+            // 
+            this.listBox15.BackColor = System.Drawing.SystemColors.Highlight;
+            this.listBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox15.FormattingEnabled = true;
+            this.listBox15.ItemHeight = 16;
+            this.listBox15.Location = new System.Drawing.Point(0, -1);
+            this.listBox15.Name = "listBox15";
+            this.listBox15.Size = new System.Drawing.Size(142, 112);
+            this.listBox15.TabIndex = 0;
+            // 
+            // panel36
+            // 
+            this.panel36.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel36.Location = new System.Drawing.Point(20, 3);
+            this.panel36.Name = "panel36";
+            this.panel36.Size = new System.Drawing.Size(145, 114);
+            this.panel36.TabIndex = 78;
+            // 
             // panel14
             // 
+            this.panel14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel14.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel14.Controls.Add(this.listBox16);
-            this.panel14.Location = new System.Drawing.Point(329, 445);
+            this.panel14.Location = new System.Drawing.Point(331, 448);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(145, 114);
             this.panel14.TabIndex = 79;
             // 
+            // listBox16
+            // 
+            this.listBox16.BackColor = System.Drawing.SystemColors.Highlight;
+            this.listBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox16.FormattingEnabled = true;
+            this.listBox16.ItemHeight = 16;
+            this.listBox16.Location = new System.Drawing.Point(0, -1);
+            this.listBox16.Name = "listBox16";
+            this.listBox16.Size = new System.Drawing.Size(142, 112);
+            this.listBox16.TabIndex = 79;
+            // 
             // panel15
             // 
+            this.panel15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel15.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel15.Controls.Add(this.listBox17);
-            this.panel15.Location = new System.Drawing.Point(517, 445);
+            this.panel15.Location = new System.Drawing.Point(536, 448);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(145, 114);
             this.panel15.TabIndex = 80;
@@ -621,9 +670,10 @@
             // 
             // panel16
             // 
+            this.panel16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel16.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel16.Controls.Add(this.listBox18);
-            this.panel16.Location = new System.Drawing.Point(705, 445);
+            this.panel16.Location = new System.Drawing.Point(753, 448);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(145, 114);
             this.panel16.TabIndex = 81;
@@ -641,9 +691,10 @@
             // 
             // panel17
             // 
+            this.panel17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel17.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel17.Controls.Add(this.listBox19);
-            this.panel17.Location = new System.Drawing.Point(905, 445);
+            this.panel17.Location = new System.Drawing.Point(971, 448);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(145, 114);
             this.panel17.TabIndex = 82;
@@ -661,9 +712,10 @@
             // 
             // panel18
             // 
+            this.panel18.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel18.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel18.Controls.Add(this.listBox20);
-            this.panel18.Location = new System.Drawing.Point(1115, 445);
+            this.panel18.Location = new System.Drawing.Point(1198, 448);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(145, 114);
             this.panel18.TabIndex = 83;
@@ -681,9 +733,10 @@
             // 
             // panel20
             // 
+            this.panel20.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel20.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel20.Controls.Add(this.listBox21);
-            this.panel20.Location = new System.Drawing.Point(1308, 446);
+            this.panel20.Location = new System.Drawing.Point(1420, 448);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(145, 114);
             this.panel20.TabIndex = 84;
@@ -712,18 +765,20 @@
             // 
             // panel22
             // 
+            this.panel22.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel22.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel22.Controls.Add(this.listBox22);
-            this.panel22.Location = new System.Drawing.Point(130, 581);
+            this.panel22.Location = new System.Drawing.Point(128, 619);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(145, 123);
             this.panel22.TabIndex = 90;
             // 
             // panel23
             // 
+            this.panel23.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel23.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel23.Controls.Add(this.listBox23);
-            this.panel23.Location = new System.Drawing.Point(327, 581);
+            this.panel23.Location = new System.Drawing.Point(331, 619);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(147, 123);
             this.panel23.TabIndex = 90;
@@ -741,9 +796,10 @@
             // 
             // panel24
             // 
+            this.panel24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel24.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel24.Controls.Add(this.listBox24);
-            this.panel24.Location = new System.Drawing.Point(514, 580);
+            this.panel24.Location = new System.Drawing.Point(536, 619);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(148, 125);
             this.panel24.TabIndex = 91;
@@ -761,9 +817,10 @@
             // 
             // panel25
             // 
+            this.panel25.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel25.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel25.Controls.Add(this.listBox25);
-            this.panel25.Location = new System.Drawing.Point(702, 580);
+            this.panel25.Location = new System.Drawing.Point(753, 619);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(148, 125);
             this.panel25.TabIndex = 92;
@@ -781,9 +838,10 @@
             // 
             // panel26
             // 
+            this.panel26.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel26.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel26.Controls.Add(this.listBox26);
-            this.panel26.Location = new System.Drawing.Point(902, 580);
+            this.panel26.Location = new System.Drawing.Point(971, 619);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(148, 125);
             this.panel26.TabIndex = 93;
@@ -801,9 +859,10 @@
             // 
             // panel27
             // 
+            this.panel27.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel27.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel27.Controls.Add(this.listBox27);
-            this.panel27.Location = new System.Drawing.Point(1112, 580);
+            this.panel27.Location = new System.Drawing.Point(1198, 619);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(148, 125);
             this.panel27.TabIndex = 94;
@@ -822,9 +881,10 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel2.Controls.Add(this.listBox4);
-            this.panel2.Location = new System.Drawing.Point(705, 124);
+            this.panel2.Location = new System.Drawing.Point(753, 121);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(145, 114);
             this.panel2.TabIndex = 63;
@@ -842,6 +902,7 @@
             // 
             // listBox28
             // 
+            this.listBox28.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listBox28.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox28.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox28.FormattingEnabled = true;
@@ -853,9 +914,10 @@
             // 
             // panel28
             // 
+            this.panel28.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel28.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel28.Controls.Add(this.listBox28);
-            this.panel28.Location = new System.Drawing.Point(1305, 582);
+            this.panel28.Location = new System.Drawing.Point(1420, 619);
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(148, 123);
             this.panel28.TabIndex = 99;
@@ -865,7 +927,7 @@
             this.btnthangtruoc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnthangtruoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnthangtruoc.Image = ((System.Drawing.Image)(resources.GetObject("btnthangtruoc.Image")));
-            this.btnthangtruoc.Location = new System.Drawing.Point(629, 54);
+            this.btnthangtruoc.Location = new System.Drawing.Point(610, 54);
             this.btnthangtruoc.Name = "btnthangtruoc";
             this.btnthangtruoc.Size = new System.Drawing.Size(54, 23);
             this.btnthangtruoc.TabIndex = 104;
@@ -877,7 +939,7 @@
             this.btnGiamTuan.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnGiamTuan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGiamTuan.Image = ((System.Drawing.Image)(resources.GetObject("btnGiamTuan.Image")));
-            this.btnGiamTuan.Location = new System.Drawing.Point(629, 9);
+            this.btnGiamTuan.Location = new System.Drawing.Point(610, 9);
             this.btnGiamTuan.Name = "btnGiamTuan";
             this.btnGiamTuan.Size = new System.Drawing.Size(54, 23);
             this.btnGiamTuan.TabIndex = 102;
@@ -889,7 +951,7 @@
             this.buttontuantiep.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttontuantiep.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttontuantiep.Image = ((System.Drawing.Image)(resources.GetObject("buttontuantiep.Image")));
-            this.buttontuantiep.Location = new System.Drawing.Point(803, 9);
+            this.buttontuantiep.Location = new System.Drawing.Point(924, 9);
             this.buttontuantiep.Name = "buttontuantiep";
             this.buttontuantiep.Size = new System.Drawing.Size(49, 23);
             this.buttontuantiep.TabIndex = 101;
@@ -899,19 +961,20 @@
             // lbTuanLam
             // 
             this.lbTuanLam.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbTuanLam.AutoSize = true;
             this.lbTuanLam.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTuanLam.Location = new System.Drawing.Point(703, 6);
+            this.lbTuanLam.Location = new System.Drawing.Point(713, 6);
             this.lbTuanLam.Name = "lbTuanLam";
-            this.lbTuanLam.Size = new System.Drawing.Size(87, 29);
+            this.lbTuanLam.Size = new System.Drawing.Size(166, 29);
             this.lbTuanLam.TabIndex = 100;
             this.lbTuanLam.Text = "Tuần 4";
+            this.lbTuanLam.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ca4
             // 
+            this.ca4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ca4.AutoSize = true;
             this.ca4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ca4.Location = new System.Drawing.Point(23, 618);
+            this.ca4.Location = new System.Drawing.Point(23, 653);
             this.ca4.Name = "ca4";
             this.ca4.Size = new System.Drawing.Size(54, 25);
             this.ca4.TabIndex = 105;
@@ -922,7 +985,7 @@
             this.btnthangsau.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnthangsau.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnthangsau.Image = ((System.Drawing.Image)(resources.GetObject("btnthangsau.Image")));
-            this.btnthangsau.Location = new System.Drawing.Point(803, 54);
+            this.btnthangsau.Location = new System.Drawing.Point(924, 54);
             this.btnthangsau.Name = "btnthangsau";
             this.btnthangsau.Size = new System.Drawing.Size(49, 23);
             this.btnthangsau.TabIndex = 106;
@@ -931,6 +994,7 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(23, 475);
@@ -941,6 +1005,7 @@
             // 
             // label12
             // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(23, 471);
@@ -951,6 +1016,7 @@
             // 
             // label13
             // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(23, 474);
@@ -959,53 +1025,24 @@
             this.label13.TabIndex = 9;
             this.label13.Text = "Ca 3";
             // 
-            // panel36
+            // lb_thang
             // 
-            this.panel36.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel36.Location = new System.Drawing.Point(20, 3);
-            this.panel36.Name = "panel36";
-            this.panel36.Size = new System.Drawing.Size(145, 114);
-            this.panel36.TabIndex = 78;
-            // 
-            // label14
-            // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(708, 48);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(82, 29);
-            this.label14.TabIndex = 107;
-            this.label14.Text = "Tháng";
-            // 
-            // listBox15
-            // 
-            this.listBox15.BackColor = System.Drawing.SystemColors.Highlight;
-            this.listBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox15.FormattingEnabled = true;
-            this.listBox15.ItemHeight = 16;
-            this.listBox15.Location = new System.Drawing.Point(0, -1);
-            this.listBox15.Name = "listBox15";
-            this.listBox15.Size = new System.Drawing.Size(142, 112);
-            this.listBox15.TabIndex = 0;
-            // 
-            // listBox16
-            // 
-            this.listBox16.BackColor = System.Drawing.SystemColors.Highlight;
-            this.listBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox16.FormattingEnabled = true;
-            this.listBox16.ItemHeight = 16;
-            this.listBox16.Location = new System.Drawing.Point(0, -1);
-            this.listBox16.Name = "listBox16";
-            this.listBox16.Size = new System.Drawing.Size(142, 112);
-            this.listBox16.TabIndex = 79;
+            this.lb_thang.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lb_thang.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_thang.Location = new System.Drawing.Point(718, 51);
+            this.lb_thang.Name = "lb_thang";
+            this.lb_thang.Size = new System.Drawing.Size(161, 29);
+            this.lb_thang.TabIndex = 107;
+            this.lb_thang.Text = "Tháng 12";
+            this.lb_thang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormLichHLV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1727, 783);
-            this.Controls.Add(this.label14);
+            this.Controls.Add(this.lb_thang);
             this.Controls.Add(this.btnthangsau);
             this.Controls.Add(this.ca4);
             this.Controls.Add(this.btnthangtruoc);
@@ -1177,7 +1214,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel36;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lb_thang;
         private System.Windows.Forms.ListBox listBox15;
         private System.Windows.Forms.ListBox listBox16;
     }

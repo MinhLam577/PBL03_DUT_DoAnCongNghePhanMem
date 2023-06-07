@@ -71,14 +71,14 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(186, 100);
+            this.dataGridView1.Location = new System.Drawing.Point(482, 100);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(914, 474);
+            this.dataGridView1.Size = new System.Drawing.Size(618, 474);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.DataSourceChanged += new System.EventHandler(this.dataGridView1_DataSourceChanged);
             // 
@@ -94,7 +94,6 @@
             // 
             // txt_Search
             // 
-            this.txt_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Search.Location = new System.Drawing.Point(570, 64);
             this.txt_Search.Name = "txt_Search";
@@ -104,7 +103,6 @@
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(477, 67);
@@ -120,7 +118,7 @@
             this.btn_xem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_xem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_xem.ForeColor = System.Drawing.Color.Cyan;
-            this.btn_xem.Location = new System.Drawing.Point(186, 580);
+            this.btn_xem.Location = new System.Drawing.Point(482, 580);
             this.btn_xem.Name = "btn_xem";
             this.btn_xem.Size = new System.Drawing.Size(114, 41);
             this.btn_xem.TabIndex = 9;
@@ -196,7 +194,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 100);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(168, 474);
+            this.pictureBox1.Size = new System.Drawing.Size(464, 521);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
