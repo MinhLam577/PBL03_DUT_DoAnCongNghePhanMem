@@ -41,6 +41,23 @@ namespace QLPhongGym.GUI
                         if (selectedCell.OwningRow.Cells[1].Value != null)
                         {
                             int idHLV = Convert.ToInt32(selectedCell.OwningRow.Cells[1].Value.ToString().Trim());
+
+                            //Xóa tài khoản hlv
+                            if (TKHLV_BLL.Instance.FindListTKHLVByIDHLV(idHLV) != null)
+                                foreach (string TenTK in TKHLV_BLL.Instance.FindListTKHLVByIDHLV(idHLV))
+                                    TKBLL.Instance.DeleteTK(TKBLL.Instance.GetTKByTenTK(TenTK));
+
+                            //Xóa lịch làm việc hlv
+                            if (DangKiLichLamViecBAL.getInStance.GetListLichLamViecByIDHLV(idHLV) != null)
+                                foreach (LichLamViecTrongTuan llv in DangKiLichLamViecBAL.getInStance.GetListLichLamViecByIDHLV(idHLV))
+                                    DangKiLichLamViecBAL.getInStance.DeleteLichLamViec(llv);
+
+                            //Xóa lịch thuê hlv
+                            if (LichThueBLL.Instance.GetLichThueByIDHLV(idHLV) != null)
+                                foreach (LichThueHLV lt in LichThueBLL.Instance.GetLichThueByIDHLV(idHLV))
+                                    LichThueBLL.Instance.DeleteLichThue(lt.IDLT);
+
+                            //Xóa huấn luyện viên
                             if (QLHLVBLL.getInstance.Delete(idHLV))
                             {
                                 MessageBox.Show("Xóa Thành Công");
