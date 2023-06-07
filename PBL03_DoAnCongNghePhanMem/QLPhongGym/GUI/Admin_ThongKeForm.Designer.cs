@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_ThongKeForm));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -36,10 +37,10 @@
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_ThongKeForm));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pn_nam = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lb_cong = new System.Windows.Forms.Label();
+            this.lb_tru = new System.Windows.Forms.Label();
             this.lb_nam = new System.Windows.Forms.Label();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -66,8 +67,6 @@
             this.chart_doanhthu = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart_soluongdkgt = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart_nhucaudkgt = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.lb_tru = new System.Windows.Forms.Label();
-            this.lb_cong = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.pn_nam.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -105,25 +104,33 @@
             this.pn_nam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(121)))), ((int)(((byte)(181)))));
             this.pn_nam.Controls.Add(this.lb_cong);
             this.pn_nam.Controls.Add(this.lb_tru);
-            this.pn_nam.Controls.Add(this.label2);
             this.pn_nam.Controls.Add(this.lb_nam);
             this.pn_nam.Location = new System.Drawing.Point(3, 3);
             this.pn_nam.Name = "pn_nam";
             this.pn_nam.Size = new System.Drawing.Size(1451, 37);
             this.pn_nam.TabIndex = 59;
             // 
-            // label2
+            // lb_cong
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(3, 5);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 31);
-            this.label2.TabIndex = 59;
-            this.label2.Text = "Dash Board";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lb_cong.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lb_cong.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_cong.Image = ((System.Drawing.Image)(resources.GetObject("lb_cong.Image")));
+            this.lb_cong.Location = new System.Drawing.Point(809, 1);
+            this.lb_cong.Name = "lb_cong";
+            this.lb_cong.Size = new System.Drawing.Size(73, 35);
+            this.lb_cong.TabIndex = 61;
+            this.lb_cong.Click += new System.EventHandler(this.lb_cong_Click);
+            // 
+            // lb_tru
+            // 
+            this.lb_tru.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lb_tru.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_tru.Image = ((System.Drawing.Image)(resources.GetObject("lb_tru.Image")));
+            this.lb_tru.Location = new System.Drawing.Point(558, 1);
+            this.lb_tru.Name = "lb_tru";
+            this.lb_tru.Size = new System.Drawing.Size(73, 35);
+            this.lb_tru.TabIndex = 60;
+            this.lb_tru.Click += new System.EventHandler(this.lb_tru_Click);
             // 
             // lb_nam
             // 
@@ -513,28 +520,6 @@
             this.chart_nhucaudkgt.TabIndex = 11;
             this.chart_nhucaudkgt.Text = "char1";
             // 
-            // lb_tru
-            // 
-            this.lb_tru.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lb_tru.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_tru.Image = ((System.Drawing.Image)(resources.GetObject("lb_tru.Image")));
-            this.lb_tru.Location = new System.Drawing.Point(558, 1);
-            this.lb_tru.Name = "lb_tru";
-            this.lb_tru.Size = new System.Drawing.Size(73, 35);
-            this.lb_tru.TabIndex = 60;
-            this.lb_tru.Click += new System.EventHandler(this.lb_tru_Click);
-            // 
-            // lb_cong
-            // 
-            this.lb_cong.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lb_cong.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_cong.Image = ((System.Drawing.Image)(resources.GetObject("lb_cong.Image")));
-            this.lb_cong.Location = new System.Drawing.Point(809, 1);
-            this.lb_cong.Name = "lb_cong";
-            this.lb_cong.Size = new System.Drawing.Size(73, 35);
-            this.lb_cong.TabIndex = 61;
-            this.lb_cong.Click += new System.EventHandler(this.lb_cong_Click);
-            // 
             // Admin_ThongKeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -546,7 +531,6 @@
             this.Text = "Form1";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.pn_nam.ResumeLayout(false);
-            this.pn_nam.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -596,7 +580,6 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_nhucaudkgt;
         private System.Windows.Forms.Label lb_nam;
         private System.Windows.Forms.Panel pn_nam;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lb_cong;
         private System.Windows.Forms.Label lb_tru;
     }

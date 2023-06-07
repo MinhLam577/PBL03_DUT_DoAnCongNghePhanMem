@@ -98,7 +98,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(2, 104);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(610, 431);
+            this.groupBox2.Size = new System.Drawing.Size(610, 402);
             this.groupBox2.TabIndex = 92;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin đăng kí";
@@ -107,7 +107,7 @@
             // 
             this.lb_hlv.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lb_hlv.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_hlv.Location = new System.Drawing.Point(243, 311);
+            this.lb_hlv.Location = new System.Drawing.Point(243, 297);
             this.lb_hlv.Name = "lb_hlv";
             this.lb_hlv.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb_hlv.Size = new System.Drawing.Size(317, 29);
@@ -119,7 +119,7 @@
             // 
             this.lb_ngayketthuc.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lb_ngayketthuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_ngayketthuc.Location = new System.Drawing.Point(243, 245);
+            this.lb_ngayketthuc.Location = new System.Drawing.Point(243, 231);
             this.lb_ngayketthuc.Name = "lb_ngayketthuc";
             this.lb_ngayketthuc.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb_ngayketthuc.Size = new System.Drawing.Size(317, 29);
@@ -131,7 +131,7 @@
             // 
             this.lb_ngaydki.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lb_ngaydki.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_ngaydki.Location = new System.Drawing.Point(243, 176);
+            this.lb_ngaydki.Location = new System.Drawing.Point(243, 162);
             this.lb_ngaydki.Name = "lb_ngaydki";
             this.lb_ngaydki.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb_ngaydki.Size = new System.Drawing.Size(317, 29);
@@ -143,7 +143,7 @@
             // 
             this.lb_gt.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lb_gt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_gt.Location = new System.Drawing.Point(243, 117);
+            this.lb_gt.Location = new System.Drawing.Point(243, 103);
             this.lb_gt.Name = "lb_gt";
             this.lb_gt.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb_gt.Size = new System.Drawing.Size(317, 29);
@@ -155,7 +155,7 @@
             // 
             this.lb_hovaten.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lb_hovaten.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_hovaten.Location = new System.Drawing.Point(243, 53);
+            this.lb_hovaten.Location = new System.Drawing.Point(243, 39);
             this.lb_hovaten.Name = "lb_hovaten";
             this.lb_hovaten.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb_hovaten.Size = new System.Drawing.Size(317, 29);
@@ -253,7 +253,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(618, 104);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(610, 431);
+            this.groupBox1.Size = new System.Drawing.Size(610, 402);
             this.groupBox1.TabIndex = 95;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin thanh toán";
@@ -262,7 +262,7 @@
             // 
             this.lb_phuocthucthanhtoan.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lb_phuocthucthanhtoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_phuocthucthanhtoan.Location = new System.Drawing.Point(329, 336);
+            this.lb_phuocthucthanhtoan.Location = new System.Drawing.Point(329, 322);
             this.lb_phuocthucthanhtoan.Name = "lb_phuocthucthanhtoan";
             this.lb_phuocthucthanhtoan.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lb_phuocthucthanhtoan.Size = new System.Drawing.Size(250, 29);
@@ -274,7 +274,7 @@
             // 
             this.lb_thanhtien.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lb_thanhtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_thanhtien.Location = new System.Drawing.Point(329, 254);
+            this.lb_thanhtien.Location = new System.Drawing.Point(329, 240);
             this.lb_thanhtien.Name = "lb_thanhtien";
             this.lb_thanhtien.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb_thanhtien.Size = new System.Drawing.Size(250, 29);
@@ -286,7 +286,7 @@
             // 
             this.lb_giamgia.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lb_giamgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_giamgia.Location = new System.Drawing.Point(329, 176);
+            this.lb_giamgia.Location = new System.Drawing.Point(329, 162);
             this.lb_giamgia.Name = "lb_giamgia";
             this.lb_giamgia.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb_giamgia.Size = new System.Drawing.Size(250, 29);
@@ -298,7 +298,7 @@
             // 
             this.lb_phidki.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lb_phidki.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_phidki.Location = new System.Drawing.Point(329, 108);
+            this.lb_phidki.Location = new System.Drawing.Point(329, 94);
             this.lb_phidki.Name = "lb_phidki";
             this.lb_phidki.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb_phidki.Size = new System.Drawing.Size(250, 29);
@@ -310,7 +310,7 @@
             // 
             this.lb_giathue.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lb_giathue.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_giathue.Location = new System.Drawing.Point(329, 53);
+            this.lb_giathue.Location = new System.Drawing.Point(329, 39);
             this.lb_giathue.Name = "lb_giathue";
             this.lb_giathue.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb_giathue.Size = new System.Drawing.Size(250, 29);
@@ -370,7 +370,7 @@
             // 
             this.btn_inhoadon.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_inhoadon.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_inhoadon.Location = new System.Drawing.Point(413, 584);
+            this.btn_inhoadon.Location = new System.Drawing.Point(413, 555);
             this.btn_inhoadon.Name = "btn_inhoadon";
             this.btn_inhoadon.Size = new System.Drawing.Size(167, 56);
             this.btn_inhoadon.TabIndex = 96;
@@ -382,7 +382,7 @@
             // 
             this.btn_thoat.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_thoat.Location = new System.Drawing.Point(656, 584);
+            this.btn_thoat.Location = new System.Drawing.Point(656, 555);
             this.btn_thoat.Name = "btn_thoat";
             this.btn_thoat.Size = new System.Drawing.Size(167, 56);
             this.btn_thoat.TabIndex = 97;
