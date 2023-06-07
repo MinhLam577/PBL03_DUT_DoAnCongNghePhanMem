@@ -272,6 +272,17 @@ namespace QLPhongGym.DAL
             
             }
         }
+        public List<string> FindListTKHLVByIDHLV(int IDHLV)
+        {
+            using(QLPhongGymDB db = new QLPhongGymDB())
+            {
+                return (from tk in db.TKs
+                       join hlv in db.Users.OfType<HLV>()
+                       on tk.IDUser equals hlv.IDUsers
+                       where hlv.IDUsers == IDHLV
+                       select tk.TenTK).ToList();
+            }
+        }
 
     }
 }

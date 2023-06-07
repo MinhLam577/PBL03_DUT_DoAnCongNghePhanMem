@@ -43,11 +43,8 @@ namespace QLPhongGym.DAL
             dt.Columns.AddRange(new DataColumn[]
                 {
                     new DataColumn { ColumnName = "STT", DataType = typeof(int) },
-                    //new DataColumn { ColumnName = "Ca", DataType = typeof(int) },
                     new DataColumn { ColumnName = "IDMaHLV", DataType = typeof(int) },
                     new DataColumn { ColumnName = "Name", DataType = typeof(string) },
-                   // new DataColumn { ColumnName = "NgayBatDau", DataType = typeof(DateTime) },
-                    //new DataColumn {ColumnName = "NgayKetThuc",DataType = typeof(DateTime)},
                     new DataColumn {ColumnName = "NgayLam",DataType = typeof(DateTime)}
                 });
             return dt;
@@ -382,8 +379,8 @@ namespace QLPhongGym.DAL
             {
                 // Lấy đối tượng Order cần sửa đổi từ cơ sở dữ liệu
                 var lich = db.LichLamViecTrongTuans.FirstOrDefault(x => x.IDHLV == idhlv &&
-            x.IDCa == idca &&
-            x.NgayLam == ngaylam);
+                x.IDCa == idca &&
+                x.NgayLam == ngaylam);
                 lich.IDCa = IDCA;
                 lich.IDHLV = IDHLV;
                 lich.NgayLam = NGAYLAM;

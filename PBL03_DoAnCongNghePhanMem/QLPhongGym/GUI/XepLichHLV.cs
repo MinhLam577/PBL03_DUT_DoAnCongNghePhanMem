@@ -93,7 +93,7 @@ namespace QLPhongGym.GUI
         }
         List<LichLamViecTrongTuan> tuan;
         LichLamViecTrongTuan a;
-        QLPhongGymDB db = new QLPhongGymDB();
+
 
         public object Date { get; private set; }
 
@@ -221,14 +221,13 @@ namespace QLPhongGym.GUI
                 a.Show();
                 a.buon += new FormEditLichLamViec.mydelegate(Edit);
                
-    }
+            }
             else
             {
                 MessageBox.Show("Chua nhap vao hang");
-
             }
         }
-        public void Edit(int idca, int idhlv, DateTime ngaybatdau, /*DateTime ngayketthuc,*/ DateTime ngaylam)
+        public void Edit(int idca, int idhlv, DateTime ngaybatdau, DateTime ngaylam)
         {
             try {
                 DataGridViewRow row = dataGridView1.SelectedRows[0];
@@ -238,7 +237,7 @@ namespace QLPhongGym.GUI
                 if (IDCa != idca || IDHLV != idhlv || ngaylam != NgayLam)
                 {
 
-                    if (DangKiLichLamViecBAL.getInStance.Capnhat1(IDCa, IDHLV, /*NgayBatDau, NgayKetThuc,*/ NgayLam, idca, idhlv, /*ngaybatdau, ngayketthuc,*/ ngaylam) == true)
+                    if (DangKiLichLamViecBAL.getInStance.Capnhat1(IDCa, IDHLV, NgayLam, idca, idhlv, ngaylam) == true)
                     {
                         MessageBox.Show("Cap Nhat thanh cong ");
                         

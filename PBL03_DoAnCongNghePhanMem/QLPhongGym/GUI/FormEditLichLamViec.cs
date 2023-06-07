@@ -33,15 +33,11 @@ namespace QLPhongGym.GUI
         {
             try
             {   // lay o form 2 
-                //LichLamViecTrongTuan aa = new LichLamViecTrongTuan();
                 int IDCa = Convert.ToInt32(cbbCa.SelectedItem.ToString().Trim());    
                 int IDHLV = Convert.ToInt32(textIdHLV.Text.ToString().Trim());
                 DateTime NgayBatDau = Convert.ToDateTime(dateTimeNgayStart.Value.ToString().Trim());
-                //DateTime NgayKetThuc = Convert.ToDateTime(timeEnd.Value.ToString().Trim());*/
                 DateTime NgayLam = Convert.ToDateTime(timeNgaylam.Value.ToString().Trim());
-                buon(IDCa,IDHLV,NgayBatDau,/*NgayKetThuc,*/NgayLam);
-                //editHLV(dateTimeNgayStart.Value);
-
+                buon(IDCa,IDHLV,NgayBatDau,NgayLam);
             }
             catch(Exception ex)
             {
@@ -62,13 +58,8 @@ namespace QLPhongGym.GUI
             cbbCa.SelectedItem = idca.ToString().Trim();
             textIdHLV.Text = idhlv.ToString();
             timeNgaylam.Value = Convert.ToDateTime(ngaylam);
-            /*timeStart.Value = Convert.ToDateTime(ngaybatdau);
-            timeEnd.Value = Convert.ToDateTime(ngayketthuc);*/
             dateTimeNgayStart.Value = ngaybatdau;
             dateTimeNgayEnd.Value = ngayketthuc;
-            
-
-            
         }
     }
 }

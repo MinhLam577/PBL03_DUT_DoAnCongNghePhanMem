@@ -448,7 +448,6 @@
             this.chart_soluongdkgt.Size = new System.Drawing.Size(1455, 584);
             this.chart_soluongdkgt.TabIndex = 10;
             this.chart_soluongdkgt.Text = "char1";
-            this.chart_soluongdkgt.Click += new System.EventHandler(this.chart_soluongdkgt_Click);
             // 
             // chart_nhucaudkgt
             // 
@@ -470,7 +469,6 @@
             this.chart_nhucaudkgt.Size = new System.Drawing.Size(1455, 585);
             this.chart_nhucaudkgt.TabIndex = 11;
             this.chart_nhucaudkgt.Text = "char1";
-            this.chart_nhucaudkgt.Click += new System.EventHandler(this.chart_nhucaudkgt_Click);
             // 
             // Admin_ThongKeForm
             // 

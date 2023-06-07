@@ -124,12 +124,10 @@ namespace QLPhongGym.DAL
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
-
                 User s = db.Users.Find(idHLV);
                 db.Users.Remove(s);
                 db.SaveChanges();
                 return true;
-
             }
 
         }
@@ -264,15 +262,15 @@ namespace QLPhongGym.DAL
                 foreach (var list in list1)
                 {
                     dt.Rows.Add(cnt++,
-                                      list.IDUsers,
-                                      list.Name,
-                                      list.DateBorn,
-                                      list.Sex,
-                                      list.CCCD,
-                                      list.Gmail,
-                                      list.Sdt,
-                                      list.Address,
-                                      list.BangCap
+                                list.IDUsers,
+                                list.Name,
+                                list.DateBorn,
+                                list.Sex,
+                                list.CCCD,
+                                list.Gmail,
+                                list.Sdt,
+                                list.Address,
+                                list.BangCap
 
                         );
                 }
@@ -343,7 +341,6 @@ namespace QLPhongGym.DAL
         public List<HLV> getHLVs()
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
-                //var list = db.Users.OfType<HLV>().Select(p=> new {ID = p.IDUsers, Name = p.Name}).ToList();
                 return db.Users.OfType<HLV>().ToList();
         }
         public DataTable getinfoLichHLV()
@@ -352,9 +349,6 @@ namespace QLPhongGym.DAL
             dt.Columns.AddRange(new DataColumn[] {
                 new DataColumn{ColumnName="STT",DataType= typeof(int)},
                 new DataColumn{ColumnName = "ID", DataType = typeof(int)},
-                /*new DataColumn{ColumnName = "Name", DataType = typeof(string)},
-                new DataColumn{ColumnName = "Ca", DataType = typeof(string)},*/
-                //new DataColumn{ColumnName = "NgayLam",DataType = typeof(DateTime)}
             });
             return dt;
         }

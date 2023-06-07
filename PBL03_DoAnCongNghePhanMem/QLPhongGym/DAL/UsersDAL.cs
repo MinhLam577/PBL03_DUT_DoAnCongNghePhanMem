@@ -61,7 +61,7 @@ namespace QLPhongGym.DAL
             {
                 try
                 {
-                    db.Users.Remove(user);
+                    db.Entry(user).State = System.Data.Entity.EntityState.Deleted;
                     db.SaveChanges();
                 }
                 catch (Exception ex)

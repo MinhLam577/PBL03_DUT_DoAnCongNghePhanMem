@@ -29,7 +29,6 @@ namespace QLPhongGym.GUI
                 // Hàng đầu tiên trên DataGridView đã được chọn
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
                 // can than loi thieu value
-                //int idca = Convert.ToInt32(selectedRow.Cells[1].Value.ToString());
                 int idhlv = Convert.ToInt32(selectedRow.Cells[1].Value.ToString());
                 DateTime ngaylam = Convert.ToDateTime(selectedRow.Cells[3].Value.ToString());
                 LichLamViecTrongTuan a = new LichLamViecTrongTuan();

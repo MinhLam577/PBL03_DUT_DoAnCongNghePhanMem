@@ -162,7 +162,10 @@
             this.Controls.Add(this.ngaylamviec);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnXoa);
+            this.MaximumSize = new System.Drawing.Size(818, 497);
+            this.MinimumSize = new System.Drawing.Size(818, 497);
             this.Name = "XoaDangKiCaHLV";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "XoaDangKiCaHLV";
             this.Load += new System.EventHandler(this.XoaDangKiCaHLV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

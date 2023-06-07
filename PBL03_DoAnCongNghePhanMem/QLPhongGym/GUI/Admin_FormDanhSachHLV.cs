@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace QLPhongGym.GUI
 {
@@ -20,7 +21,6 @@ namespace QLPhongGym.GUI
         {
             InitializeComponent();
         }        
-        /*static string ImageLink = Application.StartupPath + @"\Resources\Admin.png";*/
         private void CapNhatListHLV()
         {
             dataGridView1.DataSource = QLHLVBLL.getInstance.CapNhatListHLV();
@@ -36,6 +36,10 @@ namespace QLPhongGym.GUI
                 try
                 {
                     int idHLV = Convert.ToInt32(dataGridView1.SelectedCells[0].OwningRow.Cells[1].Value.ToString().Trim());
+                    var t = TKHLV_BLL.Instance.FindListTKHLVByIDHLV(idHLV);
+                    if (TKHLV_BLL.Instance.FindListTKHLVByIDHLV(idHLV) != null)
+                        foreach (string TenTK in TKHLV_BLL.Instance.FindListTKHLVByIDHLV(idHLV))
+                            TKBLL.Instance.DeleteTK(TKBLL.Instance.GetTKByTenTK(TenTK));
                     if (QLHLVBLL.getInstance.Delete(idHLV) == true)
                     {
                         MessageBox.Show("Xóa Thành Công");
@@ -46,7 +50,6 @@ namespace QLPhongGym.GUI
                 {
                     MessageBox.Show(ex.Message, "Xóa huấn luyện viên thất bại");
                 }
-                
             }
         }
         private void Edit(object hlv)

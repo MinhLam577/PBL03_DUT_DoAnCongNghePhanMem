@@ -22,22 +22,6 @@ namespace QLPhongGym.GUI
             tuanlam();
             labelTheoTuan();
         }
-            // ham tru tuan 
-            private void button5_Click(object sender, EventArgs e)
-            {
-
-        }
-        // ham cong tuan 
-
-
-        private void btnthangtruoc_Click(object sender, EventArgs e)
-            {
-
-        }
-        private void btnthangsau_Click(object sender, EventArgs e)
-            {
-
-        }
         // ham kiem tra nam nhuan 
         private bool namnhuan()
             {
@@ -72,11 +56,6 @@ namespace QLPhongGym.GUI
                     ngaylamviec.Value = new DateTime(ngaylamviec.Value.Year, ngaylamviec.Value.Month, day);
                 }
             }
-
-            private void dateTimeNgayStart_ValueChanged(object sender, EventArgs e)
-            {
-               
-            }
             private void tuanlam()
             {
                 if (lbTuanLam.Text == "Tuần 1")
@@ -93,7 +72,6 @@ namespace QLPhongGym.GUI
                     // Thiết lập giá trị của DateTimePicker là ngày vừa tạo
                     dateTimeNgayStart.Value = date;
                     dateTimeNgayEnd.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, 14);
-                    // ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
                 }
                 else if (lbTuanLam.Text == "Tuần 3")
                 {
@@ -101,7 +79,6 @@ namespace QLPhongGym.GUI
                     // Thiết lập giá trị của DateTimePicker là ngày vừa tạo
                     dateTimeNgayStart.Value = date;
                     dateTimeNgayEnd.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, 21);
-                    //ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
                 }
                 else if (lbTuanLam.Text == "Tuần 4")
                 {
@@ -126,7 +103,6 @@ namespace QLPhongGym.GUI
                         dateTimeNgayStart.Value = date;
                         dateTimeNgayEnd.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, daysInMonth);
                     }
-                    // Thiết lập giá trị của DateTimePicker là ngày vừa tạo
 
                 }
             }
@@ -158,55 +134,17 @@ namespace QLPhongGym.GUI
                     }
                 }
             }
-            // ahihi
             private void btnTest_Click_1(object sender, EventArgs e)
             {
                 labelTheoTuan();
-                checkHiddenlabel();
-                //hienlistLabel();
                 hienthilenlistboxHang(dateTimeNgayStart.Value);
-                // listBox2.Items.AddRange(DangKiLichLamViecBAL.getInStance.danhsachsinhvientheongayca(DateTime, 1).ToArray());
-
-            }
-            private void checkHiddenlabel()
-            {
-                if (label6.Text == "")
-                {
-                    //panel6.Visible = false; 
-                }
-                if (label5.Text == "")
-                {
-                    // panel5.Visible = false;
-                }
-                if (label4.Text == "")
-                {
-                    // panel4.Visible = false;
-                }
-                if (label7.Text == "")
-                {
-                    //panel7.Visible = false;
-                }
-            }
-
-            private void lbTuanLam_Click(object sender, EventArgs e)
-            {
-
-            }
-            private void buttontuantiep_Click(object sender, EventArgs e)
-            {
-
-        }
-        private void panel7_Paint(object sender, PaintEventArgs e)
-            {
-
             }
             // ds hlv dang ki ca 
-            public void hienthilenlistboxHang(DateTime dateTimeStart/*, int idca*/)
+            public void hienthilenlistboxHang(DateTime dateTimeStart)
             {
                 int u = 7;
                 int v = 14;
                 int z = 21;
-                int h = 28;
                 for (int i = 0; i < 7; i++)
                 {
                     if (lbTuanLam.Text != "Tuần 5")
@@ -253,9 +191,6 @@ namespace QLPhongGym.GUI
                             listBox6.Items.Clear();
                             listBox7.Items.Clear();
                             listBox8.Items.Clear();
-
-                            /* listBox3.Items.Clear();
-                             listBox4.Items.Clear();*/
                             listBox5.Items.AddRange(DangKiLichLamViecBAL.getInStance.danhsachsinhvientheongayca(nextDate, 1).ToArray());
                             listBox6.Items.AddRange(DangKiLichLamViecBAL.getInStance.danhsachsinhvientheongayca(nextDate, 2).ToArray());
                             listBox7.Items.AddRange(DangKiLichLamViecBAL.getInStance.danhsachsinhvientheongayca(nextDate, 3).ToArray());
@@ -273,12 +208,6 @@ namespace QLPhongGym.GUI
                     listBox.Items.Clear();
                 }
             }
-
-        
-         
-            // ham tru
-           
-            // btncong
             
             // hien thi ngaybat dau , ngay ket thuc ben form kia
             private void hienthingayStart_End()
@@ -312,7 +241,6 @@ namespace QLPhongGym.GUI
                 dateTimeNgayEnd.Value = new DateTime(ngaylamviec.Value.Year, ngaylamviec.Value.Month, 7);
                 if (ngayhomnay >= dateTimeNgayStart.Value && ngayhomnay <= (dateTimeNgayEnd.Value))
                 {
-                    //lbTuanLam.Text = "Tuần 1";
                     return true;
                 }
                 return false;
@@ -325,7 +253,6 @@ namespace QLPhongGym.GUI
                 dateTimeNgayEnd.Value = new DateTime(ngaylamviec.Value.Year, ngaylamviec.Value.Month, 14);
                 if (ngayhomnay >= dateTimeNgayStart.Value && ngayhomnay <= (dateTimeNgayEnd.Value))
                 {
-                    //lbTuanLam.Text = "Tuần 2";
                     return true;
                 }
                 return false;
@@ -338,7 +265,6 @@ namespace QLPhongGym.GUI
                 dateTimeNgayEnd.Value = new DateTime(ngaylamviec.Value.Year, ngaylamviec.Value.Month, 7);
                 if (ngayhomnay >= dateTimeNgayStart.Value && ngayhomnay <= (dateTimeNgayEnd.Value))
                 {
-                    //lbTuanLam.Text = "Tuần 1";
                     return true;
                 }
                 return false;
@@ -351,7 +277,6 @@ namespace QLPhongGym.GUI
                 dateTimeNgayEnd.Value = new DateTime(ngaylamviec.Value.Year, ngaylamviec.Value.Month, 21);
                 if (ngayhomnay >= dateTimeNgayStart.Value && ngayhomnay <= (dateTimeNgayEnd.Value))
                 {
-                    // lbTuanLam.Text = "Tuần 3";
                     return true;
                 }
                 return false;
@@ -364,7 +289,6 @@ namespace QLPhongGym.GUI
                 dateTimeNgayEnd.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, 28);
                 if (ngayhomnay >= dateTimeNgayStart.Value && ngayhomnay <= (dateTimeNgayEnd.Value))
                 {
-                    //lbTuanLam.Text = "Tuần 4";
                     return true;
                 }
                 return false;
@@ -382,7 +306,6 @@ namespace QLPhongGym.GUI
                     dateTimeNgayEnd.Value = new DateTime(ngaylamviec.Value.Year, ngaylamviec.Value.Month, daysInMonth);
                     if (ngayhomnay >= dateTimeNgayStart.Value && ngayhomnay <= dateTimeNgayEnd.Value)
                     {
-                        // lbTuanLam.Text = "Tuần 5";
                         return true;
                     }
                 }
@@ -396,11 +319,6 @@ namespace QLPhongGym.GUI
                 return false;
             }
 
-           
-            private void button1_Click(object sender, EventArgs e)
-            {
-
-            }
 
         private void FormLichHLV_Load(object sender, EventArgs e)
         {
@@ -411,12 +329,6 @@ namespace QLPhongGym.GUI
             labelTheoTuan();
             hienthilenlistboxHang(dateTimeNgayStart.Value);
         }
-
-        private void btnTest_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             string Sotuan = lbTuanLam.Text.Trim();
@@ -426,7 +338,6 @@ namespace QLPhongGym.GUI
             {
                 lbTuanLam.Text = parts[0] + " " + (++weekNumber);
             }
-            //ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
             tuanlam();
             labelTheoTuan();
             ClearListBox();
@@ -442,7 +353,6 @@ namespace QLPhongGym.GUI
             {
                 lbTuanLam.Text = parts[0] + " " + (--weekNumber);
             }
-            //ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
             tuanlam();
             labelTheoTuan();
             ClearListBox();
@@ -463,7 +373,6 @@ namespace QLPhongGym.GUI
                 {
                     dateTimeNgayStart.Value = new DateTime(nam, thang, 29);
                     dateTimeNgayEnd.Value = new DateTime(nam, thang, daysInMonth);
-                    // ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
                 }
                 else if (lbTuanLam.Text == "Tuần 5" && daysInMonth == 28)
                 {
@@ -475,7 +384,6 @@ namespace QLPhongGym.GUI
                 {
                     dateTimeNgayStart.Value = new DateTime(nam, thang, ngaybatdau);
                     dateTimeNgayEnd.Value = new DateTime(nam, thang, ngayketthuc);
-                    // ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
                 }
             }
             labelTheoTuan();
@@ -496,19 +404,16 @@ namespace QLPhongGym.GUI
                 {
                     dateTimeNgayStart.Value = new DateTime(nam, thang, 29);
                     dateTimeNgayEnd.Value = new DateTime(nam, thang, daysInMonth);
-                    // ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
                 }
                 else if (lbTuanLam.Text == "Tuần 5" && daysInMonth == 28)
                 {
                     dateTimeNgayStart.Value = new DateTime(nam, thang, 28);
                     dateTimeNgayEnd.Value = new DateTime(nam, thang, daysInMonth);
-                    //ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
                 }
                 else
                 {
                     dateTimeNgayStart.Value = new DateTime(nam, thang, ngaybatdau);
                     dateTimeNgayEnd.Value = new DateTime(nam, thang, ngayketthuc);
-                    // ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
                 }
             }
             labelTheoTuan();

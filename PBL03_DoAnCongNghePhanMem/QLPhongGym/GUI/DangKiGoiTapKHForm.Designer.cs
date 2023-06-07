@@ -409,11 +409,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1433, 728);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
+            this.MaximumSize = new System.Drawing.Size(1451, 775);
+            this.MinimumSize = new System.Drawing.Size(1451, 775);
             this.Name = "DangKiGoiTapKHForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin_FormDKiGoiTapKH";
             this.Load += new System.EventHandler(this.DangKiGoiTapFormKH_Load);
             this.panel2.ResumeLayout(false);

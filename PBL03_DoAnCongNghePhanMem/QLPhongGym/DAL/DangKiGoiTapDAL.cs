@@ -338,6 +338,7 @@ namespace QLPhongGym.DAL
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
+                
                 db.DangKiGoiTaps.Add(dkgt);
                 return db.SaveChanges();
             }
@@ -347,7 +348,7 @@ namespace QLPhongGym.DAL
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                db.DangKiGoiTaps.Remove(dkgt);
+                db.Entry(dkgt).State = System.Data.Entity.EntityState.Deleted;
                 db.SaveChanges();
             }
                 

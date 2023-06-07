@@ -107,7 +107,10 @@
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_change);
             this.Controls.Add(this.pb_imageacc);
+            this.MaximumSize = new System.Drawing.Size(892, 688);
+            this.MinimumSize = new System.Drawing.Size(892, 688);
             this.Name = "UpdateImageAccountForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateImageAccount";
             ((System.ComponentModel.ISupportInitialize)(this.pb_imageacc)).EndInit();
             this.ResumeLayout(false);

@@ -44,7 +44,7 @@
             this.label1.ForeColor = System.Drawing.Color.Blue;
             this.label1.Location = new System.Drawing.Point(248, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(463, 39);
+            this.label1.Size = new System.Drawing.Size(444, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "Lịch Thuê Huấn Luyện Viên";
             // 
@@ -115,7 +115,10 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.datagrid_LichThue);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(981, 629);
+            this.MinimumSize = new System.Drawing.Size(981, 629);
             this.Name = "KH_QuanLyLichThue";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KH_QuanLyLichThue";
             this.Load += new System.EventHandler(this.KH_QuanLyLichThue_Load);
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_LichThue)).EndInit();

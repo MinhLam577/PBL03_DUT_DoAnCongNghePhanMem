@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using QLPhongGym.DTO;
 using QLPhongGym.GUI;
 using System.Text.RegularExpressions;
+using System.Data.Entity;
 
 namespace DAL
 {
@@ -81,10 +82,10 @@ namespace DAL
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                db.TKs.Remove(acc);
+                TK tk = db.TKs.FirstOrDefault(s => s.TenTK == acc.TenTK);
+                db.TKs.Remove(tk);
                 db.SaveChanges();
             }
-                
         }
         public int UpdateTK(TK acc)
         {
@@ -103,7 +104,10 @@ namespace DAL
         public TK GetTKByTenTK(string TenTK)
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
+            {
                 return db.TKs.FirstOrDefault(tk => tk.TenTK.Equals(TenTK));
+            }    
+                
         }
         public TK GetTKByMK(string MKTK)
         {
