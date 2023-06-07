@@ -115,7 +115,7 @@
             this.lb_QuenMk.BackColor = System.Drawing.Color.Transparent;
             this.lb_QuenMk.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_QuenMk.ForeColor = System.Drawing.Color.Black;
-            this.lb_QuenMk.Location = new System.Drawing.Point(847, 556);
+            this.lb_QuenMk.Location = new System.Drawing.Point(852, 545);
             this.lb_QuenMk.Name = "lb_QuenMk";
             this.lb_QuenMk.Size = new System.Drawing.Size(223, 32);
             this.lb_QuenMk.TabIndex = 36;
@@ -163,9 +163,8 @@
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Linen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1405, 784);
@@ -179,6 +178,7 @@
             this.Controls.Add(this.lb_QuenMk);
             this.Controls.Add(this.lb_Tk);
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.HelpButton = true;
             this.MaximumSize = new System.Drawing.Size(1423, 831);
             this.MinimumSize = new System.Drawing.Size(1423, 831);

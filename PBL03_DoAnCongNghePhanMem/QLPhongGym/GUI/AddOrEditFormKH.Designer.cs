@@ -275,7 +275,7 @@
             this.groupBox2.Controls.Add(this.dtp_ns);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(3, 92);
+            this.groupBox2.Location = new System.Drawing.Point(3, 47);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(784, 690);
             this.groupBox2.TabIndex = 90;
@@ -320,7 +320,7 @@
             this.panel1.Controls.Add(this.btn_reset);
             this.panel1.Controls.Add(this.pb_kh);
             this.panel1.Controls.Add(this.btn_upload);
-            this.panel1.Location = new System.Drawing.Point(784, 109);
+            this.panel1.Location = new System.Drawing.Point(784, 64);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(447, 673);
             this.panel1.TabIndex = 95;
@@ -367,9 +367,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pb_kh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pb_kh.Image = ((System.Drawing.Image)(resources.GetObject("pb_kh.Image")));
-            this.pb_kh.Location = new System.Drawing.Point(0, 0);
+            this.pb_kh.Location = new System.Drawing.Point(0, 23);
             this.pb_kh.Name = "pb_kh";
-            this.pb_kh.Size = new System.Drawing.Size(448, 478);
+            this.pb_kh.Size = new System.Drawing.Size(448, 455);
             this.pb_kh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_kh.TabIndex = 94;
             this.pb_kh.TabStop = false;

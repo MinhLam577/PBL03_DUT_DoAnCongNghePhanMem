@@ -75,7 +75,7 @@
             this.btn_lichlamviec.Location = new System.Drawing.Point(0, 175);
             this.btn_lichlamviec.Name = "btn_lichlamviec";
             this.btn_lichlamviec.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btn_lichlamviec.Size = new System.Drawing.Size(273, 71);
+            this.btn_lichlamviec.Size = new System.Drawing.Size(333, 71);
             this.btn_lichlamviec.TabIndex = 1;
             this.btn_lichlamviec.Text = "    Lịch làm việc";
             this.btn_lichlamviec.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -95,7 +95,7 @@
             this.btn_kh.Location = new System.Drawing.Point(0, 246);
             this.btn_kh.Name = "btn_kh";
             this.btn_kh.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btn_kh.Size = new System.Drawing.Size(273, 65);
+            this.btn_kh.Size = new System.Drawing.Size(333, 65);
             this.btn_kh.TabIndex = 5;
             this.btn_kh.Text = "    Khách hàng";
             this.btn_kh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -114,7 +114,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(273, 613);
+            this.panel1.Size = new System.Drawing.Size(333, 613);
             this.panel1.TabIndex = 3;
             // 
             // btn_thoat
@@ -130,7 +130,7 @@
             this.btn_thoat.Location = new System.Drawing.Point(0, 527);
             this.btn_thoat.Name = "btn_thoat";
             this.btn_thoat.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btn_thoat.Size = new System.Drawing.Size(273, 86);
+            this.btn_thoat.Size = new System.Drawing.Size(333, 86);
             this.btn_thoat.TabIndex = 6;
             this.btn_thoat.Text = "    Thoát";
             this.btn_thoat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -145,7 +145,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(273, 175);
+            this.panel2.Size = new System.Drawing.Size(333, 175);
             this.panel2.TabIndex = 0;
             // 
             // pictureBox2
@@ -154,7 +154,7 @@
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(273, 175);
+            this.pictureBox2.Size = new System.Drawing.Size(333, 175);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -167,18 +167,18 @@
             this.panel3.Controls.Add(this.lb_home);
             this.panel3.Controls.Add(this.lb_acc);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(273, 0);
+            this.panel3.Location = new System.Drawing.Point(333, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(891, 83);
+            this.panel3.Size = new System.Drawing.Size(1272, 77);
             this.panel3.TabIndex = 4;
             // 
             // pb_acc
             // 
             this.pb_acc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pb_acc.Image = ((System.Drawing.Image)(resources.GetObject("pb_acc.Image")));
-            this.pb_acc.Location = new System.Drawing.Point(201, 17);
+            this.pb_acc.Location = new System.Drawing.Point(196, 3);
             this.pb_acc.Name = "pb_acc";
-            this.pb_acc.Size = new System.Drawing.Size(55, 61);
+            this.pb_acc.Size = new System.Drawing.Size(85, 70);
             this.pb_acc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_acc.TabIndex = 0;
             this.pb_acc.TabStop = false;
@@ -189,9 +189,9 @@
             this.pb_home.BackColor = System.Drawing.Color.Transparent;
             this.pb_home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_home.BackgroundImage")));
             this.pb_home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pb_home.Location = new System.Drawing.Point(18, 17);
+            this.pb_home.Location = new System.Drawing.Point(0, 3);
             this.pb_home.Name = "pb_home";
-            this.pb_home.Size = new System.Drawing.Size(55, 61);
+            this.pb_home.Size = new System.Drawing.Size(85, 70);
             this.pb_home.TabIndex = 2;
             this.pb_home.TabStop = false;
             this.pb_home.Click += new System.EventHandler(this.pb_home_Click);
@@ -201,7 +201,7 @@
             this.lb_home.AutoSize = true;
             this.lb_home.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_home.ForeColor = System.Drawing.Color.Black;
-            this.lb_home.Location = new System.Drawing.Point(79, 49);
+            this.lb_home.Location = new System.Drawing.Point(80, 44);
             this.lb_home.Name = "lb_home";
             this.lb_home.Size = new System.Drawing.Size(78, 29);
             this.lb_home.TabIndex = 3;
@@ -212,7 +212,7 @@
             // 
             this.lb_acc.AutoSize = true;
             this.lb_acc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_acc.Location = new System.Drawing.Point(262, 49);
+            this.lb_acc.Location = new System.Drawing.Point(276, 44);
             this.lb_acc.Name = "lb_acc";
             this.lb_acc.Size = new System.Drawing.Size(182, 29);
             this.lb_acc.TabIndex = 1;
@@ -223,9 +223,9 @@
             // 
             this.pn_cha.Controls.Add(this.pictureBox1);
             this.pn_cha.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pn_cha.Location = new System.Drawing.Point(273, 83);
+            this.pn_cha.Location = new System.Drawing.Point(333, 77);
             this.pn_cha.Name = "pn_cha";
-            this.pn_cha.Size = new System.Drawing.Size(891, 530);
+            this.pn_cha.Size = new System.Drawing.Size(1272, 536);
             this.pn_cha.TabIndex = 5;
             // 
             // pictureBox1
@@ -234,7 +234,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(891, 530);
+            this.pictureBox1.Size = new System.Drawing.Size(1272, 536);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -248,17 +248,18 @@
             this.pn_tkhlv.Controls.Add(this.lb_gmailhlv);
             this.pn_tkhlv.Controls.Add(this.lb_tenhlv);
             this.pn_tkhlv.Controls.Add(this.pb_hlv);
-            this.pn_tkhlv.Location = new System.Drawing.Point(474, 89);
+            this.pn_tkhlv.Location = new System.Drawing.Point(529, 79);
             this.pn_tkhlv.Name = "pn_tkhlv";
-            this.pn_tkhlv.Size = new System.Drawing.Size(525, 157);
+            this.pn_tkhlv.Size = new System.Drawing.Size(671, 200);
             this.pn_tkhlv.TabIndex = 7;
             // 
             // btn_doimatkhau
             // 
+            this.btn_doimatkhau.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btn_doimatkhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_doimatkhau.Location = new System.Drawing.Point(298, 102);
+            this.btn_doimatkhau.Location = new System.Drawing.Point(362, 102);
             this.btn_doimatkhau.Name = "btn_doimatkhau";
-            this.btn_doimatkhau.Size = new System.Drawing.Size(205, 42);
+            this.btn_doimatkhau.Size = new System.Drawing.Size(254, 65);
             this.btn_doimatkhau.TabIndex = 8;
             this.btn_doimatkhau.Text = "Đổi mật khẩu";
             this.btn_doimatkhau.UseVisualStyleBackColor = true;
@@ -266,10 +267,11 @@
             // 
             // btn_updatethongtin
             // 
+            this.btn_updatethongtin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_updatethongtin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_updatethongtin.Location = new System.Drawing.Point(21, 102);
             this.btn_updatethongtin.Name = "btn_updatethongtin";
-            this.btn_updatethongtin.Size = new System.Drawing.Size(233, 42);
+            this.btn_updatethongtin.Size = new System.Drawing.Size(309, 65);
             this.btn_updatethongtin.TabIndex = 7;
             this.btn_updatethongtin.Text = "Cật nhật thông tin";
             this.btn_updatethongtin.UseVisualStyleBackColor = true;
@@ -320,7 +322,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1164, 613);
+            this.ClientSize = new System.Drawing.Size(1605, 613);
             this.Controls.Add(this.pn_tkhlv);
             this.Controls.Add(this.pn_cha);
             this.Controls.Add(this.panel3);
