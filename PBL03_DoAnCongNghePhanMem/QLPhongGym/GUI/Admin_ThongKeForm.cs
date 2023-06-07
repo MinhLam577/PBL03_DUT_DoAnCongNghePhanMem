@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Windows.Media.Media3D;
 
 namespace QLPhongGym.GUI
 {
@@ -37,6 +38,44 @@ namespace QLPhongGym.GUI
             lb_totalcustomer.Text = tongkhachhang.ToString();
             lb_equipment.Text = ThietBi_BLL.Instance.GetTongSoLuongThietBiCoSan().ToString();
             lb_package.Text = tonggt.ToString();
+        }
+        public void ReloadBieuDoDoanhThu()
+        {
+            for (int i = 1, j = 0; i <= 12; i++, j++)
+            {
+                chart_doanhthu.Series["Doanh thu"].Points[j].Label = HoaDonBLL.Instance.GetTongDoanhThuTheoNamVaThang(Nam, i).ToString();
+            }
+        }
+        public void ReloadBieuDoSoLuongDangKi()
+        {
+            for (int i = 1, j = 0; i <= 12; i++, j++)
+            {
+                chart_soluongdkgt.Series["Số lượng đăng kí gói"].Points[j].Label = DangKiGoiTapBLL.Instance.GetSoLuongDKGTTheoNamVaThang(Nam, i).ToString();
+            }
+        }
+        
+        public void ReloadBieuDoNhuCauDangKi()
+        {
+            List<GoiTap> list_gt = GoiTapBLL.Instance.GetAllGT();
+            int cnt_gt = list_gt.Count;
+            foreach (var series in chart_nhucaudkgt.Series)
+            {
+                series.Points.Clear();
+            }
+            for (int i = 1, j = 0; i <= 12; i++, j++)
+            {
+                foreach (var k in list_gt)
+                {
+                    chart_nhucaudkgt.Series[k.NameGT].Points.AddXY(i, DangKiGoiTapBLL.Instance.GetSoLuongNhuCauDKGTTheoNam_Thang_IDGT(Nam, i, k.IDGT));
+                    chart_nhucaudkgt.Series[k.NameGT].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar;
+                    chart_nhucaudkgt.Series[k.NameGT].IsValueShownAsLabel = true;
+                }
+            }
+            foreach (Series sr in chart_nhucaudkgt.Series)
+                foreach (DataPoint p in sr.Points)
+                    if (p.YValues[0] == 0)
+                        p.IsValueShownAsLabel = false;
+
         }
         public void LoadDuLieuBieuDo()
         {
@@ -117,6 +156,32 @@ namespace QLPhongGym.GUI
                 foreach(DataPoint p in sr.Points)
                     if (p.YValues[0] == 0)
                         p.IsValueShownAsLabel = false;
+        }
+
+        private void lb_tru_Click(object sender, EventArgs e)
+        {
+            if(Nam >= 1976)
+            {
+                Nam--;
+                ReloadBieuDoDoanhThu();
+                ReloadBieuDoSoLuongDangKi();
+                ReloadBieuDoNhuCauDangKi();
+                lb_nam.Text = "Năm: " + Nam.ToString();
+            }
+               
+        }
+
+        private void lb_cong_Click(object sender, EventArgs e)
+        {
+            if (Nam <= 9999)
+            {
+                Nam++;
+                ReloadBieuDoDoanhThu();
+                ReloadBieuDoSoLuongDangKi();
+                ReloadBieuDoNhuCauDangKi();
+                lb_nam.Text = "Năm: " + Nam.ToString();
+            }
+                
         }
     }
 }
