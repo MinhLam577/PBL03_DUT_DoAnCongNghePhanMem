@@ -42,7 +42,7 @@ namespace QLPhongGym.DAL
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                db.HoaDons.Remove(hd);
+                db.Entry(hd).State = System.Data.Entity.EntityState.Deleted;
                 db.SaveChanges();
             }
                

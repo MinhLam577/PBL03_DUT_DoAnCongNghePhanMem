@@ -65,7 +65,7 @@ namespace QLPhongGym.DAL
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                db.GoiTaps.Remove(GT);
+                db.Entry(GT).State = System.Data.Entity.EntityState.Deleted;
                 db.SaveChanges();
             }
                 
