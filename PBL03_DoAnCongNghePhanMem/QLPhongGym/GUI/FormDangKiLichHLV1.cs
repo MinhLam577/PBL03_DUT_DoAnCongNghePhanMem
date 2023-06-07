@@ -18,6 +18,7 @@ namespace QLPhongGym.GUI
         public FormDangKiLichHLV1()
         {
             InitializeComponent();
+            lb_thang.Text = "Tháng " + DateTime.Now.Month.ToString();
             tuanlam();
             labelTheoTuan();
 
@@ -47,6 +48,7 @@ namespace QLPhongGym.GUI
                 int ngaybatdau = dateTimeNgayStart.Value.Day;
                 int ngayketthuc = dateTimeNgayEnd.Value.Day;
                 thang = --thang;
+                lb_thang.Text = "Tháng " + thang.ToString();
                 int daysInMonth = DateTime.DaysInMonth(nam, thang);
                 if (lbTuanLam.Text == "Tuần 5" && daysInMonth >= 29)
                 {
@@ -77,6 +79,7 @@ namespace QLPhongGym.GUI
                 int ngaybatdau = dateTimeNgayStart.Value.Day;
                 int ngayketthuc = dateTimeNgayEnd.Value.Day;
                 thang = ++thang;
+                lb_thang.Text = "Tháng " + thang.ToString();
                 int daysInMonth = DateTime.DaysInMonth(nam, thang);
                 if (lbTuanLam.Text == "Tuần 5" && daysInMonth >=29)
                 {
