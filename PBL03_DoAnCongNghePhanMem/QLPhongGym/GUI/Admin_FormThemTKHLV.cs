@@ -72,7 +72,12 @@ namespace QLPhongGym.GUI
                 return;
             }
             a.TenTK = Txt_TK.Text;
-            if(Txt_Mk.Text != Txt_NhapLai.Text || Txt_Mk.Text == "")
+            if (!TKBLL.Instance.checkTkMk(Txt_Mk.Text))
+            {
+                MessageBox.Show("Mật khẩu chỉ chứa kí tự số hoặc chữ hoa thường và bao gồm 6 đến 20 kí tự");
+                return;
+            }
+            if (Txt_Mk.Text != Txt_NhapLai.Text || Txt_Mk.Text == "")
             {
                 MessageBox.Show("Xác nhận mật khẩu không đồng dạng");
                 return ;
