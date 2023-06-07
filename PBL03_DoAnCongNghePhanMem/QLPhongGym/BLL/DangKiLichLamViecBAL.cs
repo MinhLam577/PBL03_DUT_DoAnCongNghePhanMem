@@ -81,9 +81,9 @@ namespace QLPhongGym.BLL
 
         }
 
-        public bool Capnhat1(int idca, int idhlv, /*DateTime ngaybatdau, DateTime ngayketthuc,*/ DateTime ngaylam, int IDCA, int IDHLV,/* DateTime NGAYBATDAU, DateTime NGAYKETTHUC, */DateTime NGAYLAM)
+        public bool Capnhat1(int idca, int idhlv, DateTime ngaylam, int IDCA, int IDHLV, DateTime NGAYLAM)
         {
-            return DangKiLichLamViecDAL.getInStance.Capnhat1(idca, idhlv, /*ngaybatdau, ngayketthuc,*/ ngaylam, IDCA, IDHLV, /*NGAYBATDAU, NGAYKETTHUC,*/ NGAYLAM);
+            return DangKiLichLamViecDAL.getInStance.Capnhat1(idca, idhlv, ngaylam, IDCA, IDHLV, NGAYLAM);
         }
         public DataTable XemTheoNgay(DateTime ngay)
         {
@@ -154,6 +154,18 @@ namespace QLPhongGym.BLL
         public string GetTenCa_ByIdCa(int idca)
         {
             return DangKiLichLamViecDAL.getInStance.GetTenCa_ByIdCa(idca);
+        }
+        public void DeleteLichLamViec(LichLamViecTrongTuan lichlamviec)
+        {
+            DangKiLichLamViecDAL.getInStance.DeleteLichLamViec(lichlamviec);
+        }
+        public List<LichLamViecTrongTuan> GetListLichLamViecByIDHLV(int IDHLV)
+        {
+            return DangKiLichLamViecDAL.getInStance.GetListLichLamViecByIDHLV(IDHLV);   
+        }
+        public List<LichLamViecTrongTuan> GetListLLVByYear(int year)
+        {
+            return DangKiLichLamViecDAL.getInStance.GetListLLVByYear(year);
         }
     }
 }

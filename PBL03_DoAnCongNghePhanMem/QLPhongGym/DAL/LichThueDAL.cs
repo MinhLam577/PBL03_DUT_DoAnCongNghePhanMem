@@ -16,7 +16,6 @@ namespace QLPhongGym.DAL
 {
     class LichThueDAL
     {
-        QLPhongGymDB db = new QLPhongGymDB();
         private static LichThueDAL instance;
         public static LichThueDAL Instance
         {
@@ -30,49 +29,65 @@ namespace QLPhongGym.DAL
         }
         public List<string> danhsachcatheongay(DateTime ngay)
         {
-            List<string> danhsachca = new List<string>();
-            var result = (from u in db.LichLamViecTrongTuans
-                          from i in db.CaLamViecs
-                          where u.IDCa == i.IDCa && u.NgayLam == ngay
-
-                          select new
-                          {
-                              i.Name
-                          }).Distinct().ToList();
-            foreach (var every in result)
+            using (QLPhongGymDB db = new QLPhongGymDB())
             {
+                List<string> danhsachca = new List<string>();
+                var result = (from u in db.LichLamViecTrongTuans
+                              from i in db.CaLamViecs
+                              where u.IDCa == i.IDCa && u.NgayLam == ngay
 
-                danhsachca.Add(every.Name.ToString());
+                              select new
+                              {
+                                  i.Name
+                              }).ToList();
+                foreach (var every in result)
+                {
 
+                    danhsachca.Add(every.Name.ToString());
+
+                }
+
+                return danhsachca;
             }
 
-            return danhsachca;
         }
         // truy vấn đ/kí thuê hlv  , và xem xét trùng lịch 
         public bool DangKiThueHLV(LichThueHLV a)
         {
-   
-            bool exist = db.LichThueHLVs.Any(LichThueHLV =>
-                LichThueHLV.IDCa == a.IDCa &&
-                LichThueHLV.IDHLV == a.IDHLV &&
-                LichThueHLV.NgayThue == a.NgayThue);
- 
-            if (!exist)
+            using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                LichThueHLV newLichThueHLV = new LichThueHLV
+                try
                 {
-                    IDCa = a.IDCa,
-                    IDHLV = a.IDHLV,
-                    NgayThue = a.NgayThue,
-                    IDKH = a.IDKH,
-                };
-                db.LichThueHLVs.Add(newLichThueHLV);
-                db.SaveChanges();
-                return true;
-            }
-            else
-            {
-                return false;
+                    // kiem tra su ton tai doi tuong 
+                    bool exist = db.LichThueHLVs.Any(LichThueHLV =>
+                    LichThueHLV.IDCa == a.IDCa &&
+                    LichThueHLV.IDHLV == a.IDHLV &&
+                    LichThueHLV.NgayThue == a.NgayThue);
+                    //  LichThueHLV.IDKH == a.IDKH);
+                    if (!exist)
+                    {
+                        LichThueHLV newLichThueHLV = new LichThueHLV
+                        {
+                            IDCa = a.IDCa,
+                            IDHLV = a.IDHLV,
+                            NgayThue = a.NgayThue,
+                            IDKH = a.IDKH,
+                        };
+                        db.LichThueHLVs.Add(newLichThueHLV);
+                        db.SaveChanges();
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Thêm lịch thuê thất bại");
+                    return false;
+                }
+
             }
         }
         // 
@@ -94,64 +109,106 @@ namespace QLPhongGym.DAL
         public DataTable showlich()
         {
             CreatDataTable();
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                var result = (from i in db.LichThueHLVs
+                              join u in db.Users.OfType<HLV>() on i.IDHLV equals u.IDUsers
+                              join z in db.Users.OfType<KH>() on i.IDKH equals z.IDUsers
+                              where i.IDHLV == u.IDUsers
+                              select new
+                              {
+                                  i.IDKH,
+                                  u.IDUsers, // id khach hang                                  
+                                  HLVName = u.Name,
+                                  i.NgayThue,
+                                  i.IDCa,
+                                  KHName = z.Name // Lấy tên từ bảng Users loại KH
+                              }).ToList();
+                foreach (var u in result)
 
-            var result = (from i in db.LichThueHLVs
-                          join u in db.Users.OfType<HLV>() on i.IDHLV equals u.IDUsers
-                          join z in db.Users.OfType<KH>() on i.IDKH equals z.IDUsers
-                          where i.IDHLV == u.IDUsers
-                          select new
-                          {
-                              i.IDKH,
-                              u.IDUsers, // id khach hang                                  
-                              HLVName = u.Name,
-                              i.NgayThue,
-                              i.IDCa,                         
-                              KHName = z.Name // Lấy tên từ bảng Users loại KH
-                          }).ToList();
-            foreach (var u in result)
 
+                    dt.Rows.Add(
+                                  u.IDKH,
+                                  u.KHName,
+                                  u.IDUsers,
+                                  u.HLVName,
+                                  u.NgayThue,
+                                  u.IDCa
+                          );
+                return dt;
+            }
 
-                dt.Rows.Add(
-                              u.IDKH,
-                              u.KHName,
-                              u.IDUsers,
-                              u.HLVName,                             
-                              u.NgayThue,
-                              DangKiLichLamViecDAL.getInStance.GetTenCa_ByIdCa(u.IDCa.Value)
-                      );
-            return dt;
+        }
+        public void DeleteLichThue(int IDLT)
+        {
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                try
+                {
+                    LichThueHLV lt = db.LichThueHLVs.FirstOrDefault(x => x.IDLT == IDLT);
+                    db.LichThueHLVs.Remove(lt);
+                    db.SaveChanges();
+                }
+                catch
+                {
+                    MessageBox.Show("Xóa lịch thuê thất bại");
+                }
 
+            }
         }
         public bool xoa(int ma)
         {
-            LichThueHLV a = db.LichThueHLVs.FirstOrDefault(x => x.IDKH == ma);
-            db.LichThueHLVs.Remove(a);
-            db.SaveChanges();
-            return true;
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                LichThueHLV a = db.LichThueHLVs.FirstOrDefault(x => x.IDKH == ma);
+                db.LichThueHLVs.Remove(a);
+                return db.SaveChanges() > 0;
+            }
         }
-        public bool Capnhat1(int idca, int idhlv,DateTime ngaylam, int IDCA, int IDHLV,DateTime NGAYLAM)
+        public bool Capnhat1(int idca, int idhlv, DateTime ngaylam, int IDCA, int IDHLV, DateTime NGAYLAM)
         {
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                // Lấy đối tượng Order cần sửa đổi từ cơ sở dữ liệu
+                var lich = db.LichThueHLVs.FirstOrDefault(x => x.IDHLV == idhlv &&
+                x.IDCa == idca &&
+                x.NgayThue == ngaylam);
+                lich.IDCa = IDCA;
+                lich.IDHLV = IDHLV;
+                lich.NgayThue = NGAYLAM;
+                db.SaveChanges();
+                return true;
+            }
 
-            // Lấy đối tượng Order cần sửa đổi từ cơ sở dữ liệu
-            var lich = db.LichThueHLVs.FirstOrDefault(x => x.IDHLV == idhlv &&
-            x.IDCa == idca &&
-            x.NgayThue == ngaylam);
-            lich.IDCa = IDCA;
-            lich.IDHLV = IDHLV;
-            lich.NgayThue = NGAYLAM;
-            db.SaveChanges();
-            return true;
         }
-        
+
         public List<LichThueHLV> GetLichThueByIDKH_IDHLV(int IDKH, int IDHLV)
         {
-            var data = db.LichThueHLVs.Where(l => l.IDKH == IDKH && l.IDHLV == IDHLV).ToList();
-            return data;
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                var data = db.LichThueHLVs.Where(l => l.IDKH == IDKH && l.IDHLV == IDHLV).ToList();
+                return data;
+            }
+
         }
         public List<LichThueHLV> GetLichThueByIDHLV(int IDHLV)
         {
-            var data = db.LichThueHLVs.Where(l => l.IDHLV == IDHLV).ToList();
-            return data;
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                return db.LichThueHLVs.Where(l => l.IDHLV == IDHLV).ToList();
+            }
+
+        }
+        public List<LichThueHLV> GetLichThueByIDKH(int IDKH)
+        {
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                return (from kh in db.Users.OfType<KH>()
+                        join lt in db.LichThueHLVs
+                        on kh.IDUsers equals lt.IDKH
+                        where kh.IDUsers == IDKH
+                        select lt).ToList();
+            }
         }
     }
 }
