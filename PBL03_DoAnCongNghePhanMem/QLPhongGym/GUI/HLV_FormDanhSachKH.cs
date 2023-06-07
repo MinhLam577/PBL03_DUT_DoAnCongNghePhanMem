@@ -71,8 +71,8 @@ namespace QLPhongGym.GUI
                     
                     //kiểm tra để show giới tính lên giao diện
                     if ((bool)kh.Sex)
-                        lb_gioitinh.Text = "Giới tính: Nam";
-                    else lb_gioitinh.Text = "Giới tính: Nữ";
+                        lb_gioitinh.Text = "Nam";
+                    else lb_gioitinh.Text = "Nữ";
                     if (!string.IsNullOrEmpty(kh.Gmail))
                         lb_gmail.Text = kh.Gmail;
                     else lb_gmail.Text = "NA";

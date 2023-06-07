@@ -78,7 +78,7 @@
             this.BtnTaiKhoan.Location = new System.Drawing.Point(0, 110);
             this.BtnTaiKhoan.Name = "BtnTaiKhoan";
             this.BtnTaiKhoan.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
-            this.BtnTaiKhoan.Size = new System.Drawing.Size(225, 55);
+            this.BtnTaiKhoan.Size = new System.Drawing.Size(300, 55);
             this.BtnTaiKhoan.TabIndex = 2;
             this.BtnTaiKhoan.Text = "Tài khoản";
             this.BtnTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -91,9 +91,9 @@
             this.panel_hlv.Controls.Add(this.BtnTaiKhoan);
             this.panel_hlv.Controls.Add(this.button8);
             this.panel_hlv.Controls.Add(this.button9);
-            this.panel_hlv.Location = new System.Drawing.Point(240, 216);
+            this.panel_hlv.Location = new System.Drawing.Point(290, 216);
             this.panel_hlv.Name = "panel_hlv";
-            this.panel_hlv.Size = new System.Drawing.Size(225, 164);
+            this.panel_hlv.Size = new System.Drawing.Size(300, 164);
             this.panel_hlv.TabIndex = 4;
             // 
             // button8
@@ -107,7 +107,7 @@
             this.button8.Location = new System.Drawing.Point(0, 55);
             this.button8.Name = "button8";
             this.button8.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(225, 55);
+            this.button8.Size = new System.Drawing.Size(300, 55);
             this.button8.TabIndex = 1;
             this.button8.Text = "Đăng kí giờ làm";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -125,7 +125,7 @@
             this.button9.Location = new System.Drawing.Point(0, 0);
             this.button9.Name = "button9";
             this.button9.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
-            this.button9.Size = new System.Drawing.Size(225, 55);
+            this.button9.Size = new System.Drawing.Size(300, 55);
             this.button9.TabIndex = 0;
             this.button9.Text = "Thông tin huấn luyện viên";
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -145,7 +145,7 @@
             this.button13.Location = new System.Drawing.Point(0, 404);
             this.button13.Name = "button13";
             this.button13.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.button13.Size = new System.Drawing.Size(240, 63);
+            this.button13.Size = new System.Drawing.Size(290, 63);
             this.button13.TabIndex = 8;
             this.button13.Text = "   Thống kê";
             this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -166,7 +166,7 @@
             this.button10.Location = new System.Drawing.Point(0, 216);
             this.button10.Name = "button10";
             this.button10.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.button10.Size = new System.Drawing.Size(240, 65);
+            this.button10.Size = new System.Drawing.Size(290, 65);
             this.button10.TabIndex = 3;
             this.button10.Text = "   Huấn luyện viên";
             this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -186,7 +186,7 @@
             this.button14.Location = new System.Drawing.Point(0, 535);
             this.button14.Name = "button14";
             this.button14.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.button14.Size = new System.Drawing.Size(240, 51);
+            this.button14.Size = new System.Drawing.Size(290, 51);
             this.button14.TabIndex = 10;
             this.button14.Text = "   Thoát";
             this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -207,7 +207,7 @@
             this.button16.Location = new System.Drawing.Point(0, 341);
             this.button16.Name = "button16";
             this.button16.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.button16.Size = new System.Drawing.Size(240, 63);
+            this.button16.Size = new System.Drawing.Size(290, 63);
             this.button16.TabIndex = 7;
             this.button16.Text = "   Gói tập";
             this.button16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -228,7 +228,7 @@
             this.button_ThietBi.Location = new System.Drawing.Point(0, 281);
             this.button_ThietBi.Name = "button_ThietBi";
             this.button_ThietBi.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.button_ThietBi.Size = new System.Drawing.Size(240, 60);
+            this.button_ThietBi.Size = new System.Drawing.Size(290, 60);
             this.button_ThietBi.TabIndex = 5;
             this.button_ThietBi.Text = "   Thiết bị";
             this.button_ThietBi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -250,7 +250,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(240, 586);
+            this.panel1.Size = new System.Drawing.Size(290, 586);
             this.panel1.TabIndex = 1;
             // 
             // button1
@@ -267,7 +267,7 @@
             this.button1.Location = new System.Drawing.Point(0, 146);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(240, 70);
+            this.button1.Size = new System.Drawing.Size(290, 70);
             this.button1.TabIndex = 1;
             this.button1.Text = "   Khách hàng";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -283,7 +283,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(240, 146);
+            this.panel2.Size = new System.Drawing.Size(290, 146);
             this.panel2.TabIndex = 0;
             // 
             // pn_TitleMenu
@@ -295,9 +295,9 @@
             this.pn_TitleMenu.Controls.Add(this.label2);
             this.pn_TitleMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pn_TitleMenu.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.pn_TitleMenu.Location = new System.Drawing.Point(240, 0);
+            this.pn_TitleMenu.Location = new System.Drawing.Point(290, 0);
             this.pn_TitleMenu.Name = "pn_TitleMenu";
-            this.pn_TitleMenu.Size = new System.Drawing.Size(895, 82);
+            this.pn_TitleMenu.Size = new System.Drawing.Size(845, 82);
             this.pn_TitleMenu.TabIndex = 0;
             // 
             // pictureBox1
@@ -352,9 +352,9 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(245)))));
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(240, 82);
+            this.panel3.Location = new System.Drawing.Point(290, 82);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(895, 504);
+            this.panel3.Size = new System.Drawing.Size(845, 504);
             this.panel3.TabIndex = 2;
             // 
             // pictureBox2
@@ -363,7 +363,7 @@
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(895, 504);
+            this.pictureBox2.Size = new System.Drawing.Size(845, 504);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -377,9 +377,9 @@
             this.pn_tkadmin.Controls.Add(this.lb_gmailad);
             this.pn_tkadmin.Controls.Add(this.lb_tenad);
             this.pn_tkadmin.Controls.Add(this.pb_acc);
-            this.pn_tkadmin.Location = new System.Drawing.Point(436, 82);
+            this.pn_tkadmin.Location = new System.Drawing.Point(486, 88);
             this.pn_tkadmin.Name = "pn_tkadmin";
-            this.pn_tkadmin.Size = new System.Drawing.Size(507, 159);
+            this.pn_tkadmin.Size = new System.Drawing.Size(533, 158);
             this.pn_tkadmin.TabIndex = 4;
             // 
             // btn_doimatkhau

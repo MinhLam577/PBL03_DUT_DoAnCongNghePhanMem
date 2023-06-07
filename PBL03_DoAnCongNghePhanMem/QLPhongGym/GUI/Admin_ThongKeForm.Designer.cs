@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_ThongKeForm));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pn_nam = new System.Windows.Forms.Panel();
             this.lb_cong = new System.Windows.Forms.Label();
@@ -96,7 +96,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1498, 714);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1924, 1055);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // pn_nam
@@ -107,7 +107,7 @@
             this.pn_nam.Controls.Add(this.lb_nam);
             this.pn_nam.Location = new System.Drawing.Point(3, 3);
             this.pn_nam.Name = "pn_nam";
-            this.pn_nam.Size = new System.Drawing.Size(1451, 37);
+            this.pn_nam.Size = new System.Drawing.Size(1921, 37);
             this.pn_nam.TabIndex = 59;
             // 
             // lb_cong
@@ -115,7 +115,7 @@
             this.lb_cong.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lb_cong.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_cong.Image = ((System.Drawing.Image)(resources.GetObject("lb_cong.Image")));
-            this.lb_cong.Location = new System.Drawing.Point(809, 1);
+            this.lb_cong.Location = new System.Drawing.Point(1044, 1);
             this.lb_cong.Name = "lb_cong";
             this.lb_cong.Size = new System.Drawing.Size(73, 35);
             this.lb_cong.TabIndex = 61;
@@ -126,7 +126,7 @@
             this.lb_tru.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lb_tru.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_tru.Image = ((System.Drawing.Image)(resources.GetObject("lb_tru.Image")));
-            this.lb_tru.Location = new System.Drawing.Point(558, 1);
+            this.lb_tru.Location = new System.Drawing.Point(793, 1);
             this.lb_tru.Name = "lb_tru";
             this.lb_tru.Size = new System.Drawing.Size(73, 35);
             this.lb_tru.TabIndex = 60;
@@ -137,7 +137,7 @@
             this.lb_nam.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lb_nam.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_nam.ForeColor = System.Drawing.Color.Black;
-            this.lb_nam.Location = new System.Drawing.Point(620, 0);
+            this.lb_nam.Location = new System.Drawing.Point(855, 0);
             this.lb_nam.Name = "lb_nam";
             this.lb_nam.Size = new System.Drawing.Size(192, 36);
             this.lb_nam.TabIndex = 56;
@@ -151,10 +151,9 @@
             this.flowLayoutPanel3.Controls.Add(this.panel4);
             this.flowLayoutPanel3.Controls.Add(this.panel5);
             this.flowLayoutPanel3.Controls.Add(this.panel7);
-            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 46);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(1458, 183);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(1921, 264);
             this.flowLayoutPanel3.TabIndex = 7;
             // 
             // panel2
@@ -164,9 +163,9 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.lb_totalcustomer);
             this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Location = new System.Drawing.Point(3, 9);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(281, 177);
+            this.panel2.Size = new System.Drawing.Size(374, 253);
             this.panel2.TabIndex = 6;
             // 
             // label3
@@ -176,9 +175,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(0, 133);
+            this.label3.Location = new System.Drawing.Point(0, 206);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(281, 39);
+            this.label3.Size = new System.Drawing.Size(374, 42);
             this.label3.TabIndex = 2;
             this.label3.Text = "Total Customer";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -190,9 +189,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_totalcustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_totalcustomer.ForeColor = System.Drawing.Color.White;
-            this.lb_totalcustomer.Location = new System.Drawing.Point(0, 90);
+            this.lb_totalcustomer.Location = new System.Drawing.Point(-3, 159);
             this.lb_totalcustomer.Name = "lb_totalcustomer";
-            this.lb_totalcustomer.Size = new System.Drawing.Size(281, 43);
+            this.lb_totalcustomer.Size = new System.Drawing.Size(374, 38);
             this.lb_totalcustomer.TabIndex = 1;
             this.lb_totalcustomer.Text = "109";
             this.lb_totalcustomer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -203,9 +202,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(71, 16);
+            this.pictureBox3.Location = new System.Drawing.Point(71, 14);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(138, 62);
+            this.pictureBox3.Size = new System.Drawing.Size(231, 138);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -217,9 +216,9 @@
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.lb_totalcoach);
             this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Location = new System.Drawing.Point(290, 3);
+            this.panel3.Location = new System.Drawing.Point(383, 7);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(284, 177);
+            this.panel3.Size = new System.Drawing.Size(374, 257);
             this.panel3.TabIndex = 7;
             // 
             // label1
@@ -229,9 +228,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 133);
+            this.label1.Location = new System.Drawing.Point(0, 208);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(278, 39);
+            this.label1.Size = new System.Drawing.Size(374, 42);
             this.label1.TabIndex = 2;
             this.label1.Text = "Total Coach";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -243,9 +242,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_totalcoach.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_totalcoach.ForeColor = System.Drawing.Color.White;
-            this.lb_totalcoach.Location = new System.Drawing.Point(0, 90);
+            this.lb_totalcoach.Location = new System.Drawing.Point(0, 161);
             this.lb_totalcoach.Name = "lb_totalcoach";
-            this.lb_totalcoach.Size = new System.Drawing.Size(284, 43);
+            this.lb_totalcoach.Size = new System.Drawing.Size(374, 38);
             this.lb_totalcoach.TabIndex = 1;
             this.lb_totalcoach.Text = "109";
             this.lb_totalcoach.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -258,7 +257,7 @@
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(67, 16);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(148, 62);
+            this.pictureBox2.Size = new System.Drawing.Size(238, 138);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -270,9 +269,9 @@
             this.panel4.Controls.Add(this.lb_tongthunhap);
             this.panel4.Controls.Add(this.lb);
             this.panel4.Controls.Add(this.pictureBox4);
-            this.panel4.Location = new System.Drawing.Point(580, 3);
+            this.panel4.Location = new System.Drawing.Point(763, 6);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(289, 177);
+            this.panel4.Size = new System.Drawing.Size(389, 259);
             this.panel4.TabIndex = 8;
             // 
             // lb_tongthunhap
@@ -282,9 +281,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_tongthunhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_tongthunhap.ForeColor = System.Drawing.Color.White;
-            this.lb_tongthunhap.Location = new System.Drawing.Point(0, 90);
+            this.lb_tongthunhap.Location = new System.Drawing.Point(0, 158);
             this.lb_tongthunhap.Name = "lb_tongthunhap";
-            this.lb_tongthunhap.Size = new System.Drawing.Size(289, 43);
+            this.lb_tongthunhap.Size = new System.Drawing.Size(389, 42);
             this.lb_tongthunhap.TabIndex = 3;
             this.lb_tongthunhap.Text = "109";
             this.lb_tongthunhap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -296,9 +295,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lb.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb.ForeColor = System.Drawing.Color.White;
-            this.lb.Location = new System.Drawing.Point(3, 133);
+            this.lb.Location = new System.Drawing.Point(3, 209);
             this.lb.Name = "lb";
-            this.lb.Size = new System.Drawing.Size(283, 39);
+            this.lb.Size = new System.Drawing.Size(383, 45);
             this.lb.TabIndex = 2;
             this.lb.Text = "Total Earning";
             this.lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -310,9 +309,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(75, 16);
+            this.pictureBox4.Location = new System.Drawing.Point(75, 17);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(135, 62);
+            this.pictureBox4.Size = new System.Drawing.Size(235, 138);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
@@ -324,9 +323,9 @@
             this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.lb_equipment);
             this.panel5.Controls.Add(this.pictureBox6);
-            this.panel5.Location = new System.Drawing.Point(875, 3);
+            this.panel5.Location = new System.Drawing.Point(1158, 5);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(297, 177);
+            this.panel5.Size = new System.Drawing.Size(376, 262);
             this.panel5.TabIndex = 9;
             // 
             // label6
@@ -336,9 +335,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(0, 133);
+            this.label6.Location = new System.Drawing.Point(0, 210);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(297, 39);
+            this.label6.Size = new System.Drawing.Size(376, 47);
             this.label6.TabIndex = 2;
             this.label6.Text = "Available equipment";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -350,9 +349,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_equipment.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_equipment.ForeColor = System.Drawing.Color.White;
-            this.lb_equipment.Location = new System.Drawing.Point(0, 90);
+            this.lb_equipment.Location = new System.Drawing.Point(0, 163);
             this.lb_equipment.Name = "lb_equipment";
-            this.lb_equipment.Size = new System.Drawing.Size(297, 43);
+            this.lb_equipment.Size = new System.Drawing.Size(376, 38);
             this.lb_equipment.TabIndex = 1;
             this.lb_equipment.Text = "109";
             this.lb_equipment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -363,9 +362,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(85, 16);
+            this.pictureBox6.Location = new System.Drawing.Point(85, 18);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(131, 62);
+            this.pictureBox6.Size = new System.Drawing.Size(210, 138);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
@@ -377,9 +376,9 @@
             this.panel7.Controls.Add(this.label);
             this.panel7.Controls.Add(this.lb_package);
             this.panel7.Controls.Add(this.pictureBox1);
-            this.panel7.Location = new System.Drawing.Point(1178, 3);
+            this.panel7.Location = new System.Drawing.Point(1540, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(277, 177);
+            this.panel7.Size = new System.Drawing.Size(369, 266);
             this.panel7.TabIndex = 11;
             // 
             // label
@@ -389,9 +388,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label.ForeColor = System.Drawing.Color.White;
-            this.label.Location = new System.Drawing.Point(0, 133);
+            this.label.Location = new System.Drawing.Point(0, 212);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(277, 39);
+            this.label.Size = new System.Drawing.Size(369, 42);
             this.label.TabIndex = 2;
             this.label.Text = "Available package";
             this.label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -403,9 +402,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_package.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_package.ForeColor = System.Drawing.Color.White;
-            this.lb_package.Location = new System.Drawing.Point(0, 90);
+            this.lb_package.Location = new System.Drawing.Point(0, 165);
             this.lb_package.Name = "lb_package";
-            this.lb_package.Size = new System.Drawing.Size(277, 43);
+            this.lb_package.Size = new System.Drawing.Size(369, 38);
             this.lb_package.TabIndex = 1;
             this.lb_package.Text = "109";
             this.lb_package.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -416,9 +415,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(82, 16);
+            this.pictureBox1.Location = new System.Drawing.Point(82, 20);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(114, 62);
+            this.pictureBox1.Size = new System.Drawing.Size(206, 138);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -430,44 +429,44 @@
             this.flowLayoutPanel2.Controls.Add(this.chart_doanhthu);
             this.flowLayoutPanel2.Controls.Add(this.chart_soluongdkgt);
             this.flowLayoutPanel2.Controls.Add(this.chart_nhucaudkgt);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 235);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 316);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1458, 580);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1921, 746);
             this.flowLayoutPanel2.TabIndex = 8;
             // 
             // chart_doanhthu
             // 
             this.chart_doanhthu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chart_doanhthu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisX.MinorGrid.LineWidth = 0;
-            chartArea1.AxisX.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea1.AxisY.LabelStyle.Format = "{0} VNĐ";
-            chartArea1.AxisY.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            chartArea1.Name = "ChartArea1";
-            this.chart_doanhthu.ChartAreas.Add(chartArea1);
-            legend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            legend1.ForeColor = System.Drawing.Color.White;
-            legend1.Name = "Legend1";
-            this.chart_doanhthu.Legends.Add(legend1);
+            chartArea7.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea7.AxisX.MinorGrid.LineWidth = 0;
+            chartArea7.AxisX.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            chartArea7.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea7.AxisY.LabelStyle.Format = "{0} VNĐ";
+            chartArea7.AxisY.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            chartArea7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            chartArea7.Name = "ChartArea1";
+            this.chart_doanhthu.ChartAreas.Add(chartArea7);
+            legend7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            legend7.ForeColor = System.Drawing.Color.White;
+            legend7.Name = "Legend1";
+            this.chart_doanhthu.Legends.Add(legend7);
             this.chart_doanhthu.Location = new System.Drawing.Point(3, 3);
             this.chart_doanhthu.Name = "chart_doanhthu";
-            series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
-            series1.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
-            series1.BorderWidth = 3;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
-            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(88)))), ((int)(((byte)(127)))));
-            series1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series1.LabelForeColor = System.Drawing.Color.White;
-            series1.Legend = "Legend1";
-            series1.MarkerColor = System.Drawing.Color.MediumPurple;
-            series1.Name = "Doanh thu";
-            series1.YValuesPerPoint = 2;
-            this.chart_doanhthu.Series.Add(series1);
-            this.chart_doanhthu.Size = new System.Drawing.Size(1452, 584);
+            series5.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
+            series5.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            series5.BorderWidth = 3;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
+            series5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(88)))), ((int)(((byte)(127)))));
+            series5.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series5.LabelForeColor = System.Drawing.Color.White;
+            series5.Legend = "Legend1";
+            series5.MarkerColor = System.Drawing.Color.MediumPurple;
+            series5.Name = "Doanh thu";
+            series5.YValuesPerPoint = 2;
+            this.chart_doanhthu.Series.Add(series5);
+            this.chart_doanhthu.Size = new System.Drawing.Size(1876, 547);
             this.chart_doanhthu.TabIndex = 9;
             this.chart_doanhthu.Text = "char1";
             // 
@@ -475,27 +474,27 @@
             // 
             this.chart_soluongdkgt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chart_soluongdkgt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea2.AxisX.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            chartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea2.AxisY.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            chartArea2.Name = "ChartArea1";
-            this.chart_soluongdkgt.ChartAreas.Add(chartArea2);
-            legend2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            legend2.ForeColor = System.Drawing.Color.White;
-            legend2.Name = "Legend1";
-            this.chart_soluongdkgt.Legends.Add(legend2);
-            this.chart_soluongdkgt.Location = new System.Drawing.Point(3, 593);
+            chartArea8.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea8.AxisX.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            chartArea8.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea8.AxisY.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            chartArea8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            chartArea8.Name = "ChartArea1";
+            this.chart_soluongdkgt.ChartAreas.Add(chartArea8);
+            legend8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            legend8.ForeColor = System.Drawing.Color.White;
+            legend8.Name = "Legend1";
+            this.chart_soluongdkgt.Legends.Add(legend8);
+            this.chart_soluongdkgt.Location = new System.Drawing.Point(3, 556);
             this.chart_soluongdkgt.Name = "chart_soluongdkgt";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
-            series2.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series2.LabelForeColor = System.Drawing.Color.White;
-            series2.Legend = "Legend1";
-            series2.Name = "Số lượng đăng kí gói";
-            this.chart_soluongdkgt.Series.Add(series2);
-            this.chart_soluongdkgt.Size = new System.Drawing.Size(1455, 584);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
+            series6.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series6.LabelForeColor = System.Drawing.Color.White;
+            series6.Legend = "Legend1";
+            series6.Name = "Số lượng đăng kí gói";
+            this.chart_soluongdkgt.Series.Add(series6);
+            this.chart_soluongdkgt.Size = new System.Drawing.Size(1876, 606);
             this.chart_soluongdkgt.TabIndex = 10;
             this.chart_soluongdkgt.Text = "char1";
             // 
@@ -503,20 +502,20 @@
             // 
             this.chart_nhucaudkgt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chart_nhucaudkgt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            chartArea3.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea3.AxisX.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            chartArea3.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea3.AxisY.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            chartArea3.Name = "ChartArea1";
-            this.chart_nhucaudkgt.ChartAreas.Add(chartArea3);
-            legend3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            legend3.ForeColor = System.Drawing.Color.White;
-            legend3.Name = "Legend1";
-            this.chart_nhucaudkgt.Legends.Add(legend3);
-            this.chart_nhucaudkgt.Location = new System.Drawing.Point(3, 1183);
+            chartArea9.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea9.AxisX.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            chartArea9.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea9.AxisY.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            chartArea9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            chartArea9.Name = "ChartArea1";
+            this.chart_nhucaudkgt.ChartAreas.Add(chartArea9);
+            legend9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            legend9.ForeColor = System.Drawing.Color.White;
+            legend9.Name = "Legend1";
+            this.chart_nhucaudkgt.Legends.Add(legend9);
+            this.chart_nhucaudkgt.Location = new System.Drawing.Point(3, 1168);
             this.chart_nhucaudkgt.Name = "chart_nhucaudkgt";
-            this.chart_nhucaudkgt.Size = new System.Drawing.Size(1455, 585);
+            this.chart_nhucaudkgt.Size = new System.Drawing.Size(1876, 585);
             this.chart_nhucaudkgt.TabIndex = 11;
             this.chart_nhucaudkgt.Text = "char1";
             // 
@@ -525,7 +524,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(121)))), ((int)(((byte)(181)))));
-            this.ClientSize = new System.Drawing.Size(1498, 714);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "Admin_ThongKeForm";
             this.Text = "Form1";
