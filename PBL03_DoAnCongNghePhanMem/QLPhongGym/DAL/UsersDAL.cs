@@ -37,6 +37,7 @@ namespace QLPhongGym.DAL
                 }
                 catch
                 {
+                    MessageBox.Show("Thêm user thất bại");
                     return 0;
                 }
             }
@@ -52,7 +53,7 @@ namespace QLPhongGym.DAL
                     return db.SaveChanges();
                 }
                 catch
-                { return 0; }
+                { MessageBox.Show("Cật nhật user thất bại"); return 0; }
             }
         }
         public void DeleteUsers(User user)
@@ -66,7 +67,7 @@ namespace QLPhongGym.DAL
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Xóa user thất bại, lỗi: " + ex.Message);
                 }
             }
                 

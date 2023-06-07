@@ -9,6 +9,8 @@ using QLPhongGym.DTO;
 using QLPhongGym.GUI;
 using System.Text.RegularExpressions;
 using System.Data.Entity;
+using System.Windows;
+using System.Windows.Forms;
 
 namespace DAL
 {
@@ -73,8 +75,17 @@ namespace DAL
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                db.TKs.Add(acc);
-                return db.SaveChanges();
+                try
+                {
+                    db.TKs.Add(acc);
+                    return db.SaveChanges();
+                }
+                catch
+                {
+                    System.Windows.MessageBox.Show("Thêm tài khoản thất bại");
+                    return 0;
+                }
+               
             }
                
         }
@@ -82,17 +93,34 @@ namespace DAL
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                TK tk = db.TKs.FirstOrDefault(s => s.TenTK == acc.TenTK);
-                db.TKs.Remove(tk);
-                db.SaveChanges();
+                try
+                {
+                    TK tk = db.TKs.FirstOrDefault(s => s.TenTK == acc.TenTK);
+                    db.TKs.Remove(tk);
+                    db.SaveChanges();
+                }
+                catch
+                {
+                    System.Windows.MessageBox.Show("Xóa tài khoản thất bại");
+                }
+               
             }
         }
         public int UpdateTK(TK acc)
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                db.Entry(acc).State = System.Data.Entity.EntityState.Modified;
-                return db.SaveChanges();
+                try
+                {
+                    db.Entry(acc).State = System.Data.Entity.EntityState.Modified;
+                    return db.SaveChanges();
+                }
+                catch
+                {
+                    System.Windows.MessageBox.Show("Cật nhật tài khoản thất bại");
+                    return 0;
+                }
+                
             }
                
         }

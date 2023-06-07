@@ -58,29 +58,38 @@ namespace QLPhongGym.DAL
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                // kiem tra su ton tai doi tuong 
-                bool exist = db.LichThueHLVs.Any(LichThueHLV =>
-                LichThueHLV.IDCa == a.IDCa &&
-                LichThueHLV.IDHLV == a.IDHLV &&
-                LichThueHLV.NgayThue == a.NgayThue);
-                //  LichThueHLV.IDKH == a.IDKH);
-                if (!exist)
+                try
                 {
-                    LichThueHLV newLichThueHLV = new LichThueHLV
+                    // kiem tra su ton tai doi tuong 
+                    bool exist = db.LichThueHLVs.Any(LichThueHLV =>
+                    LichThueHLV.IDCa == a.IDCa &&
+                    LichThueHLV.IDHLV == a.IDHLV &&
+                    LichThueHLV.NgayThue == a.NgayThue);
+                    //  LichThueHLV.IDKH == a.IDKH);
+                    if (!exist)
                     {
-                        IDCa = a.IDCa,
-                        IDHLV = a.IDHLV,
-                        NgayThue = a.NgayThue,
-                        IDKH = a.IDKH,
-                    };
-                    db.LichThueHLVs.Add(newLichThueHLV);
-                    db.SaveChanges();
-                    return true;
+                        LichThueHLV newLichThueHLV = new LichThueHLV
+                        {
+                            IDCa = a.IDCa,
+                            IDHLV = a.IDHLV,
+                            NgayThue = a.NgayThue,
+                            IDKH = a.IDKH,
+                        };
+                        db.LichThueHLVs.Add(newLichThueHLV);
+                        db.SaveChanges();
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
-                else
+                catch
                 {
+                    MessageBox.Show("Thêm lịch thuê thất bại");
                     return false;
                 }
+               
             }
         }
         
@@ -145,9 +154,17 @@ namespace QLPhongGym.DAL
         {
             using(QLPhongGymDB db = new QLPhongGymDB())
             {
-                LichThueHLV lt = db.LichThueHLVs.FirstOrDefault(x => x.IDLT == IDLT);
-                db.LichThueHLVs.Remove(lt);
-                db.SaveChanges();
+                try
+                {
+                    LichThueHLV lt = db.LichThueHLVs.FirstOrDefault(x => x.IDLT == IDLT);
+                    db.LichThueHLVs.Remove(lt);
+                    db.SaveChanges();
+                }
+                catch
+                {
+                    MessageBox.Show("Xóa lịch thuê thất bại");
+                }
+                
             }
         }
         public bool Capnhat1(int idca, int idhlv,DateTime ngaylam, int IDCA, int IDHLV,DateTime NGAYLAM)

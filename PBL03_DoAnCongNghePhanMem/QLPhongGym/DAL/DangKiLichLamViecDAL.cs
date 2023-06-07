@@ -135,7 +135,7 @@ namespace QLPhongGym.DAL
                         }
                     }
                 }
-                catch (Exception ex)
+                catch
                 {
                     MessageBox.Show("Lỗi");
 
@@ -184,6 +184,14 @@ namespace QLPhongGym.DAL
                 return true;
             }
                 
+        }
+        public void DeleteLichLamViec(LichLamViecTrongTuan lichlamviec)
+        {
+            using(QLPhongGymDB db = new QLPhongGymDB())
+            {
+                db.Entry(lichlamviec).State = EntityState.Deleted;
+                db.SaveChanges();
+            }
         }
         // tim kiem viec lam theo tuan
         public DataTable TimKiemLichLamViec(int idca, DateTime ngaybatdau, DateTime ngayketthuc)
@@ -373,7 +381,7 @@ namespace QLPhongGym.DAL
             }
                 
         }
-        public bool Capnhat1(int idca, int idhlv,/* DateTime ngaybatdau, DateTime ngaykeythuc,*/ DateTime ngaylam, int IDCA, int IDHLV,/* DateTime NGAYBATDAU, DateTime NGAYKETTHUC,*/ DateTime NGAYLAM)
+        public bool Capnhat1(int idca, int idhlv, DateTime ngaylam, int IDCA, int IDHLV, DateTime NGAYLAM)
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
@@ -597,6 +605,17 @@ namespace QLPhongGym.DAL
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
                 return db.LichThueHLVs.Where(l => l.NgayThue.Value == NgayLam && l.IDHLV == IDHLV && l.IDKH == IDKH).Select(s => s.IDCa.Value).Distinct().ToList();
+        }
+        public List<LichLamViecTrongTuan> GetListLichLamViecByIDHLV(int IDHLV)
+        {
+            using(QLPhongGymDB db = new QLPhongGymDB())
+            {
+                return (from hlv in db.Users.OfType<HLV>()
+                       join llv in db.LichLamViecTrongTuans
+                       on hlv.IDUsers equals llv.IDHLV
+                       where hlv.IDUsers == IDHLV
+                       select llv).ToList();
+            }
         }
         public CaLamViec GetCaLamViecByIDCa(int IDCa)
         {

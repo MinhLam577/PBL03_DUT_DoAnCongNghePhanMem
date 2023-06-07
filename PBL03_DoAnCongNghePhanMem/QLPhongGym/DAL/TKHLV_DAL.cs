@@ -114,12 +114,20 @@ namespace QLPhongGym.DAL
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                var product = db.TKs.SingleOrDefault(p => p.IDUser == str);
-                if (product != null)
+                try
                 {
-                    db.TKs.Remove(product);
-                    db.SaveChanges();
+                    var product = db.TKs.SingleOrDefault(p => p.IDUser == str);
+                    if (product != null)
+                    {
+                        db.TKs.Remove(product);
+                        db.SaveChanges();
+                    }
                 }
+                catch
+                {
+                    MessageBox.Show("Xóa tài khoản huấn luyện viên thất bại");
+                }
+                
             }
         }
         public HLV GetHLVByID(int id)
@@ -138,9 +146,9 @@ namespace QLPhongGym.DAL
                     db.TKs.Add(sp);
                     db.SaveChanges();
                 }
-                catch (Exception)
+                catch
                 {
-                    throw;
+                    MessageBox.Show("Thêm tài khoản huấn luyện viên thất bai");
                 }
             }
 
@@ -149,8 +157,16 @@ namespace QLPhongGym.DAL
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                db.Entry(sp).State = System.Data.Entity.EntityState.Modified;
-                db.SaveChanges();
+                try
+                {
+                    db.Entry(sp).State = System.Data.Entity.EntityState.Modified;
+                    db.SaveChanges();
+                }
+                catch
+                {
+                    MessageBox.Show("Cật nhật tài khoản huấn luyện viên thất bại");
+                }
+                
             }
         }
         public DataTable SearchSP_DAL(string str)

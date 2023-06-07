@@ -338,9 +338,17 @@ namespace QLPhongGym.DAL
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
+                try
+                {
+                    db.DangKiGoiTaps.Add(dkgt);
+                    return db.SaveChanges();
+                }
+                catch
+                {
+                    MessageBox.Show("Thêm đăng kí gói tập thất bại");
+                    return 0;
+                }
                 
-                db.DangKiGoiTaps.Add(dkgt);
-                return db.SaveChanges();
             }
                 
         }
@@ -348,8 +356,17 @@ namespace QLPhongGym.DAL
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                db.Entry(dkgt).State = System.Data.Entity.EntityState.Deleted;
-                db.SaveChanges();
+                try
+                {
+                    db.Entry(dkgt).State = System.Data.Entity.EntityState.Deleted;
+                    db.SaveChanges();
+                }
+                catch
+                {
+                    MessageBox.Show("Xóa đăng kí gói tập thất bại");
+                    return 0;
+                }
+                
             }
                 
         }
@@ -357,8 +374,17 @@ namespace QLPhongGym.DAL
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                db.Entry(dkgt).State = System.Data.Entity.EntityState.Modified;
-                return db.SaveChanges();
+                try
+                {
+                    db.Entry(dkgt).State = System.Data.Entity.EntityState.Modified;
+                    return db.SaveChanges();
+                }
+                catch
+                {
+                    MessageBox.Show("Cật nhật đăng kí gói tập thất bại");
+                    return 0;
+                }
+                
             }
                
         }

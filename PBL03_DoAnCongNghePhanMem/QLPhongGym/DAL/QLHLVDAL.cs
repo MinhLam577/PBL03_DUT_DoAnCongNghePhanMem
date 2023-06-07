@@ -100,22 +100,30 @@ namespace QLPhongGym.DAL
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
-
-                var them = new HLV
+                try
                 {
-                    Name = a.Name,
-                    DateBorn = a.DateBorn,
-                    Sex = a.Sex,
-                    Gmail = a.Gmail,
-                    Address = a.Address,
-                    Sdt = a.Sdt,
-                    CCCD = a.CCCD,
-                    BangCap = a.BangCap,
-                    Image = a.Image
-                };
-                // Thêm đối tượng HLV mới vào bảng Users
-                db.Users.Add(them);
-                db.SaveChanges();
+                    var them = new HLV
+                    {
+                        Name = a.Name,
+                        DateBorn = a.DateBorn,
+                        Sex = a.Sex,
+                        Gmail = a.Gmail,
+                        Address = a.Address,
+                        Sdt = a.Sdt,
+                        CCCD = a.CCCD,
+                        BangCap = a.BangCap,
+                        Image = a.Image
+                    };
+                    // Thêm đối tượng HLV mới vào bảng Users
+                    db.Users.Add(them);
+                    db.SaveChanges();
+                }
+                catch
+                {
+                    MessageBox.Show("Thêm huấn luyện viên thất bại");
+                    return false;
+                }
+                
                 return true;
 
             }
@@ -124,9 +132,18 @@ namespace QLPhongGym.DAL
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                User s = db.Users.Find(idHLV);
-                db.Users.Remove(s);
-                db.SaveChanges();
+                try
+                {
+                    User s = db.Users.Find(idHLV);
+                    db.Users.Remove(s);
+                    db.SaveChanges();
+                }
+                catch
+                {
+                    MessageBox.Show("Xóa huấn luyện viên thất bại");
+                    return false;
+                }
+                
                 return true;
             }
 
@@ -140,23 +157,30 @@ namespace QLPhongGym.DAL
                 var coarches = db.Users.OfType<HLV>();
                 // tìm huyến luyện viên chỉnh bằng use method 
                 // tìm huyến luyện viên cần chỉnh bằng sử dụng SingleorDefalut();
-                var coarch = coarches.SingleOrDefault(c => c.IDUsers == a.IDUsers);
-                if (coarch != null)
+                try
                 {
-                    coarch.IDUsers = a.IDUsers;
-                    coarch.Name = a.Name;
-                    coarch.DateBorn = a.DateBorn;
-                    coarch.Sex = a.Sex;
-                    coarch.CCCD = a.CCCD;
-                    coarch.Gmail = a.Gmail;
-                    coarch.Sdt = a.Sdt;
-                    coarch.Address = a.Address;
-                    coarch.BangCap = a.BangCap;
-                    coarch.Image = a.Image;
+                    var coarch = coarches.SingleOrDefault(c => c.IDUsers == a.IDUsers);
+                    if (coarch != null)
+                    {
+                        coarch.IDUsers = a.IDUsers;
+                        coarch.Name = a.Name;
+                        coarch.DateBorn = a.DateBorn;
+                        coarch.Sex = a.Sex;
+                        coarch.CCCD = a.CCCD;
+                        coarch.Gmail = a.Gmail;
+                        coarch.Sdt = a.Sdt;
+                        coarch.Address = a.Address;
+                        coarch.BangCap = a.BangCap;
+                        coarch.Image = a.Image;
 
+                    }
+                    db.SaveChanges();
                 }
-                db.SaveChanges();
-
+                catch
+                {
+                    MessageBox.Show("Cật nhật huấn luyện viên thất bại");
+                    return false;
+                }
                 return true;
 
             }
