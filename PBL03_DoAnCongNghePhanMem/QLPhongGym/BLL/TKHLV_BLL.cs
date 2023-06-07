@@ -66,5 +66,9 @@ namespace QLPhongGym.BLL
         {
             return TKHLV_DAL.Instance.FitlerTaiKhoanBy(require, IDHLV);
         }
+        public List<string> FindListTKHLVByIDHLV(int IDHLV)
+        {
+            return TKHLV_DAL.Instance.FindListTKHLVByIDHLV(IDHLV);
+        }
     }
 }

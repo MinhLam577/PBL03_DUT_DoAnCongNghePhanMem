@@ -257,8 +257,6 @@ namespace QLPhongGym.GUI
                                  pn_tkadmin.PointToClient(Cursor.Position)))
                     pn_tkadmin.Hide();
             }
-                
-                
             base.WndProc(ref m);
         }
 

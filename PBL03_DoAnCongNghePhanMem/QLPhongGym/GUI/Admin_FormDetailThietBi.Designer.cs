@@ -252,8 +252,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(903, 440);
+            this.ControlBox = false;
             this.Controls.Add(this.btn_Huy);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.txt_SL);
@@ -274,7 +276,8 @@
             this.Controls.Add(this.btn_Sua);
             this.Controls.Add(this.Btn_Change);
             this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(921, 487);
+            this.MinimumSize = new System.Drawing.Size(921, 487);
             this.Name = "Admin_FormDetailThietBi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin_FormDetailThietBi";

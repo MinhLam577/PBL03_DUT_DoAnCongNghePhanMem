@@ -10,7 +10,7 @@ namespace QLPhongGym.DAL
 {
     class GoiTapDAL
     {
-        QLPhongGymDB db = new QLPhongGymDB();
+        
         private static GoiTapDAL instance;
         public static GoiTapDAL Instance
         {
@@ -24,57 +24,75 @@ namespace QLPhongGym.DAL
         }
         public List<GoiTap> GetAllGT()
         {
-            List<GoiTap> list = new List<GoiTap>();
-            var item = db.GoiTaps.Select(s => new
+            using(QLPhongGymDB db = new QLPhongGymDB())
             {
-                s.IDGT,
-                s.NameGT,
-                s.Price,
-                s.ThoiHanTapTheoThang
-            }).ToList();
-            foreach (var i in item)
-            {
-                list.Add(new GoiTap { IDGT = i.IDGT, NameGT = i.NameGT, Price = i.Price, ThoiHanTapTheoThang = i.ThoiHanTapTheoThang });
+                List<GoiTap> list = new List<GoiTap>();
+                var item = db.GoiTaps.Select(s => new
+                {
+                    s.IDGT,
+                    s.NameGT,
+                    s.Price,
+                    s.ThoiHanTapTheoThang
+                }).ToList();
+                foreach (var i in item)
+                {
+                    list.Add(new GoiTap { IDGT = i.IDGT, NameGT = i.NameGT, Price = i.Price, ThoiHanTapTheoThang = i.ThoiHanTapTheoThang });
+                }
+                return list;
             }
-            return list;
+            
         }
         public GoiTap GetGTByName(string name)
         {
-            return db.GoiTaps.SingleOrDefault(s => s.NameGT.Equals(name));
+            using (QLPhongGymDB db = new QLPhongGymDB())
+                return db.GoiTaps.SingleOrDefault(s => s.NameGT.Equals(name));
         }
         public GoiTap GetGTByID(int ID)
         {
-            return db.GoiTaps.Where(s => s.IDGT == ID).FirstOrDefault();
+            using (QLPhongGymDB db = new QLPhongGymDB())
+                return db.GoiTaps.Where(s => s.IDGT == ID).FirstOrDefault();
         }
         public int AddGT(GoiTap GT)
         {
-            db.GoiTaps.Add(GT);
-            return db.SaveChanges();
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                db.GoiTaps.Add(GT);
+                return db.SaveChanges();
+            }
+                
         }
         public void DeleteGT(GoiTap GT)
         {
-            db.GoiTaps.Remove(GT);
-            db.SaveChanges();
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                db.Entry(GT).State = System.Data.Entity.EntityState.Deleted;
+                db.SaveChanges();
+            }
+                
         }
         public void UpdateGT(GoiTap GT)
         {
-            var s = db.GoiTaps.FirstOrDefault(p => p.IDGT == GT.IDGT);
-            if (s != null)
+            using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                try
+                var s = db.GoiTaps.FirstOrDefault(p => p.IDGT == GT.IDGT);
+                if (s != null)
                 {
-                    s.IDGT = GT.IDGT;
-                    s.NameGT = GT.NameGT;
-                    s.ThoiHanTapTheoThang = GT.ThoiHanTapTheoThang;
-                    s.Price = GT.Price;
-                    db.SaveChanges();
-                }
-                catch (Exception e)
-                {
-                    MessageBox.Show("Lỗi" + e.Message);
-                    throw;
+                    try
+                    {
+                        s.IDGT = GT.IDGT;
+                        s.NameGT = GT.NameGT;
+                        s.ThoiHanTapTheoThang = GT.ThoiHanTapTheoThang;
+                        s.Price = GT.Price;
+                        db.SaveChanges();
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("Lỗi" + e.Message);
+                        throw;
+                    }
                 }
             }
+                
         }
         public DataTable TaoBang()
         {

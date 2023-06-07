@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace QLPhongGym.GUI
 {
@@ -20,7 +21,6 @@ namespace QLPhongGym.GUI
         {
             InitializeComponent();
         }        
-        /*static string ImageLink = Application.StartupPath + @"\Resources\Admin.png";*/
         private void CapNhatListHLV()
         {
             dataGridView1.DataSource = QLHLVBLL.getInstance.CapNhatListHLV();
@@ -36,6 +36,24 @@ namespace QLPhongGym.GUI
                 try
                 {
                     int idHLV = Convert.ToInt32(dataGridView1.SelectedCells[0].OwningRow.Cells[1].Value.ToString().Trim());
+                    var t = TKHLV_BLL.Instance.FindListTKHLVByIDHLV(idHLV);
+
+                    //Xóa tài khoản hlv
+                    if (TKHLV_BLL.Instance.FindListTKHLVByIDHLV(idHLV) != null)
+                        foreach (string TenTK in TKHLV_BLL.Instance.FindListTKHLVByIDHLV(idHLV))
+                            TKBLL.Instance.DeleteTK(TKBLL.Instance.GetTKByTenTK(TenTK));
+
+                    //Xóa lịch làm việc hlv
+                    if (DangKiLichLamViecBAL.getInStance.GetListLichLamViecByIDHLV(idHLV) != null)
+                        foreach (LichLamViecTrongTuan llv in DangKiLichLamViecBAL.getInStance.GetListLichLamViecByIDHLV(idHLV))
+                            DangKiLichLamViecBAL.getInStance.DeleteLichLamViec(llv);
+
+                    //Xóa lịch thuê hlv
+                    if (LichThueBLL.Instance.GetLichThueByIDHLV(idHLV) != null)
+                        foreach (LichThueHLV lt in LichThueBLL.Instance.GetLichThueByIDHLV(idHLV))
+                            LichThueBLL.Instance.DeleteLichThue(lt.IDLT);
+                    
+                    //Xóa huấn luyện viên
                     if (QLHLVBLL.getInstance.Delete(idHLV) == true)
                     {
                         MessageBox.Show("Xóa Thành Công");
@@ -46,7 +64,6 @@ namespace QLPhongGym.GUI
                 {
                     MessageBox.Show(ex.Message, "Xóa huấn luyện viên thất bại");
                 }
-                
             }
         }
         private void Edit(object hlv)
@@ -159,11 +176,6 @@ namespace QLPhongGym.GUI
         private void Admin_FormDanhSachHLV_Load_1(object sender, EventArgs e)
         {
             CapNhatListHLV();
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void dataGridView1_DataSourceChanged(object sender, EventArgs e)

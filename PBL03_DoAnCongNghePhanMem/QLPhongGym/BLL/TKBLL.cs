@@ -68,6 +68,5 @@ namespace QLPhongGym.BLL
         {
             return TKDAL.Instance.GetTKByTenTK(TenTK);
         }
-
     }
 }

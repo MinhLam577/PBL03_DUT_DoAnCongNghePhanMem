@@ -120,15 +120,5 @@ namespace QLPhongGym.GUI
                     if (p.YValues[0] == 0)
                         p.IsValueShownAsLabel = false;
         }
-
-        private void chart_soluongdkgt_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chart_nhucaudkgt_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

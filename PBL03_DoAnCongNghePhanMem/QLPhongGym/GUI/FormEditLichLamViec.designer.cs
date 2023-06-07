@@ -191,7 +191,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.CA);
+            this.MaximumSize = new System.Drawing.Size(818, 497);
+            this.MinimumSize = new System.Drawing.Size(818, 497);
             this.Name = "FormEditLichLamViec";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEditLichLamViec";
             this.Load += new System.EventHandler(this.FormEditLichLamViec_Load);
             this.ResumeLayout(false);

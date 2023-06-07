@@ -929,15 +929,5 @@ namespace QLPhongGym.GUI
         {
             btntru(label7.Text, "Ca 4");
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbTuanLam_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }       

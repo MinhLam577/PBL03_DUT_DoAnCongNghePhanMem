@@ -14,7 +14,7 @@ namespace QLPhongGym.DAL
 {
     public class UsersDAL
     {
-        QLPhongGymDB db = new QLPhongGymDB();
+        
         private static UsersDAL instance;
         public static UsersDAL Instance
         {
@@ -28,79 +28,109 @@ namespace QLPhongGym.DAL
         }
         public int AddUsers(User user)
         {
-            try
+            using(QLPhongGymDB db = new QLPhongGymDB())
             {
-                db.Users.Add(user);
-                return db.SaveChanges();
+                try
+                {
+                    db.Users.Add(user);
+                    return db.SaveChanges();
+                }
+                catch
+                {
+                    MessageBox.Show("Thêm user thất bại");
+                    return 0;
+                }
             }
-            catch
-            {
-                return 0;
-            }
+            
         }
         public int UpdateUsers(User user)
         {
-            try
+            using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                db.Entry(user).State = System.Data.Entity.EntityState.Modified;
-                return db.SaveChanges();
+                try
+                {
+                    db.Entry(user).State = System.Data.Entity.EntityState.Modified;
+                    return db.SaveChanges();
+                }
+                catch
+                { MessageBox.Show("Cật nhật user thất bại"); return 0; }
             }
-            catch
-            { return 0; }
         }
         public void DeleteUsers(User user)
         {
-            try
+            using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                db.Users.Remove(user);
-                db.SaveChanges();
+                try
+                {
+                    db.Entry(user).State = System.Data.Entity.EntityState.Deleted;
+                    db.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Xóa user thất bại, lỗi: " + ex.Message);
+                }
             }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+                
             
         }
         public int GetUsersIDByCCCD(string CCCD)
         {
-            try
+            using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                int UserID = db.Users.Where(s => s.CCCD.Equals(CCCD)).FirstOrDefault().IDUsers;
-                return UserID;
+                try
+                {
+                    int UserID = db.Users.Where(s => s.CCCD.Equals(CCCD)).FirstOrDefault().IDUsers;
+                    return UserID;
+                }
+                catch
+                {
+                    return 0;
+                }
             }
-            catch
-            {
-                return 0;
-            }
+                
             
         }
         public User GetUserByID(int IDUsers)
         {
-            try
+            using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                return db.Users.Where(s => s.IDUsers.Equals(IDUsers)).FirstOrDefault();
+                try
+                {
+                    return db.Users.Where(s => s.IDUsers.Equals(IDUsers)).FirstOrDefault();
+                }
+                catch
+                {
+                    return null;
+                }
             }
-            catch
-            {
-                return null;
-            }
-            
         }
         public User GetUserByName(string Name)
         {
-            try
+            using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                return db.Users.FirstOrDefault(s => s.Name == Name);
+                try
+                {
+                    return db.Users.FirstOrDefault(s => s.Name == Name);
+                }
+                catch { return null; }
             }
-            catch { return null; }
+               
         }
         public User GetUserByGmail(string gmail)
         {
-            return db.Users.FirstOrDefault(u => u.Gmail == gmail);
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                return db.Users.FirstOrDefault(u => u.Gmail == gmail);
+            }
+               
         }
         public bool CheckUserExist(string CCCD, string Name)
         {
-            return db.Users.Any(s => s.CCCD.Equals(CCCD) && s.Name.Equals(Name));
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                return db.Users.Any(s => s.CCCD.Equals(CCCD) && s.Name.Equals(Name));
+            }
+                
         }
         public bool checkEmail(string email)
         {
@@ -118,7 +148,11 @@ namespace QLPhongGym.DAL
         }
         public List<User> GetAllUser()
         {
-            return db.Users.ToList();
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                return db.Users.ToList();
+            }
+                
         }
         public bool CheckEmailExist(string gmail)
         {
@@ -147,14 +181,18 @@ namespace QLPhongGym.DAL
         }
         public bool checkCCCDexist(string cmnd)
         {
-            try
+            using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                return db.Users.Any(s => !string.IsNullOrEmpty(s.CCCD) && s.CCCD.Equals(cmnd));
+                try
+                {
+                    return db.Users.Any(s => !string.IsNullOrEmpty(s.CCCD) && s.CCCD.Equals(cmnd));
+                }
+                catch
+                {
+                    return false;
+                }
             }
-            catch
-            {
-                return false;
-            }
+                
             
         }
         public bool checkHoten(string hoten)
@@ -193,16 +231,20 @@ namespace QLPhongGym.DAL
         }
         public string GetPassword(string Gmail)
         {
-            try
+            using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                int IDUsers = GetAllUser().Where(p => p.Gmail.Equals(Gmail)).FirstOrDefault().IDUsers;
-                string mk = db.TKs.Where(a => (int)a.IDUser == IDUsers).FirstOrDefault().MatkhauTK;
-                return Eramake.eCryptography.Decrypt(mk);
+                try
+                {
+                    int IDUsers = GetAllUser().Where(p => p.Gmail.Equals(Gmail)).FirstOrDefault().IDUsers;
+                    string mk = db.TKs.Where(a => (int)a.IDUser == IDUsers).FirstOrDefault().MatkhauTK;
+                    return Eramake.eCryptography.Decrypt(mk);
+                }
+                catch
+                {
+                    return null;
+                }
             }
-            catch
-            {
-                return null;
-            }
+                
         }
          
     }

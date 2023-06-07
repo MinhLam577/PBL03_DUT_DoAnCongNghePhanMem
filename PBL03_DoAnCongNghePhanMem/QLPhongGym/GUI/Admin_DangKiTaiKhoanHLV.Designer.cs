@@ -103,11 +103,11 @@
             this.button_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button_add.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_add.Font = new System.Drawing.Font("Verdana", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_add.ForeColor = System.Drawing.Color.Aqua;
-            this.button_add.Location = new System.Drawing.Point(498, 276);
+            this.button_add.Location = new System.Drawing.Point(487, 181);
             this.button_add.Name = "button_add";
-            this.button_add.Size = new System.Drawing.Size(138, 49);
+            this.button_add.Size = new System.Drawing.Size(156, 76);
             this.button_add.TabIndex = 2;
             this.button_add.Text = "Thêm tài khoản";
             this.button_add.UseVisualStyleBackColor = false;
@@ -118,11 +118,11 @@
             this.button_edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button_edit.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_edit.Font = new System.Drawing.Font("Verdana", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_edit.ForeColor = System.Drawing.Color.Aqua;
-            this.button_edit.Location = new System.Drawing.Point(498, 370);
+            this.button_edit.Location = new System.Drawing.Point(487, 287);
             this.button_edit.Name = "button_edit";
-            this.button_edit.Size = new System.Drawing.Size(138, 44);
+            this.button_edit.Size = new System.Drawing.Size(156, 70);
             this.button_edit.TabIndex = 3;
             this.button_edit.Text = "Quên mật khẩu";
             this.button_edit.UseVisualStyleBackColor = false;
@@ -133,11 +133,11 @@
             this.button_xoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button_xoa.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button_xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_xoa.Font = new System.Drawing.Font("Verdana", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_xoa.ForeColor = System.Drawing.Color.Aqua;
-            this.button_xoa.Location = new System.Drawing.Point(498, 459);
+            this.button_xoa.Location = new System.Drawing.Point(487, 382);
             this.button_xoa.Name = "button_xoa";
-            this.button_xoa.Size = new System.Drawing.Size(138, 47);
+            this.button_xoa.Size = new System.Drawing.Size(156, 73);
             this.button_xoa.TabIndex = 4;
             this.button_xoa.Text = "Xóa tài khoản";
             this.button_xoa.UseVisualStyleBackColor = false;
@@ -149,7 +149,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(663, 112);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(227, 29);
+            this.label5.Size = new System.Drawing.Size(210, 26);
             this.label5.TabIndex = 11;
             this.label5.Text = "Danh sách tài khoản";
             // 
@@ -159,7 +159,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 112);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(296, 29);
+            this.label2.Size = new System.Drawing.Size(274, 26);
             this.label2.TabIndex = 13;
             this.label2.Text = "Danh sách huấn luyện viên";
             // 
@@ -206,19 +206,19 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1137, 66);
+            this.label3.Location = new System.Drawing.Point(1136, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 25);
+            this.label3.Size = new System.Drawing.Size(261, 50);
             this.label3.TabIndex = 14;
-            this.label3.Text = "Search";
+            this.label3.Text = "Search(Tên tài khoản,\r\n             Tên huấn luyện viên)";
             // 
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(1218, 64);
+            this.textBox1.Location = new System.Drawing.Point(1141, 76);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(156, 27);
+            this.textBox1.Size = new System.Drawing.Size(256, 27);
             this.textBox1.TabIndex = 15;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -227,11 +227,11 @@
             this.btn_bantk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_bantk.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_bantk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_bantk.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_bantk.Font = new System.Drawing.Font("Verdana", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_bantk.ForeColor = System.Drawing.Color.Aqua;
-            this.btn_bantk.Location = new System.Drawing.Point(498, 550);
+            this.btn_bantk.Location = new System.Drawing.Point(487, 479);
             this.btn_bantk.Name = "btn_bantk";
-            this.btn_bantk.Size = new System.Drawing.Size(138, 47);
+            this.btn_bantk.Size = new System.Drawing.Size(156, 73);
             this.btn_bantk.TabIndex = 16;
             this.btn_bantk.Text = "Ban tài khoản";
             this.btn_bantk.UseVisualStyleBackColor = false;
@@ -242,11 +242,11 @@
             this.btn_moban.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btn_moban.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_moban.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_moban.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_moban.Font = new System.Drawing.Font("Verdana", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_moban.ForeColor = System.Drawing.Color.Aqua;
-            this.btn_moban.Location = new System.Drawing.Point(498, 629);
+            this.btn_moban.Location = new System.Drawing.Point(487, 583);
             this.btn_moban.Name = "btn_moban";
-            this.btn_moban.Size = new System.Drawing.Size(138, 72);
+            this.btn_moban.Size = new System.Drawing.Size(156, 98);
             this.btn_moban.TabIndex = 17;
             this.btn_moban.Text = "Mở ban tài khoản";
             this.btn_moban.UseVisualStyleBackColor = false;
@@ -256,9 +256,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(663, 62);
+            this.label4.Location = new System.Drawing.Point(663, 74);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 29);
+            this.label4.Size = new System.Drawing.Size(47, 26);
             this.label4.TabIndex = 18;
             this.label4.Text = "Lọc";
             // 
@@ -272,7 +272,7 @@
             "Tài khoản cá nhân",
             "Tài khoản đang hoạt động",
             "Tài khoản bị ban"});
-            this.cb_tk.Location = new System.Drawing.Point(724, 64);
+            this.cb_tk.Location = new System.Drawing.Point(724, 76);
             this.cb_tk.Name = "cb_tk";
             this.cb_tk.Size = new System.Drawing.Size(333, 28);
             this.cb_tk.TabIndex = 62;

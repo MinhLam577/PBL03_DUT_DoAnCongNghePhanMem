@@ -171,6 +171,8 @@
             this.Controls.Add(this.Txt_NhapLai);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.MaximumSize = new System.Drawing.Size(549, 397);
+            this.MinimumSize = new System.Drawing.Size(549, 397);
             this.Name = "Admin_FormThemTKHLV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin_FormThemTKHLV";

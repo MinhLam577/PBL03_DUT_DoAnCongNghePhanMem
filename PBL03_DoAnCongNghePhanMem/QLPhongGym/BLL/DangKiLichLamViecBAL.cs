@@ -64,6 +64,11 @@ namespace QLPhongGym.BLL
         {
             return DangKiLichLamViecDAL.getInStance.Xoa(a);
         }
+
+        public void DeleteLichLamViec(LichLamViecTrongTuan lichlamviec)
+        {
+            DangKiLichLamViecDAL.getInStance.DeleteLichLamViec(lichlamviec);
+        }
         public bool UpdateOrder(int IDHLV, int IDCa, DateTime ngaybatdau, DateTime ngayketthuc, DateTime NgayLam)
         {
             return DangKiLichLamViecDAL.getInStance.UpdateOrder(IDHLV, IDCa, ngaybatdau, ngayketthuc, NgayLam);
@@ -139,6 +144,10 @@ namespace QLPhongGym.BLL
         public List<int> GetListCaLamViecByNgayLam_IDHLV_IDKH(int IDHLV, DateTime NgayLam, int IDKH)
         {
             return DangKiLichLamViecDAL.getInStance.GetListCaLamViecByNgayLam_IDHLV_IDKH(IDHLV, NgayLam, IDKH); 
+        }
+        public List<LichLamViecTrongTuan> GetListLichLamViecByIDHLV(int IDHLV)
+        {
+            return DangKiLichLamViecDAL.getInStance.GetListLichLamViecByIDHLV(IDHLV);
         }
     }
 }
