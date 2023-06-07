@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Runtime.Remoting.Contexts;
@@ -138,7 +139,16 @@ namespace QLPhongGym.DAL
                 db.LichThueHLVs.Remove(a);
                 return db.SaveChanges() > 0;
             }
-                
+        }
+
+        public void DeleteLichThue(int IDLT)
+        {
+            using(QLPhongGymDB db = new QLPhongGymDB())
+            {
+                LichThueHLV lt = db.LichThueHLVs.FirstOrDefault(x => x.IDLT == IDLT);
+                db.LichThueHLVs.Remove(lt);
+                db.SaveChanges();
+            }
         }
         public bool Capnhat1(int idca, int idhlv,DateTime ngaylam, int IDCA, int IDHLV,DateTime NGAYLAM)
         {
@@ -170,10 +180,20 @@ namespace QLPhongGym.DAL
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                var data = db.LichThueHLVs.Where(l => l.IDHLV == IDHLV).ToList();
-                return data;
+                return db.LichThueHLVs.Where(l => l.IDHLV == IDHLV).ToList();
             }
                 
+        }
+        public List<LichThueHLV> GetLichThueByIDKH(int IDKH)
+        {
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                return (from kh in db.Users.OfType<KH>()
+                        join lt in db.LichThueHLVs
+                        on kh.IDUsers equals lt.IDKH
+                        where kh.IDUsers == IDKH
+                        select lt).ToList();
+            }
         }
     }
 }
