@@ -15,20 +15,26 @@ namespace QLPhongGym.GUI
 {
     public partial class Admin_ThongKeForm : Form
     {
+        static int Nam = 2023;
         public Admin_ThongKeForm()
         {
             InitializeComponent();
-            LoadDuLieuForm();
+            LoadDuLieuLabel();
             LoadDuLieuBieuDo();
             LoadDuLieuBieuDoSoLuongDangKiGoi();
             LoadDuLieuBieuDoNhuCauDangKiGoi();
         }
-        public void LoadDuLieuForm()
+        public void LoadDuLieuLabel()
         {
             int tongkhachhang = 0, tonghlv = 0, tonggt = 0;
-            foreach (var i in KHBLL.Instance.GetAllKHID())
+            List<string> list_kh = new List<string>(), list_hlv = new List<string>();
+            foreach (var i in DangKiGoiTapBLL.Instance.GetListDKGTByYear(Nam))
+                list_kh.Add(UsersBLL.Instance.GetUserByID(i.IDKH.Value).Name);
+            foreach (var i in list_kh.Distinct())
                 tongkhachhang++;
-            foreach (var i in QLHLVBLL.getInstance.GetAllHLVID())
+            foreach (var i in DangKiLichLamViecBAL.getInStance.GetListLLVByYear(Nam))
+                list_hlv.Add(UsersBLL.Instance.GetUserByID(i.IDHLV.Value).Name);
+            foreach (var i in list_hlv.Distinct())
                 tonghlv++;
             foreach (var i in GoiTapBLL.Instance.GetAllGT())
                 tonggt++;
@@ -39,9 +45,8 @@ namespace QLPhongGym.GUI
         }
         public void LoadDuLieuBieuDo()
         {
-            int x = DateTime.Now.Year;
             chart_doanhthu.Titles.Add(new System.Windows.Forms.DataVisualization.Charting.Title(
-                "Doanh thu trong năm " + x, System.Windows.Forms.DataVisualization.Charting.Docking.Top,
+                "Doanh thu trong năm " + Nam, System.Windows.Forms.DataVisualization.Charting.Docking.Top,
                 new Font("Arial", 20, FontStyle.Bold), Color.White));
             chart_doanhthu.Series["Doanh thu"].Color = Color.Red;
             double tongdoanhthu = 0;
@@ -49,9 +54,9 @@ namespace QLPhongGym.GUI
             for (int i = 1, j = 0; i <= 12; i++, j++)
             {
 
-                chart_doanhthu.Series["Doanh thu"].Points.AddXY(i, HoaDonBLL.Instance.GetTongDoanhThuTheoNamVaThang(x, i));
-                tongdoanhthu += HoaDonBLL.Instance.GetTongDoanhThuTheoNamVaThang(x, i);
-                chart_doanhthu.Series["Doanh thu"].Points[j].Label = HoaDonBLL.Instance.GetTongDoanhThuTheoNamVaThang(x, i).ToString();
+                chart_doanhthu.Series["Doanh thu"].Points.AddXY(i, HoaDonBLL.Instance.GetTongDoanhThuTheoNamVaThang(Nam, i));
+                tongdoanhthu += HoaDonBLL.Instance.GetTongDoanhThuTheoNamVaThang(Nam, i);
+                chart_doanhthu.Series["Doanh thu"].Points[j].Label = HoaDonBLL.Instance.GetTongDoanhThuTheoNamVaThang(Nam, i).ToString();
             }
             chart_doanhthu.ChartAreas[0].AxisX.Title = "Tháng";
             chart_doanhthu.ChartAreas[0].AxisX.TitleFont = new Font("Times new roman", 14, FontStyle.Bold);
@@ -65,15 +70,14 @@ namespace QLPhongGym.GUI
         }
         public void LoadDuLieuBieuDoSoLuongDangKiGoi()
         {
-            int x = DateTime.Now.Year;
             chart_soluongdkgt.Titles.Add(new System.Windows.Forms.DataVisualization.Charting.Title(
-                "số lượng đăng kí gói tập trong năm " + x, System.Windows.Forms.DataVisualization.Charting.Docking.Top,
+                "số lượng đăng kí gói tập trong năm " + Nam, System.Windows.Forms.DataVisualization.Charting.Docking.Top,
                 new Font("Arial", 20, FontStyle.Bold), Color.White));
             chart_soluongdkgt.Series["Số lượng đăng kí gói"].Color = Color.FromArgb(34, 139, 34);
             for (int i = 1, j = 0; i <= 12; i++, j++)
             {
-                chart_soluongdkgt.Series["Số lượng đăng kí gói"].Points.AddXY(i, DangKiGoiTapBLL.Instance.GetSoLuongDKGTTheoNamVaThang(x, i));
-                chart_soluongdkgt.Series["Số lượng đăng kí gói"].Points[j].Label = DangKiGoiTapBLL.Instance.GetSoLuongDKGTTheoNamVaThang(x, i).ToString();
+                chart_soluongdkgt.Series["Số lượng đăng kí gói"].Points.AddXY(i, DangKiGoiTapBLL.Instance.GetSoLuongDKGTTheoNamVaThang(Nam, i));
+                chart_soluongdkgt.Series["Số lượng đăng kí gói"].Points[j].Label = DangKiGoiTapBLL.Instance.GetSoLuongDKGTTheoNamVaThang(Nam, i).ToString();
                 chart_soluongdkgt.Series["Số lượng đăng kí gói"].Points[j].Font = new Font("Times new roman", 15, FontStyle.Bold);
             }
             chart_soluongdkgt.ChartAreas[0].AxisX.Title = "Tháng";
@@ -87,9 +91,8 @@ namespace QLPhongGym.GUI
         }
         public void LoadDuLieuBieuDoNhuCauDangKiGoi()
         {
-            int x = DateTime.Now.Year;
             chart_nhucaudkgt.Titles.Add(new System.Windows.Forms.DataVisualization.Charting.Title(
-                "Nhu cầu đăng kí gói tập trong năm " + x, System.Windows.Forms.DataVisualization.Charting.Docking.Top,
+                "Nhu cầu đăng kí gói tập trong năm " + Nam, System.Windows.Forms.DataVisualization.Charting.Docking.Top,
                 new Font("Arial", 20, FontStyle.Bold), Color.White));
             List<GoiTap> list_gt = GoiTapBLL.Instance.GetAllGT();
             int cnt_gt = list_gt.Count;
@@ -110,25 +113,105 @@ namespace QLPhongGym.GUI
             {
                 foreach (var k in list_gt)
                 {
-                    chart_nhucaudkgt.Series[k.NameGT].Points.AddXY(i, DangKiGoiTapBLL.Instance.GetSoLuongNhuCauDKGTTheoNam_Thang_IDGT(x, i, k.IDGT));
+                    chart_nhucaudkgt.Series[k.NameGT].Points.AddXY(i, DangKiGoiTapBLL.Instance.GetSoLuongNhuCauDKGTTheoNam_Thang_IDGT(Nam, i, k.IDGT));
                     chart_nhucaudkgt.Series[k.NameGT].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar;
                     chart_nhucaudkgt.Series[k.NameGT].IsValueShownAsLabel = true;
                 }
             }
-            foreach(Series sr in chart_nhucaudkgt.Series)
-                foreach(DataPoint p in sr.Points)
+            foreach (Series sr in chart_nhucaudkgt.Series)
+                foreach (DataPoint p in sr.Points)
                     if (p.YValues[0] == 0)
                         p.IsValueShownAsLabel = false;
         }
-
-        private void chart_soluongdkgt_Click(object sender, EventArgs e)
+        public void ReloadBieuDoDoanhThu()
         {
+            chart_doanhthu.Titles.Clear();
+            chart_doanhthu.Titles.Add(new System.Windows.Forms.DataVisualization.Charting.Title(
+                "Doanh thu trong năm " + Nam, System.Windows.Forms.DataVisualization.Charting.Docking.Top,
+                new Font("Arial", 20, FontStyle.Bold), Color.White));
+            double tongdoanhthu = 0;
+            foreach (var series in chart_doanhthu.Series)
+            {
+                series.Points.Clear();
+            }
+            for (int i = 1, j = 0; i <= 12; i++, j++)
+            {
+                chart_doanhthu.Series["Doanh thu"].Points.AddXY(i, HoaDonBLL.Instance.GetTongDoanhThuTheoNamVaThang(Nam, i));
+                tongdoanhthu += HoaDonBLL.Instance.GetTongDoanhThuTheoNamVaThang(Nam, i);
+                chart_doanhthu.Series["Doanh thu"].Points[j].Label = HoaDonBLL.Instance.GetTongDoanhThuTheoNamVaThang(Nam, i).ToString();
+            }
+            lb_tongthunhap.Text = tongdoanhthu.ToString();
+
+        }
+        public void ReloadBieuDoSoLuongDangKi()
+        {
+            chart_soluongdkgt.Titles.Clear();
+            chart_soluongdkgt.Titles.Add(new System.Windows.Forms.DataVisualization.Charting.Title(
+                "số lượng đăng kí gói tập trong năm " + Nam, System.Windows.Forms.DataVisualization.Charting.Docking.Top,
+                new Font("Arial", 20, FontStyle.Bold), Color.White));
+            foreach (var series in chart_soluongdkgt.Series)
+            {
+                series.Points.Clear();
+            }
+            for (int i = 1, j = 0; i <= 12; i++, j++)
+            {
+                chart_soluongdkgt.Series["Số lượng đăng kí gói"].Points.AddXY(i, DangKiGoiTapBLL.Instance.GetSoLuongDKGTTheoNamVaThang(Nam, i));
+                chart_soluongdkgt.Series["Số lượng đăng kí gói"].Points[j].Label = DangKiGoiTapBLL.Instance.GetSoLuongDKGTTheoNamVaThang(Nam, i).ToString();
+                chart_soluongdkgt.Series["Số lượng đăng kí gói"].Points[j].Font = new Font("Times new roman", 15, FontStyle.Bold);
+            }
+        }
+
+        public void ReloadBieuDoNhuCauDangKi()
+        {
+            chart_nhucaudkgt.Titles.Clear();
+            chart_nhucaudkgt.Titles.Add(new System.Windows.Forms.DataVisualization.Charting.Title(
+                "Nhu cầu đăng kí gói tập trong năm " + Nam, System.Windows.Forms.DataVisualization.Charting.Docking.Top,
+                new Font("Arial", 20, FontStyle.Bold), Color.White));
+            List<GoiTap> list_gt = GoiTapBLL.Instance.GetAllGT();
+            foreach (var series in chart_nhucaudkgt.Series)
+            {
+                series.Points.Clear();
+            }
+            for (int i = 1, j = 0; i <= 12; i++, j++)
+            {
+                foreach (var k in list_gt)
+                {
+                    chart_nhucaudkgt.Series[k.NameGT].Points.AddXY(i, DangKiGoiTapBLL.Instance.GetSoLuongNhuCauDKGTTheoNam_Thang_IDGT(Nam, i, k.IDGT));
+                    chart_nhucaudkgt.Series[k.NameGT].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar;
+                    chart_nhucaudkgt.Series[k.NameGT].IsValueShownAsLabel = true;
+                }
+            }
+            foreach (Series sr in chart_nhucaudkgt.Series)
+                foreach (DataPoint p in sr.Points)
+                    if (p.YValues[0] == 0)
+                        p.IsValueShownAsLabel = false;
 
         }
 
-        private void chart_nhucaudkgt_Click(object sender, EventArgs e)
+        private void lb_tru_Click(object sender, EventArgs e)
         {
+            if (Nam >= 1976)
+            {
+                Nam--;
+                ReloadBieuDoDoanhThu();
+                ReloadBieuDoSoLuongDangKi();
+                ReloadBieuDoNhuCauDangKi();
+                LoadDuLieuLabel();
+                lb_nam.Text = "Năm: " + Nam.ToString();
+            }
+        }
 
+        private void lb_cong_Click(object sender, EventArgs e)
+        {
+            if (Nam <= 9999)
+            {
+                Nam++;
+                ReloadBieuDoDoanhThu();
+                ReloadBieuDoSoLuongDangKi();
+                ReloadBieuDoNhuCauDangKi();
+                LoadDuLieuLabel();
+                lb_nam.Text = "Năm: " + Nam.ToString();
+            }
         }
     }
 }
