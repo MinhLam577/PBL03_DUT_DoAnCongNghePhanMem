@@ -63,6 +63,9 @@
             this.chart_doanhthu = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart_soluongdkgt = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart_nhucaudkgt = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.lb_nam = new System.Windows.Forms.Label();
+            this.pn_nam = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -79,12 +82,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart_doanhthu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart_soluongdkgt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart_nhucaudkgt)).BeginInit();
+            this.pn_nam.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(121)))), ((int)(((byte)(181)))));
+            this.flowLayoutPanel1.Controls.Add(this.pn_nam);
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel3);
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel2);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -95,21 +100,20 @@
             // 
             // flowLayoutPanel3
             // 
-            this.flowLayoutPanel3.AutoSize = true;
             this.flowLayoutPanel3.Controls.Add(this.panel2);
             this.flowLayoutPanel3.Controls.Add(this.panel3);
             this.flowLayoutPanel3.Controls.Add(this.panel4);
             this.flowLayoutPanel3.Controls.Add(this.panel5);
             this.flowLayoutPanel3.Controls.Add(this.panel7);
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 68);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(1458, 183);
             this.flowLayoutPanel3.TabIndex = 7;
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.lb_totalcustomer);
@@ -162,7 +166,7 @@
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.DarkMagenta;
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.lb_totalcoach);
@@ -215,7 +219,7 @@
             // 
             // panel4
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.panel4.Controls.Add(this.lb_tongthunhap);
             this.panel4.Controls.Add(this.lb);
@@ -269,7 +273,7 @@
             // 
             // panel5
             // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.lb_equipment);
@@ -322,7 +326,7 @@
             // 
             // panel7
             // 
-            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.panel7.Controls.Add(this.label);
             this.panel7.Controls.Add(this.lb_package);
@@ -380,7 +384,7 @@
             this.flowLayoutPanel2.Controls.Add(this.chart_doanhthu);
             this.flowLayoutPanel2.Controls.Add(this.chart_soluongdkgt);
             this.flowLayoutPanel2.Controls.Add(this.chart_nhucaudkgt);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 192);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 257);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(1458, 580);
             this.flowLayoutPanel2.TabIndex = 8;
@@ -470,16 +474,51 @@
             this.chart_nhucaudkgt.TabIndex = 11;
             this.chart_nhucaudkgt.Text = "char1";
             // 
+            // lb_nam
+            // 
+            this.lb_nam.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lb_nam.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_nam.ForeColor = System.Drawing.Color.Black;
+            this.lb_nam.Location = new System.Drawing.Point(287, 16);
+            this.lb_nam.Name = "lb_nam";
+            this.lb_nam.Size = new System.Drawing.Size(284, 36);
+            this.lb_nam.TabIndex = 56;
+            this.lb_nam.Text = "Năm 2003";
+            this.lb_nam.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pn_nam
+            // 
+            this.pn_nam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(121)))), ((int)(((byte)(181)))));
+            this.pn_nam.Controls.Add(this.label2);
+            this.pn_nam.Controls.Add(this.lb_nam);
+            this.pn_nam.Location = new System.Drawing.Point(3, 3);
+            this.pn_nam.Name = "pn_nam";
+            this.pn_nam.Size = new System.Drawing.Size(1451, 59);
+            this.pn_nam.TabIndex = 59;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(3, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(182, 36);
+            this.label2.TabIndex = 59;
+            this.label2.Text = "Dash Board";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Admin_ThongKeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(121)))), ((int)(((byte)(181)))));
             this.ClientSize = new System.Drawing.Size(1498, 714);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "Admin_ThongKeForm";
             this.Text = "Form1";
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -495,6 +534,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart_doanhthu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart_soluongdkgt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart_nhucaudkgt)).EndInit();
+            this.pn_nam.ResumeLayout(false);
+            this.pn_nam.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -527,5 +568,8 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_doanhthu;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_soluongdkgt;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart_nhucaudkgt;
+        private System.Windows.Forms.Label lb_nam;
+        private System.Windows.Forms.Panel pn_nam;
+        private System.Windows.Forms.Label label2;
     }
 }

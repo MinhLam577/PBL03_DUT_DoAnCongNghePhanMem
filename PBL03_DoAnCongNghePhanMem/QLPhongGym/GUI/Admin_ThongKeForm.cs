@@ -15,6 +15,7 @@ namespace QLPhongGym.GUI
 {
     public partial class Admin_ThongKeForm : Form
     {
+        static int Nam = 2023;
         public Admin_ThongKeForm()
         {
             InitializeComponent();
@@ -39,9 +40,8 @@ namespace QLPhongGym.GUI
         }
         public void LoadDuLieuBieuDo()
         {
-            int x = DateTime.Now.Year;
             chart_doanhthu.Titles.Add(new System.Windows.Forms.DataVisualization.Charting.Title(
-                "Doanh thu trong năm " + x, System.Windows.Forms.DataVisualization.Charting.Docking.Top,
+                "Doanh thu trong năm " + Nam, System.Windows.Forms.DataVisualization.Charting.Docking.Top,
                 new Font("Arial", 20, FontStyle.Bold), Color.White));
             chart_doanhthu.Series["Doanh thu"].Color = Color.Red;
             double tongdoanhthu = 0;
@@ -49,9 +49,9 @@ namespace QLPhongGym.GUI
             for (int i = 1, j = 0; i <= 12; i++, j++)
             {
 
-                chart_doanhthu.Series["Doanh thu"].Points.AddXY(i, HoaDonBLL.Instance.GetTongDoanhThuTheoNamVaThang(x, i));
-                tongdoanhthu += HoaDonBLL.Instance.GetTongDoanhThuTheoNamVaThang(x, i);
-                chart_doanhthu.Series["Doanh thu"].Points[j].Label = HoaDonBLL.Instance.GetTongDoanhThuTheoNamVaThang(x, i).ToString();
+                chart_doanhthu.Series["Doanh thu"].Points.AddXY(i, HoaDonBLL.Instance.GetTongDoanhThuTheoNamVaThang(Nam, i));
+                tongdoanhthu += HoaDonBLL.Instance.GetTongDoanhThuTheoNamVaThang(Nam, i);
+                chart_doanhthu.Series["Doanh thu"].Points[j].Label = HoaDonBLL.Instance.GetTongDoanhThuTheoNamVaThang(Nam, i).ToString();
             }
             chart_doanhthu.ChartAreas[0].AxisX.Title = "Tháng";
             chart_doanhthu.ChartAreas[0].AxisX.TitleFont = new Font("Times new roman", 14, FontStyle.Bold);
@@ -65,15 +65,14 @@ namespace QLPhongGym.GUI
         }
         public void LoadDuLieuBieuDoSoLuongDangKiGoi()
         {
-            int x = DateTime.Now.Year;
             chart_soluongdkgt.Titles.Add(new System.Windows.Forms.DataVisualization.Charting.Title(
-                "số lượng đăng kí gói tập trong năm " + x, System.Windows.Forms.DataVisualization.Charting.Docking.Top,
+                "số lượng đăng kí gói tập trong năm " + Nam, System.Windows.Forms.DataVisualization.Charting.Docking.Top,
                 new Font("Arial", 20, FontStyle.Bold), Color.White));
             chart_soluongdkgt.Series["Số lượng đăng kí gói"].Color = Color.FromArgb(34, 139, 34);
             for (int i = 1, j = 0; i <= 12; i++, j++)
             {
-                chart_soluongdkgt.Series["Số lượng đăng kí gói"].Points.AddXY(i, DangKiGoiTapBLL.Instance.GetSoLuongDKGTTheoNamVaThang(x, i));
-                chart_soluongdkgt.Series["Số lượng đăng kí gói"].Points[j].Label = DangKiGoiTapBLL.Instance.GetSoLuongDKGTTheoNamVaThang(x, i).ToString();
+                chart_soluongdkgt.Series["Số lượng đăng kí gói"].Points.AddXY(i, DangKiGoiTapBLL.Instance.GetSoLuongDKGTTheoNamVaThang(Nam, i));
+                chart_soluongdkgt.Series["Số lượng đăng kí gói"].Points[j].Label = DangKiGoiTapBLL.Instance.GetSoLuongDKGTTheoNamVaThang(Nam, i).ToString();
                 chart_soluongdkgt.Series["Số lượng đăng kí gói"].Points[j].Font = new Font("Times new roman", 15, FontStyle.Bold);
             }
             chart_soluongdkgt.ChartAreas[0].AxisX.Title = "Tháng";
@@ -87,9 +86,8 @@ namespace QLPhongGym.GUI
         }
         public void LoadDuLieuBieuDoNhuCauDangKiGoi()
         {
-            int x = DateTime.Now.Year;
             chart_nhucaudkgt.Titles.Add(new System.Windows.Forms.DataVisualization.Charting.Title(
-                "Nhu cầu đăng kí gói tập trong năm " + x, System.Windows.Forms.DataVisualization.Charting.Docking.Top,
+                "Nhu cầu đăng kí gói tập trong năm " + Nam, System.Windows.Forms.DataVisualization.Charting.Docking.Top,
                 new Font("Arial", 20, FontStyle.Bold), Color.White));
             List<GoiTap> list_gt = GoiTapBLL.Instance.GetAllGT();
             int cnt_gt = list_gt.Count;
@@ -110,7 +108,7 @@ namespace QLPhongGym.GUI
             {
                 foreach (var k in list_gt)
                 {
-                    chart_nhucaudkgt.Series[k.NameGT].Points.AddXY(i, DangKiGoiTapBLL.Instance.GetSoLuongNhuCauDKGTTheoNam_Thang_IDGT(x, i, k.IDGT));
+                    chart_nhucaudkgt.Series[k.NameGT].Points.AddXY(i, DangKiGoiTapBLL.Instance.GetSoLuongNhuCauDKGTTheoNam_Thang_IDGT(Nam, i, k.IDGT));
                     chart_nhucaudkgt.Series[k.NameGT].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedBar;
                     chart_nhucaudkgt.Series[k.NameGT].IsValueShownAsLabel = true;
                 }

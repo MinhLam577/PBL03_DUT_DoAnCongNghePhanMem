@@ -136,7 +136,7 @@
             this.btn_cancel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancel.ForeColor = System.Drawing.Color.Black;
             this.btn_cancel.Image = ((System.Drawing.Image)(resources.GetObject("btn_cancel.Image")));
-            this.btn_cancel.Location = new System.Drawing.Point(605, 422);
+            this.btn_cancel.Location = new System.Drawing.Point(605, 393);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(167, 92);
             this.btn_cancel.TabIndex = 105;
@@ -154,7 +154,7 @@
             this.btn_save.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save.ForeColor = System.Drawing.Color.Black;
             this.btn_save.Image = ((System.Drawing.Image)(resources.GetObject("btn_save.Image")));
-            this.btn_save.Location = new System.Drawing.Point(151, 422);
+            this.btn_save.Location = new System.Drawing.Point(151, 393);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(167, 92);
             this.btn_save.TabIndex = 104;
