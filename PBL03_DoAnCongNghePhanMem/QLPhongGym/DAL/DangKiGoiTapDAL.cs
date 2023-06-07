@@ -364,7 +364,6 @@ namespace QLPhongGym.DAL
                 catch
                 {
                     MessageBox.Show("Xóa đăng kí gói tập thất bại");
-                    return 0;
                 }
                 
             }

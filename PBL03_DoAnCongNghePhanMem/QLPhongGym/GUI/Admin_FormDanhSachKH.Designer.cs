@@ -511,7 +511,7 @@
             this.xóaToolStripMenuItem1.Size = new System.Drawing.Size(95, 40);
             this.xóaToolStripMenuItem1.Text = "Xóa";
             this.xóaToolStripMenuItem1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.xóaToolStripMenuItem1.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
+            this.xóaToolStripMenuItem1.Click += new System.EventHandler(this.xóaToolStripMenuItem1_Click);
             // 
             // fitlerDKGT_tsmi
             // 
