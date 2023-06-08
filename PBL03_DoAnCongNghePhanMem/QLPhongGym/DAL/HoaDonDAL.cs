@@ -81,16 +81,18 @@ namespace QLPhongGym.DAL
             }
 
         }
-        public DataTable SearchHoaDon_DAL(string str, string require)
+        public DataTable SearchHoaDon_DAL(string str, string require, int year)
         {
-            DataTable dt = createDataTable();
+            DataTable dt = null;
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
                 int cnt = 1;
                 switch (require)
                 {
                     case "Tất cả":
-                        var s = db.HoaDons.Where(p => p.IDHD.ToString().Contains(str) || p.IDKH.ToString().Contains(str))
+                        dt = createDataTable();
+                        var s = db.HoaDons.Where(p => (p.IDHD.ToString().Contains(str) && p.NgayThanhToan.Value.Year == year)
+                        || (p.IDKH.ToString().Contains(str) && p.NgayThanhToan.Value.Year == year))
                     .Select(p => new { p.IDHD, p.IDKH, p.IDGT, p.NgayThanhToan, p.Price, p.IDLT }).ToList();
                         foreach (var item in s)
                         {
@@ -114,7 +116,7 @@ namespace QLPhongGym.DAL
                         var s1 = from gt in db.GoiTaps
                                  join hd in db.HoaDons
                                  on gt.IDGT equals hd.IDGT
-                                 where hd.IDHD.ToString().Contains(str) || hd.IDKH.ToString().Contains(str)
+                                 where (hd.IDHD.ToString().Contains(str) && hd.NgayThanhToan.Value.Year == year) || (hd.IDKH.ToString().Contains(str) && hd.NgayThanhToan.Value.Year == year)
                                  select new { hd.IDHD, hd.IDKH, gt.NameGT, hd.NgayThanhToan, hd.Price };
                         foreach (var item in s1)
                         {
@@ -133,7 +135,7 @@ namespace QLPhongGym.DAL
                         var s2 = from lt in db.LichThueHLVs
                                  join hd in db.HoaDons
                                  on lt.IDLT equals hd.IDLT
-                                 where hd.IDHD.ToString().Contains(str) || hd.IDKH.ToString().Contains(str)
+                                 where (hd.IDHD.ToString().Contains(str) && hd.NgayThanhToan.Value.Year == year) || (hd.IDKH.ToString().Contains(str) && hd.NgayThanhToan.Value.Year == year)
                                  select new { hd.IDHD, hd.IDKH, lt.IDHLV, hd.NgayThanhToan, hd.Price };
                         foreach (var item in s2)
                         {

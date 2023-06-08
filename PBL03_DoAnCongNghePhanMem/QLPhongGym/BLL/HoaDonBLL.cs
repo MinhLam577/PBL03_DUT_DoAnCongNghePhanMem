@@ -39,9 +39,9 @@ namespace QLPhongGym.BLL
         {
             return HoaDonDAL.Instance.TongDoanhThuTheoNamVaThang(year, month);
         }
-        public DataTable SearchHoaDon_BLL(string str, string require)
+        public DataTable SearchHoaDon_BLL(string str, string require, int year)
         {
-            return HoaDonDAL.Instance.SearchHoaDon_DAL(str, require);
+            return HoaDonDAL.Instance.SearchHoaDon_DAL(str, require, year);
         }
         public DataTable GetHoaDonByID_BLL(string str)
         {
