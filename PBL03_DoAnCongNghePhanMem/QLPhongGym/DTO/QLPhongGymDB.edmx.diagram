@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="e1d9e6cc1e9e4a5a9f39433587c66352" Name="Diagram1" ZoomLevel="68">
+      <Diagram DiagramId="e1d9e6cc1e9e4a5a9f39433587c66352" Name="Diagram1" ZoomLevel="83">
         <EntityTypeShape EntityType="QLPhongGymModel.CaLamViec" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
         <EntityTypeShape EntityType="QLPhongGymModel.LichLamViecTrongTuan" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="QLPhongGymModel.TK" Width="1.5" PointX="8.125" PointY="12.75" IsExpanded="true" />
@@ -19,8 +19,6 @@
         <EntityTypeShape EntityType="QLPhongGymModel.HLV" Width="1.5" PointX="8.375" PointY="10.75" />
         <InheritanceConnector EntityType="QLPhongGymModel.HLV" />
         <EntityTypeShape EntityType="QLPhongGymModel.HoaDon" Width="1.5" PointX="2.625" PointY="12.25" />
-        <EntityTypeShape EntityType="QLPhongGymModel.PhanQuyen" Width="1.5" PointX="11.75" PointY="13" />
-        <AssociationConnector Association="QLPhongGymModel.FK_TK_PhanQuyen" />
         <EntityTypeShape EntityType="QLPhongGymModel.DangKiGoiTap" Width="1.5" PointX="2.875" PointY="8.5" />
         <AssociationConnector Association="QLPhongGymModel.FK_DangKiGoiTap_Users" />
         <EntityTypeShape EntityType="QLPhongGymModel.GoiTap" Width="1.5" PointX="0.75" PointY="8" />
@@ -30,6 +28,9 @@
         <AssociationConnector Association="QLPhongGymModel.FK_HoaDon_LichThueHLV" />
         <AssociationConnector Association="QLPhongGymModel.FK_LichThueHLV_Users" />
         <AssociationConnector Association="QLPhongGymModel.FK_LichThueHLV_Users1" />
+        <EntityTypeShape EntityType="QLPhongGymModel.PhanQuyen" Width="1.5" PointX="11.625" PointY="13.625" />
+        <AssociationConnector Association="QLPhongGymModel.FK_HoaDon_Users" />
+        <AssociationConnector Association="QLPhongGymModel.FK_TK_PhanQuyen" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

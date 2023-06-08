@@ -23,5 +23,6 @@ namespace QLPhongGym.DTO
     
         public virtual GoiTap GoiTap { get; set; }
         public virtual LichThueHLV LichThueHLV { get; set; }
+        public virtual User User { get; set; }
     }
 }

@@ -59,5 +59,9 @@ namespace QLPhongGym.BLL
         {
             return HoaDonDAL.Instance.getListHoaDonByIDLT(IDLT);
         }
+        public List<HoaDon> GetListHoaDonByIDKH(int IDKH)
+        {
+            return HoaDonDAL.Instance.GetListHoaDonByIDKH(IDKH);
+        }
     }
 }

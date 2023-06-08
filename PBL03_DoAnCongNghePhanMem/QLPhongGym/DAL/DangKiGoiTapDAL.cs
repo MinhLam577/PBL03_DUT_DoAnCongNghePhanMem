@@ -425,7 +425,6 @@ namespace QLPhongGym.DAL
                 int cnt = 0;
                 foreach (DangKiGoiTap dkgt in data)
                     if (dkgt.NgayDangKiGT.Value.Year == year && dkgt.NgayDangKiGT.Value.Month == month)
-
                         cnt++;
                 return cnt;
             }
