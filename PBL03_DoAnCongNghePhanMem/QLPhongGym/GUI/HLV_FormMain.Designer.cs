@@ -201,7 +201,7 @@
             this.lb_home.AutoSize = true;
             this.lb_home.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_home.ForeColor = System.Drawing.Color.Black;
-            this.lb_home.Location = new System.Drawing.Point(87, 50);
+            this.lb_home.Location = new System.Drawing.Point(78, 50);
             this.lb_home.Name = "lb_home";
             this.lb_home.Size = new System.Drawing.Size(78, 29);
             this.lb_home.TabIndex = 3;

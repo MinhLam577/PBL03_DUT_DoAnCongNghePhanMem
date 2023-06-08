@@ -288,7 +288,9 @@
             // 
             // pn_TitleMenu
             // 
-            this.pn_TitleMenu.BackColor = System.Drawing.Color.White;
+            this.pn_TitleMenu.BackColor = System.Drawing.Color.OldLace;
+            this.pn_TitleMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pn_TitleMenu.BackgroundImage")));
+            this.pn_TitleMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pn_TitleMenu.Controls.Add(this.pictureBox1);
             this.pn_TitleMenu.Controls.Add(this.pb_ad);
             this.pn_TitleMenu.Controls.Add(this.label1);
@@ -297,7 +299,7 @@
             this.pn_TitleMenu.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.pn_TitleMenu.Location = new System.Drawing.Point(240, 0);
             this.pn_TitleMenu.Name = "pn_TitleMenu";
-            this.pn_TitleMenu.Size = new System.Drawing.Size(895, 82);
+            this.pn_TitleMenu.Size = new System.Drawing.Size(895, 70);
             this.pn_TitleMenu.TabIndex = 0;
             // 
             // pictureBox1
@@ -305,9 +307,9 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 61);
+            this.pictureBox1.Size = new System.Drawing.Size(75, 70);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
@@ -315,9 +317,9 @@
             // pb_ad
             // 
             this.pb_ad.Image = ((System.Drawing.Image)(resources.GetObject("pb_ad.Image")));
-            this.pb_ad.Location = new System.Drawing.Point(196, 15);
+            this.pb_ad.Location = new System.Drawing.Point(196, 0);
             this.pb_ad.Name = "pb_ad";
-            this.pb_ad.Size = new System.Drawing.Size(67, 61);
+            this.pb_ad.Size = new System.Drawing.Size(84, 70);
             this.pb_ad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_ad.TabIndex = 2;
             this.pb_ad.TabStop = false;
@@ -326,9 +328,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(67, 47);
+            this.label1.Location = new System.Drawing.Point(81, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 29);
             this.label1.TabIndex = 1;
@@ -338,9 +341,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(269, 47);
+            this.label2.Location = new System.Drawing.Point(286, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 29);
             this.label2.TabIndex = 3;
@@ -349,21 +353,24 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(245)))));
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(240, 82);
+            this.panel3.Location = new System.Drawing.Point(240, 70);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(895, 504);
+            this.panel3.Size = new System.Drawing.Size(895, 516);
             this.panel3.TabIndex = 2;
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Silver;
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(895, 504);
+            this.pictureBox2.Size = new System.Drawing.Size(895, 516);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -377,9 +384,9 @@
             this.pn_tkadmin.Controls.Add(this.lb_gmailad);
             this.pn_tkadmin.Controls.Add(this.lb_tenad);
             this.pn_tkadmin.Controls.Add(this.pb_acc);
-            this.pn_tkadmin.Location = new System.Drawing.Point(436, 82);
+            this.pn_tkadmin.Location = new System.Drawing.Point(436, 73);
             this.pn_tkadmin.Name = "pn_tkadmin";
-            this.pn_tkadmin.Size = new System.Drawing.Size(507, 159);
+            this.pn_tkadmin.Size = new System.Drawing.Size(507, 154);
             this.pn_tkadmin.TabIndex = 4;
             // 
             // btn_doimatkhau

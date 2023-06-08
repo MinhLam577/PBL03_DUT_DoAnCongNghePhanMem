@@ -102,6 +102,7 @@ namespace QLPhongGym.GUI
         {
             if (currentFormChild != null)
             {
+                panel3.BackColor = Color.White;
                 currentFormChild.Close();
                 hideMenu();
             }
@@ -111,6 +112,7 @@ namespace QLPhongGym.GUI
         {
             if (currentFormChild != null)
             {
+                panel3.BackColor = Color.White;
                 currentFormChild.Close();
                 hideMenu();
             }

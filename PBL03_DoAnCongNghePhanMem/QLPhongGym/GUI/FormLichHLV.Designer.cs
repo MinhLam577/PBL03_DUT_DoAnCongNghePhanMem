@@ -246,7 +246,7 @@
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel1.Controls.Add(this.listBox1);
             this.panel1.Location = new System.Drawing.Point(128, 121);
             this.panel1.Name = "panel1";
@@ -378,7 +378,7 @@
             // panel3
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel3.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel3.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel3.Controls.Add(this.listBox7);
             this.panel3.Location = new System.Drawing.Point(1420, 121);
             this.panel3.Name = "panel3";
@@ -393,13 +393,13 @@
             this.listBox7.ItemHeight = 16;
             this.listBox7.Location = new System.Drawing.Point(0, 1);
             this.listBox7.Name = "listBox7";
-            this.listBox7.Size = new System.Drawing.Size(142, 112);
+            this.listBox7.Size = new System.Drawing.Size(145, 112);
             this.listBox7.TabIndex = 0;
             // 
             // panel4
             // 
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel4.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel4.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel4.Controls.Add(this.listBox2);
             this.panel4.Location = new System.Drawing.Point(331, 121);
             this.panel4.Name = "panel4";
@@ -412,15 +412,15 @@
             this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(-2, 4);
+            this.listBox2.Location = new System.Drawing.Point(0, 1);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(142, 112);
+            this.listBox2.Size = new System.Drawing.Size(147, 112);
             this.listBox2.TabIndex = 0;
             // 
             // panel5
             // 
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel5.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel5.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel5.Controls.Add(this.listBox9);
             this.panel5.Location = new System.Drawing.Point(331, 284);
             this.panel5.Name = "panel5";
@@ -435,7 +435,7 @@
             this.listBox9.ItemHeight = 16;
             this.listBox9.Location = new System.Drawing.Point(0, 1);
             this.listBox9.Name = "listBox9";
-            this.listBox9.Size = new System.Drawing.Size(142, 112);
+            this.listBox9.Size = new System.Drawing.Size(147, 112);
             this.listBox9.TabIndex = 0;
             // 
             // label4
@@ -452,7 +452,7 @@
             // panel6
             // 
             this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel6.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel6.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel6.Controls.Add(this.listBox6);
             this.panel6.Location = new System.Drawing.Point(1198, 121);
             this.panel6.Name = "panel6";
@@ -467,13 +467,13 @@
             this.listBox6.ItemHeight = 16;
             this.listBox6.Location = new System.Drawing.Point(0, 0);
             this.listBox6.Name = "listBox6";
-            this.listBox6.Size = new System.Drawing.Size(142, 112);
+            this.listBox6.Size = new System.Drawing.Size(148, 112);
             this.listBox6.TabIndex = 0;
             // 
             // panel7
             // 
             this.panel7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel7.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel7.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel7.Controls.Add(this.listBox8);
             this.panel7.Location = new System.Drawing.Point(128, 284);
             this.panel7.Name = "panel7";
@@ -488,13 +488,13 @@
             this.listBox8.ItemHeight = 16;
             this.listBox8.Location = new System.Drawing.Point(0, 1);
             this.listBox8.Name = "listBox8";
-            this.listBox8.Size = new System.Drawing.Size(142, 112);
+            this.listBox8.Size = new System.Drawing.Size(148, 112);
             this.listBox8.TabIndex = 0;
             // 
             // panel8
             // 
             this.panel8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel8.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel8.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel8.Controls.Add(this.listBox10);
             this.panel8.Location = new System.Drawing.Point(536, 284);
             this.panel8.Name = "panel8";
@@ -509,13 +509,13 @@
             this.listBox10.ItemHeight = 16;
             this.listBox10.Location = new System.Drawing.Point(0, -1);
             this.listBox10.Name = "listBox10";
-            this.listBox10.Size = new System.Drawing.Size(142, 112);
+            this.listBox10.Size = new System.Drawing.Size(148, 112);
             this.listBox10.TabIndex = 0;
             // 
             // panel9
             // 
             this.panel9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel9.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel9.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel9.Controls.Add(this.listBox11);
             this.panel9.Location = new System.Drawing.Point(753, 284);
             this.panel9.Name = "panel9";
@@ -528,15 +528,15 @@
             this.listBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox11.FormattingEnabled = true;
             this.listBox11.ItemHeight = 16;
-            this.listBox11.Location = new System.Drawing.Point(3, 1);
+            this.listBox11.Location = new System.Drawing.Point(0, 1);
             this.listBox11.Name = "listBox11";
-            this.listBox11.Size = new System.Drawing.Size(142, 112);
+            this.listBox11.Size = new System.Drawing.Size(145, 112);
             this.listBox11.TabIndex = 0;
             // 
             // panel10
             // 
             this.panel10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel10.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel10.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel10.Controls.Add(this.listBox12);
             this.panel10.Location = new System.Drawing.Point(971, 284);
             this.panel10.Name = "panel10";
@@ -549,15 +549,15 @@
             this.listBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox12.FormattingEnabled = true;
             this.listBox12.ItemHeight = 16;
-            this.listBox12.Location = new System.Drawing.Point(0, -1);
+            this.listBox12.Location = new System.Drawing.Point(0, 2);
             this.listBox12.Name = "listBox12";
-            this.listBox12.Size = new System.Drawing.Size(142, 112);
+            this.listBox12.Size = new System.Drawing.Size(148, 112);
             this.listBox12.TabIndex = 0;
             // 
             // panel11
             // 
             this.panel11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel11.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel11.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel11.Controls.Add(this.listBox13);
             this.panel11.Location = new System.Drawing.Point(1198, 284);
             this.panel11.Name = "panel11";
@@ -572,13 +572,13 @@
             this.listBox13.ItemHeight = 16;
             this.listBox13.Location = new System.Drawing.Point(0, 0);
             this.listBox13.Name = "listBox13";
-            this.listBox13.Size = new System.Drawing.Size(142, 112);
+            this.listBox13.Size = new System.Drawing.Size(148, 112);
             this.listBox13.TabIndex = 0;
             // 
             // panel12
             // 
             this.panel12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel12.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel12.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel12.Controls.Add(this.listBox14);
             this.panel12.Location = new System.Drawing.Point(1420, 284);
             this.panel12.Name = "panel12";
@@ -593,13 +593,13 @@
             this.listBox14.ItemHeight = 16;
             this.listBox14.Location = new System.Drawing.Point(0, -1);
             this.listBox14.Name = "listBox14";
-            this.listBox14.Size = new System.Drawing.Size(142, 112);
+            this.listBox14.Size = new System.Drawing.Size(145, 128);
             this.listBox14.TabIndex = 0;
             // 
             // panel13
             // 
             this.panel13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel13.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel13.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel13.Controls.Add(this.listBox15);
             this.panel13.Controls.Add(this.panel36);
             this.panel13.Location = new System.Drawing.Point(128, 448);
@@ -615,7 +615,7 @@
             this.listBox15.ItemHeight = 16;
             this.listBox15.Location = new System.Drawing.Point(0, -1);
             this.listBox15.Name = "listBox15";
-            this.listBox15.Size = new System.Drawing.Size(142, 112);
+            this.listBox15.Size = new System.Drawing.Size(148, 112);
             this.listBox15.TabIndex = 0;
             // 
             // panel36
@@ -629,7 +629,7 @@
             // panel14
             // 
             this.panel14.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel14.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel14.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel14.Controls.Add(this.listBox16);
             this.panel14.Location = new System.Drawing.Point(331, 448);
             this.panel14.Name = "panel14";
@@ -644,13 +644,13 @@
             this.listBox16.ItemHeight = 16;
             this.listBox16.Location = new System.Drawing.Point(0, -1);
             this.listBox16.Name = "listBox16";
-            this.listBox16.Size = new System.Drawing.Size(142, 112);
+            this.listBox16.Size = new System.Drawing.Size(147, 112);
             this.listBox16.TabIndex = 79;
             // 
             // panel15
             // 
             this.panel15.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel15.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel15.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel15.Controls.Add(this.listBox17);
             this.panel15.Location = new System.Drawing.Point(536, 448);
             this.panel15.Name = "panel15";
@@ -665,13 +665,13 @@
             this.listBox17.ItemHeight = 16;
             this.listBox17.Location = new System.Drawing.Point(0, -1);
             this.listBox17.Name = "listBox17";
-            this.listBox17.Size = new System.Drawing.Size(142, 112);
+            this.listBox17.Size = new System.Drawing.Size(148, 112);
             this.listBox17.TabIndex = 0;
             // 
             // panel16
             // 
             this.panel16.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel16.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel16.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel16.Controls.Add(this.listBox18);
             this.panel16.Location = new System.Drawing.Point(753, 448);
             this.panel16.Name = "panel16";
@@ -686,13 +686,13 @@
             this.listBox18.ItemHeight = 16;
             this.listBox18.Location = new System.Drawing.Point(0, -1);
             this.listBox18.Name = "listBox18";
-            this.listBox18.Size = new System.Drawing.Size(142, 112);
+            this.listBox18.Size = new System.Drawing.Size(145, 112);
             this.listBox18.TabIndex = 0;
             // 
             // panel17
             // 
             this.panel17.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel17.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel17.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel17.Controls.Add(this.listBox19);
             this.panel17.Location = new System.Drawing.Point(971, 448);
             this.panel17.Name = "panel17";
@@ -707,13 +707,13 @@
             this.listBox19.ItemHeight = 16;
             this.listBox19.Location = new System.Drawing.Point(0, -1);
             this.listBox19.Name = "listBox19";
-            this.listBox19.Size = new System.Drawing.Size(142, 112);
+            this.listBox19.Size = new System.Drawing.Size(148, 112);
             this.listBox19.TabIndex = 0;
             // 
             // panel18
             // 
             this.panel18.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel18.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel18.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel18.Controls.Add(this.listBox20);
             this.panel18.Location = new System.Drawing.Point(1198, 448);
             this.panel18.Name = "panel18";
@@ -728,13 +728,13 @@
             this.listBox20.ItemHeight = 16;
             this.listBox20.Location = new System.Drawing.Point(0, -1);
             this.listBox20.Name = "listBox20";
-            this.listBox20.Size = new System.Drawing.Size(142, 112);
+            this.listBox20.Size = new System.Drawing.Size(148, 112);
             this.listBox20.TabIndex = 0;
             // 
             // panel20
             // 
             this.panel20.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel20.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel20.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel20.Controls.Add(this.listBox21);
             this.panel20.Location = new System.Drawing.Point(1420, 448);
             this.panel20.Name = "panel20";
@@ -747,9 +747,9 @@
             this.listBox21.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox21.FormattingEnabled = true;
             this.listBox21.ItemHeight = 16;
-            this.listBox21.Location = new System.Drawing.Point(3, -1);
+            this.listBox21.Location = new System.Drawing.Point(0, -1);
             this.listBox21.Name = "listBox21";
-            this.listBox21.Size = new System.Drawing.Size(142, 112);
+            this.listBox21.Size = new System.Drawing.Size(145, 112);
             this.listBox21.TabIndex = 0;
             // 
             // listBox22
@@ -812,7 +812,7 @@
             this.listBox24.ItemHeight = 16;
             this.listBox24.Location = new System.Drawing.Point(0, 5);
             this.listBox24.Name = "listBox24";
-            this.listBox24.Size = new System.Drawing.Size(142, 112);
+            this.listBox24.Size = new System.Drawing.Size(148, 112);
             this.listBox24.TabIndex = 95;
             // 
             // panel25
@@ -882,7 +882,7 @@
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel2.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel2.Controls.Add(this.listBox4);
             this.panel2.Location = new System.Drawing.Point(753, 121);
             this.panel2.Name = "panel2";
@@ -895,9 +895,9 @@
             this.listBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox4.FormattingEnabled = true;
             this.listBox4.ItemHeight = 16;
-            this.listBox4.Location = new System.Drawing.Point(-3, 1);
+            this.listBox4.Location = new System.Drawing.Point(0, 1);
             this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(142, 112);
+            this.listBox4.Size = new System.Drawing.Size(148, 112);
             this.listBox4.TabIndex = 69;
             // 
             // listBox28
