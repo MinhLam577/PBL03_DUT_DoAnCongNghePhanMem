@@ -81,23 +81,66 @@ namespace QLPhongGym.DAL
             }
 
         }
-        public DataTable SearchHoaDon_DAL(string str)
+        public DataTable SearchHoaDon_DAL(string str, string require)
         {
             DataTable dt = createDataTable();
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
                 int cnt = 1;
-                var s = db.HoaDons.Where(p => p.IDHD.ToString().Contains(str) || p.IDKH.ToString().Contains(str) || p.GoiTap.NameGT.Contains(str))
-                    .Select(p => new { p.IDHD, p.IDKH, p.IDGT, p.NgayThanhToan, p.Price, p.IDLT }).ToList();
-                
-                foreach (var item in s)
+                switch (require)
                 {
-                    string tenhlv = "NA", tengoitap = "NA";
-                    if (item.IDLT != null)
-                        tenhlv = UsersBLL.Instance.GetUserByID(LichThueBLL.Instance.GetLichThueByIDLT(item.IDLT.Value).IDHLV).Name;
-                    if (item.IDGT != null)
-                        tengoitap = GoiTapBLL.Instance.GetGTByID(item.IDGT.Value).NameGT;
-                    dt.Rows.Add(cnt++, item.IDHD, item.IDKH, (UsersDAL.Instance.GetUserByID(item.IDKH)).Name, tengoitap, tenhlv, item.NgayThanhToan, item.Price);
+                    case "Tất cả":
+                        var s = db.HoaDons.Where(p => p.IDHD.ToString().Contains(str) || p.IDKH.ToString().Contains(str))
+                    .Select(p => new { p.IDHD, p.IDKH, p.IDGT, p.NgayThanhToan, p.Price, p.IDLT }).ToList();
+                        foreach (var item in s)
+                        {
+                            string tenhlv = "NA", tengoitap = "NA";
+                            if (item.IDLT != null)
+                                tenhlv = UsersBLL.Instance.GetUserByID(LichThueBLL.Instance.GetLichThueByIDLT(item.IDLT.Value).IDHLV).Name;
+                            if (item.IDGT != null)
+                                tengoitap = GoiTapBLL.Instance.GetGTByID(item.IDGT.Value).NameGT;
+                            dt.Rows.Add(cnt++, item.IDHD, item.IDKH, (UsersDAL.Instance.GetUserByID(item.IDKH)).Name, tengoitap, tenhlv, item.NgayThanhToan, item.Price);
+                        }
+                        return dt;
+                    case "Gói tập":
+                        dt = new DataTable();
+                        dt.Columns.Add("STT", typeof(int));
+                        dt.Columns.Add("Mã hóa đơn", typeof(int));
+                        dt.Columns.Add("Mã khách hàng", typeof(int));
+                        dt.Columns.Add("Tên khách hàng", typeof(string));
+                        dt.Columns.Add("Tên gói tập", typeof(string));
+                        dt.Columns.Add("Ngày đăng kí", typeof(DateTime));
+                        dt.Columns.Add("Giá tiền(vnd)", typeof(double));
+                        var s1 = from gt in db.GoiTaps
+                                 join hd in db.HoaDons
+                                 on gt.IDGT equals hd.IDGT
+                                 where hd.IDHD.ToString().Contains(str) || hd.IDKH.ToString().Contains(str)
+                                 select new { hd.IDHD, hd.IDKH, gt.NameGT, hd.NgayThanhToan, hd.Price };
+                        foreach (var item in s1)
+                        {
+                            dt.Rows.Add(cnt++, item.IDHD, item.IDKH, (UsersDAL.Instance.GetUserByID(item.IDKH)).Name, item.NameGT, item.NgayThanhToan, item.Price);
+                        }
+                        return dt;
+                    case "Lịch thuê huấn luyện viên":
+                        dt = new DataTable();
+                        dt.Columns.Add("STT", typeof(int));
+                        dt.Columns.Add("Mã hóa đơn", typeof(int));
+                        dt.Columns.Add("Mã khách hàng", typeof(int));
+                        dt.Columns.Add("Tên khách hàng", typeof(string));
+                        dt.Columns.Add("Tên huấn luyện viên", typeof(string));
+                        dt.Columns.Add("Ngày đăng kí", typeof(DateTime));
+                        dt.Columns.Add("Giá tiền(vnd)", typeof(double));
+                        var s2 = from lt in db.LichThueHLVs
+                                 join hd in db.HoaDons
+                                 on lt.IDLT equals hd.IDLT
+                                 where hd.IDHD.ToString().Contains(str) || hd.IDKH.ToString().Contains(str)
+                                 select new { hd.IDHD, hd.IDKH, lt.IDHLV, hd.NgayThanhToan, hd.Price };
+                        foreach (var item in s2)
+                        {
+                            string tenhlv = UsersBLL.Instance.GetUserByID(item.IDHLV).Name;
+                            dt.Rows.Add(cnt++, item.IDHD, item.IDKH, (UsersDAL.Instance.GetUserByID(item.IDKH)).Name, tenhlv, item.NgayThanhToan, item.Price);
+                        }
+                        return dt;
                 }
                 return dt;
             }

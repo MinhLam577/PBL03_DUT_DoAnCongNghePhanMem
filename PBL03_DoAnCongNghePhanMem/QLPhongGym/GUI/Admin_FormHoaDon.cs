@@ -28,7 +28,7 @@ namespace QLPhongGym.GUI
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            dgv_object.DataSource = HoaDonBLL.Instance.SearchHoaDon_BLL(textBox1.Text);
+            dgv_object.DataSource = HoaDonBLL.Instance.SearchHoaDon_BLL(textBox1.Text, cb_fitler.Text);
         }
 
         private void buttonDetailHoaDon_Click(object sender, EventArgs e)
@@ -43,6 +43,11 @@ namespace QLPhongGym.GUI
                     f.ShowDialog();
                 }
             }
+        }
+
+        private void cb_fitler_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dgv_object.DataSource = HoaDonBLL.Instance.SearchHoaDon_BLL(textBox1.Text, cb_fitler.Text);
         }
     }
 }
