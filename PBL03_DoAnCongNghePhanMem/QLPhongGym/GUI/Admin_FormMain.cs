@@ -16,6 +16,7 @@ namespace QLPhongGym.GUI
     {
         public TK tk { get; set; }
         static string ImageDefaultPath = Application.StartupPath + @"\Resources\account_icon.png";
+        static string TitleMenuColorPath = Application.StartupPath + @"\Resources\Background_Color_TrangChu_Admin.png";
         public Admin_FormMain()
         {
             InitializeComponent();
@@ -55,6 +56,7 @@ namespace QLPhongGym.GUI
             if (currentFormChild != null)
                 currentFormChild.Close();
             pn_TitleMenu.BackColor = childForm.BackColor;
+            pn_TitleMenu.BackgroundImage = null;
             currentFormChild = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -214,6 +216,7 @@ namespace QLPhongGym.GUI
         {
             if (currentFormChild != null)
             {
+                pn_TitleMenu.BackgroundImage = Image.FromFile(TitleMenuColorPath);
                 currentFormChild.Close();
                 hideMenu();
             }
@@ -223,6 +226,7 @@ namespace QLPhongGym.GUI
         {
             if (currentFormChild != null)
             {
+                pn_TitleMenu.BackgroundImage = Image.FromFile(TitleMenuColorPath);
                 currentFormChild.Close();
                 hideMenu();
             }
