@@ -681,7 +681,17 @@ namespace QLPhongGym.GUI
         {
             // show lịch thue 
             KH_QuanLyLichThue a = new KH_QuanLyLichThue();
-            a.Show();
+            if (dgv_kh.SelectedRows.Count == 0 || dgv_kh.SelectedRows[0].IsNewRow)
+            {
+                MessageBox.Show("Vui lòng chọn một hàng hợp lệ.");
+            }
+            else
+            {
+                DataGridViewRow selectedRow = dgv_kh.SelectedRows[0];
+                int ma = Convert.ToInt32(selectedRow.Cells[1].Value.ToString());
+                a.idkh = ma;
+                a.Show();
+            }
 
         }
 

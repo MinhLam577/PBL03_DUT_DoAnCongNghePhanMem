@@ -262,7 +262,7 @@ namespace QLPhongGym.GUI
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Đã rồn tại rồi ");
+                MessageBox.Show("Đã tồn tại rồi ");
             }
         }
         private void btntru_Click(object sender, EventArgs e)

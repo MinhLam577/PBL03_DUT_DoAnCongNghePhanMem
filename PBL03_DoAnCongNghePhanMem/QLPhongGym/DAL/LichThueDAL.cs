@@ -39,7 +39,7 @@ namespace QLPhongGym.DAL
                               select new
                               {
                                   i.Name
-                              }).ToList();
+                              }).Distinct().ToList();
                 foreach (var every in result)
                 {
 
@@ -106,39 +106,7 @@ namespace QLPhongGym.DAL
                 });
             return dt;
         }
-        public DataTable showlich()
-        {
-            CreatDataTable();
-            using (QLPhongGymDB db = new QLPhongGymDB())
-            {
-                var result = (from i in db.LichThueHLVs
-                              join u in db.Users.OfType<HLV>() on i.IDHLV equals u.IDUsers
-                              join z in db.Users.OfType<KH>() on i.IDKH equals z.IDUsers
-                              where i.IDHLV == u.IDUsers
-                              select new
-                              {
-                                  i.IDKH,
-                                  u.IDUsers, // id khach hang                                  
-                                  HLVName = u.Name,
-                                  i.NgayThue,
-                                  i.IDCa,
-                                  KHName = z.Name // Lấy tên từ bảng Users loại KH
-                              }).ToList();
-                foreach (var u in result)
-
-
-                    dt.Rows.Add(
-                                  u.IDKH,
-                                  u.KHName,
-                                  u.IDUsers,
-                                  u.HLVName,
-                                  u.NgayThue,
-                                  u.IDCa
-                          );
-                return dt;
-            }
-
-        }
+        
         public void DeleteLichThue(int IDLT)
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
@@ -165,6 +133,8 @@ namespace QLPhongGym.DAL
                 return db.SaveChanges() > 0;
             }
         }
+        // idca : datagrid 
+        // IDCa : thay doi o datagrid
         public bool Capnhat1(int idca, int idhlv, DateTime ngaylam, int IDCA, int IDHLV, DateTime NGAYLAM)
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
@@ -172,7 +142,9 @@ namespace QLPhongGym.DAL
                 // Lấy đối tượng Order cần sửa đổi từ cơ sở dữ liệu
                 var lich = db.LichThueHLVs.FirstOrDefault(x => x.IDHLV == idhlv &&
                 x.IDCa == idca &&
-                x.NgayThue == ngaylam);
+                x.NgayThue == ngaylam 
+           
+                );
                 lich.IDCa = IDCA;
                 lich.IDHLV = IDHLV;
                 lich.NgayThue = NGAYLAM;
@@ -208,6 +180,69 @@ namespace QLPhongGym.DAL
                         on kh.IDUsers equals lt.IDKH
                         where kh.IDUsers == IDKH
                         select lt).ToList();
+            }
+        }
+        public DataTable ShowListKH_DkiHLV(int idkh)
+        {
+            DataTable dt = CreatDataTable();
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                var result = (from i in db.LichThueHLVs
+                              join u in db.Users.OfType<HLV>() on i.IDHLV equals u.IDUsers
+                              join z in db.Users.OfType<KH>() on i.IDKH equals z.IDUsers
+                              from zz in db.CaLamViecs
+                              where z.IDUsers == i.IDKH && zz.IDCa == i.IDCa && u.IDUsers == i.IDHLV && i.IDKH == idkh
+                              select new
+                              {
+                                  i.IDKH,
+                                  u.IDUsers, // id khach hang                                  
+                                  HLVName = u.Name,
+                                  i.NgayThue,
+                                  i.IDCa,
+                                  KHName = z.Name // Lấy tên từ bảng Users loại KH
+                              }).ToList();
+
+                foreach (var u in result)
+                {
+                    dt.Rows.Add(
+                                  u.IDKH,
+                                  u.KHName,
+                                  u.IDUsers,
+                                  u.HLVName,
+                                  u.NgayThue,
+                                  DangKiLichLamViecDAL.getInStance.GetTenCa_ByIdCa(u.IDCa.Value)
+                              );
+                }
+            }
+
+                return dt;
+            
+        }
+
+
+        // tham so truoc : datagrid
+        // tham so sau : sau khi chinh sua data
+        public bool SuaLichThueHLv(int idhlv,DateTime ngaylam, int idca,int Idhlv,DateTime NgayLam,int Idca)
+        {
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                var existingLichLamViec = db.LichThueHLVs.FirstOrDefault(x => x.IDHLV == idhlv &&
+                                                                                      x.IDCa == idca &&
+                                                                                      x.NgayThue == ngaylam);
+
+                if (existingLichLamViec != null)
+                {
+                    existingLichLamViec.IDCa = Idca;
+                    existingLichLamViec.NgayThue = NgayLam;
+                    existingLichLamViec.IDHLV = Idhlv;
+                    db.SaveChanges();
+                    return true;
+                }
+                else
+                {
+                    // Không tìm thấy đối tượng, không thực hiện chỉnh sửa
+                    return false;
+                }
             }
         }
     }
