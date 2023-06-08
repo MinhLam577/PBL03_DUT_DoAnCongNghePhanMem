@@ -320,6 +320,12 @@
     <Compile Include="GUI\UpdateImageAccountForm.Designer.cs">
       <DependentUpon>UpdateImageAccountForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\XemDanhSachDoiTuongThongKeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\XemDanhSachDoiTuongThongKeForm.Designer.cs">
+      <DependentUpon>XemDanhSachDoiTuongThongKeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\XepLichHLV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -414,6 +420,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UpdateImageAccountForm.resx">
       <DependentUpon>UpdateImageAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\XemDanhSachDoiTuongThongKeForm.resx">
+      <DependentUpon>XemDanhSachDoiTuongThongKeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\XepLichHLV.resx">
       <DependentUpon>XepLichHLV.cs</DependentUpon>

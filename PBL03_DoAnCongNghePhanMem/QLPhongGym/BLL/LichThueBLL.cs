@@ -30,10 +30,7 @@ namespace QLPhongGym.BLL
         {
             return LichThueDAL.Instance.DangKiThueHLV(a);
         }
-        public DataTable showlich()
-        {
-            return LichThueDAL.Instance.showlich();
-        }
+      
         public bool xoa(int ma)
         {
             return LichThueDAL.Instance.xoa(ma);
@@ -59,5 +56,18 @@ namespace QLPhongGym.BLL
         {
             return LichThueDAL.Instance.GetLichThueByIDKH(IDKH);
         }
+        public DataTable ShowListKH_DkiHLV(int idkh)
+        {
+            return LichThueDAL.Instance.ShowListKH_DkiHLV(idkh);
+        }
+        public bool SuaLichThueHLv(int idhlv, DateTime ngaylam, int idca, int Idhlv, DateTime NgayLam, int Idca)
+        {
+            return LichThueDAL.Instance.SuaLichThueHLv(idhlv, ngaylam, idca, Idhlv, NgayLam, Idca);
+        }
+        public LichThueHLV GetLichThueByIDKH_IDHLV_NgayLam_IDCa(int IDKH, int IDHLV, DateTime NgayLam, int Idca)
+        {
+            return LichThueDAL.Instance.GetLichThueByIDKH_IDHLV_NgayLam_IDCa(IDKH, IDHLV, NgayLam, Idca);
+        }
     }
+
 }

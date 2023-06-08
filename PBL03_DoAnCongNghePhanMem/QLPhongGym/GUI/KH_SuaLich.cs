@@ -28,26 +28,22 @@ namespace QLPhongGym.GUI
             LichThueHLV b = new LichThueHLV();
             DateTime ngaylam = dateNgayLam.Value;
             int makh = Convert.ToInt32(textMa.Text.ToString().Trim());
-            int id = -1;
-
-            if (cbbCa.SelectedItem != null)
+            if (!string.IsNullOrEmpty(textMa.Text) && cbbCa.SelectedItem != null && cbbma.SelectedItem != null &&cbbHlv.SelectedItem !=null )
             {
                 int idca = -1;
                 string cbbtenca = cbbCa.SelectedItem.ToString().Trim();
                 idca = DangKiLichLamViecBAL.getInStance.GetIdCa_ByTenCa(cbbtenca);
                 int idhlv = Convert.ToInt32(cbbma.SelectedItem.ToString().Trim());
-
                 b.NgayThue = ngaylam;
                 b.IDHLV = idhlv;
                 b.IDKH = makh;
-                b.IDCa = id;
-                buon(id, idhlv, ngaylam, makh);
+                b.IDCa = idca;
+                buon(idca, idhlv, ngaylam, makh);
                 this.Dispose();
             }
             else
             {
-                // Xử lý khi SelectedItem là null
-                MessageBox.Show("Giá trị từ combobox không tồn tại.");
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin.");
             }  
         }
         private void btnCancel_Click(object sender, EventArgs e)
@@ -60,16 +56,7 @@ namespace QLPhongGym.GUI
             textMa.Text = makh.ToString();
             dateNgayLam.Value = ngaylam;
             textTen.Text = tenkhachhang;
-            List<string> itemList = new List<string>
-              {
-              "1",
-              "2",
-              "3"
-              };
 
-            cbbCa.Items.AddRange(itemList.ToArray());
-
-            //oki
              cbbCa.Items.Clear();
              cbbCa.Items.AddRange(LichThueBLL.Instance.danhsachcatheongay(ngaylam).ToArray());
             string tenca = "";
@@ -107,7 +94,6 @@ namespace QLPhongGym.GUI
                 MessageBox.Show("Bạn Chưa Điền Ca ");
             }
         }
-
         private void cbbma_DropDown(object sender, EventArgs e)
         {
             DateTime ngay = dateNgayLam.Value;
@@ -115,7 +101,6 @@ namespace QLPhongGym.GUI
             cbbma.Items.Clear();
             if (cbbHlv.SelectedItem != null)
             {
-
                 int idca = -1;
                 string cbbtenca = cbbCa.SelectedItem.ToString().Trim();
                 idca = DangKiLichLamViecBAL.getInStance.GetIdCa_ByTenCa(cbbtenca);

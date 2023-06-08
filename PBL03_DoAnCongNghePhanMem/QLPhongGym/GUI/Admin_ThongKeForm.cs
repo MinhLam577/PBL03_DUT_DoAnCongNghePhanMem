@@ -213,5 +213,33 @@ namespace QLPhongGym.GUI
                 lb_nam.Text = "Năm: " + Nam.ToString();
             }
         }
+
+        private void pb_kh_Click(object sender, EventArgs e)
+        {
+            DataTable dt = KHBLL.Instance.GetListKH_ByYear(Nam);
+            XemDanhSachDoiTuongThongKeForm f = new XemDanhSachDoiTuongThongKeForm(dt, "Khách hàng", Nam);
+            f.ShowDialog();
+        }
+
+        private void pb_hlv_Click(object sender, EventArgs e)
+        {
+            DataTable dt = QLHLVBLL.getInstance.GetListHLV_ByYear(Nam);
+            XemDanhSachDoiTuongThongKeForm f = new XemDanhSachDoiTuongThongKeForm(dt, "Huấn luyện viên", Nam);
+            f.ShowDialog();
+        }
+
+        private void pb_tb_Click(object sender, EventArgs e)
+        {
+            DataTable dt = ThietBi_BLL.Instance.GetAllThietBi_BLL();
+            XemDanhSachDoiTuongThongKeForm f = new XemDanhSachDoiTuongThongKeForm(dt, "Thiết bị", Nam);
+            f.ShowDialog();
+        }
+
+        private void pb_gt_Click(object sender, EventArgs e)
+        {
+            DataTable dt = GoiTapBLL.Instance.GetData_BLL();
+            XemDanhSachDoiTuongThongKeForm f = new XemDanhSachDoiTuongThongKeForm(dt, "Gói tập", Nam);
+            f.ShowDialog();
+        }
     }
 }

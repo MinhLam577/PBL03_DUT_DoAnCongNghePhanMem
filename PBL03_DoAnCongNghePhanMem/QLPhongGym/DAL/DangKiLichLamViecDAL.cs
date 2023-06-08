@@ -45,11 +45,8 @@ namespace QLPhongGym.DAL
             dt.Columns.AddRange(new DataColumn[]
                 {
                     new DataColumn { ColumnName = "STT", DataType = typeof(int) },
-                    //new DataColumn { ColumnName = "Ca", DataType = typeof(int) },
                     new DataColumn { ColumnName = "IDMaHLV", DataType = typeof(int) },
                     new DataColumn { ColumnName = "Name", DataType = typeof(string) },
-                   // new DataColumn { ColumnName = "NgayBatDau", DataType = typeof(DateTime) },
-                    //new DataColumn {ColumnName = "NgayKetThuc",DataType = typeof(DateTime)},
                     new DataColumn {ColumnName = "NgayLam",DataType = typeof(DateTime)}
                 });
             return dt;
@@ -300,62 +297,6 @@ namespace QLPhongGym.DAL
                     return false;
                 }
             }
-
-        }
-
-        // kiem tra THONG TIN DOI TUONG cb  CAP NHAT lam tham so da trung chua ,  
-        public bool UpdateOrder(int IDHLV, int IDCa, DateTime ngaybatdau, DateTime ngayketthuc, DateTime NgayLam)
-        {
-            using (QLPhongGymDB db = new QLPhongGymDB())
-            {
-                // Kiểm tra xem các giá trị mới của đối tượng Order đã trùng với các giá trị của một đối tượng Order khác trong cơ sở dữ liệu hay chưa
-                var exits = db.LichLamViecTrongTuans.FirstOrDefault(x => x.IDHLV == IDHLV &&
-                x.IDCa == IDCa &&
-                x.NgayLam == NgayLam);
-                if (exits == null)
-                {
-                    return true;
-                }
-                else
-                {
-                    // Nếu đã tồn tại một đối tượng Order khác trong cơ sở dữ liệu có các giá trị tương tự với đối tượng Order cần sửa đổi, bạn có thể xử lý tùy ý, ví dụ: ném một ngoại lệ, thông báo lỗi, hoặc không cho phép sửa đổi.
-                    throw new Exception("Order with similar properties already exists in the database.");
-                }
-            }
-
-        }
-        public bool capnhat(int idca, int idhlv, DateTime ngaybatdau, DateTime ngayketthuc, DateTime ngaylam, int IDCA, int IDHLV, DateTime NGAYBATDAU, DateTime NGAYKETTHUC, DateTime NGAYLAM)
-        {
-            using (QLPhongGymDB db = new QLPhongGymDB())
-            {
-                // Lấy đối tượng Order cần sửa đổi từ cơ sở dữ liệu
-                var lich = db.LichLamViecTrongTuans.FirstOrDefault(x => x.IDHLV == idhlv &&
-                x.IDCa == idca &&
-                x.NgayLam == ngaylam);
-                if (lich != null)
-                {
-                    // Thực hiện các thay đổi trên đối tượng Order             
-                    if (UpdateOrder(IDHLV, IDCA, NGAYBATDAU, NGAYKETTHUC, NGAYLAM) == true)
-                    {
-                        MessageBox.Show("updateOredr");
-                        lich.NgayBatDau = NGAYBATDAU;
-                        lich.NgayKetThuc = NGAYKETTHUC;
-                        lich.NgayLam = NGAYLAM;
-                        lich.IDCa = IDCA;
-                        lich.IDHLV = IDHLV;
-                        // Lưu các thay đổi vào cơ sở dữ liệu
-                        db.SaveChanges();
-                        return true;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Loi ");
-                        return false;
-                    }
-                }
-                return false;
-            }
-
         }
         public DataTable CapNhatListHLVAll()
         {
@@ -464,44 +405,14 @@ namespace QLPhongGym.DAL
                             );
                 return dt;
             }
-        }
-        public DataTable XemTheoNgay1(DateTime ngay)
-        {
-            using (QLPhongGymDB db = new QLPhongGymDB())
-            {
-                dt = CreatDataTable(); int cnt = 0;
-                var listtuan = (from u in db.LichLamViecTrongTuans
-                                from i in db.Users.OfType<HLV>()
-                                where u.NgayLam == ngay
-                                orderby u.IDCa, u.NgayLam
-                                select new
-                                {
-                                    u.IDCa,
-                                    u.IDHLV,
-                                    i.Name,
-                                    u.NgayBatDau,
-                                    u.NgayKetThuc,
-                                    u.NgayLam
-                                }).ToList();
-                foreach (var u in listtuan)
-                    dt.Rows.Add(
-                                  cnt++,
-                                  u.IDCa,
-                                  u.IDHLV,
-                                  u.Name,
-                                  u.NgayBatDau,
-                                  u.NgayKetThuc,
-                                  u.NgayLam
-                            );
-                return dt;
-            }
+        
+      
         }
         public string DisplayHLVTheoCa(string listhlv, int idca, DateTime ngaylam)
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
                 listhlv = "";
-
                 var listtuan = (from u in db.LichLamViecTrongTuans
                                 from i in db.Users.OfType<HLV>()
                                 where u.NgayLam == ngaylam
