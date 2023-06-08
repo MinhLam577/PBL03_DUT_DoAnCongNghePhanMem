@@ -209,7 +209,7 @@
             // kh_mns
             // 
             this.kh_mns.BackColor = System.Drawing.Color.Azure;
-            this.kh_mns.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kh_mns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kh_mns.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.kh_mns.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.kh_mns.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -231,7 +231,7 @@
             this.xemLịchThuêHuấnLuyệnViênToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("xemLịchThuêHuấnLuyệnViênToolStripMenuItem.Image")));
             this.xemLịchThuêHuấnLuyệnViênToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.xemLịchThuêHuấnLuyệnViênToolStripMenuItem.Name = "xemLịchThuêHuấnLuyệnViênToolStripMenuItem";
-            this.xemLịchThuêHuấnLuyệnViênToolStripMenuItem.Size = new System.Drawing.Size(176, 40);
+            this.xemLịchThuêHuấnLuyệnViênToolStripMenuItem.Size = new System.Drawing.Size(158, 40);
             this.xemLịchThuêHuấnLuyệnViênToolStripMenuItem.Text = "Lịch thuê HLV";
             this.xemLịchThuêHuấnLuyệnViênToolStripMenuItem.Click += new System.EventHandler(this.xemLịchThuêHuấnLuyệnViênToolStripMenuItem_Click);
             // 
@@ -240,7 +240,7 @@
             this.thêmToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("thêmToolStripMenuItem.Image")));
             this.thêmToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.thêmToolStripMenuItem.Name = "thêmToolStripMenuItem";
-            this.thêmToolStripMenuItem.Size = new System.Drawing.Size(105, 40);
+            this.thêmToolStripMenuItem.Size = new System.Drawing.Size(100, 40);
             this.thêmToolStripMenuItem.Text = "Thêm";
             this.thêmToolStripMenuItem.Click += new System.EventHandler(this.thêmToolStripMenuItem_Click);
             // 
@@ -249,7 +249,7 @@
             this.xóaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("xóaToolStripMenuItem.Image")));
             this.xóaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
-            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(91, 40);
+            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(88, 40);
             this.xóaToolStripMenuItem.Text = "Xóa";
             this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
             // 
@@ -258,7 +258,7 @@
             this.sửaToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("sửaToolStripMenuItem1.Image")));
             this.sửaToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.sửaToolStripMenuItem1.Name = "sửaToolStripMenuItem1";
-            this.sửaToolStripMenuItem1.Size = new System.Drawing.Size(91, 40);
+            this.sửaToolStripMenuItem1.Size = new System.Drawing.Size(87, 40);
             this.sửaToolStripMenuItem1.Text = "Sửa";
             this.sửaToolStripMenuItem1.Click += new System.EventHandler(this.sửaToolStripMenuItem1_Click);
             // 
@@ -272,28 +272,28 @@
             this.sortkh_tsmi.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.sortkh_tsmi.Name = "sortkh_tsmi";
             this.sortkh_tsmi.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.sortkh_tsmi.Size = new System.Drawing.Size(126, 40);
+            this.sortkh_tsmi.Size = new System.Drawing.Size(118, 40);
             this.sortkh_tsmi.Text = "Sắp xếp";
             this.sortkh_tsmi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // mãThẻToolStripMenuItem
             // 
             this.mãThẻToolStripMenuItem.Name = "mãThẻToolStripMenuItem";
-            this.mãThẻToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
+            this.mãThẻToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
             this.mãThẻToolStripMenuItem.Text = "Mã thẻ";
             this.mãThẻToolStripMenuItem.Click += new System.EventHandler(this.mãThẻToolStripMenuItem_Click);
             // 
             // tênToolStripMenuItem
             // 
             this.tênToolStripMenuItem.Name = "tênToolStripMenuItem";
-            this.tênToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
+            this.tênToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
             this.tênToolStripMenuItem.Text = "Tên";
             this.tênToolStripMenuItem.Click += new System.EventHandler(this.tênToolStripMenuItem_Click);
             // 
             // giớiTínhToolStripMenuItem
             // 
             this.giớiTínhToolStripMenuItem.Name = "giớiTínhToolStripMenuItem";
-            this.giớiTínhToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
+            this.giớiTínhToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
             this.giớiTínhToolStripMenuItem.Text = "Giới tính";
             this.giớiTínhToolStripMenuItem.Click += new System.EventHandler(this.giớiTínhToolStripMenuItem_Click);
             // 
@@ -302,7 +302,7 @@
             this.toolStripMenuItem8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem8.Image")));
             this.toolStripMenuItem8.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(117, 40);
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(111, 40);
             this.toolStripMenuItem8.Text = "Reload";
             this.toolStripMenuItem8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.toolStripMenuItem8.Click += new System.EventHandler(this.reloadToolStripMenuItem_Click);

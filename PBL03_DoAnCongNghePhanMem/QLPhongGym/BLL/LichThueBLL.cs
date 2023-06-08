@@ -64,6 +64,10 @@ namespace QLPhongGym.BLL
         {
             return LichThueDAL.Instance.SuaLichThueHLv(idhlv, ngaylam, idca, Idhlv, NgayLam, Idca);
         }
+        public LichThueHLV GetLichThueByIDKH_IDHLV_NgayLam_IDCa(int IDKH, int IDHLV, DateTime NgayLam, int Idca)
+        {
+            return LichThueDAL.Instance.GetLichThueByIDKH_IDHLV_NgayLam_IDCa(IDKH, IDHLV, NgayLam, Idca);
+        }
     }
 
 }
