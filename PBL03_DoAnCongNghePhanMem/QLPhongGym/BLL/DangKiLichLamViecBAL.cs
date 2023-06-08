@@ -64,23 +64,14 @@ namespace QLPhongGym.BLL
         {
             return DangKiLichLamViecDAL.getInStance.Xoa(a);
         }
-        public bool UpdateOrder(int IDHLV, int IDCa, DateTime ngaybatdau, DateTime ngayketthuc, DateTime NgayLam)
-        {
-            return DangKiLichLamViecDAL.getInStance.UpdateOrder(IDHLV, IDCa, ngaybatdau, ngayketthuc, NgayLam);
-
-        }
+      
         public DataTable CapNhatListHLVAll()
         {
 
             return DangKiLichLamViecDAL.getInStance.CapNhatListHLVAll();
         }
 
-        public bool capnhat(int idca, int idhlv, DateTime ngaybatdau, DateTime ngayketthuc, DateTime ngaylam, int IDCA, int IDHLV, DateTime NGAYBATDAU, DateTime NGAYKETTHUC, DateTime NGAYLAM)
-        {
-            return DangKiLichLamViecDAL.getInStance.capnhat(idca, idhlv, ngaybatdau, ngayketthuc, ngaylam, IDCA, IDHLV, NGAYBATDAU, NGAYKETTHUC, NGAYLAM);
-
-        }
-
+     
         public bool Capnhat1(int idca, int idhlv, DateTime ngaylam, int IDCA, int IDHLV, DateTime NGAYLAM)
         {
             return DangKiLichLamViecDAL.getInStance.Capnhat1(idca, idhlv, ngaylam, IDCA, IDHLV, NGAYLAM);
