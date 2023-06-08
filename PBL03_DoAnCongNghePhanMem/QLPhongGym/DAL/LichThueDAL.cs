@@ -245,5 +245,13 @@ namespace QLPhongGym.DAL
                 }
             }
         }
+
+        public LichThueHLV GetLichThueByIDKH_IDHLV_NgayLam_IDCa(int IDKH, int IDHLV, DateTime NgayLam,  int Idca)
+        {
+            using(QLPhongGymDB db = new QLPhongGymDB())
+            {
+                return db.LichThueHLVs.FirstOrDefault(s => s.IDKH == IDKH && s.IDHLV == IDHLV && s.NgayThue.Value == NgayLam && s.IDCa.Value == Idca);
+            }
+        }
     }
 }
