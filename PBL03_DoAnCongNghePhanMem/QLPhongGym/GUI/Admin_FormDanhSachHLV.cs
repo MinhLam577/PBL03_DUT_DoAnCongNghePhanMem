@@ -60,19 +60,19 @@ namespace QLPhongGym.GUI
                                         LichThueBLL.Instance.DeleteLichThue(lt.IDLT);
 
                                 //Xóa huấn luyện viên
-                                if (QLHLVBLL.getInstance.Delete(idHLV))
+                                if (!QLHLVBLL.getInstance.Delete(idHLV))
                                 {
                                     check = false;
                                     break;
                                 }
                             }
-                            if(check)
-                            {
-                                MessageBox.Show("Xóa Thành Công");
-                                CapNhatListHLV();
-                            }
-                            else MessageBox.Show("Xóa thất bại");
                         }
+                        if (check)
+                        {
+                            MessageBox.Show("Xóa Thành Công");
+                            CapNhatListHLV();
+                        }
+                        else MessageBox.Show("Xóa thất bại");
                     }
                 }
                 catch (Exception ex)
