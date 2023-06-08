@@ -244,7 +244,7 @@ namespace QLPhongGym.GUI
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            Admin_FormHoaDon f = new Admin_FormHoaDon();
+            Admin_FormHoaDon f = new Admin_FormHoaDon(Nam);
             f.ShowDialog();
         }
     }

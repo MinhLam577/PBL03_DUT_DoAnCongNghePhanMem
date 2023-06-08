@@ -13,14 +13,17 @@ namespace QLPhongGym.GUI
 {
     public partial class Admin_FormHoaDon : Form
     {
-        public Admin_FormHoaDon()
+        public int year { get; set; }
+        public Admin_FormHoaDon(int year)
         {
             InitializeComponent();
+            this.year = year;
             loadDuLieuDTG();
         }
         public void loadDuLieuDTG()
         {
-            dgv_object.DataSource = HoaDonBLL.Instance.GetDuLieuHoaDon_BLL();
+            dgv_object.DataSource = HoaDonBLL.Instance.GetHoaDonByYear(year);
+            dgv_object.Columns.Cast<DataGridViewColumn>().ToList().ForEach(f => f.SortMode = DataGridViewColumnSortMode.NotSortable);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

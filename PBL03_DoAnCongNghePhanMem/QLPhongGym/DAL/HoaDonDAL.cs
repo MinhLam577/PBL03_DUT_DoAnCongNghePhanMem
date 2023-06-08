@@ -94,14 +94,21 @@ namespace QLPhongGym.DAL
         public DataTable SearchHoaDon_DAL(string str)
         {
             DataTable dt = new DataTable();
+            dt.Columns.Add("STT", typeof(int));
+            dt.Columns.Add("Mã hóa đơn", typeof(int));
+            dt.Columns.Add("Mã khách hàng", typeof(int));
+            dt.Columns.Add("Tên khách hàng", typeof(string));
+            dt.Columns.Add("Tên gói tập", typeof(string));
+            dt.Columns.Add("Ngày đăng kí", typeof(DateTime));
+            dt.Columns.Add("Giá tiền(vnd)", typeof(double));
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
                 int cnt = 1;
                 var s = db.HoaDons.Where(p => p.IDHD.ToString().Contains(str) || p.IDKH.ToString().Contains(str) || p.GoiTap.NameGT.Contains(str)).Select(p => new { p.IDHD, p.IDKH, p.GoiTap.NameGT, p.NgayThanhToan, p.Price }).ToList();
-                dt = createDataTable();
+                
                 foreach (var item in s)
                 {
-                    dt.Rows.Add(cnt++, item.IDHD, item.IDKH, item.NameGT, item.NgayThanhToan, item.Price);
+                    dt.Rows.Add(cnt++, item.IDHD, item.IDKH, (UsersDAL.Instance.GetUserByID(item.IDKH)).Name, item.NameGT, item.NgayThanhToan, item.Price);
                 }
                 return dt;
             }
@@ -126,6 +133,25 @@ namespace QLPhongGym.DAL
             {
                 User s = db.Users.FirstOrDefault(p => p.IDUsers == id);
                 return s;
+            }
+        }
+        public DataTable GetHoaDonByYear(int Year)
+        {
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                DataTable dt = new DataTable();
+                dt.Columns.Add("STT", typeof(int));
+                dt.Columns.Add("Mã hóa đơn", typeof(int));
+                dt.Columns.Add("Mã khách hàng", typeof(int));
+                dt.Columns.Add("Tên khách hàng", typeof(string));
+                dt.Columns.Add("Tên gói tập", typeof(string));
+                dt.Columns.Add("Ngày đăng kí", typeof(DateTime));
+                dt.Columns.Add("Giá tiền(vnd)", typeof(double));
+                int cnt = 1;
+                var list_hd = db.HoaDons.Where(p => p.NgayThanhToan.Value.Year == Year).Select(p => new { p.IDHD, p.IDKH, p.GoiTap.NameGT, p.NgayThanhToan, p.Price });
+                foreach (var item in list_hd)
+                    dt.Rows.Add(cnt++, item.IDHD, item.IDKH, (UsersDAL.Instance.GetUserByID(item.IDKH)).Name , item.NameGT, item.NgayThanhToan, item.Price);
+                return dt;
             }
         }
     }

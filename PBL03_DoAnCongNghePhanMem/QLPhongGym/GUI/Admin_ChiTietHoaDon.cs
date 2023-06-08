@@ -23,6 +23,7 @@ namespace QLPhongGym.GUI
             InitializeComponent();
             GUI();
         }
+        
         public void GUI()
         {
             if(ID != "")
