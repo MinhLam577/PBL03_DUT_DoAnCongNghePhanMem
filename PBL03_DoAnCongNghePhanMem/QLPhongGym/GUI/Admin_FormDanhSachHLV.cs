@@ -54,11 +54,19 @@ namespace QLPhongGym.GUI
                                     foreach (LichLamViecTrongTuan llv in DangKiLichLamViecBAL.getInStance.GetListLichLamViecByIDHLV(idHLV))
                                         DangKiLichLamViecBAL.getInStance.DeleteLichLamViec(llv);
 
+                                
+
                                 //Xóa lịch thuê hlv
                                 if (LichThueBLL.Instance.GetLichThueByIDHLV(idHLV) != null)
                                     foreach (LichThueHLV lt in LichThueBLL.Instance.GetLichThueByIDHLV(idHLV))
-                                        LichThueBLL.Instance.DeleteLichThue(lt.IDLT);
+                                    {
+                                        //Xóa hóa đơn lịch thuê
+                                        foreach (HoaDon hd in HoaDonBLL.Instance.getListHoaDonByIDLT(lt.IDLT))
+                                            HoaDonBLL.Instance.DeleteHoaDon(hd);
 
+                                        //Xóa lịch thuê
+                                        LichThueBLL.Instance.DeleteLichThue(lt.IDLT);
+                                    }
                                 //Xóa huấn luyện viên
                                 if (!QLHLVBLL.getInstance.Delete(idHLV))
                                 {

@@ -39,10 +39,6 @@ namespace QLPhongGym.BLL
         {
             return HoaDonDAL.Instance.TongDoanhThuTheoNamVaThang(year, month);
         }
-        public DataTable GetDuLieuHoaDon_BLL()
-        {
-            return HoaDonDAL.Instance.GetDuLieuHoaDon_DAL();
-        }
         public DataTable SearchHoaDon_BLL(string str)
         {
             return HoaDonDAL.Instance.SearchHoaDon_DAL(str);
@@ -58,6 +54,10 @@ namespace QLPhongGym.BLL
         public DataTable GetHoaDonByYear(int Year)
         {
             return HoaDonDAL.Instance.GetHoaDonByYear(Year);
+        }
+        public List<HoaDon> getListHoaDonByIDLT(int IDLT)
+        {
+            return HoaDonDAL.Instance.getListHoaDonByIDLT(IDLT);
         }
     }
 }

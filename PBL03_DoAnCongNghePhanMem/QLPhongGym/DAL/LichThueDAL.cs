@@ -182,6 +182,13 @@ namespace QLPhongGym.DAL
                         select lt).ToList();
             }
         }
+        public LichThueHLV GetLichThueByIDLT(int IDLT)
+        {
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                return db.LichThueHLVs.FirstOrDefault(s => s.IDLT == IDLT);
+            }    
+        }
         public DataTable ShowListKH_DkiHLV(int idkh)
         {
             DataTable dt = CreatDataTable();

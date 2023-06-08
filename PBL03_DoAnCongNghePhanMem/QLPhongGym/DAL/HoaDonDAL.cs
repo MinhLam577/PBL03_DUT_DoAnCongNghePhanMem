@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Entity.Core.Metadata.Edm;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Markup;
+using QLPhongGym.BLL;
 using QLPhongGym.DTO;
 namespace QLPhongGym.DAL
 {
@@ -27,7 +30,9 @@ namespace QLPhongGym.DAL
             dt.Columns.Add("STT", typeof(int));
             dt.Columns.Add("Mã hóa đơn", typeof(int));
             dt.Columns.Add("Mã khách hàng", typeof(int));
+            dt.Columns.Add("Tên khách hàng", typeof(string));
             dt.Columns.Add("Tên gói tập", typeof(string));
+            dt.Columns.Add("Tên huấn luyện viên", typeof(string));
             dt.Columns.Add("Ngày đăng kí", typeof(DateTime));
             dt.Columns.Add("Giá tiền(vnd)", typeof(double));
             return dt;
@@ -76,39 +81,23 @@ namespace QLPhongGym.DAL
             }
 
         }
-        public DataTable GetDuLieuHoaDon_DAL()
-        {
-            using (QLPhongGymDB db = new QLPhongGymDB())
-            {
-                DataTable dt = new DataTable();
-                int cnt = 1;
-                dt = createDataTable();
-                var str = db.HoaDons.Select(p => new { p.IDHD, p.IDKH, p.GoiTap.NameGT, p.NgayThanhToan, p.Price });
-                foreach (var item in str)
-                {
-                    dt.Rows.Add(cnt++, item.IDHD, item.IDKH, item.NameGT, item.NgayThanhToan, item.Price);
-                }
-                return dt;
-            }
-        }
         public DataTable SearchHoaDon_DAL(string str)
         {
-            DataTable dt = new DataTable();
-            dt.Columns.Add("STT", typeof(int));
-            dt.Columns.Add("Mã hóa đơn", typeof(int));
-            dt.Columns.Add("Mã khách hàng", typeof(int));
-            dt.Columns.Add("Tên khách hàng", typeof(string));
-            dt.Columns.Add("Tên gói tập", typeof(string));
-            dt.Columns.Add("Ngày đăng kí", typeof(DateTime));
-            dt.Columns.Add("Giá tiền(vnd)", typeof(double));
+            DataTable dt = createDataTable();
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
                 int cnt = 1;
-                var s = db.HoaDons.Where(p => p.IDHD.ToString().Contains(str) || p.IDKH.ToString().Contains(str) || p.GoiTap.NameGT.Contains(str)).Select(p => new { p.IDHD, p.IDKH, p.GoiTap.NameGT, p.NgayThanhToan, p.Price }).ToList();
+                var s = db.HoaDons.Where(p => p.IDHD.ToString().Contains(str) || p.IDKH.ToString().Contains(str) || p.GoiTap.NameGT.Contains(str))
+                    .Select(p => new { p.IDHD, p.IDKH, p.IDGT, p.NgayThanhToan, p.Price, p.IDLT }).ToList();
                 
                 foreach (var item in s)
                 {
-                    dt.Rows.Add(cnt++, item.IDHD, item.IDKH, (UsersDAL.Instance.GetUserByID(item.IDKH)).Name, item.NameGT, item.NgayThanhToan, item.Price);
+                    string tenhlv = "NA", tengoitap = "NA";
+                    if (item.IDLT != null)
+                        tenhlv = UsersBLL.Instance.GetUserByID(LichThueBLL.Instance.GetLichThueByIDLT(item.IDLT.Value).IDHLV).Name;
+                    if (item.IDGT != null)
+                        tengoitap = GoiTapBLL.Instance.GetGTByID(item.IDGT.Value).NameGT;
+                    dt.Rows.Add(cnt++, item.IDHD, item.IDKH, (UsersDAL.Instance.GetUserByID(item.IDKH)).Name, tengoitap, tenhlv, item.NgayThanhToan, item.Price);
                 }
                 return dt;
             }
@@ -119,10 +108,16 @@ namespace QLPhongGym.DAL
             {
                 DataTable dt = new DataTable();
                 dt = createDataTable();
-                var hoadons = db.HoaDons.Where(p => p.IDHD.ToString().Contains(str)).Select(p => new { p.IDHD,p.IDKH, p.GoiTap.NameGT, p.NgayThanhToan,p.Price });
+                var hoadons = db.HoaDons.Where(p => p.IDHD.ToString().Equals(str)).Select(p => new { p.IDHD,p.IDKH, p.IDLT, p.IDGT, p.NgayThanhToan,p.Price });
+                int cnt = 0;
                 foreach (var item in hoadons)
                 {
-                    dt.Rows.Add(1, item.IDHD, item.IDKH, item.NameGT, item.NgayThanhToan, item.Price);
+                    string tenhlv = "NA", tengoitap = "NA";
+                    if (item.IDLT != null)
+                        tenhlv = UsersBLL.Instance.GetUserByID(LichThueBLL.Instance.GetLichThueByIDLT(item.IDLT.Value).IDHLV).Name;
+                    if (item.IDGT != null)
+                        tengoitap = GoiTapBLL.Instance.GetGTByID(item.IDGT.Value).NameGT;
+                    dt.Rows.Add(++cnt, item.IDHD, item.IDKH, (UsersDAL.Instance.GetUserByID(item.IDKH)).Name, tengoitap, tenhlv, item.NgayThanhToan, item.Price);
                 }
                 return dt;
             }
@@ -139,19 +134,26 @@ namespace QLPhongGym.DAL
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                DataTable dt = new DataTable();
-                dt.Columns.Add("STT", typeof(int));
-                dt.Columns.Add("Mã hóa đơn", typeof(int));
-                dt.Columns.Add("Mã khách hàng", typeof(int));
-                dt.Columns.Add("Tên khách hàng", typeof(string));
-                dt.Columns.Add("Tên gói tập", typeof(string));
-                dt.Columns.Add("Ngày đăng kí", typeof(DateTime));
-                dt.Columns.Add("Giá tiền(vnd)", typeof(double));
+                DataTable dt = createDataTable();
                 int cnt = 1;
-                var list_hd = db.HoaDons.Where(p => p.NgayThanhToan.Value.Year == Year).Select(p => new { p.IDHD, p.IDKH, p.GoiTap.NameGT, p.NgayThanhToan, p.Price });
+                var list_hd = db.HoaDons.Where(p => p.NgayThanhToan.Value.Year == Year).Select(p => new { p.IDHD, p.IDKH, p.IDGT, p.NgayThanhToan, p.Price, p.IDLT });
                 foreach (var item in list_hd)
-                    dt.Rows.Add(cnt++, item.IDHD, item.IDKH, (UsersDAL.Instance.GetUserByID(item.IDKH)).Name , item.NameGT, item.NgayThanhToan, item.Price);
+                {
+                    string tenhlv = "NA", tengoitap = "NA";
+                    if (item.IDLT != null)
+                        tenhlv = UsersBLL.Instance.GetUserByID(LichThueBLL.Instance.GetLichThueByIDLT(item.IDLT.Value).IDHLV).Name;
+                    if (item.IDGT != null)
+                        tengoitap = GoiTapBLL.Instance.GetGTByID(item.IDGT.Value).NameGT;
+                    dt.Rows.Add(cnt++, item.IDHD, item.IDKH, (UsersDAL.Instance.GetUserByID(item.IDKH)).Name, tengoitap, tenhlv, item.NgayThanhToan, item.Price);
+                }
                 return dt;
+            }
+        }
+        public List<HoaDon> getListHoaDonByIDLT(int IDLT)
+        {
+            using(QLPhongGymDB db = new QLPhongGymDB())
+            {
+                return db.HoaDons.Where(s => s.IDLT.Value == IDLT).ToList();
             }
         }
     }
