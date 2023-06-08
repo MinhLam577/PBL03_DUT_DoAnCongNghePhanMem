@@ -56,9 +56,8 @@ namespace QLPhongGym.GUI
             textMa.Text = makh.ToString();
             dateNgayLam.Value = ngaylam;
             textTen.Text = tenkhachhang;
-
-             cbbCa.Items.Clear();
-             cbbCa.Items.AddRange(LichThueBLL.Instance.danhsachcatheongay(ngaylam).ToArray());
+            cbbCa.Items.Clear();
+            cbbCa.Items.AddRange(LichThueBLL.Instance.danhsachcatheongay(ngaylam).ToArray());
             string tenca = "";
             tenca = DangKiLichLamViecDAL.getInStance.GetTenCa_ByIdCa(ca);
             cbbCa.SelectedItem = tenca;
@@ -69,10 +68,9 @@ namespace QLPhongGym.GUI
             cbbHlv.SelectedItem = name;
             lb_dongia.Text = "200.000";
         }
-        private void cbbCa_DropDown(object sender, EventArgs e)
+       private void cbbCa_DropDown(object sender, EventArgs e)
         {
             DateTime a = dateNgayLam.Value;
-            //oki
             cbbCa.Items.Clear();
             cbbHlv.SelectedItem = null;
             cbbCa.Items.AddRange(LichThueBLL.Instance.danhsachcatheongay(a).ToArray());
@@ -96,17 +94,14 @@ namespace QLPhongGym.GUI
         }
         private void cbbma_DropDown(object sender, EventArgs e)
         {
-            DateTime ngay = dateNgayLam.Value;
-           
+            DateTime ngay = dateNgayLam.Value;       
             cbbma.Items.Clear();
             if (cbbHlv.SelectedItem != null)
             {
                 int idca = -1;
                 string cbbtenca = cbbCa.SelectedItem.ToString().Trim();
                 idca = DangKiLichLamViecBAL.getInStance.GetIdCa_ByTenCa(cbbtenca);
-
                 string name = cbbHlv.SelectedItem.ToString().Trim();
-
                 cbbma.Items.AddRange(DangKiLichLamViecBAL.getInStance.danhsachmasinhvientheongayca(ngay, idca, name).ToArray());
             }
             else

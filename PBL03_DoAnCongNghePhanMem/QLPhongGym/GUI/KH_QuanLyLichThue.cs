@@ -30,8 +30,14 @@ namespace QLPhongGym.GUI
                 {
                     if (datagrid_LichThue.SelectedRows[0].Cells[1].Value != null)
                     {
+<<<<<<< HEAD
+                        int ma = Convert.ToInt32(row.Cells[0].Value.ToString());
+
+                        if (LichThueBLL.Instance.xoa(ma) == true)
+=======
                         bool check = true;
                         switch (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
+>>>>>>> ae233c161df1e67dbe9f058226b060ee0e015019
                         {
                             case DialogResult.OK:
                                 foreach (DataGridViewRow row in datagrid_LichThue.SelectedRows)
@@ -70,7 +76,6 @@ namespace QLPhongGym.GUI
             datagrid_LichThue.Columns["IDKH"].Visible = false;
             datagrid_LichThue.Columns["IDHLV"].Visible = false;
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             if (datagrid_LichThue.SelectedCells.Count == 1)

@@ -342,7 +342,11 @@ namespace QLPhongGym.GUI
             }
         private void FormLichHLV_Load(object sender, EventArgs e)
         {
-        tuanlam();
+            lbca1.Text = DangKiLichLamViecBAL.getInStance.GetTenCa_ByIdCa(1);
+            lbca2.Text = DangKiLichLamViecBAL.getInStance.GetTenCa_ByIdCa(2);
+            labelca3.Text = DangKiLichLamViecBAL.getInStance.GetTenCa_ByIdCa(3);
+            ca4.Text = DangKiLichLamViecBAL.getInStance.GetTenCa_ByIdCa(4);
+            tuanlam();
             labelTheoTuan();
             ngaylamviec.Value = DateTime.Now;
             hienthingayStart_End();

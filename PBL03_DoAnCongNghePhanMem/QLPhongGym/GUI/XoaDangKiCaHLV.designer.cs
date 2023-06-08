@@ -119,11 +119,6 @@
             // 
             this.cbbCaLam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbCaLam.FormattingEnabled = true;
-            this.cbbCaLam.Items.AddRange(new object[] {
-            "Ca 1",
-            "Ca 2",
-            "Ca 3",
-            "Ca 4"});
             this.cbbCaLam.Location = new System.Drawing.Point(386, 101);
             this.cbbCaLam.Name = "cbbCaLam";
             this.cbbCaLam.Size = new System.Drawing.Size(175, 24);

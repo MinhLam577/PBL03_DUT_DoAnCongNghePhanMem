@@ -593,6 +593,7 @@ namespace QLPhongGym.DAL
             }
             
         }
+
         public int GetIDuserByTenTK(string TenTK)
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
@@ -646,6 +647,25 @@ namespace QLPhongGym.DAL
             {
                 return db.LichLamViecTrongTuans.Where(s => s.NgayBatDau.Value.Year == year).ToList();
             }
+        }
+        public List<string> LayDanhSachCaLamViec()
+        {
+            List<string> danhSachCaLamViec = new List<string>();
+
+            
+                var danhSachCa = (from i in db.CaLamViecs
+                                  select new
+                                  {
+                                      i.Name
+                                  }).ToList();
+
+                foreach (var every in danhSachCa)
+                {
+                    danhSachCaLamViec.Add(every.Name.ToString());
+
+                }
+            
+            return danhSachCaLamViec;
         }
     }
  }
