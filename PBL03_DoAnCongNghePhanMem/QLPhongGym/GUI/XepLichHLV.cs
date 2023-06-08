@@ -44,11 +44,9 @@ namespace QLPhongGym.GUI
             cbbCaLam.Items.AddRange(DangKiLichLamViecBAL.getInStance.LayDanhSachCaLamViec().ToArray());
             ngaylamviec.Value = ngaylamviec1;
             cbbCaLam.SelectedItem = ca;
-            MessageBox.Show(ca);
             dateTimeNgayStart.Value = ngaybatdau1;
             dateTimeNgayEnd.Value = ngayketthuc1;
             string tenca = cbbCaLam.SelectedItem.ToString().Trim();
-            // int id = Convert.ToInt32(s.Substring(3, 1));
             int id = DangKiLichLamViecBAL.getInStance.GetIdCa_ByTenCa(tenca);
           
             dataGridView1.DataSource =DangKiLichLamViecBAL.getInStance.ListHLVByCaForm2(ngaylamviec.Value, id);

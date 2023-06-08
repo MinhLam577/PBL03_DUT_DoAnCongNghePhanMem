@@ -43,6 +43,7 @@
             // 
             // btnXoa
             // 
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Location = new System.Drawing.Point(12, 212);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(100, 50);
@@ -97,11 +98,11 @@
             // ngaylamviec
             // 
             this.ngaylamviec.CustomFormat = "yyyy-MM-dd";
-            this.ngaylamviec.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ngaylamviec.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ngaylamviec.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.ngaylamviec.Location = new System.Drawing.Point(386, 12);
             this.ngaylamviec.Name = "ngaylamviec";
-            this.ngaylamviec.Size = new System.Drawing.Size(175, 27);
+            this.ngaylamviec.Size = new System.Drawing.Size(175, 30);
             this.ngaylamviec.TabIndex = 42;
             this.ngaylamviec.Value = new System.DateTime(2023, 4, 21, 0, 0, 0, 0);
             // 
@@ -118,14 +119,17 @@
             // cbbCaLam
             // 
             this.cbbCaLam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbCaLam.Enabled = false;
+            this.cbbCaLam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbCaLam.FormattingEnabled = true;
-            this.cbbCaLam.Location = new System.Drawing.Point(386, 101);
+            this.cbbCaLam.Location = new System.Drawing.Point(386, 98);
             this.cbbCaLam.Name = "cbbCaLam";
-            this.cbbCaLam.Size = new System.Drawing.Size(175, 24);
+            this.cbbCaLam.Size = new System.Drawing.Size(175, 33);
             this.cbbCaLam.TabIndex = 47;
             // 
             // btnCancel
             // 
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(12, 347);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 54);

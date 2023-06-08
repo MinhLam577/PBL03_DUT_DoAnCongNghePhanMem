@@ -32,13 +32,10 @@ namespace QLPhongGym.GUI
                 {
                     int idhlv = Convert.ToInt32(selectedRow.Cells[1].Value.ToString());
                     DateTime ngaylam = Convert.ToDateTime(selectedRow.Cells[3].Value.ToString());
-                    LichLamViecTrongTuan a = new LichLamViecTrongTuan();
                     string ca = cbbCaLam.SelectedItem.ToString();
                     int idca = DangKiLichLamViecBAL.getInStance.GetIdCa_ByTenCa(ca);
-                    a.IDCa = idca;
-                    a.IDHLV = idhlv;
-                    a.NgayLam = ngaylam;
-                    if (DangKiLichLamViecBAL.getInStance.Xoa(a) == true)
+                    LichLamViecTrongTuan llv = DangKiLichLamViecBAL.getInStance.GetLLVByIDHLV_IDCa_NgayLam(idhlv, idca, ngaylam);
+                    if (DangKiLichLamViecBAL.getInStance.Xoa(llv) == true)
                     {
                         MessageBox.Show("Xoa thanh cong");
                         dataGridView1.DataSource = DangKiLichLamViecBAL.getInStance.ListHLVByCaForm2(ngaylam, idca);

@@ -241,7 +241,7 @@ namespace QLPhongGym.GUI
             hienthilenlistboxHang(dateTimeNgayStart.Value);
         }
         // ds hlv dang ki ca 
-        public void hienthilenlistboxHang(DateTime dateTimeStart/*, int idca*/)
+        public void hienthilenlistboxHang(DateTime dateTimeStart)
         {
             int u = 7;
             int v = 14;
