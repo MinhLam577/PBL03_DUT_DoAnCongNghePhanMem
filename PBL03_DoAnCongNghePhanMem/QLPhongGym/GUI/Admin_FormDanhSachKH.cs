@@ -147,6 +147,10 @@ namespace QLPhongGym.GUI
                                 //Trước khi xóa user thì phải xóa hết tất cả các gói tập đã đăng kí của user đó ra khỏi hệ thống
                                 DangKiGoiTapBLL.Instance.DeleteAllDKGT(DangKiGoiTapBLL.Instance.GetAllDKGTByIDKH(IDKH)); //Xóa tất cả các gói tập đã đăng kí của user
 
+                                //Xóa hóa đơn
+                                foreach (HoaDon hd in HoaDonBLL.Instance.GetListHoaDonByIDKH(IDKH))
+                                    HoaDonBLL.Instance.DeleteHoaDon(hd);
+
                                 //Trươc khi xóa khách hàng thì phải xóa hết các lịch thuê
                                 foreach (LichThueHLV lt in LichThueBLL.Instance.GetLichThueByIDKH(IDKH))
                                     LichThueBLL.Instance.DeleteLichThue(lt.IDLT);

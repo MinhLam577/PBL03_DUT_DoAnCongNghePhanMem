@@ -165,6 +165,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_HoaDon_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="IDUsers" />
+            </Principal>
+            <Dependent Role="HoaDon">
+              <PropertyRef Name="IDKH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_LichLamViecTrongTuan_CaLamViec">
           <End Role="CaLamViec" Type="Self.CaLamViec" Multiplicity="0..1" />
           <End Role="LichLamViecTrongTuan" Type="Self.LichLamViecTrongTuan" Multiplicity="*" />
@@ -264,6 +276,10 @@
             <End Role="LichThueHLV" EntitySet="LichThueHLV" />
             <End Role="HoaDon" EntitySet="HoaDon" />
           </AssociationSet>
+          <AssociationSet Name="FK_HoaDon_Users" Association="Self.FK_HoaDon_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="HoaDon" EntitySet="HoaDon" />
+          </AssociationSet>
           <AssociationSet Name="FK_LichLamViecTrongTuan_CaLamViec" Association="Self.FK_LichLamViecTrongTuan_CaLamViec">
             <End Role="CaLamViec" EntitySet="CaLamViec" />
             <End Role="LichLamViecTrongTuan" EntitySet="LichLamViecTrongTuan" />
@@ -360,6 +376,7 @@
           <NavigationProperty Name="DangKiGoiTaps" Relationship="QLPhongGymModel.FK_DangKiGoiTap_Users" FromRole="User" ToRole="DangKiGoiTap" />
           <NavigationProperty Name="HLV_LichThue" Relationship="QLPhongGymModel.FK_LichThueHLV_Users" FromRole="User" ToRole="LichThueHLV" />
           <NavigationProperty Name="KH_LichThue" Relationship="QLPhongGymModel.FK_LichThueHLV_Users1" FromRole="User" ToRole="LichThueHLV" />
+          <NavigationProperty Name="HoaDons" Relationship="QLPhongGymModel.FK_HoaDon_Users" FromRole="User" ToRole="HoaDon" />
         </EntityType>
         <Association Name="FK_LichLamViecTrongTuan_CaLamViec">
           <End Role="CaLamViec" Type="Self.CaLamViec" Multiplicity="0..1" />
@@ -416,11 +433,6 @@
             <End Role="TK" EntitySet="TKs" />
           </AssociationSet>
           <EntitySet Name="HoaDons" EntityType="QLPhongGymModel.HoaDon" />
-          <EntitySet Name="PhanQuyens" EntityType="QLPhongGymModel.PhanQuyen" />
-          <AssociationSet Name="FK_TK_PhanQuyen" Association="QLPhongGymModel.FK_TK_PhanQuyen">
-            <End Role="PhanQuyen" EntitySet="PhanQuyens" />
-            <End Role="TK" EntitySet="TKs" />
-          </AssociationSet>
           <EntitySet Name="DangKiGoiTaps" EntityType="QLPhongGymModel.DangKiGoiTap" />
           <AssociationSet Name="FK_DangKiGoiTap_Users" Association="QLPhongGymModel.FK_DangKiGoiTap_Users">
             <End Role="User" EntitySet="Users" />
@@ -448,6 +460,15 @@
             <End Role="User" EntitySet="Users" />
             <End Role="LichThueHLV" EntitySet="LichThueHLVs" />
           </AssociationSet>
+          <EntitySet Name="PhanQuyens" EntityType="QLPhongGymModel.PhanQuyen" />
+          <AssociationSet Name="FK_HoaDon_Users" Association="QLPhongGymModel.FK_HoaDon_Users">
+            <End Role="User" EntitySet="Users" />
+            <End Role="HoaDon" EntitySet="HoaDons" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TK_PhanQuyen" Association="QLPhongGymModel.FK_TK_PhanQuyen">
+            <End Role="PhanQuyen" EntitySet="PhanQuyens" />
+            <End Role="TK" EntitySet="TKs" />
+          </AssociationSet>
           </EntityContainer>
         <EntityType Name="KH" BaseType="QLPhongGymModel.User" />
         <EntityType Name="Admin" BaseType="QLPhongGymModel.User" />
@@ -467,27 +488,8 @@
           <Property Name="Price" Type="Double" />
           <NavigationProperty Name="GoiTap" Relationship="QLPhongGymModel.FK_HoaDon_GoiTap" FromRole="HoaDon" ToRole="GoiTap" />
           <NavigationProperty Name="LichThueHLV" Relationship="QLPhongGymModel.FK_HoaDon_LichThueHLV" FromRole="HoaDon" ToRole="LichThueHLV" />
+          <NavigationProperty Name="User" Relationship="QLPhongGymModel.FK_HoaDon_Users" FromRole="HoaDon" ToRole="User" />
         </EntityType>
-        <EntityType Name="PhanQuyen">
-          <Key>
-            <PropertyRef Name="IDQuyen" />
-          </Key>
-          <Property Name="IDQuyen" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TenQuyen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="TKs" Relationship="QLPhongGymModel.FK_TK_PhanQuyen" FromRole="PhanQuyen" ToRole="TK" />
-        </EntityType>
-        <Association Name="FK_TK_PhanQuyen">
-          <End Type="QLPhongGymModel.PhanQuyen" Role="PhanQuyen" Multiplicity="1" />
-          <End Type="QLPhongGymModel.TK" Role="TK" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PhanQuyen">
-              <PropertyRef Name="IDQuyen" />
-            </Principal>
-            <Dependent Role="TK">
-              <PropertyRef Name="IDQuyen" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityType Name="DangKiGoiTap">
           <Key>
             <PropertyRef Name="IDDK" />
@@ -600,6 +602,38 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="PhanQuyen">
+          <Key>
+            <PropertyRef Name="IDQuyen" />
+          </Key>
+          <Property Name="IDQuyen" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenQuyen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TKs" Relationship="QLPhongGymModel.FK_TK_PhanQuyen" FromRole="PhanQuyen" ToRole="TK" />
+        </EntityType>
+        <Association Name="FK_HoaDon_Users">
+          <End Type="QLPhongGymModel.User" Role="User" Multiplicity="1" />
+          <End Type="QLPhongGymModel.HoaDon" Role="HoaDon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="IDUsers" />
+            </Principal>
+            <Dependent Role="HoaDon">
+              <PropertyRef Name="IDKH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TK_PhanQuyen">
+          <End Type="QLPhongGymModel.PhanQuyen" Role="PhanQuyen" Multiplicity="1" />
+          <End Type="QLPhongGymModel.TK" Role="TK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PhanQuyen">
+              <PropertyRef Name="IDQuyen" />
+            </Principal>
+            <Dependent Role="TK">
+              <PropertyRef Name="IDQuyen" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -701,14 +735,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="PhanQuyens">
-            <EntityTypeMapping TypeName="QLPhongGymModel.PhanQuyen">
-              <MappingFragment StoreEntitySet="PhanQuyen">
-                <ScalarProperty Name="TenQuyen" ColumnName="TenQuyen" />
-                <ScalarProperty Name="IDQuyen" ColumnName="IDQuyen" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="DangKiGoiTaps">
             <EntityTypeMapping TypeName="QLPhongGymModel.DangKiGoiTap">
               <MappingFragment StoreEntitySet="DangKiGoiTap">
@@ -742,6 +768,14 @@
                 <ScalarProperty Name="IDCa" ColumnName="IDCa" />
                 <ScalarProperty Name="IDHLV" ColumnName="IDHLV" />
                 <ScalarProperty Name="IDLT" ColumnName="IDLT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PhanQuyens">
+            <EntityTypeMapping TypeName="QLPhongGymModel.PhanQuyen">
+              <MappingFragment StoreEntitySet="PhanQuyen">
+                <ScalarProperty Name="TenQuyen" ColumnName="TenQuyen" />
+                <ScalarProperty Name="IDQuyen" ColumnName="IDQuyen" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
