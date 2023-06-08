@@ -1522,11 +1522,7 @@
             this.listBox27.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox27.FormattingEnabled = true;
             this.listBox27.ItemHeight = 16;
-<<<<<<< HEAD
             this.listBox27.Location = new System.Drawing.Point(3, 3);
-=======
-            this.listBox27.Location = new System.Drawing.Point(1, 1);
->>>>>>> ae233c161df1e67dbe9f058226b060ee0e015019
             this.listBox27.Name = "listBox27";
             this.listBox27.Size = new System.Drawing.Size(148, 128);
             this.listBox27.TabIndex = 98;
