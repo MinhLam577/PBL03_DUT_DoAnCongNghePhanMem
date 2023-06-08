@@ -55,5 +55,9 @@ namespace QLPhongGym.BLL
         {
             return HoaDonDAL.Instance.GetTenUser_DAL(id);
         }
+        public DataTable GetHoaDonByYear(int Year)
+        {
+            return HoaDonDAL.Instance.GetHoaDonByYear(Year);
+        }
     }
 }

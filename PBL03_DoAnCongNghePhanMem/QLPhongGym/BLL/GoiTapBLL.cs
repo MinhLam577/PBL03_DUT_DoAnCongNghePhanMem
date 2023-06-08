@@ -55,5 +55,6 @@ namespace QLPhongGym.BLL
         {
             return GoiTapDAL.Instance.TenGT(str);
         }
+
     }
 }
