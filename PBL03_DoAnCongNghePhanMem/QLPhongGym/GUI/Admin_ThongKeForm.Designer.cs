@@ -28,62 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_ThongKeForm));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lb_cong = new System.Windows.Forms.Label();
             this.lb_nam = new System.Windows.Forms.Label();
-            this.lb_tru = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.lb_totalcustomer = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.lb_totalcoach = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lb_tongthunhap = new System.Windows.Forms.Label();
             this.lb = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.lb_equipment = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label = new System.Windows.Forms.Label();
             this.lb_package = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.chart_doanhthu = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart_soluongdkgt = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart_nhucaudkgt = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.lb_cong = new System.Windows.Forms.Label();
+            this.lb_tru = new System.Windows.Forms.Label();
+            this.pb_kh = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pb_hlv = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pb_tb = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pb_gt = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart_doanhthu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart_soluongdkgt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart_nhucaudkgt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_kh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_hlv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_tb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_gt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -125,17 +135,6 @@
             this.panel1.Size = new System.Drawing.Size(1471, 46);
             this.panel1.TabIndex = 12;
             // 
-            // lb_cong
-            // 
-            this.lb_cong.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lb_cong.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_cong.Image = ((System.Drawing.Image)(resources.GetObject("lb_cong.Image")));
-            this.lb_cong.Location = new System.Drawing.Point(809, 4);
-            this.lb_cong.Name = "lb_cong";
-            this.lb_cong.Size = new System.Drawing.Size(73, 35);
-            this.lb_cong.TabIndex = 61;
-            this.lb_cong.Click += new System.EventHandler(this.lb_cong_Click);
-            // 
             // lb_nam
             // 
             this.lb_nam.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -148,21 +147,11 @@
             this.lb_nam.Text = "Năm 2003";
             this.lb_nam.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lb_tru
-            // 
-            this.lb_tru.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lb_tru.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_tru.Image = ((System.Drawing.Image)(resources.GetObject("lb_tru.Image")));
-            this.lb_tru.Location = new System.Drawing.Point(559, 4);
-            this.lb_tru.Name = "lb_tru";
-            this.lb_tru.Size = new System.Drawing.Size(73, 35);
-            this.lb_tru.TabIndex = 60;
-            this.lb_tru.Click += new System.EventHandler(this.lb_tru_Click);
-            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.pb_kh);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.lb_totalcustomer);
             this.panel2.Controls.Add(this.pictureBox3);
@@ -199,23 +188,11 @@
             this.lb_totalcustomer.Text = "109";
             this.lb_totalcustomer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(71, 16);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(138, 62);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.DarkMagenta;
+            this.panel3.Controls.Add(this.pb_hlv);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.lb_totalcoach);
             this.panel3.Controls.Add(this.pictureBox2);
@@ -252,23 +229,11 @@
             this.lb_totalcoach.Text = "109";
             this.lb_totalcoach.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(67, 16);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(148, 62);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
             // panel4
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.panel4.Controls.Add(this.pictureBox8);
             this.panel4.Controls.Add(this.lb_tongthunhap);
             this.panel4.Controls.Add(this.lb);
             this.panel4.Controls.Add(this.pictureBox4);
@@ -305,24 +270,11 @@
             this.lb.Text = "Total Earning";
             this.lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(75, 16);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(135, 62);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            // 
             // panel5
             // 
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.panel5.Controls.Add(this.pb_tb);
             this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.lb_equipment);
             this.panel5.Controls.Add(this.pictureBox6);
@@ -359,23 +311,11 @@
             this.lb_equipment.Text = "109";
             this.lb_equipment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(85, 16);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(131, 62);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 0;
-            this.pictureBox6.TabStop = false;
-            // 
             // panel7
             // 
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.panel7.Controls.Add(this.pb_gt);
             this.panel7.Controls.Add(this.label);
             this.panel7.Controls.Add(this.lb_package);
             this.panel7.Controls.Add(this.pictureBox1);
@@ -412,19 +352,6 @@
             this.lb_package.Text = "109";
             this.lb_package.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(82, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(114, 62);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.AutoScroll = true;
@@ -441,34 +368,34 @@
             // 
             this.chart_doanhthu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chart_doanhthu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            chartArea4.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea4.AxisX.MinorGrid.LineWidth = 0;
-            chartArea4.AxisX.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            chartArea4.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea4.AxisY.LabelStyle.Format = "{0} VNĐ";
-            chartArea4.AxisY.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            chartArea4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            chartArea4.Name = "ChartArea1";
-            this.chart_doanhthu.ChartAreas.Add(chartArea4);
-            legend4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            legend4.ForeColor = System.Drawing.Color.White;
-            legend4.Name = "Legend1";
-            this.chart_doanhthu.Legends.Add(legend4);
+            chartArea7.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea7.AxisX.MinorGrid.LineWidth = 0;
+            chartArea7.AxisX.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            chartArea7.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea7.AxisY.LabelStyle.Format = "{0} VNĐ";
+            chartArea7.AxisY.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            chartArea7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            chartArea7.Name = "ChartArea1";
+            this.chart_doanhthu.ChartAreas.Add(chartArea7);
+            legend7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            legend7.ForeColor = System.Drawing.Color.White;
+            legend7.Name = "Legend1";
+            this.chart_doanhthu.Legends.Add(legend7);
             this.chart_doanhthu.Location = new System.Drawing.Point(3, 3);
             this.chart_doanhthu.Name = "chart_doanhthu";
-            series3.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
-            series3.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
-            series3.BorderWidth = 3;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
-            series3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(88)))), ((int)(((byte)(127)))));
-            series3.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series3.LabelForeColor = System.Drawing.Color.White;
-            series3.Legend = "Legend1";
-            series3.MarkerColor = System.Drawing.Color.MediumPurple;
-            series3.Name = "Doanh thu";
-            series3.YValuesPerPoint = 2;
-            this.chart_doanhthu.Series.Add(series3);
+            series5.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
+            series5.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
+            series5.BorderWidth = 3;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
+            series5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(88)))), ((int)(((byte)(127)))));
+            series5.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series5.LabelForeColor = System.Drawing.Color.White;
+            series5.Legend = "Legend1";
+            series5.MarkerColor = System.Drawing.Color.MediumPurple;
+            series5.Name = "Doanh thu";
+            series5.YValuesPerPoint = 2;
+            this.chart_doanhthu.Series.Add(series5);
             this.chart_doanhthu.Size = new System.Drawing.Size(1452, 584);
             this.chart_doanhthu.TabIndex = 9;
             this.chart_doanhthu.Text = "char1";
@@ -477,26 +404,26 @@
             // 
             this.chart_soluongdkgt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chart_soluongdkgt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            chartArea5.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea5.AxisX.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            chartArea5.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea5.AxisY.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            chartArea5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            chartArea5.Name = "ChartArea1";
-            this.chart_soluongdkgt.ChartAreas.Add(chartArea5);
-            legend5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            legend5.ForeColor = System.Drawing.Color.White;
-            legend5.Name = "Legend1";
-            this.chart_soluongdkgt.Legends.Add(legend5);
+            chartArea8.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea8.AxisX.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            chartArea8.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea8.AxisY.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            chartArea8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            chartArea8.Name = "ChartArea1";
+            this.chart_soluongdkgt.ChartAreas.Add(chartArea8);
+            legend8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            legend8.ForeColor = System.Drawing.Color.White;
+            legend8.Name = "Legend1";
+            this.chart_soluongdkgt.Legends.Add(legend8);
             this.chart_soluongdkgt.Location = new System.Drawing.Point(3, 593);
             this.chart_soluongdkgt.Name = "chart_soluongdkgt";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
-            series4.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series4.LabelForeColor = System.Drawing.Color.White;
-            series4.Legend = "Legend1";
-            series4.Name = "Số lượng đăng kí gói";
-            this.chart_soluongdkgt.Series.Add(series4);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
+            series6.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series6.LabelForeColor = System.Drawing.Color.White;
+            series6.Legend = "Legend1";
+            series6.Name = "Số lượng đăng kí gói";
+            this.chart_soluongdkgt.Series.Add(series6);
             this.chart_soluongdkgt.Size = new System.Drawing.Size(1455, 584);
             this.chart_soluongdkgt.TabIndex = 10;
             this.chart_soluongdkgt.Text = "char1";
@@ -505,22 +432,164 @@
             // 
             this.chart_nhucaudkgt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chart_nhucaudkgt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            chartArea6.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea6.AxisX.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            chartArea6.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea6.AxisY.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            chartArea6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            chartArea6.Name = "ChartArea1";
-            this.chart_nhucaudkgt.ChartAreas.Add(chartArea6);
-            legend6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
-            legend6.ForeColor = System.Drawing.Color.White;
-            legend6.Name = "Legend1";
-            this.chart_nhucaudkgt.Legends.Add(legend6);
+            chartArea9.AxisX.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea9.AxisX.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            chartArea9.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea9.AxisY.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            chartArea9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            chartArea9.Name = "ChartArea1";
+            this.chart_nhucaudkgt.ChartAreas.Add(chartArea9);
+            legend9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(45)))), ((int)(((byte)(86)))));
+            legend9.ForeColor = System.Drawing.Color.White;
+            legend9.Name = "Legend1";
+            this.chart_nhucaudkgt.Legends.Add(legend9);
             this.chart_nhucaudkgt.Location = new System.Drawing.Point(3, 1183);
             this.chart_nhucaudkgt.Name = "chart_nhucaudkgt";
             this.chart_nhucaudkgt.Size = new System.Drawing.Size(1455, 585);
             this.chart_nhucaudkgt.TabIndex = 11;
             this.chart_nhucaudkgt.Text = "char1";
+            // 
+            // lb_cong
+            // 
+            this.lb_cong.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lb_cong.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_cong.Image = ((System.Drawing.Image)(resources.GetObject("lb_cong.Image")));
+            this.lb_cong.Location = new System.Drawing.Point(809, 4);
+            this.lb_cong.Name = "lb_cong";
+            this.lb_cong.Size = new System.Drawing.Size(73, 35);
+            this.lb_cong.TabIndex = 61;
+            this.lb_cong.Click += new System.EventHandler(this.lb_cong_Click);
+            // 
+            // lb_tru
+            // 
+            this.lb_tru.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lb_tru.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_tru.Image = ((System.Drawing.Image)(resources.GetObject("lb_tru.Image")));
+            this.lb_tru.Location = new System.Drawing.Point(559, 4);
+            this.lb_tru.Name = "lb_tru";
+            this.lb_tru.Size = new System.Drawing.Size(73, 35);
+            this.lb_tru.TabIndex = 60;
+            this.lb_tru.Click += new System.EventHandler(this.lb_tru_Click);
+            // 
+            // pb_kh
+            // 
+            this.pb_kh.Image = ((System.Drawing.Image)(resources.GetObject("pb_kh.Image")));
+            this.pb_kh.Location = new System.Drawing.Point(236, 0);
+            this.pb_kh.Name = "pb_kh";
+            this.pb_kh.Size = new System.Drawing.Size(42, 37);
+            this.pb_kh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_kh.TabIndex = 3;
+            this.pb_kh.TabStop = false;
+            this.pb_kh.Click += new System.EventHandler(this.pb_kh_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(71, 16);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(138, 62);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pb_hlv
+            // 
+            this.pb_hlv.Image = ((System.Drawing.Image)(resources.GetObject("pb_hlv.Image")));
+            this.pb_hlv.Location = new System.Drawing.Point(239, 0);
+            this.pb_hlv.Name = "pb_hlv";
+            this.pb_hlv.Size = new System.Drawing.Size(42, 37);
+            this.pb_hlv.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_hlv.TabIndex = 4;
+            this.pb_hlv.TabStop = false;
+            this.pb_hlv.Click += new System.EventHandler(this.pb_hlv_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(67, 16);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(148, 62);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(247, 0);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(42, 37);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 5;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(75, 16);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(135, 62);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pb_tb
+            // 
+            this.pb_tb.Image = ((System.Drawing.Image)(resources.GetObject("pb_tb.Image")));
+            this.pb_tb.Location = new System.Drawing.Point(255, 0);
+            this.pb_tb.Name = "pb_tb";
+            this.pb_tb.Size = new System.Drawing.Size(42, 37);
+            this.pb_tb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_tb.TabIndex = 6;
+            this.pb_tb.TabStop = false;
+            this.pb_tb.Click += new System.EventHandler(this.pb_tb_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(85, 16);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(131, 62);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 0;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pb_gt
+            // 
+            this.pb_gt.Image = ((System.Drawing.Image)(resources.GetObject("pb_gt.Image")));
+            this.pb_gt.Location = new System.Drawing.Point(235, 0);
+            this.pb_gt.Name = "pb_gt";
+            this.pb_gt.Size = new System.Drawing.Size(42, 37);
+            this.pb_gt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_gt.TabIndex = 7;
+            this.pb_gt.TabStop = false;
+            this.pb_gt.Click += new System.EventHandler(this.pb_gt_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(82, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(114, 62);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Admin_ThongKeForm
             // 
@@ -536,19 +605,24 @@
             this.flowLayoutPanel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart_doanhthu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart_soluongdkgt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart_nhucaudkgt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_kh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_hlv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_tb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_gt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -585,5 +659,10 @@
         private System.Windows.Forms.Label lb_cong;
         private System.Windows.Forms.Label lb_nam;
         private System.Windows.Forms.Label lb_tru;
+        private System.Windows.Forms.PictureBox pb_kh;
+        private System.Windows.Forms.PictureBox pb_hlv;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pb_tb;
+        private System.Windows.Forms.PictureBox pb_gt;
     }
 }

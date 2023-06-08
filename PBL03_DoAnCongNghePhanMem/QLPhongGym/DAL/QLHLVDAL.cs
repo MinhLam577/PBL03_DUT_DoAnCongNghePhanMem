@@ -380,6 +380,31 @@ namespace QLPhongGym.DAL
         {
             return QLHLVDAL.getInstance.GetAllHLVID();
         }
-
+        public DataTable GetListHLV_ByYear(int Year)
+        {
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                dt = CreatDataTable();
+                int cnt = 1;
+                var data = db.LichLamViecTrongTuans.Where(s => s.NgayBatDau.Value.Year == Year).Select(s => s.IDHLV.Value).Distinct().ToList();
+                List<HLV> list_hlv = new List<HLV>();
+                foreach (int i in data)
+                    list_hlv.Add((HLV)UsersDAL.Instance.GetUserByID(i));
+                foreach (var list in list_hlv)
+                    dt.Rows.Add(
+                                  cnt++,
+                                  list.IDUsers,
+                                  list.Name,
+                                  list.DateBorn,
+                                  list.Sex,
+                                  list.CCCD,
+                                  list.Gmail,
+                                  list.Sdt,
+                                  list.Address,
+                                  list.BangCap
+                          );
+                return dt;
+            }
+        }
     }
 }

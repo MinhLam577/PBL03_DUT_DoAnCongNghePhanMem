@@ -89,5 +89,9 @@ namespace QLPhongGym.BLL
         {
             return db.Users.OfType<HLV>().Select(s => s.IDUsers).ToList();
         }
+        public DataTable GetListHLV_ByYear(int Year)
+        {
+            return QLHLVDAL.getInstance.GetListHLV_ByYear(Year);
+        }
     }
 }

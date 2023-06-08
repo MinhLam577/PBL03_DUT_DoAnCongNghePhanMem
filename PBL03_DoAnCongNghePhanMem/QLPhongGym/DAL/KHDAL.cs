@@ -303,6 +303,20 @@ namespace QLPhongGym.DAL
             using (QLPhongGymDB db = new QLPhongGymDB())
                 return db.Users.OfType<KH>().Select(s => s.IDUsers).ToList();
         }
-        
+        public DataTable GetListKH_ByYear(int Year)
+        {
+            using(QLPhongGymDB db = new QLPhongGymDB())
+            {
+                dt = CreateTable();
+                int cnt = 1;
+                var data = db.DangKiGoiTaps.Where(s => s.NgayDangKiGT.Value.Year == Year).Select(s => s.IDKH.Value).Distinct().ToList();
+                List<KH> list_kh = new List<KH>();
+                foreach (int i in data)
+                    list_kh.Add((KH)UsersDAL.Instance.GetUserByID(i));
+                foreach (var i in list_kh)
+                    dt.Rows.Add(cnt++, i.IDUsers, i.Name, i.DateBorn, i.Sex, i.CCCD, i.Address, i.Gmail, i.Sdt);
+                return dt;
+            }
+        }
     }
 }
