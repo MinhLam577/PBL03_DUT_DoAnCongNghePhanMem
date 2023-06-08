@@ -45,11 +45,8 @@ namespace QLPhongGym.DAL
             dt.Columns.AddRange(new DataColumn[]
                 {
                     new DataColumn { ColumnName = "STT", DataType = typeof(int) },
-                    //new DataColumn { ColumnName = "Ca", DataType = typeof(int) },
                     new DataColumn { ColumnName = "IDMaHLV", DataType = typeof(int) },
                     new DataColumn { ColumnName = "Name", DataType = typeof(string) },
-                   // new DataColumn { ColumnName = "NgayBatDau", DataType = typeof(DateTime) },
-                    //new DataColumn {ColumnName = "NgayKetThuc",DataType = typeof(DateTime)},
                     new DataColumn {ColumnName = "NgayLam",DataType = typeof(DateTime)}
                 });
             return dt;
