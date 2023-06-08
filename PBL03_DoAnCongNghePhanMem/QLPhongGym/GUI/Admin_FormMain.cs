@@ -265,5 +265,11 @@ namespace QLPhongGym.GUI
                 
             base.WndProc(ref m);
         }
+
+        private void buttonHoaDon_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new Admin_FormHoaDon());
+            hideMenu();
+        }
     }
 }

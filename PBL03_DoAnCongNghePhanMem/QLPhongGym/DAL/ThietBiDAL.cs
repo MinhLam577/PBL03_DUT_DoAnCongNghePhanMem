@@ -24,7 +24,7 @@ namespace QLPhongGym.DAL
             }
             private set { }
         }
-        
+
         public DataTable createDataTable()
         {
             DataTable dt = new DataTable();
@@ -42,7 +42,7 @@ namespace QLPhongGym.DAL
 
         public List<ThietBi> GetAllTB()
         {
-            using(QLPhongGymDB db = new QLPhongGymDB())
+            using (QLPhongGymDB db = new QLPhongGymDB())
                 return db.ThietBis.ToList();
         }
         public DataTable GetAllDanhSachThietBi_DAL()
@@ -59,7 +59,7 @@ namespace QLPhongGym.DAL
                 }
                 return dt;
             }
-                
+
         }
         public void UpdateThietBi_DAL(ThietBi tb)
         {
@@ -105,7 +105,7 @@ namespace QLPhongGym.DAL
                     throw;
                 }
             }
-                
+
         }
         public void DeleteTB_DAL(int matb)
         {
@@ -122,34 +122,21 @@ namespace QLPhongGym.DAL
                     MessageBox.Show("Lỗi" + ex.Message);
                 }
             }
-                
+
         }
         public DataTable SearchTB_DAL(string str)
         {
             DataTable dt = new DataTable();
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                int id, cnt = 1;
-                if (Int32.TryParse(str, out id))
+                int cnt = 1;
+                var s = db.ThietBis.Where(p => p.IDTB.ToString().Contains(str) || p.Name.Contains(str)|| p.SoLuong.ToString().Contains(str) || p.NhaCungCap.Contains(str) || p.MoTa.Contains(str)).ToList();
+                dt = createDataTable();
+                foreach (var item in s)
                 {
-                    var s = db.ThietBis.Where(p => p.IDTB == id).ToList();
-                    dt = createDataTable();
-                    foreach (var item in s)
-                    {
-                        dt.Rows.Add(cnt++, item.IDTB, item.Name, item.SoLuong, item.SoLuongHong, item.NhaCungCap, item.NamSX, item.MoTa, item.Price);
-                    }
-                    return dt;
+                    dt.Rows.Add(cnt++, item.IDTB, item.Name, item.SoLuong, item.SoLuongHong, item.NhaCungCap, item.NamSX, item.MoTa, item.Price);
                 }
-                else
-                {
-                    var query = db.ThietBis.Where(p => p.Name.Contains(str) || p.NhaCungCap.Contains(str) || p.MoTa.Contains(str)).ToList();
-                    dt = createDataTable();
-                    foreach (var item in query)
-                    {
-                        dt.Rows.Add(cnt++, item.IDTB, item.Name, item.SoLuong, item.SoLuongHong, item.NhaCungCap, item.NamSX, item.MoTa, item.Price);
-                    }
-                    return dt;
-                }
+                return dt;
             }
         }
         public DataTable Sort_DLL(string sort, string search)
@@ -240,7 +227,7 @@ namespace QLPhongGym.DAL
                 }
                 return dt;
             }
-                
+
         }
         public ThietBi GetThietBiByID(int ID)
         {
@@ -256,7 +243,7 @@ namespace QLPhongGym.DAL
                     return null;
                 }
             }
-                
+
 
         }
         public bool KiemTraTen_DAL(string name)

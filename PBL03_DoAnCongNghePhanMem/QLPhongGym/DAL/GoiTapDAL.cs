@@ -65,8 +65,16 @@ namespace QLPhongGym.DAL
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                db.Entry(GT).State = System.Data.Entity.EntityState.Deleted;
-                db.SaveChanges();
+                    try
+                    {
+                        GoiTap query = db.GoiTaps.Where(p => p.IDGT == GT.IDGT).FirstOrDefault();
+                        db.GoiTaps.Remove(query);
+                        db.SaveChanges();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi" + ex.Message);
+                    }
             }
                 
         }
