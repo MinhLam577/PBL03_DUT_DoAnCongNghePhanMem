@@ -52,6 +52,10 @@ namespace QLPhongGym.BLL
         {
             LichThueDAL.Instance.DeleteLichThue(IDLT);
         }
+        public LichThueHLV GetLichThueByIDLT(int IDLT)
+        {
+            return LichThueDAL.Instance.GetLichThueByIDLT((int)IDLT);
+        }
         public List<LichThueHLV> GetLichThueByIDKH(int IDKH)
         {
             return LichThueDAL.Instance.GetLichThueByIDKH(IDKH);

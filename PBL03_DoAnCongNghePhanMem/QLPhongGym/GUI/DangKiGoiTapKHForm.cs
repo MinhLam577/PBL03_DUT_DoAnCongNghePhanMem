@@ -105,7 +105,6 @@ namespace QLPhongGym.GUI
                                         {
                                             if (cb_inhoadon.Checked)
                                             {
-
                                                 HoaDonForm f = new HoaDonForm(kh.Name, gt, giamgia, dkgt, null);
                                                 DangKiThanhCong(this, new EventArgs());
                                                 f.Show();

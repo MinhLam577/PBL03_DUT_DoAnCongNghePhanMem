@@ -41,6 +41,12 @@ namespace QLPhongGym.GUI
                                     DateTime NgayLam = Convert.ToDateTime(row.Cells["NgayLam"].Value.ToString()).Date;
                                     int IDCa = Convert.ToInt32(DangKiLichLamViecBAL.getInStance.GetCaLamViecByTenCa(row.Cells["Tên Ca"].Value.ToString()).IDCa);
                                     LichThueHLV lt = LichThueBLL.Instance.GetLichThueByIDKH_IDHLV_NgayLam_IDCa(IDKH, IDHLV, NgayLam, IDCa);
+
+                                    //Xóa hóa đơn
+                                    foreach (HoaDon hd in HoaDonBLL.Instance.getListHoaDonByIDLT(lt.IDLT))
+                                        HoaDonBLL.Instance.DeleteHoaDon(hd);
+
+                                    //Xóa lịch thuê
                                     if (lt != null)
                                         LichThueBLL.Instance.DeleteLichThue(lt.IDLT);
                                     else
@@ -74,59 +80,63 @@ namespace QLPhongGym.GUI
         {
             if (datagrid_LichThue.SelectedRows.Count == 1)
             {
-                try
+                if (datagrid_LichThue.SelectedRows[0].Cells[0].Value != null)
                 {
-                    int selectedRowIndex = datagrid_LichThue.SelectedCells[0].RowIndex;
-                    DataGridViewRow row = datagrid_LichThue.Rows[selectedRowIndex];
-                    int ma = 0;
-                    string tenkhachhang = "";
-                    int idhlv = 0;
-                    string name = "";
-                    DateTime ngaylam = DateTime.Now;
-                    int ca = 0;
+                    try
+                    {
+                        int selectedRowIndex = datagrid_LichThue.SelectedCells[0].RowIndex;
+                        DataGridViewRow row = datagrid_LichThue.Rows[selectedRowIndex];
+                        int ma = 0;
+                        string tenkhachhang = "";
+                        int idhlv = 0;
+                        string name = "";
+                        DateTime ngaylam = DateTime.Now;
+                        int ca = 0;
 
-                    if (row.Cells[0].Value != null)
-                    {
-                        ma = Convert.ToInt32(row.Cells[0].Value.ToString());
-                    }
+                        if (row.Cells[0].Value != null)
+                        {
+                            ma = Convert.ToInt32(row.Cells[0].Value.ToString());
+                        }
 
-                    if (row.Cells[1].Value != null)
-                    {
-                        tenkhachhang = row.Cells[1].Value.ToString();
-                    }
+                        if (row.Cells[1].Value != null)
+                        {
+                            tenkhachhang = row.Cells[1].Value.ToString();
+                        }
 
-                    if (row.Cells[2].Value != null)
-                    {
-                        idhlv = Convert.ToInt32(row.Cells[2].Value.ToString());
-                    }
+                        if (row.Cells[2].Value != null)
+                        {
+                            idhlv = Convert.ToInt32(row.Cells[2].Value.ToString());
+                        }
 
-                    if (row.Cells[3].Value != null)
-                    {
-                        name = row.Cells[3].Value.ToString();
-                    }
+                        if (row.Cells[3].Value != null)
+                        {
+                            name = row.Cells[3].Value.ToString();
+                        }
 
-                    if (row.Cells[4].Value != null)
-                    {
-                        ngaylam = Convert.ToDateTime(row.Cells[4].Value.ToString());
+                        if (row.Cells[4].Value != null)
+                        {
+                            ngaylam = Convert.ToDateTime(row.Cells[4].Value.ToString());
+                        }
+                        string tenca = "";
+                        if (row.Cells[5].Value != null)
+                        {
+                            tenca = (row.Cells[5].Value.ToString().Trim());
+                            ca = DangKiLichLamViecBAL.getInStance.GetIdCa_ByTenCa(tenca);
+                        }
+                        if (selectedRowIndex != -1)
+                        {
+                            KH_SuaLich a = new KH_SuaLich();
+                            a.setForm1(ma, tenkhachhang, idhlv, name, ngaylam, ca);
+                            a.Show();
+                            a.buon += new KH_SuaLich.mydelegate(Edit);
+                        }
                     }
-                    string tenca = "";
-                    if (row.Cells[5].Value != null)
+                    catch (Exception ex)
                     {
-                        tenca = (row.Cells[5].Value.ToString().Trim());
-                        ca = DangKiLichLamViecBAL.getInStance.GetIdCa_ByTenCa(tenca);
-                    }
-                    if(selectedRowIndex != -1)
-                    {
-                        KH_SuaLich a = new KH_SuaLich();
-                        a.setForm1(ma, tenkhachhang, idhlv, name, ngaylam, ca);
-                        a.Show();
-                        a.buon += new KH_SuaLich.mydelegate(Edit);
+                        MessageBox.Show("Lỗi: " + ex.Message);
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi: " + ex.Message);
-                }
+                
             }
         }
 

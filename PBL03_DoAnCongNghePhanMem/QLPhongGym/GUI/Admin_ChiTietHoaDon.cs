@@ -37,8 +37,22 @@ namespace QLPhongGym.GUI
                 lb_gt.Text = hd.Rows[0]["Tên gói tập"].ToString();
                 lb_ngaydki.Text = hd.Rows[0]["Ngày đăng kí"].ToString();
                 lb_thanhtien.Text = hd.Rows[0]["Giá tiền(vnd)"].ToString();
+                lb_hlv.Text = hd.Rows[0]["Tên huấn luyện viên"].ToString();
             }
         }
+        [System.Runtime.InteropServices.DllImportAttribute("gdi32.dll")]
+        private static extern bool BitBlt
+        (
+            IntPtr hdcDest, // handle to destination DC  
+            int nXDest, // x-coord of destination upper-left corner  
+            int nYDest, // y-coord of destination upper-left corner  
+            int nWidth, // width of destination rectangle  
+            int nHeight, // height of destination rectangle  
+            IntPtr hdcSrc, // handle to source DC  
+            int nXSrc, // x-coordinate of source upper-left corner  
+            int nYSrc, // y-coordinate of source upper-left corner  
+            System.Int32 dwRop // raster operation code  
+        );
         private void btn_inhoadon_Click(object sender, EventArgs e)
         {
             btn_inhoadon.Visible = false;
@@ -48,9 +62,10 @@ namespace QLPhongGym.GUI
             Graphics g2 = Graphics.FromImage(MyImage);
             IntPtr dc1 = g1.GetHdc();
             IntPtr dc2 = g2.GetHdc();
-            //BitBlt(dc2, 0, 0, this.ClientRectangle.Width, this.ClientRectangle.Height, dc1, 0, 0, 13369376);
+            BitBlt(dc2, 0, 0, this.ClientRectangle.Width, this.ClientRectangle.Height, dc1, 0, 0, 13369376);
             g1.ReleaseHdc(dc1);
             g2.ReleaseHdc(dc2);
+            
             var codecFilter = "(*.png)|*.png|(*.jpg)|*.jpg";
             using (SaveFileDialog sfd = new SaveFileDialog()
             {

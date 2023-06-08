@@ -128,6 +128,15 @@ namespace QLPhongGym.GUI
             b.IDCa = idca;
             if (LichThueBLL.Instance.DangKiThueHLV(b) == true)
             {
+                LichThueHLV lthlv = LichThueBLL.Instance.GetLichThueByIDKH_IDHLV_NgayLam_IDCa(makh, idhlv, ngaylam, idca);
+                HoaDon hd = new HoaDon
+                {
+                    IDKH = makh,
+                    NgayThanhToan = DateTime.Today,
+                    Price = 200000,
+                    IDLT = lthlv.IDLT
+                };
+                HoaDonBLL.Instance.AddHoaDon(hd);
                 MessageBox.Show("Đăng Kí Thành Công");
             }
             else
@@ -136,11 +145,7 @@ namespace QLPhongGym.GUI
             }
 
             this.Dispose();
-
         }
-      
-        
-
         private void cbbma_SelectedIndexChanged(object sender, EventArgs e)
         {
             lb_dongia.Text = "200.000";
