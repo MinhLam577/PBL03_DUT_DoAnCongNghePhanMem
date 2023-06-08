@@ -265,6 +265,5 @@ namespace QLPhongGym.GUI
                 
             base.WndProc(ref m);
         }
-
     }
 }
