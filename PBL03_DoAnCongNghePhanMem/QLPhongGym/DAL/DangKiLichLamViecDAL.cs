@@ -187,6 +187,13 @@ namespace QLPhongGym.DAL
             }
 
         }
+        public LichLamViecTrongTuan GetLLVByIDHLV_IDCa_NgayLam(int IDHLV, int IDCa, DateTime Ngaylam)
+        {
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                return db.LichLamViecTrongTuans.FirstOrDefault(s => s.IDHLV.Value == IDHLV && s.IDCa.Value == IDCa && s.NgayLam.Value == Ngaylam);
+            }
+        }
         public void DeleteLichLamViec(LichLamViecTrongTuan lichlamviec)
         {
             using (QLPhongGymDB db = new QLPhongGymDB())

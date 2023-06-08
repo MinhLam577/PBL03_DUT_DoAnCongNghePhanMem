@@ -64,7 +64,10 @@ namespace QLPhongGym.BLL
         {
             return DangKiLichLamViecDAL.getInStance.Xoa(a);
         }
-      
+        public LichLamViecTrongTuan GetLLVByIDHLV_IDCa_NgayLam(int IDHLV, int IDCa, DateTime Ngaylam)
+        {
+            return DangKiLichLamViecDAL.getInStance.GetLLVByIDHLV_IDCa_NgayLam(IDHLV, IDCa, Ngaylam);
+        }
         public DataTable CapNhatListHLVAll()
         {
 
