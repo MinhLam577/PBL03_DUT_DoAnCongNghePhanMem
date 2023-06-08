@@ -34,7 +34,6 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
@@ -137,7 +136,6 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button14);
             this.panel1.Controls.Add(this.button13);
             this.panel1.Controls.Add(this.button16);
@@ -150,27 +148,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(240, 586);
             this.panel1.TabIndex = 1;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(102)))), ((int)(((byte)(244)))));
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 467);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(240, 63);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "   Hóa đơn";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.buttonHoaDon_Click_1);
             // 
             // button14
             // 
@@ -532,6 +509,5 @@
         private System.Windows.Forms.Label lb_gmailad;
         private System.Windows.Forms.Label lb_tenad;
         private System.Windows.Forms.PictureBox pb_acc;
-        private System.Windows.Forms.Button button2;
     }
 }
