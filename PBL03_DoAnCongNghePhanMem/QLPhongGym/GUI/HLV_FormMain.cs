@@ -15,8 +15,6 @@ namespace QLPhongGym.GUI
     {
         public TK tk { get; set; }
         static string ImageDefaultPath = Application.StartupPath + @"\Resources\account_icon.png";
-        static bool IsGanHLV = false;
-        static HLV Hlv = null;
         public HLV_FormMain()
         {
             InitializeComponent();
@@ -32,21 +30,16 @@ namespace QLPhongGym.GUI
         public void LoadDuLieuTK()
         {
             int IDUser = (int)tk.IDUser;
-           
-            if (!IsGanHLV)
+            HLV hlv = (HLV)UsersBLL.Instance.GetUserByID(IDUser);
+            if (hlv != null)
             {
-                Hlv = (HLV)UsersBLL.Instance.GetUserByID(IDUser);
-                IsGanHLV = true;
+                lb_gmailhlv.Text = hlv.Gmail;
+                lb_tenhlv.Text = hlv.Name;
             }
-            if (Hlv != null)
+            if (hlv.Image != null)
             {
-                lb_gmailhlv.Text = Hlv.Gmail;
-                lb_tenhlv.Text = Hlv.Name;
-            }
-            if (Hlv.Image != null)
-            {
-                pb_acc.Image = Image.FromFile(Application.StartupPath + @"\PersonImage\" + Hlv.Image);
-                pb_hlv.Image = Image.FromFile(Application.StartupPath + @"\PersonImage\" + Hlv.Image);
+                pb_acc.Image = Image.FromFile(Application.StartupPath + @"\PersonImage\" + hlv.Image);
+                pb_hlv.Image = Image.FromFile(Application.StartupPath + @"\PersonImage\" + hlv.Image);
             }
             else
             {
@@ -102,6 +95,7 @@ namespace QLPhongGym.GUI
         {
             if (currentFormChild != null)
             {
+                panel3.BackColor = Color.White;
                 currentFormChild.Close();
                 hideMenu();
             }
@@ -111,6 +105,7 @@ namespace QLPhongGym.GUI
         {
             if (currentFormChild != null)
             {
+                panel3.BackColor = Color.White;
                 currentFormChild.Close();
                 hideMenu();
             }
@@ -130,7 +125,6 @@ namespace QLPhongGym.GUI
             HLV a = (HLV)hlv;
             if (QLHLVBLL.getInstance.Update(a) == true)
             {
-                Hlv = a;
                 LoadDuLieuTK();
                 MessageBox.Show("Sua Thanh cong");
             }
@@ -144,8 +138,9 @@ namespace QLPhongGym.GUI
             AddEdit_HLV a = new AddEdit_HLV();
             int ID = (int)tk.IDUser;
             a.buon += new AddEdit_HLV.mydelegate(Edit);
+            HLV hlv = (HLV)UsersBLL.Instance.GetUserByID(ID);
             a.luachon(2);
-            a.getinfofromAB(Hlv);
+            a.getinfofromAB(hlv);
             a.Show();
         }
         private void pb_updateimage_Click(object sender, EventArgs e)
@@ -189,11 +184,6 @@ namespace QLPhongGym.GUI
             hideMenu();
         }
 
-        private void HLV_FormMain_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            IsGanHLV = false;
-        }
-
         const int WM_PARENTNOTIFY = 0x210;
         const int WM_LBUTTONDOWN = 0x201;
 
@@ -210,11 +200,6 @@ namespace QLPhongGym.GUI
 
 
             base.WndProc(ref m);
-        }
-
-        private void HLV_FormMain_Load(object sender, EventArgs e)
-        {
-         
         }
 
     }

@@ -44,83 +44,93 @@
             // 
             // txt_MaHLV
             // 
-            this.txt_MaHLV.Location = new System.Drawing.Point(229, 42);
+            this.txt_MaHLV.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_MaHLV.Location = new System.Drawing.Point(324, 69);
             this.txt_MaHLV.Name = "txt_MaHLV";
-            this.txt_MaHLV.Size = new System.Drawing.Size(215, 22);
+            this.txt_MaHLV.Size = new System.Drawing.Size(311, 34);
             this.txt_MaHLV.TabIndex = 1;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(59, 48);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(59, 72);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(124, 16);
+            this.label7.Size = new System.Drawing.Size(223, 29);
             this.label7.TabIndex = 27;
             this.label7.Text = "Mã huấn luyện viên:";
             // 
             // Txt_TenHLV
             // 
-            this.Txt_TenHLV.Location = new System.Drawing.Point(229, 85);
+            this.Txt_TenHLV.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_TenHLV.Location = new System.Drawing.Point(324, 146);
             this.Txt_TenHLV.Name = "Txt_TenHLV";
-            this.Txt_TenHLV.Size = new System.Drawing.Size(215, 22);
+            this.Txt_TenHLV.Size = new System.Drawing.Size(311, 34);
             this.Txt_TenHLV.TabIndex = 2;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(54, 91);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(49, 149);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(129, 16);
+            this.label6.Size = new System.Drawing.Size(233, 29);
             this.label6.TabIndex = 25;
             this.label6.Text = "Tên huấn luyện viên:";
             // 
             // Txt_TK
             // 
-            this.Txt_TK.Location = new System.Drawing.Point(229, 126);
+            this.Txt_TK.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_TK.Location = new System.Drawing.Point(324, 233);
             this.Txt_TK.Name = "Txt_TK";
-            this.Txt_TK.Size = new System.Drawing.Size(215, 22);
+            this.Txt_TK.Size = new System.Drawing.Size(311, 34);
             this.Txt_TK.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(68, 226);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(66, 367);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 16);
+            this.label4.Size = new System.Drawing.Size(216, 29);
             this.label4.TabIndex = 23;
             this.label4.Text = "Nhập lại mật khẩu: ";
             // 
             // Txt_Mk
             // 
-            this.Txt_Mk.Location = new System.Drawing.Point(229, 174);
+            this.Txt_Mk.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_Mk.Location = new System.Drawing.Point(324, 298);
             this.Txt_Mk.Name = "Txt_Mk";
             this.Txt_Mk.PasswordChar = '*';
-            this.Txt_Mk.Size = new System.Drawing.Size(215, 22);
+            this.Txt_Mk.Size = new System.Drawing.Size(311, 34);
             this.Txt_Mk.TabIndex = 4;
             // 
             // Txt_NhapLai
             // 
-            this.Txt_NhapLai.Location = new System.Drawing.Point(229, 220);
+            this.Txt_NhapLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_NhapLai.Location = new System.Drawing.Point(324, 364);
             this.Txt_NhapLai.Name = "Txt_NhapLai";
             this.Txt_NhapLai.PasswordChar = '*';
-            this.Txt_NhapLai.Size = new System.Drawing.Size(215, 22);
+            this.Txt_NhapLai.Size = new System.Drawing.Size(311, 34);
             this.Txt_NhapLai.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(124, 180);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(167, 301);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 16);
+            this.label3.Size = new System.Drawing.Size(115, 29);
             this.label3.TabIndex = 20;
             this.label3.Text = "Mật khẩu:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(97, 132);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(118, 236);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 16);
+            this.label2.Size = new System.Drawing.Size(164, 29);
             this.label2.TabIndex = 19;
             this.label2.Text = "Tên tài khoản:";
             // 
@@ -128,9 +138,9 @@
             // 
             this.button_OK.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button_OK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_OK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_OK.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_OK.ForeColor = System.Drawing.Color.Aqua;
-            this.button_OK.Location = new System.Drawing.Point(113, 277);
+            this.button_OK.Location = new System.Drawing.Point(153, 458);
             this.button_OK.Name = "button_OK";
             this.button_OK.Size = new System.Drawing.Size(108, 45);
             this.button_OK.TabIndex = 6;
@@ -142,9 +152,9 @@
             // 
             this.button_Cancel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Cancel.ForeColor = System.Drawing.Color.Aqua;
-            this.button_Cancel.Location = new System.Drawing.Point(298, 277);
+            this.button_Cancel.Location = new System.Drawing.Point(524, 458);
             this.button_Cancel.Name = "button_Cancel";
             this.button_Cancel.Size = new System.Drawing.Size(111, 45);
             this.button_Cancel.TabIndex = 7;
@@ -156,8 +166,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(531, 350);
+            this.ClientSize = new System.Drawing.Size(725, 581);
             this.ControlBox = false;
             this.Controls.Add(this.button_Cancel);
             this.Controls.Add(this.button_OK);
@@ -171,6 +180,8 @@
             this.Controls.Add(this.Txt_NhapLai);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.MaximumSize = new System.Drawing.Size(743, 628);
+            this.MinimumSize = new System.Drawing.Size(743, 628);
             this.Name = "Admin_FormThemTKHLV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin_FormThemTKHLV";

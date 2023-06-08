@@ -169,16 +169,16 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(273, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(891, 83);
+            this.panel3.Size = new System.Drawing.Size(891, 78);
             this.panel3.TabIndex = 4;
             // 
             // pb_acc
             // 
             this.pb_acc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pb_acc.Image = ((System.Drawing.Image)(resources.GetObject("pb_acc.Image")));
-            this.pb_acc.Location = new System.Drawing.Point(201, 17);
+            this.pb_acc.Location = new System.Drawing.Point(178, 0);
             this.pb_acc.Name = "pb_acc";
-            this.pb_acc.Size = new System.Drawing.Size(55, 61);
+            this.pb_acc.Size = new System.Drawing.Size(78, 79);
             this.pb_acc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_acc.TabIndex = 0;
             this.pb_acc.TabStop = false;
@@ -189,9 +189,9 @@
             this.pb_home.BackColor = System.Drawing.Color.Transparent;
             this.pb_home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_home.BackgroundImage")));
             this.pb_home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pb_home.Location = new System.Drawing.Point(18, 17);
+            this.pb_home.Location = new System.Drawing.Point(0, 0);
             this.pb_home.Name = "pb_home";
-            this.pb_home.Size = new System.Drawing.Size(55, 61);
+            this.pb_home.Size = new System.Drawing.Size(81, 79);
             this.pb_home.TabIndex = 2;
             this.pb_home.TabStop = false;
             this.pb_home.Click += new System.EventHandler(this.pb_home_Click);
@@ -201,7 +201,7 @@
             this.lb_home.AutoSize = true;
             this.lb_home.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_home.ForeColor = System.Drawing.Color.Black;
-            this.lb_home.Location = new System.Drawing.Point(79, 49);
+            this.lb_home.Location = new System.Drawing.Point(78, 50);
             this.lb_home.Name = "lb_home";
             this.lb_home.Size = new System.Drawing.Size(78, 29);
             this.lb_home.TabIndex = 3;
@@ -212,7 +212,7 @@
             // 
             this.lb_acc.AutoSize = true;
             this.lb_acc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_acc.Location = new System.Drawing.Point(262, 49);
+            this.lb_acc.Location = new System.Drawing.Point(262, 50);
             this.lb_acc.Name = "lb_acc";
             this.lb_acc.Size = new System.Drawing.Size(182, 29);
             this.lb_acc.TabIndex = 1;
@@ -221,11 +221,12 @@
             // 
             // pn_cha
             // 
+            this.pn_cha.BackColor = System.Drawing.Color.White;
             this.pn_cha.Controls.Add(this.pictureBox1);
             this.pn_cha.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pn_cha.Location = new System.Drawing.Point(273, 83);
+            this.pn_cha.Location = new System.Drawing.Point(273, 78);
             this.pn_cha.Name = "pn_cha";
-            this.pn_cha.Size = new System.Drawing.Size(891, 530);
+            this.pn_cha.Size = new System.Drawing.Size(891, 535);
             this.pn_cha.TabIndex = 5;
             // 
             // pictureBox1
@@ -234,7 +235,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(891, 530);
+            this.pictureBox1.Size = new System.Drawing.Size(891, 535);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -248,9 +249,9 @@
             this.pn_tkhlv.Controls.Add(this.lb_gmailhlv);
             this.pn_tkhlv.Controls.Add(this.lb_tenhlv);
             this.pn_tkhlv.Controls.Add(this.pb_hlv);
-            this.pn_tkhlv.Location = new System.Drawing.Point(474, 89);
+            this.pn_tkhlv.Location = new System.Drawing.Point(451, 82);
             this.pn_tkhlv.Name = "pn_tkhlv";
-            this.pn_tkhlv.Size = new System.Drawing.Size(525, 157);
+            this.pn_tkhlv.Size = new System.Drawing.Size(540, 164);
             this.pn_tkhlv.TabIndex = 7;
             // 
             // btn_doimatkhau
@@ -328,8 +329,6 @@
             this.Name = "HLV_FormMain";
             this.Text = "HLV_formmain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HLV_FormMain_FormClosed);
-            this.Load += new System.EventHandler(this.HLV_FormMain_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

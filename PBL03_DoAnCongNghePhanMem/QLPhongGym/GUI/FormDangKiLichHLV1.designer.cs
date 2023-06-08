@@ -607,7 +607,7 @@
             this.listBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox4.FormattingEnabled = true;
             this.listBox4.ItemHeight = 16;
-            this.listBox4.Location = new System.Drawing.Point(0, 0);
+            this.listBox4.Location = new System.Drawing.Point(1, 0);
             this.listBox4.Name = "listBox4";
             this.listBox4.Size = new System.Drawing.Size(145, 112);
             this.listBox4.TabIndex = 0;
@@ -1435,9 +1435,9 @@
             this.listBox24.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox24.FormattingEnabled = true;
             this.listBox24.ItemHeight = 16;
-            this.listBox24.Location = new System.Drawing.Point(3, 5);
+            this.listBox24.Location = new System.Drawing.Point(0, 0);
             this.listBox24.Name = "listBox24";
-            this.listBox24.Size = new System.Drawing.Size(145, 112);
+            this.listBox24.Size = new System.Drawing.Size(145, 128);
             this.listBox24.TabIndex = 95;
             // 
             // panel25
@@ -1478,9 +1478,9 @@
             this.listBox25.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox25.FormattingEnabled = true;
             this.listBox25.ItemHeight = 16;
-            this.listBox25.Location = new System.Drawing.Point(0, 4);
+            this.listBox25.Location = new System.Drawing.Point(0, 0);
             this.listBox25.Name = "listBox25";
-            this.listBox25.Size = new System.Drawing.Size(148, 112);
+            this.listBox25.Size = new System.Drawing.Size(148, 128);
             this.listBox25.TabIndex = 96;
             // 
             // panel27
@@ -1522,9 +1522,13 @@
             this.listBox27.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox27.FormattingEnabled = true;
             this.listBox27.ItemHeight = 16;
+<<<<<<< HEAD
             this.listBox27.Location = new System.Drawing.Point(3, 3);
+=======
+            this.listBox27.Location = new System.Drawing.Point(1, 1);
+>>>>>>> ae233c161df1e67dbe9f058226b060ee0e015019
             this.listBox27.Name = "listBox27";
-            this.listBox27.Size = new System.Drawing.Size(148, 112);
+            this.listBox27.Size = new System.Drawing.Size(148, 128);
             this.listBox27.TabIndex = 98;
             // 
             // panel28
@@ -1663,9 +1667,9 @@
             this.listBox26.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox26.FormattingEnabled = true;
             this.listBox26.ItemHeight = 16;
-            this.listBox26.Location = new System.Drawing.Point(3, 6);
+            this.listBox26.Location = new System.Drawing.Point(0, 0);
             this.listBox26.Name = "listBox26";
-            this.listBox26.Size = new System.Drawing.Size(148, 112);
+            this.listBox26.Size = new System.Drawing.Size(148, 128);
             this.listBox26.TabIndex = 98;
             // 
             // lb_thang

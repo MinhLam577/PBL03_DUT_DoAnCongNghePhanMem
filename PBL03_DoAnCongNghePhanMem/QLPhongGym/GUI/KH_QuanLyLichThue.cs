@@ -28,26 +28,41 @@ namespace QLPhongGym.GUI
             {
                 if (datagrid_LichThue.SelectedCells.Count > 0)
                 {
-                    int selectedRowIndex = datagrid_LichThue.SelectedCells[0].RowIndex;
-                    DataGridViewRow row = datagrid_LichThue.Rows[selectedRowIndex];
-                    if (row.Cells[0].Value != null)  // Kiểm tra giá trị của ô không phải là null trước khi chuyển đổi sang kiểu số nguyên
+                    if (datagrid_LichThue.SelectedRows[0].Cells[1].Value != null)
                     {
+<<<<<<< HEAD
                         int ma = Convert.ToInt32(row.Cells[0].Value.ToString());
 
                         if (LichThueBLL.Instance.xoa(ma) == true)
+=======
+                        bool check = true;
+                        switch (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
+>>>>>>> ae233c161df1e67dbe9f058226b060ee0e015019
                         {
-                            MessageBox.Show("Xoa thanh cong");
-                        }
-                        datagrid_LichThue.DataSource = LichThueBLL.Instance.ShowListKH_DkiHLV(idkh);
+                            case DialogResult.OK:
+                                foreach (DataGridViewRow row in datagrid_LichThue.SelectedRows)
+                                {
+                                    int IDKH = Convert.ToInt32(row.Cells["IDKH"].Value.ToString());
+                                    int IDHLV = Convert.ToInt32(row.Cells["IDHLV"].Value.ToString());
+                                    DateTime NgayLam = Convert.ToDateTime(row.Cells["NgayLam"].Value.ToString()).Date;
+                                    int IDCa = Convert.ToInt32(DangKiLichLamViecBAL.getInStance.GetCaLamViecByTenCa(row.Cells["Tên Ca"].Value.ToString()).IDCa);
+                                    LichThueHLV lt = LichThueBLL.Instance.GetLichThueByIDKH_IDHLV_NgayLam_IDCa(IDKH, IDHLV, NgayLam, IDCa);
+                                    if (lt != null)
+                                        LichThueBLL.Instance.DeleteLichThue(lt.IDLT);
+                                    else
+                                    {
+                                        check = false;
+                                        break;
+                                    }
+                                }
+                                if (check)
+                                    datagrid_LichThue.DataSource = LichThueBLL.Instance.ShowListKH_DkiHLV(idkh);
+                                else { MessageBox.Show("Xóa thất bại"); }
+                                break;
+                            case DialogResult.Cancel:
+                                break;
+                        }         
                     }
-                    else
-                    {
-                        MessageBox.Show("Không Xóa Được");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Không Xóa Được");
                 }
             }
             catch (Exception ex)
@@ -63,7 +78,7 @@ namespace QLPhongGym.GUI
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            if (datagrid_LichThue.SelectedCells.Count > 0)
+            if (datagrid_LichThue.SelectedCells.Count == 1)
             {
                 try
                 {
@@ -106,21 +121,18 @@ namespace QLPhongGym.GUI
                         tenca = (row.Cells[5].Value.ToString().Trim());
                         ca = DangKiLichLamViecBAL.getInStance.GetIdCa_ByTenCa(tenca);
                     }
-
-                    KH_SuaLich a = new KH_SuaLich();
-                    a.setForm1(ma, tenkhachhang, idhlv, name, ngaylam, ca);
-                    a.Show();
-                    a.buon += new KH_SuaLich.mydelegate(Edit);
-                   
+                    if(selectedRowIndex != -1)
+                    {
+                        KH_SuaLich a = new KH_SuaLich();
+                        a.setForm1(ma, tenkhachhang, idhlv, name, ngaylam, ca);
+                        a.Show();
+                        a.buon += new KH_SuaLich.mydelegate(Edit);
+                    }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Lỗi: " + ex.Message);
                 }
-            }
-            else
-            {
-                MessageBox.Show("Chọn 1 hàng");
             }
         }
 
