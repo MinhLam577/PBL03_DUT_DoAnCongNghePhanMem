@@ -20,31 +20,26 @@ namespace QLPhongGym.GUI
         }
         public void loadDuLieuDTG()
         {
-            dataGridView1.DataSource = HoaDonBLL.Instance.GetDuLieuHoaDon_BLL();
+            dgv_object.DataSource = HoaDonBLL.Instance.GetDuLieuHoaDon_BLL();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = HoaDonBLL.Instance.SearchHoaDon_BLL(textBox1.Text);
+            dgv_object.DataSource = HoaDonBLL.Instance.SearchHoaDon_BLL(textBox1.Text);
         }
 
         private void buttonDetailHoaDon_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count == 1)
+            if (dgv_object.SelectedRows.Count == 1)
             {
-                if (dataGridView1.SelectedRows[0].Cells["Mã hóa đơn"] != null && dataGridView1.SelectedRows[0].Cells["Mã hóa đơn"].Value != null)
+                if (dgv_object.SelectedRows[0].Cells["Mã hóa đơn"] != null && dgv_object.SelectedRows[0].Cells["Mã hóa đơn"].Value != null)
                 {
-                    string id = dataGridView1.SelectedRows[0].Cells["Mã hóa đơn"].Value.ToString();
+                    string id = dgv_object.SelectedRows[0].Cells["Mã hóa đơn"].Value.ToString();
                     Admin_ChiTietHoaDon f = new Admin_ChiTietHoaDon(id);
                     f.d += new Admin_ChiTietHoaDon.Mydel(loadDuLieuDTG);
                     f.ShowDialog();
                 }
             }
-        }
-
-        private void buttonXoaHoaDon_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -30,22 +30,22 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label_MKH = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lb_phuocthucthanhtoan = new System.Windows.Forms.Label();
+            this.lb_hd = new System.Windows.Forms.Label();
+            this.lb_thanhtien = new System.Windows.Forms.Label();
             this.lb_ngaydki = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.lb_gt = new System.Windows.Forms.Label();
             this.lb_hovaten = new System.Windows.Forms.Label();
+            this.label_IDHD = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lb_phuocthucthanhtoan = new System.Windows.Forms.Label();
-            this.lb_thanhtien = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.btn_thoat = new System.Windows.Forms.Button();
             this.btn_inhoadon = new System.Windows.Forms.Button();
-            this.label_IDHD = new System.Windows.Forms.Label();
-            this.lb_hd = new System.Windows.Forms.Label();
-            this.label_MKH = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,6 +88,66 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin đăng kí";
             // 
+            // label_MKH
+            // 
+            this.label_MKH.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label_MKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_MKH.Location = new System.Drawing.Point(662, 116);
+            this.label_MKH.Name = "label_MKH";
+            this.label_MKH.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label_MKH.Size = new System.Drawing.Size(317, 29);
+            this.label_MKH.TabIndex = 111;
+            this.label_MKH.Text = "00";
+            this.label_MKH.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(299, 116);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(180, 29);
+            this.label5.TabIndex = 110;
+            this.label5.Text = "Mã khách hàng:";
+            // 
+            // lb_phuocthucthanhtoan
+            // 
+            this.lb_phuocthucthanhtoan.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lb_phuocthucthanhtoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_phuocthucthanhtoan.Location = new System.Drawing.Point(729, 361);
+            this.lb_phuocthucthanhtoan.Name = "lb_phuocthucthanhtoan";
+            this.lb_phuocthucthanhtoan.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lb_phuocthucthanhtoan.Size = new System.Drawing.Size(250, 29);
+            this.lb_phuocthucthanhtoan.TabIndex = 109;
+            this.lb_phuocthucthanhtoan.Text = "Tiền mặt";
+            this.lb_phuocthucthanhtoan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lb_hd
+            // 
+            this.lb_hd.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lb_hd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_hd.Location = new System.Drawing.Point(662, 67);
+            this.lb_hd.Name = "lb_hd";
+            this.lb_hd.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lb_hd.Size = new System.Drawing.Size(317, 29);
+            this.lb_hd.TabIndex = 106;
+            this.lb_hd.Text = "00";
+            this.lb_hd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lb_thanhtien
+            // 
+            this.lb_thanhtien.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lb_thanhtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_thanhtien.Location = new System.Drawing.Point(729, 312);
+            this.lb_thanhtien.Name = "lb_thanhtien";
+            this.lb_thanhtien.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lb_thanhtien.Size = new System.Drawing.Size(250, 29);
+            this.lb_thanhtien.TabIndex = 108;
+            this.lb_thanhtien.Text = "00";
+            this.lb_thanhtien.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // lb_ngaydki
             // 
             this.lb_ngaydki.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -99,6 +159,30 @@
             this.lb_ngaydki.TabIndex = 105;
             this.lb_ngaydki.Text = "00";
             this.lb_ngaydki.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(27, 312);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(452, 29);
+            this.label12.TabIndex = 91;
+            this.label12.Text = "Thành tiền(đã bao gồm giảm giá nếu có):";
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(211, 361);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(268, 29);
+            this.label14.TabIndex = 87;
+            this.label14.Text = "Phương thức thanh toán:";
             // 
             // lb_gt
             // 
@@ -123,6 +207,18 @@
             this.lb_hovaten.TabIndex = 103;
             this.lb_hovaten.Text = "00";
             this.lb_hovaten.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label_IDHD
+            // 
+            this.label_IDHD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label_IDHD.AutoSize = true;
+            this.label_IDHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_IDHD.Location = new System.Drawing.Point(334, 67);
+            this.label_IDHD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_IDHD.Name = "label_IDHD";
+            this.label_IDHD.Size = new System.Drawing.Size(145, 29);
+            this.label_IDHD.TabIndex = 91;
+            this.label_IDHD.Text = "Mã hóa đơn:";
             // 
             // label4
             // 
@@ -160,135 +256,48 @@
             this.label2.TabIndex = 88;
             this.label2.Text = "Gói tập:";
             // 
-            // lb_phuocthucthanhtoan
-            // 
-            this.lb_phuocthucthanhtoan.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lb_phuocthucthanhtoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_phuocthucthanhtoan.Location = new System.Drawing.Point(729, 361);
-            this.lb_phuocthucthanhtoan.Name = "lb_phuocthucthanhtoan";
-            this.lb_phuocthucthanhtoan.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lb_phuocthucthanhtoan.Size = new System.Drawing.Size(250, 29);
-            this.lb_phuocthucthanhtoan.TabIndex = 109;
-            this.lb_phuocthucthanhtoan.Text = "Tiền mặt";
-            this.lb_phuocthucthanhtoan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lb_thanhtien
-            // 
-            this.lb_thanhtien.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lb_thanhtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_thanhtien.Location = new System.Drawing.Point(729, 312);
-            this.lb_thanhtien.Name = "lb_thanhtien";
-            this.lb_thanhtien.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb_thanhtien.Size = new System.Drawing.Size(250, 29);
-            this.lb_thanhtien.TabIndex = 108;
-            this.lb_thanhtien.Text = "00";
-            this.lb_thanhtien.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(27, 312);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(452, 29);
-            this.label12.TabIndex = 91;
-            this.label12.Text = "Thành tiền(đã bao gồm giảm giá nếu có):";
-            // 
-            // label14
-            // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(211, 361);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(268, 29);
-            this.label14.TabIndex = 87;
-            this.label14.Text = "Phương thức thanh toán:";
-            // 
             // btn_thoat
             // 
             this.btn_thoat.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_thoat.BackColor = System.Drawing.Color.Black;
+            this.btn_thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_thoat.ForeColor = System.Drawing.Color.Cyan;
             this.btn_thoat.Location = new System.Drawing.Point(625, 523);
             this.btn_thoat.Name = "btn_thoat";
             this.btn_thoat.Size = new System.Drawing.Size(167, 56);
             this.btn_thoat.TabIndex = 99;
             this.btn_thoat.Text = "Thoát";
-            this.btn_thoat.UseVisualStyleBackColor = true;
+            this.btn_thoat.UseVisualStyleBackColor = false;
+            this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
             // 
             // btn_inhoadon
             // 
             this.btn_inhoadon.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_inhoadon.BackColor = System.Drawing.Color.Black;
+            this.btn_inhoadon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_inhoadon.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_inhoadon.ForeColor = System.Drawing.Color.Cyan;
             this.btn_inhoadon.Location = new System.Drawing.Point(221, 523);
             this.btn_inhoadon.Name = "btn_inhoadon";
             this.btn_inhoadon.Size = new System.Drawing.Size(167, 56);
             this.btn_inhoadon.TabIndex = 98;
             this.btn_inhoadon.Text = "In hóa đơn";
-            this.btn_inhoadon.UseVisualStyleBackColor = true;
+            this.btn_inhoadon.UseVisualStyleBackColor = false;
             this.btn_inhoadon.Click += new System.EventHandler(this.btn_inhoadon_Click);
-            // 
-            // label_IDHD
-            // 
-            this.label_IDHD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label_IDHD.AutoSize = true;
-            this.label_IDHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_IDHD.Location = new System.Drawing.Point(334, 67);
-            this.label_IDHD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label_IDHD.Name = "label_IDHD";
-            this.label_IDHD.Size = new System.Drawing.Size(145, 29);
-            this.label_IDHD.TabIndex = 91;
-            this.label_IDHD.Text = "Mã hóa đơn:";
-            // 
-            // lb_hd
-            // 
-            this.lb_hd.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lb_hd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_hd.Location = new System.Drawing.Point(662, 67);
-            this.lb_hd.Name = "lb_hd";
-            this.lb_hd.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb_hd.Size = new System.Drawing.Size(317, 29);
-            this.lb_hd.TabIndex = 106;
-            this.lb_hd.Text = "00";
-            this.lb_hd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label_MKH
-            // 
-            this.label_MKH.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label_MKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_MKH.Location = new System.Drawing.Point(662, 116);
-            this.label_MKH.Name = "label_MKH";
-            this.label_MKH.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label_MKH.Size = new System.Drawing.Size(317, 29);
-            this.label_MKH.TabIndex = 111;
-            this.label_MKH.Text = "00";
-            this.label_MKH.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(299, 116);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(180, 29);
-            this.label5.TabIndex = 110;
-            this.label5.Text = "Mã khách hàng:";
             // 
             // Admin_ChiTietHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(991, 579);
             this.Controls.Add(this.btn_thoat);
             this.Controls.Add(this.btn_inhoadon);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label1);
             this.Name = "Admin_ChiTietHoaDon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin_HoaDon";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

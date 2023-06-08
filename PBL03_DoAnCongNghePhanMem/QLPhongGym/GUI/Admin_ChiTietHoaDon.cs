@@ -74,5 +74,10 @@ namespace QLPhongGym.GUI
                 }
             }
         }
+
+        private void btn_thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

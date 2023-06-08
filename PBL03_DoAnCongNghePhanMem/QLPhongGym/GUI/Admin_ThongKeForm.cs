@@ -241,5 +241,11 @@ namespace QLPhongGym.GUI
             XemDanhSachDoiTuongThongKeForm f = new XemDanhSachDoiTuongThongKeForm(dt, "Gói tập", Nam);
             f.ShowDialog();
         }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            Admin_FormHoaDon f = new Admin_FormHoaDon();
+            f.ShowDialog();
+        }
     }
 }
