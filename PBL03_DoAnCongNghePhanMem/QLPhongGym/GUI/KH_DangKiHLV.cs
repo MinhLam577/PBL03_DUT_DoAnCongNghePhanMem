@@ -98,6 +98,23 @@ namespace QLPhongGym.GUI
         private void btnDangKi_Click(object sender, EventArgs e)
         {
             LichThueHLV b = new LichThueHLV();
+            if (string.IsNullOrEmpty(textMa.Text))
+            {
+                MessageBox.Show("Vui lòng nhập giá trị vào textMa.");
+                return;
+            }
+
+            if (cbbCa.SelectedItem == null)
+            {
+                MessageBox.Show("Vui lòng chọn giá trị từ comboboxCa.");
+                return;
+            }
+
+            if (cbbma.SelectedItem == null)
+            {
+                MessageBox.Show("Vui lòng chọn giá trị từ comboboxma.");
+                return;
+            }
             DateTime ngaylam = dateNgayLam.Value;
             int makh = Convert.ToInt32(textMa.Text.ToString().Trim());
             int idca = -1;
