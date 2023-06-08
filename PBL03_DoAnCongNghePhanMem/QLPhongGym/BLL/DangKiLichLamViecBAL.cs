@@ -158,5 +158,10 @@ namespace QLPhongGym.BLL
         {
             return DangKiLichLamViecDAL.getInStance.GetListLLVByYear(year);
         }
+        public List<string> LayDanhSachCaLamViec()
+        {
+            return DangKiLichLamViecDAL.getInStance.LayDanhSachCaLamViec();
+        }
+
     }
 }

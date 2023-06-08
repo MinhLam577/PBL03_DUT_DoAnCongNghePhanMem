@@ -185,7 +185,11 @@ namespace QLPhongGym.GUI
             }
         }
         private void FormDangKiLichHLV1_Load(object sender, EventArgs e)
-        {   
+        {
+            lbca1.Text = DangKiLichLamViecBAL.getInStance.GetTenCa_ByIdCa(1);
+            lbca2.Text = DangKiLichLamViecBAL.getInStance.GetTenCa_ByIdCa(2);
+            labelca3.Text = DangKiLichLamViecBAL.getInStance.GetTenCa_ByIdCa(3);
+            lbca4.Text = DangKiLichLamViecBAL.getInStance.GetTenCa_ByIdCa(4);
             ngaylamviec.Value = DateTime.Now;
             hienthingayStart_End();
             labelTheoTuan();
@@ -217,7 +221,6 @@ namespace QLPhongGym.GUI
                 }
             }
         }
-        // ahihi
         private void btnTest_Click_1(object sender, EventArgs e)
         {
             labelTheoTuan();
@@ -285,7 +288,6 @@ namespace QLPhongGym.GUI
                         ListBox listBox7 = (ListBox)Controls.Find("listBox" + (++j2).ToString(), true)[0];
                         // hang 4
                         ListBox listBox8 = (ListBox)Controls.Find("listBox" + (++j3).ToString(), true)[0];
-
                         listBox5.Items.Clear();
                         listBox6.Items.Clear();
                         listBox7.Items.Clear();
@@ -307,28 +309,11 @@ namespace QLPhongGym.GUI
                 listBox.Items.Clear();
             }
         }
-
         private void butncong1_Click(object sender, EventArgs e)
         {
             try
             {
-                XepLichHLV A = new XepLichHLV();
-                // Chuỗi ngày tháng ban đầu
-                string dateString1 = label1.Text;
-                // Định dạng ngày tháng ban đầu
-                string format = "dd/MM/yyyy";
-                // Chuyển đổi chuỗi thành kiểu DateTime
-                DateTime date1 = DateTime.ParseExact(dateString1, format, CultureInfo.InvariantCulture);
-                // Định dạng kiểu DateTime thành chuỗi mới với định dạng "yyyy-MM-dd"
-                string newDateString = date1.ToString("yyyy-MM-dd");
-                A.ngaylamviec1 = Convert.ToDateTime(newDateString);
-                A.ca = "Ca 1";
-                A.ngaybatdau1 = dateTimeNgayStart.Value;
-                A.ngayketthuc1 = dateTimeNgayEnd.Value;
-                A.Show();
-
-                // su dung delegate 
-                A.HLVDelegate = new XepLichHLV.AddHLVToListBox(hienthilenlistboxHang);
+                btnCong(label1.Text, 1);
             }
             catch
             {
@@ -339,41 +324,15 @@ namespace QLPhongGym.GUI
 
         private void btntru1_Click(object sender, EventArgs e)
         {
-           
-            XoaDangKiCaHLV A = new XoaDangKiCaHLV();
-            string dateString1 = label1.Text;
-            // Định dạng ngày tháng ban đầu
-            string format = "dd/MM/yyyy";
-            // Chuyển đổi chuỗi thành kiểu DateTime
-            DateTime date1 = DateTime.ParseExact(dateString1, format, CultureInfo.InvariantCulture);
-            // Định dạng kiểu DateTime thành chuỗi mới với định dạng "yyyy-MM-dd"
-            string newDateString = date1.ToString("yyyy-MM-dd");
-            A.ngaylamviec1 = Convert.ToDateTime(newDateString);
-            A.ca = "Ca 1";
-            A.ngaybatdau1 = dateTimeNgayStart.Value;   
-            A.Show();
-            A.xoahlv = new XoaDangKiCaHLV.subtractHLV(hienthilenlistboxHang);
+
+            btntru(label1.Text, 1);
         }
 
         private void btncong2_Click(object sender, EventArgs e)
         {
             try
             {
-                XepLichHLV A = new XepLichHLV();
-                // Chuỗi ngày tháng ban đầu
-                string dateString1 = label2.Text;
-                // Định dạng ngày tháng ban đầu
-                string format = "dd/MM/yyyy";
-                // Chuyển đổi chuỗi thành kiểu DateTime
-                DateTime date1 = DateTime.ParseExact(dateString1, format, CultureInfo.InvariantCulture);
-                // Định dạng kiểu DateTime thành chuỗi mới với định dạng "yyyy-MM-dd"
-                string newDateString = date1.ToString("yyyy-MM-dd");
-                A.ngaylamviec1 = Convert.ToDateTime(newDateString);
-                A.ca = "Ca 1";
-                A.ngaybatdau1 = dateTimeNgayStart.Value;
-                A.ngayketthuc1 = dateTimeNgayEnd.Value;
-                A.Show();
-                A.HLVDelegate = new XepLichHLV.AddHLVToListBox(hienthilenlistboxHang);
+                btnCong(label2.Text, 1);
             }
             catch
             {
@@ -382,214 +341,65 @@ namespace QLPhongGym.GUI
         }
         private void btntru2_Click(object sender, EventArgs e)
         {
-            XoaDangKiCaHLV A = new XoaDangKiCaHLV();
-            string dateString1 = label2.Text;
-            // Định dạng ngày tháng ban đầu
-            string format = "dd/MM/yyyy";
-            // Chuyển đổi chuỗi thành kiểu DateTime
-            DateTime date1 = DateTime.ParseExact(dateString1, format, CultureInfo.InvariantCulture);
-            // Định dạng kiểu DateTime thành chuỗi mới với định dạng "yyyy-MM-dd"
-            string newDateString = date1.ToString("yyyy-MM-dd");
-            A.ngaylamviec1 = Convert.ToDateTime(newDateString);
-            A.ngaybatdau1 = dateTimeNgayStart.Value;
-
-            A.ca = "Ca 1";
-            A.Show();
-            A.xoahlv = new XoaDangKiCaHLV.subtractHLV(hienthilenlistboxHang);
+            btntru(label2.Text, 1);
         }
 
         private void btncong3_Click(object sender, EventArgs e)
         {
             try{
-                XepLichHLV A = new XepLichHLV();
-                // Chuỗi ngày tháng ban đầu
-                string dateString1 = label3.Text;
-                // Định dạng ngày tháng ban đầu
-                string format = "dd/MM/yyyy";
-                // Chuyển đổi chuỗi thành kiểu DateTime
-                DateTime date1 = DateTime.ParseExact(dateString1, format, CultureInfo.InvariantCulture);
-                // Định dạng kiểu DateTime thành chuỗi mới với định dạng "yyyy-MM-dd"
-                string newDateString = date1.ToString("yyyy-MM-dd");
-                A.ngaylamviec1 = Convert.ToDateTime(newDateString);
-                A.ca = "Ca 1";
-                A.ngaybatdau1 = dateTimeNgayStart.Value;
-                A.ngayketthuc1 = dateTimeNgayEnd.Value;
-                A.Show();
-                A.HLVDelegate = new XepLichHLV.AddHLVToListBox(hienthilenlistboxHang);
-                
-            }catch
+                btnCong(label3.Text, 1);
+            }
+            catch
             {
 
             }
         }
         private void btntru3_Click(object sender, EventArgs e)
         {
-            XoaDangKiCaHLV A = new XoaDangKiCaHLV();
-            string dateString1 = label3.Text;
-            // Định dạng ngày tháng ban đầu
-            string format = "dd/MM/yyyy";
-            // Chuyển đổi chuỗi thành kiểu DateTime
-            DateTime date1 = DateTime.ParseExact(dateString1, format, CultureInfo.InvariantCulture);
-            // Định dạng kiểu DateTime thành chuỗi mới với định dạng "yyyy-MM-dd"
-            string newDateString = date1.ToString("yyyy-MM-dd");
-            A.ngaylamviec1 = Convert.ToDateTime(newDateString);
-            A.ca = "Ca 1"; 
-            A.ngaybatdau1 = dateTimeNgayStart.Value;
+            btntru(label3.Text, 1);
 
-            A.Show();
-            A.xoahlv = new XoaDangKiCaHLV.subtractHLV(hienthilenlistboxHang);
-            
         }
 
         private void btncong4_Click(object sender, EventArgs e)
         {
-            XepLichHLV A = new XepLichHLV();
-            // Chuỗi ngày tháng ban đầu
-            string dateString1 = label4.Text;
-            // Định dạng ngày tháng ban đầu
-            string format = "dd/MM/yyyy";
-            // Chuyển đổi chuỗi thành kiểu DateTime
-            DateTime date1 = DateTime.ParseExact(dateString1, format, CultureInfo.InvariantCulture);
-            // Định dạng kiểu DateTime thành chuỗi mới với định dạng "yyyy-MM-dd"
-            string newDateString = date1.ToString("yyyy-MM-dd");
-            A.ngaylamviec1 = Convert.ToDateTime(newDateString);
-            A.ca = "Ca 1";
-            A.ngaybatdau1 = dateTimeNgayStart.Value;
-            A.ngayketthuc1 = dateTimeNgayEnd.Value;
-
-            A.Show();
-            A.HLVDelegate = new XepLichHLV.AddHLVToListBox(hienthilenlistboxHang);
+            btnCong(label4.Text, 1);
 
         }
 
         private void btntru4_Click(object sender, EventArgs e)
         {
-            XoaDangKiCaHLV A = new XoaDangKiCaHLV();
-            string dateString1 = label4.Text;
-            // Định dạng ngày tháng ban đầu
-            string format = "dd/MM/yyyy";
-            // Chuyển đổi chuỗi thành kiểu DateTime
-            DateTime date1 = DateTime.ParseExact(dateString1, format, CultureInfo.InvariantCulture);
-            // Định dạng kiểu DateTime thành chuỗi mới với định dạng "yyyy-MM-dd"
-            string newDateString = date1.ToString("yyyy-MM-dd");
-            A.ngaylamviec1 = Convert.ToDateTime(newDateString);
-            A.ca = "Ca 1";
-            A.ngaybatdau1 = dateTimeNgayStart.Value;
-            A.Show();
-            A.xoahlv = new XoaDangKiCaHLV.subtractHLV(hienthilenlistboxHang);
+            btntru(label4.Text, 1);
         }
 
         private void btncong5_Click(object sender, EventArgs e)
         {
-            XepLichHLV A = new XepLichHLV();
-           
-            // Chuỗi ngày tháng ban đầu
-            string dateString1 = label5.Text;
-            // Định dạng ngày tháng ban đầu
-            string format = "dd/MM/yyyy";
-            // Chuyển đổi chuỗi thành kiểu DateTime
-            DateTime date1 = DateTime.ParseExact(dateString1, format, CultureInfo.InvariantCulture);
-            // Định dạng kiểu DateTime thành chuỗi mới với định dạng "yyyy-MM-dd"
-            string newDateString = date1.ToString("yyyy-MM-dd");
-            A.ngaylamviec1 = Convert.ToDateTime(newDateString);
-            A.ca = "Ca 1";
-            A.ngaybatdau1 = dateTimeNgayStart.Value;
-            A.ngayketthuc1 = dateTimeNgayEnd.Value;
-            A.Show();
-            A.HLVDelegate = new XepLichHLV.AddHLVToListBox(hienthilenlistboxHang);
+            btnCong(label5.Text, 1);
         }
 
         private void btntru5_Click(object sender, EventArgs e)
         {
-            XoaDangKiCaHLV A = new XoaDangKiCaHLV();
-            string dateString1 = label5.Text;
-            // Định dạng ngày tháng ban đầu
-            string format = "dd/MM/yyyy";
-            // Chuyển đổi chuỗi thành kiểu DateTime
-            DateTime date1 = DateTime.ParseExact(dateString1, format, CultureInfo.InvariantCulture);
-            // Định dạng kiểu DateTime thành chuỗi mới với định dạng "yyyy-MM-dd"
-            string newDateString = date1.ToString("yyyy-MM-dd");
-            A.ngaylamviec1 = Convert.ToDateTime(newDateString);
-            A.ngaybatdau1 = dateTimeNgayStart.Value;
-
-            A.ca = "Ca 1";
-            A.Show();
-            A.xoahlv = new XoaDangKiCaHLV.subtractHLV(hienthilenlistboxHang);
+            btntru(label5.Text, 1);
         }
 
         private void btncong6_Click(object sender, EventArgs e)
         {
-            XepLichHLV A = new XepLichHLV();
-            // Chuỗi ngày tháng ban đầu
-            string dateString1 = label6.Text;
-            // Định dạng ngày tháng ban đầu
-            string format = "dd/MM/yyyy";
-            // Chuyển đổi chuỗi thành kiểu DateTime
-            DateTime date1 = DateTime.ParseExact(dateString1, format, CultureInfo.InvariantCulture);
-            // Định dạng kiểu DateTime thành chuỗi mới với định dạng "yyyy-MM-dd"
-            string newDateString = date1.ToString("yyyy-MM-dd");
-            A.ngaylamviec1 = Convert.ToDateTime(newDateString);
-            A.ca = "Ca 1";
-            A.ngaybatdau1 = dateTimeNgayStart.Value;
-            A.ngayketthuc1 = dateTimeNgayEnd.Value;
-            A.Show();
-            A.HLVDelegate = new XepLichHLV.AddHLVToListBox(hienthilenlistboxHang);
+            btnCong(label6.Text, 1);
         }
 
         private void btntru6_Click(object sender, EventArgs e)
         {
-            XoaDangKiCaHLV A = new XoaDangKiCaHLV();
-            string dateString1 = label6.Text;
-            // Định dạng ngày tháng ban đầu
-            string format = "dd/MM/yyyy";
-            // Chuyển đổi chuỗi thành kiểu DateTime
-            DateTime date1 = DateTime.ParseExact(dateString1, format, CultureInfo.InvariantCulture);
-            // Định dạng kiểu DateTime thành chuỗi mới với định dạng "yyyy-MM-dd"
-            string newDateString = date1.ToString("yyyy-MM-dd");
-            A.ngaylamviec1 = Convert.ToDateTime(newDateString);
-            A.ngaybatdau1 = dateTimeNgayStart.Value;
-
-            A.ca = "Ca 1";
-            A.Show();
-            A.xoahlv = new XoaDangKiCaHLV.subtractHLV(hienthilenlistboxHang);
+            btntru(label6.Text, 1);
         }
         private void btncong7_Click(object sender, EventArgs e)
         {
-            XepLichHLV A = new XepLichHLV();
-            // Chuỗi ngày tháng ban đầu
-            string dateString1 = label7.Text;
-            // Định dạng ngày tháng ban đầu
-            string format = "dd/MM/yyyy";
-            // Chuyển đổi chuỗi thành kiểu DateTime
-            DateTime date1 = DateTime.ParseExact(dateString1, format, CultureInfo.InvariantCulture);
-            // Định dạng kiểu DateTime thành chuỗi mới với định dạng "yyyy-MM-dd"
-            string newDateString = date1.ToString("yyyy-MM-dd");
-            A.ngaylamviec1 = Convert.ToDateTime(newDateString);
-            A.ca = "Ca 1";
-            A.ngaybatdau1 = dateTimeNgayStart.Value;
-            A.ngayketthuc1 = dateTimeNgayEnd.Value;
-            A.Show();
-            A.HLVDelegate = new XepLichHLV.AddHLVToListBox(hienthilenlistboxHang);
+            btnCong(label7.Text, 1);
         }
         private void btntru7_Click(object sender, EventArgs e)
         {
-            XoaDangKiCaHLV A = new XoaDangKiCaHLV();
-            string dateString1 = label7.Text;
-            // Định dạng ngày tháng ban đầu
-            string format = "dd/MM/yyyy";
-            // Chuyển đổi chuỗi thành kiểu DateTime
-            DateTime date1 = DateTime.ParseExact(dateString1, format, CultureInfo.InvariantCulture);
-            // Định dạng kiểu DateTime thành chuỗi mới với định dạng "yyyy-MM-dd"
-            string newDateString = date1.ToString("yyyy-MM-dd");
-            A.ngaylamviec1 = Convert.ToDateTime(newDateString);
-            A.ngaybatdau1 = dateTimeNgayStart.Value;
-
-            A.ca = "Ca 1";
-            A.Show();
-            A.xoahlv = new XoaDangKiCaHLV.subtractHLV(hienthilenlistboxHang);
+            btntru(label7.Text, 1);
         }
         // ham tru
-        private void btntru(string a, string ca )
+        private void btntru(string a, int idca )
         {
             XoaDangKiCaHLV A = new XoaDangKiCaHLV();
             string dateString1 = a;
@@ -601,13 +411,13 @@ namespace QLPhongGym.GUI
             string newDateString = date1.ToString("yyyy-MM-dd");        
             A.ngaylamviec1 = Convert.ToDateTime(newDateString);
             A.ngaybatdau1 = dateTimeNgayStart.Value;
-
+            string ca = DangKiLichLamViecBAL.getInStance.GetTenCa_ByIdCa(idca);
             A.ca = ca;
             A.Show();
             A.xoahlv = new XoaDangKiCaHLV.subtractHLV(hienthilenlistboxHang);
         }
         // btncong
-        private void btnCong(string a, string ca)
+        private void btnCong(string a, int idca)
         {
             XepLichHLV A = new XepLichHLV();
             // Chuỗi ngày tháng ban đầu
@@ -619,6 +429,7 @@ namespace QLPhongGym.GUI
             // Định dạng kiểu DateTime thành chuỗi mới với định dạng "yyyy-MM-dd"
             string newDateString = date1.ToString("yyyy-MM-dd");
             A.ngaylamviec1 = Convert.ToDateTime(newDateString);
+            string ca = DangKiLichLamViecBAL.getInStance.GetTenCa_ByIdCa(idca);
             A.ca = ca;
             A.ngaybatdau1 = dateTimeNgayStart.Value;
             A.ngayketthuc1 = dateTimeNgayEnd.Value;
@@ -628,131 +439,131 @@ namespace QLPhongGym.GUI
 
         private void btncong8_Click(object sender, EventArgs e)
         {
-            btnCong(label1.Text, "Ca 2");
+            btnCong(label1.Text, 2);
         }
         private void btntru8_Click(object sender, EventArgs e)
         {
-            btntru(label1.Text, "Ca 2");
+            btntru(label1.Text, 2);
         }
         private void btncong9_Click(object sender, EventArgs e)
         {
-            btnCong(label2.Text, "Ca 2");
+            btnCong(label2.Text, 2);
         }
         private void btntru9_Click(object sender, EventArgs e)
         {
-            btntru(label2.Text, "Ca 2");
+            btntru(label2.Text, 2);
         }
         private void btncong10_Click(object sender, EventArgs e)
         {
-            btnCong(label3.Text, "Ca 2");
+            btnCong(label3.Text,  2);
         }
         private void btntru10_Click(object sender, EventArgs e)
         {
-            btntru(label3.Text, "Ca 2");
+            btntru(label3.Text, 2);
         }
         private void btncong11_Click(object sender, EventArgs e)
         {
-            btnCong(label4.Text, "Ca 2");
+            btnCong(label4.Text, 2);
         }
         private void btntru11_Click(object sender, EventArgs e)
         {
-            btntru(label4.Text, "Ca 2");
+            btntru(label4.Text, 2);
         }
         private void btncong12_Click(object sender, EventArgs e)
         {
-            btnCong(label5.Text, "Ca 2");
+            btnCong(label5.Text,  2);
         }
         private void btntru12_Click(object sender, EventArgs e)
         {
-            btntru(label5.Text, "Ca 2");
+            btntru(label5.Text, 2);
         }
 
         private void btncong13_Click(object sender, EventArgs e)
         {
-            btnCong(label6.Text, "Ca 2");
+            btnCong(label6.Text, 2);
         }
         private void btntru13_Click(object sender, EventArgs e)
         {
-            btntru(label6.Text, "Ca 2");
+            btntru(label6.Text,  2);
         }
 
         private void btn14_Click(object sender, EventArgs e)
         {
-            btnCong(label7.Text, "Ca 2");
+            btnCong(label7.Text, 2);
         }
 
         private void btntru14_Click(object sender, EventArgs e)
         {
-            btntru(label7.Text, "Ca 2");
+            btntru(label7.Text, 2);
         }
 
         private void btncong15_Click(object sender, EventArgs e)
         {
-            btnCong(label1.Text, "Ca 3");
+            btnCong(label1.Text, 3);
         }
 
         private void btntru15_Click(object sender, EventArgs e)
         {
-            btntru(label1.Text, "Ca 3");
+            btntru(label1.Text,  3);
         }
 
         private void btncong16_Click(object sender, EventArgs e)
         {
-            btnCong(label2.Text, "Ca 3");
+            btnCong(label2.Text,  3);
         }
 
         private void btntru16_Click(object sender, EventArgs e)
         {
-            btntru(label2.Text, "Ca 3");
+            btntru(label2.Text,3);
         }
 
         private void btncong17_Click(object sender, EventArgs e)
         {
-            btnCong(label3.Text, "Ca 3");
+            btnCong(label3.Text,  3);
         }
 
         private void btntru17_Click(object sender, EventArgs e)
         {
-            btntru(label3.Text, "Ca 3");
+            btntru(label3.Text, 3);
         }
 
         private void btncong18_Click(object sender, EventArgs e)
         {
-            btnCong(label4.Text, "Ca 3");
+            btnCong(label4.Text, 3);
         }
 
         private void btntru18_Click(object sender, EventArgs e)
         {
-            btntru(label4.Text, "Ca 3");
+            btntru(label4.Text,  3);
         }
 
         private void btncong19_Click(object sender, EventArgs e)
         {
-            btnCong(label5.Text, "Ca 3");
+            btnCong(label5.Text, 3);
         }
 
         private void btntru19_Click(object sender, EventArgs e)
         {
-            btntru(label5.Text, "Ca 3");
+            btntru(label5.Text, 3);
         }
 
         private void btncong20_Click(object sender, EventArgs e)
         {
-            btnCong(label6.Text, "Ca 3");
+            btnCong(label6.Text,  3);
         }
 
         private void btntru20_Click(object sender, EventArgs e)
         {
-            btntru(label6.Text, "Ca 3");
+            btntru(label6.Text,3);
         }
         private void btncong21_Click(object sender, EventArgs e)
         {
-            btnCong(label7.Text, "Ca 3");
+            btnCong(label7.Text, 3);
         }
 
         private void btntru21_Click(object sender, EventArgs e)
         {
-            btntru(label7.Text, "Ca 3");
+            btntru(label7.Text,  3);
         }
         // hien thi ngaybat dau , ngay ket thuc ben form kia
         private void hienthingayStart_End()
@@ -865,102 +676,94 @@ namespace QLPhongGym.GUI
 
         private void btncong22_Click(object sender, EventArgs e)
         {
-            btnCong(label1.Text, "Ca 4");
+            btnCong(label1.Text,4);
         }
 
         private void btntru22_Click(object sender, EventArgs e)
         {
-            btntru(label1.Text, "Ca 4");
+            btntru(label1.Text, 4);
         }
 
         private void btncong23_Click(object sender, EventArgs e)
         {
-            btnCong(label2.Text, "Ca 4");
+            btnCong(label2.Text, 4);
         }
 
         private void btntru23_Click(object sender, EventArgs e)
         {
-            btntru(label2.Text, "Ca 4");
+            btntru(label2.Text, 4);
         }
 
         private void btncong24_Click(object sender, EventArgs e)
         {
-            btnCong(label3.Text, "Ca 4");
+            btnCong(label3.Text,  4);
         }
 
         private void btntru24_Click(object sender, EventArgs e)
         {
-            btntru(label3.Text, "Ca 4");
+            btntru(label3.Text,4);
         }
 
         private void btncong25_Click(object sender, EventArgs e)
         {
-            btnCong(label4.Text, "Ca 4");
+            btnCong(label4.Text,  4);
         }
 
         private void btntru25_Click(object sender, EventArgs e)
         {
-            btntru(label4.Text, "Ca 4");
+            btntru(label4.Text, 4);
         }
 
         private void btncong26_Click(object sender, EventArgs e)
         {
-            btnCong(label5.Text, "Ca 4");
+            btnCong(label5.Text, 4);
         }
-
         private void btntru26_Click(object sender, EventArgs e)
         {
-            btntru(label5.Text, "Ca 4");
+            btntru(label5.Text, 4);
         }
 
         private void btncong27_Click(object sender, EventArgs e)
         {
-            btnCong(label6.Text, "Ca 4");
+            btnCong(label6.Text, 4);
         }
 
         private void btntru27_Click(object sender, EventArgs e)
         {
-            btntru(label6.Text, "Ca 4");
+            btntru(label6.Text, 4);
         }
 
         private void btncong28_Click(object sender, EventArgs e)
         {
-            btnCong(label7.Text, "Ca 4");
+            btnCong(label7.Text, 4);
         }
-
         private void bntru28_Click(object sender, EventArgs e)
         {
-            btntru(label7.Text, "Ca 4");
+            btntru(label7.Text,  4);
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            btntru(label1.Text, "Ca 4");
+            btntru(label1.Text, 4);
         }
 
         private void lbTuanLam_Click_1(object sender, EventArgs e)
-        {
-
+        { 
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
-            btntru(label5.Text, "Ca 4");
+            btntru(label5.Text, 4);
         }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
-            btntru(label1.Text, "Ca 4");
+            btntru(label1.Text, 4);
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
-            btnCong(label1.Text, "Ca 4");
+            btnCong(label1.Text, 4);
         }
-
         private void button4_Click(object sender, EventArgs e)
         {
-            btnCong(label5.Text, "Ca 4");
+            btnCong(label5.Text, 4);
         }
     }
 }       

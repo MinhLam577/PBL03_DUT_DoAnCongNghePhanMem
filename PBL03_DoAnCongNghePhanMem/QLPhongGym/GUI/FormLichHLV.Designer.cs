@@ -37,7 +37,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lbca1 = new System.Windows.Forms.Label();
             this.lbca2 = new System.Windows.Forms.Label();
-            this.labelca3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -108,9 +107,7 @@
             this.lbTuanLam = new System.Windows.Forms.Label();
             this.ca4 = new System.Windows.Forms.Label();
             this.btnthangsau = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.labelca3 = new System.Windows.Forms.Label();
             this.lb_thang = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel19.SuspendLayout();
@@ -215,7 +212,7 @@
             this.lbca1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbca1.AutoSize = true;
             this.lbca1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbca1.Location = new System.Drawing.Point(23, 169);
+            this.lbca1.Location = new System.Drawing.Point(3, 169);
             this.lbca1.Name = "lbca1";
             this.lbca1.Size = new System.Drawing.Size(54, 25);
             this.lbca1.TabIndex = 7;
@@ -226,22 +223,11 @@
             this.lbca2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbca2.AutoSize = true;
             this.lbca2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbca2.Location = new System.Drawing.Point(23, 312);
+            this.lbca2.Location = new System.Drawing.Point(3, 312);
             this.lbca2.Name = "lbca2";
             this.lbca2.Size = new System.Drawing.Size(54, 25);
             this.lbca2.TabIndex = 8;
             this.lbca2.Text = "Ca 2";
-            // 
-            // labelca3
-            // 
-            this.labelca3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelca3.AutoSize = true;
-            this.labelca3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelca3.Location = new System.Drawing.Point(23, 472);
-            this.labelca3.Name = "labelca3";
-            this.labelca3.Size = new System.Drawing.Size(54, 25);
-            this.labelca3.TabIndex = 9;
-            this.labelca3.Text = "Ca 3";
             // 
             // panel1
             // 
@@ -368,11 +354,12 @@
             // listBox5
             // 
             this.listBox5.BackColor = System.Drawing.SystemColors.Highlight;
+            this.listBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox5.FormattingEnabled = true;
             this.listBox5.ItemHeight = 16;
             this.listBox5.Location = new System.Drawing.Point(0, -1);
             this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(145, 116);
+            this.listBox5.Size = new System.Drawing.Size(145, 112);
             this.listBox5.TabIndex = 0;
             // 
             // panel3
@@ -974,7 +961,7 @@
             this.ca4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ca4.AutoSize = true;
             this.ca4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ca4.Location = new System.Drawing.Point(23, 653);
+            this.ca4.Location = new System.Drawing.Point(3, 653);
             this.ca4.Name = "ca4";
             this.ca4.Size = new System.Drawing.Size(54, 25);
             this.ca4.TabIndex = 105;
@@ -992,38 +979,16 @@
             this.btnthangsau.UseVisualStyleBackColor = true;
             this.btnthangsau.Click += new System.EventHandler(this.btnthangsau_Click_1);
             // 
-            // label9
+            // labelca3
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(23, 475);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 25);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Ca 3";
-            // 
-            // label12
-            // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(23, 471);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(54, 25);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "Ca 3";
-            // 
-            // label13
-            // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(23, 474);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(54, 25);
-            this.label13.TabIndex = 9;
-            this.label13.Text = "Ca 3";
+            this.labelca3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelca3.AutoSize = true;
+            this.labelca3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelca3.Location = new System.Drawing.Point(3, 471);
+            this.labelca3.Name = "labelca3";
+            this.labelca3.Size = new System.Drawing.Size(54, 25);
+            this.labelca3.TabIndex = 9;
+            this.labelca3.Text = "Ca 3";
             // 
             // lb_thang
             // 
@@ -1081,12 +1046,9 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.ngaylamviec);
             this.Controls.Add(this.dateTimeNgayEnd);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.dateTimeNgayStart);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelca3);
+            this.Controls.Add(this.dateTimeNgayStart);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbca2);
             this.Controls.Add(this.lbca1);
             this.Controls.Add(this.label7);
@@ -1142,7 +1104,6 @@
             private System.Windows.Forms.Label label7;
             private System.Windows.Forms.Label lbca1;
             private System.Windows.Forms.Label lbca2;
-            private System.Windows.Forms.Label labelca3;
             private System.Windows.Forms.Panel panel1;
             private System.Windows.Forms.Label label8;
             private System.Windows.Forms.Label label10;
@@ -1210,9 +1171,7 @@
         private System.Windows.Forms.Label lbTuanLam;
         private System.Windows.Forms.Label ca4;
         private System.Windows.Forms.Button btnthangsau;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label labelca3;
         private System.Windows.Forms.Panel panel36;
         private System.Windows.Forms.Label lb_thang;
         private System.Windows.Forms.ListBox listBox15;

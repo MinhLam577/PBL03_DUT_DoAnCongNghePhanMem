@@ -28,23 +28,26 @@ namespace QLPhongGym.GUI
             {
                 // Hàng đầu tiên trên DataGridView đã được chọn
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-                // can than loi thieu value
-                //int idca = Convert.ToInt32(selectedRow.Cells[1].Value.ToString());
-                int idhlv = Convert.ToInt32(selectedRow.Cells[1].Value.ToString());
-                DateTime ngaylam = Convert.ToDateTime(selectedRow.Cells[3].Value.ToString());
-                LichLamViecTrongTuan a = new LichLamViecTrongTuan();
-                string ca = cbbCaLam.SelectedItem.ToString();
-                int id = Convert.ToInt32(ca.Substring(3, 1));
-                a.IDCa = id;
-                a.IDHLV = idhlv;
-                a.NgayLam = ngaylam;
-                if (DangKiLichLamViecBAL.getInStance.Xoa(a) == true)
+                if (selectedRow.Cells[1].Value != null && selectedRow.Cells[3].Value != null)
                 {
-                    MessageBox.Show("Xoa thanh cong");
-                    dataGridView1.DataSource = DangKiLichLamViecBAL.getInStance.ListHLVByCaForm2(ngaylam, id);
-                    // cap nhat len data
-
-                    xoahlv(ngaybatdaulamviec);
+                    int idhlv = Convert.ToInt32(selectedRow.Cells[1].Value.ToString());
+                    DateTime ngaylam = Convert.ToDateTime(selectedRow.Cells[3].Value.ToString());
+                    LichLamViecTrongTuan a = new LichLamViecTrongTuan();
+                    string ca = cbbCaLam.SelectedItem.ToString();
+                    int idca = DangKiLichLamViecBAL.getInStance.GetIdCa_ByTenCa(ca);
+                    a.IDCa = idca;
+                    a.IDHLV = idhlv;
+                    a.NgayLam = ngaylam;
+                    if (DangKiLichLamViecBAL.getInStance.Xoa(a) == true)
+                    {
+                        MessageBox.Show("Xoa thanh cong");
+                        dataGridView1.DataSource = DangKiLichLamViecBAL.getInStance.ListHLVByCaForm2(ngaylam, idca);
+                        xoahlv(ngaybatdaulamviec);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Giá trị ô không hợp lệ.");
                 }
             }
             else
@@ -59,11 +62,12 @@ namespace QLPhongGym.GUI
         DateTime ngaybatdaulamviec;
         private void XoaDangKiCaHLV_Load(object sender, EventArgs e)
         {
+            cbbCaLam.Items.AddRange(DangKiLichLamViecBAL.getInStance.LayDanhSachCaLamViec().ToArray());
             ngaybatdaulamviec = ngaybatdau1;
             ngaylamviec.Value = ngaylamviec1;        
             cbbCaLam.SelectedItem = ca;
-            string s = cbbCaLam.SelectedItem.ToString().Trim();
-            int id = Convert.ToInt32(s.Substring(3,1));
+            string tenca = cbbCaLam.SelectedItem.ToString().Trim();
+            int id = DangKiLichLamViecBAL.getInStance.GetIdCa_ByTenCa(tenca);
             dataGridView1.DataSource = DangKiLichLamViecBAL.getInStance.ListHLVByCaForm2(ngaylamviec.Value, id);         
         }
         private void btnCancel_Click(object sender, EventArgs e)

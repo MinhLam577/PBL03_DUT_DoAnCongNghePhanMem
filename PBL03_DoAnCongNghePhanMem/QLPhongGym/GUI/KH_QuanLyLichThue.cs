@@ -33,6 +33,7 @@ namespace QLPhongGym.GUI
                     if (row.Cells[0].Value != null)  // Kiểm tra giá trị của ô không phải là null trước khi chuyển đổi sang kiểu số nguyên
                     {
                         int ma = Convert.ToInt32(row.Cells[0].Value.ToString());
+
                         if (LichThueBLL.Instance.xoa(ma) == true)
                         {
                             MessageBox.Show("Xoa thanh cong");
@@ -56,12 +57,10 @@ namespace QLPhongGym.GUI
         }
         private void KH_QuanLyLichThue_Load(object sender, EventArgs e)
         {
-
             datagrid_LichThue.DataSource = LichThueBLL.Instance.ShowListKH_DkiHLV(idkh);
             datagrid_LichThue.Columns["IDKH"].Visible = false;
             datagrid_LichThue.Columns["IDHLV"].Visible = false;
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             if (datagrid_LichThue.SelectedCells.Count > 0)
