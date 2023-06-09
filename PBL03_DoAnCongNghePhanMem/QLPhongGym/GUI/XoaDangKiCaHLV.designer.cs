@@ -98,6 +98,7 @@
             // ngaylamviec
             // 
             this.ngaylamviec.CustomFormat = "yyyy-MM-dd";
+            this.ngaylamviec.Enabled = false;
             this.ngaylamviec.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ngaylamviec.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.ngaylamviec.Location = new System.Drawing.Point(386, 12);

@@ -287,6 +287,7 @@
             // 
             this.ngaylamviec.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ngaylamviec.CustomFormat = "yyyy-MM-dd";
+            this.ngaylamviec.Enabled = false;
             this.ngaylamviec.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ngaylamviec.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.ngaylamviec.Location = new System.Drawing.Point(126, 20);
@@ -299,6 +300,7 @@
             // 
             this.dateTimeNgayEnd.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dateTimeNgayEnd.CustomFormat = "yyyy-MM-dd";
+            this.dateTimeNgayEnd.Enabled = false;
             this.dateTimeNgayEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeNgayEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimeNgayEnd.Location = new System.Drawing.Point(1387, 21);
@@ -312,6 +314,7 @@
             // 
             this.dateTimeNgayStart.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dateTimeNgayStart.CustomFormat = "yyyy-MM-dd";
+            this.dateTimeNgayStart.Enabled = false;
             this.dateTimeNgayStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeNgayStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimeNgayStart.Location = new System.Drawing.Point(1159, 21);
