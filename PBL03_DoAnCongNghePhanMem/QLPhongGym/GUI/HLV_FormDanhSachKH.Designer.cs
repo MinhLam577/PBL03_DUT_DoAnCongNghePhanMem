@@ -496,7 +496,7 @@
             this.dtp_from.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp_from.Location = new System.Drawing.Point(155, 81);
             this.dtp_from.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dtp_from.MinDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
+            this.dtp_from.MinDate = new System.DateTime(1960, 1, 1, 0, 0, 0, 0);
             this.dtp_from.Name = "dtp_from";
             this.dtp_from.ShowUpDown = true;
             this.dtp_from.Size = new System.Drawing.Size(260, 34);
@@ -522,7 +522,7 @@
             this.dtp_to.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp_to.Location = new System.Drawing.Point(501, 81);
             this.dtp_to.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dtp_to.MinDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
+            this.dtp_to.MinDate = new System.DateTime(1960, 1, 1, 0, 0, 0, 0);
             this.dtp_to.Name = "dtp_to";
             this.dtp_to.ShowUpDown = true;
             this.dtp_to.Size = new System.Drawing.Size(273, 34);
@@ -535,7 +535,7 @@
             this.dtp_thangnam.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp_thangnam.Location = new System.Drawing.Point(156, 28);
             this.dtp_thangnam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dtp_thangnam.MinDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
+            this.dtp_thangnam.MinDate = new System.DateTime(1960, 1, 1, 0, 0, 0, 0);
             this.dtp_thangnam.Name = "dtp_thangnam";
             this.dtp_thangnam.ShowUpDown = true;
             this.dtp_thangnam.Size = new System.Drawing.Size(260, 34);
