@@ -22,18 +22,16 @@ namespace QLPhongGym.GUI
         public string GTName { get; set; }
         public string GiamGia { get; set; }
         public DangKiGoiTap dkgt { get; set; }
-        public LichThueHLV lt { get; set; }
         public HoaDonForm()
         {
             InitializeComponent();
         }
-        public HoaDonForm(string UserName, string GTName, string GiamGia, DangKiGoiTap dkgt, LichThueHLV lt)
+        public HoaDonForm(string UserName, string GTName, string GiamGia, DangKiGoiTap dkgt)
         {
             InitializeComponent();
             this.UserName = UserName;
             this.GTName = GTName;
             this.dkgt = dkgt;
-            this.lt = lt;
             this.GiamGia = GiamGia;
             LoadDuLieu();
         }
@@ -48,10 +46,7 @@ namespace QLPhongGym.GUI
                 lb_ngayketthuc.Text = dkgt.NgayKetThucGT.Value.Date.ToString();
                 lb_phidki.Text = PriceGT;
                 lb_giamgia.Text = GiamGia;
-                if (lt != null)
-                    lb_thanhtien.Text = (Convert.ToDouble(lb_giathue.Text) + Convert.ToDouble(lb_phidki.Text) - Convert.ToDouble(lb_giamgia.Text)).ToString();
-                else
-                    lb_thanhtien.Text = (Convert.ToDouble(lb_phidki.Text) - Convert.ToDouble(lb_giamgia.Text)).ToString();
+                lb_thanhtien.Text = (Convert.ToDouble(lb_phidki.Text) - Convert.ToDouble(lb_giamgia.Text)).ToString();
             }
             catch
             {
