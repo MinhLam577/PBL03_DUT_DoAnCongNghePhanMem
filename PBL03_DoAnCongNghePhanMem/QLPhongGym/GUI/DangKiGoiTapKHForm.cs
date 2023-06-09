@@ -105,7 +105,7 @@ namespace QLPhongGym.GUI
                                         {
                                             if (cb_inhoadon.Checked)
                                             {
-                                                HoaDonForm f = new HoaDonForm(kh.Name, gt, giamgia, dkgt, null);
+                                                HoaDonForm f = new HoaDonForm(kh.Name, gt, giamgia, dkgt);
                                                 DangKiThanhCong(this, new EventArgs());
                                                 f.Show();
                                             }
@@ -176,7 +176,7 @@ namespace QLPhongGym.GUI
                                     {
                                         if (cb_inhoadon.Checked)
                                         {
-                                            HoaDonForm f = new HoaDonForm(kh.Name, gt, giamgia, dangKiGoiTap, null);
+                                            HoaDonForm f = new HoaDonForm(kh.Name, gt, giamgia, dangKiGoiTap);
                                             DangKiThanhCong(this, new EventArgs());
                                             f.Show();
                                         }
@@ -218,7 +218,7 @@ namespace QLPhongGym.GUI
                                     {
                                         if (cb_inhoadon.Checked)
                                         {
-                                            HoaDonForm f = new HoaDonForm(kh.Name, gt, giamgia, dangKiGoiTap, null);
+                                            HoaDonForm f = new HoaDonForm(kh.Name, gt, giamgia, dangKiGoiTap);
                                             DangKiThanhCong(this, new EventArgs());
                                             f.Show();
                                         }
