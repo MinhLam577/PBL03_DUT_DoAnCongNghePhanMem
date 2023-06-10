@@ -35,6 +35,7 @@ namespace QLPhongGym.GUI
             {
                 try
                 {
+                    int CatNhat = 0;
                     if (dataGridView1.SelectedCells.Count > 0)
                     {
                         bool check = true;
@@ -43,7 +44,7 @@ namespace QLPhongGym.GUI
                             if (i.OwningRow.Cells[1].Value != null)
                             {
                                 int idHLV = Convert.ToInt32(i.OwningRow.Cells[1].Value.ToString().Trim());
-
+                                CatNhat++;
                                 //Xóa tài khoản hlv
                                 if (TKHLV_BLL.Instance.FindListTKHLVByIDHLV(idHLV) != null)
                                     foreach (string TenTK in TKHLV_BLL.Instance.FindListTKHLVByIDHLV(idHLV))
@@ -52,9 +53,7 @@ namespace QLPhongGym.GUI
                                 //Xóa lịch làm việc hlv
                                 if (DangKiLichLamViecBAL.getInStance.GetListLichLamViecByIDHLV(idHLV) != null)
                                     foreach (LichLamViecTrongTuan llv in DangKiLichLamViecBAL.getInStance.GetListLichLamViecByIDHLV(idHLV))
-                                        DangKiLichLamViecBAL.getInStance.DeleteLichLamViec(llv);
-
-                                
+                                        DangKiLichLamViecBAL.getInStance.DeleteLichLamViec(llv);                               
 
                                 //Xóa lịch thuê hlv
                                 if (LichThueBLL.Instance.GetLichThueByIDHLV(idHLV) != null)
@@ -67,6 +66,7 @@ namespace QLPhongGym.GUI
                                         //Xóa lịch thuê
                                         LichThueBLL.Instance.DeleteLichThue(lt.IDLT);
                                     }
+
                                 //Xóa huấn luyện viên
                                 if (!QLHLVBLL.getInstance.Delete(idHLV))
                                 {
@@ -75,7 +75,7 @@ namespace QLPhongGym.GUI
                                 }
                             }
                         }
-                        if (check)
+                        if (check && CatNhat != 0)
                         {
                             MessageBox.Show("Xóa Thành Công");
                             CapNhatListHLV();
@@ -127,20 +127,19 @@ namespace QLPhongGym.GUI
         }
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if ( dataGridView1.CurrentRow.Index !=-1)
-            {                
-                AddEdit_HLV a = new AddEdit_HLV();
-                HLV aa = new HLV();
-                a.luachon(2);
-                inforfromData(aa);
-                a.getinfofromAB(aa);
-                a.Show();
-                a.buon += new AddEdit_HLV.mydelegate(Edit);
-            }
-            else
+            if (dataGridView1.SelectedCells.Count == 1)
             {
-                MessageBox.Show("Vui lòng chọn hàng lại để tiếp tục");
-                return;
+                if (dataGridView1.SelectedCells[0].OwningRow.Cells[1].Value != null)
+                {
+                    AddEdit_HLV a = new AddEdit_HLV();
+                    HLV aa = new HLV();
+                    a.luachon(2);
+                    inforfromData(aa);
+                    a.getinfofromAB(aa);
+                    a.Show();
+                    a.buon += new AddEdit_HLV.mydelegate(Edit);
+                }
+                    
             }
         }
         private void btnThem_Click(object sender, EventArgs e)
