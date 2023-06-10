@@ -669,6 +669,25 @@ namespace QLPhongGym.DAL
             
             return danhSachCaLamViec;
         }
+        // idca : bang 
+        // IDca sau : đã sửa 
+
+        public bool Capnhat2(int idca, int idhlv, DateTime ngaylam, int IDCA, int IDHLV, DateTime NGAYLAM)
+        {
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                // Lấy đối tượng Order cần sửa đổi từ cơ sở dữ liệu
+                var lich = db.LichThueHLVs.FirstOrDefault(x => x.IDHLV == idhlv &&
+                x.IDCa == idca &&
+                x.NgayThue == ngaylam);
+                lich.IDCa = IDCA;
+                lich.IDHLV = IDHLV;
+                lich.NgayThue = NGAYLAM;
+                db.SaveChanges();
+                return true;
+            }
+
+        }
     }
  }
 
