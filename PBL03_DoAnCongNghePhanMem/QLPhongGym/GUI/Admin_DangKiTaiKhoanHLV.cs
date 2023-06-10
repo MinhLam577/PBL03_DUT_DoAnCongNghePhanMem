@@ -130,10 +130,8 @@ namespace QLPhongGym.GUI
                         {
                             tk.TrangThai = false;
                             if (TKBLL.Instance.UpdateTK(tk))
-                            {
                                 MessageBox.Show("Ban tài khoản thành công");
-                                Load_DataTK();
-                            }
+                            
                         }
                         else MessageBox.Show("tài khoản đã bị ban");
                     }
@@ -160,10 +158,7 @@ namespace QLPhongGym.GUI
                         {
                             tk.TrangThai = true;
                             if (TKBLL.Instance.UpdateTK(tk))
-                            {
                                 MessageBox.Show("Mở ban tài khoản thành công");
-                                Load_DataTK();
-                            }
                         }
                         else MessageBox.Show("tài khoản chưa bị ban");
                     }

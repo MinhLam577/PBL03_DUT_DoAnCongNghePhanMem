@@ -271,7 +271,7 @@ namespace QLPhongGym.DAL
                         int idhlv = Convert.ToInt32(IDHLV);
                         var data3 = from p in db.TKs
                                     join t in db.Users on p.IDUser equals t.IDUsers
-                                    where p.IDQuyen == 2 && p.TrangThai.Value == true && t.IDUsers == idhlv
+                                    where p.IDQuyen == 2 && t.IDUsers == idhlv
                                     select new { p.TenTK, p.IDUser, t.Name, p.MatkhauTK };
                         foreach (var i in data3)
                         {
