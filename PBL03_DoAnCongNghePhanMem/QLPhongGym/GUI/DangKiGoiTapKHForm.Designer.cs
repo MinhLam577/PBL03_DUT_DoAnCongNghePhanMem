@@ -78,10 +78,10 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(29, 207);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(163, 29);
+            this.label2.Size = new System.Drawing.Size(177, 29);
             this.label2.TabIndex = 97;
             this.label2.Text = "Ngày kết thúc:";
             // 
@@ -124,10 +124,10 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(92, 391);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 29);
+            this.label4.Size = new System.Drawing.Size(108, 29);
             this.label4.TabIndex = 91;
             this.label4.Text = "Ghi chú:";
             // 
@@ -136,10 +136,10 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(97, 110);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 29);
+            this.label6.Size = new System.Drawing.Size(104, 29);
             this.label6.TabIndex = 88;
             this.label6.Text = "Gói tập:";
             // 
@@ -147,10 +147,10 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(33, 162);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 29);
+            this.label1.Size = new System.Drawing.Size(172, 29);
             this.label1.TabIndex = 86;
             this.label1.Text = "Ngày đăng kí:";
             // 
@@ -188,11 +188,11 @@
             // cb_inhoadon
             // 
             this.cb_inhoadon.AutoSize = true;
-            this.cb_inhoadon.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_inhoadon.Location = new System.Drawing.Point(865, 695);
+            this.cb_inhoadon.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_inhoadon.Location = new System.Drawing.Point(847, 684);
             this.cb_inhoadon.Name = "cb_inhoadon";
             this.cb_inhoadon.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cb_inhoadon.Size = new System.Drawing.Size(165, 30);
+            this.cb_inhoadon.Size = new System.Drawing.Size(186, 33);
             this.cb_inhoadon.TabIndex = 9;
             this.cb_inhoadon.Text = "IN HÓA ĐƠN";
             this.cb_inhoadon.UseVisualStyleBackColor = true;
@@ -269,11 +269,11 @@
             // 
             this.rb_voucher.AutoSize = true;
             this.rb_voucher.Enabled = false;
-            this.rb_voucher.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_voucher.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rb_voucher.Location = new System.Drawing.Point(32, 272);
             this.rb_voucher.Name = "rb_voucher";
             this.rb_voucher.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.rb_voucher.Size = new System.Drawing.Size(107, 29);
+            this.rb_voucher.Size = new System.Drawing.Size(130, 33);
             this.rb_voucher.TabIndex = 8;
             this.rb_voucher.TabStop = true;
             this.rb_voucher.Text = "Voucher";
@@ -282,11 +282,11 @@
             // rb_tienmat
             // 
             this.rb_tienmat.AutoSize = true;
-            this.rb_tienmat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_tienmat.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rb_tienmat.Location = new System.Drawing.Point(32, 300);
             this.rb_tienmat.Name = "rb_tienmat";
             this.rb_tienmat.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.rb_tienmat.Size = new System.Drawing.Size(109, 29);
+            this.rb_tienmat.Size = new System.Drawing.Size(136, 33);
             this.rb_tienmat.TabIndex = 110;
             this.rb_tienmat.TabStop = true;
             this.rb_tienmat.Text = "Tiền mặt";
@@ -308,11 +308,11 @@
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(22, 244);
             this.label13.Name = "label13";
             this.label13.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label13.Size = new System.Drawing.Size(139, 29);
+            this.label13.Size = new System.Drawing.Size(150, 29);
             this.label13.TabIndex = 103;
             this.label13.Text = "Thanh toán:";
             // 
@@ -320,11 +320,11 @@
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(29, 150);
             this.label12.Name = "label12";
             this.label12.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label12.Size = new System.Drawing.Size(132, 29);
+            this.label12.Size = new System.Drawing.Size(143, 29);
             this.label12.TabIndex = 108;
             this.label12.Text = "Thành tiền:";
             // 
@@ -355,11 +355,11 @@
             // cb_giamgia
             // 
             this.cb_giamgia.AutoSize = true;
-            this.cb_giamgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_giamgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_giamgia.Location = new System.Drawing.Point(261, 45);
             this.cb_giamgia.Name = "cb_giamgia";
             this.cb_giamgia.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cb_giamgia.Size = new System.Drawing.Size(107, 30);
+            this.cb_giamgia.Size = new System.Drawing.Size(119, 33);
             this.cb_giamgia.TabIndex = 6;
             this.cb_giamgia.Text = "Giảm%";
             this.cb_giamgia.UseVisualStyleBackColor = true;
@@ -369,11 +369,11 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(46, 93);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label7.Size = new System.Drawing.Size(115, 29);
+            this.label7.Size = new System.Drawing.Size(124, 29);
             this.label7.TabIndex = 103;
             this.label7.Text = "Giảm giá:";
             // 
@@ -381,11 +381,11 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(59, 10);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label5.Size = new System.Drawing.Size(102, 29);
+            this.label5.Size = new System.Drawing.Size(110, 29);
             this.label5.TabIndex = 102;
             this.label5.Text = "Đơn giá:";
             // 

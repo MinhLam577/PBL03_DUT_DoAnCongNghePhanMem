@@ -112,6 +112,7 @@ namespace QLPhongGym.BLL
         public List<String> danhsachmasinhvientheongayca(DateTime ngay, int idca, string name)
         {
             return DangKiLichLamViecDAL.getInStance.danhsachmasinhvientheongayca(ngay, idca, name);
+
         }
         public List<int> GetCaLamViecByNgayLam_IDHLV(int IDHLV, DateTime NgayLam)
         {

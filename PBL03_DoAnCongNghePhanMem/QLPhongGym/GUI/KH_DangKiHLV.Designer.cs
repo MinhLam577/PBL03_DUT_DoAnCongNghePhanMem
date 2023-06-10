@@ -50,7 +50,7 @@
             // lbNgayLam
             // 
             this.lbNgayLam.AutoSize = true;
-            this.lbNgayLam.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNgayLam.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNgayLam.Location = new System.Drawing.Point(102, 206);
             this.lbNgayLam.Name = "lbNgayLam";
             this.lbNgayLam.Size = new System.Drawing.Size(129, 29);
@@ -60,40 +60,40 @@
             // mkh
             // 
             this.mkh.AutoSize = true;
-            this.mkh.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mkh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mkh.Location = new System.Drawing.Point(37, 301);
             this.mkh.Name = "mkh";
-            this.mkh.Size = new System.Drawing.Size(194, 29);
+            this.mkh.Size = new System.Drawing.Size(195, 29);
             this.mkh.TabIndex = 1;
             this.mkh.Text = "Mã Khách Hàng";
             // 
             // lbMahlv
             // 
             this.lbMahlv.AutoSize = true;
-            this.lbMahlv.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMahlv.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMahlv.Location = new System.Drawing.Point(580, 396);
             this.lbMahlv.Name = "lbMahlv";
-            this.lbMahlv.Size = new System.Drawing.Size(249, 29);
+            this.lbMahlv.Size = new System.Drawing.Size(250, 29);
             this.lbMahlv.TabIndex = 3;
             this.lbMahlv.Text = "Mã Huấn Luyện Viên";
             // 
             // lbTenhlv
             // 
             this.lbTenhlv.AutoSize = true;
-            this.lbTenhlv.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenhlv.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTenhlv.Location = new System.Drawing.Point(570, 291);
             this.lbTenhlv.Name = "lbTenhlv";
-            this.lbTenhlv.Size = new System.Drawing.Size(257, 29);
+            this.lbTenhlv.Size = new System.Drawing.Size(261, 29);
             this.lbTenhlv.TabIndex = 4;
             this.lbTenhlv.Text = "Tên Huấn Luyện Viên";
             // 
             // lbCa
             // 
             this.lbCa.AutoSize = true;
-            this.lbCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCa.Location = new System.Drawing.Point(718, 201);
             this.lbCa.Name = "lbCa";
-            this.lbCa.Size = new System.Drawing.Size(109, 29);
+            this.lbCa.Size = new System.Drawing.Size(112, 29);
             this.lbCa.TabIndex = 5;
             this.lbCa.Text = "Ca Thuê";
             // 
@@ -166,10 +166,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(29, 405);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(202, 29);
+            this.label7.Size = new System.Drawing.Size(206, 29);
             this.label7.TabIndex = 12;
             this.label7.Text = "Tên Khách Hàng";
             // 
@@ -187,10 +187,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(722, 486);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 29);
+            this.label1.Size = new System.Drawing.Size(107, 29);
             this.label1.TabIndex = 104;
             this.label1.Text = "Đơn Giá";
             // 
@@ -206,7 +206,7 @@
             // 
             // btnDangKi
             // 
-            this.btnDangKi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangKi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangKi.Location = new System.Drawing.Point(207, 558);
             this.btnDangKi.Name = "btnDangKi";
             this.btnDangKi.Size = new System.Drawing.Size(122, 63);
@@ -217,7 +217,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(901, 558);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(122, 63);
@@ -230,6 +230,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1220, 688);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnDangKi);

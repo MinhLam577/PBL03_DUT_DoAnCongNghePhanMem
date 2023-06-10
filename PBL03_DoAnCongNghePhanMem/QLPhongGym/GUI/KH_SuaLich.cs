@@ -21,7 +21,9 @@ namespace QLPhongGym.GUI
         public mydelegate buon;
         public KH_SuaLich()
         {
+           
             InitializeComponent();
+
         }
         private void btnDangKi_Click(object sender, EventArgs e)
         {
@@ -73,6 +75,7 @@ namespace QLPhongGym.GUI
             DateTime a = dateNgayLam.Value;
             cbbCa.Items.Clear();
             cbbHlv.SelectedItem = null;
+            cbbma.SelectedItem = null;
             cbbCa.Items.AddRange(LichThueBLL.Instance.danhsachcatheongay(a).ToArray());
         }
         private void cbbHlv_DropDown(object sender, EventArgs e)
@@ -108,6 +111,30 @@ namespace QLPhongGym.GUI
             {
                 MessageBox.Show("Bạn Chưa Điền Tên Huấn Luyện Viên ");
             }
+        }
+
+        private void KH_SuaLich_Load(object sender, EventArgs e)
+        {
+    
+        }
+
+        private void cbbHlv_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbbCa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateNgayLam_ValueChanged(object sender, EventArgs e)
+        {
+            /*cbbCa.SelectedItem = null;
+            DateTime ngaylam = dateNgayLam.Value;
+     
+            cbbCa.Items.Clear();
+            cbbCa.Items.AddRange(LichThueBLL.Instance.danhsachcatheongay(ngaylam).ToArray());*/
         }
     }
 }
