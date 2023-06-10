@@ -16,7 +16,7 @@ namespace QLPhongGym.GUI
     {
         public delegate void subtractHLV(DateTime ngaybatdaulam);
         public subtractHLV xoahlv;
-
+        public event EventHandler XoaThanhCong;
         public XoaDangKiCaHLV()
         {
             InitializeComponent();
@@ -26,30 +26,36 @@ namespace QLPhongGym.GUI
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                // Hàng đầu tiên trên DataGridView đã được chọn
-                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-                if (selectedRow.Cells[1].Value != null && selectedRow.Cells[3].Value != null)
+                try
                 {
-                    int idhlv = Convert.ToInt32(selectedRow.Cells[1].Value.ToString());
-                    DateTime ngaylam = Convert.ToDateTime(selectedRow.Cells[3].Value.ToString());
-                    string ca = cbbCaLam.SelectedItem.ToString();
-                    int idca = DangKiLichLamViecBAL.getInStance.GetIdCa_ByTenCa(ca);
-                    LichLamViecTrongTuan llv = DangKiLichLamViecBAL.getInStance.GetLLVByIDHLV_IDCa_NgayLam(idhlv, idca, ngaylam);
-                    if (DangKiLichLamViecBAL.getInStance.Xoa(llv) == true)
+                    // Hàng đầu tiên trên DataGridView đã được chọn
+                    int IDCa = -1;
+                    DateTime NgayLam = DateTime.Now;
+                    bool check = true;
+                    foreach (DataGridViewRow r in dataGridView1.SelectedRows)
+                    {
+                        if (r.Cells[1].Value != null)
+                        {
+                            int idhlv = Convert.ToInt32(r.Cells[1].Value.ToString());
+                            NgayLam = Convert.ToDateTime(r.Cells[3].Value.ToString());
+                            string ca = cbbCaLam.SelectedItem.ToString();
+                            IDCa = DangKiLichLamViecBAL.getInStance.GetIdCa_ByTenCa(ca);
+                            LichLamViecTrongTuan llv = DangKiLichLamViecBAL.getInStance.GetLLVByIDHLV_IDCa_NgayLam(idhlv, IDCa, NgayLam);
+                            if (!DangKiLichLamViecBAL.getInStance.Xoa(llv) == true)
+                            {
+                                check = false;
+                                break;
+                            }
+                        }
+                    }
+                    if (check == true && IDCa != -1)
                     {
                         MessageBox.Show("Xoa thanh cong");
-                        dataGridView1.DataSource = DangKiLichLamViecBAL.getInStance.ListHLVByCaForm2(ngaylam, idca);
-                        xoahlv(ngaybatdaulamviec);
+                        XoaThanhCong(this, new EventArgs());
+                        dataGridView1.DataSource = DangKiLichLamViecBAL.getInStance.ListHLVByCaForm2(NgayLam, IDCa);
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Giá trị ô không hợp lệ.");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Vui long chon hang ");
+                catch { MessageBox.Show("Xóa lịch làm việc thất bại"); }
             }
         }
         public DateTime ngaylamviec1 { get; set; }
