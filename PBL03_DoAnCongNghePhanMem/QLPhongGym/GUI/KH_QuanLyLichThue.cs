@@ -61,7 +61,7 @@ namespace QLPhongGym.GUI
                                 break;
                             case DialogResult.Cancel:
                                 break;
-                        }         
+                        }
                     }
                 }
             }
@@ -136,27 +136,49 @@ namespace QLPhongGym.GUI
                         MessageBox.Show("Lỗi: " + ex.Message);
                     }
                 }
-                
+
             }
         }
-
+        // idca : đã thay đổi , idhlv 
+        // IDCa : lấy trên hàng 
         public void Edit(int idca, int idhlv, DateTime ngaylam, int idkh)
         {
 
             DataGridViewRow row = datagrid_LichThue.SelectedRows[0];
+
+            int IDKH = Convert.ToInt32(row.Cells["IDKH"].Value.ToString());
             int IDHLV = Convert.ToInt32(row.Cells[2].Value.ToString().Trim());
             DateTime NgayLam = Convert.ToDateTime(row.Cells[4].Value.ToString().Trim());
             string TENCA = (row.Cells[5].Value.ToString().Trim());
             int IDCA = DangKiLichLamViecBAL.getInStance.GetIdCa_ByTenCa(TENCA);
-            if (LichThueBLL.Instance.SuaLichThueHLv(IDHLV, NgayLam, IDCA, idhlv, ngaylam, idca) == true)
+            try
             {
-                MessageBox.Show("Thay Đổi Thành Công");
-                datagrid_LichThue.DataSource = LichThueBLL.Instance.ShowListKH_DkiHLV(idkh);
+                // 
+                if (IDCA != idca || IDHLV != idhlv || ngaylam != NgayLam)
+                {
+
+                    if (DangKiLichLamViecBAL.getInStance.Capnhat2(IDCA, IDHLV, NgayLam, idca, idhlv, ngaylam) == true)
+                    {
+                        MessageBox.Show("Cap Nhat thanh cong ");
+                        datagrid_LichThue.DataSource = LichThueBLL.Instance.ShowListKH_DkiHLV(idkh);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Da ton tai");
+                    }
+                }
+                else if (IDCA == idca && IDHLV == idhlv && ngaylam == NgayLam)
+                {
+                    MessageBox.Show("Lịch Thuê Làm Việc Đã Tồn Tại  ");
+                }
+
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Đã tồn tại");
+                MessageBox.Show("Đã có người thuê rồi ");
             }
-        }  
+        }
     }
 }
+
+

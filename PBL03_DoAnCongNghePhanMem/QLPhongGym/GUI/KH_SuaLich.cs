@@ -30,23 +30,29 @@ namespace QLPhongGym.GUI
             LichThueHLV b = new LichThueHLV();
             DateTime ngaylam = dateNgayLam.Value;
             int makh = Convert.ToInt32(textMa.Text.ToString().Trim());
-            if (!string.IsNullOrEmpty(textMa.Text) && cbbCa.SelectedItem != null && cbbma.SelectedItem != null &&cbbHlv.SelectedItem !=null )
+            try
             {
-                int idca = -1;
-                string cbbtenca = cbbCa.SelectedItem.ToString().Trim();
-                idca = DangKiLichLamViecBAL.getInStance.GetIdCa_ByTenCa(cbbtenca);
-                int idhlv = Convert.ToInt32(cbbma.SelectedItem.ToString().Trim());
-                b.NgayThue = ngaylam;
-                b.IDHLV = idhlv;
-                b.IDKH = makh;
-                b.IDCa = idca;
-                buon(idca, idhlv, ngaylam, makh);
-                this.Dispose();
+                if (!string.IsNullOrEmpty(textMa.Text) && cbbCa.SelectedItem != null && cbbma.SelectedItem != null && cbbHlv.SelectedItem != null)
+                {
+                    int idca = -1;
+                    string cbbtenca = cbbCa.SelectedItem.ToString().Trim();
+                    idca = DangKiLichLamViecBAL.getInStance.GetIdCa_ByTenCa(cbbtenca);
+                    int idhlv = Convert.ToInt32(cbbma.SelectedItem.ToString().Trim());
+                    b.NgayThue = ngaylam;
+                    b.IDHLV = idhlv;
+                    b.IDKH = makh;
+                    b.IDCa = idca;
+                    buon(idca, idhlv, ngaylam, makh);
+                    this.Dispose();
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng điền đầy đủ thông tin.");
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Đã tồn tại Lịch Thuê Huấn Luyện Viên");
             }
-            else
-            {
-                MessageBox.Show("Vui lòng điền đầy đủ thông tin.");
-            }  
         }
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -127,14 +133,11 @@ namespace QLPhongGym.GUI
         {
 
         }
-
         private void dateNgayLam_ValueChanged(object sender, EventArgs e)
         {
-            /*cbbCa.SelectedItem = null;
-            DateTime ngaylam = dateNgayLam.Value;
-     
             cbbCa.Items.Clear();
-            cbbCa.Items.AddRange(LichThueBLL.Instance.danhsachcatheongay(ngaylam).ToArray());*/
+            cbbHlv.SelectedItem = null;
+            cbbma.SelectedItem = null;
         }
     }
 }
