@@ -51,7 +51,7 @@
             // 
             this.lbNgayLam.AutoSize = true;
             this.lbNgayLam.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNgayLam.Location = new System.Drawing.Point(102, 206);
+            this.lbNgayLam.Location = new System.Drawing.Point(106, 206);
             this.lbNgayLam.Name = "lbNgayLam";
             this.lbNgayLam.Size = new System.Drawing.Size(129, 29);
             this.lbNgayLam.TabIndex = 0;
@@ -61,7 +61,7 @@
             // 
             this.mkh.AutoSize = true;
             this.mkh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mkh.Location = new System.Drawing.Point(37, 301);
+            this.mkh.Location = new System.Drawing.Point(40, 301);
             this.mkh.Name = "mkh";
             this.mkh.Size = new System.Drawing.Size(195, 29);
             this.mkh.TabIndex = 1;
@@ -71,7 +71,7 @@
             // 
             this.lbMahlv.AutoSize = true;
             this.lbMahlv.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMahlv.Location = new System.Drawing.Point(580, 396);
+            this.lbMahlv.Location = new System.Drawing.Point(579, 396);
             this.lbMahlv.Name = "lbMahlv";
             this.lbMahlv.Size = new System.Drawing.Size(250, 29);
             this.lbMahlv.TabIndex = 3;
@@ -81,7 +81,7 @@
             // 
             this.lbTenhlv.AutoSize = true;
             this.lbTenhlv.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenhlv.Location = new System.Drawing.Point(570, 291);
+            this.lbTenhlv.Location = new System.Drawing.Point(568, 291);
             this.lbTenhlv.Name = "lbTenhlv";
             this.lbTenhlv.Size = new System.Drawing.Size(261, 29);
             this.lbTenhlv.TabIndex = 4;
@@ -91,7 +91,7 @@
             // 
             this.lbCa.AutoSize = true;
             this.lbCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCa.Location = new System.Drawing.Point(718, 201);
+            this.lbCa.Location = new System.Drawing.Point(717, 201);
             this.lbCa.Name = "lbCa";
             this.lbCa.Size = new System.Drawing.Size(112, 29);
             this.lbCa.TabIndex = 5;

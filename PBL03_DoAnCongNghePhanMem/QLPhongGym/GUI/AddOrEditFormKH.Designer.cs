@@ -407,6 +407,8 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox2);
+            this.MaximumSize = new System.Drawing.Size(1249, 830);
+            this.MinimumSize = new System.Drawing.Size(1249, 830);
             this.Name = "AddOrEditFormKH";
             this.Text = "AddOrEditFormKH";
             this.Load += new System.EventHandler(this.AddOrEditFormKH_Load);

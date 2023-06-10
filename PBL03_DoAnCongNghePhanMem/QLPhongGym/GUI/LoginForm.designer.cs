@@ -180,6 +180,8 @@
             this.Controls.Add(this.lb_Tk);
             this.ForeColor = System.Drawing.Color.White;
             this.HelpButton = true;
+            this.MaximumSize = new System.Drawing.Size(1423, 831);
+            this.MinimumSize = new System.Drawing.Size(1423, 831);
             this.Name = "LoginForm";
             this.Text = "Đăng nhập";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

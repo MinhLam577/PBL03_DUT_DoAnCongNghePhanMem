@@ -123,7 +123,7 @@
             this.btn_thoat.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btn_thoat.FlatAppearance.BorderSize = 0;
             this.btn_thoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_thoat.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_thoat.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_thoat.ForeColor = System.Drawing.Color.White;
             this.btn_thoat.Image = ((System.Drawing.Image)(resources.GetObject("btn_thoat.Image")));
             this.btn_thoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
