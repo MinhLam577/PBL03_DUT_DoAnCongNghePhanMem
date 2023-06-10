@@ -57,7 +57,6 @@ namespace QLPhongGym.GUI
                                 }
                                 if (check)
                                     datagrid_LichThue.DataSource = LichThueBLL.Instance.ShowListKH_DkiHLV(idkh);
-                                else { MessageBox.Show("Xóa thất bại"); }
                                 break;
                             case DialogResult.Cancel:
                                 break;
@@ -142,21 +141,25 @@ namespace QLPhongGym.GUI
 
         public void Edit(int idca, int idhlv, DateTime ngaylam, int idkh)
         {
-
-            DataGridViewRow row = datagrid_LichThue.SelectedRows[0];
-            int IDHLV = Convert.ToInt32(row.Cells[2].Value.ToString().Trim());
-            DateTime NgayLam = Convert.ToDateTime(row.Cells[4].Value.ToString().Trim());
-            string TENCA = (row.Cells[5].Value.ToString().Trim());
-            int IDCA = DangKiLichLamViecBAL.getInStance.GetIdCa_ByTenCa(TENCA);
-            if (LichThueBLL.Instance.SuaLichThueHLv(IDHLV, NgayLam, IDCA, idhlv, ngaylam, idca) == true)
+            try
             {
-                MessageBox.Show("Thay Đổi Thành Công");
-                datagrid_LichThue.DataSource = LichThueBLL.Instance.ShowListKH_DkiHLV(idkh);
+                DataGridViewRow row = datagrid_LichThue.SelectedRows[0];
+                int IDHLV = Convert.ToInt32(row.Cells[2].Value.ToString().Trim());
+                DateTime NgayLam = Convert.ToDateTime(row.Cells[4].Value.ToString().Trim());
+                string TENCA = (row.Cells[5].Value.ToString().Trim());
+                int IDCA = DangKiLichLamViecBAL.getInStance.GetIdCa_ByTenCa(TENCA);
+                if (LichThueBLL.Instance.SuaLichThueHLv(IDHLV, NgayLam, IDCA, idhlv, ngaylam, idca) == true)
+                {
+                    MessageBox.Show("Thay Đổi Thành Công");
+                    datagrid_LichThue.DataSource = LichThueBLL.Instance.ShowListKH_DkiHLV(idkh);
+                }
+                else
+                {
+                    MessageBox.Show("Đã tồn tại");
+                }
             }
-            else
-            {
-                MessageBox.Show("Đã tồn tại");
-            }
+            catch { MessageBox.Show("Lịch thuê trong thời gian này đã được thuê trước đó"); }
+            
         }  
     }
 }

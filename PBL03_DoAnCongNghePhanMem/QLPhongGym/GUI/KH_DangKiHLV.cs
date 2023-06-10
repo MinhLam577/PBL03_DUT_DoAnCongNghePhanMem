@@ -142,6 +142,7 @@ namespace QLPhongGym.GUI
             else
             {
                 MessageBox.Show("Đã Có Người Thuê");
+                return;
             }
 
             this.Dispose();

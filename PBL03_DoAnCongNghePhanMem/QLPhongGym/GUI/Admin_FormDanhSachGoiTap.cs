@@ -41,8 +41,17 @@ namespace QLPhongGym.GUI
                     {
                         if (row.Cells["Mã gói tập"] != null && row.Cells["Mã gói tập"].Value != null)
                         {
-                            int id = Convert.ToInt32(row.Cells["Mã gói tập"].Value);
                             
+                            int id = Convert.ToInt32(row.Cells["Mã gói tập"].Value);
+                            //Xóa đăng kí gói tập
+                            foreach (DangKiGoiTap i in DangKiGoiTapBLL.Instance.GetListDKGTByIDGT(id))
+                                DangKiGoiTapBLL.Instance.DeleteDKGT(i);
+
+                            //Xóa hóa đơn
+                            foreach (HoaDon i in HoaDonBLL.Instance.GetListHoaDonByIDGT(id))
+                                HoaDonBLL.Instance.DeleteHoaDon(i);
+
+                            //Xóa gói tập
                             GoiTapBLL.Instance.DeleteGT(GoiTapBLL.Instance.GetGTByID(id));
                         }
 

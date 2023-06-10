@@ -14,9 +14,7 @@ namespace QLPhongGym.GUI
 {
     public partial class XoaDangKiCaHLV : Form
     {
-        public delegate void subtractHLV(DateTime ngaybatdaulam);
-        public subtractHLV xoahlv;
-
+        public event EventHandler XoaThanhCong;
         public XoaDangKiCaHLV()
         {
             InitializeComponent();
@@ -26,25 +24,42 @@ namespace QLPhongGym.GUI
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                // Hàng đầu tiên trên DataGridView đã được chọn
-                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
-                if (selectedRow.Cells[1].Value != null && selectedRow.Cells[3].Value != null)
+                if (dataGridView1.SelectedRows[0].Cells[1].Value != null)
                 {
-                    int idhlv = Convert.ToInt32(selectedRow.Cells[1].Value.ToString());
-                    DateTime ngaylam = Convert.ToDateTime(selectedRow.Cells[3].Value.ToString());
-                    string ca = cbbCaLam.SelectedItem.ToString();
-                    int idca = DangKiLichLamViecBAL.getInStance.GetIdCa_ByTenCa(ca);
-                    LichLamViecTrongTuan llv = DangKiLichLamViecBAL.getInStance.GetLLVByIDHLV_IDCa_NgayLam(idhlv, idca, ngaylam);
-                    if (DangKiLichLamViecBAL.getInStance.Xoa(llv) == true)
+                    int IDCa = -1;
+                    DateTime NgayLam = DateTime.Now;
+                    bool check = true;
+                    switch (MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
                     {
-                        MessageBox.Show("Xoa thanh cong");
-                        dataGridView1.DataSource = DangKiLichLamViecBAL.getInStance.ListHLVByCaForm2(ngaylam, idca);
-                        xoahlv(ngaybatdaulamviec);
+                        case DialogResult.OK:
+                            foreach (DataGridViewRow selectedRow in dataGridView1.SelectedRows)
+                            {
+                                if (selectedRow.Cells["IDMaHLV"] != null && selectedRow.Cells["IDMaHLV"].Value != null)
+                                {
+                                    int idhlv = Convert.ToInt32(selectedRow.Cells["IDMaHLV"].Value.ToString());
+                                    NgayLam = Convert.ToDateTime(selectedRow.Cells["NgayLam"].Value.ToString());
+                                    string ca = cbbCaLam.SelectedItem.ToString();
+                                    IDCa = DangKiLichLamViecBAL.getInStance.GetIdCa_ByTenCa(ca);
+                                    LichLamViecTrongTuan llv = DangKiLichLamViecBAL.getInStance.GetLLVByIDHLV_IDCa_NgayLam(idhlv, IDCa, NgayLam);
+                                    if (!DangKiLichLamViecBAL.getInStance.Xoa(llv))
+                                    {
+                                        check = false;
+                                        break;
+                                    }
+                                }
+                            }
+                            if (check && IDCa != -1)
+                            {
+
+                                dataGridView1.DataSource = DangKiLichLamViecBAL.getInStance.ListHLVByCaForm2(NgayLam, IDCa);
+                                MessageBox.Show("Xóa thành công");
+                                XoaThanhCong(this, new EventArgs());
+                            }
+
+                            break;
+                        case DialogResult.Cancel:
+                            break;
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Giá trị ô không hợp lệ.");
                 }
             }
             else

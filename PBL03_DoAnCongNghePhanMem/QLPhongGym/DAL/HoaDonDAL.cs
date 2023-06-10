@@ -208,5 +208,12 @@ namespace QLPhongGym.DAL
                 return db.HoaDons.Where(s => s.IDKH == IDKH).ToList();
             }
         }
+        public List<HoaDon> GetListHoaDonByIDGT(int IDGT)
+        {
+            using (QLPhongGymDB db = new QLPhongGymDB())
+            {
+                return db.HoaDons.Where(s => s.IDGT.Value == IDGT).ToList();
+            }
+        }
     }
 }

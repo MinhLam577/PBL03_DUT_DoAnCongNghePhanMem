@@ -402,6 +402,11 @@ namespace QLPhongGym.GUI
         private void btntru(string a, int idca )
         {
             XoaDangKiCaHLV A = new XoaDangKiCaHLV();
+            A.XoaThanhCong += (o, ev) =>
+            {
+                (o as XoaDangKiCaHLV).Close();
+                hienthilenlistboxHang(dateTimeNgayStart.Value);
+            };
             string dateString1 = a;
             // Định dạng ngày tháng ban đầu
             string format = "dd/MM/yyyy";
@@ -414,7 +419,6 @@ namespace QLPhongGym.GUI
             string ca = DangKiLichLamViecBAL.getInStance.GetTenCa_ByIdCa(idca);
             A.ca = ca;
             A.Show();
-            A.xoahlv = new XoaDangKiCaHLV.subtractHLV(hienthilenlistboxHang);
         }
         // btncong
         private void btnCong(string a, int idca)

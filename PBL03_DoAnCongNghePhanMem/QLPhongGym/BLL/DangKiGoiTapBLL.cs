@@ -88,5 +88,9 @@ namespace QLPhongGym.BLL
         {
             return DangKiGoiTapDAL.Instance.GetListDKGTByYear(year);
         }
+        public List<DangKiGoiTap> GetListDKGTByIDGT(int IDGT)
+        {
+            return DangKiGoiTapDAL.Instance.GetListDKGTByIDGT(IDGT);
+        }
     }
 }
