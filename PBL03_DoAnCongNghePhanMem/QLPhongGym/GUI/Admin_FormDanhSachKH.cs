@@ -114,7 +114,7 @@ namespace QLPhongGym.GUI
             {
                 try
                 {
-                    int IDKH = KHBLL.Instance.GetUserIDByCCCD(dgv_kh.SelectedRows[0].Cells["CCCD"].Value.ToString());
+                    int IDKH = Convert.ToInt32(dgv_kh.SelectedRows[0].Cells["IDThe"].Value.ToString());
                     AddOrEditFormKH f = new AddOrEditFormKH(IDKH.ToString(), "");
                     f.ThayDoiThanhCong += F_ThayDoiThanhCong;
                     f.ShowDialog();
