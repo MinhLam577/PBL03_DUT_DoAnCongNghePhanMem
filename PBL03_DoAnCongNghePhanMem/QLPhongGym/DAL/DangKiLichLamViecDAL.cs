@@ -176,12 +176,7 @@ namespace QLPhongGym.DAL
         {
             using (QLPhongGymDB db = new QLPhongGymDB())
             {
-                // tim kiem lich can chon vs 3 thuoc tinh 
-                var lichhlva = db.LichLamViecTrongTuans.SingleOrDefault(x => x.IDHLV == a.IDHLV &&
-                        x.IDCa == a.IDCa &&
-                        x.NgayLam == a.NgayLam
-                        );
-                db.LichLamViecTrongTuans.Remove(lichhlva);
+                db.Entry(a).State = EntityState.Deleted;
                 db.SaveChanges();
                 return true;
             }

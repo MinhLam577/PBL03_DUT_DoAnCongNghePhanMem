@@ -433,7 +433,10 @@ namespace QLPhongGym.GUI
             string ca = DangKiLichLamViecBAL.getInStance.GetTenCa_ByIdCa(idca);
             A.ca = ca;
             A.Show();
-            A.xoahlv = new XoaDangKiCaHLV.subtractHLV(hienthilenlistboxHang);
+            A.XoaThanhCong += (o, ev) =>
+            {
+                hienthilenlistboxHang((o as XoaDangKiCaHLV).ngaybatdau1);
+            };
         }
         // btncong
         private void btnCong(string a, int idca)
