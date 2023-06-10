@@ -45,30 +45,30 @@
             // CA
             // 
             this.CA.AutoSize = true;
-            this.CA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CA.Location = new System.Drawing.Point(178, 107);
             this.CA.Name = "CA";
-            this.CA.Size = new System.Drawing.Size(60, 25);
+            this.CA.Size = new System.Drawing.Size(64, 25);
             this.CA.TabIndex = 0;
             this.CA.Text = "IDCA";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(168, 180);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 25);
+            this.label2.Size = new System.Drawing.Size(75, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "IDHLV";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(123, 256);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 25);
+            this.label3.Size = new System.Drawing.Size(123, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "NGÀY LÀM";
             // 
@@ -98,24 +98,27 @@
             // 
             // btnEDIT
             // 
-            this.btnEDIT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEDIT.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnEDIT.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEDIT.Location = new System.Drawing.Point(128, 337);
             this.btnEDIT.Name = "btnEDIT";
             this.btnEDIT.Size = new System.Drawing.Size(136, 64);
             this.btnEDIT.TabIndex = 9;
             this.btnEDIT.Text = "OKI";
-            this.btnEDIT.UseVisualStyleBackColor = true;
+            this.btnEDIT.UseVisualStyleBackColor = false;
             this.btnEDIT.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCancel.Location = new System.Drawing.Point(516, 337);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(136, 64);
             this.btnCancel.TabIndex = 10;
             this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // timeNgaylam
@@ -133,20 +136,20 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(419, 14);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(36, 25);
+            this.label10.Size = new System.Drawing.Size(38, 25);
             this.label10.TabIndex = 68;
             this.label10.Text = "To";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(123, 14);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(57, 25);
+            this.label11.Size = new System.Drawing.Size(61, 25);
             this.label11.TabIndex = 67;
             this.label11.Text = "From";
             // 
@@ -180,6 +183,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
             this.Controls.Add(this.label10);
@@ -194,6 +198,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.CA);
+            this.ForeColor = System.Drawing.SystemColors.InfoText;
             this.Name = "FormEditLichLamViec";
             this.Text = "FormEditLichLamViec";
             this.Load += new System.EventHandler(this.FormEditLichLamViec_Load);

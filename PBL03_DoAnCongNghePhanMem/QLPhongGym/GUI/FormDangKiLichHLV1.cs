@@ -67,6 +67,17 @@ namespace QLPhongGym.GUI
                     dateTimeNgayEnd.Value = new DateTime(nam, thang, ngayketthuc);
                 }
             }
+            else if (dateTimeNgayStart.Value.Month == 1)
+            {
+                int nam = dateTimeNgayStart.Value.Year;
+                nam--;
+                int ngaybatdau = dateTimeNgayStart.Value.Day;
+                int ngayketthuc = dateTimeNgayEnd.Value.Day;
+                lb_thang.Text = "Tháng " + 12;
+                dateTimeNgayStart.Value = new DateTime(nam, 12, ngaybatdau);
+                dateTimeNgayEnd.Value = new DateTime(nam, 12, ngayketthuc);
+            }
+
             labelTheoTuan();
             hienthilenlistboxHang(dateTimeNgayStart.Value);
         }
@@ -96,6 +107,16 @@ namespace QLPhongGym.GUI
                     dateTimeNgayStart.Value = new DateTime(nam, thang, ngaybatdau);
                     dateTimeNgayEnd.Value = new DateTime(nam, thang, ngayketthuc);
                 }
+            }
+            else if(dateTimeNgayStart.Value.Month ==12)
+            {
+                int nam = dateTimeNgayStart.Value.Year;
+                nam++;
+                int ngaybatdau = dateTimeNgayStart.Value.Day;
+                int ngayketthuc = dateTimeNgayEnd.Value.Day;
+                lb_thang.Text = "Tháng " + 1;
+                dateTimeNgayStart.Value = new DateTime(nam, 1, ngaybatdau);
+                dateTimeNgayEnd.Value = new DateTime(nam, 1, ngayketthuc);
             }
             labelTheoTuan();
             hienthilenlistboxHang(dateTimeNgayStart.Value);
@@ -216,7 +237,6 @@ namespace QLPhongGym.GUI
                     else
                     {
                         label.Text = "";
-
                     }
                 }
             }
@@ -327,7 +347,6 @@ namespace QLPhongGym.GUI
 
             btntru(label1.Text, 1);
         }
-
         private void btncong2_Click(object sender, EventArgs e)
         {
             try
@@ -440,7 +459,6 @@ namespace QLPhongGym.GUI
             A.Show();
             A.HLVDelegate = new XepLichHLV.AddHLVToListBox(hienthilenlistboxHang);
         }
-
         private void btncong8_Click(object sender, EventArgs e)
         {
             btnCong(label1.Text, 2);
@@ -481,7 +499,6 @@ namespace QLPhongGym.GUI
         {
             btntru(label5.Text, 2);
         }
-
         private void btncong13_Click(object sender, EventArgs e)
         {
             btnCong(label6.Text, 2);
@@ -490,7 +507,6 @@ namespace QLPhongGym.GUI
         {
             btntru(label6.Text,  2);
         }
-
         private void btn14_Click(object sender, EventArgs e)
         {
             btnCong(label7.Text, 2);
@@ -500,17 +516,14 @@ namespace QLPhongGym.GUI
         {
             btntru(label7.Text, 2);
         }
-
         private void btncong15_Click(object sender, EventArgs e)
         {
             btnCong(label1.Text, 3);
         }
-
         private void btntru15_Click(object sender, EventArgs e)
         {
             btntru(label1.Text,  3);
         }
-
         private void btncong16_Click(object sender, EventArgs e)
         {
             btnCong(label2.Text,  3);
@@ -520,12 +533,10 @@ namespace QLPhongGym.GUI
         {
             btntru(label2.Text,3);
         }
-
         private void btncong17_Click(object sender, EventArgs e)
         {
             btnCong(label3.Text,  3);
         }
-
         private void btntru17_Click(object sender, EventArgs e)
         {
             btntru(label3.Text, 3);
@@ -535,7 +546,6 @@ namespace QLPhongGym.GUI
         {
             btnCong(label4.Text, 3);
         }
-
         private void btntru18_Click(object sender, EventArgs e)
         {
             btntru(label4.Text,  3);
@@ -545,7 +555,6 @@ namespace QLPhongGym.GUI
         {
             btnCong(label5.Text, 3);
         }
-
         private void btntru19_Click(object sender, EventArgs e)
         {
             btntru(label5.Text, 3);
@@ -555,7 +564,6 @@ namespace QLPhongGym.GUI
         {
             btnCong(label6.Text,  3);
         }
-
         private void btntru20_Click(object sender, EventArgs e)
         {
             btntru(label6.Text,3);
@@ -564,7 +572,6 @@ namespace QLPhongGym.GUI
         {
             btnCong(label7.Text, 3);
         }
-
         private void btntru21_Click(object sender, EventArgs e)
         {
             btntru(label7.Text,  3);
@@ -677,12 +684,10 @@ namespace QLPhongGym.GUI
             }
             return false;
         }
-
         private void btncong22_Click(object sender, EventArgs e)
         {
             btnCong(label1.Text,4);
         }
-
         private void btntru22_Click(object sender, EventArgs e)
         {
             btntru(label1.Text, 4);
@@ -692,12 +697,10 @@ namespace QLPhongGym.GUI
         {
             btnCong(label2.Text, 4);
         }
-
         private void btntru23_Click(object sender, EventArgs e)
         {
             btntru(label2.Text, 4);
         }
-
         private void btncong24_Click(object sender, EventArgs e)
         {
             btnCong(label3.Text,  4);
@@ -707,7 +710,6 @@ namespace QLPhongGym.GUI
         {
             btntru(label3.Text,4);
         }
-
         private void btncong25_Click(object sender, EventArgs e)
         {
             btnCong(label4.Text,  4);
@@ -717,7 +719,6 @@ namespace QLPhongGym.GUI
         {
             btntru(label4.Text, 4);
         }
-
         private void btncong26_Click(object sender, EventArgs e)
         {
             btnCong(label5.Text, 4);
@@ -731,12 +732,10 @@ namespace QLPhongGym.GUI
         {
             btnCong(label6.Text, 4);
         }
-
         private void btntru27_Click(object sender, EventArgs e)
         {
             btntru(label6.Text, 4);
         }
-
         private void btncong28_Click(object sender, EventArgs e)
         {
             btnCong(label7.Text, 4);
@@ -749,7 +748,6 @@ namespace QLPhongGym.GUI
         {
             btntru(label1.Text, 4);
         }
-
         private void lbTuanLam_Click_1(object sender, EventArgs e)
         { 
         }

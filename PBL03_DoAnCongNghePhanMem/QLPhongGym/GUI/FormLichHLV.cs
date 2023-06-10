@@ -414,6 +414,18 @@ namespace QLPhongGym.GUI
                     // ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
                 }
             }
+            else if (dateTimeNgayStart.Value.Month == 1)
+            {
+                int nam = dateTimeNgayStart.Value.Year;
+                nam--;
+                int ngaybatdau = dateTimeNgayStart.Value.Day;
+                int ngayketthuc = dateTimeNgayEnd.Value.Day;
+                lb_thang.Text = "Tháng " + 12;
+                dateTimeNgayStart.Value = new DateTime(nam, 12, ngaybatdau);
+                dateTimeNgayEnd.Value = new DateTime(nam, 12, ngayketthuc);
+            }
+
+
             labelTheoTuan();
             hienthilenlistboxHang(dateTimeNgayStart.Value);
         }
@@ -447,6 +459,16 @@ namespace QLPhongGym.GUI
                     dateTimeNgayEnd.Value = new DateTime(nam, thang, ngayketthuc);
                     // ngaylamviec.Value = new DateTime(dateTimeNgayStart.Value.Year, dateTimeNgayStart.Value.Month, dateTimeNgayStart.Value.Day);
                 }
+            }
+            else if (dateTimeNgayStart.Value.Month == 12)
+            {
+                int nam = dateTimeNgayStart.Value.Year;
+                nam++;
+                int ngaybatdau = dateTimeNgayStart.Value.Day;
+                int ngayketthuc = dateTimeNgayEnd.Value.Day;
+                lb_thang.Text = "Tháng " + 1;
+                dateTimeNgayStart.Value = new DateTime(nam, 1, ngaybatdau);
+                dateTimeNgayEnd.Value = new DateTime(nam, 1, ngayketthuc);
             }
             labelTheoTuan();
             hienthilenlistboxHang(dateTimeNgayStart.Value);

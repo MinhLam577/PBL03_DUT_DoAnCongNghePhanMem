@@ -20,6 +20,7 @@ namespace QLPhongGym.GUI
     {
         public KH_DangKiHLV()
         {
+            
             InitializeComponent();
         }
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -27,19 +28,20 @@ namespace QLPhongGym.GUI
         }
         private void dateNgayLam_ValueChanged(object sender, EventArgs e)
         {
-            cbbCa.SelectedItem = null;
+            
+
         }
 
         private void KH_DangKiHLV_Load(object sender, EventArgs e)
         {
-            
+     
         }
         private void cbbCa_DropDown(object sender, EventArgs e)
         {
             DateTime a = dateNgayLam.Value;
-            //oki
             cbbCa.Items.Clear();
             cbbHlv.SelectedItem = null;
+            cbbma.SelectedItem = null;
             cbbCa.Items.AddRange(LichThueBLL.Instance.danhsachcatheongay(a).ToArray());
         }
         int idca = -1;
@@ -138,6 +140,7 @@ namespace QLPhongGym.GUI
                 };
                 HoaDonBLL.Instance.AddHoaDon(hd);
                 MessageBox.Show("Đăng Kí Thành Công");
+                this.Dispose();
             }
             else
             {
@@ -145,7 +148,7 @@ namespace QLPhongGym.GUI
                 return;
             }
 
-            this.Dispose();
+           
         }
         private void cbbma_SelectedIndexChanged(object sender, EventArgs e)
         {

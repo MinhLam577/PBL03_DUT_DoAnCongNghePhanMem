@@ -90,7 +90,6 @@ namespace QLPhongGym.GUI
                 DateTime ngaylam = Convert.ToDateTime(selectedRow.Cells[3].Value.ToString());
                 LichLamViecTrongTuan a = new LichLamViecTrongTuan();
                 string ca = cbbCaLam.SelectedItem.ToString();
-               /* int id = Convert.ToInt32(ca.Substring(3,1));*/
                int id = DangKiLichLamViecBAL.getInStance.GetIdCa_ByTenCa(ca);
                 a.IDCa = id;
                 a.IDHLV = idhlv;
@@ -122,14 +121,8 @@ namespace QLPhongGym.GUI
                     if (DangKiLichLamViecBAL.getInStance.Capnhat1(IDCa, IDHLV, /*NgayBatDau, NgayKetThuc,*/ NgayLam, idca, idhlv, /*ngaybatdau, ngayketthuc,*/ ngaylam) == true)
                     {
                         MessageBox.Show("Cap Nhat thanh cong ");
-
-                        /* string[] parts = ca.Split(' ');
-                         string caNumberString = parts[parts.Length - 1];*/
-                        int caNumber = DangKiLichLamViecBAL.getInStance.GetIdCa_ByTenCa(ca);
-
-                        
-                        dataGridView1.DataSource = DangKiLichLamViecBAL.getInStance.ListHLVByCaForm2(NgayLam, caNumber);
-                        
+                        int caNumber = DangKiLichLamViecBAL.getInStance.GetIdCa_ByTenCa(ca);                      
+                        dataGridView1.DataSource = DangKiLichLamViecBAL.getInStance.ListHLVByCaForm2(NgayLam, caNumber);                       
                     }
                     else
                     {

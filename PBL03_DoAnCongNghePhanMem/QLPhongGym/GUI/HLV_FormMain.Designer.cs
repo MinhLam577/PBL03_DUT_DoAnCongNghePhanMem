@@ -68,7 +68,7 @@
             this.btn_lichlamviec.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_lichlamviec.FlatAppearance.BorderSize = 0;
             this.btn_lichlamviec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_lichlamviec.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_lichlamviec.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_lichlamviec.ForeColor = System.Drawing.Color.White;
             this.btn_lichlamviec.Image = ((System.Drawing.Image)(resources.GetObject("btn_lichlamviec.Image")));
             this.btn_lichlamviec.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -88,7 +88,7 @@
             this.btn_kh.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_kh.FlatAppearance.BorderSize = 0;
             this.btn_kh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_kh.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_kh.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_kh.ForeColor = System.Drawing.Color.White;
             this.btn_kh.Image = ((System.Drawing.Image)(resources.GetObject("btn_kh.Image")));
             this.btn_kh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -199,11 +199,11 @@
             // lb_home
             // 
             this.lb_home.AutoSize = true;
-            this.lb_home.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_home.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_home.ForeColor = System.Drawing.Color.Black;
             this.lb_home.Location = new System.Drawing.Point(78, 50);
             this.lb_home.Name = "lb_home";
-            this.lb_home.Size = new System.Drawing.Size(78, 29);
+            this.lb_home.Size = new System.Drawing.Size(82, 29);
             this.lb_home.TabIndex = 3;
             this.lb_home.Text = "Home";
             this.lb_home.Click += new System.EventHandler(this.lb_home_Click);
@@ -211,10 +211,10 @@
             // lb_acc
             // 
             this.lb_acc.AutoSize = true;
-            this.lb_acc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_acc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_acc.Location = new System.Drawing.Point(262, 50);
             this.lb_acc.Name = "lb_acc";
-            this.lb_acc.Size = new System.Drawing.Size(182, 29);
+            this.lb_acc.Size = new System.Drawing.Size(197, 29);
             this.lb_acc.TabIndex = 1;
             this.lb_acc.Text = "Huấn luyện viên";
             this.lb_acc.Click += new System.EventHandler(this.lb_acc_Click);
@@ -256,7 +256,7 @@
             // 
             // btn_doimatkhau
             // 
-            this.btn_doimatkhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_doimatkhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_doimatkhau.Location = new System.Drawing.Point(298, 102);
             this.btn_doimatkhau.Name = "btn_doimatkhau";
             this.btn_doimatkhau.Size = new System.Drawing.Size(205, 42);
@@ -267,7 +267,7 @@
             // 
             // btn_updatethongtin
             // 
-            this.btn_updatethongtin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_updatethongtin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_updatethongtin.Location = new System.Drawing.Point(21, 102);
             this.btn_updatethongtin.Name = "btn_updatethongtin";
             this.btn_updatethongtin.Size = new System.Drawing.Size(233, 42);
