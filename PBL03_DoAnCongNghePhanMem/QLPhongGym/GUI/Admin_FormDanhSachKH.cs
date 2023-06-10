@@ -314,6 +314,11 @@ namespace QLPhongGym.GUI
                         MessageBox.Show("Chỉ có thể gia hạn gói tập còn hiệu lực(chưa hết hạn sử dụng)");
                         return;
                     }
+                    if (Convert.ToBoolean(dgv_gt.SelectedRows[0].Cells["BaoLuu"].Value.ToString()))
+                    {
+                        MessageBox.Show("Chỉ có thể gia hạn gói tập không bảo lưu)");
+                        return;
+                    }
                     int IDKH = Convert.ToInt32(dgv_kh.SelectedRows[0].Cells["IDThe"].Value.ToString());
 
                     //Lấy tên gói tập
