@@ -199,10 +199,10 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(154, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 25);
+            this.label1.Size = new System.Drawing.Size(70, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
@@ -210,10 +210,10 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(355, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 25);
+            this.label2.Size = new System.Drawing.Size(70, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "label2";
             // 
@@ -221,10 +221,10 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(539, 84);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 25);
+            this.label3.Size = new System.Drawing.Size(70, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "label3";
             // 
@@ -232,10 +232,10 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(925, 84);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 25);
+            this.label5.Size = new System.Drawing.Size(70, 25);
             this.label5.TabIndex = 4;
             this.label5.Text = "label5";
             // 
@@ -244,10 +244,10 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(1132, 84);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 25);
+            this.label6.Size = new System.Drawing.Size(70, 25);
             this.label6.TabIndex = 5;
             this.label6.Text = "label6";
             // 
@@ -256,10 +256,10 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(1322, 85);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 25);
+            this.label7.Size = new System.Drawing.Size(70, 25);
             this.label7.TabIndex = 6;
             this.label7.Text = "label7";
             // 
@@ -267,10 +267,10 @@
             // 
             this.lbca1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbca1.AutoSize = true;
-            this.lbca1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbca1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbca1.Location = new System.Drawing.Point(50, 173);
             this.lbca1.Name = "lbca1";
-            this.lbca1.Size = new System.Drawing.Size(54, 25);
+            this.lbca1.Size = new System.Drawing.Size(58, 25);
             this.lbca1.TabIndex = 7;
             this.lbca1.Text = "Ca 1";
             // 
@@ -278,10 +278,10 @@
             // 
             this.lbca2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbca2.AutoSize = true;
-            this.lbca2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbca2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbca2.Location = new System.Drawing.Point(50, 315);
             this.lbca2.Name = "lbca2";
-            this.lbca2.Size = new System.Drawing.Size(54, 25);
+            this.lbca2.Size = new System.Drawing.Size(58, 25);
             this.lbca2.TabIndex = 8;
             this.lbca2.Text = "Ca 2";
             // 
@@ -289,17 +289,17 @@
             // 
             this.labelca3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelca3.AutoSize = true;
-            this.labelca3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelca3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelca3.Location = new System.Drawing.Point(50, 462);
             this.labelca3.Name = "labelca3";
-            this.labelca3.Size = new System.Drawing.Size(54, 25);
+            this.labelca3.Size = new System.Drawing.Size(58, 25);
             this.labelca3.TabIndex = 9;
             this.labelca3.Text = "Ca 3";
             // 
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel1.Controls.Add(this.btntru1);
             this.panel1.Controls.Add(this.butncong1);
             this.panel1.Controls.Add(this.listBox1);
@@ -332,11 +332,12 @@
             // 
             this.listBox1.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
+            this.listBox1.ItemHeight = 20;
             this.listBox1.Location = new System.Drawing.Point(0, 0);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(148, 112);
+            this.listBox1.Size = new System.Drawing.Size(148, 120);
             this.listBox1.TabIndex = 0;
             // 
             // btnthangtruoc
@@ -344,7 +345,7 @@
             this.btnthangtruoc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnthangtruoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnthangtruoc.Image = ((System.Drawing.Image)(resources.GetObject("btnthangtruoc.Image")));
-            this.btnthangtruoc.Location = new System.Drawing.Point(589, 50);
+            this.btnthangtruoc.Location = new System.Drawing.Point(589, 42);
             this.btnthangtruoc.Name = "btnthangtruoc";
             this.btnthangtruoc.Size = new System.Drawing.Size(54, 23);
             this.btnthangtruoc.TabIndex = 60;
@@ -356,7 +357,7 @@
             this.btnthangsau.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnthangsau.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnthangsau.Image = ((System.Drawing.Image)(resources.GetObject("btnthangsau.Image")));
-            this.btnthangsau.Location = new System.Drawing.Point(796, 50);
+            this.btnthangsau.Location = new System.Drawing.Point(796, 42);
             this.btnthangsau.Name = "btnthangsau";
             this.btnthangsau.Size = new System.Drawing.Size(49, 23);
             this.btnthangsau.TabIndex = 59;
@@ -368,7 +369,7 @@
             this.button5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(589, 5);
+            this.button5.Location = new System.Drawing.Point(589, 2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(54, 23);
             this.button5.TabIndex = 55;
@@ -380,7 +381,7 @@
             this.buttontuantiep.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttontuantiep.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttontuantiep.Image = ((System.Drawing.Image)(resources.GetObject("buttontuantiep.Image")));
-            this.buttontuantiep.Location = new System.Drawing.Point(796, 8);
+            this.buttontuantiep.Location = new System.Drawing.Point(796, 2);
             this.buttontuantiep.Name = "buttontuantiep";
             this.buttontuantiep.Size = new System.Drawing.Size(49, 23);
             this.buttontuantiep.TabIndex = 54;
@@ -390,8 +391,8 @@
             // lbTuanLam
             // 
             this.lbTuanLam.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbTuanLam.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTuanLam.Location = new System.Drawing.Point(645, 5);
+            this.lbTuanLam.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTuanLam.Location = new System.Drawing.Point(645, 2);
             this.lbTuanLam.Name = "lbTuanLam";
             this.lbTuanLam.Size = new System.Drawing.Size(152, 29);
             this.lbTuanLam.TabIndex = 53;
@@ -402,10 +403,10 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(326, 24);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(112, 29);
+            this.label8.Size = new System.Drawing.Size(119, 29);
             this.label8.TabIndex = 51;
             this.label8.Text = "Hôm Nay";
             // 
@@ -413,10 +414,10 @@
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(1187, 24);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(43, 29);
+            this.label10.Size = new System.Drawing.Size(45, 29);
             this.label10.TabIndex = 50;
             this.label10.Text = "To";
             // 
@@ -424,10 +425,10 @@
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(903, 21);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(70, 29);
+            this.label11.Size = new System.Drawing.Size(74, 29);
             this.label11.TabIndex = 49;
             this.label11.Text = "From";
             // 
@@ -474,8 +475,8 @@
             // btnTest
             // 
             this.btnTest.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTest.Location = new System.Drawing.Point(701, 728);
+            this.btnTest.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTest.Location = new System.Drawing.Point(701, 718);
             this.btnTest.Name = "btnTest";
             this.btnTest.Size = new System.Drawing.Size(149, 53);
             this.btnTest.TabIndex = 61;
@@ -519,11 +520,12 @@
             // 
             this.listBox3.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 16;
-            this.listBox3.Location = new System.Drawing.Point(0, -1);
+            this.listBox3.ItemHeight = 20;
+            this.listBox3.Location = new System.Drawing.Point(0, 0);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(142, 112);
+            this.listBox3.Size = new System.Drawing.Size(142, 100);
             this.listBox3.TabIndex = 68;
             // 
             // panel21
@@ -562,17 +564,18 @@
             // 
             this.listBox5.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox5.FormattingEnabled = true;
-            this.listBox5.ItemHeight = 16;
-            this.listBox5.Location = new System.Drawing.Point(0, -1);
+            this.listBox5.ItemHeight = 18;
+            this.listBox5.Location = new System.Drawing.Point(1, -1);
             this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(145, 112);
+            this.listBox5.Size = new System.Drawing.Size(145, 108);
             this.listBox5.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel2.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel2.Controls.Add(this.btntru4);
             this.panel2.Controls.Add(this.btncong4);
             this.panel2.Controls.Add(this.listBox4);
@@ -605,17 +608,18 @@
             // 
             this.listBox4.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox4.FormattingEnabled = true;
-            this.listBox4.ItemHeight = 16;
-            this.listBox4.Location = new System.Drawing.Point(1, 0);
+            this.listBox4.ItemHeight = 20;
+            this.listBox4.Location = new System.Drawing.Point(0, -1);
             this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(145, 112);
+            this.listBox4.Size = new System.Drawing.Size(145, 120);
             this.listBox4.TabIndex = 0;
             // 
             // panel3
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel3.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel3.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel3.Controls.Add(this.btntru7);
             this.panel3.Controls.Add(this.btncong7);
             this.panel3.Controls.Add(this.listBox7);
@@ -648,17 +652,18 @@
             // 
             this.listBox7.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox7.FormattingEnabled = true;
-            this.listBox7.ItemHeight = 16;
-            this.listBox7.Location = new System.Drawing.Point(0, 0);
+            this.listBox7.ItemHeight = 20;
+            this.listBox7.Location = new System.Drawing.Point(1, -1);
             this.listBox7.Name = "listBox7";
-            this.listBox7.Size = new System.Drawing.Size(148, 112);
+            this.listBox7.Size = new System.Drawing.Size(148, 120);
             this.listBox7.TabIndex = 0;
             // 
             // panel4
             // 
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel4.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel4.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel4.Controls.Add(this.btntru2);
             this.panel4.Controls.Add(this.btncong2);
             this.panel4.Controls.Add(this.listBox2);
@@ -691,17 +696,18 @@
             // 
             this.listBox2.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(2, 0);
+            this.listBox2.ItemHeight = 20;
+            this.listBox2.Location = new System.Drawing.Point(-2, 0);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(142, 112);
+            this.listBox2.Size = new System.Drawing.Size(142, 120);
             this.listBox2.TabIndex = 0;
             // 
             // panel5
             // 
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel5.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel5.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel5.Controls.Add(this.btntru9);
             this.panel5.Controls.Add(this.btncong9);
             this.panel5.Controls.Add(this.listBox9);
@@ -734,28 +740,29 @@
             // 
             this.listBox9.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox9.FormattingEnabled = true;
-            this.listBox9.ItemHeight = 16;
-            this.listBox9.Location = new System.Drawing.Point(0, 1);
+            this.listBox9.ItemHeight = 20;
+            this.listBox9.Location = new System.Drawing.Point(1, 0);
             this.listBox9.Name = "listBox9";
-            this.listBox9.Size = new System.Drawing.Size(148, 112);
+            this.listBox9.Size = new System.Drawing.Size(148, 120);
             this.listBox9.TabIndex = 0;
             // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(722, 84);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 25);
+            this.label4.Size = new System.Drawing.Size(70, 25);
             this.label4.TabIndex = 3;
             this.label4.Text = "label4";
             // 
             // panel6
             // 
             this.panel6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel6.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel6.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel6.Controls.Add(this.btntru6);
             this.panel6.Controls.Add(this.btncong6);
             this.panel6.Controls.Add(this.listBox6);
@@ -788,17 +795,18 @@
             // 
             this.listBox6.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox6.FormattingEnabled = true;
-            this.listBox6.ItemHeight = 16;
-            this.listBox6.Location = new System.Drawing.Point(0, 0);
+            this.listBox6.ItemHeight = 20;
+            this.listBox6.Location = new System.Drawing.Point(0, -1);
             this.listBox6.Name = "listBox6";
-            this.listBox6.Size = new System.Drawing.Size(148, 112);
+            this.listBox6.Size = new System.Drawing.Size(148, 120);
             this.listBox6.TabIndex = 0;
             // 
             // panel7
             // 
             this.panel7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel7.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel7.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel7.Controls.Add(this.btntru8);
             this.panel7.Controls.Add(this.btncong8);
             this.panel7.Controls.Add(this.listBox8);
@@ -831,17 +839,18 @@
             // 
             this.listBox8.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox8.FormattingEnabled = true;
-            this.listBox8.ItemHeight = 16;
-            this.listBox8.Location = new System.Drawing.Point(0, 1);
+            this.listBox8.ItemHeight = 20;
+            this.listBox8.Location = new System.Drawing.Point(1, -1);
             this.listBox8.Name = "listBox8";
-            this.listBox8.Size = new System.Drawing.Size(148, 112);
+            this.listBox8.Size = new System.Drawing.Size(148, 120);
             this.listBox8.TabIndex = 0;
             // 
             // panel8
             // 
             this.panel8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel8.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel8.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel8.Controls.Add(this.btntru10);
             this.panel8.Controls.Add(this.btncong10);
             this.panel8.Controls.Add(this.listBox10);
@@ -874,17 +883,18 @@
             // 
             this.listBox10.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox10.FormattingEnabled = true;
-            this.listBox10.ItemHeight = 16;
-            this.listBox10.Location = new System.Drawing.Point(0, -1);
+            this.listBox10.ItemHeight = 20;
+            this.listBox10.Location = new System.Drawing.Point(3, -1);
             this.listBox10.Name = "listBox10";
-            this.listBox10.Size = new System.Drawing.Size(148, 112);
+            this.listBox10.Size = new System.Drawing.Size(148, 120);
             this.listBox10.TabIndex = 0;
             // 
             // panel9
             // 
             this.panel9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel9.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel9.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel9.Controls.Add(this.btntru11);
             this.panel9.Controls.Add(this.btncong11);
             this.panel9.Controls.Add(this.listBox11);
@@ -917,17 +927,18 @@
             // 
             this.listBox11.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox11.FormattingEnabled = true;
-            this.listBox11.ItemHeight = 16;
+            this.listBox11.ItemHeight = 20;
             this.listBox11.Location = new System.Drawing.Point(0, -1);
             this.listBox11.Name = "listBox11";
-            this.listBox11.Size = new System.Drawing.Size(148, 112);
+            this.listBox11.Size = new System.Drawing.Size(148, 120);
             this.listBox11.TabIndex = 0;
             // 
             // panel10
             // 
             this.panel10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel10.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel10.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel10.Controls.Add(this.btntru12);
             this.panel10.Controls.Add(this.btncong12);
             this.panel10.Controls.Add(this.listBox12);
@@ -960,17 +971,18 @@
             // 
             this.listBox12.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox12.FormattingEnabled = true;
-            this.listBox12.ItemHeight = 16;
-            this.listBox12.Location = new System.Drawing.Point(0, -1);
+            this.listBox12.ItemHeight = 20;
+            this.listBox12.Location = new System.Drawing.Point(0, 0);
             this.listBox12.Name = "listBox12";
-            this.listBox12.Size = new System.Drawing.Size(148, 112);
+            this.listBox12.Size = new System.Drawing.Size(148, 120);
             this.listBox12.TabIndex = 0;
             // 
             // panel11
             // 
             this.panel11.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel11.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel11.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel11.Controls.Add(this.btntru13);
             this.panel11.Controls.Add(this.btncong13);
             this.panel11.Controls.Add(this.listBox13);
@@ -1003,17 +1015,18 @@
             // 
             this.listBox13.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox13.FormattingEnabled = true;
-            this.listBox13.ItemHeight = 16;
-            this.listBox13.Location = new System.Drawing.Point(0, 0);
+            this.listBox13.ItemHeight = 20;
+            this.listBox13.Location = new System.Drawing.Point(3, -1);
             this.listBox13.Name = "listBox13";
-            this.listBox13.Size = new System.Drawing.Size(148, 112);
+            this.listBox13.Size = new System.Drawing.Size(148, 120);
             this.listBox13.TabIndex = 0;
             // 
             // panel12
             // 
             this.panel12.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel12.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel12.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel12.Controls.Add(this.btntru14);
             this.panel12.Controls.Add(this.btn14);
             this.panel12.Controls.Add(this.listBox14);
@@ -1046,17 +1059,18 @@
             // 
             this.listBox14.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox14.FormattingEnabled = true;
-            this.listBox14.ItemHeight = 16;
+            this.listBox14.ItemHeight = 20;
             this.listBox14.Location = new System.Drawing.Point(3, 0);
             this.listBox14.Name = "listBox14";
-            this.listBox14.Size = new System.Drawing.Size(148, 112);
+            this.listBox14.Size = new System.Drawing.Size(151, 120);
             this.listBox14.TabIndex = 0;
             // 
             // panel13
             // 
             this.panel13.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel13.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel13.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel13.Controls.Add(this.btntru15);
             this.panel13.Controls.Add(this.btncong15);
             this.panel13.Controls.Add(this.listBox15);
@@ -1089,17 +1103,18 @@
             // 
             this.listBox15.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox15.FormattingEnabled = true;
-            this.listBox15.ItemHeight = 16;
-            this.listBox15.Location = new System.Drawing.Point(0, -1);
+            this.listBox15.ItemHeight = 20;
+            this.listBox15.Location = new System.Drawing.Point(-3, -1);
             this.listBox15.Name = "listBox15";
-            this.listBox15.Size = new System.Drawing.Size(148, 112);
+            this.listBox15.Size = new System.Drawing.Size(148, 120);
             this.listBox15.TabIndex = 0;
             // 
             // panel14
             // 
             this.panel14.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel14.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel14.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel14.Controls.Add(this.btntru16);
             this.panel14.Controls.Add(this.btncong16);
             this.panel14.Controls.Add(this.listBox16);
@@ -1132,17 +1147,18 @@
             // 
             this.listBox16.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox16.FormattingEnabled = true;
-            this.listBox16.ItemHeight = 16;
-            this.listBox16.Location = new System.Drawing.Point(0, -1);
+            this.listBox16.ItemHeight = 20;
+            this.listBox16.Location = new System.Drawing.Point(0, 0);
             this.listBox16.Name = "listBox16";
-            this.listBox16.Size = new System.Drawing.Size(148, 112);
+            this.listBox16.Size = new System.Drawing.Size(148, 120);
             this.listBox16.TabIndex = 0;
             // 
             // panel15
             // 
             this.panel15.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel15.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel15.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel15.Controls.Add(this.btntru17);
             this.panel15.Controls.Add(this.btncong17);
             this.panel15.Controls.Add(this.listBox17);
@@ -1175,17 +1191,18 @@
             // 
             this.listBox17.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox17.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox17.FormattingEnabled = true;
-            this.listBox17.ItemHeight = 16;
-            this.listBox17.Location = new System.Drawing.Point(0, -1);
+            this.listBox17.ItemHeight = 20;
+            this.listBox17.Location = new System.Drawing.Point(0, 0);
             this.listBox17.Name = "listBox17";
-            this.listBox17.Size = new System.Drawing.Size(148, 112);
+            this.listBox17.Size = new System.Drawing.Size(148, 120);
             this.listBox17.TabIndex = 0;
             // 
             // panel16
             // 
             this.panel16.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel16.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel16.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel16.Controls.Add(this.btntru18);
             this.panel16.Controls.Add(this.btncong18);
             this.panel16.Controls.Add(this.listBox18);
@@ -1218,17 +1235,18 @@
             // 
             this.listBox18.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox18.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox18.FormattingEnabled = true;
-            this.listBox18.ItemHeight = 16;
-            this.listBox18.Location = new System.Drawing.Point(0, -1);
+            this.listBox18.ItemHeight = 20;
+            this.listBox18.Location = new System.Drawing.Point(-1, -1);
             this.listBox18.Name = "listBox18";
-            this.listBox18.Size = new System.Drawing.Size(148, 112);
+            this.listBox18.Size = new System.Drawing.Size(148, 120);
             this.listBox18.TabIndex = 0;
             // 
             // panel17
             // 
             this.panel17.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel17.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel17.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel17.Controls.Add(this.btntru19);
             this.panel17.Controls.Add(this.btncong19);
             this.panel17.Controls.Add(this.listBox19);
@@ -1261,17 +1279,18 @@
             // 
             this.listBox19.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox19.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox19.FormattingEnabled = true;
-            this.listBox19.ItemHeight = 16;
+            this.listBox19.ItemHeight = 20;
             this.listBox19.Location = new System.Drawing.Point(0, -1);
             this.listBox19.Name = "listBox19";
-            this.listBox19.Size = new System.Drawing.Size(148, 112);
+            this.listBox19.Size = new System.Drawing.Size(148, 120);
             this.listBox19.TabIndex = 0;
             // 
             // panel18
             // 
             this.panel18.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel18.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel18.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel18.Controls.Add(this.btntru20);
             this.panel18.Controls.Add(this.btncong20);
             this.panel18.Controls.Add(this.listBox20);
@@ -1304,17 +1323,18 @@
             // 
             this.listBox20.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox20.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox20.FormattingEnabled = true;
-            this.listBox20.ItemHeight = 16;
+            this.listBox20.ItemHeight = 20;
             this.listBox20.Location = new System.Drawing.Point(0, -1);
             this.listBox20.Name = "listBox20";
-            this.listBox20.Size = new System.Drawing.Size(148, 112);
+            this.listBox20.Size = new System.Drawing.Size(148, 120);
             this.listBox20.TabIndex = 0;
             // 
             // panel20
             // 
             this.panel20.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel20.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel20.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel20.Controls.Add(this.btntru21);
             this.panel20.Controls.Add(this.btncong21);
             this.panel20.Controls.Add(this.listBox21);
@@ -1347,11 +1367,12 @@
             // 
             this.listBox21.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox21.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox21.FormattingEnabled = true;
-            this.listBox21.ItemHeight = 16;
-            this.listBox21.Location = new System.Drawing.Point(3, -1);
+            this.listBox21.ItemHeight = 20;
+            this.listBox21.Location = new System.Drawing.Point(0, 0);
             this.listBox21.Name = "listBox21";
-            this.listBox21.Size = new System.Drawing.Size(148, 112);
+            this.listBox21.Size = new System.Drawing.Size(148, 120);
             this.listBox21.TabIndex = 0;
             // 
             // panel23
@@ -1390,11 +1411,12 @@
             // 
             this.listBox23.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox23.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox23.FormattingEnabled = true;
-            this.listBox23.ItemHeight = 16;
-            this.listBox23.Location = new System.Drawing.Point(0, -1);
+            this.listBox23.ItemHeight = 20;
+            this.listBox23.Location = new System.Drawing.Point(3, -1);
             this.listBox23.Name = "listBox23";
-            this.listBox23.Size = new System.Drawing.Size(148, 112);
+            this.listBox23.Size = new System.Drawing.Size(148, 120);
             this.listBox23.TabIndex = 90;
             // 
             // panel24
@@ -1433,11 +1455,12 @@
             // 
             this.listBox24.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox24.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox24.FormattingEnabled = true;
-            this.listBox24.ItemHeight = 16;
+            this.listBox24.ItemHeight = 20;
             this.listBox24.Location = new System.Drawing.Point(0, 0);
             this.listBox24.Name = "listBox24";
-            this.listBox24.Size = new System.Drawing.Size(145, 128);
+            this.listBox24.Size = new System.Drawing.Size(145, 120);
             this.listBox24.TabIndex = 95;
             // 
             // panel25
@@ -1476,11 +1499,12 @@
             // 
             this.listBox25.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox25.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox25.FormattingEnabled = true;
-            this.listBox25.ItemHeight = 16;
+            this.listBox25.ItemHeight = 20;
             this.listBox25.Location = new System.Drawing.Point(0, 0);
             this.listBox25.Name = "listBox25";
-            this.listBox25.Size = new System.Drawing.Size(148, 128);
+            this.listBox25.Size = new System.Drawing.Size(148, 120);
             this.listBox25.TabIndex = 96;
             // 
             // panel27
@@ -1520,11 +1544,12 @@
             this.listBox27.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.listBox27.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox27.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox27.FormattingEnabled = true;
-            this.listBox27.ItemHeight = 16;
+            this.listBox27.ItemHeight = 20;
             this.listBox27.Location = new System.Drawing.Point(3, 3);
             this.listBox27.Name = "listBox27";
-            this.listBox27.Size = new System.Drawing.Size(148, 128);
+            this.listBox27.Size = new System.Drawing.Size(148, 120);
             this.listBox27.TabIndex = 98;
             // 
             // panel28
@@ -1563,21 +1588,22 @@
             // 
             this.listBox28.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox28.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox28.FormattingEnabled = true;
-            this.listBox28.ItemHeight = 16;
+            this.listBox28.ItemHeight = 20;
             this.listBox28.Location = new System.Drawing.Point(0, 0);
             this.listBox28.Name = "listBox28";
-            this.listBox28.Size = new System.Drawing.Size(148, 112);
+            this.listBox28.Size = new System.Drawing.Size(148, 120);
             this.listBox28.TabIndex = 0;
             // 
             // lbca4
             // 
             this.lbca4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbca4.AutoSize = true;
-            this.lbca4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbca4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbca4.Location = new System.Drawing.Point(50, 616);
             this.lbca4.Name = "lbca4";
-            this.lbca4.Size = new System.Drawing.Size(54, 25);
+            this.lbca4.Size = new System.Drawing.Size(58, 25);
             this.lbca4.TabIndex = 100;
             this.lbca4.Text = "Ca 4";
             // 
@@ -1617,11 +1643,12 @@
             // 
             this.listBox22.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox22.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox22.FormattingEnabled = true;
-            this.listBox22.ItemHeight = 16;
-            this.listBox22.Location = new System.Drawing.Point(0, 0);
+            this.listBox22.ItemHeight = 20;
+            this.listBox22.Location = new System.Drawing.Point(-2, 0);
             this.listBox22.Name = "listBox22";
-            this.listBox22.Size = new System.Drawing.Size(148, 112);
+            this.listBox22.Size = new System.Drawing.Size(148, 120);
             this.listBox22.TabIndex = 90;
             // 
             // panel26
@@ -1661,18 +1688,19 @@
             this.listBox26.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.listBox26.BackColor = System.Drawing.SystemColors.Highlight;
             this.listBox26.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox26.FormattingEnabled = true;
-            this.listBox26.ItemHeight = 16;
+            this.listBox26.ItemHeight = 20;
             this.listBox26.Location = new System.Drawing.Point(0, 0);
             this.listBox26.Name = "listBox26";
-            this.listBox26.Size = new System.Drawing.Size(148, 128);
+            this.listBox26.Size = new System.Drawing.Size(148, 120);
             this.listBox26.TabIndex = 98;
             // 
             // lb_thang
             // 
             this.lb_thang.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lb_thang.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_thang.Location = new System.Drawing.Point(650, 42);
+            this.lb_thang.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_thang.Location = new System.Drawing.Point(650, 34);
             this.lb_thang.Name = "lb_thang";
             this.lb_thang.Size = new System.Drawing.Size(147, 39);
             this.lb_thang.TabIndex = 101;

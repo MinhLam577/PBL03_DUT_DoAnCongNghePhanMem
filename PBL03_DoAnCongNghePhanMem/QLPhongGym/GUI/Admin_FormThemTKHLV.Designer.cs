@@ -53,10 +53,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(59, 72);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(223, 29);
+            this.label7.Size = new System.Drawing.Size(242, 29);
             this.label7.TabIndex = 27;
             this.label7.Text = "Mã huấn luyện viên:";
             // 
@@ -71,10 +71,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(49, 149);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(233, 29);
+            this.label6.Size = new System.Drawing.Size(253, 29);
             this.label6.TabIndex = 25;
             this.label6.Text = "Tên huấn luyện viên:";
             // 
@@ -89,10 +89,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(66, 367);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(216, 29);
+            this.label4.Size = new System.Drawing.Size(235, 29);
             this.label4.TabIndex = 23;
             this.label4.Text = "Nhập lại mật khẩu: ";
             // 
@@ -117,20 +117,20 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(167, 301);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 29);
+            this.label3.Size = new System.Drawing.Size(124, 29);
             this.label3.TabIndex = 20;
             this.label3.Text = "Mật khẩu:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(118, 236);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 29);
+            this.label2.Size = new System.Drawing.Size(178, 29);
             this.label2.TabIndex = 19;
             this.label2.Text = "Tên tài khoản:";
             // 
@@ -138,7 +138,7 @@
             // 
             this.button_OK.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button_OK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_OK.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_OK.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_OK.ForeColor = System.Drawing.Color.Aqua;
             this.button_OK.Location = new System.Drawing.Point(153, 458);
             this.button_OK.Name = "button_OK";
@@ -152,7 +152,7 @@
             // 
             this.button_Cancel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Cancel.ForeColor = System.Drawing.Color.Aqua;
             this.button_Cancel.Location = new System.Drawing.Point(524, 458);
             this.button_Cancel.Name = "button_Cancel";
