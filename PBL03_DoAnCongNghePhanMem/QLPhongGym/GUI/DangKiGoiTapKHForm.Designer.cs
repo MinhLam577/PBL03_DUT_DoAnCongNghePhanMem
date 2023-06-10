@@ -67,10 +67,10 @@
             // 
             this.lb_main.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lb_main.AutoSize = true;
-            this.lb_main.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_main.Location = new System.Drawing.Point(572, 17);
+            this.lb_main.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_main.Location = new System.Drawing.Point(468, 21);
             this.lb_main.Name = "lb_main";
-            this.lb_main.Size = new System.Drawing.Size(472, 42);
+            this.lb_main.Size = new System.Drawing.Size(522, 48);
             this.lb_main.TabIndex = 0;
             this.lb_main.Text = "Đăng kí gói tập khách hàng";
             // 
@@ -192,7 +192,7 @@
             this.cb_inhoadon.Location = new System.Drawing.Point(847, 684);
             this.cb_inhoadon.Name = "cb_inhoadon";
             this.cb_inhoadon.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cb_inhoadon.Size = new System.Drawing.Size(186, 33);
+            this.cb_inhoadon.Size = new System.Drawing.Size(175, 30);
             this.cb_inhoadon.TabIndex = 9;
             this.cb_inhoadon.Text = "IN HÓA ĐƠN";
             this.cb_inhoadon.UseVisualStyleBackColor = true;
@@ -395,6 +395,8 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.cb_gt);
             this.panel1.Location = new System.Drawing.Point(0, 2);
+            this.panel1.MaximumSize = new System.Drawing.Size(1432, 142);
+            this.panel1.MinimumSize = new System.Drawing.Size(1432, 142);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1432, 142);
             this.panel1.TabIndex = 100;

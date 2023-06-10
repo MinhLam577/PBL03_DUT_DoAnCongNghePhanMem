@@ -180,6 +180,8 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txb_mkmoi);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(935, 613);
+            this.MinimumSize = new System.Drawing.Size(935, 613);
             this.Name = "DoiMatKhauForm";
             this.Text = "DoiMatKhauForm";
             this.ResumeLayout(false);

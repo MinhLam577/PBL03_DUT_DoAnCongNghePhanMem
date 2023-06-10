@@ -42,7 +42,14 @@ namespace QLPhongGym.GUI
                         if (row.Cells["Mã gói tập"] != null && row.Cells["Mã gói tập"].Value != null)
                         {
                             int id = Convert.ToInt32(row.Cells["Mã gói tập"].Value);
-                            
+
+                            //Xóa hóa đơn
+                            foreach (HoaDon hd in HoaDonBLL.Instance.GetListHoaDonByIDGT(id))
+                                HoaDonBLL.Instance.DeleteHoaDon(hd);
+                            //Xóa đăng kí gói tập
+                            foreach(DangKiGoiTap dkgt in DangKiGoiTapBLL.Instance.GetListDKGTByIDGT(id))
+                                DangKiGoiTapBLL.Instance.DeleteDKGT(dkgt);
+                            //Xóa gói tập
                             GoiTapBLL.Instance.DeleteGT(GoiTapBLL.Instance.GetGTByID(id));
                         }
 

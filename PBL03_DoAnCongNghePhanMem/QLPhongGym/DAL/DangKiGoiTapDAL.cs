@@ -450,5 +450,12 @@ namespace QLPhongGym.DAL
                 return db.DangKiGoiTaps.Where(s => s.NgayDangKiGT.Value.Year == year).ToList();
             }
         }
+        public List<DangKiGoiTap> GetListDKGTByIDGT(int IDGT)
+        {
+            using(QLPhongGymDB db = new QLPhongGymDB())
+            {
+                return db.DangKiGoiTaps.Where(s => s.IDGT.Value == IDGT).ToList();
+            }
+        }
     }
 }

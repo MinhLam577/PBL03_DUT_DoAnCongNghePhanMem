@@ -199,6 +199,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.CA);
             this.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.MaximumSize = new System.Drawing.Size(818, 497);
+            this.MinimumSize = new System.Drawing.Size(818, 497);
             this.Name = "FormEditLichLamViec";
             this.Text = "FormEditLichLamViec";
             this.Load += new System.EventHandler(this.FormEditLichLamViec_Load);
