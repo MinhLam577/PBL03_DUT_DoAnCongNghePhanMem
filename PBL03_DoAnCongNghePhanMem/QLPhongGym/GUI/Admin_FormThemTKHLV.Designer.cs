@@ -54,7 +54,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(59, 72);
+            this.label7.Location = new System.Drawing.Point(49, 74);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(242, 29);
             this.label7.TabIndex = 27;
@@ -72,7 +72,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(49, 149);
+            this.label6.Location = new System.Drawing.Point(38, 151);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(253, 29);
             this.label6.TabIndex = 25;
@@ -90,7 +90,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(66, 367);
+            this.label4.Location = new System.Drawing.Point(56, 367);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(235, 29);
             this.label4.TabIndex = 23;
@@ -108,7 +108,7 @@
             // Txt_NhapLai
             // 
             this.Txt_NhapLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_NhapLai.Location = new System.Drawing.Point(324, 364);
+            this.Txt_NhapLai.Location = new System.Drawing.Point(324, 367);
             this.Txt_NhapLai.Name = "Txt_NhapLai";
             this.Txt_NhapLai.PasswordChar = '*';
             this.Txt_NhapLai.Size = new System.Drawing.Size(311, 34);
@@ -118,7 +118,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(167, 301);
+            this.label3.Location = new System.Drawing.Point(167, 303);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 29);
             this.label3.TabIndex = 20;
@@ -128,7 +128,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(118, 236);
+            this.label2.Location = new System.Drawing.Point(113, 238);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(178, 29);
             this.label2.TabIndex = 19;

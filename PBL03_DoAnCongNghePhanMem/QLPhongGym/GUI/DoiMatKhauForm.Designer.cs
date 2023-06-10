@@ -71,7 +71,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(196, 148);
+            this.label2.Location = new System.Drawing.Point(201, 148);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(187, 32);
@@ -83,7 +83,7 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(181, 239);
+            this.label6.Location = new System.Drawing.Point(184, 239);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(204, 32);
@@ -180,6 +180,8 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txb_mkmoi);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(935, 613);
+            this.MinimumSize = new System.Drawing.Size(935, 613);
             this.Name = "DoiMatKhauForm";
             this.Text = "DoiMatKhauForm";
             this.ResumeLayout(false);

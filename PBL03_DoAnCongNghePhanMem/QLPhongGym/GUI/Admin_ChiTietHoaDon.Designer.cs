@@ -30,6 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lb_hlv = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label_MKH = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lb_phuocthucthanhtoan = new System.Windows.Forms.Label();
@@ -46,8 +48,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btn_thoat = new System.Windows.Forms.Button();
             this.btn_inhoadon = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lb_hlv = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,6 +91,30 @@
             this.groupBox2.TabIndex = 93;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin đăng kí";
+            // 
+            // lb_hlv
+            // 
+            this.lb_hlv.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lb_hlv.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_hlv.Location = new System.Drawing.Point(662, 227);
+            this.lb_hlv.Name = "lb_hlv";
+            this.lb_hlv.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lb_hlv.Size = new System.Drawing.Size(317, 29);
+            this.lb_hlv.TabIndex = 113;
+            this.lb_hlv.Text = "00";
+            this.lb_hlv.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(291, 227);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(188, 29);
+            this.label3.TabIndex = 112;
+            this.label3.Text = "Huấn luyện viên:";
             // 
             // label_MKH
             // 
@@ -289,30 +313,6 @@
             this.btn_inhoadon.Text = "In hóa đơn";
             this.btn_inhoadon.UseVisualStyleBackColor = false;
             this.btn_inhoadon.Click += new System.EventHandler(this.btn_inhoadon_Click);
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(291, 227);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(188, 29);
-            this.label3.TabIndex = 112;
-            this.label3.Text = "Huấn luyện viên:";
-            // 
-            // lb_hlv
-            // 
-            this.lb_hlv.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lb_hlv.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_hlv.Location = new System.Drawing.Point(662, 227);
-            this.lb_hlv.Name = "lb_hlv";
-            this.lb_hlv.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb_hlv.Size = new System.Drawing.Size(317, 29);
-            this.lb_hlv.TabIndex = 113;
-            this.lb_hlv.Text = "00";
-            this.lb_hlv.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Admin_ChiTietHoaDon
             // 

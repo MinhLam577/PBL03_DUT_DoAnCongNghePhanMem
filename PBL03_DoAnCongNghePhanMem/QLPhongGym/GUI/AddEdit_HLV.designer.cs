@@ -89,6 +89,8 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.MaximumSize = new System.Drawing.Size(1540, 645);
+            this.panel1.MinimumSize = new System.Drawing.Size(1540, 645);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1540, 645);
             this.panel1.TabIndex = 0;
@@ -111,7 +113,7 @@
             this.btnCancel.BackColor = System.Drawing.Color.Black;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.Cyan;
-            this.btnCancel.Location = new System.Drawing.Point(1042, 557);
+            this.btnCancel.Location = new System.Drawing.Point(1043, 557);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(139, 44);
             this.btnCancel.TabIndex = 103;
@@ -136,7 +138,7 @@
             // 
             this.labe.AutoSize = true;
             this.labe.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labe.Location = new System.Drawing.Point(154, 445);
+            this.labe.Location = new System.Drawing.Point(163, 445);
             this.labe.Name = "labe";
             this.labe.Size = new System.Drawing.Size(98, 29);
             this.labe.TabIndex = 102;
@@ -145,7 +147,7 @@
             // textDiachi
             // 
             this.textDiachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textDiachi.Location = new System.Drawing.Point(267, 442);
+            this.textDiachi.Location = new System.Drawing.Point(267, 440);
             this.textDiachi.Name = "textDiachi";
             this.textDiachi.Size = new System.Drawing.Size(284, 34);
             this.textDiachi.TabIndex = 86;
@@ -154,7 +156,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(651, 336);
+            this.label9.Location = new System.Drawing.Point(651, 302);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(88, 29);
             this.label9.TabIndex = 101;
@@ -163,10 +165,10 @@
             // textGmai
             // 
             this.textGmai.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textGmai.Location = new System.Drawing.Point(759, 318);
+            this.textGmai.Location = new System.Drawing.Point(759, 299);
             this.textGmai.Multiline = true;
             this.textGmai.Name = "textGmai";
-            this.textGmai.Size = new System.Drawing.Size(290, 74);
+            this.textGmai.Size = new System.Drawing.Size(290, 89);
             this.textGmai.TabIndex = 89;
             this.textGmai.Click += new System.EventHandler(this.textGmai_Click);
             // 
@@ -185,7 +187,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(646, 239);
+            this.label6.Location = new System.Drawing.Point(647, 234);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(92, 29);
             this.label6.TabIndex = 100;
@@ -207,7 +209,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(665, 156);
+            this.label3.Location = new System.Drawing.Point(667, 156);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 29);
@@ -267,7 +269,7 @@
             this.radioBtnMale.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioBtnMale.AutoSize = true;
             this.radioBtnMale.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioBtnMale.Location = new System.Drawing.Point(289, 301);
+            this.radioBtnMale.Location = new System.Drawing.Point(289, 302);
             this.radioBtnMale.Name = "radioBtnMale";
             this.radioBtnMale.Size = new System.Drawing.Size(81, 29);
             this.radioBtnMale.TabIndex = 83;
@@ -279,7 +281,7 @@
             // 
             this.textBangcap.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBangcap.Font = new System.Drawing.Font("Microsoft JhengHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBangcap.Location = new System.Drawing.Point(759, 430);
+            this.textBangcap.Location = new System.Drawing.Point(759, 436);
             this.textBangcap.Name = "textBangcap";
             this.textBangcap.Size = new System.Drawing.Size(290, 38);
             this.textBangcap.TabIndex = 90;
@@ -288,7 +290,7 @@
             // 
             this.textNameHLV.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textNameHLV.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textNameHLV.Location = new System.Drawing.Point(267, 236);
+            this.textNameHLV.Location = new System.Drawing.Point(267, 234);
             this.textNameHLV.Name = "textNameHLV";
             this.textNameHLV.Size = new System.Drawing.Size(286, 34);
             this.textNameHLV.TabIndex = 82;
@@ -297,7 +299,7 @@
             // 
             this.textMaHLv.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textMaHLv.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textMaHLv.Location = new System.Drawing.Point(267, 159);
+            this.textMaHLv.Location = new System.Drawing.Point(267, 156);
             this.textMaHLv.Name = "textMaHLv";
             this.textMaHLv.ReadOnly = true;
             this.textMaHLv.Size = new System.Drawing.Size(286, 34);
@@ -308,7 +310,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(613, 439);
+            this.label8.Location = new System.Drawing.Point(610, 445);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(129, 29);
             this.label8.TabIndex = 97;
@@ -319,7 +321,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(120, 363);
+            this.label7.Location = new System.Drawing.Point(126, 359);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(135, 29);
             this.label7.TabIndex = 96;
@@ -330,7 +332,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 239);
+            this.label5.Location = new System.Drawing.Point(8, 234);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(253, 29);
             this.label5.TabIndex = 95;
@@ -341,7 +343,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(157, 164);
+            this.label4.Location = new System.Drawing.Point(166, 156);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 29);
             this.label4.TabIndex = 94;
@@ -352,7 +354,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(138, 301);
+            this.label2.Location = new System.Drawing.Point(144, 302);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 29);
             this.label2.TabIndex = 93;

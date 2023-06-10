@@ -45,7 +45,6 @@
             this.btn_save = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.numeric_giamgia = new System.Windows.Forms.NumericUpDown();
-            this.rb_voucher = new System.Windows.Forms.RadioButton();
             this.rb_tienmat = new System.Windows.Forms.RadioButton();
             this.lb_thanhtoan = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -67,10 +66,10 @@
             // 
             this.lb_main.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lb_main.AutoSize = true;
-            this.lb_main.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_main.Location = new System.Drawing.Point(572, 17);
+            this.lb_main.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_main.Location = new System.Drawing.Point(473, 22);
             this.lb_main.Name = "lb_main";
-            this.lb_main.Size = new System.Drawing.Size(472, 42);
+            this.lb_main.Size = new System.Drawing.Size(522, 48);
             this.lb_main.TabIndex = 0;
             this.lb_main.Text = "Đăng kí gói tập khách hàng";
             // 
@@ -79,7 +78,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(29, 207);
+            this.label2.Location = new System.Drawing.Point(28, 207);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(177, 29);
             this.label2.TabIndex = 97;
@@ -125,7 +124,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(92, 391);
+            this.label4.Location = new System.Drawing.Point(97, 389);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(108, 29);
             this.label4.TabIndex = 91;
@@ -137,7 +136,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(97, 110);
+            this.label6.Location = new System.Drawing.Point(101, 110);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(104, 29);
             this.label6.TabIndex = 88;
@@ -181,6 +180,8 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.dtp_ngaydangki);
             this.panel2.Location = new System.Drawing.Point(0, -1);
+            this.panel2.MaximumSize = new System.Drawing.Size(1432, 728);
+            this.panel2.MinimumSize = new System.Drawing.Size(1432, 728);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1432, 728);
             this.panel2.TabIndex = 53;
@@ -192,7 +193,7 @@
             this.cb_inhoadon.Location = new System.Drawing.Point(847, 684);
             this.cb_inhoadon.Name = "cb_inhoadon";
             this.cb_inhoadon.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cb_inhoadon.Size = new System.Drawing.Size(186, 33);
+            this.cb_inhoadon.Size = new System.Drawing.Size(175, 30);
             this.cb_inhoadon.TabIndex = 9;
             this.cb_inhoadon.Text = "IN HÓA ĐƠN";
             this.cb_inhoadon.UseVisualStyleBackColor = true;
@@ -236,7 +237,6 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.numeric_giamgia);
-            this.panel3.Controls.Add(this.rb_voucher);
             this.panel3.Controls.Add(this.rb_tienmat);
             this.panel3.Controls.Add(this.lb_thanhtoan);
             this.panel3.Controls.Add(this.label13);
@@ -256,7 +256,7 @@
             // 
             this.numeric_giamgia.Enabled = false;
             this.numeric_giamgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numeric_giamgia.Location = new System.Drawing.Point(261, 81);
+            this.numeric_giamgia.Location = new System.Drawing.Point(261, 128);
             this.numeric_giamgia.Name = "numeric_giamgia";
             this.numeric_giamgia.ReadOnly = true;
             this.numeric_giamgia.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -265,25 +265,11 @@
             this.numeric_giamgia.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
             this.numeric_giamgia.ValueChanged += new System.EventHandler(this.numeric_giamgia_ValueChanged);
             // 
-            // rb_voucher
-            // 
-            this.rb_voucher.AutoSize = true;
-            this.rb_voucher.Enabled = false;
-            this.rb_voucher.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_voucher.Location = new System.Drawing.Point(32, 272);
-            this.rb_voucher.Name = "rb_voucher";
-            this.rb_voucher.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.rb_voucher.Size = new System.Drawing.Size(130, 33);
-            this.rb_voucher.TabIndex = 8;
-            this.rb_voucher.TabStop = true;
-            this.rb_voucher.Text = "Voucher";
-            this.rb_voucher.UseVisualStyleBackColor = true;
-            // 
             // rb_tienmat
             // 
             this.rb_tienmat.AutoSize = true;
             this.rb_tienmat.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_tienmat.Location = new System.Drawing.Point(32, 300);
+            this.rb_tienmat.Location = new System.Drawing.Point(26, 318);
             this.rb_tienmat.Name = "rb_tienmat";
             this.rb_tienmat.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.rb_tienmat.Size = new System.Drawing.Size(136, 33);
@@ -296,7 +282,7 @@
             // 
             this.lb_thanhtoan.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_thanhtoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_thanhtoan.Location = new System.Drawing.Point(407, 239);
+            this.lb_thanhtoan.Location = new System.Drawing.Point(407, 286);
             this.lb_thanhtoan.Name = "lb_thanhtoan";
             this.lb_thanhtoan.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lb_thanhtoan.Size = new System.Drawing.Size(301, 29);
@@ -309,7 +295,7 @@
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(22, 244);
+            this.label13.Location = new System.Drawing.Point(12, 286);
             this.label13.Name = "label13";
             this.label13.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label13.Size = new System.Drawing.Size(150, 29);
@@ -321,7 +307,7 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(29, 150);
+            this.label12.Location = new System.Drawing.Point(19, 197);
             this.label12.Name = "label12";
             this.label12.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label12.Size = new System.Drawing.Size(143, 29);
@@ -332,7 +318,7 @@
             // 
             this.lb_thanhtien.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_thanhtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_thanhtien.Location = new System.Drawing.Point(407, 150);
+            this.lb_thanhtien.Location = new System.Drawing.Point(407, 197);
             this.lb_thanhtien.Name = "lb_thanhtien";
             this.lb_thanhtien.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lb_thanhtien.Size = new System.Drawing.Size(301, 29);
@@ -344,7 +330,7 @@
             // 
             this.lb_dongia.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lb_dongia.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_dongia.Location = new System.Drawing.Point(402, 10);
+            this.lb_dongia.Location = new System.Drawing.Point(402, 57);
             this.lb_dongia.Name = "lb_dongia";
             this.lb_dongia.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lb_dongia.Size = new System.Drawing.Size(306, 29);
@@ -356,7 +342,7 @@
             // 
             this.cb_giamgia.AutoSize = true;
             this.cb_giamgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_giamgia.Location = new System.Drawing.Point(261, 45);
+            this.cb_giamgia.Location = new System.Drawing.Point(261, 92);
             this.cb_giamgia.Name = "cb_giamgia";
             this.cb_giamgia.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cb_giamgia.Size = new System.Drawing.Size(119, 33);
@@ -370,7 +356,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(46, 93);
+            this.label7.Location = new System.Drawing.Point(38, 128);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label7.Size = new System.Drawing.Size(124, 29);
@@ -382,7 +368,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(59, 10);
+            this.label5.Location = new System.Drawing.Point(52, 57);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label5.Size = new System.Drawing.Size(110, 29);
@@ -442,7 +428,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.NumericUpDown numeric_giamgia;
-        private System.Windows.Forms.RadioButton rb_voucher;
         private System.Windows.Forms.RadioButton rb_tienmat;
         private System.Windows.Forms.Label lb_thanhtoan;
         private System.Windows.Forms.Label label13;
