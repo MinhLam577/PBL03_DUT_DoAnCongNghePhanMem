@@ -51,7 +51,7 @@
             // 
             this.lbNgayLam.AutoSize = true;
             this.lbNgayLam.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNgayLam.Location = new System.Drawing.Point(85, 154);
+            this.lbNgayLam.Location = new System.Drawing.Point(91, 154);
             this.lbNgayLam.Name = "lbNgayLam";
             this.lbNgayLam.Size = new System.Drawing.Size(137, 29);
             this.lbNgayLam.TabIndex = 0;
@@ -61,7 +61,7 @@
             // 
             this.mkh.AutoSize = true;
             this.mkh.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mkh.Location = new System.Drawing.Point(20, 243);
+            this.mkh.Location = new System.Drawing.Point(21, 243);
             this.mkh.Name = "mkh";
             this.mkh.Size = new System.Drawing.Size(207, 29);
             this.mkh.TabIndex = 1;
@@ -71,7 +71,7 @@
             // 
             this.lbMahlv.AutoSize = true;
             this.lbMahlv.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMahlv.Location = new System.Drawing.Point(600, 343);
+            this.lbMahlv.Location = new System.Drawing.Point(589, 343);
             this.lbMahlv.Name = "lbMahlv";
             this.lbMahlv.Size = new System.Drawing.Size(267, 29);
             this.lbMahlv.TabIndex = 3;
@@ -81,7 +81,7 @@
             // 
             this.lbTenhlv.AutoSize = true;
             this.lbTenhlv.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenhlv.Location = new System.Drawing.Point(592, 243);
+            this.lbTenhlv.Location = new System.Drawing.Point(580, 243);
             this.lbTenhlv.Name = "lbTenhlv";
             this.lbTenhlv.Size = new System.Drawing.Size(276, 29);
             this.lbTenhlv.TabIndex = 4;
@@ -178,7 +178,7 @@
             // lb_dongia
             // 
             this.lb_dongia.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_dongia.Location = new System.Drawing.Point(872, 424);
+            this.lb_dongia.Location = new System.Drawing.Point(897, 424);
             this.lb_dongia.Name = "lb_dongia";
             this.lb_dongia.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb_dongia.Size = new System.Drawing.Size(283, 29);

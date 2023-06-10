@@ -72,7 +72,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(49, 149);
+            this.label6.Location = new System.Drawing.Point(48, 149);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(253, 29);
             this.label6.TabIndex = 25;
@@ -118,7 +118,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(167, 301);
+            this.label3.Location = new System.Drawing.Point(177, 301);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 29);
             this.label3.TabIndex = 20;
@@ -128,7 +128,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(118, 236);
+            this.label2.Location = new System.Drawing.Point(123, 236);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(178, 29);
             this.label2.TabIndex = 19;
@@ -154,7 +154,7 @@
             this.button_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Cancel.ForeColor = System.Drawing.Color.Aqua;
-            this.button_Cancel.Location = new System.Drawing.Point(524, 458);
+            this.button_Cancel.Location = new System.Drawing.Point(434, 458);
             this.button_Cancel.Name = "button_Cancel";
             this.button_Cancel.Size = new System.Drawing.Size(111, 45);
             this.button_Cancel.TabIndex = 7;

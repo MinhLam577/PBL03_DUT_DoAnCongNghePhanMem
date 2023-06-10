@@ -46,7 +46,7 @@
             // 
             this.CA.AutoSize = true;
             this.CA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CA.Location = new System.Drawing.Point(178, 107);
+            this.CA.Location = new System.Drawing.Point(182, 107);
             this.CA.Name = "CA";
             this.CA.Size = new System.Drawing.Size(64, 25);
             this.CA.TabIndex = 0;
@@ -56,7 +56,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(168, 180);
+            this.label2.Location = new System.Drawing.Point(171, 180);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 25);
             this.label2.TabIndex = 1;
@@ -98,7 +98,9 @@
             // 
             // btnEDIT
             // 
-            this.btnEDIT.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnEDIT.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnEDIT.FlatAppearance.BorderSize = 0;
+            this.btnEDIT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEDIT.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEDIT.Location = new System.Drawing.Point(128, 337);
             this.btnEDIT.Name = "btnEDIT";
@@ -110,7 +112,9 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnCancel.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCancel.Location = new System.Drawing.Point(516, 337);
@@ -124,6 +128,7 @@
             // timeNgaylam
             // 
             this.timeNgaylam.CustomFormat = "yyyy-MM-dd";
+            this.timeNgaylam.Enabled = false;
             this.timeNgaylam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeNgaylam.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.timeNgaylam.Location = new System.Drawing.Point(405, 251);

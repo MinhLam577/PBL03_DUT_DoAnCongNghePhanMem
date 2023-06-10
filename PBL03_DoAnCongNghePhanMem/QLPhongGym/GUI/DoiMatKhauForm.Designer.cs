@@ -71,7 +71,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(196, 148);
+            this.label2.Location = new System.Drawing.Point(201, 148);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(187, 32);
@@ -83,7 +83,7 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(181, 239);
+            this.label6.Location = new System.Drawing.Point(184, 239);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(204, 32);
@@ -136,7 +136,7 @@
             this.btn_cancel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancel.ForeColor = System.Drawing.Color.Black;
             this.btn_cancel.Image = ((System.Drawing.Image)(resources.GetObject("btn_cancel.Image")));
-            this.btn_cancel.Location = new System.Drawing.Point(605, 393);
+            this.btn_cancel.Location = new System.Drawing.Point(586, 418);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(167, 92);
             this.btn_cancel.TabIndex = 105;
@@ -154,7 +154,7 @@
             this.btn_save.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save.ForeColor = System.Drawing.Color.Black;
             this.btn_save.Image = ((System.Drawing.Image)(resources.GetObject("btn_save.Image")));
-            this.btn_save.Location = new System.Drawing.Point(151, 393);
+            this.btn_save.Location = new System.Drawing.Point(146, 418);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(167, 92);
             this.btn_save.TabIndex = 104;

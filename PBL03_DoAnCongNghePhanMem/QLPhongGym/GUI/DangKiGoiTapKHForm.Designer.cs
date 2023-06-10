@@ -181,6 +181,8 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.dtp_ngaydangki);
             this.panel2.Location = new System.Drawing.Point(0, -1);
+            this.panel2.MaximumSize = new System.Drawing.Size(1432, 728);
+            this.panel2.MinimumSize = new System.Drawing.Size(1432, 728);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1432, 728);
             this.panel2.TabIndex = 53;
@@ -415,6 +417,8 @@
             this.ClientSize = new System.Drawing.Size(1433, 728);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
+            this.MaximumSize = new System.Drawing.Size(1451, 775);
+            this.MinimumSize = new System.Drawing.Size(1451, 775);
             this.Name = "DangKiGoiTapKHForm";
             this.Text = "Admin_FormDKiGoiTapKH";
             this.Load += new System.EventHandler(this.DangKiGoiTapFormKH_Load);
