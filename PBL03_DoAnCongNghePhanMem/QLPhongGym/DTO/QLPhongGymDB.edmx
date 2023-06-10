@@ -460,11 +460,11 @@
             <End Role="User" EntitySet="Users" />
             <End Role="LichThueHLV" EntitySet="LichThueHLVs" />
           </AssociationSet>
-          <EntitySet Name="PhanQuyens" EntityType="QLPhongGymModel.PhanQuyen" />
           <AssociationSet Name="FK_HoaDon_Users" Association="QLPhongGymModel.FK_HoaDon_Users">
             <End Role="User" EntitySet="Users" />
             <End Role="HoaDon" EntitySet="HoaDons" />
           </AssociationSet>
+          <EntitySet Name="PhanQuyens" EntityType="QLPhongGymModel.PhanQuyen" />
           <AssociationSet Name="FK_TK_PhanQuyen" Association="QLPhongGymModel.FK_TK_PhanQuyen">
             <End Role="PhanQuyen" EntitySet="PhanQuyens" />
             <End Role="TK" EntitySet="TKs" />
@@ -602,14 +602,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="PhanQuyen">
-          <Key>
-            <PropertyRef Name="IDQuyen" />
-          </Key>
-          <Property Name="IDQuyen" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TenQuyen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="TKs" Relationship="QLPhongGymModel.FK_TK_PhanQuyen" FromRole="PhanQuyen" ToRole="TK" />
-        </EntityType>
         <Association Name="FK_HoaDon_Users">
           <End Type="QLPhongGymModel.User" Role="User" Multiplicity="1" />
           <End Type="QLPhongGymModel.HoaDon" Role="HoaDon" Multiplicity="*" />
@@ -622,6 +614,14 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="PhanQuyen">
+          <Key>
+            <PropertyRef Name="IDQuyen" />
+          </Key>
+          <Property Name="IDQuyen" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenQuyen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TKs" Relationship="QLPhongGymModel.FK_TK_PhanQuyen" FromRole="PhanQuyen" ToRole="TK" />
+        </EntityType>
         <Association Name="FK_TK_PhanQuyen">
           <End Type="QLPhongGymModel.PhanQuyen" Role="PhanQuyen" Multiplicity="1" />
           <End Type="QLPhongGymModel.TK" Role="TK" Multiplicity="*" />
