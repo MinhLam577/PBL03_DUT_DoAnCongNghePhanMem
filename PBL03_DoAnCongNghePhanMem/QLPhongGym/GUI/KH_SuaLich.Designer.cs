@@ -102,7 +102,7 @@
             this.dateNgayLam.CustomFormat = "yyyy-MM-dd";
             this.dateNgayLam.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateNgayLam.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateNgayLam.Location = new System.Drawing.Point(239, 147);
+            this.dateNgayLam.Location = new System.Drawing.Point(254, 146);
             this.dateNgayLam.Name = "dateNgayLam";
             this.dateNgayLam.Size = new System.Drawing.Size(280, 36);
             this.dateNgayLam.TabIndex = 6;
@@ -113,7 +113,7 @@
             // 
             this.textMa.Enabled = false;
             this.textMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textMa.Location = new System.Drawing.Point(239, 236);
+            this.textMa.Location = new System.Drawing.Point(254, 235);
             this.textMa.Name = "textMa";
             this.textMa.Size = new System.Drawing.Size(280, 36);
             this.textMa.TabIndex = 7;
@@ -122,7 +122,7 @@
             // 
             this.textTen.Enabled = false;
             this.textTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textTen.Location = new System.Drawing.Point(239, 336);
+            this.textTen.Location = new System.Drawing.Point(254, 335);
             this.textTen.Name = "textTen";
             this.textTen.Size = new System.Drawing.Size(280, 36);
             this.textTen.TabIndex = 8;
@@ -135,7 +135,7 @@
             this.cbbCa.Items.AddRange(new object[] {
             "Ca 1",
             "Ca 2"});
-            this.cbbCa.Location = new System.Drawing.Point(872, 146);
+            this.cbbCa.Location = new System.Drawing.Point(897, 146);
             this.cbbCa.Name = "cbbCa";
             this.cbbCa.Size = new System.Drawing.Size(283, 37);
             this.cbbCa.TabIndex = 9;
@@ -147,7 +147,7 @@
             this.cbbHlv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbHlv.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbHlv.FormattingEnabled = true;
-            this.cbbHlv.Location = new System.Drawing.Point(872, 235);
+            this.cbbHlv.Location = new System.Drawing.Point(897, 235);
             this.cbbHlv.Name = "cbbHlv";
             this.cbbHlv.Size = new System.Drawing.Size(283, 37);
             this.cbbHlv.TabIndex = 10;
@@ -159,7 +159,7 @@
             this.cbbma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbma.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbma.FormattingEnabled = true;
-            this.cbbma.Location = new System.Drawing.Point(872, 335);
+            this.cbbma.Location = new System.Drawing.Point(897, 335);
             this.cbbma.Name = "cbbma";
             this.cbbma.Size = new System.Drawing.Size(283, 37);
             this.cbbma.TabIndex = 11;
@@ -232,7 +232,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1202, 624);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnDangKi);

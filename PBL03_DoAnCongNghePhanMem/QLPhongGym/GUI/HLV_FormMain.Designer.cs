@@ -257,7 +257,7 @@
             // btn_doimatkhau
             // 
             this.btn_doimatkhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_doimatkhau.Location = new System.Drawing.Point(298, 102);
+            this.btn_doimatkhau.Location = new System.Drawing.Point(311, 102);
             this.btn_doimatkhau.Name = "btn_doimatkhau";
             this.btn_doimatkhau.Size = new System.Drawing.Size(205, 42);
             this.btn_doimatkhau.TabIndex = 8;
@@ -270,7 +270,7 @@
             this.btn_updatethongtin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_updatethongtin.Location = new System.Drawing.Point(21, 102);
             this.btn_updatethongtin.Name = "btn_updatethongtin";
-            this.btn_updatethongtin.Size = new System.Drawing.Size(233, 42);
+            this.btn_updatethongtin.Size = new System.Drawing.Size(260, 42);
             this.btn_updatethongtin.TabIndex = 7;
             this.btn_updatethongtin.Text = "Cật nhật thông tin";
             this.btn_updatethongtin.UseVisualStyleBackColor = true;

@@ -225,33 +225,6 @@ namespace QLPhongGym.DAL
                 return dt;
             
         }
-
-
-        // tham so truoc : datagrid
-        // tham so sau : sau khi chinh sua data
-        public bool SuaLichThueHLv(int idhlv,DateTime ngaylam, int idca,int Idhlv,DateTime NgayLam,int Idca)
-        {
-            using (QLPhongGymDB db = new QLPhongGymDB())
-            {
-                var existingLichLamViec = db.LichThueHLVs.FirstOrDefault(x => x.IDHLV == idhlv &&
-                                                                                      x.IDCa == idca &&
-                                                                                      x.NgayThue == ngaylam);
-
-                if (existingLichLamViec != null)
-                {
-                    existingLichLamViec.IDCa = Idca;
-                    existingLichLamViec.NgayThue = NgayLam;
-                    existingLichLamViec.IDHLV = Idhlv;
-                    db.SaveChanges();
-                    return true;
-                }
-                else
-                {
-                    // Không tìm thấy đối tượng, không thực hiện chỉnh sửa
-                    return false;
-                }
-            }
-        }
         public LichThueHLV GetLichThueByIDKH_IDHLV_NgayLam_IDCa(int IDKH, int IDHLV, DateTime NgayLam,  int Idca)
         {
             using(QLPhongGymDB db = new QLPhongGymDB())

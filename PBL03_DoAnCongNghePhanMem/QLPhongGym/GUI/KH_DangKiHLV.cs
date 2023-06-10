@@ -28,7 +28,9 @@ namespace QLPhongGym.GUI
         }
         private void dateNgayLam_ValueChanged(object sender, EventArgs e)
         {
-            
+            cbbCa.Items.Clear();
+            cbbHlv.SelectedItem = null;
+            cbbma.SelectedItem = null;
 
         }
 

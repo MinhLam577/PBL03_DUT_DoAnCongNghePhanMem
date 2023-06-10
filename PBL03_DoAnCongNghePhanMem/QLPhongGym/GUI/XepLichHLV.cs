@@ -163,31 +163,57 @@ namespace QLPhongGym.GUI
             this.Dispose();
         }
         private void btnEdit_Click_1(object sender, EventArgs e)
-        {        
+        {
+            try
+            {
                 FormEditLichLamViec a = new FormEditLichLamViec();
                 a.ngaybatdau = dateTimeNgayStart.Value;
                 a.ngayketthuc = dateTimeNgayEnd.Value;
                 if (dataGridView1.SelectedRows.Count > 0)
                 {
                     DataGridViewRow row = dataGridView1.SelectedRows[0];
-                    string tenca = cbbCaLam.SelectedItem.ToString().Trim();
-                    int IDCa = DangKiLichLamViecBAL.getInStance.GetIdCa_ByTenCa(tenca);
-                    int IDHLV = Convert.ToInt32(row.Cells[1].Value.ToString());
-                    DateTime NgayLam = Convert.ToDateTime(row.Cells[3].Value.ToString());
-                    a.idca = IDCa;
-                    a.idhlv = IDHLV;
-                    a.ngaylam = NgayLam;
-                    a.Show();
-                    a.buon += new FormEditLichLamViec.mydelegate(Edit);
-
+                    string tenca = cbbCaLam.SelectedItem?.ToString().Trim(); // Kiểm tra null trước khi gọi ToString()
+                    if (!string.IsNullOrEmpty(tenca)) // Kiểm tra null hoặc chuỗi rỗng
+                    {
+                        int IDCa = DangKiLichLamViecBAL.getInStance.GetIdCa_ByTenCa(tenca);
+                        object cellValue = row.Cells[1].Value;
+                        if (cellValue != null && int.TryParse(cellValue.ToString(), out int IDHLV)) // Kiểm tra null và chuyển đổi thành công sang kiểu int
+                        {
+                            object cellValueNgayLam = row.Cells[3].Value;
+                            if (cellValueNgayLam != null && DateTime.TryParse(cellValueNgayLam.ToString(), out DateTime NgayLam)) // Kiểm tra null và chuyển đổi thành công sang kiểu DateTime
+                            {
+                                a.idca = IDCa;
+                                a.idhlv = IDHLV;
+                                a.ngaylam = NgayLam;
+                                a.Show();
+                                a.buon += new FormEditLichLamViec.mydelegate(Edit);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Không có dữ liệu");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Không có dữ liệu");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Chưa chọn Ca làm");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Chua nhap vao hang");
-
+                    MessageBox.Show("Chưa chọn hàng");
                 }
             }
-        private void btnCancel_Click_1(object sender, EventArgs e)
+            catch (Exception ex)
+            {
+                MessageBox.Show("Không có dữ liệu");
+            }
+        }
+            private void btnCancel_Click_1(object sender, EventArgs e)
         {
             FormDangKiLichHLV1 aa = new FormDangKiLichHLV1();
             aa.hienthilenlistboxHang(dateTimeNgayStart.Value);
@@ -278,6 +304,8 @@ namespace QLPhongGym.GUI
                     }           
             }
         }
+
+      
     }
 }
            

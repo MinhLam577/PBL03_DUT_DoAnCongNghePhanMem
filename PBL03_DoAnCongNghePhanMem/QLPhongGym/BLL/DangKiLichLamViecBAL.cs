@@ -166,6 +166,10 @@ namespace QLPhongGym.BLL
         {
             return DangKiLichLamViecDAL.getInStance.LayDanhSachCaLamViec();
         }
+        public bool Capnhat2(int idca, int idhlv, DateTime ngaylam, int IDCA, int IDHLV, DateTime NGAYLAM)
+        {
+            return DangKiLichLamViecDAL.getInStance.Capnhat2(idca,idhlv,ngaylam,IDCA,IDHLV,NGAYLAM);
+        }
 
     }
 }
